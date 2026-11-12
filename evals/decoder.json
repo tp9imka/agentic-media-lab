@@ -1,25 +1,582 @@
 {
  "schema_version": 1,
  "rows": [
-  {"id": "q01", "question": "Remotion or HyperFrames if Claude Code writes the video?", "keywords": ["remotion", "hyperframes", "claude code", "code-driven video", "renderer", "comparison"], "approach": "", "pages": [], "record_ids": [], "examples": [], "risk": "", "status": "not-covered"},
-  {"id": "q02", "question": "My agent-made video looks amateur. Which skills fix that?", "keywords": ["amateur", "design skill", "motion skill", "visual design", "typography", "polish", "quality"], "approach": "", "pages": [], "record_ids": [], "examples": [], "risk": "", "status": "not-covered"},
-  {"id": "q03", "question": "How do I get a 30 second product demo out of Claude Code today?", "keywords": ["product demo", "claude code", "30 second", "short video", "recipe", "walkthrough"], "approach": "", "pages": [], "record_ids": [], "examples": [], "risk": "", "status": "not-covered"},
-  {"id": "q04", "question": "Free and fully local explainer video, what stack?", "keywords": ["free", "local", "offline", "explainer", "stack", "free-local", "no cloud"], "approach": "", "pages": [], "record_ids": [], "examples": [], "risk": "", "status": "not-covered"},
-  {"id": "q05", "question": "Do I need an MCP server or is a skill enough?", "keywords": ["mcp server", "skill", "plugin", "agent skills", "tool calling", "integration"], "approach": "", "pages": [], "record_ids": [], "examples": [], "risk": "", "status": "not-covered"},
-  {"id": "q06", "question": "Which of these skills also work in Codex?", "keywords": ["codex", "portability", "agent portability", "cross-agent", "other agents", "instead of claude", "gemini cli", "cursor", "compatible"], "approach": "", "pages": [], "record_ids": [], "examples": [], "risk": "", "status": "not-covered"},
-  {"id": "q07", "question": "How does the agent check its own render before saying done?", "keywords": ["review loop", "self-check", "verify render", "frames", "ffprobe", "contact sheet", "qa"], "approach": "", "pages": [], "record_ids": [], "examples": [], "risk": "", "status": "not-covered"},
-  {"id": "q08", "question": "How do I break a script into scenes, shots and transitions?", "keywords": ["storyboard", "script", "scenes", "shot list", "transitions", "decomposition", "story"], "approach": "", "pages": [], "record_ids": [], "examples": [], "risk": "", "status": "not-covered"},
-  {"id": "q09", "question": "Sora API is gone and Veo left the Gemini API. What do I call now, and what does 10 s cost?", "keywords": ["sora", "veo", "hosted video model", "video api", "price", "cost per second", "shut-down", "replacement"], "approach": "", "pages": [], "record_ids": [], "examples": [], "risk": "", "status": "not-covered"},
-  {"id": "q10", "question": "Can I run a decent video model on an M3 Max for free, and how long does it take?", "keywords": ["m3 max", "apple silicon", "local video model", "mac", "weights", "timing", "wan", "ltx"], "approach": "", "pages": [], "record_ids": [], "examples": [], "risk": "", "status": "not-covered"},
-  {"id": "q11", "question": "Can I use this model or renderer commercially where I live?", "keywords": ["commercial use", "licence", "license", "territory", "non-commercial", "terms", "legal"], "approach": "", "pages": [], "record_ids": [], "examples": [], "risk": "", "status": "not-covered"},
-  {"id": "q12", "question": "How do I keep a character consistent across shots?", "keywords": ["character consistency", "consistent", "identity", "reference image", "same character", "shots"], "approach": "", "pages": [], "record_ids": [], "examples": [], "risk": "", "status": "not-covered"},
-  {"id": "q13", "question": "How do I add voiceover, music and captions without paid services?", "keywords": ["voiceover", "tts", "music", "captions", "subtitles", "audio", "free-local", "whisper"], "approach": "", "pages": [], "record_ids": [], "examples": [], "risk": "", "status": "not-covered"},
-  {"id": "q14", "question": "How do I cut and caption my screen recording with an agent?", "keywords": ["screen recording", "screencast", "cut", "trim", "captions", "ffmpeg", "footage editing"], "approach": "", "pages": [], "record_ids": [], "examples": [], "risk": "", "status": "not-covered"},
-  {"id": "q15", "question": "Is this skill safe to install, and is its popularity real?", "keywords": ["safe", "security", "trust", "install", "popularity", "stars", "installs", "supply chain"], "approach": "", "pages": [], "record_ids": [], "examples": [], "risk": "", "status": "not-covered"},
-  {"id": "q16", "question": "How do I run this on a schedule with an approval step?", "keywords": ["schedule", "cron", "approval", "human in the loop", "scheduling", "runtime", "automation"], "approach": "", "pages": [], "record_ids": [], "examples": [], "risk": "", "status": "not-covered"},
-  {"id": "q17", "question": "What can bb or Hermes do for a content pipeline?", "keywords": ["bb", "hermes", "content pipeline", "orchestration", "agentic pipeline", "content factory"], "approach": "", "pages": [], "record_ids": [], "examples": [], "risk": "", "status": "not-covered"},
-  {"id": "q18", "question": "What do YouTube, TikTok and Instagram require for automated, AI-made posts?", "keywords": ["youtube", "tiktok", "instagram", "platform rules", "ai disclosure", "label", "publishing", "policy"], "approach": "", "pages": [], "record_ids": [], "examples": [], "risk": "", "status": "not-covered"},
-  {"id": "q19", "question": "How do I make good still images for thumbnails and first frames?", "keywords": ["still images", "thumbnail", "first frame", "image model", "t2i", "keyframe"], "approach": "", "pages": [], "record_ids": [], "examples": [], "risk": "", "status": "not-covered"},
-  {"id": "q20", "question": "Which benchmarks tell me if an agentic video pipeline is any good?", "keywords": ["benchmark", "evaluation", "metrics", "agentic pipeline", "quality score", "leaderboard"], "approach": "", "pages": [], "record_ids": [], "examples": [], "risk": "", "status": "not-covered"}
+  {
+   "id": "q01",
+   "question": "Remotion or HyperFrames if Claude Code writes the video?",
+   "keywords": [
+    "remotion",
+    "hyperframes",
+    "claude code",
+    "code-driven video",
+    "renderer",
+    "comparison"
+   ],
+   "approach": "Both render locally from code an agent writes and both vendors ship skills. In our one run per stack both met the brief; the page lists what each got wrong. Decide on licence (Remotion is free up to 3 employees, HyperFrames is Apache-2.0) and on which install side effects you accept.",
+   "pages": [
+    "examples/hyperframes-vs-remotion/README.md"
+   ],
+   "record_ids": [
+    "tool:heygen-com/hyperframes",
+    "tool:remotion-dev/remotion",
+    "tool:remotion-dev/skills",
+    "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+    "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
+    "source:github.com/heygen-com/hyperframes/issues/4435",
+    "source:remotion.dev/docs/5-0-migration"
+   ],
+   "examples": [
+    "hyperframes-vs-remotion"
+   ],
+   "risk": "Our comparison is one run per stack. The only other head-to-head is the vendor's own page.",
+   "status": "covered"
+  },
+  {
+   "id": "q02",
+   "question": "My agent-made video looks amateur. Which skills fix that?",
+   "keywords": [
+    "amateur",
+    "design skill",
+    "motion skill",
+    "visual design",
+    "typography",
+    "polish",
+    "quality"
+   ],
+   "approach": "Add skills that carry concrete rules for the lever that is weak: motion (eases by role, exits shorter than entrances), design (type scale, one left edge), audio (loudness targets), captions (line length, reading speed), and a review loop where the agent looks at frames. Then check the rules against the standards records, because skills disagree with each other.",
+   "pages": [
+    "examples/hyperframes-vs-remotion/README.md"
+   ],
+   "record_ids": [
+    "tool:heygen-com/hyperframes",
+    "tool:digitalsamba/claude-code-video-toolkit",
+    "tool:haidrrrry/claude-remotion-skill",
+    "tool:lottiefiles/motion-design-skill",
+    "tool:calesthio/generative-media-skills",
+    "tool:kajisho5/ffmpeg-skill",
+    "tool:dojocodinglabs/remotion-superpowers",
+    "tool:vincentwei1021/video-shotcraft",
+    "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
+    "source:tech.ebu.ch/publications/r128"
+   ],
+   "examples": [
+    "hyperframes-vs-remotion"
+   ],
+   "risk": "No skill here has an independent before-and-after measurement. Skills contradict each other on idle motion, backgrounds, caption placement and loudness.",
+   "status": "covered"
+  },
+  {
+   "id": "q03",
+   "question": "How do I get a 30 second product demo out of Claude Code today?",
+   "keywords": [
+    "product demo",
+    "claude code",
+    "30 second",
+    "short video",
+    "recipe",
+    "walkthrough"
+   ],
+   "approach": "Pick a code renderer with its vendor skills, give the agent a fixed brief with exact copy, sizes and palette, and require a still-frame check before the full render. A product-promo or demo-recording skill adds shot recipes and captions.",
+   "pages": [
+    "examples/hyperframes-vs-remotion/README.md"
+   ],
+   "record_ids": [
+    "tool:heygen-com/hyperframes",
+    "tool:remotion-dev/skills",
+    "tool:vincentwei1021/video-shotcraft",
+    "tool:coreyhaines31/marketingskills",
+    "tool:kajisho5/ffmpeg-skill"
+   ],
+   "examples": [
+    "hyperframes-vs-remotion"
+   ],
+   "risk": "Our example is a 20 s text explainer, not a product demo with screen captures. The demo-specific skills were read, not run.",
+   "status": "thin"
+  },
+  {
+   "id": "q04",
+   "question": "Free and fully local explainer video, what stack?",
+   "keywords": [
+    "free",
+    "local",
+    "offline",
+    "explainer",
+    "stack",
+    "free-local",
+    "no cloud"
+   ],
+   "approach": "A code renderer plus local audio and captions needs no paid service: HyperFrames or Manim for the picture, FFmpeg for assembly and loudness, Kokoro for narration, whisper.cpp for captions.",
+   "pages": [
+    "examples/hyperframes-vs-remotion/README.md"
+   ],
+   "record_ids": [
+    "tool:heygen-com/hyperframes",
+    "tool:manimcommunity/manim",
+    "tool:ffmpeg/ffmpeg",
+    "model:hexgrad/kokoro",
+    "tool:ggml-org/whisper.cpp",
+    "tool:nexu-io/html-video",
+    "tool:motion-canvas/motion-canvas"
+   ],
+   "examples": [
+    "hyperframes-vs-remotion"
+   ],
+   "risk": "Only the picture stage was run here. Narration and captions on this stack are not yet run by us.",
+   "status": "covered"
+  },
+  {
+   "id": "q05",
+   "question": "Do I need an MCP server or is a skill enough?",
+   "keywords": [
+    "mcp server",
+    "skill",
+    "plugin",
+    "agent skills",
+    "tool calling",
+    "integration"
+   ],
+   "approach": "For code-driven video a skill is usually enough: Remotion closed its MCP server and moved users to skills. Hosted generation and render vendors lead with MCP. Either way, name the skill and when to load it in your agent instructions, because agents often do not invoke a skill by themselves.",
+   "pages": [],
+   "record_ids": [
+    "source:remotion.dev/docs/ai/mcp",
+    "source:vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals",
+    "tool:remotion-dev/skills",
+    "tool:kajisho5/ffmpeg-skill",
+    "tool:fal-ai/fal",
+    "tool:replicate/replicate",
+    "tool:runwayml/runway-api"
+   ],
+   "examples": [],
+   "risk": "One vendor's reasons and one vendor's eval. Neither is about video output quality.",
+   "status": "covered"
+  },
+  {
+   "id": "q06",
+   "question": "Which of these skills also work in Codex?",
+   "keywords": [
+    "codex",
+    "portability",
+    "agent portability",
+    "cross-agent",
+    "other agents",
+    "instead of claude",
+    "gemini cli",
+    "cursor",
+    "compatible"
+   ],
+   "approach": "Filter skills by the agent they state support for. Several of the quality skills name Codex explicitly. A stated claim is not a test: none was run under Codex here.",
+   "pages": [],
+   "record_ids": [
+    "tool:remotion-dev/skills",
+    "tool:heygen-com/hyperframes",
+    "tool:vincentwei1021/video-shotcraft",
+    "tool:calesthio/generative-media-skills",
+    "tool:kajisho5/ffmpeg-skill",
+    "tool:browser-use/video-use",
+    "tool:openmontageinc/openmontage"
+   ],
+   "examples": [],
+   "risk": "Support is quoted from each project's own README. Not tested by us.",
+   "status": "thin"
+  },
+  {
+   "id": "q07",
+   "question": "How does the agent check its own render before saying done?",
+   "keywords": [
+    "review loop",
+    "self-check",
+    "verify render",
+    "frames",
+    "ffprobe",
+    "contact sheet",
+    "qa"
+   ],
+   "approach": "Make the agent render stills or a contact sheet, look at them, fix, and repeat a bounded number of times; then measure the final file (stream facts, black and frozen segments, loudness). The strongest rule found hands the final review to a second agent with a clean context.",
+   "pages": [
+    "examples/hyperframes-vs-remotion/README.md"
+   ],
+   "record_ids": [
+    "tool:heygen-com/hyperframes",
+    "tool:haidrrrry/claude-remotion-skill",
+    "tool:vincentwei1021/video-shotcraft",
+    "tool:kajisho5/ffmpeg-skill",
+    "tool:jordanrendric/claude-video-vision",
+    "tool:dojocodinglabs/remotion-superpowers",
+    "tool:remotion-dev/remotion",
+    "tool:browser-use/video-use",
+    "tool:flchntc/smooth-animation-skill"
+   ],
+   "examples": [
+    "hyperframes-vs-remotion"
+   ],
+   "risk": "In our run both agents found layout bugs only by looking at stills. Neither watched the clip at speed.",
+   "status": "covered"
+  },
+  {
+   "id": "q08",
+   "question": "How do I break a script into scenes, shots and transitions?",
+   "keywords": [
+    "storyboard",
+    "script",
+    "scenes",
+    "shot list",
+    "transitions",
+    "decomposition",
+    "story"
+   ],
+   "approach": "Write the script in a plain format, split it into scenes with a fixed time slot each, then into shots with one focal point, and choose a small set of transition kinds. The research pipelines use the same order: script, storyboard, shots, generation, check.",
+   "pages": [],
+   "record_ids": [
+    "source:fountain.io/syntax",
+    "source:arxiv.org/abs/2606.07649",
+    "source:arxiv.org/abs/2604.24842",
+    "source:cloud.wikis.utexas.edu/wiki/spaces/rtf318/pages/80022510",
+    "tool:heygen-com/hyperframes",
+    "tool:remotion-dev/skills",
+    "tool:ffmpeg/ffmpeg"
+   ],
+   "examples": [],
+   "risk": "No shot-list schema with tool support was found. The papers were read at abstract or HTML level.",
+   "status": "thin"
+  },
+  {
+   "id": "q09",
+   "question": "Sora API is gone and Veo left the Gemini API. What do I call now, and what does 10 s cost?",
+   "keywords": [
+    "sora",
+    "veo",
+    "hosted video model",
+    "video api",
+    "price",
+    "cost per second",
+    "shut-down",
+    "replacement"
+   ],
+   "approach": "Sora's API was removed and Veo 3.1 left the Gemini API. Google names Gemini Omni Flash as the replacement. Other first-party APIs with posted per-second prices exist, and aggregators resell several under one key. Compare prices at the same resolution.",
+   "pages": [],
+   "record_ids": [
+    "model:openai/sora-2",
+    "model:google/veo-3.1",
+    "model:google/gemini-omni-flash",
+    "model:black-forest-labs/flux-3",
+    "model:alibaba/wan",
+    "model:bytedance/seedance",
+    "model:xai/grok-imagine",
+    "tool:runwayml/runway-api",
+    "tool:openrouter/video-generation",
+    "source:artificialanalysis.ai/video/leaderboard/text-to-video"
+   ],
+   "examples": [],
+   "risk": "Prices are quoted from vendor pages on the retrieval date and go stale in weeks. Nothing hosted was run by us.",
+   "status": "covered"
+  },
+  {
+   "id": "q10",
+   "question": "Can I run a decent video model on an M3 Max for free, and how long does it take?",
+   "keywords": [
+    "m3 max",
+    "apple silicon",
+    "local video model",
+    "mac",
+    "weights",
+    "timing",
+    "wan",
+    "ltx"
+   ],
+   "approach": "Several open-weights video models document an Apple Silicon path through MLX, MPS or Draw Things. The licences differ a lot. Nobody has published M3 Max timings, and we have not measured any yet.",
+   "pages": [],
+   "record_ids": [
+    "model:wan-ai/wan2.2",
+    "model:lightricks/ltx-2",
+    "model:vimoo-ai/vimoo-1.0",
+    "model:minimaxai/minimax-h3",
+    "tool:blaizzy/mlx-video",
+    "tool:drawthings.ai",
+    "tool:comfy-org/comfyui"
+   ],
+   "examples": [],
+   "risk": "Documented is not measured. The only published timing is minutes per step on a larger machine.",
+   "status": "thin"
+  },
+  {
+   "id": "q11",
+   "question": "Can I use this model or renderer commercially where I live?",
+   "keywords": [
+    "commercial use",
+    "licence",
+    "license",
+    "territory",
+    "non-commercial",
+    "terms",
+    "legal"
+   ],
+   "approach": "Read the licence clause quoted on the record, not the badge. Remotion is free up to 3 employees. Some open weights exclude whole territories, some need a paid licence above a revenue threshold, some are research-only, and fair-code workflow engines restrict commercial hosting.",
+   "pages": [],
+   "record_ids": [
+    "tool:remotion-dev/remotion",
+    "model:minimaxai/minimax-h3",
+    "model:lightricks/ltx-2",
+    "model:qwen/qwen-image",
+    "model:black-forest-labs/flux-3-image-klein",
+    "model:wan-ai/wan2.2",
+    "tool:n8n-io/n8n",
+    "tool:greensock/gsap",
+    "source:remotion.dev/docs/5-0-migration"
+   ],
+   "examples": [],
+   "risk": "Quotes are clauses, not legal advice. Several licence texts were gated and are marked as read second-hand.",
+   "status": "covered"
+  },
+  {
+   "id": "q12",
+   "question": "How do I keep a character consistent across shots?",
+   "keywords": [
+    "character consistency",
+    "consistent",
+    "identity",
+    "reference image",
+    "same character",
+    "shots"
+   ],
+   "approach": "Fix the character in writing and in reference images before generating, constrain each shot prompt to that bible, and check each shot against it. Research shows consistency drops as the gap between appearances grows, and explicit per-entity memory helps.",
+   "pages": [],
+   "record_ids": [
+    "tool:calesthio/generative-media-skills",
+    "source:arxiv.org/abs/2605.15199",
+    "source:arxiv.org/abs/2606.07649",
+    "source:arxiv.org/abs/2604.24842",
+    "model:bytedance/seedance"
+   ],
+   "examples": [],
+   "risk": "No skill found makes the agent measure identity drift. Not run by us.",
+   "status": "thin"
+  },
+  {
+   "id": "q13",
+   "question": "How do I add voiceover, music and captions without paid services?",
+   "keywords": [
+    "voiceover",
+    "tts",
+    "music",
+    "captions",
+    "subtitles",
+    "audio",
+    "free-local",
+    "whisper"
+   ],
+   "approach": "Narration from a local TTS model, music from a local model, captions from a local Whisper build, then mix to a loudness target and check captions against a reading-speed rule.",
+   "pages": [],
+   "record_ids": [
+    "model:hexgrad/kokoro",
+    "model:ace-step/ace-step",
+    "tool:ggml-org/whisper.cpp",
+    "tool:ml-explore/mlx-examples/whisper",
+    "tool:ffmpeg/ffmpeg",
+    "source:tech.ebu.ch/publications/r128",
+    "source:tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s2.pdf",
+    "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
+    "tool:calesthio/generative-media-skills"
+   ],
+   "examples": [],
+   "risk": "None of the audio tools has been run here. One skill in the hub masters louder than the EBU streaming range.",
+   "status": "covered"
+  },
+  {
+   "id": "q14",
+   "question": "How do I cut and caption my screen recording with an agent?",
+   "keywords": [
+    "screen recording",
+    "screencast",
+    "cut",
+    "trim",
+    "captions",
+    "ffmpeg",
+    "footage editing"
+   ],
+   "approach": "Transcribe locally, cut on word boundaries with short audio fades, burn or attach captions, then run a platform check on the output. A footage-editing skill gives the cut rules; an FFmpeg skill gives the checks.",
+   "pages": [],
+   "record_ids": [
+    "tool:browser-use/video-use",
+    "tool:kajisho5/ffmpeg-skill",
+    "tool:ggml-org/whisper.cpp",
+    "tool:ffmpeg/ffmpeg",
+    "tool:josiahsiegel/claude-plugin-marketplace",
+    "tool:breakthrough/pyscenedetect",
+    "tool:coreyhaines31/marketingskills"
+   ],
+   "examples": [],
+   "risk": "The footage-editing skill uses a paid transcription key as shipped. Not run by us.",
+   "status": "covered"
+  },
+  {
+   "id": "q15",
+   "question": "Is this skill safe to install, and is its popularity real?",
+   "keywords": [
+    "safe",
+    "security",
+    "trust",
+    "install",
+    "popularity",
+    "stars",
+    "installs",
+    "supply chain"
+   ],
+   "approach": "Read the skill before installing it: what it runs, where it installs, what it sends. Compare installs with stars and repo age. Cloned skills with very high install counts exist, a security scan found critical issues in a share of public skills, and fake stars are a measured phenomenon.",
+   "pages": [
+    "examples/hyperframes-vs-remotion/README.md"
+   ],
+   "record_ids": [
+    "source:skills.sh/api/search/ai-video-generation",
+    "source:skills.sh/docs",
+    "source:snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub",
+    "source:arxiv.org/abs/2412.13459",
+    "source:arxiv.org/abs/2605.11418",
+    "source:github.com/heygen-com/hyperframes/blob/main/skills/hyperframes/skill.md",
+    "tool:vincentwei1021/video-shotcraft"
+   ],
+   "examples": [
+    "hyperframes-vs-remotion"
+   ],
+   "risk": "The hub flags disagreement between installs and stars; a flag is a prompt to look, not a verdict.",
+   "status": "covered"
+  },
+  {
+   "id": "q16",
+   "question": "How do I run this on a schedule with an approval step?",
+   "keywords": [
+    "schedule",
+    "cron",
+    "approval",
+    "human in the loop",
+    "scheduling",
+    "runtime",
+    "automation"
+   ],
+   "approach": "Choose where the schedule lives: a local scheduler that runs your agent CLI, the agent vendor's own scheduled tasks, or a CI schedule. Then add the approval step yourself, because most of these have none built in, and decide the permission mode for unattended runs.",
+   "pages": [],
+   "record_ids": [
+    "tool:get-bb/bb",
+    "tool:nousresearch/hermes-agent",
+    "source:code.claude.com/docs/en/scheduled-tasks",
+    "source:code.claude.com/docs/en/routines",
+    "source:code.claude.com/docs/en/headless",
+    "source:learn.chatgpt.com/docs/automations",
+    "source:docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+    "source:docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
+    "tool:n8n-io/n8n"
+   ],
+   "examples": [],
+   "risk": "Read from documentation. No schedule was run by us.",
+   "status": "covered"
+  },
+  {
+   "id": "q17",
+   "question": "What can bb or Hermes do for a content pipeline?",
+   "keywords": [
+    "bb",
+    "hermes",
+    "content pipeline",
+    "orchestration",
+    "agentic pipeline",
+    "content factory"
+   ],
+   "approach": "bb schedules Claude Code or Codex runs on a cron and keeps run history; it has no media, posting or approval features of its own. Hermes Agent has its own scheduling and messaging gateways, and a published demo with director, renderer and editor roles. Both carry the schedule and agent steps; render and publish stay your scripts.",
+   "pages": [],
+   "record_ids": [
+    "tool:get-bb/bb",
+    "source:github.com/get-bb/bb/blob/main/docs/configuration.md",
+    "source:github.com/get-bb/bb/blob/main/plugins/automations/skills/automations/references/script-runtime.md",
+    "source:github.com/get-bb/bb/blob/main/docs/multiple-devices.md",
+    "tool:nousresearch/hermes-agent",
+    "tool:nousresearch/kanban-video-pipeline",
+    "source:hermes-agent.nousresearch.com/docs/user-guide/security"
+   ],
+   "examples": [],
+   "risk": "No independent report of bb used outside coding was found. Nothing was run by us.",
+   "status": "covered"
+  },
+  {
+   "id": "q18",
+   "question": "What do YouTube, TikTok and Instagram require for automated, AI-made posts?",
+   "keywords": [
+    "youtube",
+    "tiktok",
+    "instagram",
+    "platform rules",
+    "ai disclosure",
+    "label",
+    "publishing",
+    "policy"
+   ],
+   "approach": "YouTube lets an unverified API project post publicly and has an API flag for synthetic content. TikTok keeps posts private until an audit that excludes personal upload tools. Instagram and Facebook cap API posts per day. Disclose realistic AI content everywhere, and avoid templated mass output.",
+   "pages": [],
+   "record_ids": [
+    "source:developers.google.com/youtube/v3/revision_history",
+    "source:developers.google.com/youtube/v3/docs/videos/insert",
+    "source:support.google.com/youtube/answer/14328491",
+    "source:support.google.com/youtube/answer/1311392",
+    "source:developers.tiktok.com/doc/content-sharing-guidelines",
+    "source:developers.tiktok.com/doc/content-posting-api-reference-direct-post",
+    "source:developers.facebook.com/docs/instagram-platform/content-publishing",
+    "source:developers.facebook.com/docs/video-api/guides/reels-publishing",
+    "source:about.fb.com/news/2026/03/rewarding-original-creators-on-facebook",
+    "source:c2pa.org/faqs"
+   ],
+   "examples": [],
+   "risk": "Policy pages change without notice. TikTok's and Meta's AI-label pages could not be read and are missing.",
+   "status": "covered"
+  },
+  {
+   "id": "q19",
+   "question": "How do I make good still images for thumbnails and first frames?",
+   "keywords": [
+    "still images",
+    "thumbnail",
+    "first frame",
+    "image model",
+    "t2i",
+    "keyframe"
+   ],
+   "approach": "Generate locally through an MLX command-line tool with a permissively licensed model, or call a hosted image API with a posted per-image price. Check the model's licence for commercial use before the image goes into client work.",
+   "pages": [],
+   "record_ids": [
+    "tool:mflux-community/mflux",
+    "model:tongyi-mai/z-image",
+    "model:black-forest-labs/flux-3-image-klein",
+    "model:qwen/qwen-image",
+    "model:openai/gpt-image",
+    "model:google/nano-banana",
+    "model:bytedance/seedream",
+    "tool:drawthings.ai"
+   ],
+   "examples": [],
+   "risk": "No image was generated by us. Thumbnail specs and text-rendering claims are not yet covered.",
+   "status": "thin"
+  },
+  {
+   "id": "q20",
+   "question": "Which benchmarks tell me if an agentic video pipeline is any good?",
+   "keywords": [
+    "benchmark",
+    "evaluation",
+    "metrics",
+    "agentic pipeline",
+    "quality score",
+    "leaderboard"
+   ],
+   "approach": "Human-preference arenas rank single clips. For multi-shot work look at benchmarks that test entity consistency across shots and at the benchmarks the pipeline papers publish with their systems. Check whether code and data are released before trusting a number.",
+   "pages": [],
+   "record_ids": [
+    "source:artificialanalysis.ai/video/leaderboard/text-to-video",
+    "source:arxiv.org/abs/2605.15199",
+    "source:arxiv.org/abs/2606.07649",
+    "source:arxiv.org/abs/2604.24842",
+    "source:arxiv.org/abs/2605.15585",
+    "tool:netflix/vmaf"
+   ],
+   "examples": [],
+   "risk": "Papers read at abstract or HTML level. A research lane on pipelines and benchmarks is still open.",
+   "status": "thin"
+  }
  ]
 }
