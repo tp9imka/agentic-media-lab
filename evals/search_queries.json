@@ -193,5 +193,14 @@
    "example:hyperframes-vs-remotion"
   ],
   "top": 3
+ },
+ {
+  "query": "check a rendered video against the brief automatically",
+  "expect_any": [
+   "example:clipcheck-fix-loop",
+   "guide:first-render-claude-code",
+   "tool:kajisho5/ffmpeg-skill"
+  ],
+  "top": 4
  }
 ]

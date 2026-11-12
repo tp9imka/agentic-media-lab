@@ -199,8 +199,10 @@
     "contact sheet",
     "qa"
    ],
-   "approach": "Make the agent render stills or a contact sheet, look at them, fix, and repeat a bounded number of times; then measure the final file (stream facts, black and frozen segments, loudness). The strongest rule found hands the final review to a second agent with a clean context.",
+   "approach": "Two halves. A deterministic checker run after every render: stream facts, empty and sparse frames, palette, safe area, scene times, loudness, captions, against the brief written as a contract. Then one look at stills or a contact sheet, ideally by a second agent with a clean context, for what a checker cannot see. In one run here an agent fixed a failing clip from checker output alone.",
    "pages": [
+    "lab/clipcheck/README.md",
+    "examples/clipcheck-fix-loop/README.md",
     "examples/hyperframes-vs-remotion/README.md",
     "docs/cheatsheets/first-render-claude-code.md",
     "docs/research/skill-rule-conflicts.md"
@@ -217,9 +219,10 @@
     "tool:flchntc/smooth-animation-skill"
    ],
    "examples": [
+    "clipcheck-fix-loop",
     "hyperframes-vs-remotion"
    ],
-   "risk": "In our run both agents found layout bugs only by looking at stills. Neither watched the clip at speed.",
+   "risk": "One run, one reviewer. The checker missed overlapping text and unreadable-but-present elements, and an agent sped up a fine wipe to satisfy an early false-positive rule.",
    "status": "covered"
   },
   {

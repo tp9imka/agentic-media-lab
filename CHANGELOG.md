@@ -9,6 +9,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Added
 
 - Repository skeleton.
+- `lab/clipcheck`: a contract checker for agent-made video, with a rule pack whose sources resolve to hub quotes.
+- Example: an agent fixes a failing clip from checker output alone, with a blind before and after review.
 
 ### Changed
 
