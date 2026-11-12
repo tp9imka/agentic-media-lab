@@ -1,0 +1,906 @@
+{
+  "schema_version": 1,
+  "lane": "quality-skills-2",
+  "records": [
+    {
+      "id": "tool:calesthio/generative-media-skills",
+      "kind": "tool",
+      "title": "generative-media-skills",
+      "aliases": [
+        "captions-media-accessibility",
+        "media-qc-delivery",
+        "character-design-continuity"
+      ],
+      "url": "https://github.com/calesthio/generative-media-skills",
+      "summary": "A large provider-independent skill library for media production. Separate skills cover captions and accessibility, final QC and delivery, character continuity, audio mixing and generated-media QA, several with small validator scripts.",
+      "why_it_matters": "It is the only candidate found that covers caption limits, delivery specs and character continuity in one place, with a caption validator that turns line length and reading speed into numbers.",
+      "concepts": [
+        "concept:audio-and-captions",
+        "concept:delivery",
+        "concept:consistency",
+        "concept:agent-skills",
+        "concept:agent-portability"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "high",
+      "fit_notes": "Load single skills, not the whole library: each SKILL.md is 25-30 KB, so three of them fill a lot of context. The caption validator checks timing and line counts only; its own text says it does not judge accuracy, contrast or placement. The platform specs inside are dated by the author (verified 2026-07-10 in the text); re-check them before a paid ad delivery. I did not run any of its scripts. The README links to calesthio/OpenMontage, which is the same project as tool:openmontageinc/openmontage.",
+      "related": [
+        {
+          "id": "tool:openmontageinc/openmontage",
+          "rel": "integrates_with"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "quality-skills-2",
+      "tool_type": "skill",
+      "agents": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "hermes",
+        "any-skill"
+      ],
+      "levers": [
+        "captions",
+        "delivery",
+        "consistency",
+        "audio",
+        "review-loop"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "Its caption skill runs a validator with a two-line limit, 42 characters per line and a warning above 20 characters per second.",
+          "quote": "python skills/production/audio-craft/captions-media-accessibility/scripts/validate_captions.py --max-lines 2 --max-chars-per-line 42 --cps-warning 20 captions_en.vtt",
+          "locator": "skills/production/audio-craft/captions-media-accessibility/SKILL.md, section on the bundled validator, example command",
+          "url": "https://github.com/calesthio/generative-media-skills/blob/HEAD/skills/production/audio-craft/captions-media-accessibility/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Its delivery skill keeps at least 1 dB of true-peak headroom for web and social files when no target is given.",
+          "quote": "Leave at least 1 dB true-peak headroom for generic web/social delivery when no loudness target is specified; use the mandated loudness target for broadcast/streaming.",
+          "locator": "skills/production/governance-delivery/media-qc-delivery/SKILL.md, export and encode rules",
+          "url": "https://github.com/calesthio/generative-media-skills/blob/HEAD/skills/production/governance-delivery/media-qc-delivery/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Its continuity skill marks a character's features as locked, so they may not change across shots unless the user approves.",
+          "quote": "**Locked**: must remain constant unless user approves a redesign.",
+          "locator": "skills/production/creative-direction/character-design-continuity/SKILL.md, section Identity lock",
+          "url": "https://github.com/calesthio/generative-media-skills/blob/HEAD/skills/production/creative-direction/character-design-continuity/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "captions-media-accessibility, media-qc-delivery and character-design-continuity SKILL.md files and the README against the three claims",
+        "source_sha256": "db48605a44d26c71a0beede32bffbbaf1aa63fc0ba05e93194699512f1b2b43c",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:josiahsiegel/claude-plugin-marketplace",
+      "kind": "tool",
+      "title": "claude-plugin-marketplace (ffmpeg-kinetic-captions)",
+      "aliases": [
+        "ffmpeg-kinetic-captions",
+        "ffmpeg-effects"
+      ],
+      "url": "https://github.com/JosiahSiegel/claude-plugin-marketplace",
+      "summary": "A Claude Code plugin marketplace. Its ffmpeg-effects plugin has a kinetic-captions skill: ASS subtitle tags for word-grow, karaoke and pop captions burned in with FFmpeg, with timing per platform.",
+      "why_it_matters": "It gives exact word-pop timings and a reading-time formula, which is the kinetic-caption craft most other skills leave as 'make captions pop'.",
+      "concepts": [
+        "concept:audio-and-captions",
+        "concept:plugins",
+        "concept:motion-and-transitions"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Install only the ffmpeg-effects plugin; the marketplace holds many unrelated plugins. Its 50 px edge margin for 1080x1920 is far smaller than the platform UI zones in tool:openmontageinc/openmontage and tool:dojocodinglabs/remotion-superpowers, so captions placed by this rule can sit under TikTok buttons. The readability file credits its 1.5 s minimum and 42-character line to WCAG 2.2; I did not open WCAG to confirm that. The skill opens with Windows path rules unrelated to video.",
+      "related": [
+        {
+          "id": "tool:openmontageinc/openmontage",
+          "rel": "contradicts",
+          "note": "50 px edge margin vs 320 px bottom dead zone on TikTok"
+        },
+        {
+          "id": "tool:dojocodinglabs/remotion-superpowers",
+          "rel": "contradicts",
+          "note": "50 px edge margin vs captions 15-25% up from the bottom"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "quality-skills-2",
+      "tool_type": "plugin",
+      "agents": [
+        "claude-code"
+      ],
+      "levers": [
+        "captions",
+        "motion"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "It gives word-grow timings per platform, for example 100-150 ms grow and 115-120% scale on TikTok.",
+          "quote": "| **TikTok** | 100-150ms | 100-150ms | 115-120% | Fast, punchy |",
+          "locator": "plugins/ffmpeg-effects/skills/ffmpeg-kinetic-captions/SKILL.md, section Word-Grow Timing by Platform, table row TikTok",
+          "url": "https://github.com/JosiahSiegel/claude-plugin-marketplace/blob/HEAD/plugins/ffmpeg-effects/skills/ffmpeg-kinetic-captions/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Its reading-time rule holds a caption for at least 1.5 s, or word count at 160 words per minute.",
+          "quote": "duration = max(1.5, (word_count / 160) * 60)",
+          "locator": "plugins/ffmpeg-effects/skills/ffmpeg-animation-timing-reference/references/caption-readability.md, section Caption Duration Calculation, Formula",
+          "url": "https://github.com/JosiahSiegel/claude-plugin-marketplace/blob/HEAD/plugins/ffmpeg-effects/skills/ffmpeg-animation-timing-reference/references/caption-readability.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "For mobile readability it asks for 50 px safe margins from the edges.",
+          "quote": "- Use safe margins (50px from edges)",
+          "locator": "plugins/ffmpeg-effects/skills/ffmpeg-kinetic-captions/SKILL.md, Troubleshooting, Poor Mobile Readability",
+          "url": "https://github.com/JosiahSiegel/claude-plugin-marketplace/blob/HEAD/plugins/ffmpeg-effects/skills/ffmpeg-kinetic-captions/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "ffmpeg-kinetic-captions SKILL.md and caption-readability.md against the three claims",
+        "source_sha256": "5875b665b22d58b8b31372a2b16affb0263bad708326245d2ef386a9ee83762c",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:jordanrendric/claude-video-vision",
+      "kind": "tool",
+      "title": "claude-video-vision",
+      "aliases": [
+        "video-perception",
+        "watch-video"
+      ],
+      "url": "https://github.com/jordanrendric/claude-video-vision",
+      "summary": "A Claude Code plugin with an MCP server that extracts frames with ffmpeg and transcribes audio, so Claude can look at a video file. A /watch-video command and a video-perception skill drive it.",
+      "why_it_matters": "It gives Claude eyes on a finished render, which any renderer's review loop can use when its own skill has no frame-inspection step.",
+      "concepts": [
+        "concept:review-loop",
+        "concept:mcp-servers",
+        "concept:plugins"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "It perceives, it does not judge: you still need a review checklist from another skill. The MCP server is fetched from npm by npx on first use, which runs remote code; pin a version or build from the repo if that matters. With the Gemini or OpenAI backend the audio leaves your machine; pick the local Whisper backend for client work. It also downloads YouTube videos with yt-dlp, which this lane did not assess.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "quality-skills-2",
+      "tool_type": "plugin",
+      "agents": [
+        "claude-code"
+      ],
+      "levers": [
+        "review-loop"
+      ],
+      "cost": "mixed",
+      "claims": [
+        {
+          "text": "For a video over 30 s its command must run an analysis pass (scene changes, silence, transcription) before pulling frames.",
+          "quote": "2. **REQUIRED for videos > 30s:** Call `video_analyze` BEFORE `video_watch`. This is NOT optional.",
+          "locator": "commands/watch-video.md, workflow step 2",
+          "url": "https://github.com/jordanrendric/claude-video-vision/blob/HEAD/commands/watch-video.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The MCP server installs itself from npm through npx the first time it runs.",
+          "quote": "The MCP server will auto-install via `npx` from [npm](https://www.npmjs.com/package/claude-video-vision) on first use — no build step required.",
+          "locator": "README.md, Quick Start, step 1",
+          "url": "https://github.com/jordanrendric/claude-video-vision/blob/HEAD/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "With the Gemini backend the audio track is sent to Google.",
+          "quote": "- **Audio is sent to Google's Gemini API** via the endpoint `https://generativelanguage.googleapis.com`.",
+          "locator": "PRIVACY.md, section Gemini API",
+          "url": "https://github.com/jordanrendric/claude-video-vision/blob/HEAD/PRIVACY.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md, commands/watch-video.md and PRIVACY.md against the three claims",
+        "source_sha256": "d4036e74f419c93378a7833550b22eb60e7a280476f3d4a9ef8b8bd969c5c9a9",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:lottiefiles/motion-design-skill",
+      "kind": "tool",
+      "title": "motion-design skill (LottieFiles)",
+      "url": "https://github.com/LottieFiles/motion-design-skill",
+      "summary": "A tool-agnostic motion design skill: director notes, easing and timing tables, patterns, and a quality checklist with severity tiers.",
+      "why_it_matters": "Its checklist turns motion taste into checks an agent can tick before rendering, with a stated severity for each miss.",
+      "concepts": [
+        "concept:motion-and-transitions",
+        "concept:agent-skills",
+        "concept:agent-portability"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Written for UI motion first: some checks (prefers-reduced-motion, pausable animations over 5 s) do not apply to a rendered MP4; skip them. The checklist is for the agent to read code or frames against; the skill ships no tool that measures a render. Its ban on linear easing matches tool:haidrrrry/claude-remotion-skill.",
+      "related": [
+        {
+          "id": "tool:haidrrrry/claude-remotion-skill",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "quality-skills-2",
+      "tool_type": "skill",
+      "agents": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "any-skill"
+      ],
+      "levers": [
+        "motion",
+        "review-loop"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "Its checklist caps the total stagger of a sequence below 500 ms and marks more as critical.",
+          "quote": "- [ ] Stagger total <500ms",
+          "locator": "skills/motion-design/reference/quality-checklist.md, Technical Quality",
+          "url": "https://github.com/LottieFiles/motion-design-skill/blob/HEAD/skills/motion-design/reference/quality-checklist.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It allows at most a third of the elements on screen to move at the same time.",
+          "quote": "- [ ] 1/3 rule (density): max 1/3 elements active simultaneously",
+          "locator": "skills/motion-design/reference/quality-checklist.md, Visual Quality",
+          "url": "https://github.com/LottieFiles/motion-design-skill/blob/HEAD/skills/motion-design/reference/quality-checklist.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "quality-checklist.md and README.md against both claims",
+        "source_sha256": "d2399cd6df302b7d1970d973a0b98fe105e71cb187d912fe04675150ede4d271",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:kajisho5/ffmpeg-skill",
+      "kind": "tool",
+      "title": "ffmpeg-skill",
+      "url": "https://github.com/kajisho5/ffmpeg-skill",
+      "summary": "An Agent Skill and MCP server of 42 local FFmpeg tools for cutting, captions, loudness and platform export, with a fixed probe, edit, check, verify, look workflow.",
+      "why_it_matters": "It is the clearest delivery skill found: platform checks on the output file, numbers in the report, and a contact sheet the agent must view after any picture change.",
+      "concepts": [
+        "concept:delivery",
+        "concept:review-loop",
+        "concept:footage-editing",
+        "concept:agent-portability"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "high",
+      "fit_notes": "Needs FFmpeg 6.1+ and Python 3.10+ locally; no cloud. It tells the agent to use only its scripts and never raw ffmpeg, so a job the 42 tools do not cover stops there. A good last step after any renderer: hand it the MP4 and ask for a platform check. I did not run it.",
+      "related": [
+        {
+          "id": "tool:browser-use/video-use",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "quality-skills-2",
+      "tool_type": "skill",
+      "agents": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "any-skill",
+        "any-mcp"
+      ],
+      "levers": [
+        "delivery",
+        "review-loop",
+        "captions",
+        "audio"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "Before reporting done, the agent checks the output against a named platform.",
+          "quote": "5. **Check** with `check.py OUTPUT --platform X --expect-identity S:M`",
+          "locator": "skills/ffmpeg-skill/SKILL.md, Workflow (in this order), step 5",
+          "url": "https://github.com/kajisho5/ffmpeg-skill/blob/HEAD/skills/ffmpeg-skill/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "After any picture change it must view a tiled contact sheet, and say so when it could not look.",
+          "quote": "8. **Look** after any picture change: `look.py OUTPUT --tiles 3x2`, view the PNG, name it in `Look:`;",
+          "locator": "skills/ffmpeg-skill/SKILL.md, Workflow (in this order), step 8",
+          "url": "https://github.com/kajisho5/ffmpeg-skill/blob/HEAD/skills/ffmpeg-skill/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It burns caption words as written and never shortens them to fit.",
+          "quote": "- **The words in a caption** — burned as written; never rewrite or shorten them, even to \"make it fit\".",
+          "locator": "skills/ffmpeg-skill/SKILL.md, section on what the agent never changes",
+          "url": "https://github.com/kajisho5/ffmpeg-skill/blob/HEAD/skills/ffmpeg-skill/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "skills/ffmpeg-skill/SKILL.md and README.md against the three claims",
+        "source_sha256": "afb24e0587b3fe2a387fe2bb6031b9a953f97a0404655f339527445640c10e4e",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:flchntc/smooth-animation-skill",
+      "kind": "tool",
+      "title": "smooth-animation-skill",
+      "url": "https://github.com/Flchntc/smooth-animation-skill",
+      "summary": "A Claude Code skill for choppy code-rendered animation (HyperFrames, Remotion, canvas, three.js), with a script that measures repeated frames, stills and jitter in the file.",
+      "why_it_matters": "It replaces 'looks choppy' with a measured number and a fixed order of fixes, and it re-measures the final file.",
+      "concepts": [
+        "concept:motion-and-transitions",
+        "concept:review-loop",
+        "concept:code-driven-video"
+      ],
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "The only evidence is the author's own before/after on two films; treat the 0.1 jump limit as the author's threshold. Rendering at 60 fps with 3 blur samples costs render time; the skill says how to cut back. Its 'no still scenes' rule contradicts the calm holds other skills allow, so pick one rule set. I did not run the meter.",
+      "related": [
+        {
+          "id": "tool:heygen-com/hyperframes",
+          "rel": "extends"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "quality-skills-2",
+      "tool_type": "skill",
+      "agents": [
+        "claude-code"
+      ],
+      "levers": [
+        "motion",
+        "review-loop"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "It starts by measuring the current file and keeping the result.",
+          "quote": "**1. Measure the current file and keep the result**",
+          "locator": "SKILL.md, step 1",
+          "url": "https://github.com/Flchntc/smooth-animation-skill/blob/HEAD/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It sets a jitter limit: frame-to-frame motion change above 0.1 fails.",
+          "quote": "`jump` compares the amount of motion from one frame to the next. Measured in tests: smooth videos stay between 0.003 and 0.04, and videos with camera jitter between 0.27 and 0.6; the limit is 0.1.",
+          "locator": "SKILL.md, section on reading the meter",
+          "url": "https://github.com/Flchntc/smooth-animation-skill/blob/HEAD/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It renders at a true 60 fps by default instead of interpolating frames.",
+          "quote": "**4. Render at a real 60 fps.** It is the default, not the last resort.",
+          "locator": "SKILL.md, step 4",
+          "url": "https://github.com/Flchntc/smooth-animation-skill/blob/HEAD/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "SKILL.md and README.md against the three claims",
+        "source_sha256": "99bf56e9161089b8605fa95730917defd1416213464d39a6ed37945b442e85cb",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:openmontageinc/openmontage",
+      "kind": "tool",
+      "title": "OpenMontage",
+      "url": "https://github.com/OpenMontageInc/OpenMontage",
+      "summary": "An agent-driven video production system with staged skills: proposal, scene plan, edit, compose, each followed by a reviewer pass. Creative skills hold typography, safe-zone, storytelling and sound numbers.",
+      "why_it_matters": "Its reviewer skill makes every critical finding carry a concrete fix and bounds revision rounds, and its typography skill has per-platform vertical safe zones.",
+      "concepts": [
+        "concept:review-loop",
+        "concept:agentic-pipelines",
+        "concept:visual-design",
+        "concept:audio-and-captions"
+      ],
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "AGPL: if you change it and run it as a service, the licence asks you to publish your changes; read it before client or SaaS use. The repo also ships face-swap and avatar skills, which this hub does not cover; this record covers only reviewer.md and the creative skills. Its two-round review bound is lower than the three rounds in tool:digitalsamba/claude-code-video-toolkit. The safe-zone table cites a third-party site; I did not open it.",
+      "related": [
+        {
+          "id": "tool:josiahsiegel/claude-plugin-marketplace",
+          "rel": "contradicts",
+          "note": "320 px bottom dead zone vs 50 px edge margin"
+        },
+        {
+          "id": "tool:digitalsamba/claude-code-video-toolkit",
+          "rel": "alternative_to",
+          "note": "two review rounds vs three"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "quality-skills-2",
+      "tool_type": "framework",
+      "agents": [
+        "claude-code",
+        "codex",
+        "cursor"
+      ],
+      "levers": [
+        "review-loop",
+        "design",
+        "captions",
+        "story",
+        "audio"
+      ],
+      "cost": "mixed",
+      "claims": [
+        {
+          "text": "Any critical finding forces a revision and a re-review, at most two rounds.",
+          "quote": "| 1+ critical findings | **Revise** — fix all critical findings, then re-review (max 2 rounds). |",
+          "locator": "skills/meta/reviewer.md, decision table",
+          "url": "https://github.com/OpenMontageInc/OpenMontage/blob/HEAD/skills/meta/reviewer.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It lists the dead zones of the TikTok UI on a 1080x1920 frame: 108 px top, 320 px bottom, 120 px right.",
+          "quote": "| **TikTok** | 900x1492 | 108px | 320px | 120px |",
+          "locator": "skills/creative/typography.md, Platform-Specific Safe Zones (Vertical 1080x1920), row TikTok",
+          "url": "https://github.com/OpenMontageInc/OpenMontage/blob/HEAD/skills/creative/typography.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The project is under the GNU AGPL version 3.",
+          "quote": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007",
+          "locator": "LICENSE, title lines",
+          "url": "https://github.com/OpenMontageInc/OpenMontage/blob/HEAD/LICENSE",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "skills/meta/reviewer.md, skills/creative/typography.md, README.md and LICENSE against the three claims; the git tree listing for the face-swap skill",
+        "source_sha256": "60e5591263ea7213c0ec7802ccbb557ac6f4bd9707cdbb37603800f8524228eb",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:coreyhaines31/marketingskills",
+      "kind": "tool",
+      "title": "marketingskills (video, product-demo-recording)",
+      "aliases": [
+        "product-demo-recording"
+      ],
+      "url": "https://github.com/coreyhaines31/marketingskills",
+      "summary": "A marketing skill set; its video skill has a reference for recording a scripted product demo with Playwright: subtitle bar, step badge, a fake visible cursor and optional TTS.",
+      "why_it_matters": "Screen demos are the most common developer clip, and this reference fixes their usual tells: an invisible cursor, captions covering the click, a blank first frame.",
+      "concepts": [
+        "concept:footage-editing",
+        "concept:audio-and-captions",
+        "concept:agent-skills",
+        "concept:agent-portability"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "It tells the agent to set bypassCSP on the browser context and, on a non-localhost host, to drop the Secure cookie flag for the recording run. Do that only on a local or staging build, never against production. It also tells the agent never to take an API key pasted into chat, which is the opposite of the video-use README. The TTS step needs a paid key.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "quality-skills-2",
+      "tool_type": "skill",
+      "agents": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "any-skill"
+      ],
+      "levers": [
+        "captions",
+        "motion",
+        "asset"
+      ],
+      "cost": "mixed",
+      "claims": [
+        {
+          "text": "It injects a fake cursor so viewers can see each click.",
+          "quote": "Playwright fires DOM events with no visible pointer, so viewers can't see what got clicked. Inject a fake cursor element and wrap clicks and fills in helpers:",
+          "locator": "skills/video/references/product-demo-recording.md, step 5 Make the cursor visible",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/HEAD/skills/video/references/product-demo-recording.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It sizes each scene caption at 50-80 characters.",
+          "quote": "- **Captions of 50-80 characters** read well and keep pauses short",
+          "locator": "skills/video/references/product-demo-recording.md, step 4 scene helper notes",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/HEAD/skills/video/references/product-demo-recording.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It switches off the page's content security policy in the recording browser.",
+          "quote": "A `style-src 'self'` policy without `unsafe-inline` blocks the inline styles on the subtitle bar and cursor. Keep `bypassCSP: true` on the context.",
+          "locator": "skills/video/references/product-demo-recording.md, Gotchas",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/HEAD/skills/video/references/product-demo-recording.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "skills/video/references/product-demo-recording.md against the three claims",
+        "source_sha256": "2f81e4f762c4aeae0c452072506ffa34731ab844de94b125b55ce02e4dfae53d",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:dojocodinglabs/remotion-superpowers",
+      "kind": "tool",
+      "title": "remotion-superpowers",
+      "url": "https://github.com/DojoCodingLabs/remotion-superpowers",
+      "summary": "A plugin on top of the official Remotion skills that adds voiceover, music, footage, caption presets and a /review-video command that scores a render.",
+      "why_it_matters": "Its review command does a cheap local frame check first, then a scored AI watch of the full render, and tells the agent to trust its own frames when they disagree.",
+      "concepts": [
+        "concept:review-loop",
+        "concept:audio-and-captions",
+        "concept:plugins",
+        "concept:agent-portability"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "The full review uploads your render to TwelveLabs, and voice and music use ElevenLabs: paid keys and your video leaves the machine. Step 1 alone (local stills) is free and works without either. Its caption placement agrees with tool:openmontageinc/openmontage and contradicts the 50 px margin in tool:josiahsiegel/claude-plugin-marketplace. Remotion's company licence applies as for tool:remotion-dev/skills.",
+      "related": [
+        {
+          "id": "tool:remotion-dev/skills",
+          "rel": "extends"
+        },
+        {
+          "id": "tool:josiahsiegel/claude-plugin-marketplace",
+          "rel": "contradicts",
+          "note": "caption placement on vertical video"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "quality-skills-2",
+      "tool_type": "plugin",
+      "agents": [
+        "claude-code",
+        "codex",
+        "gemini-cli",
+        "cursor",
+        "any-skill"
+      ],
+      "levers": [
+        "review-loop",
+        "captions",
+        "audio"
+      ],
+      "cost": "paid",
+      "claims": [
+        {
+          "text": "Review starts with a local check of rendered stills, then has TwelveLabs watch and score the full render.",
+          "quote": "Starts with a cheap local check of rendered still frames, then has TwelveLabs watch the full render and score it against a JSON rubric",
+          "locator": "skills/review-video/SKILL.md, frontmatter description",
+          "url": "https://github.com/DojoCodingLabs/remotion-superpowers/blob/HEAD/skills/review-video/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "When the AI review and the agent's own frames disagree on something visible, the frames win.",
+          "quote": "Cross-check the AI review against your own frame check from step 1; if they disagree on something visible, trust the frames and say so.",
+          "locator": "skills/review-video/SKILL.md, after the review format",
+          "url": "https://github.com/DojoCodingLabs/remotion-superpowers/blob/HEAD/skills/review-video/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "On 1080x1920 shorts it puts captions 15-25% up from the bottom to clear the platform UI.",
+          "quote": "| TikTok / Reels / Shorts (1080x1920) | About 15-25% up from the bottom (`bottom` around 300-480), or dead center for punchy hooks |",
+          "locator": "skills/remotion-production/rules/captions-workflow.md, Placement for platforms (safe zones), table",
+          "url": "https://github.com/DojoCodingLabs/remotion-superpowers/blob/HEAD/skills/remotion-production/rules/captions-workflow.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "skills/review-video/SKILL.md and rules/captions-workflow.md against the three claims",
+        "source_sha256": "571287eab345a8066f464cf9c18387a0775e3e21d3f7f35a834f2359b2fea159",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:iart-ai/motion-skills",
+      "kind": "tool",
+      "title": "motion-skills (iArt)",
+      "url": "https://github.com/iart-ai/motion-skills",
+      "summary": "An index of 19 motion-graphics skill packs plus a small verify toolkit: seek-and-screenshot, a contact sheet of start, middle and end, and an MP4 spec probe.",
+      "why_it_matters": "The verify scripts are a renderer-neutral review loop: look at three frames on one sheet, then assert resolution, codec, fps and duration of the file.",
+      "concepts": [
+        "concept:review-loop",
+        "concept:agent-skills",
+        "concept:motion-and-transitions"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "The skills themselves live in 19 other repos; this record covers only the index and tools/verify. The README promotes the vendor's paid iArt agent and cites its own cost figures; I did not check them. The scripts need ffmpeg, and Playwright Chromium for HTML; I did not run them.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "quality-skills-2",
+      "tool_type": "skill",
+      "agents": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "any-skill"
+      ],
+      "levers": [
+        "review-loop",
+        "delivery",
+        "motion"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "After stills are tiled, the agent inspects the sheet against the brief for clipped or off-canvas text.",
+          "quote": "# inspect sheet.png: matches the brief? clipped text / off-canvas / FOUC?",
+          "locator": "tools/verify/README.md, Usage by tier, Light",
+          "url": "https://github.com/iart-ai/motion-skills/blob/HEAD/tools/verify/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It asserts a vertical short's real resolution and frame rate from the encoded file.",
+          "quote": "scripts/probe-mp4.sh out/short.mp4 1080x1920 30      # vertical short contract",
+          "locator": "tools/verify/README.md, Usage by tier, Heavy Remotion",
+          "url": "https://github.com/iart-ai/motion-skills/blob/HEAD/tools/verify/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "tools/verify/README.md and README.md against both claims",
+        "source_sha256": "10c9457e7f240309b77ab6042e402c64d0ae66ce4d06008d58c9a361d2541c96",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:mort1d/motion-graphics-skills",
+      "kind": "tool",
+      "title": "motion-graphics (Mort1d)",
+      "url": "https://github.com/Mort1d/motion-graphics-skills",
+      "summary": "A skill that directs, animates, scores and renders a promo or reel from HTML scenes in headless Chrome, with sub-frame motion blur and an original score on the same beat grid.",
+      "why_it_matters": "It fixes a master spec, forbids copying reference material, and makes the agent critique until every score is 8 or more before the final render.",
+      "concepts": [
+        "concept:code-driven-video",
+        "concept:review-loop",
+        "concept:delivery",
+        "concept:audio-and-captions"
+      ],
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "high",
+      "fit_notes": "No npm packages or API keys per its compatibility line; needs Node 22.4+, ffmpeg and a Chromium browser. The SKILL.md is 35 KB. Its -1 dBTP ceiling is looser than the -1.5 dBTP in tool:mattypark/motion-graphics-skill. The critique score is the agent grading itself; nothing independent checks it. I did not run it.",
+      "related": [
+        {
+          "id": "tool:mattypark/motion-graphics-skill",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "quality-skills-2",
+      "tool_type": "skill",
+      "agents": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "gemini-cli",
+        "any-skill"
+      ],
+      "levers": [
+        "motion",
+        "audio",
+        "delivery",
+        "review-loop",
+        "asset"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "It sets the master: 60 fps, H.264 and AAC, -14 LUFS, true peak at or below -1 dBTP.",
+          "quote": "the master (1920×1080 or the chosen format, 60 fps, H.264 + AAC, -14 LUFS, true peak ≤ -1 dBTP)",
+          "locator": "skills/motion-graphics/SKILL.md, outputs list",
+          "url": "https://github.com/Mort1d/motion-graphics-skills/blob/HEAD/skills/motion-graphics/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It forbids copying footage, frames, music or a recognisable design from a reference.",
+          "quote": "Never copy footage, frames, music or a recognisable design from a reference",
+          "locator": "skills/motion-graphics/SKILL.md, references rules",
+          "url": "https://github.com/Mort1d/motion-graphics-skills/blob/HEAD/skills/motion-graphics/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It critiques until every score is 8 or more, then renders and runs QA.",
+          "quote": "### 7. Critique until every score is 8+, then render + QA",
+          "locator": "skills/motion-graphics/SKILL.md, step 7",
+          "url": "https://github.com/Mort1d/motion-graphics-skills/blob/HEAD/skills/motion-graphics/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "skills/motion-graphics/SKILL.md and README.md against the three claims",
+        "source_sha256": "e7b90c6073b7e5a8782403144dd323f63463c7131f39af19a4e5b22e64c949e0",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:mattypark/motion-graphics-skill",
+      "kind": "tool",
+      "title": "motion-video-director (mattypark)",
+      "aliases": [
+        "motion-video-director"
+      ],
+      "url": "https://github.com/mattypark/Motion-graphics-skill",
+      "summary": "A skill for code-drawn motion graphics and edited videos with a fixed intake, storyboard and preview flow, plus stock, SFX, font and Lottie sourcing through MCPs and APIs.",
+      "why_it_matters": "It is the candidate with the most explicit asset rules: a manifest with source and licence for every downloaded file, and no font shipped without a verified licence.",
+      "concepts": [
+        "concept:code-driven-video",
+        "concept:story-and-decomposition",
+        "concept:agent-skills",
+        "concept:agent-portability"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Asset search needs Pixabay, Freesound and Firecrawl keys. It adds the Playwright MCP through npx with @latest, which runs whatever version is newest; pin a version. It uses Pinterest, Behance and Dribbble for style references and says reference-only unless licensed; check that the agent keeps to that. The SKILL.md is 53 KB.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "quality-skills-2",
+      "tool_type": "skill",
+      "agents": [
+        "claude-code",
+        "codex",
+        "cursor"
+      ],
+      "levers": [
+        "asset",
+        "story",
+        "audio",
+        "motion"
+      ],
+      "cost": "mixed",
+      "claims": [
+        {
+          "text": "It records licence and attribution for every downloaded asset in a manifest.",
+          "quote": "Record license/attribution for every downloaded asset in `manifest.json`.",
+          "locator": "skills/motion-video-director/SKILL.md, project rules",
+          "url": "https://github.com/mattypark/Motion-graphics-skill/blob/HEAD/skills/motion-video-director/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It never ships a font whose licence it could not verify.",
+          "quote": "Never ship a font whose license you couldn't verify.",
+          "locator": "skills/motion-video-director/SKILL.md, font sourcing workflow",
+          "url": "https://github.com/mattypark/Motion-graphics-skill/blob/HEAD/skills/motion-video-director/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It installs the Playwright MCP from npm at its newest version.",
+          "quote": "\"playwright\": { \"command\": \"npx\", \"args\": [\"@playwright/mcp@latest\"",
+          "locator": "skills/motion-video-director/SKILL.md, setup table, row MCP Playwright",
+          "url": "https://github.com/mattypark/Motion-graphics-skill/blob/HEAD/skills/motion-video-director/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "skills/motion-video-director/SKILL.md against the three claims",
+        "source_sha256": "02f07b4e640b2fd04512ad8b82386aaa70f8aebf5904f3b07ca9529c598f6697",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    }
+  ]
+}
