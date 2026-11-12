@@ -47,7 +47,8 @@ function buildFacets(state) {
     if (!values.size) continue;
     const sel = el("select", { id: `f-${key}`, name: key }, el("option", { value: "", text: "Any" }),
       [...values].sort().map(v => el("option", { value: v, text: v, selected: v === state.filters[key] })));
-    sel.addEventListener("change", () => run(formState(), false));
+    sel.classList.toggle("is-set", Boolean(sel.value));
+    sel.addEventListener("change", () => { sel.classList.toggle("is-set", Boolean(sel.value)); run(formState(), false); });
     box.append(el("div", { class: "field" }, el("label", { for: `f-${key}`, text: label }), sel));
   }
   $("f-all").checked = state.all;
@@ -57,9 +58,9 @@ function hitItem(h) {
   const isPage = h.kind === "page";
   const href = isPage ? `../${h.path}${h.anchor ? "#" + h.anchor : ""}` : siteLink("record.html", { id: h.id });
   const meta = el("p", { class: "hit-meta" },
-    isPage ? el("span", { class: "badge badge-page" }, el("span", { class: "glyph", "aria-hidden": "true", text: "\u00A7" }), " Guide section") : badge(h.badge),
+    isPage ? el("span", { class: "badge badge-page" }, el("span", { class: "glyph", "aria-hidden": "true", text: "\u00A7" }), "guide section") : badge(h.badge),
     el("span", { class: "kind", text: h.kind }),
-    h.stale ? marker("stale", "\u26A0 Check overdue") : null,
+    h.stale ? marker("stale", "check overdue") : null,
     h.hidden ? marker("hidden", "Archived or shut down") : null);
   return el("li", { class: "hit" + (h.hidden ? " is-hidden" : "") },
     el("h2", { class: "hit-title" }, el("a", { href }, highlight(h.title, h.matched))),
@@ -172,7 +173,7 @@ async function main() {
   $("filters-box").open = Object.keys(state.filters).length > 0 || state.all;
   $("f-all").addEventListener("change", () => run(formState(), false));
   $("clear-filters").addEventListener("click", () => {
-    for (const s of $("facets").querySelectorAll("select")) s.value = "";
+    for (const s of $("facets").querySelectorAll("select")) { s.value = ""; s.classList.remove("is-set"); }
     $("f-all").checked = false;
     run(formState(), false);
   });

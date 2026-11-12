@@ -4,36 +4,37 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>Search - Knowledge hub</title>
+<title>Search - Agentic Media Lab</title>
 <meta name="description" content="Search the hub's records and guide sections. Query and filters live in the URL.">
 <link rel="icon" href="data:,">
+<link rel="stylesheet" href="tokens.css">
 <link rel="stylesheet" href="style.css">
 <link rel="alternate" type="text/markdown" href="../llms.txt">
 <link rel="describedby" href="../llms.txt">
 <script src="theme.js"></script>
+<script src="chrome.js" defer></script>
 <script type="module" src="search.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-  <a class="brand" href="index.html" data-site-link>Knowledge hub</a>
+<header data-chrome><a class="brand" href="index.html">Agentic Media Lab</a></header>
+<main id="main" class="doc" tabindex="-1">
+  <div class="doc-body">
+  <p class="label">01 Answers</p>
+  <h1 id="results-title">Search</h1>
   <form class="search" role="search" action="search.html" method="get" id="search-form">
-    <label for="q" class="visually-hidden">Search the hub</label>
-    <div class="combo">
-      <input id="q" name="q" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false"
-        aria-controls="q-list" autocomplete="off" spellcheck="false" placeholder="Search  (Ctrl or Cmd + K)">
-      <ul id="q-list" role="listbox" aria-label="Suggestions" hidden></ul>
+    <label for="q" class="label">Your question or a few words</label>
+    <div class="searchbar">
+      <div class="combo">
+        <input id="q" name="q" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false"
+          aria-controls="q-list" autocomplete="off" spellcheck="false" aria-describedby="q-hint">
+        <ul id="q-list" role="listbox" aria-label="Suggestions" hidden></ul>
+      </div>
+      <button type="submit" class="primary">Search</button>
     </div>
-    <button type="submit">Search</button>
+    <p id="q-hint" class="hint"><kbd>Ctrl</kbd> or <kbd>Cmd</kbd> + <kbd>K</kbd> focuses this box.</p>
     <span id="q-status" class="visually-hidden" role="status" aria-live="polite"></span>
   </form>
-  <nav aria-label="Site">
-    <a href="../llms.txt">llms.txt</a>
-    <button id="theme-toggle" type="button">Theme: auto</button>
-  </nav>
-</header>
-<main id="main" tabindex="-1">
-  <h1 id="results-title">Search</h1>
   <form id="filters" class="filters" aria-label="Filters">
     <details id="filters-box">
       <summary id="filters-title">Filters</summary>
@@ -58,9 +59,9 @@
     <h2 id="examples-title" class="small-head">Example questions</h2>
     <ul id="example-list" class="plain-list"></ul>
   </section>
+  <p class="muted">Search runs in your browser over the hub's generated index. Results match <code>python3 tools/query.py search</code>.</p>
+  </div>
 </main>
-<footer class="site-footer">
-  <p>Search runs in your browser over the hub's generated index. Results match <code>python3 tools/query.py search</code>.</p>
-</footer>
+<footer data-chrome></footer>
 </body>
 </html>

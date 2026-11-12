@@ -6,8 +6,20 @@ export const CONFIG_URL = "../hub.config.json";
 export const DECODER_URL = "../evals/decoder.json";
 const SUGGEST_LIMIT = 8;
 const SUGGEST_DELAY_MS = 120;
-const THEMES = ["auto", "light", "dark"];
-export const BADGE_GLYPH = { "measured": "\u25CF", "quoted-primary": "\u25C6", "quoted-secondary": "\u25C7", "unverified": "\u25CB" };
+const GLYPH_PX = 10;
+const SVG_NS = "http://www.w3.org/2000/svg";
+// Bench status glyphs, drawn on a 10 x 10 box. The fill carries the meaning, never the colour alone.
+const GLYPHS = {
+  "measured": [["rect", { width: 10, height: 10, fill: "currentColor" }]],
+  "quoted-primary": [["rect", { x: .75, y: .75, width: 8.5, height: 8.5, fill: "none", stroke: "currentColor", "stroke-width": 1.5 }],
+    ["rect", { x: .75, y: 5, width: 8.5, height: 4.25, fill: "currentColor" }]],
+  "quoted-secondary": [["rect", { x: .75, y: .75, width: 8.5, height: 8.5, fill: "none", stroke: "currentColor", "stroke-width": 1.5 }]],
+  "unverified": [["rect", { x: .75, y: .75, width: 8.5, height: 8.5, fill: "none", stroke: "currentColor", "stroke-width": 1.5, "stroke-dasharray": "2 1.6" }]],
+  "error": [["path", { d: "M5 .5 9.5 5 5 9.5 .5 5Z", fill: "currentColor" }]],
+  "warning": [["path", { d: "M5 1.2 8.8 5 5 8.8 1.2 5Z", fill: "none", stroke: "currentColor", "stroke-width": 1.5 }]],
+  "passed": [["rect", { width: 10, height: 10, fill: "currentColor" }]],
+  "unknown": [["rect", { x: .75, y: .75, width: 8.5, height: 8.5, fill: "none", stroke: "currentColor", "stroke-width": 1.5, "stroke-dasharray": "2 1.6" }]],
+};
 
 const params = new URLSearchParams(location.search);
 
@@ -73,15 +85,29 @@ export async function fetchJson(url, optional = false) {
   return t === null ? null : JSON.parse(t);
 }
 
+export function glyph(name, size = GLYPH_PX) {
+  const svg = document.createElementNS(SVG_NS, "svg");
+  for (const [k, v] of Object.entries({ width: size, height: size, viewBox: "0 0 10 10", "aria-hidden": "true", focusable: "false" })) svg.setAttribute(k, v);
+  for (const [tag, attrs] of GLYPHS[name] || GLYPHS.unknown) {
+    const s = document.createElementNS(SVG_NS, tag);
+    for (const [k, v] of Object.entries(attrs)) s.setAttribute(k, v);
+    svg.append(s);
+  }
+  return svg;
+}
+
 export function badge(b) {
-  const tier = (b && b.tier) || "unverified";
-  return el("span", { class: `badge badge-${tier}` },
-    el("span", { class: "glyph", "aria-hidden": "true", text: BADGE_GLYPH[tier] || BADGE_GLYPH.unverified }),
-    " ", (b && b.label) || "Unverified");
+  const tier = GLYPHS[b && b.tier] ? b.tier : "unverified";
+  return el("span", { class: `badge badge-${tier}` }, glyph(tier), (b && b.label) || "unverified");
+}
+
+// Severity or verdict as glyph + word.
+export function status(name, word, cls = "sev") {
+  return el("span", { class: `${cls} ${cls}-${name}` }, glyph(name), word || name);
 }
 
 export function marker(kind, text) {
-  return el("span", { class: `marker marker-${kind}` }, text);
+  return el("span", { class: `marker marker-${kind}` }, glyph(kind === "stale" ? "warning" : "unknown"), text);
 }
 
 // Text with every word whose stem was matched wrapped in <mark>.
@@ -156,23 +182,6 @@ export function indexErrorText(err) {
     : `The index could not be loaded: ${err && err.message}`;
 }
 
-function initTheme() {
-  const btn = document.getElementById("theme-toggle");
-  if (!btn) return;
-  const root = document.documentElement;
-  const show = () => { btn.textContent = `Theme: ${root.dataset.theme || "auto"}`; };
-  btn.addEventListener("click", () => {
-    const next = THEMES[(THEMES.indexOf(root.dataset.theme || "auto") + 1) % THEMES.length];
-    if (next === "auto") delete root.dataset.theme;
-    else root.dataset.theme = next;
-    try {
-      if (next === "auto") localStorage.removeItem("aml-theme");
-      else localStorage.setItem("aml-theme", next);
-    } catch (e) { /* storage blocked: the choice lasts for this page only */ }
-    show();
-  });
-  show();
-}
 
 function initShortcut(input) {
   document.addEventListener("keydown", ev => {
@@ -267,8 +276,8 @@ function initCombobox(input) {
 
 const FALLBACK_NAME = "Knowledge hub";
 
+// The header, footer and theme toggle come from chrome.js; this adds the brand name and the search box.
 export function initChrome() {
-  initTheme();
   fetchJson(CONFIG_URL, true).then(config => {
     const name = config && (config.title || config.name);
     if (!name) return;

@@ -29,8 +29,8 @@ Full text: [CC-BY-4.0.txt](CC-BY-4.0.txt).
 ## Third-party material => its own terms
 
 Third-party material keeps its own licence. This covers quotes inside records and
-vendored files. A `THIRD_PARTY.md` listing will be added when the first vendored file
-lands.
+vendored files. The site's fonts are under the SIL Open Font License 1.1: see
+[THIRD_PARTY.md](../THIRD_PARTY.md) and [site/fonts/LICENSES/](../site/fonts/LICENSES/).
 
 Short quotes from sources are attributed in each record: source URL, locator and
 retrieval date. Saved copies of sources are not in this repository.

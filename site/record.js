@@ -1,4 +1,4 @@
-import { CONFIG_URL, badge, dateText, el, extLink, fetchJson, fetchText, indexBase, indexErrorText, initChrome, marker, safeHref, siteLink } from "./common.js";
+import { CONFIG_URL, badge, glyph, dateText, el, extLink, fetchJson, fetchText, indexBase, indexErrorText, initChrome, marker, safeHref, siteLink } from "./common.js";
 import { dice, isHidden, parseJsonl, referencedBy, trigrams } from "./search_core.js";
 
 const NEAREST_IDS = 3;
@@ -83,7 +83,7 @@ function observed(r, ratio) {
   const o = r.observed || {};
   if (r.popularity_flag === "disagree") {
     box.append(el("p", { class: "warning", role: "note" },
-      el("span", { "aria-hidden": "true", text: "\u26A0 " }),
+      glyph("warning"), " ",
       el("strong", { text: "Popularity warning: " }),
       `stars and installs disagree by more than ${ratio}x. Do not read either number as a quality signal.`));
   }
@@ -130,7 +130,7 @@ function render(r, records, config) {
   $("r-title").textContent = title;
   const chk = r.checked || {};
   $("r-badges").append(...[badge(r.badge), el("span", { class: "kind", text: r.kind || "" }),
-    r.stale ? marker("stale", "\u26A0 Check overdue") : null,
+    r.stale ? marker("stale", "check overdue") : null,
     isHidden(r) ? marker("hidden", "Archived or shut down") : null].filter(Boolean));
   $("r-why").textContent = r.why_it_matters || r.summary || "";
   $("r-checked").textContent = `Last checked ${dateText(chk.date)} (${chk.depth || "depth not recorded"}). ` +

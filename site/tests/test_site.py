@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-"""Static checks on site/: origins, images, contrast, byte budgets, landmarks, targets. Stdlib only.
+"""Static checks on site/: origins, images, contrast, byte budgets, landmarks, targets, data. Stdlib only.
 
-  python3 site/tests/test_site.py      prints the contrast table, then runs the checks
+  python3 site/tests/test_site.py      prints the contrast table and page sizes, then runs the checks
 """
+import hashlib
+import html
+import json
 import re
 import sys
 import unittest
@@ -10,37 +13,52 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 SITE = Path(__file__).resolve().parent.parent
-PAGES = ("index.html", "search.html", "record.html")
-CSS = SITE / "style.css"
-# First-load bytes per page: the HTML, style.css, theme.js and every module it imports
-# (search_worker.js included: the search box starts it on first focus).
-PAGE_BUDGET_BYTES = {"index.html": 55_000, "search.html": 60_000, "record.html": 60_000}
+ROOT = SITE.parent
+PAGES = ("index.html", "search.html", "record.html", "lab.html")
+TOKENS = SITE / "tokens.css"
+STYLES = (SITE / "style.css", SITE / "home.css")
+FONTS = SITE / "fonts"
+# First-load bytes per page: the HTML, its stylesheets, its scripts and every module they import
+# (search_worker.js included: the search box starts it on first focus). Fonts are budgeted below.
+PAGE_BUDGET_BYTES = {"index.html": 110_000, "search.html": 70_000, "record.html": 70_000, "lab.html": 62_000}
+FONT_BUDGET_BYTES = 520_000
 TEXT_MIN = 4.5
 UI_MIN = 3.0
 TARGET_MIN_PX = 24
+PHONE_TARGET_PX = 44
 ROOT_FONT_PX = 16
 NARROW_VIEWPORT_PX = 320
-PAGE_GUTTER_PX = 32  # --sp-4 on both sides
+PAGE_GUTTER_PX = 32  # 16 px on both sides at the narrowest width
 
-TEXT_PAIRS = [("text", "bg"), ("text", "surface"), ("muted", "bg"), ("muted", "surface"),
-              ("link", "bg"), ("link", "surface"), ("measured", "bg"), ("measured", "surface"),
-              ("primary", "bg"), ("primary", "surface"), ("secondary", "bg"), ("secondary", "surface"),
-              ("unverified", "bg"), ("unverified", "surface"), ("text", "mark"), ("warn-text", "warn-bg"),
-              ("on-button", "button")]
-UI_PAIRS = [("border", "bg"), ("border", "surface"), ("focus", "bg"), ("focus", "surface"),
-            ("warn-border", "warn-bg"), ("button", "bg")]
+# Foreground on background, as the pages use them. Hairline is for rules only (Foundations board).
+TEXT_PAIRS = [("ink", "paper"), ("graphite", "paper"), ("signal", "paper"), ("amber", "paper"),
+              ("ink", "mark"), ("paper", "ink"), ("specimen-ink", "specimen"), ("specimen-text", "specimen"),
+              ("signal-bright", "specimen"), ("amber-bright", "specimen"), ("on-flag", "amber-bright")]
+UI_PAIRS = [("ink", "paper"), ("graphite", "paper"), ("signal", "paper"), ("amber", "paper"),
+            ("specimen-ink", "specimen"), ("specimen-text", "specimen"), ("amber-bright", "specimen"),
+            ("signal-bright", "specimen")]
 
 ABSOLUTE = re.compile(r"^\s*(?:[a-z][a-z0-9+.-]*:|//)", re.I)
 ALLOWED_SCHEMES = ("data:",)
+SVG_NAMESPACE = "http://www.w3.org/2000/svg"  # an identifier, never fetched
+REPORT = ROOT / "examples/clipcheck-fix-loop/results/clipcheck-before.json"
 
 
 class Page(HTMLParser):
     def __init__(self):
         super().__init__()
         self.tags = []
+        self.labels = 0
 
     def handle_starttag(self, tag, attrs):
-        self.tags.append((tag, dict(attrs)))
+        a = dict(attrs)
+        if tag == "input" and self.labels:
+            a["in-label"] = "yes"
+        self.labels += tag == "label"
+        self.tags.append((tag, a))
+
+    def handle_endtag(self, tag):
+        self.labels -= tag == "label" and self.labels > 0
 
     def find(self, tag=None, **want):
         return [a for t, a in self.tags if (tag is None or t == tag)
@@ -53,25 +71,29 @@ def parse(name):
     return p
 
 
-def css_text():
-    return CSS.read_text(encoding="utf-8")
+def read(path):
+    return path.read_text(encoding="utf-8")
 
 
-def root_block(css):
-    m = re.search(r":root\s*\{(.*?)\}", css, re.S)
+def block(css, selector):
+    m = re.search(re.escape(selector) + r"\s*\{(.*?)\}", css, re.S)
     return m.group(1) if m else ""
 
 
-def tokens(css):
-    """{name: (light hex, dark hex)} for --c-* tokens, and {name: value} for the rest."""
-    colours, other = {}, {}
-    for name, value in re.findall(r"--([a-z0-9-]+)\s*:\s*([^;]+);", root_block(css)):
-        m = re.fullmatch(r"light-dark\(\s*(#[0-9a-fA-F]{6})\s*,\s*(#[0-9a-fA-F]{6})\s*\)", value.strip())
-        if name.startswith("c-"):
-            colours[name[2:]] = (m.group(1), m.group(2)) if m else None
-        else:
-            other[name] = value.strip()
-    return colours, other
+def declarations(text):
+    return dict(re.findall(r"--([a-z0-9-]+)\s*:\s*([^;]+);", text))
+
+
+def colour_tokens():
+    """{name: (light hex, dark hex)}: light from :root, dark = light overridden by [data-theme="dark"]."""
+    css = read(TOKENS)
+    light = {k[2:]: v.strip() for k, v in declarations(block(css, ":root")).items() if k.startswith("c-")}
+    dark_over = {k[2:]: v.strip() for k, v in declarations(block(css, ':root[data-theme="dark"]')).items()}
+    return {k: (v, dark_over.get(k, v)) for k, v in light.items()}
+
+
+def other_tokens():
+    return {k: v.strip() for k, v in declarations(block(read(TOKENS), ":root")).items() if not k.startswith("c-")}
 
 
 def luminance(hexcolour):
@@ -88,13 +110,11 @@ def contrast(a, b):
 
 
 def contrast_table():
-    colours, _ = tokens(css_text())
+    colours = colour_tokens()
     rows = []
     for kind, pairs, need in (("text", TEXT_PAIRS, TEXT_MIN), ("ui", UI_PAIRS, UI_MIN)):
         for fg, bg in pairs:
-            light = contrast(colours[fg][0], colours[bg][0])
-            dark = contrast(colours[fg][1], colours[bg][1])
-            rows.append((kind, fg, bg, need, light, dark))
+            rows.append((kind, fg, bg, need, contrast(colours[fg][0], colours[bg][0]), contrast(colours[fg][1], colours[bg][1])))
     return rows
 
 
@@ -102,7 +122,7 @@ def local_imports(path, seen):
     if path in seen or not path.is_file():
         return
     seen.add(path)
-    src = path.read_text(encoding="utf-8")
+    src = read(path)
     refs = re.findall(r"""(?:import\s[^"']*?from\s*|import\s*\(\s*|import\s+|new URL\(\s*)["'](\.{1,2}/[^"']+\.js)["']""", src)
     for ref in refs:
         local_imports((path.parent / ref).resolve(), seen)
@@ -138,6 +158,24 @@ def px(value, other):
     return float(m.group(1)) * (ROOT_FONT_PX if m.group(2) == "rem" else 1)
 
 
+def time_text(w):
+    s, e = w["start_s"], w["end_s"]
+    if e > s:
+        return f"{s:.3f}-{e:.3f} s"
+    return f"{s:.1f} s" if float(s).is_integer() else f"{s} s"
+
+
+def expected_marks(report):
+    """Same numbering as home.js: E1..En over error ranges, W1..Wn over the rest."""
+    out, count = [], {"E": 0, "W": 0}
+    for f in report["findings"]:
+        p = "E" if f["severity"] == "error" else "W"
+        for w in f["where"]:
+            count[p] += 1
+            out.append((p + str(count[p]), time_text(w), f))
+    return out
+
+
 class Origins(unittest.TestCase):
     def test_no_third_party_src_or_href(self):
         for name in PAGES:
@@ -148,47 +186,89 @@ class Origins(unittest.TestCase):
                         self.assertTrue(v.startswith(ALLOWED_SCHEMES), f"{name}: <{tag} {key}={v}>")
 
     def test_no_third_party_in_css(self):
-        css = css_text()
-        for ref in re.findall(r"@import\s+(?:url\()?\s*['\"]?([^'\")\s;]+)", css) + \
-                re.findall(r"url\(\s*['\"]?([^'\")]+)", css):
-            self.assertFalse(ABSOLUTE.match(ref) and not ref.startswith(ALLOWED_SCHEMES), ref)
+        for f in site_files(".css"):
+            css = read(f)
+            refs = re.findall(r"@import\s+(?:url\()?\s*['\"]?([^'\")\s;]+)", css) + re.findall(r"url\(\s*['\"]?([^'\")]+)", css)
+            for ref in refs:
+                self.assertFalse(ABSOLUTE.match(ref) and not ref.startswith(ALLOWED_SCHEMES), f"{f.name}: {ref}")
 
     def test_no_absolute_urls_in_site_code(self):
         for f in site_files(".js", ".html", ".css"):
-            self.assertIsNone(re.search(r"https?://", f.read_text(encoding="utf-8")), f.name)
+            code = read(f).replace(SVG_NAMESPACE, "")
+            self.assertIsNone(re.search(r"https?://", code), f.name)
 
-    def test_no_web_fonts(self):
-        self.assertNotIn("@font-face", css_text())
+
+class Fonts(unittest.TestCase):
+    def test_font_faces_are_local_files_with_swap(self):
+        css = read(TOKENS)
+        faces = re.findall(r"@font-face\s*\{(.*?)\}", css, re.S)
+        self.assertGreaterEqual(len(faces), 4)
+        for face in faces:
+            self.assertIn("font-display: swap", face)
+            for ref in re.findall(r"url\(\s*['\"]?([^'\")]+)", face):
+                self.assertTrue((SITE / ref).is_file(), ref)
+
+    def test_fonts_under_budget_licensed_and_listed(self):
+        files = sorted(FONTS.glob("*.woff2"))
+        self.assertTrue(files)
+        self.assertLessEqual(sum(f.stat().st_size for f in files), FONT_BUDGET_BYTES)
+        third = read(ROOT / "THIRD_PARTY.md")
+        for f in files:
+            digest = hashlib.sha256(f.read_bytes()).hexdigest()
+            self.assertIn(f"site/fonts/{f.name}` | `{digest}`", third, f"{f.name}: sha256 not listed in THIRD_PARTY.md")
+            family = f.name.split("-")[0]
+            self.assertTrue((FONTS / "LICENSES" / f"{family}-OFL.txt").is_file(), f.name)
+        self.assertIn("site/fonts/LICENSES", read(ROOT / "LICENSES/README.md"))
 
 
 class Images(unittest.TestCase):
-    def test_every_image_has_width_and_height(self):
+    def test_every_served_image_has_size_and_alt(self):
         for name in PAGES:
             for a in parse(name).find("img"):
-                self.assertTrue(a.get("width") and a.get("height"), f"{name}: {a}")
+                self.assertTrue(a.get("width") and a.get("height") and a.get("alt"), f"{name}: {a}")
+                self.assertTrue((SITE / a["src"]).is_file(), f"{name}: {a['src']}")
+
+    def test_script_made_images_have_size_alt_and_lazy(self):
+        for f in site_files(".js"):
+            for call in re.findall(r'el\("img",\s*\{(.*?)\}\)', read(f), re.S):
+                for key in ("width", "height", "alt", "loading"):
+                    self.assertRegex(call, rf"\b{key}\s*:", f"{f.name}: img without {key}")
+
+    def test_frames_readme(self):
+        readme = read(SITE / "assets/frames/README.md")
+        self.assertIn("examples/clipcheck-fix-loop/results/before.mp4", readme)
+        self.assertIn("ffmpeg ", readme)
+        for img in (SITE / "assets/frames").glob("*.jpg"):
+            self.assertIn(img.name, readme)
 
 
 class Contrast(unittest.TestCase):
-    def test_all_colour_tokens_use_light_dark(self):
-        colours, _ = tokens(css_text())
+    def test_every_colour_token_is_hex(self):
+        colours = colour_tokens()
         self.assertTrue(colours)
-        for name, v in colours.items():
-            self.assertIsNotNone(v, f"--c-{name} is not light-dark(#hex, #hex)")
+        for name, (light, dark) in colours.items():
+            for v in (light, dark):
+                self.assertRegex(v, r"^#[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$", f"--c-{name}")
+
+    def test_dark_mapping_is_the_same_for_system_and_toggle(self):
+        css = read(TOKENS)
+        system = declarations(block(css, ':root:not([data-theme="light"])'))
+        toggle = declarations(block(css, ':root[data-theme="dark"]'))
+        self.assertTrue(toggle)
+        self.assertEqual(system, toggle)
+        self.assertIn("@media (prefers-color-scheme: dark)", css)
 
     def test_colours_live_only_in_tokens(self):
-        rest = css_text().replace(root_block(css_text()), "")
-        self.assertIsNone(re.search(r"#[0-9a-fA-F]{3,8}\b|rgba?\(|hsla?\(", re.sub(r"/\*.*?\*/", "", rest, flags=re.S)))
+        for f in site_files(".css"):
+            if f == TOKENS:
+                continue
+            text = re.sub(r"/\*.*?\*/", "", read(f), flags=re.S)
+            self.assertIsNone(re.search(r"#[0-9a-fA-F]{3,8}\b|rgba?\(|hsla?\(", text), f.name)
 
-    def test_pairs_meet_wcag(self):
+    def test_pairs_meet_wcag_in_both_themes(self):
         for kind, fg, bg, need, light, dark in contrast_table():
-            self.assertGreaterEqual(light, need, f"light {fg} on {bg}: {light:.2f}")
-            self.assertGreaterEqual(dark, need, f"dark {fg} on {bg}: {dark:.2f}")
-
-    def test_manual_toggle_and_system_theme(self):
-        css = css_text()
-        self.assertIn('[data-theme="light"] { color-scheme: light; }', css)
-        self.assertIn('[data-theme="dark"] { color-scheme: dark; }', css)
-        self.assertIn("color-scheme: light dark", root_block(css))
+            self.assertGreaterEqual(light, need, f"light {kind} {fg} on {bg}: {light:.2f}")
+            self.assertGreaterEqual(dark, need, f"dark {kind} {fg} on {bg}: {dark:.2f}")
 
 
 class Budgets(unittest.TestCase):
@@ -199,86 +279,158 @@ class Budgets(unittest.TestCase):
 
 
 class Landmarks(unittest.TestCase):
-    def test_required_landmarks_and_labels(self):
+    def test_required_landmarks(self):
         for name in PAGES:
             p = parse(name)
             self.assertTrue(p.find("html") and p.find("html")[0].get("lang"), name)
             self.assertTrue(p.find("meta", name="viewport"), name)
-            self.assertEqual(len(p.find("header")), 1 + len(p.find("header", class_="record-head")), name)
+            self.assertEqual(len(p.find("h1")), 1, f"{name}: one h1")
             self.assertEqual(len(p.find("main", id="main")), 1, name)
             self.assertEqual(len(p.find("main")), 1, name)
-            self.assertTrue(p.find("footer"), name)
-            self.assertTrue(p.find("nav", aria_label="Site"), name)
+            self.assertEqual(len([a for t, a in p.tags if t == "header" and "data-chrome" in a]), 1, f"{name}: shared header")
+            self.assertEqual(len([a for t, a in p.tags if t == "footer" and "data-chrome" in a]), 1, f"{name}: shared footer")
+            self.assertTrue(p.find("script", src="chrome.js"), name)
+            self.assertTrue(p.find("script", src="theme.js"), name)
+            self.assertTrue(p.find("link", rel="stylesheet", href="tokens.css"), name)
             self.assertTrue(p.find("a", href="#main"), f"{name}: skip link")
             self.assertTrue(p.find("link", rel="describedby", href="../llms.txt"), name)
-            self.assertTrue(p.find("link", rel="alternate", type="text/markdown"), name)
-            self.assertTrue(p.find("button", id="theme-toggle"), name)
-            self.assertTrue(p.find("script", src="theme.js"), name)
+
+    def test_chrome_has_nav_toggle_and_only_existing_destinations(self):
+        js = read(SITE / "chrome.js")
+        self.assertIn('aria-label="Site"', js)
+        self.assertIn('id="theme-toggle"', js)
+        nav = re.search(r"var NAV = (\[.*?\]);", js).group(1)
+        for href in re.findall(r'\["([^"]+)"', nav):
+            self.assertTrue((SITE / href).resolve().is_file(), href)
+        for href in re.findall(r'href="(\.\./[^"]+)"', js):
+            self.assertTrue((SITE / href).resolve().is_file(), href)
+
+    def test_inputs_are_labelled(self):
+        for name in PAGES:
+            p = parse(name)
+            labels = {a.get("for") for a in p.find("label")}
+            for a in p.find("input"):
+                if a.get("type") == "hidden":
+                    continue
+                self.assertTrue(a.get("in-label") or a.get("id") in labels, f"{name}: input {a}")
 
     def test_search_box_is_a_labelled_combobox(self):
-        for name in PAGES:
+        for name in ("index.html", "search.html", "record.html"):
             p = parse(name)
             box = p.find("input", id="q")
             self.assertEqual(len(box), 1, name)
             box = box[0]
             self.assertEqual(box.get("role"), "combobox", name)
             self.assertEqual(box.get("aria-expanded"), "false", name)
-            self.assertTrue(p.find("label", **{"for": "q"}), name)
             self.assertTrue(p.find("ul", id=box["aria-controls"], role="listbox"), name)
-            self.assertTrue(p.find("form", role="search"), name)
+            self.assertTrue(p.find("form", role="search", action="search.html"), name)
             self.assertTrue(p.find(id="q-status", role="status"), name)
 
     def test_search_page_has_loading_state_and_live_region(self):
         p = parse("search.html")
         self.assertTrue(p.find("p", id="state", role="status"))
-        self.assertIn("Loading the index...", (SITE / "search.html").read_text())
-        self.assertNotIn("0 results", (SITE / "search.html").read_text())
+        self.assertIn("Loading the index...", read(SITE / "search.html"))
+        self.assertNotIn("0 results", read(SITE / "search.html"))
+
+
+class Home(unittest.TestCase):
+    def test_findings_table_is_served_and_matches_the_report(self):
+        page = read(SITE / "index.html")
+        self.assertIn('<table id="findings"', page)
+        body = re.search(r'<tbody id="findings-body">(.*?)</tbody>', page, re.S).group(1)
+        report = json.loads(read(REPORT))
+        marks = expected_marks(report)
+        self.assertEqual(re.findall(r'data-mark="(\w+)"', body), [m[0] for m in marks])
+        self.assertEqual([html.unescape(t) for t in re.findall(r'<span class="t">([^<]+)</span>', body)], [m[1] for m in marks])
+        text = html.unescape(body)
+        for f in report["findings"]:
+            for key in ("rule", "title", "message", "hint"):
+                self.assertIn(f[key], text, f"{f['rule']}: served {key} differs from the report")
+            for p in f["provenance"]:
+                self.assertIn(p["record"], text)
+                if p["note"]:
+                    self.assertIn(p["note"], text)
+                if p["quote"]:
+                    self.assertIn(re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", p["quote"]), html.unescape(body))
+
+    def test_frames_exist_for_every_finding(self):
+        report = json.loads(read(REPORT))
+        fps = report["stream"]["fps"]
+        for f in report["findings"]:
+            for w in f["where"]:
+                frame = w.get("first_frame", round(w["start_s"] * fps))
+                self.assertTrue((SITE / f"assets/frames/hf-d{frame:03d}.jpg").is_file(), frame)
+
+    def test_data_files_the_home_page_reads_exist(self):
+        js = read(SITE / "home.js")
+        base = re.search(r'const EXAMPLE = "([^"]+)"', js).group(1)
+        for rel in re.findall(r'EXAMPLE \+ "([^"]+)"', js):
+            self.assertTrue((SITE / (base + rel)).resolve().is_file(), rel)
+        for rel in re.findall(r'"(\.\./(?:evals|index)/[^"]+\.json)"', js):
+            self.assertTrue((SITE / rel).resolve().is_file(), rel)
+
+    def test_noscript_notice(self):
+        self.assertIn("<noscript>", read(SITE / "index.html"))
 
 
 class Layout(unittest.TestCase):
     def test_pointer_targets(self):
-        css = css_text()
-        _, other = tokens(css)
-        self.assertGreaterEqual(px("var(--target)", other), TARGET_MIN_PX)
+        css = read(SITE / "style.css")
+        other = other_tokens()
+        self.assertGreaterEqual(px("var(--target-min)", other), TARGET_MIN_PX)
+        self.assertGreaterEqual(px("var(--target)", other), PHONE_TARGET_PX)
         rule = re.search(r"([^{}]*\bbutton\b[^{}]*)\{\s*min-height:\s*([^;]+);", css)
         self.assertIsNotNone(rule)
         for sel in ("button", "select", 'input[type="text"]', ".option"):
             self.assertIn(sel, rule.group(1))
-        self.assertGreaterEqual(px(rule.group(2), other), TARGET_MIN_PX)
+        self.assertGreaterEqual(px(rule.group(2), other), PHONE_TARGET_PX)
 
     def test_visible_focus(self):
-        css = css_text()
-        self.assertRegex(css, r":focus-visible\s*\{[^}]*outline:\s*var\(--focus-w\) solid var\(--c-focus\)")
+        css = read(SITE / "style.css")
+        self.assertRegex(css, r":focus-visible\s*\{[^}]*outline:\s*var\(--focus-w\) solid var\(--c-ink\)")
+        self.assertRegex(css, r'\[data-surface="specimen"\] :focus-visible\s*\{[^}]*outline-color')
+
+    def test_reduced_motion(self):
+        self.assertIn("prefers-reduced-motion: reduce", read(SITE / "style.css"))
+        for f in site_files(".css", ".js"):
+            self.assertNotRegex(read(f), r"@keyframes|autoplay", f.name)
 
     def test_nothing_wider_than_a_narrow_phone(self):
-        css = css_text()
-        _, other = tokens(css)
+        other = other_tokens()
         room = NARROW_VIEWPORT_PX - PAGE_GUTTER_PX
-        for v in re.findall(r"minmax\(\s*([0-9.]+(?:px|rem))", css):
-            self.assertLessEqual(px(v, other), room, f"minmax({v})")
-        for prop, v in re.findall(r"(?<![a-z-])(width|min-width)\s*:\s*([0-9.]+(?:px|rem))", css):
-            self.assertLessEqual(px(v, other), room, f"{prop}: {v}")
-        self.assertIn(".table-wrap { overflow-x: auto; }", css)
+        for f in STYLES:
+            css = read(f)
+            for v in re.findall(r"minmax\(\s*(?:min\()?\s*([0-9.]+(?:px|rem))", css):
+                self.assertLessEqual(px(v, other), room, f"{f.name}: minmax({v})")
+            for prop, v in re.findall(r"(?<![a-z-])(width|min-width)\s*:\s*([0-9.]+(?:px|rem))", css):
+                self.assertLessEqual(px(v, other), room, f"{f.name}: {prop}: {v}")
+        self.assertIn(".table-wrap { overflow-x: auto; }", read(SITE / "style.css"))
+        self.assertRegex(read(SITE / "style.css"), r"#r-facts td \{[^}]*overflow-wrap: anywhere")
 
 
 class Copy(unittest.TestCase):
     def test_plain_hyphens_only(self):
-        for f in site_files(".js", ".html", ".css"):
-            text = f.read_text(encoding="utf-8")
-            self.assertNotRegex(text, "[\u2013\u2014]|\\\\u201[34]", f.name)
+        for f in site_files(".js", ".html", ".css", ".md"):
+            self.assertNotRegex(read(f), "[–—→]|\\\\u201[34]", f.name)
 
     def test_no_placeholder_text(self):
         for f in site_files(".js", ".html"):
-            self.assertNotRegex(f.read_text(encoding="utf-8").lower(), r"lorem|ipsum|todo", f.name)
+            self.assertNotRegex(read(f).lower(), r"lorem|ipsum|todo", f.name)
+
+    def test_no_debug_logging(self):
+        for f in site_files(".js"):
+            self.assertNotRegex(read(f), r"console\.(log|debug)", f.name)
 
 
 def print_contrast():
-    print(f"{'kind':5} {'pair':28} {'need':>5} {'light':>6} {'dark':>6}")
+    print(f"{'kind':5} {'pair':30} {'need':>5} {'light':>6} {'dark':>6}")
     for kind, fg, bg, need, light, dark in contrast_table():
-        print(f"{kind:5} {fg + ' on ' + bg:28} {need:5.1f} {light:6.2f} {dark:6.2f}")
+        print(f"{kind:5} {fg + ' on ' + bg:30} {need:5.1f} {light:6.2f} {dark:6.2f}")
     for name in PAGES:
         size, _ = page_bytes(name)
         print(f"bytes {name}: {size} (budget {PAGE_BUDGET_BYTES[name]})")
+    fonts = sum(f.stat().st_size for f in FONTS.glob("*.woff2"))
+    print(f"bytes fonts: {fonts} (budget {FONT_BUDGET_BYTES})")
 
 
 if __name__ == "__main__":

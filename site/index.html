@@ -4,65 +4,194 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>Knowledge hub</title>
-<meta name="description" content="Search the hub's records on agent-made video and images: skills, renderers, models, sources and recipes.">
+<title>Agentic Media Lab</title>
+<meta name="description" content="A knowledge hub for developers who make video and images with a coding agent. Every claim carries a verbatim quote; failures are published.">
 <link rel="icon" href="data:,">
+<link rel="stylesheet" href="tokens.css">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="home.css">
 <link rel="alternate" type="text/markdown" href="../llms.txt">
 <link rel="describedby" href="../llms.txt">
 <script src="theme.js"></script>
+<script src="chrome.js" defer></script>
 <script type="module" src="home.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-  <a class="brand" href="index.html" data-site-link>Knowledge hub</a>
-  <nav aria-label="Site">
-    <a href="search.html" data-site-link>Search</a>
-    <a href="../llms.txt">llms.txt</a>
-    <button id="theme-toggle" type="button">Theme: auto</button>
-  </nav>
-</header>
+<header data-chrome><a class="brand" href="index.html">Agentic Media Lab</a></header>
 <main id="main" tabindex="-1">
-  <section class="hero" aria-labelledby="hub-title">
-    <h1 id="hub-title">Knowledge hub</h1>
-    <p id="hub-tagline" class="lede"></p>
-    <form class="search search-hero" role="search" action="search.html" method="get">
-      <label for="q">Ask a question or search the hub</label>
-      <div class="search-row">
-        <div class="combo">
-          <input id="q" name="q" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false"
-            aria-controls="q-list" autocomplete="off" spellcheck="false" aria-describedby="q-hint">
-          <ul id="q-list" role="listbox" aria-label="Suggestions" hidden></ul>
-        </div>
-        <button type="submit" class="primary">Search</button>
-      </div>
-      <p id="q-hint" class="hint"><kbd>Ctrl</kbd> or <kbd>Cmd</kbd> + <kbd>K</kbd> focuses this box.</p>
-      <span id="q-status" class="visually-hidden" role="status" aria-live="polite"></span>
-    </form>
-    <div id="examples" hidden>
-      <h2 class="small-head">Example questions</h2>
-      <ul id="example-list" class="plain-list"></ul>
+
+<section class="wrap hero" aria-labelledby="home-title">
+  <p class="label" id="clip-crumb">Lab / clipcheck-fix-loop</p>
+  <div class="hero-row">
+    <h1 id="home-title">An agent made this clip. We measured every frame.</h1>
+    <p class="hero-lede">A knowledge hub for developers who make video and images with a coding agent. Claude Code first, Codex second. Every claim carries a verbatim quote from a source someone opened. Unknown is a valid value. Failures are published.</p>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="strip-h">
+  <div class="specimen strip-panel" data-surface="specimen">
+    <h2 id="strip-h" class="visually-hidden">Evidence strip</h2>
+    <div class="strip-meta">
+      <p id="strip-stream">Loading the checker's report...</p>
+      <p id="strip-verdict"></p>
     </div>
-  </section>
+    <div class="strip" id="strip">
+      <div class="strip-frames">
+        <img src="assets/frames/hf-f015.jpg" width="640" height="360" alt="Frame 15: title, Quote first.">
+        <img src="assets/frames/hf-f075.jpg" width="640" height="360" alt="Frame 75: Quote first, how one claim gets into the hub.">
+        <img src="assets/frames/hf-f135.jpg" width="640" height="360" alt="Frame 135: Step 1, open the primary source.">
+        <img src="assets/frames/hf-f195.jpg" width="640" height="360" alt="Frame 195: Step 1, the skill file, the licence, the pricing page.">
+        <img src="assets/frames/hf-f255.jpg" width="640" height="360" alt="Frame 255: Step 2, copy the quote.">
+        <img src="assets/frames/hf-f315.jpg" width="640" height="360" alt="Frame 315: Step 2 with the quoted line.">
+        <img src="assets/frames/hf-f375.jpg" width="640" height="360" alt="Frame 375: Step 2, then write the sentence.">
+        <img src="assets/frames/hf-f435.jpg" width="640" height="360" alt="Frame 435: Step 3, the quote-found counter.">
+        <img src="assets/frames/hf-f495.jpg" width="640" height="360" alt="Frame 495: Step 3, quote-found and quote-not-found counters.">
+        <img src="assets/frames/hf-f555.jpg" width="640" height="360" alt="Frame 555: No quote, no claim.">
+      </div>
+      <div class="strip-bar" aria-hidden="true"></div>
+      <div class="strip-trace" id="strip-trace"></div>
+      <div class="strip-axis" id="strip-axis" aria-hidden="true"></div>
+      <div class="strip-marks" id="strip-marks" aria-hidden="true"></div>
+    </div>
+    <p class="strip-note" id="strip-note"></p>
+    <noscript><p class="strip-note">Scripts are off. The trace, the time axis and the finding marks are drawn from the data by script. The findings are in the table below.</p></noscript>
+  </div>
+</section>
 
-  <section aria-labelledby="counters-title">
-    <h2 id="counters-title">The hub in numbers</h2>
-    <p id="counters-state" role="status">Loading the hub's numbers...</p>
-    <dl id="counters" class="counters" hidden></dl>
-  </section>
+<section class="wrap findings" aria-labelledby="findings-h">
+  <div class="section-head">
+    <h2 id="findings-h">What clipcheck found</h2>
+    <p class="data muted">every rule cites the hub record it comes from</p>
+  </div>
+  <p id="findings-state" class="state" role="status" hidden></p>
+  <table id="findings" class="findings-table">
+    <caption class="visually-hidden">Findings of the checker for the clip, one row per marked time range, read from clipcheck-before.json</caption>
+    <colgroup><col class="col-id"><col class="col-time"><col class="col-rule"><col class="col-source"></colgroup>
+    <thead><tr><th scope="col">Finding</th><th scope="col">Time</th><th scope="col">Rule and measurement</th><th scope="col">Source</th></tr></thead>
+    <tbody id="findings-body">
+      <tr class="frow frow-error" data-mark="E1">
+        <td class="f-id"><span class="fid">E1</span> <span class="sev sev-error">error</span></td>
+        <td class="f-time"><span class="t">2.967-3.167 s</span> <span class="t-note">6 frames from #89</span></td>
+        <td class="f-rule" rowspan="3"><p class="rule-name">empty-frames</p><p class="finding-title">No frame mid-clip without scene content</p><p class="finding-msg">3 stretch(es) mid-clip with no scene content on screen (only fixed elements remain); a frame counts as empty under 0.25% of pixels lit, this clip usually has 5.94%</p><p class="finding-fix">Fix: Overlap the outgoing and incoming scene, or hold one element through the cut. Check the exact frames listed.</p></td>
+        <td class="f-source" rowspan="3"><div class="prov"><blockquote><p><strong>Exits</strong> are 40-50% shorter than their entrances.</p></blockquote><p class="quote-source"><a href="record.html?id=tool%3Aheygen-com%2Fhyperframes" data-site-link>tool:heygen-com/hyperframes</a></p></div><div class="prov prov-note"><p class="label">Run note</p><p class="note-text">run here once: three scene changes passed through a frame showing only an accent bar; a blind reviewer flagged it</p><p class="quote-source"><a href="../examples/hyperframes-vs-remotion/README.md">example:hyperframes-vs-remotion</a></p></div></td>
+      </tr>
+      <tr class="frow frow-error" data-mark="E2">
+        <td class="f-id"><span class="fid">E2</span> <span class="sev sev-error">error</span> <span class="rail-only">empty-frames. Same rule and source as E1.</span></td>
+        <td class="f-time"><span class="t">7.967-8.000 s</span> <span class="t-note">1 frame, #239</span></td>
+      </tr>
+      <tr class="frow frow-error" data-mark="E3">
+        <td class="f-id"><span class="fid">E3</span> <span class="sev sev-error">error</span> <span class="rail-only">empty-frames. Same rule and source as E1.</span></td>
+        <td class="f-time"><span class="t">13.000-13.033 s</span> <span class="t-note">1 frame, #390</span></td>
+      </tr>
+      <tr class="frow frow-warning" data-mark="W1">
+        <td class="f-id"><span class="fid">W1</span> <span class="sev sev-warning">warning</span></td>
+        <td class="f-time"><span class="t">14.0 s</span></td>
+        <td class="f-rule"><p class="rule-name">stray-numbers</p><p class="finding-title">No numbers on screen that the contract does not list</p><p class="finding-msg">numbers on screen that the contract does not list: 126 (text is read every 0.5 s, so other values may pass unseen)</p><p class="finding-fix">Fix: A count-up shows values that are not true on the way to the real one. Reveal the figure instead of counting to it.</p></td>
+        <td class="f-source"><div class="prov prov-note"><p class="label">Run note</p><p class="note-text">run here once: a counter animated through 54 and 112 on the way to 147, on a line reporting a verification result</p><p class="quote-source"><a href="../examples/hyperframes-vs-remotion/README.md">example:hyperframes-vs-remotion</a></p></div></td>
+      </tr>
+    </tbody>
+  </table>
+  <p id="passed" class="passed data" hidden></p>
+</section>
 
-  <section class="agents" aria-labelledby="agents-title">
-    <h2 id="agents-title">For coding agents</h2>
-    <p>Read the index of all pages first: <a href="../llms.txt">llms.txt</a><span id="llms-live"></span>.</p>
-    <p>With a shell, clone the repository and query it:</p>
-    <pre><code id="clone-line">python3 tools/query.py search "&lt;words&gt;"
-python3 tools/query.py decode "&lt;question&gt;"</code></pre>
-    <p>The full record dump is <a href="../index/records.jsonl">index/records.jsonl</a>, one JSON object per line.</p>
-  </section>
+<section class="wrap loop" aria-labelledby="loop-h">
+  <div class="loop-row">
+    <h2 id="loop-h" class="label">Fix loop</h2>
+    <div class="loop-main">
+      <p id="loop-line" class="loop-line" role="status">Loading the fix-loop result...</p>
+      <dl id="loop-figures" class="figures" hidden></dl>
+      <p id="loop-sample" class="data muted" hidden></p>
+    </div>
+    <div class="loop-side">
+      <p class="label" id="loop-wrong-h">What the checker got wrong</p>
+      <ul id="loop-wrong" class="loop-wrong" aria-labelledby="loop-wrong-h"></ul>
+      <p class="loop-links"><a class="arrow-link" href="../examples/clipcheck-fix-loop/README.md">The example =&gt;</a> <a class="arrow-link" href="../lab/clipcheck/README.md">How clipcheck works =&gt;</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="answers" class="wrap ask" aria-labelledby="ask-h">
+  <div class="ask-row">
+    <div class="ask-intro">
+      <p class="label">01 Answers</p>
+      <h2 id="ask-h">Ask in your own words.</h2>
+      <p>You get a route: the approach, the records behind it, a guide page, and the risk in one line.</p>
+    </div>
+    <div class="ask-main">
+      <form class="ask-form" role="search" action="search.html" method="get">
+        <label for="q" class="label">Your question</label>
+        <div class="ask-bar">
+          <div class="combo">
+            <input id="q" name="q" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false"
+              aria-controls="q-list" autocomplete="off" spellcheck="false" aria-describedby="q-hint"
+              placeholder="How do I cut and caption my screen recording with an agent?">
+            <ul id="q-list" role="listbox" aria-label="Suggestions" hidden></ul>
+          </div>
+          <button type="submit" class="primary">Route it</button>
+        </div>
+        <p id="q-hint" class="hint"><kbd>Ctrl</kbd> or <kbd>Cmd</kbd> + <kbd>K</kbd> focuses this box.</p>
+        <span id="q-status" class="visually-hidden" role="status" aria-live="polite"></span>
+      </form>
+      <p class="data muted ask-or" id="questions-label">Or start from a question readers asked</p>
+      <ol id="questions" class="questions" aria-labelledby="questions-label"></ol>
+    </div>
+  </div>
+</section>
+
+<section class="wrap areas" aria-labelledby="index-h">
+  <h2 id="index-h" class="label rule-head">Index</h2>
+  <article class="area">
+    <p class="area-no">01</p>
+    <h3 class="area-name"><a href="search.html" data-site-link>Answers</a></h3>
+    <p class="area-text">A question in your own words, routed to an approach, the records behind it, a guide page and the risk.</p>
+    <p class="area-fig" id="area-answers"></p>
+  </article>
+  <article class="area">
+    <p class="area-no">02</p>
+    <h3 class="area-name">Library <span class="in-progress">in progress</span></h3>
+    <p class="area-text">Tools, models and sources, plus guide pages and skills. Each record shows a trust badge, the date it was last checked, and its claims with the verbatim quote and locator. Until this page exists, records open from Answers.</p>
+    <p class="area-fig" id="area-library"></p>
+  </article>
+  <article class="area">
+    <p class="area-no">03</p>
+    <h3 class="area-name"><a href="lab.html" data-site-link>Lab</a></h3>
+    <p class="area-text">Worked examples run here with a threshold fixed before the run, and clipcheck, a contract checker for agent-made video: the brief becomes data and the rendered MP4 is measured frame by frame.</p>
+    <p class="area-fig" id="area-lab"></p>
+  </article>
+  <article class="area">
+    <p class="area-no">04</p>
+    <h3 class="area-name">Radar <span class="in-progress">in progress</span></h3>
+    <p class="area-text">What turned up where practitioners talk: communities, forges, registries, papers, talks. Each item ends as a new record, an updated record, a dispute, or no material.</p>
+    <p class="area-fig"></p>
+  </article>
+</section>
+
+<section class="wrap trust" aria-labelledby="trust-h">
+  <div class="section-head">
+    <h2 id="trust-h" class="label">Fact-check</h2>
+    <a class="arrow-link" href="../docs/fact-check.md">How the fact-check was done =&gt;</a>
+  </div>
+  <p id="trust-state" class="state" role="status">Loading the fact-check figures...</p>
+  <dl id="trust" class="trust-row" hidden></dl>
+</section>
+
+<section class="wrap" aria-labelledby="agents-h">
+  <div class="specimen agents" data-surface="specimen">
+    <div class="agents-intro">
+      <p class="label">For coding agents</p>
+      <h2 id="agents-h">Point your agent at the index.</h2>
+      <p><a href="../AGENTS.md">AGENTS.md</a> says how agents query and extend the hub.</p>
+    </div>
+    <dl class="agents-lines">
+      <div><dt>index</dt><dd id="agent-index"><a href="../llms.txt">llms.txt</a></dd></div>
+      <div><dt>clone</dt><dd><code id="agent-clone">git clone</code></dd></div>
+      <div><dt>ask</dt><dd><code id="agent-ask">python3 tools/query.py decode "&lt;question&gt;"</code></dd></div>
+    </dl>
+  </div>
+</section>
+
 </main>
-<footer class="site-footer">
-  <p id="footer-line">Static pages over the hub's generated index. No tracking.</p>
-</footer>
+<footer data-chrome></footer>
 </body>
 </html>
