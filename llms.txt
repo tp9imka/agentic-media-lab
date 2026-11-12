@@ -1,6 +1,6 @@
 # Agentic Media Lab
 
-> Which skill, renderer and model to use when a coding agent makes your video - with runs you can repeat. Records: 205 (92 tool, 30 model, 83 source, 0 recipe). Concepts: 35. Pages: 12. Size: about 222355 tokens (estimate, characters / 4).
+> Which skill, renderer and model to use when a coding agent makes your video - with runs you can repeat. Records: 205 (92 tool, 30 model, 83 source, 0 recipe). Concepts: 35. Pages: 13. Size: about 224418 tokens (estimate, characters / 4).
 
 ## Entry points
 
@@ -27,6 +27,7 @@
 
 - [An agent fixes a clip from checker output alone](https://tp9imka.github.io/agentic-media-lab/examples/clipcheck-fix-loop/README.md) (ran): A failing clip, the hub's contract checker, and an agent that may not look at a frame. It passes in two rounds and a blind reviewer scores ...
 - [Same brief, HyperFrames vs Remotion, vendor skills only](https://tp9imka.github.io/agentic-media-lab/examples/hyperframes-vs-remotion/README.md) (ran): Two fresh Claude agents get one fixed 20 s brief, one with the HyperFrames skills and one with the Remotion Agent Skills, and render ...
+- [Does the hub's own skill change the result?](https://tp9imka.github.io/agentic-media-lab/examples/skill-ablation-contract-first/README.md) (ran): The same brief and renderer, with the vendor's skills alone and with the hub's contract-first-video skill added. One run each, scored by ...
 
 ## Records by kind
 
