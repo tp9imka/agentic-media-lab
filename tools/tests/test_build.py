@@ -57,7 +57,7 @@ class FixtureBuildTest(unittest.TestCase):
 
     def test_concepts_json(self):
         obj = load_json(self.root / "index/concepts.json")
-        by = {c["id"]: c for c in obj["records"]}
+        by = {c["id"]: c for c in obj["concepts"]}
         self.assertEqual(by["concept:code-driven-video"]["count"], 3)
         self.assertEqual(by["concept:code-driven-video"]["record_ids"],
                          ["recipe:remotion-explainer", "tool:heygen-com/hyperframes", "tool:remotion-dev/remotion"])
@@ -75,7 +75,7 @@ class FixtureBuildTest(unittest.TestCase):
         self.assertEqual(guide[0]["concepts"], ["concept:code-driven-video", "concept:agent-skills"])
         example = [p for p in pages if p["path"] == "examples/demo/README.md"]
         self.assertEqual(example[0]["page_id"], "example:demo")
-        self.assertIn("docs/glossary.md", {p["path"] for p in pages})
+        self.assertNotIn("docs/glossary.md", {p["path"] for p in pages})
 
     def test_meta(self):
         meta = load_json(self.root / "index/meta.json")
@@ -178,7 +178,7 @@ class EmptyHubTest(unittest.TestCase):
             self.assertIn("vocabulary is empty", res.stderr)
             self.assertIn("dangling: 0 bad concepts: 0 invalid: 0", res.stdout)
             self.assertEqual((root / "index/records.jsonl").read_text(), "")
-            self.assertEqual(load_json(root / "index/concepts.json")["records"], [])
+            self.assertEqual(load_json(root / "index/concepts.json")["concepts"], [])
             self.assertTrue((root / "index/pages.jsonl").exists())
             self.assertEqual(run("check_links", root).returncode, 0)
 

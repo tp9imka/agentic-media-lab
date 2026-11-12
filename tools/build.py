@@ -18,6 +18,7 @@ import hublib as h  # noqa: E402
 
 CHARS_PER_TOKEN = 4
 WHY_CHARS = 140  # one-line why in tables and llms.txt notes
+UNINDEXED_PAGES = ("docs/SCHEMA.md", "docs/glossary.md")
 GLOSSARY_RECORD_LINKS = 10  # record links per concept in the glossary before "and N more"
 NESTED_LLMS = "catalog/llms.txt"  # cards move here when llms.txt passes page_char_budget
 
@@ -396,6 +397,9 @@ class Build:
     def write_index_files(self, pages: list[dict]) -> dict:
         lines = []
         for p in pages:
+            # Generated reference pages repeat what records and concepts already index; as chunks they outrank records.
+            if p["path"] in UNINDEXED_PAGES:
+                continue
             for ch in h.chunks(p["body"]):
                 lines.append(json.dumps({"page_id": p["page_id"], "title": p["title"], "path": p["path"],
                                          "anchor": ch["anchor"], "heading_path": ch["heading_path"],
@@ -409,7 +413,7 @@ class Build:
         concepts = [{**c, "record_ids": self.members.get(c["id"], []), "count": len(self.members.get(c["id"], []))}
                     for c in self.hub.concepts]
         h.write_text(self.root, "index/concepts.json", json.dumps(
-            {"schema_version": h.SCHEMA_VERSION, "lane": self.hub.concepts_lane, "records": concepts},
+            {"schema_version": h.SCHEMA_VERSION, "concepts": concepts},
             ensure_ascii=False, indent=1) + "\n")
 
         chars = sum(len(t) for t in self.md.values())

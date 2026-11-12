@@ -70,10 +70,12 @@ class Gate:
                 self.report("skip", name, "not present")
         site = self.root / "site"
         py_tests = sorted(site.rglob("test_*.py")) if site.exists() else []
-        js_tests = sorted(p for p in site.rglob("*.js") if p.name.startswith("test_") or p.name.endswith(".test.js")) \
-            if site.exists() else []
+        js_tests = sorted(p for ext in ("*.js", "*.mjs") for p in site.rglob(ext)
+                          if p.name.startswith("test_") or ".test." in p.name) if site.exists() else []
         if py_tests:
-            self.run("site python tests", [py, "-m", "unittest", "discover", "-s", "site", "-p", "test_*.py"])
+            # site/tests is not a package, so unittest discovery finds nothing there: run each file.
+            for t in py_tests:
+                self.run(f"site python tests ({t.name})", [py, str(t)])
         if js_tests:
             node = shutil.which("node")
             if node:
