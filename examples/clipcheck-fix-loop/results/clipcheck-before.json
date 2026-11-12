@@ -1,0 +1,146 @@
+{
+ "video": "before.mp4",
+ "contract": "quote-first.json",
+ "verdict": "fail",
+ "errors": 1,
+ "warnings": 1,
+ "findings": [
+  {
+   "rule": "empty-frames",
+   "severity": "error",
+   "title": "No frame mid-clip without scene content",
+   "message": "3 stretch(es) mid-clip with no scene content on screen (only fixed elements remain); a frame counts as empty under 0.25% of pixels lit, this clip usually has 5.94%",
+   "where": [
+    {
+     "start_s": 2.967,
+     "end_s": 3.167,
+     "frames": 6,
+     "first_frame": 89
+    },
+    {
+     "start_s": 7.967,
+     "end_s": 8.0,
+     "frames": 1,
+     "first_frame": 239
+    },
+    {
+     "start_s": 13.0,
+     "end_s": 13.033,
+     "frames": 1,
+     "first_frame": 390
+    }
+   ],
+   "measured": {
+    "frames": 8,
+    "chrome_share": 0.005
+   },
+   "hint": "Overlap the outgoing and incoming scene, or hold one element through the cut. Check the exact frames listed.",
+   "provenance": [
+    {
+     "record": "tool:heygen-com/hyperframes",
+     "quote": "**Exits** are 40-50% shorter than their entrances.",
+     "note": null,
+     "resolved": true
+    },
+    {
+     "record": "example:hyperframes-vs-remotion",
+     "quote": null,
+     "note": "run here once: three scene changes passed through a frame showing only an accent bar; a blind reviewer flagged it",
+     "resolved": true
+    }
+   ]
+  },
+  {
+   "rule": "stray-numbers",
+   "severity": "warning",
+   "title": "No numbers on screen that the contract does not list",
+   "message": "numbers on screen that the contract does not list: 126 (text is read every 0.5 s, so other values may pass unseen)",
+   "where": [
+    {
+     "start_s": 14.0,
+     "end_s": 14.0
+    }
+   ],
+   "measured": {
+    "numbers": [
+     "126"
+    ]
+   },
+   "hint": "A count-up shows values that are not true on the way to the real one. Reveal the figure instead of counting to it.",
+   "provenance": [
+    {
+     "record": "example:hyperframes-vs-remotion",
+     "quote": null,
+     "note": "run here once: a counter animated through 54 and 112 on the way to 147, on a line reporting a verification result",
+     "resolved": true
+    }
+   ]
+  }
+ ],
+ "passed": [
+  {
+   "rule": "stream",
+   "title": "Size, rate, length and codec match the contract",
+   "measured": "1920x1080 30 fps 20.00 s h264"
+  },
+  {
+   "rule": "colour-tags",
+   "title": "The file says which colour space it is in",
+   "measured": "bt709/bt709/bt709"
+  },
+  {
+   "rule": "first-frame",
+   "title": "The first frame is not empty",
+   "measured": "presence 0.052"
+  },
+  {
+   "rule": "sparse-frames",
+   "title": "No run of frames that is nearly bare",
+   "measured": "typical content 0.0594"
+  },
+  {
+   "rule": "palette",
+   "title": "Only the contract's colours are on screen",
+   "measured": "peak off-palette share 0.0010"
+  },
+  {
+   "rule": "safe-area",
+   "title": "Content stays inside the safe area",
+   "measured": "margins L0.04 T0.09 R0.04 B0.09 held"
+  },
+  {
+   "rule": "scene-times",
+   "title": "Scene changes happen where the contract puts them",
+   "measured": "4 scene changes fall on motion"
+  },
+  {
+   "rule": "abrupt-stops",
+   "title": "Moves decelerate instead of stopping dead",
+   "measured": "0 of 3 moves stop dead"
+  },
+  {
+   "rule": "long-hold",
+   "title": "No long stretch with nothing moving",
+   "measured": "no hold over 4 s"
+  },
+  {
+   "rule": "copy",
+   "title": "Every string in the contract appears on screen",
+   "measured": "10 strings read by OCR"
+  }
+ ],
+ "stream": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30.0,
+  "frames": 600,
+  "codec": "h264",
+  "pix_fmt": "yuv420p",
+  "color_space": "bt709",
+  "color_primaries": "bt709",
+  "color_transfer": "bt709",
+  "duration": 20.0,
+  "has_audio": false
+ },
+ "background": "#0F1419"
+}

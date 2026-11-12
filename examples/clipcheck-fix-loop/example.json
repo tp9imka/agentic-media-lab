@@ -1,0 +1,19 @@
+{
+  "title": "An agent fixes a clip from checker output alone",
+  "summary": "A failing clip, the hub's contract checker, and an agent that may not look at a frame. It passes in two rounds and a blind reviewer scores the result higher.",
+  "concepts": [
+    "concept:review-loop",
+    "concept:code-driven-video",
+    "concept:evaluation",
+    "concept:motion-and-transitions"
+  ],
+  "status": "ran",
+  "verified": "Ran on 2026-11-12 on an Apple M3 Max (64 GB, macOS), ffmpeg 7.1.1, tesseract for text reading. One Claude subagent as the fixer, one as the blind reviewer. The driver re-ran clipcheck on both committed clips.",
+  "deps": "stdlib",
+  "first_command": "python3 lab/clipcheck/clipcheck.py examples/clipcheck-fix-loop/results/before.mp4 --contract lab/clipcheck/contracts/quote-first.json",
+  "input": "agent-run",
+  "runtime": "about 2 s per clip to check, 9 s with text reading; the agent's fix loop took about 3.5 minutes",
+  "key_result": "The agent reached CLIPCHECK: PASS in 2 fix rounds without looking at a frame. One blind reviewer scored the clip 6/12 before and 8/12 after (judgement, n = 1). An early false-positive rule also made the agent speed up a wipe that was fine.",
+  "threshold": "Checker PASS within 4 fix rounds or 30 minutes, and the blind reviewer does not score the after clip lower than the before clip.",
+  "verdict": "pass"
+}

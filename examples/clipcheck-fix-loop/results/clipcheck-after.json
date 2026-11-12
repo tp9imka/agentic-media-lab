@@ -1,0 +1,84 @@
+{
+ "video": "after.mp4",
+ "contract": "quote-first.json",
+ "verdict": "pass",
+ "errors": 0,
+ "warnings": 0,
+ "findings": [],
+ "passed": [
+  {
+   "rule": "stream",
+   "title": "Size, rate, length and codec match the contract",
+   "measured": "1920x1080 30 fps 20.00 s h264"
+  },
+  {
+   "rule": "colour-tags",
+   "title": "The file says which colour space it is in",
+   "measured": "bt709/bt709/bt709"
+  },
+  {
+   "rule": "first-frame",
+   "title": "The first frame is not empty",
+   "measured": "presence 0.052"
+  },
+  {
+   "rule": "empty-frames",
+   "title": "No frame mid-clip without scene content",
+   "measured": "lowest mid-clip content 0.0260"
+  },
+  {
+   "rule": "sparse-frames",
+   "title": "No run of frames that is nearly bare",
+   "measured": "typical content 0.0625"
+  },
+  {
+   "rule": "palette",
+   "title": "Only the contract's colours are on screen",
+   "measured": "peak off-palette share 0.0010"
+  },
+  {
+   "rule": "safe-area",
+   "title": "Content stays inside the safe area",
+   "measured": "margins L0.04 T0.09 R0.04 B0.09 held"
+  },
+  {
+   "rule": "scene-times",
+   "title": "Scene changes happen where the contract puts them",
+   "measured": "4 scene changes fall on motion"
+  },
+  {
+   "rule": "abrupt-stops",
+   "title": "Moves decelerate instead of stopping dead",
+   "measured": "0 of 3 moves stop dead"
+  },
+  {
+   "rule": "long-hold",
+   "title": "No long stretch with nothing moving",
+   "measured": "no hold over 4 s"
+  },
+  {
+   "rule": "copy",
+   "title": "Every string in the contract appears on screen",
+   "measured": "10 strings read by OCR"
+  },
+  {
+   "rule": "stray-numbers",
+   "title": "No numbers on screen that the contract does not list",
+   "measured": "only contract numbers were read"
+  }
+ ],
+ "stream": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30.0,
+  "frames": 600,
+  "codec": "h264",
+  "pix_fmt": "yuv420p",
+  "color_space": "bt709",
+  "color_primaries": "bt709",
+  "color_transfer": "bt709",
+  "duration": 20.0,
+  "has_audio": false
+ },
+ "background": "#0F1419"
+}
