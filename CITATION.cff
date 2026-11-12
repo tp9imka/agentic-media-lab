@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+title: "Agentic Media Lab"
+type: dataset
+authors:
+  - name: "Agentic Media Lab contributors"
+repository-code: "https://github.com/tp9imka/agentic-media-lab"
+license: CC-BY-4.0
+# version and date-released are not set yet. The release wave fills them.

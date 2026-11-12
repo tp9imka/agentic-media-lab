@@ -1,0 +1,27 @@
+name: links
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: External links
+        run: |
+          if [ -f tools/check_external.py ]; then
+            python3 tools/check_external.py
+          else
+            echo "skip: external link checker not present yet"
+          fi

@@ -1,0 +1,46 @@
+name: Propose a record
+description: Suggest a tool, model, source or recipe for the hub.
+title: "propose: <name>"
+labels: ["propose-record"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - tool
+        - model
+        - source
+        - recipe
+    validations:
+      required: true
+  - type: input
+    id: canonical-url
+    attributes:
+      label: Canonical URL
+      description: The official page or repository, not a repost.
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: why-it-fits
+    attributes:
+      label: Why it fits the reader's job
+      description: Which step of making video or images with an agent does it help with?
+    validations:
+      required: true
+  - type: checkboxes
+    id: primary-source
+    attributes:
+      label: Primary source
+      options:
+        - label: I opened the primary source myself.
+          required: true
+  - type: textarea
+    id: quote
+    attributes:
+      label: One verbatim quote with locator
+      description: Copy the exact words and say where they are, such as a section, line or timestamp.
+      render: text
+    validations:
+      required: true

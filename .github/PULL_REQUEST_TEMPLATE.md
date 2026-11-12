@@ -1,0 +1,6 @@
+- [ ] The change fits the hub's scope and is not on the out-of-scope list in CONTRIBUTING.md.
+- [ ] I opened every primary source I cite.
+- [ ] Every claim has a verbatim quote, a locator, a URL and a retrieval date.
+- [ ] No licence or star count is typed by hand; new records start at `checked.depth: not-checked`.
+- [ ] I did not edit generated output by hand (`catalog/`, `index/`, `graph/`, `reports/`, `INDEX.md`, `llms.txt`).
+- [ ] `python3 tools/gate.py` prints `GATE: PASS`, and commits follow Conventional Commits.

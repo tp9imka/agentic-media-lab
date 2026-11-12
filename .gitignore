@@ -1,0 +1,33 @@
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments and dependencies
+.venv/
+node_modules/
+
+# OS and logs
+.DS_Store
+*.log
+
+# Local scratch and references
+.ref/
+.tmp/
+raw/
+out/
+
+# Model weights under examples
+examples/**/models/**/*.safetensors
+examples/**/models/**/*.gguf
+examples/**/models/**/*.ckpt
+examples/**/models/**/*.pt
+examples/**/models/**/*.bin
+
+# Large intermediates
+examples/**/work/
+
+# Rendered results are tracked
+!examples/**/results/

@@ -1,0 +1,19 @@
+name: Question not covered
+description: Ask a question the hub does not answer yet.
+title: "question: <short question>"
+labels: ["question-not-covered"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: The question
+      description: Write it in your own words, as you would ask it.
+    validations:
+      required: true
+  - type: textarea
+    id: what-you-tried
+    attributes:
+      label: What you tried
+      description: Pages, searches or tools you already checked.
+    validations:
+      required: true

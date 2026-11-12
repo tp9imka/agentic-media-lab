@@ -1,0 +1,39 @@
+name: check
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      # Node is used only by the optional search parity step inside the gate.
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+
+      - name: Unit tests (tools)
+        run: python3 -m unittest discover tools/tests
+
+      - name: Unit tests (query)
+        run: python3 -m unittest discover tools/tests_query
+
+      - name: Gate
+        run: python3 tools/gate.py
+
+      - name: Generated output is up to date
+        run: |
+          if ! git diff --exit-code; then
+            echo "generated output is stale: run python3 tools/build.py and commit"
+            exit 1
+          fi
