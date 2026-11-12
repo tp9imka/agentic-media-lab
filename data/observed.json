@@ -11,6 +11,89 @@
       "https://huggingface.co/api/models/MiniMaxAI/MiniMax-H3"
     ]
   },
+  "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md": {
+    "archived": false,
+    "created": "2026-06-29",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 2,
+    "installs": 1,
+    "installs_by_skill": {
+      "ad-qa": 1,
+      "ai-presenter": 1,
+      "announce-feature": 1,
+      "announce-milestone": 1,
+      "app-store-preview": 1,
+      "brand-sting": 1,
+      "demo-walkthrough": 1,
+      "device-mockup": 1,
+      "direction": 1,
+      "explainer": 1
+    },
+    "last_activity": "2026-11-12",
+    "licence": "unknown",
+    "open_issues": 0,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/haxzie/genmotion",
+      "https://skills.sh/api/search?q=genmotion"
+    ],
+    "stars": 7
+  },
+  "tool:0xs4n4tg/kinetograph": {
+    "archived": false,
+    "created": "2026-10-23",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 38,
+    "installs": 199,
+    "installs_by_skill": {
+      "kinetograph": 199,
+      "kinetograph-create": 9,
+      "kinetograph-migrate": 165,
+      "kinetograph-render": 9,
+      "kinetograph-studio": 9
+    },
+    "last_activity": "2026-11-12",
+    "licence": "Apache-2.0",
+    "open_issues": 9,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/0xS4N4TG/kinetograph",
+      "https://skills.sh/api/search?q=kinetograph"
+    ],
+    "stars": 501
+  },
+  "tool:3b1b/manim": {
+    "archived": false,
+    "created": "2015-03-22",
+    "default_branch": "master",
+    "fetched_at": "2026-11-12",
+    "forks": 7923,
+    "last_activity": "2026-09-09",
+    "licence": "MIT",
+    "open_issues": 519,
+    "sources": [
+      "https://api.github.com/repos/3b1b/manim",
+      "https://skills.sh/api/search?q=manim"
+    ],
+    "stars": 96431
+  },
+  "tool:ahujasid/mcp-for-blender": {
+    "archived": false,
+    "created": "2025-03-07",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 3107,
+    "last_activity": "2026-11-04",
+    "licence": "MIT",
+    "open_issues": 58,
+    "sources": [
+      "https://api.github.com/repos/ahujasid/mcp-for-blender",
+      "https://skills.sh/api/search?q=mcp-for-blender"
+    ],
+    "stars": 34103
+  },
   "tool:browser-use/video-use": {
     "archived": false,
     "created": "2026-04-12",
@@ -31,6 +114,64 @@
       "https://skills.sh/api/search?q=video-use"
     ],
     "stars": 30930
+  },
+  "tool:calesthio/generative-media-skills": {
+    "archived": false,
+    "created": "2026-07-11",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 50,
+    "installs": 419,
+    "installs_by_skill": {
+      "2d-character-rig-animation": 300,
+      "audio-mixing-mastering": 417,
+      "character-design-continuity": 265,
+      "cinematic-shot-direction": 285,
+      "color-grading-finishing": 419,
+      "editing-montage": 349,
+      "generated-media-qa": 233,
+      "sound-design-foley": 338,
+      "storyboard-previsualization": 263,
+      "title-kinetic-typography": 238
+    },
+    "last_activity": "2026-07-14",
+    "licence": "MIT",
+    "open_issues": 1,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/calesthio/generative-media-skills",
+      "https://skills.sh/api/search?q=generative-media-skills"
+    ],
+    "stars": 242
+  },
+  "tool:coreyhaines31/marketingskills": {
+    "archived": false,
+    "created": "2026-01-15",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 8744,
+    "installs": 252436,
+    "installs_by_skill": {
+      "ad-creative": 145276,
+      "ai-seo": 163013,
+      "cold-email": 137269,
+      "content-strategy": 175848,
+      "copy-editing": 160338,
+      "copywriting": 252436,
+      "marketing-ideas": 156460,
+      "marketing-psychology": 176027,
+      "programmatic-seo": 160136,
+      "seo-audit": 252420
+    },
+    "last_activity": "2026-11-11",
+    "licence": "MIT",
+    "open_issues": 77,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/coreyhaines31/marketingskills",
+      "https://skills.sh/api/search?q=marketingskills"
+    ],
+    "stars": 59845
   },
   "tool:digitalsamba/claude-code-video-toolkit": {
     "archived": false,
@@ -60,6 +201,100 @@
       "https://skills.sh/api/search?q=claude-code-video-toolkit"
     ],
     "stars": 2525
+  },
+  "tool:dmtrkovalenko/fframes": {
+    "archived": false,
+    "created": "2021-11-22",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 94,
+    "installs": 211,
+    "installs_by_skill": {
+      "fframes-video": 211
+    },
+    "last_activity": "2026-11-08",
+    "licence": "MIT",
+    "open_issues": 24,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/dmtrKovalenko/fframes",
+      "https://skills.sh/api/search?q=fframes"
+    ],
+    "stars": 3080
+  },
+  "tool:dojocodinglabs/remotion-superpowers": {
+    "archived": false,
+    "created": "2026-02-09",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 34,
+    "installs": 296,
+    "installs_by_skill": {
+      "add-captions": 65,
+      "add-transitions": 63,
+      "add-voiceover": 65,
+      "create-short": 64,
+      "create-video": 63,
+      "find-footage": 65,
+      "generate-clip": 63,
+      "remotion-production": 296,
+      "review-video": 65,
+      "setup-guide": 251
+    },
+    "last_activity": "2026-10-29",
+    "licence": "MIT",
+    "open_issues": 2,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/DojoCodingLabs/remotion-superpowers",
+      "https://skills.sh/api/search?q=remotion-superpowers"
+    ],
+    "stars": 166
+  },
+  "tool:ffmpeg/ffmpeg": {
+    "archived": false,
+    "created": "2011-04-14",
+    "default_branch": "master",
+    "fetched_at": "2026-11-12",
+    "forks": 14614,
+    "last_activity": "2026-11-12",
+    "licence": "unknown",
+    "open_issues": 3,
+    "sources": [
+      "https://api.github.com/repos/ffmpeg/ffmpeg",
+      "https://skills.sh/api/search?q=ffmpeg"
+    ],
+    "stars": 67102
+  },
+  "tool:flchntc/smooth-animation-skill": {
+    "archived": false,
+    "created": "2026-11-01",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 0,
+    "last_activity": "2026-11-01",
+    "licence": "unknown",
+    "open_issues": 0,
+    "sources": [
+      "https://api.github.com/repos/Flchntc/smooth-animation-skill",
+      "https://skills.sh/api/search?q=smooth-animation-skill"
+    ],
+    "stars": 1
+  },
+  "tool:greensock/gsap": {
+    "archived": false,
+    "created": "2012-09-21",
+    "default_branch": "master",
+    "fetched_at": "2026-11-12",
+    "forks": 2380,
+    "last_activity": "2026-11-04",
+    "licence": "unknown",
+    "open_issues": 6,
+    "sources": [
+      "https://api.github.com/repos/greensock/GSAP",
+      "https://skills.sh/api/search?q=GSAP"
+    ],
+    "stars": 30504
   },
   "tool:haidrrrry/claude-remotion-skill": {
     "archived": false,
@@ -110,6 +345,301 @@
     ],
     "stars": 83101
   },
+  "tool:iart-ai/motion-skills": {
+    "archived": false,
+    "created": "2026-06-22",
+    "default_branch": "master",
+    "fetched_at": "2026-11-12",
+    "forks": 122,
+    "last_activity": "2026-11-11",
+    "licence": "MIT",
+    "open_issues": 2,
+    "sources": [
+      "https://api.github.com/repos/iart-ai/motion-skills",
+      "https://skills.sh/api/search?q=motion-skills"
+    ],
+    "stars": 1389
+  },
+  "tool:jordanrendric/claude-video-vision": {
+    "archived": false,
+    "created": "2026-03-31",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 171,
+    "installs": 453,
+    "installs_by_skill": {
+      "video-perception": 453
+    },
+    "last_activity": "2026-10-14",
+    "licence": "MIT",
+    "open_issues": 11,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/jordanrendric/claude-video-vision",
+      "https://skills.sh/api/search?q=claude-video-vision"
+    ],
+    "stars": 1492
+  },
+  "tool:josiahsiegel/claude-plugin-marketplace": {
+    "archived": false,
+    "created": "2025-10-22",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 11,
+    "installs": 8185,
+    "installs_by_skill": {
+      "docker-best-practices": 947,
+      "docker-security-guide": 624,
+      "ffmpeg-captions-subtitles": 557,
+      "git-master": 812,
+      "powershell-master": 1143,
+      "tailwindcss-advanced-design-systems": 657,
+      "tailwindcss-advanced-layouts": 8185,
+      "tailwindcss-animations": 2376,
+      "tailwindcss-mobile-first": 2118,
+      "tailwindcss-responsive-darkmode": 478
+    },
+    "last_activity": "2026-06-18",
+    "licence": "MIT",
+    "open_issues": 2,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/JosiahSiegel/claude-plugin-marketplace",
+      "https://skills.sh/api/search?q=claude-plugin-marketplace"
+    ],
+    "stars": 61
+  },
+  "tool:kajisho5/ffmpeg-skill": {
+    "archived": false,
+    "created": "2026-09-03",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 434,
+    "installs": 1287,
+    "installs_by_skill": {
+      "building-python-mcp-servers": 41,
+      "ci-pipeline-synthesizer": 41,
+      "concurrent-branches": 41,
+      "ffmpeg-skill": 1287,
+      "guarding-destructive-operations": 41,
+      "keeping-git-repos-clean": 41,
+      "managing-python-releases": 41,
+      "reproducing-ci-locally": 41,
+      "running-github-actions-efficiently": 41,
+      "shipping-across-surfaces": 41
+    },
+    "last_activity": "2026-11-12",
+    "licence": "MIT",
+    "open_issues": 31,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/kajisho5/ffmpeg-skill",
+      "https://skills.sh/api/search?q=ffmpeg-skill"
+    ],
+    "stars": 5134
+  },
+  "tool:lottiefiles/motion-design-skill": {
+    "archived": false,
+    "created": "2026-03-12",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 205,
+    "installs": 24654,
+    "installs_by_skill": {
+      "motion-design": 24654
+    },
+    "last_activity": "2026-05-18",
+    "licence": "MIT",
+    "open_issues": 4,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/LottieFiles/motion-design-skill",
+      "https://skills.sh/api/search?q=motion-design-skill"
+    ],
+    "stars": 2966
+  },
+  "tool:manimcommunity/manim": {
+    "archived": false,
+    "created": "2020-05-19",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 3326,
+    "last_activity": "2026-11-11",
+    "licence": "MIT",
+    "open_issues": 399,
+    "sources": [
+      "https://api.github.com/repos/ManimCommunity/manim",
+      "https://skills.sh/api/search?q=manim"
+    ],
+    "stars": 42431
+  },
+  "tool:mattypark/motion-graphics-skill": {
+    "archived": false,
+    "created": "2026-10-08",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 26,
+    "last_activity": "2026-10-08",
+    "licence": "unknown",
+    "open_issues": 0,
+    "sources": [
+      "https://api.github.com/repos/mattypark/Motion-graphics-skill",
+      "https://skills.sh/api/search?q=Motion-graphics-skill"
+    ],
+    "stars": 47
+  },
+  "tool:midrender/revideo": {
+    "archived": false,
+    "created": "2024-03-11",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 220,
+    "last_activity": "2026-07-15",
+    "licence": "MIT",
+    "open_issues": 63,
+    "sources": [
+      "https://api.github.com/repos/midrender/revideo",
+      "https://skills.sh/api/search?q=revideo"
+    ],
+    "stars": 4205
+  },
+  "tool:mifi/editly": {
+    "archived": false,
+    "created": "2020-04-15",
+    "default_branch": "master",
+    "fetched_at": "2026-11-12",
+    "forks": 389,
+    "last_activity": "2025-05-12",
+    "licence": "MIT",
+    "open_issues": 80,
+    "sources": [
+      "https://api.github.com/repos/mifi/editly",
+      "https://skills.sh/api/search?q=editly"
+    ],
+    "stars": 5607
+  },
+  "tool:mort1d/motion-graphics-skills": {
+    "archived": false,
+    "created": "2026-09-28",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 5,
+    "installs": 175,
+    "installs_by_skill": {
+      "motion-graphics": 175
+    },
+    "last_activity": "2026-09-30",
+    "licence": "unknown",
+    "open_issues": 0,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/Mort1d/motion-graphics-skills",
+      "https://skills.sh/api/search?q=motion-graphics-skills"
+    ],
+    "stars": 78
+  },
+  "tool:motion-canvas/motion-canvas": {
+    "archived": false,
+    "created": "2022-08-03",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 894,
+    "last_activity": "2026-07-02",
+    "licence": "MIT",
+    "open_issues": 178,
+    "sources": [
+      "https://api.github.com/repos/motion-canvas/motion-canvas",
+      "https://skills.sh/api/search?q=motion-canvas"
+    ],
+    "stars": 19780
+  },
+  "tool:nexu-io/html-video": {
+    "archived": false,
+    "created": "2026-05-27",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 583,
+    "installs": 77,
+    "installs_by_skill": {
+      "frame-bold-signal": 73,
+      "frame-build-minimal": 75,
+      "frame-data-chart-nyt": 71,
+      "frame-electric-studio": 77,
+      "frame-glitch-title": 69,
+      "frame-light-leak-cinema": 71,
+      "frame-liquid-bg-hero": 69,
+      "frame-logo-outro": 69,
+      "frame-pentagram-stat": 74,
+      "vfx-text-cursor": 69
+    },
+    "last_activity": "2026-06-21",
+    "licence": "Apache-2.0",
+    "open_issues": 55,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/nexu-io/html-video",
+      "https://skills.sh/api/search?q=html-video"
+    ],
+    "stars": 4831
+  },
+  "tool:openmontageinc/openmontage": {
+    "archived": false,
+    "created": "2026-03-29",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 10704,
+    "installs": 1945,
+    "installs_by_skill": {
+      "ai-video-gen": 1576,
+      "character-animation-qa": 1586,
+      "ffmpeg": 1548,
+      "pose-library-design": 1510,
+      "remotion": 1536,
+      "svg-character-animation": 1945,
+      "text-to-speech": 1515,
+      "video-download": 1575,
+      "video-edit": 1905,
+      "video-understand": 1780
+    },
+    "last_activity": "2026-11-09",
+    "licence": "AGPL-3.0",
+    "open_issues": 341,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/OpenMontageInc/OpenMontage",
+      "https://skills.sh/api/search?q=OpenMontage"
+    ],
+    "stars": 79811
+  },
+  "tool:remotion-dev/remotion": {
+    "archived": false,
+    "created": "2020-06-23",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 6074,
+    "installs": 2885,
+    "installs_by_skill": {
+      "add-effect": 938,
+      "add-expert": 2548,
+      "add-sfx": 2783,
+      "docs-demo": 2573,
+      "fix-dependabot": 1103,
+      "make-pr": 998,
+      "pr-name": 1103,
+      "video-report": 2812,
+      "web-renderer-test": 2885,
+      "writing-docs": 2865
+    },
+    "last_activity": "2026-11-12",
+    "licence": "unknown",
+    "open_issues": 201,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/remotion-dev/remotion",
+      "https://skills.sh/api/search?q=remotion"
+    ],
+    "stars": 72638
+  },
   "tool:remotion-dev/skills": {
     "archived": false,
     "created": "2026-01-19",
@@ -149,5 +679,20 @@
       "https://skills.sh/api/search?q=video-shotcraft"
     ],
     "stars": 18866
+  },
+  "tool:zulko/moviepy": {
+    "archived": false,
+    "created": "2013-08-12",
+    "default_branch": "master",
+    "fetched_at": "2026-11-12",
+    "forks": 2148,
+    "last_activity": "2026-08-26",
+    "licence": "MIT",
+    "open_issues": 96,
+    "sources": [
+      "https://api.github.com/repos/Zulko/moviepy",
+      "https://skills.sh/api/search?q=moviepy"
+    ],
+    "stars": 15139
   }
 }
