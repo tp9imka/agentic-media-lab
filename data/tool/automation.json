@@ -1,0 +1,605 @@
+{
+  "schema_version": 1,
+  "lane": "automation",
+  "records": [
+    {
+      "id": "tool:get-bb/bb",
+      "kind": "tool",
+      "title": "bb",
+      "aliases": [
+        "get-bb",
+        "bb-app",
+        "bb automations"
+      ],
+      "url": "https://github.com/get-bb/bb",
+      "summary": "A local server and app that runs Claude Code, Codex and other agent CLIs as threads. Its builtin automations plugin fires an agent prompt or a stored script on a 5-field cron with a timezone, or once at a set time or delay.",
+      "why_it_matters": "The closest fit found for a single developer who wants a scheduled Claude Code or Codex run on their own Mac, with run history and a sidebar to pause or re-run it.",
+      "concepts": [
+        "concept:automation",
+        "concept:scheduling-and-runtimes",
+        "concept:orchestration",
+        "concept:agent-portability"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "high",
+      "fit_notes": "Free to run locally; agent runs bill to the provider you already pay for. The scheduler lives inside the bb server, so the Mac must be awake (the Keep Awake plugin runs caffeinate but a closed lid still sleeps). Automations have no approval step of their own: an omitted --permission-mode falls back to auto, or to Full Access when the provider lacks auto. Telemetry to PostHog is on in production runs until you set BB_TELEMETRY=false. A code read (plugins/automations/src/rpc-types.ts, data.ts) shows script variables from --env-json kept as a string map inside the execution JSON in the plugin's SQLite file, so do not pass API keys that way; the docs do not say this. Not checked: missed-tick behaviour after sleep (the code computes the next run from the current time, which suggests missed ticks collapse into one run, but no doc states it).",
+      "related": [
+        {
+          "id": "source:github.com/get-bb/bb/blob/main/plugins/automations/skills/automations/references/script-runtime.md",
+          "rel": "depends_on",
+          "note": "run, retry and kill rules"
+        },
+        {
+          "id": "source:github.com/get-bb/bb/blob/main/docs/configuration.md",
+          "rel": "depends_on",
+          "note": "unauthenticated API, Full Access approvals"
+        },
+        {
+          "id": "source:github.com/get-bb/bb/blob/main/docs/multiple-devices.md",
+          "rel": "depends_on",
+          "note": "which machine must stay on"
+        },
+        {
+          "id": "tool:nousresearch/hermes-agent",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "automation",
+      "tool_type": "app",
+      "agents": [
+        "claude-code",
+        "codex"
+      ],
+      "levers": [
+        "orchestration"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "A schedule is a 5-field cron expression with an IANA timezone, or a one-shot time or delay.",
+          "quote": "--cron <expr>                  Recurring 5-field cron expression\n--timezone <tz>                IANA timezone for --cron\n--at <datetime>                One-shot run time, preferably ISO 8601\n--in <duration>                One-shot delay, e.g. 30s, 5m, 2h, 1d",
+          "locator": "plugins/automations/skills/automations/references/creation.md, Schedule flags",
+          "url": "https://github.com/get-bb/bb/blob/main/plugins/automations/skills/automations/references/creation.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "With no permission mode set, an agent automation runs in auto approval, or in Full Access when the provider has no auto mode.",
+          "quote": "When `--permission-mode` is omitted, the plugin chooses Approve for me\n(`auto`) when the provider supports it and otherwise uses Full Access\n(`full`).",
+          "locator": "plugins/automations/skills/automations/references/creation.md, after Agent mode flags",
+          "url": "https://github.com/get-bb/bb/blob/main/plugins/automations/skills/automations/references/creation.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Production runs send anonymous usage telemetry by default; BB_TELEMETRY=false turns it off.",
+          "quote": "Production runs (the desktop app, `npx bb-app`, and `pnpm start` checkouts) send\nanonymous usage telemetry",
+          "locator": "README.md, section Telemetry",
+          "url": "https://github.com/get-bb/bb/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README Telemetry section, automations SKILL.md, references/creation.md and PLUGIN_OVERVIEW.md against the claims; sweep.ts, data.ts, rpc-types.ts read for fit_notes only",
+        "source_sha256": "dc08dc68e6b50036b2362dfef189eac8f4287b9f6d38010b2de139be8fb24eb5",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:nousresearch/hermes-agent",
+      "kind": "tool",
+      "title": "Hermes Agent",
+      "aliases": [
+        "hermes",
+        "hermes cron"
+      ],
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "summary": "Nous Research's self-hosted agent with its own model routing, skills, messaging gateways and a cron scheduler that runs agent or script jobs.",
+      "why_it_matters": "It is a full agent, not a wrapper for Claude Code, and its cron plus chat approvals is the most complete unattended loop with a human answer step found in this lane.",
+      "concepts": [
+        "concept:automation",
+        "concept:scheduling-and-runtimes",
+        "concept:orchestration",
+        "concept:review-loop"
+      ],
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Needs a model provider key or the Nous Portal; it does not drive your Claude Code subscription. Jobs live in ~/.hermes/cron/jobs.json and secrets in ~/.hermes/.env. Dangerous commands in cron are denied by default (see the security source). The plugin catalog lists third-party plugins, including one that opens an unauthenticated local dashboard; read a plugin before enabling it. Telemetry default not found in README or the pages read.",
+      "related": [
+        {
+          "id": "source:hermes-agent.nousresearch.com/docs/user-guide/security",
+          "rel": "depends_on"
+        },
+        {
+          "id": "tool:get-bb/bb",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "automation",
+      "tool_type": "runtime",
+      "agents": [
+        "hermes"
+      ],
+      "levers": [
+        "orchestration",
+        "review-loop"
+      ],
+      "cost": "mixed",
+      "claims": [
+        {
+          "text": "The scheduler runs inside the gateway daemon, which ticks every 60 seconds; the gateway can be installed as a user or system service.",
+          "quote": "**Cron execution is handled by the gateway daemon.** The gateway ticks the scheduler every 60 seconds, running any due jobs in isolated agent sessions.",
+          "locator": "section How it works",
+          "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/cron",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A missed cron occurrence runs late only inside a catch-up window of half the period, clamped to 2 minutes - 2 hours, settable per job.",
+          "quote": "A missed cron occurrence is run late only inside a catch-up window: half the job's period, clamped to 2 minutes–2 hours.",
+          "locator": "section Catch-up window",
+          "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/cron",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A job can be created paused with a reason and resumed by a person, which serves as a review gate before the first fire.",
+          "quote": "Omit the reason to store \"Created paused; awaiting operator approval.\"",
+          "locator": "section Creating a job paused (safe canary)",
+          "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/cron",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "website/docs/user-guide/features/cron.md (source of the docs page) against the claims",
+        "source_sha256": "7b51974af933fe3f6f0a953c00d0871e0c46d3b9f5b26774baac075ae1e3c5fb",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:nousresearch/kanban-video-pipeline",
+      "kind": "tool",
+      "title": "Kanban Video Pipeline",
+      "aliases": [
+        "hermes kanban video"
+      ],
+      "url": "https://github.com/NousResearch/kanban-video-pipeline",
+      "summary": "A Hermes Agent demo in which director, cinematographer, renderer and editor profiles split a brief into a task graph and produce an MP4 with ASCII video, p5.js and ffmpeg.",
+      "why_it_matters": "A worked example of an agent video pipeline driven by a task board instead of a person, with a block-and-notify path when something fails.",
+      "concepts": [
+        "concept:agentic-pipelines",
+        "concept:orchestration",
+        "concept:code-driven-video"
+      ],
+      "level": "advanced",
+      "maturity": "experimental",
+      "fit": "medium",
+      "fit_notes": "Needs Hermes, a running gateway and an OpenRouter key (the README names claude-opus-4.6), so every run is paid. No approval step before the final cut: a person only steps in when a worker blocks. The setup sources ~/.hermes/.env into the shell. It is a demo of one video, not a reusable product; setup.sh was not run or read in full.",
+      "related": [
+        {
+          "id": "tool:nousresearch/hermes-agent",
+          "rel": "depends_on"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "automation",
+      "tool_type": "framework",
+      "agents": [
+        "hermes"
+      ],
+      "levers": [
+        "orchestration",
+        "story",
+        "review-loop"
+      ],
+      "cost": "paid",
+      "claims": [
+        {
+          "text": "The pipeline runs with no human input; stages promote when their parents complete.",
+          "quote": "The entire pipeline auto-runs with zero human intervention.",
+          "locator": "README.md, section What This Is",
+          "url": "https://github.com/NousResearch/kanban-video-pipeline/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The gateway hosts the board dispatcher, which picks up ready tasks every 60 seconds; stuck tasks mean the gateway is down.",
+          "quote": "The gateway hosts the kanban dispatcher that picks up ready tasks every 60 seconds.",
+          "locator": "RUN.md, step 2 Gateway must be running",
+          "url": "https://github.com/NousResearch/kanban-video-pipeline/blob/main/RUN.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A blocked worker notifies you, and unblocking respawns it with your comment in context.",
+          "quote": "Unblock (respawns the worker with your comment in context)",
+          "locator": "RUN.md, section If something blocks",
+          "url": "https://github.com/NousResearch/kanban-video-pipeline/blob/main/RUN.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md and RUN.md against the claims",
+        "source_sha256": "8c1720d1337450b34b6d652d1d0765b17f1b5c85b30ded1a4a9d1541fc9773ec",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:n8n-io/n8n",
+      "kind": "tool",
+      "title": "n8n",
+      "url": "https://github.com/n8n-io/n8n",
+      "summary": "A self-hostable visual workflow engine with schedule triggers, AI agent nodes and a human review step for agent tool calls.",
+      "why_it_matters": "Self-hosted n8n gives a single developer a scheduler plus a Slack or Telegram approval before an agent tool runs, for example before a publish.",
+      "concepts": [
+        "concept:automation",
+        "concept:scheduling-and-runtimes",
+        "concept:orchestration",
+        "concept:review-loop",
+        "concept:licences-and-territory"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Licence gotcha: the Sustainable Use License allows internal business, non-commercial or personal use, so selling n8n as a hosted service to clients is out; files with .ee. need an enterprise licence. Self-hosted telemetry is on until N8N_DIAGNOSTICS_ENABLED=false. Needs Docker or Node and a machine that stays on. It does not run Claude Code itself; call claude -p from an Execute Command node or use its own AI nodes. Schedule trigger docs were not read.",
+      "related": [
+        {
+          "id": "tool:windmill-labs/windmill",
+          "rel": "alternative_to"
+        },
+        {
+          "id": "tool:activepieces/activepieces",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "automation",
+      "tool_type": "service",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "orchestration",
+        "review-loop",
+        "publishing"
+      ],
+      "cost": "mixed",
+      "claims": [
+        {
+          "text": "Its Sustainable Use License limits use to internal business, non-commercial or personal purposes.",
+          "quote": "You may use or modify the software only for your own internal business purposes or for non-commercial or\npersonal use.",
+          "locator": "LICENSE.md, Sustainable Use License, Limitations",
+          "url": "https://github.com/n8n-io/n8n/blob/master/LICENSE.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A tool that needs human review pauses the workflow and sends an approval request through a channel such as Slack or Telegram.",
+          "quote": "The workflow pauses and sends an approval request through your configured channel (such as Slack, Telegram, or the n8n Chat interface).",
+          "locator": "docs human-in-the-loop-for-tools, How it works, step 2",
+          "url": "https://docs.n8n.io/build/integrate-ai/ai-examples/human-in-the-loop-for-tools",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Self-hosted n8n collects telemetry by default.",
+          "quote": "n8n enables telemetry collection by default.",
+          "locator": "docs control-telemetry, Opting out of data collection",
+          "url": "https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/control-telemetry",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "LICENSE.md from the repo and two n8n-docs pages (repo markdown) against the claims",
+        "source_sha256": "ae9396cacc783414daaf42dab90aaa61648de8d19b1c0b08ecebf44d9835cec5",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:activepieces/activepieces",
+      "kind": "tool",
+      "title": "Activepieces",
+      "url": "https://github.com/activepieces/activepieces",
+      "summary": "A self-hostable no-code automation builder, MIT-licensed outside its enterprise folders.",
+      "why_it_matters": "A permissive alternative to n8n, but its documented approval feature gates publishing a flow, not a step inside a run.",
+      "concepts": [
+        "concept:automation",
+        "concept:scheduling-and-runtimes",
+        "concept:orchestration",
+        "concept:licences-and-territory"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "low",
+      "fit_notes": "Flow Approvals is an Enterprise or Cloud feature and reviews flow changes before they go live; it is not a run-time human step. Product analytics and a daily deployment snapshot are on until switched off. Run-time approval pieces and schedule triggers were not read.",
+      "related": [
+        {
+          "id": "tool:n8n-io/n8n",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "automation",
+      "tool_type": "service",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "orchestration"
+      ],
+      "cost": "mixed",
+      "claims": [
+        {
+          "text": "Code outside the enterprise directories is MIT (Expat) licensed.",
+          "quote": "Content outside of the above mentioned directories or restrictions above is available under the \"MIT Expat\" license as defined below.",
+          "locator": "LICENSE, third bullet",
+          "url": "https://github.com/activepieces/activepieces/blob/main/LICENSE",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Flow Approvals is an Enterprise or Cloud feature that holds a flow offline until an approver reviews it.",
+          "quote": "Flow Approvals is an Enterprise / Cloud feature and requires the Environments plan.",
+          "locator": "docs/flows/flow-approvals.mdx, info box",
+          "url": "https://github.com/activepieces/activepieces/blob/main/docs/flows/flow-approvals.mdx",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The daily deployment snapshot is on by default and ignores AP_TELEMETRY_ENABLED.",
+          "quote": "**Deployment setup** is a separate switch in the same place, and is on by default.",
+          "locator": "docs/install/configure-operate/telemetry.mdx, Opting out?",
+          "url": "https://github.com/activepieces/activepieces/blob/main/docs/install/configure-operate/telemetry.mdx",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "LICENSE, flow-approvals.mdx and telemetry.mdx from the repo against the claims",
+        "source_sha256": "6f5eb5885f2a6401c991ec817766c2f93c67ec4e9ba512517fe03637973b7993",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:windmill-labs/windmill",
+      "kind": "tool",
+      "title": "Windmill",
+      "url": "https://github.com/windmill-labs/windmill",
+      "summary": "A self-hostable engine for scripts, flows and schedules, with approval steps that suspend a flow until a person resumes it.",
+      "why_it_matters": "Its suspend-until-approval step is a run-time human gate in the free edition, which fits a 'render, then wait for my OK, then publish' flow.",
+      "concepts": [
+        "concept:automation",
+        "concept:scheduling-and-runtimes",
+        "concept:orchestration",
+        "concept:review-loop",
+        "concept:licences-and-territory"
+      ],
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Licence gotcha: the Community Edition is free to use internally but may not be sold, resold or run as a managed service without an agreement; the source build is AGPLv3. Approval works through secret resume URLs, so anyone who gets the URL can approve; send it only to the approver. Telemetry default and schedule docs were not read.",
+      "related": [
+        {
+          "id": "tool:n8n-io/n8n",
+          "rel": "alternative_to"
+        },
+        {
+          "id": "tool:triggerdotdev/trigger.dev",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "automation",
+      "tool_type": "service",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "orchestration",
+        "review-loop"
+      ],
+      "cost": "mixed",
+      "claims": [
+        {
+          "text": "The Community Edition may be used free and redistributed as is, but not sold, served as a managed service or wrapped without an agreement.",
+          "quote": "but not to sell, resell, serve as a managed service, modify or wrap under any\nform without an explicit agreement.",
+          "locator": "LICENSE, Community Edition paragraph",
+          "url": "https://github.com/windmill-labs/windmill/blob/main/LICENSE",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "An approval step suspends the flow until it is approved through resume endpoints or the approval page, only by holders of the secret URLs.",
+          "quote": "This will suspend the execution of a flow until it has been approved through the resume endpoints or the approval page by and solely by the recipients of the secret URLs.",
+          "locator": "docs/flows/11_flow_approval.mdx, Suspend & Approval / Prompts",
+          "url": "https://github.com/windmill-labs/windmilldocs-public/blob/main/docs/flows/11_flow_approval.mdx",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "LICENSE from the main repo and flow approval doc from windmilldocs-public against the claims",
+        "source_sha256": "366b8be6bd6e5ba6489f275e7f8d2ee3d199aaf07f4755e6796d2abd7b4ebf61",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:triggerdotdev/trigger.dev",
+      "kind": "tool",
+      "title": "Trigger.dev",
+      "url": "https://github.com/triggerdotdev/trigger.dev",
+      "summary": "A TypeScript background-job platform, hosted or self-hosted, with cron-scheduled tasks and waitpoint tokens that pause a run until completed.",
+      "why_it_matters": "Waitpoint tokens give code-first approval: a render task waits for an 'approved' or 'rejected' payload before it publishes.",
+      "concepts": [
+        "concept:automation",
+        "concept:scheduling-and-runtimes",
+        "concept:orchestration",
+        "concept:review-loop"
+      ],
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Self-hosting lacks checkpoints, so a waiting run holds its resources instead of sleeping; long approval waits cost more there. Declarative schedules apply only after a dev or deploy command. Telemetry default of the self-hosted build was not checked.",
+      "related": [
+        {
+          "id": "tool:temporalio/temporal",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "automation",
+      "tool_type": "service",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "orchestration",
+        "review-loop"
+      ],
+      "cost": "mixed",
+      "claims": [
+        {
+          "text": "Waitpoint tokens pause a run until completed and are meant for approval and human-in-the-loop steps.",
+          "quote": "Waitpoint tokens pause task runs until you complete the token. They're commonly used for approval workflows",
+          "locator": "docs/wait-for-token.mdx, intro",
+          "url": "https://github.com/triggerdotdev/trigger.dev/blob/main/docs/wait-for-token.mdx",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Declarative schedules live on the task and sync when you run the dev command or deploy.",
+          "quote": "They sync when you run the dev command or deploy.",
+          "locator": "docs/tasks/scheduled.mdx, Attaching schedules",
+          "url": "https://github.com/triggerdotdev/trigger.dev/blob/main/docs/tasks/scheduled.mdx",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Checkpoints (non-blocking waits) are Cloud-only; self-hosted runs do not get them.",
+          "quote": "| Checkpoints       | ✅    | ❌          | Non-blocking waits, less resource usage |",
+          "locator": "docs/self-hosting/overview.mdx, feature table",
+          "url": "https://github.com/triggerdotdev/trigger.dev/blob/main/docs/self-hosting/overview.mdx",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "three docs files from the repo against the claims",
+        "source_sha256": "5a560e63d9a00697673093fa4e3e01bf508bca80e0b8194fb3f0e5dd29b90863",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:temporalio/temporal",
+      "kind": "tool",
+      "title": "Temporal",
+      "url": "https://github.com/temporalio/temporal",
+      "summary": "A durable-execution server; Schedules start workflow executions on calendar or interval specs, with overlap and catch-up policies.",
+      "why_it_matters": "The heaviest option here, but the one with explicit, documented rules for overlapping and late runs.",
+      "concepts": [
+        "concept:automation",
+        "concept:scheduling-and-runtimes",
+        "concept:orchestration"
+      ],
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "low",
+      "fit_notes": "Needs a Temporal server plus your own workers, which is a lot for one developer making clips. There is no approval primitive in the schedule doc; a human step means writing a signal handler. The default one-year catch-up window means a server down for a week fires the backlog per the overlap policy when it returns. Licence was not quoted and telemetry was not checked.",
+      "related": [
+        {
+          "id": "tool:triggerdotdev/trigger.dev",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "automation",
+      "tool_type": "runtime",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "orchestration"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "By default a scheduled start is skipped when the previous execution is still running.",
+          "quote": "- `Skip`: **Default**.\n  Nothing happens; the Workflow Execution is not started.",
+          "locator": "docs/encyclopedia/workflow/schedule.mdx, Overlap Policy",
+          "url": "https://docs.temporal.io/schedule",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The default catch-up window is one year, so late actions still run unless over a year late.",
+          "quote": "The default is one year, meaning Actions will be taken unless over one year late.",
+          "locator": "docs/encyclopedia/workflow/schedule.mdx, Catchup Window",
+          "url": "https://docs.temporal.io/schedule",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "schedule.mdx from temporalio/documentation against the claims",
+        "source_sha256": "14a7c7a69742023463deb3e0422a32f1c258e38a52d81e9f9d6de5513d4d1e93",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    }
+  ]
+}

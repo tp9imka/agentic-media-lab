@@ -1,0 +1,694 @@
+{
+  "schema_version": 1,
+  "lane": "automation",
+  "records": [
+    {
+      "id": "source:github.com/get-bb/bb/blob/main/plugins/automations/skills/automations/references/script-runtime.md",
+      "kind": "source",
+      "title": "bb automations: script runtime reference",
+      "url": "https://github.com/get-bb/bb/blob/main/plugins/automations/skills/automations/references/script-runtime.md",
+      "summary": "The bb automations skill reference for stored scripts: working directory, injected variables, retries, overlap and process cleanup.",
+      "why_it_matters": "It states how a failed or overlapping scheduled run behaves, which decides whether a nightly render job can double-fire or silently stop.",
+      "concepts": [
+        "concept:automation",
+        "concept:scheduling-and-runtimes"
+      ],
+      "level": "advanced",
+      "fit": "high",
+      "fit_notes": "Applies to both agent and script automations for the retry rules. A script that starts tmux, setsid or a daemon keeps running after bb stops it, so a long render launched that way is not cleaned up. The plugin injects BB_SERVER_URL and IDs, not secrets.",
+      "related": [
+        {
+          "id": "tool:get-bb/bb",
+          "rel": "extends"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "automation",
+      "claims": [
+        {
+          "text": "An automation never runs twice at once; a duplicate tick joins the active run.",
+          "quote": "An automation has at most one active run. A duplicate tick or manual request\n  uses the active run.",
+          "locator": "section Execution safety, bullet 1",
+          "url": "https://github.com/get-bb/bb/blob/main/plugins/automations/skills/automations/references/script-runtime.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Failed recurring runs retry after 30 s and 60 s, never past the next scheduled run, and a failing automation is never paused.",
+          "quote": "Failed recurring runs retry after 30 seconds and then 60 seconds, but never\n  later than the next scheduled run. After two retries, a failing automation\n  waits for its next scheduled run. A failing run never pauses the automation;",
+          "locator": "section Execution safety, bullet 2",
+          "url": "https://github.com/get-bb/bb/blob/main/plugins/automations/skills/automations/references/script-runtime.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Processes that start their own session or group escape bb's cleanup.",
+          "quote": "A process that starts its own session or process group, such as `setsid`,\n  `tmux`, or a daemon, leaves the script's group and is not stopped.",
+          "locator": "section Execution safety",
+          "url": "https://github.com/get-bb/bb/blob/main/plugins/automations/skills/automations/references/script-runtime.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "script-runtime.md against the three claims",
+        "source_sha256": "cb27b45f02d20109e6c49bb2f10b70c06a69270c8681795e8fde40cede5a4e0a",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:github.com/get-bb/bb/blob/main/docs/configuration.md",
+      "kind": "source",
+      "title": "bb configuration reference",
+      "url": "https://github.com/get-bb/bb/blob/main/docs/configuration.md",
+      "summary": "bb's full settings reference: data directory, plugins, provider settings, Keep Awake, Ask User Question, startup flags and telemetry.",
+      "why_it_matters": "It names the two settings that decide how unattended a scheduled bb run really is, and the one network setting that exposes command execution.",
+      "concepts": [
+        "concept:automation",
+        "concept:scheduling-and-runtimes",
+        "concept:review-loop"
+      ],
+      "level": "advanced",
+      "fit": "high",
+      "fit_notes": "Plugins are full-trust code inside the server process and keep secret settings under <dataDir>/plugins/<id>/secrets/. All state, including automations, lives under ~/.bb/ by default. Keep the server on 127.0.0.1 and use bb connect or Tailscale Serve for phone access.",
+      "related": [
+        {
+          "id": "tool:get-bb/bb",
+          "rel": "extends"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "automation",
+      "claims": [
+        {
+          "text": "Binding the server to 0.0.0.0 exposes an unauthenticated API that can run commands and read files.",
+          "quote": "the public API is\nunauthenticated and permits command execution and file reads.",
+          "locator": "section Startup Flags",
+          "url": "https://github.com/get-bb/bb/blob/main/docs/configuration.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "In Full Access, Claude Code's own ask rules and hooks are skipped by default, so every request is approved.",
+          "quote": "Shows Claude Code's own prompts in Full Access (`permissions.ask` rules, PreToolUse hooks that answer `ask`, and built-in safety checks); `false` approves every request.",
+          "locator": "section Plugins > Claude Code provider, fullAccessApprovalsEnabled row (default false)",
+          "url": "https://github.com/get-bb/bb/blob/main/docs/configuration.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A question an agent asks a person times out after 30 minutes by default, and a server restart closes every open question.",
+          "quote": "The builtin Ask User Question plugin keeps an unanswered question card open for\n30 minutes by default.",
+          "locator": "section Ask User Question plugin",
+          "url": "https://github.com/get-bb/bb/blob/main/docs/configuration.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "docs/configuration.md sections Startup Flags, Claude Code provider, Ask User Question, Plugins, Keep Awake against the claims",
+        "source_sha256": "2eebd4d587790880a920fba4dc63abfbc7e785449fcd2044317b197c92289efe",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:github.com/get-bb/bb/blob/main/docs/multiple-devices.md",
+      "kind": "source",
+      "title": "Using bb on multiple devices",
+      "url": "https://github.com/get-bb/bb/blob/main/docs/multiple-devices.md",
+      "summary": "bb's guide to browser devices, execution machines and the one server machine they all connect to.",
+      "why_it_matters": "It answers what must stay running for a bb schedule to fire: the server machine, awake.",
+      "concepts": [
+        "concept:automation",
+        "concept:scheduling-and-runtimes"
+      ],
+      "level": "intro",
+      "fit": "medium",
+      "fit_notes": "On a laptop this means scheduled renders stop when the lid closes. Remote access goes through bb connect (a bb account) or Tailscale Serve; the doc warns against Funnel or the public internet.",
+      "related": [
+        {
+          "id": "tool:get-bb/bb",
+          "rel": "extends"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "automation",
+      "claims": [
+        {
+          "text": "One machine runs the bb server and holds threads, database and settings; while it sleeps nothing can reach bb and running threads may stop.",
+          "quote": "Pick a computer that stays on, such as a desktop, home server, or VM: while the\nserver machine is asleep or off, nothing can reach bb and running threads may\nstop.",
+          "locator": "page intro, paragraph 2",
+          "url": "https://github.com/get-bb/bb/blob/main/docs/multiple-devices.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "docs/multiple-devices.md intro against the claim",
+        "source_sha256": "e80c2b6f9ae048b6edfe2c0a30f761c55db1024ff3e255fdd1497645a2a57b8f",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:hermes-agent.nousresearch.com/docs/user-guide/security",
+      "kind": "source",
+      "title": "Hermes Agent security: dangerous command approval",
+      "url": "https://hermes-agent.nousresearch.com/docs/user-guide/security",
+      "summary": "Hermes Agent's security model: approval modes, per-surface rules for cron and unattended sessions, YOLO mode, deny rules and who may approve in a shared chat.",
+      "why_it_matters": "It states exactly what a cron job does when it hits a command that needs a person, and how approvals reach you in Slack, Telegram or Discord.",
+      "concepts": [
+        "concept:automation",
+        "concept:scheduling-and-runtimes",
+        "concept:review-loop"
+      ],
+      "level": "advanced",
+      "fit": "high",
+      "fit_notes": "Keep cron_mode at deny and approvals.mode off of any profile that runs cron. The page itself says deny rules are not a sandbox; use a container backend for containment.",
+      "related": [
+        {
+          "id": "tool:nousresearch/hermes-agent",
+          "rel": "extends"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "automation",
+      "claims": [
+        {
+          "text": "Cron jobs deny dangerous commands by default; approve mode auto-approves everything in cron.",
+          "quote": "`deny` blocks the command (the agent must find another path); `approve` auto-approves everything in cron context.",
+          "locator": "section Approval Modes, table row cron_mode (default deny)",
+          "url": "https://hermes-agent.nousresearch.com/docs/user-guide/security",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Turning approvals off for a profile also covers its cron jobs.",
+          "quote": "`approvals.mode: off` covers every chat and cron job of that profile.",
+          "locator": "section YOLO Mode",
+          "url": "https://hermes-agent.nousresearch.com/docs/user-guide/security",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "By default any admitted chat member may answer a pending approval; a list of user ids narrows it.",
+          "quote": "`[\"*\"]`: any admitted member.",
+          "locator": "section Approval Modes, table row approvers",
+          "url": "https://hermes-agent.nousresearch.com/docs/user-guide/security",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "website/docs/user-guide/security.md against the claims",
+        "source_sha256": "8dee04b89f602a5b48abd1dab7cb4e5eaf2f2bb49510ae64eb6f78c3433c2cda",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:code.claude.com/docs/en/headless",
+      "kind": "source",
+      "title": "Run Claude Code programmatically (claude -p)",
+      "url": "https://code.claude.com/docs/en/headless",
+      "summary": "Anthropic's docs for the non-interactive claude -p mode: tool allow lists, permission modes for scripts, output formats. Saved with the data-usage page for the telemetry defaults.",
+      "why_it_matters": "claude -p is what a system crontab, launchd job or CI runner calls; this page sets what such a run may do without a person.",
+      "concepts": [
+        "concept:automation",
+        "concept:scheduling-and-runtimes"
+      ],
+      "level": "intermediate",
+      "fit": "high",
+      "fit_notes": "claude -p brings no scheduler; pair it with cron, launchd or GitHub Actions. A run denies what it cannot get approved, so list tools with --allowedTools rather than reaching for broad modes. Metrics telemetry is on with an Anthropic sign-in and off by default on Bedrock, Vertex and Foundry.",
+      "related": [
+        {
+          "id": "source:code.claude.com/docs/en/routines",
+          "rel": "alternative_to"
+        },
+        {
+          "id": "source:docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+          "rel": "integrates_with"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "automation",
+      "claims": [
+        {
+          "text": "From v2.1.302, claude -p starts in Manual mode when nothing sets a mode, and a call needing approval is denied unless a hook or prompt tool approves it.",
+          "quote": "With Claude Code v2.1.302 or later, `claude -p` runs start in Manual mode when [nothing sets a permission mode](https://code.claude.com/docs/en/permission-modes.md#which-mode-a-non-interactive-run-starts-in).",
+          "locator": "headless.md, section Auto-approve tools",
+          "url": "https://code.claude.com/docs/en/headless",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "For an unattended run the docs show auto mode with prompts turned off, so anything that would prompt is denied.",
+          "quote": "claude -p \"Update the dependency pins and run the tests\" --permission-mode auto --permission-prompts none",
+          "locator": "headless.md, section Auto-approve tools, example",
+          "url": "https://code.claude.com/docs/en/headless",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Usage metrics are on by default with an Anthropic sign-in; DISABLE_TELEMETRY=1 turns them off.",
+          "quote": "| **Metrics** | Default on. `DISABLE_TELEMETRY=1` to disable.",
+          "locator": "data-usage.md, section Default behaviors by API provider, table",
+          "url": "https://code.claude.com/docs/en/data-usage",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "headless.md and data-usage.md (markdown versions) against the claims",
+        "source_sha256": "7b44923d96826dd34ead76976eeea99482a65c58210e385cf7ba08a621e01aa6",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:code.claude.com/docs/en/routines",
+      "kind": "source",
+      "title": "Claude Code cloud scheduled tasks (formerly routines)",
+      "aliases": [
+        "claude code routines",
+        "cloud scheduled tasks"
+      ],
+      "url": "https://code.claude.com/docs/en/routines",
+      "summary": "Anthropic's docs for saved Claude Code tasks that run in its cloud on a schedule, an API call or a GitHub event, against a fresh clone of your repos.",
+      "why_it_matters": "The only option in this lane that keeps firing with the laptop shut and needs no server of your own, at the cost of no local files.",
+      "concepts": [
+        "concept:automation",
+        "concept:scheduling-and-runtimes",
+        "concept:review-loop"
+      ],
+      "level": "intermediate",
+      "fit": "high",
+      "fit_notes": "Minimum interval 1 hour; runs exactly on the hour may start several minutes late. Bare cron hours are UTC. Environment variables are visible to anyone using the environment, so the docs say to store API keys as network secrets. Runs push to claude/ branches; use branch protection to gate merges. A fresh cloud clone cannot see local footage or a local GPU.",
+      "related": [
+        {
+          "id": "source:code.claude.com/docs/en/scheduled-tasks",
+          "rel": "alternative_to"
+        },
+        {
+          "id": "source:code.claude.com/docs/en/headless",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "automation",
+      "claims": [
+        {
+          "text": "Cloud tasks run on Anthropic's infrastructure, so they keep working when your laptop is closed.",
+          "quote": "so they keep working when your laptop is closed.",
+          "locator": "section intro",
+          "url": "https://code.claude.com/docs/en/routines",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Custom cron intervals are allowed but anything more often than hourly is rejected.",
+          "quote": "Expressions that run more often than once per hour are rejected.",
+          "locator": "section Add a schedule trigger, Custom intervals",
+          "url": "https://code.claude.com/docs/en/routines",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A run starts in auto mode, where a classifier allows or blocks actions; it waits for you only on ask rules or repeated blocks.",
+          "quote": "When a run starts a new session on Anthropic's cloud, that session begins in [auto mode](https://code.claude.com/docs/en/permission-modes.md#eliminate-prompts-with-auto-mode) unless auto mode is unavailable.",
+          "locator": "section Permission prompts during a run",
+          "url": "https://code.claude.com/docs/en/routines",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "routines.md (markdown version) against the claims",
+        "source_sha256": "771d695d4bb11166b6d6905f4f8148d31d0806a17e6194e3efffc402559f631f",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:code.claude.com/docs/en/scheduled-tasks",
+      "kind": "source",
+      "title": "Claude Code: run prompts on a schedule (/loop) and compare scheduling options",
+      "aliases": [
+        "/loop",
+        "claude code desktop scheduled tasks"
+      ],
+      "url": "https://code.claude.com/docs/en/scheduled-tasks",
+      "summary": "Anthropic's page for session-scoped /loop tasks, with a table comparing cloud, Desktop and /loop scheduling.",
+      "why_it_matters": "The comparison table answers where each Claude Code schedule runs and what must stay on, in one place.",
+      "concepts": [
+        "concept:automation",
+        "concept:scheduling-and-runtimes"
+      ],
+      "level": "intro",
+      "fit": "high",
+      "fit_notes": "/loop is for polling inside an open session, not for a nightly job. Desktop tasks need the app open and the machine awake. For durable local runs, use Desktop tasks or claude -p from cron.",
+      "related": [
+        {
+          "id": "source:code.claude.com/docs/en/routines",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "automation",
+      "claims": [
+        {
+          "text": "Cloud tasks need neither machine nor session; Desktop needs the machine on; /loop needs an open session.",
+          "quote": "| Requires machine on | No | Yes | Yes |\n| Requires open session | No | No | Yes |",
+          "locator": "section Compare scheduling options, table",
+          "url": "https://code.claude.com/docs/en/scheduled-tasks",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Recurring /loop tasks delete themselves 7 days after creation.",
+          "quote": "Recurring tasks automatically expire 7 days after creation.",
+          "locator": "section Seven-day expiry",
+          "url": "https://code.claude.com/docs/en/scheduled-tasks",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Missed fires are not caught up; a busy session fires once when idle.",
+          "quote": "No catch-up for missed fires.",
+          "locator": "section Limitations",
+          "url": "https://code.claude.com/docs/en/scheduled-tasks",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "scheduled-tasks.md (markdown version) against the claims",
+        "source_sha256": "ef9be1d49e12d3b25196cdf892b6982290677ac4ee86ae43393c7dd5803379ca",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:learn.chatgpt.com/docs/non-interactive-mode",
+      "kind": "source",
+      "title": "Codex non-interactive mode (codex exec)",
+      "aliases": [
+        "codex exec",
+        "codex non-interactive"
+      ],
+      "url": "https://learn.chatgpt.com/docs/non-interactive-mode",
+      "summary": "OpenAI's docs for codex exec in scripts and CI: sandbox flags, auth, JSON output. Saved with the Agent approvals and security page for the approval and telemetry defaults.",
+      "why_it_matters": "codex exec is the Codex counterpart of claude -p: what a cron job or CI runner calls when the reader's agent is Codex.",
+      "concepts": [
+        "concept:automation",
+        "concept:scheduling-and-runtimes"
+      ],
+      "level": "intermediate",
+      "fit": "high",
+      "fit_notes": "The old URL developers.openai.com/codex/noninteractive redirects here (2026-11-12). --full-auto is gone; scripts that used it need --sandbox workspace-write or --approve-for-me. codex exec has no scheduler of its own. Telemetry claim covers OTel export only; other analytics were not checked.",
+      "related": [
+        {
+          "id": "source:code.claude.com/docs/en/headless",
+          "rel": "alternative_to"
+        },
+        {
+          "id": "source:learn.chatgpt.com/docs/automations",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "automation",
+      "claims": [
+        {
+          "text": "codex exec runs in a read-only sandbox by default; danger-full-access is for isolated runners only.",
+          "quote": "By default, `codex exec` runs in a read-only sandbox.",
+          "locator": "non-interactive-mode.md, section Permissions and safety",
+          "url": "https://learn.chatgpt.com/docs/non-interactive-mode",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Do not put OPENAI_API_KEY or CODEX_API_KEY in a job-level env when the job runs repository code.",
+          "quote": "Do not set `OPENAI_API_KEY` or `CODEX_API_KEY` as a job-level environment variable in workflows that check out or run repository-controlled code.",
+          "locator": "non-interactive-mode.md, section on authentication",
+          "url": "https://learn.chatgpt.com/docs/non-interactive-mode",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "OpenTelemetry export is off by default and opt-in.",
+          "quote": "Telemetry is off by default; enable it explicitly in your configuration.",
+          "locator": "agent-approvals-security.md, section Monitoring and telemetry",
+          "url": "https://learn.chatgpt.com/docs/agent-approvals-security",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "non-interactive-mode.md and agent-approvals-security.md (markdown versions) against the claims",
+        "source_sha256": "f4c5fc6d8af18024737a33c6ccf97fb01e1c60d1372bbe553866ed5a816a7fda",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:learn.chatgpt.com/docs/automations",
+      "kind": "source",
+      "title": "Codex scheduled tasks (ChatGPT app)",
+      "aliases": [
+        "codex automations"
+      ],
+      "url": "https://learn.chatgpt.com/docs/automations",
+      "summary": "OpenAI's docs for scheduled tasks in the ChatGPT desktop app and web, which can run Codex in a local project or a separate worktree.",
+      "why_it_matters": "The Codex-side answer to scheduled agent runs with a review inbox, for readers who use Codex rather than Claude Code.",
+      "concepts": [
+        "concept:automation",
+        "concept:scheduling-and-runtimes",
+        "concept:review-loop"
+      ],
+      "level": "intro",
+      "fit": "medium",
+      "fit_notes": "Runs on a schedule from the app, not from the CLI. Local tasks need the computer on and the app running. Review happens after the run in the Scheduled inbox; there is no pre-step approval described. Frequent schedules with worktrees pile up worktrees.",
+      "related": [
+        {
+          "id": "source:learn.chatgpt.com/docs/non-interactive-mode",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "automation",
+      "claims": [
+        {
+          "text": "Local scheduled tasks need the computer on and the app running.",
+          "quote": "Keep the computer on and\nthe app running when a scheduled task needs local files.",
+          "locator": "page intro, desktop app",
+          "url": "https://learn.chatgpt.com/docs/automations",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Scheduled tasks run unattended with your default sandbox settings.",
+          "quote": "Scheduled tasks run unattended with your default sandbox settings.",
+          "locator": "section before Manage scheduled tasks",
+          "url": "https://learn.chatgpt.com/docs/automations",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The Scheduled view is an inbox where runs with findings wait for you.",
+          "quote": "The **Scheduled** view acts as your inbox.",
+          "locator": "section Manage scheduled tasks",
+          "url": "https://learn.chatgpt.com/docs/automations",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "automations.md (markdown version) against the claims",
+        "source_sha256": "cd6ad46c3c8304a56fa64657492ce2585afda5212ba3fe0562d59cc9be9596db",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+      "kind": "source",
+      "title": "GitHub Actions: events that trigger workflows (schedule)",
+      "aliases": [
+        "on: schedule",
+        "github actions cron"
+      ],
+      "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+      "summary": "GitHub's reference for workflow triggers; the schedule section covers cron syntax, timezone, minimum interval and the delay, drop and disable rules.",
+      "why_it_matters": "A free scheduler for claude -p or codex exec that needs no machine of yours, with documented ways it fails to fire.",
+      "concepts": [
+        "concept:automation",
+        "concept:scheduling-and-runtimes"
+      ],
+      "level": "intro",
+      "fit": "high",
+      "fit_notes": "Avoid minute 0. Scheduled runs use the default branch only. The 60-day disable applies to public repositories. Secrets go in repository or environment secrets; see the environments source for an approval gate. Runner minutes on private repos are billed per plan, not checked here.",
+      "related": [
+        {
+          "id": "source:docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "source:code.claude.com/docs/en/headless",
+          "rel": "integrates_with"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "automation",
+      "claims": [
+        {
+          "text": "A schedule is POSIX cron in the workflow file, UTC by default, with an optional IANA timezone and a 5-minute minimum.",
+          "quote": "The shortest interval you can run scheduled workflows is once every 5 minutes.",
+          "locator": "section schedule",
+          "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Scheduled runs can be delayed at high load, especially at the top of the hour, and some queued jobs may be dropped.",
+          "quote": "If the load is sufficiently high enough, some queued jobs may be dropped.",
+          "locator": "section schedule, note",
+          "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "In a public repository, scheduled workflows are disabled after 60 days without repository activity.",
+          "quote": "In a public repository, scheduled workflows are automatically disabled when no repository activity has occurred in 60 days.",
+          "locator": "section schedule, note",
+          "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "docs.github.com article body (markdown) for the schedule section against the claims",
+        "source_sha256": "5a5687c7eda6b1bb4766c8c0121d1823ebafd6083227f93da757e29f1a9be754",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
+      "kind": "source",
+      "title": "GitHub Actions: deployments and environments (required reviewers)",
+      "aliases": [
+        "required reviewers",
+        "github environments"
+      ],
+      "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
+      "summary": "GitHub's reference for environments: required reviewers, wait timers, branch rules and environment secrets.",
+      "why_it_matters": "Required reviewers are the built-in way to make a scheduled workflow stop and wait for a person before a publish or upload step.",
+      "concepts": [
+        "concept:automation",
+        "concept:scheduling-and-runtimes",
+        "concept:review-loop"
+      ],
+      "level": "intermediate",
+      "fit": "high",
+      "fit_notes": "Plan gotcha: on Free, Pro and Team, required reviewers only work in public repositories, so a private repo on a personal plan gets no approval gate. Put the API key for the publish step in an environment secret so it unlocks only after approval.",
+      "related": [
+        {
+          "id": "source:docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+          "rel": "integrates_with"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "automation",
+      "claims": [
+        {
+          "text": "Required reviewers make jobs that reference an environment wait for one of up to six people or teams to approve.",
+          "quote": "Only one of the required reviewers needs to approve the job for it to proceed.",
+          "locator": "section Required reviewers",
+          "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "On Free, Pro and Team plans, required reviewers are only available for public repositories.",
+          "quote": "If you are on a GitHub Free, GitHub Pro, or GitHub Team plan, required reviewers are only available for public repositories.",
+          "locator": "section Required reviewers, note",
+          "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Environment secrets stay locked until a required reviewer approves the job.",
+          "quote": "If the environment requires approval, a job cannot access environment secrets until one of the required reviewers approves it.",
+          "locator": "section Environment secrets",
+          "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "docs.github.com article body (markdown) against the claims",
+        "source_sha256": "7e78f7788c30a3b47db1a5c44b9451dccbe951c15255312add99646b27cd6bd7",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    }
+  ]
+}
