@@ -11,6 +11,51 @@
       "https://huggingface.co/api/models/MiniMaxAI/MiniMax-H3"
     ]
   },
+  "source:github.com/get-bb/bb/blob/main/docs/configuration.md": {
+    "archived": false,
+    "created": "2026-02-24",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 786,
+    "last_activity": "2026-11-12",
+    "licence": "MIT",
+    "open_issues": 852,
+    "sources": [
+      "https://api.github.com/repos/get-bb/bb",
+      "https://skills.sh/api/search?q=bb"
+    ],
+    "stars": 5381
+  },
+  "source:github.com/get-bb/bb/blob/main/docs/multiple-devices.md": {
+    "archived": false,
+    "created": "2026-02-24",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 786,
+    "last_activity": "2026-11-12",
+    "licence": "MIT",
+    "open_issues": 852,
+    "sources": [
+      "https://api.github.com/repos/get-bb/bb",
+      "https://skills.sh/api/search?q=bb"
+    ],
+    "stars": 5381
+  },
+  "source:github.com/get-bb/bb/blob/main/plugins/automations/skills/automations/references/script-runtime.md": {
+    "archived": false,
+    "created": "2026-02-24",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 786,
+    "last_activity": "2026-11-12",
+    "licence": "MIT",
+    "open_issues": 852,
+    "sources": [
+      "https://api.github.com/repos/get-bb/bb",
+      "https://skills.sh/api/search?q=bb"
+    ],
+    "stars": 5381
+  },
   "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md": {
     "archived": false,
     "created": "2026-06-29",
@@ -78,6 +123,35 @@
       "https://skills.sh/api/search?q=manim"
     ],
     "stars": 96431
+  },
+  "tool:activepieces/activepieces": {
+    "archived": false,
+    "created": "2022-12-03",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 4460,
+    "installs": 72,
+    "installs_by_skill": {
+      "activepieces-design-system": 10,
+      "add-endpoint": 7,
+      "add-entity": 5,
+      "add-feature": 6,
+      "agent-browser": 8,
+      "db-migration": 5,
+      "grill-me": 72,
+      "mintlify": 8,
+      "piece-builder": 14,
+      "playwright-e2e-testing": 14
+    },
+    "last_activity": "2026-11-12",
+    "licence": "unknown",
+    "open_issues": 927,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/activepieces/activepieces",
+      "https://skills.sh/api/search?q=activepieces"
+    ],
+    "stars": 25490
   },
   "tool:ahujasid/mcp-for-blender": {
     "archived": false,
@@ -280,6 +354,21 @@
       "https://skills.sh/api/search?q=smooth-animation-skill"
     ],
     "stars": 1
+  },
+  "tool:get-bb/bb": {
+    "archived": false,
+    "created": "2026-02-24",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 786,
+    "last_activity": "2026-11-12",
+    "licence": "MIT",
+    "open_issues": 852,
+    "sources": [
+      "https://api.github.com/repos/get-bb/bb",
+      "https://skills.sh/api/search?q=bb"
+    ],
+    "stars": 5381
   },
   "tool:greensock/gsap": {
     "archived": false,
@@ -553,6 +642,35 @@
     ],
     "stars": 19780
   },
+  "tool:n8n-io/n8n": {
+    "archived": false,
+    "created": "2019-06-22",
+    "default_branch": "master",
+    "fetched_at": "2026-11-12",
+    "forks": 61481,
+    "installs": 847,
+    "installs_by_skill": {
+      "content-design": 473,
+      "create-pr": 847,
+      "linear-issue": 305,
+      "loom-transcript": 301,
+      "n8n-conventions": 433,
+      "n8n:content-design": 288,
+      "n8n:conventions": 342,
+      "n8n:create-pr": 293,
+      "n8n:spec-driven-development": 289,
+      "reproduce-bug": 306
+    },
+    "last_activity": "2026-11-12",
+    "licence": "unknown",
+    "open_issues": 1232,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/n8n-io/n8n",
+      "https://skills.sh/api/search?q=n8n"
+    ],
+    "stars": 210255
+  },
   "tool:nexu-io/html-video": {
     "archived": false,
     "created": "2026-05-27",
@@ -581,6 +699,50 @@
       "https://skills.sh/api/search?q=html-video"
     ],
     "stars": 4831
+  },
+  "tool:nousresearch/hermes-agent": {
+    "archived": false,
+    "created": "2025-07-22",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 59112,
+    "installs": 6434,
+    "installs_by_skill": {
+      "arxiv": 732,
+      "claude-design": 684,
+      "dogfood": 6434,
+      "google-workspace": 610,
+      "hermes-agent": 1269,
+      "humanizer": 1322,
+      "llm-wiki": 622,
+      "popular-web-designs": 974,
+      "powerpoint": 757,
+      "songwriting-and-ai-music": 631
+    },
+    "last_activity": "2026-11-12",
+    "licence": "MIT",
+    "open_issues": 53985,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/NousResearch/hermes-agent",
+      "https://skills.sh/api/search?q=hermes-agent"
+    ],
+    "stars": 262822
+  },
+  "tool:nousresearch/kanban-video-pipeline": {
+    "archived": false,
+    "created": "2026-05-02",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 17,
+    "last_activity": "2026-05-02",
+    "licence": "unknown",
+    "open_issues": 1,
+    "sources": [
+      "https://api.github.com/repos/NousResearch/kanban-video-pipeline",
+      "https://skills.sh/api/search?q=kanban-video-pipeline"
+    ],
+    "stars": 63
   },
   "tool:openmontageinc/openmontage": {
     "archived": false,
@@ -660,6 +822,49 @@
     ],
     "stars": 6888
   },
+  "tool:temporalio/temporal": {
+    "archived": false,
+    "created": "2019-10-16",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 2114,
+    "last_activity": "2026-11-12",
+    "licence": "MIT",
+    "open_issues": 1138,
+    "sources": [
+      "https://api.github.com/repos/temporalio/temporal",
+      "https://skills.sh/api/search?q=temporal"
+    ],
+    "stars": 24350
+  },
+  "tool:triggerdotdev/trigger.dev": {
+    "archived": false,
+    "created": "2022-11-30",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 1531,
+    "installs": 233,
+    "installs_by_skill": {
+      "errors-api-e2e": 12,
+      "span-timeline-events": 21,
+      "trigger-authoring-chat-agent": 2,
+      "trigger-authoring-tasks": 2,
+      "trigger-chat-agent-advanced": 2,
+      "trigger-cost-savings": 1,
+      "trigger-dev-tasks": 233,
+      "trigger-getting-started": 1,
+      "trigger-realtime-and-frontend": 2
+    },
+    "last_activity": "2026-11-12",
+    "licence": "Apache-2.0",
+    "open_issues": 265,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/triggerdotdev/trigger.dev",
+      "https://skills.sh/api/search?q=trigger.dev"
+    ],
+    "stars": 16749
+  },
   "tool:vincentwei1021/video-shotcraft": {
     "archived": false,
     "created": "2026-07-19",
@@ -679,6 +884,35 @@
       "https://skills.sh/api/search?q=video-shotcraft"
     ],
     "stars": 18866
+  },
+  "tool:windmill-labs/windmill": {
+    "archived": false,
+    "created": "2022-05-05",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 1151,
+    "installs": 1105,
+    "installs_by_skill": {
+      "adding-a-trigger": 6,
+      "ai-chat": 5,
+      "ai-evals": 5,
+      "commit": 91,
+      "local-review": 15,
+      "native-trigger": 7,
+      "pr": 85,
+      "refine": 37,
+      "rust-backend": 1105,
+      "svelte-frontend": 101
+    },
+    "last_activity": "2026-11-12",
+    "licence": "unknown",
+    "open_issues": 876,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/windmill-labs/windmill",
+      "https://skills.sh/api/search?q=windmill"
+    ],
+    "stars": 18545
   },
   "tool:zulko/moviepy": {
     "archived": false,
