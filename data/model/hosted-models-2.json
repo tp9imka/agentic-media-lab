@@ -1,0 +1,856 @@
+{
+  "schema_version": 1,
+  "lane": "hosted-models-2",
+  "records": [
+    {
+      "kind": "model",
+      "level": "intermediate",
+      "maturity": "active",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "hosted-models-2",
+      "status": "current",
+      "url_status": "live",
+      "access": "api",
+      "apple_silicon": "no-documented-path",
+      "licence_class": "proprietary",
+      "id": "model:alibaba/wan",
+      "title": "Wan 3.0",
+      "aliases": [
+        "wan3.0-video",
+        "wan3.0-video-prime",
+        "Wan",
+        "Wanx",
+        "Alibaba Model Studio video"
+      ],
+      "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "summary": "Alibaba's hosted video generation family on Model Studio. Wan 3.0 comes in two ids, wan3.0-video and wan3.0-video-prime, at 480P, 720P and 1080P.",
+      "why_it_matters": "It led the Artificial Analysis text-to-video board on 2026-11-12, and its 1080P list price is lower than Seedance 2.5 or FLUX 3 Video at 1080p.",
+      "concepts": [
+        "concept:hosted-video-models",
+        "concept:cost"
+      ],
+      "fit": "high",
+      "fit_notes": "Input video is billed too: billable seconds are input plus output, so a 10 s video-to-video edit bills 20 s. The 30 s free quota exists only in the Singapore region and only for wan3.0-video. The 30% discount is labelled limited-time with no end date on the page. Maximum duration and whether audio is generated are not on the pricing page; OpenRouter lists 2-30 s for its resold copy, not checked at Alibaba.",
+      "related": [
+        {
+          "id": "source:artificialanalysis.ai/video/leaderboard/text-to-video",
+          "rel": "evaluated_on"
+        },
+        {
+          "id": "tool:openrouter/video-generation",
+          "rel": "integrates_with",
+          "note": "resold as alibaba/wan-3.0 at the same list price"
+        }
+      ],
+      "modes": [
+        "t2v",
+        "v2v"
+      ],
+      "claims": [
+        {
+          "text": "In the Singapore region wan3.0-video lists at $0.05 per second at 480P, $0.1 at 720P and $0.2 at 1080P, shown with a limited-time 30% discount, and carries a 30 second free quota.",
+          "quote": "wan3.0-video | International | 480P | List price $0.05/second (Limited-time 30% off) | 30 seconds | 720P | List price $0.1/second (Limited-time 30% off) | 1080P | List price $0.2/second (Limited-time 30% off)",
+          "locator": "Model pricing page, section Wan 3.0-Video Generation, Singapore table",
+          "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "wan3.0-video-prime costs $0.068, $0.14 and $0.28 per second at 480P, 720P and 1080P in Singapore, with no free quota.",
+          "quote": "wan3.0-video-prime | International | 480P | $0.068/second | No free quota | 720P | $0.14/second | 1080P | $0.28/second",
+          "locator": "Model pricing page, section Wan 3.0-Video Generation, Singapore table",
+          "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Both input and output video seconds are billed, and failed requests are not.",
+          "quote": "Pricing rule: both input and output videos are billed by video duration (seconds). Failed requests are not billed and do not consume the free quota.",
+          "locator": "Model pricing page, section Wan 3.0-Video Generation, pricing rule",
+          "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "Alibaba Cloud Model Studio pricing page, Wan 3.0 section, against all three claims",
+        "source_sha256": "82c4a2150ab95f586777787139ffa93a50c21878c02b8471026d644058f55a1e",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "level": "intermediate",
+      "maturity": "active",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "hosted-models-2",
+      "status": "current",
+      "url_status": "live",
+      "access": "api",
+      "apple_silicon": "no-documented-path",
+      "licence_class": "proprietary",
+      "id": "model:alibaba/happyhorse",
+      "title": "HappyHorse",
+      "aliases": [
+        "happyhorse-1.1-t2v",
+        "happyhorse-1.1-i2v",
+        "happyhorse-1.1-r2v",
+        "HappyHorse 1.0"
+      ],
+      "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "summary": "A second Alibaba video family on Model Studio, with text-to-video, first-frame image-to-video and reference-to-video ids per version.",
+      "why_it_matters": "It is the cheapest way found here to try an Alibaba video model at 480P, with a small free quota.",
+      "concepts": [
+        "concept:hosted-video-models",
+        "concept:cost"
+      ],
+      "fit": "medium",
+      "fit_notes": "On the Artificial Analysis boards read 2026-11-12, HappyHorse ranks well below Wan 3.0 (text-to-video rank 20 for 1.0). Pick Wan 3.0 for quality; HappyHorse 1.1 at 480P is a cheap draft step. Free quota is Singapore-only. Clip length and audio not on the pricing page.",
+      "related": [
+        {
+          "id": "model:alibaba/wan",
+          "rel": "alternative_to"
+        }
+      ],
+      "modes": [
+        "t2v",
+        "i2v"
+      ],
+      "claims": [
+        {
+          "text": "happyhorse-1.1-t2v costs $0.07 per second at 480P, $0.14 at 720P and $0.18 at 1080P in Singapore, with a 10 second free quota.",
+          "quote": "happyhorse-1.1-t2v | International | 480P | $0.07/second | 10 seconds | 720P | $0.14/second | 1080P | $0.18/second",
+          "locator": "Model pricing page, section HappyHorse-Text-to-video, Singapore table",
+          "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The free quota is offered only in the Singapore region.",
+          "quote": "NoteThe following models offer a free quota only in Singapore. No free quota is available in other regions.",
+          "locator": "Model pricing page, section HappyHorse-Text-to-video, note above the table",
+          "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "Alibaba Cloud Model Studio pricing page, HappyHorse section, against both claims",
+        "source_sha256": "82c4a2150ab95f586777787139ffa93a50c21878c02b8471026d644058f55a1e",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "level": "intermediate",
+      "maturity": "active",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "hosted-models-2",
+      "status": "current",
+      "url_status": "live",
+      "access": "api",
+      "apple_silicon": "no-documented-path",
+      "licence_class": "proprietary",
+      "id": "model:bytedance/seedance",
+      "title": "Dreamina Seedance 2.5",
+      "aliases": [
+        "Seedance",
+        "dreamina-seedance-2-5-260628",
+        "dreamina-seedance-2-5-flash-261115",
+        "Seedance 2.0",
+        "BytePlus ModelArk video"
+      ],
+      "url": "https://ai.byteplus.com/ark/docs/seedance-2-5.md",
+      "summary": "ByteDance's video generation family on BytePlus ModelArk. Seedance 2.5 (id dreamina-seedance-2-5-260628) generates up to 30 seconds with audio from text, frames or up to 50 reference assets, and edits or extends video.",
+      "why_it_matters": "It ranked first on the Artificial Analysis image-to-video board read 2026-11-12 and gives the longest single clip found here (30 s).",
+      "concepts": [
+        "concept:hosted-video-models",
+        "concept:cost",
+        "concept:consistency"
+      ],
+      "fit": "high",
+      "fit_notes": "Priced in tokens, not seconds: tokens = (input + output seconds) x width x height x fps / 1024. BytePlus' own worked example is $0.231/s at 720p 16:9 and $0.569/s at 1080p. Activation needs a BytePlus balance above USD 30, a savings plan or a resource pack, so there is no free try. BytePlus serves the docs as markdown (append .md) and lists an agent-skills index and an MCP server card at ai.byteplus.com/.well-known; those were not opened. OpenRouter resells it at 480p and 720p only.",
+      "related": [
+        {
+          "id": "source:artificialanalysis.ai/video/leaderboard/text-to-video",
+          "rel": "evaluated_on"
+        },
+        {
+          "id": "tool:runwayml/runway-api",
+          "rel": "integrates_with",
+          "note": "resold as seedance2_5"
+        }
+      ],
+      "modes": [
+        "t2v",
+        "i2v",
+        "v2v",
+        "edit"
+      ],
+      "claims": [
+        {
+          "text": "Seedance 2.5 generates up to 30 seconds in one request, can extend a video over several rounds and accepts up to 50 reference assets.",
+          "quote": "It can generate up to 30 seconds of video in one request, extend videos over multiple rounds, accept up to 50 omni reference assets per request, and perform precise timestamp-based editing.",
+          "locator": "Seedance 2.5 tutorial, intro paragraph",
+          "url": "https://ai.byteplus.com/ark/docs/seedance-2-5.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The 1080p 5 second example costs $2.843, which BytePlus gives as $0.569 per second; 720p is $0.231 per second and 480p $0.103.",
+          "quote": "| Dreamina Seedance 2.5 | * $0.514 per video | * $1.156 per video | * $2.843 per video | \\ | | * $0.103 per second | * $0.231 per second | * $0.569 per second |",
+          "locator": "Model pricing, Billing examples, Dreamina Seedance 2.5 series, tab Input without video (480p, 720p, 1080p, 16:9, 5 s)",
+          "url": "https://ai.byteplus.com/ark/docs/model-pricing.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Before Seedance 2.5 can be enabled the account needs a balance above USD 30, a USD 30 savings plan or a resource pack.",
+          "quote": "**Recommended:** BytePlus account balance > USD 30",
+          "locator": "Seedance 2.5 tutorial, note before enabling the model",
+          "url": "https://ai.byteplus.com/ark/docs/seedance-2-5.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "BytePlus Seedance 2.5 tutorial and ModelArk pricing page, markdown versions, against all three claims",
+        "source_sha256": "00a48c8eb23a72ce0398c7878520cd706cf24d79f21e53f6a8f0f6f90244ff93",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "level": "intermediate",
+      "maturity": "active",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "hosted-models-2",
+      "status": "current",
+      "url_status": "live",
+      "access": "api",
+      "apple_silicon": "no-documented-path",
+      "licence_class": "proprietary",
+      "id": "model:bytedance/seedream",
+      "title": "Seedream 5.0",
+      "aliases": [
+        "dola-seedream-5-0-pro-260628",
+        "dola-seedream-5-0-flash-260915",
+        "seedream-5-0-lite-260128",
+        "Seedream"
+      ],
+      "url": "https://ai.byteplus.com/ark/docs/model-pricing.md",
+      "summary": "ByteDance's image generation and editing family on BytePlus ModelArk, priced per output image.",
+      "why_it_matters": "The flash id is one of the cheapest first-party image prices found here, and input images are free on most ids.",
+      "concepts": [
+        "concept:image-models",
+        "concept:cost"
+      ],
+      "fit": "medium",
+      "fit_notes": "Pro charges by output pixel count: above 2.61 million pixels (higher than 1.5K) the price doubles. Runway resells seedream5_pro at 5 credits per 1K image ($0.05), close to the first-party price. Quality was not compared here.",
+      "modes": [
+        "t2i",
+        "i2i"
+      ],
+      "claims": [
+        {
+          "text": "dola-seedream-5-0-pro-260628 costs $0.045 per image up to 2.61 million pixels and $0.09 above.",
+          "quote": "* Up to 2.61 million pixels (1.5K or lower): $0.045 |",
+          "locator": "Model pricing, Image generation models, Pricing table, row dola-seedream-5-0-pro-260628",
+          "url": "https://ai.byteplus.com/ark/docs/model-pricing.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "dola-seedream-5-0-flash-260915 costs $0.018 per output image, with free input images.",
+          "quote": "| `dola-seedream-5-0-flash-260915` | Free | $0.018 |",
+          "locator": "Model pricing, Image generation models, Pricing table",
+          "url": "https://ai.byteplus.com/ark/docs/model-pricing.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "BytePlus ModelArk pricing page, markdown version, image section, against both claims",
+        "source_sha256": "501a4aaae8fe6c6e62cb0735a4db2ac3c6277473765b9ca3535f5614dfe9011e",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "level": "intermediate",
+      "maturity": "active",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "hosted-models-2",
+      "status": "current",
+      "url_status": "live",
+      "access": "api",
+      "apple_silicon": "no-documented-path",
+      "licence_class": "proprietary",
+      "id": "model:runwayml/gen-4.5",
+      "title": "Runway Gen-4.5",
+      "aliases": [
+        "gen4.5",
+        "Gen-4.5"
+      ],
+      "url": "https://docs.dev.runwayml.com/guides/pricing",
+      "summary": "Runway's own video generation model on the Runway Dev API, billed in credits per second.",
+      "why_it_matters": "It is one of two models Runway lets export ProRes, PNG sequences and HDR, which matters when the output goes into a grading or compositing tool.",
+      "concepts": [
+        "concept:hosted-video-models",
+        "concept:cost",
+        "concept:delivery"
+      ],
+      "fit": "medium",
+      "fit_notes": "12 credits = $0.12 per second. ProRes or PNG sequence adds 5 credits/s; HDR adds 20 credits/s (40 above 4 MP). OpenRouter resells it at the same 12 cents per second and lists 2-10 s at 720p. No free tier stated on the pricing page.",
+      "related": [
+        {
+          "id": "tool:runwayml/runway-api",
+          "rel": "depends_on"
+        }
+      ],
+      "modes": [
+        "t2v",
+        "i2v"
+      ],
+      "claims": [
+        {
+          "text": "Gen-4.5 costs 12 credits per second, and credits cost $0.01, so $0.12 per second.",
+          "quote": "gen4.5 | 12 credits per second",
+          "locator": "API pricing page, Video Generation Pricing table",
+          "url": "https://docs.dev.runwayml.com/guides/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Professional and HDR output formats are available on Gen-4.5 and Aleph 2.0 and add a per-second surcharge.",
+          "quote": "These formats add a per-second surcharge on top of the model’s rate. Available on Gen-4.5 and Aleph 2.0",
+          "locator": "API pricing page, section Professional and HDR output formats",
+          "url": "https://docs.dev.runwayml.com/guides/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "Runway Dev API pricing page against both claims",
+        "source_sha256": "d7c0e02a094e7889d3804758531245be8295700e43b05f1b1d85c1e1c15383c0",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "level": "intermediate",
+      "maturity": "active",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "hosted-models-2",
+      "status": "current",
+      "url_status": "live",
+      "access": "api",
+      "apple_silicon": "no-documented-path",
+      "licence_class": "proprietary",
+      "id": "model:runwayml/aleph",
+      "title": "Runway Aleph 2.0",
+      "aliases": [
+        "aleph2",
+        "Aleph"
+      ],
+      "url": "https://docs.dev.runwayml.com/guides/pricing",
+      "summary": "Runway's video-to-video editing model on the Runway Dev API.",
+      "why_it_matters": "It edits an existing video by prompt, the step after generation when one shot is almost right.",
+      "concepts": [
+        "concept:hosted-video-models",
+        "concept:footage-editing",
+        "concept:cost"
+      ],
+      "fit": "medium",
+      "fit_notes": "28 credits = $0.28 per second with a 56 credit ($0.56) minimum, so even a 1 s edit costs $0.56. A video edit bills the source video's length as output. Maximum input length was not found on the pricing page.",
+      "related": [
+        {
+          "id": "tool:runwayml/runway-api",
+          "rel": "depends_on"
+        },
+        {
+          "id": "model:runwayml/gen-4.5",
+          "rel": "alternative_to"
+        }
+      ],
+      "modes": [
+        "v2v",
+        "edit"
+      ],
+      "claims": [
+        {
+          "text": "Aleph 2.0 costs 28 credits per second with a 56 credit minimum per generation.",
+          "quote": "aleph2 | 28 credits per second (56 credit minimum per generation)",
+          "locator": "API pricing page, Video Generation Pricing table",
+          "url": "https://docs.dev.runwayml.com/guides/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Runway credits cost $0.01 each.",
+          "quote": "Credits can be purchased for $0.01 per credit in the developer portal for a project.",
+          "locator": "API pricing page, API Pricing & Costs intro",
+          "url": "https://docs.dev.runwayml.com/guides/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "Runway Dev API pricing page against both claims",
+        "source_sha256": "d7c0e02a094e7889d3804758531245be8295700e43b05f1b1d85c1e1c15383c0",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "level": "intermediate",
+      "maturity": "active",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "hosted-models-2",
+      "status": "current",
+      "url_status": "live",
+      "access": "api",
+      "apple_silicon": "no-documented-path",
+      "licence_class": "proprietary",
+      "id": "model:lumalabs/ray",
+      "title": "Luma Ray3.2",
+      "aliases": [
+        "Ray3.2",
+        "Ray 3.2",
+        "Ray",
+        "Dream Machine API"
+      ],
+      "url": "https://lumalabs.ai/api/pricing",
+      "summary": "Luma's video generation model on the Luma API, with keyframes, video-to-video, reframe and HDR or EXR output.",
+      "why_it_matters": "Native HDR and 16-bit EXR export are rare among hosted models and matter when the clip is composited with live footage.",
+      "concepts": [
+        "concept:hosted-video-models",
+        "concept:cost"
+      ],
+      "fit": "low",
+      "fit_notes": "The pricing page gives credits only, with no dollar value per credit, so the dollar cost cannot be worked out from it. 1080p for 10 s is 1,200 credits SDR; HDR doubles it. The docs page opened (docs.lumalabs.ai video-generation) shows ray-2 examples, not Ray3.2 ids, so the exact Ray3.2 model id was not confirmed. Audio not stated.",
+      "modes": [
+        "t2v",
+        "i2v",
+        "v2v"
+      ],
+      "claims": [
+        {
+          "text": "Ray3.2 text- or image-to-video costs 100 credits for 5 s at 720p and 400 at 1080p; 10 s costs 300 and 1,200.",
+          "quote": "Task 360p 540p 720p 1080p T2V/I2V (5s) 20 50 100 400 T2V/I2V (10s) 60 150 300 1,200",
+          "locator": "API pricing page, Cost Breakdown, Ray3.2 tab",
+          "url": "https://lumalabs.ai/api/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Prices are in credits; HDR output costs twice SDR and HDR with EXR three times.",
+          "quote": "Prices are in credits Prices shown are SDR output HDR output is 2× SDR pricing HDR + EXR output is 3× SDR pricing",
+          "locator": "API pricing page, notes under the Ray3.2 table",
+          "url": "https://lumalabs.ai/api/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "Luma API pricing page against both claims",
+        "source_sha256": "6c998d1fb0ebc092cfb37b8c7019de1056c391539241eb55ab04dfa4f4725c70",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "level": "intermediate",
+      "maturity": "active",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "hosted-models-2",
+      "status": "current",
+      "url_status": "live",
+      "access": "api",
+      "apple_silicon": "no-documented-path",
+      "licence_class": "proprietary",
+      "id": "model:xai/grok-imagine",
+      "title": "Grok Imagine",
+      "aliases": [
+        "grok-imagine-video-1.5",
+        "grok-imagine-video-1.5-lite",
+        "grok-imagine-image-2.0",
+        "Grok Imagine Video",
+        "Grok Imagine Image"
+      ],
+      "url": "https://docs.x.ai/docs/guides/video-generation",
+      "summary": "xAI's image and video generation models on the xAI API: grok-imagine-image-2.0, grok-imagine-video-1.5 and a lower-priced Lite variant.",
+      "why_it_matters": "The Lite variant gives video with lip-synced speech from $0.02 per second, the lowest first-party video price found here.",
+      "concepts": [
+        "concept:hosted-video-models",
+        "concept:image-models",
+        "concept:cost"
+      ],
+      "fit": "medium",
+      "fit_notes": "Prices on this page are 'From' prices; the per-resolution table is on the xAI pricing page, not opened. OpenRouter lists 8, 14 and 25 cents per second for 1.5 at 480p, 720p and 1080p. The docs nav lists an Imagine image quality retirement on 2026-11-02 and an Output Watermarking page; neither was opened. The page also offers an llms.txt and a Docs MCP.",
+      "related": [
+        {
+          "id": "tool:openrouter/video-generation",
+          "rel": "integrates_with"
+        }
+      ],
+      "modes": [
+        "t2v",
+        "i2v",
+        "v2v",
+        "edit",
+        "t2i",
+        "i2i"
+      ],
+      "claims": [
+        {
+          "text": "grok-imagine-video-1.5 does native 1080p from text or an image with lip-synced speech, priced from $0.08 per second.",
+          "quote": "grok-imagine-video-1.5 Native 1080p from text or an image, lip-synced speech, up to 14 reference images and 3 voice references, and pinned frames. PricingFrom $0.08 / sec",
+          "locator": "Imagine Overview page, Video Generation card",
+          "url": "https://docs.x.ai/docs/guides/video-generation",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "grok-imagine-video-1.5-lite goes up to 1080p and 15 seconds, from $0.02 per second.",
+          "quote": "Text or image to video with lip-synced speech, up to 1080p and 15 seconds, at the lowest price per second. PricingFrom $0.02 / sec",
+          "locator": "Imagine Overview page, Video 1.5 Lite card",
+          "url": "https://docs.x.ai/docs/guides/video-generation",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "grok-imagine-image-2.0 costs $0.04 per image at 1K or 2K.",
+          "quote": "grok-imagine-image-2.0 Generate images from text, or edit them with up to 5 reference images. Pricing$0.04 / image Resolution1K & 2K",
+          "locator": "Imagine Overview page, Image Generation card",
+          "url": "https://docs.x.ai/docs/guides/video-generation",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "xAI Imagine overview page (served at the video-generation guide URL) against all three claims",
+        "source_sha256": "2ba3b84ae33d18cc56724a9a784f0b31c405736ec1c4d4d6ac396d8b45fed156",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "level": "intermediate",
+      "maturity": "active",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "hosted-models-2",
+      "status": "current",
+      "url_status": "live",
+      "access": "api",
+      "apple_silicon": "no-documented-path",
+      "licence_class": "proprietary",
+      "id": "model:black-forest-labs/flux-3",
+      "title": "FLUX 3",
+      "aliases": [
+        "FLUX 3 Video",
+        "FLUX 3 Image",
+        "FLUX 3 Video Draft",
+        "FLUX 3 Image Klein",
+        "BFL API"
+      ],
+      "url": "https://bfl.ai/pricing",
+      "summary": "Black Forest Labs' FLUX 3 family on the BFL API: FLUX 3 Video for text, image or video input, and FLUX 3 Image for text or image input.",
+      "why_it_matters": "Its pricing page states video rates for four resolution bands, whether audio is included, and the longest output.",
+      "concepts": [
+        "concept:hosted-video-models",
+        "concept:image-models",
+        "concept:cost"
+      ],
+      "fit": "high",
+      "fit_notes": "Video-to-video costs more than text- or image-to-video at every band ($0.27 vs $0.24 at FHD). Draft mode at $0.06/s exists only in HD; a Draft Enhance render is billed as a full generation. FLUX 3 Image at 4K jumps to $0.607 per image, six times the 2K price. Exact API model ids were not read; docs.bfl.ai was not opened.",
+      "modes": [
+        "t2v",
+        "i2v",
+        "v2v",
+        "t2i",
+        "i2i"
+      ],
+      "claims": [
+        {
+          "text": "FLUX 3 Video costs $0.15 per second at HD, $0.24 at FHD, $0.28 at QHD and $0.41 at UHD for text or image to video.",
+          "quote": "FLUX 3 Video Text / Image → Video, HD $0.15/s Text / Image → Video, FHD $0.24/s Text / Image → Video, QHD (2K) $0.28/s Text / Image → Video, UHD (4K) $0.41/s",
+          "locator": "Pricing page, FLUX 3 Video table",
+          "url": "https://bfl.ai/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Audio is included at no extra charge and clips run up to 20 seconds.",
+          "quote": "Is audio included, and how long can clips be? Audio is included at no extra charge. Clips up to 20 seconds.",
+          "locator": "Pricing page, FAQs FLUX 3 Video",
+          "url": "https://bfl.ai/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "FLUX 3 Image costs $0.048 per 1K image and $0.10 per 2K image.",
+          "quote": "FLUX 3 Image $0.041/img $0.048/img $0.07/img $0.10/img $0.607/img",
+          "locator": "Pricing page, FLUX 3 Image table (columns 768 x 768, 1K, 1.5K, 2K, 4K)",
+          "url": "https://bfl.ai/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "BFL pricing page against all three claims",
+        "source_sha256": "2ee6f1e47d051228adc132313005f4b5523e38e79943af8c662f2eb05d62f890",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "level": "intermediate",
+      "maturity": "active",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "hosted-models-2",
+      "status": "current",
+      "url_status": "live",
+      "access": "api",
+      "apple_silicon": "no-documented-path",
+      "licence_class": "proprietary",
+      "id": "model:google/nano-banana",
+      "title": "Nano Banana (Gemini image models)",
+      "aliases": [
+        "gemini-nano-banana-2.1",
+        "Nano Banana 2.1",
+        "gemini-3-pro-image",
+        "Nano Banana Pro",
+        "Gemini 3 Pro Image",
+        "Imagen 4"
+      ],
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "summary": "Google's image generation models on the Gemini API: gemini-nano-banana-2.1 and gemini-3-pro-image. Imagen 4 was shut down on the Gemini API and points to Nano Banana 2.1.",
+      "why_it_matters": "Code that calls imagen-4.0-* on the Gemini API stopped working on 2026-08-17; Nano Banana 2.1 is the named replacement.",
+      "concepts": [
+        "concept:image-models",
+        "concept:cost"
+      ],
+      "fit": "high",
+      "fit_notes": "Billed in output tokens; Google converts to per-image prices. Nano Banana 2.1 is $0.0336 per 1K image, gemini-3-pro-image $0.134 per 1K or 2K image, four times more. Neither has a free tier on the Gemini API. Batch halves the Nano Banana 2.1 price. fal resells Nano Banana Pro at $0.15 per image, above Google's own $0.134.",
+      "related": [
+        {
+          "id": "model:google/gemini-omni-flash",
+          "rel": "integrates_with",
+          "note": "same Gemini API key and billing"
+        }
+      ],
+      "modes": [
+        "t2i",
+        "i2i"
+      ],
+      "claims": [
+        {
+          "text": "gemini-nano-banana-2.1 output images cost $0.0336 at 1K, $0.0504 at 2K, priced at $30 per million tokens.",
+          "quote": "Output images at 1K (1024x1024px) consume 1120 tokens and are equivalent to $0.0336 per image. Output images at 2K (2048x2048px) consume 1680 tokens and are equivalent to $0.0504 per image.",
+          "locator": "Gemini API pricing page (markdown), section Gemini Nano Banana 2.1, footnote",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "gemini-3-pro-image output costs $0.134 per 1K or 2K image and $0.24 per 4K image, with no free tier.",
+          "quote": "Equivalent to $0.134 per 1K/2K image{% sup /%} and $0.24 per 4K image",
+          "locator": "Gemini API pricing page (markdown), section Gemini 3 Pro Image (Nano Banana Pro), Standard tab",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "imagen-4.0-generate-001 was shut down on 2026-08-17, with gemini-nano-banana-2.1 as the recommended replacement.",
+          "quote": "* `imagen-4.0-generate-001` * June 24, 2025 * August 17, 2026 * `gemini-nano-banana-2.1`",
+          "locator": "Gemini API deprecations page (markdown), Imagen models, Deprecated models table",
+          "url": "https://ai.google.dev/gemini-api/docs/deprecations",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "Gemini API pricing and deprecations pages, markdown versions, against all three claims",
+        "source_sha256": "71d69e7dcc56b3cad537cb0287976d85b709420f1f564df9cf38f3546da9c6ff",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "level": "intermediate",
+      "maturity": "active",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "hosted-models-2",
+      "status": "current",
+      "url_status": "live",
+      "access": "api",
+      "apple_silicon": "no-documented-path",
+      "licence_class": "proprietary",
+      "id": "model:openai/gpt-image",
+      "title": "GPT Image 2",
+      "aliases": [
+        "gpt-image-2",
+        "gpt-image-2.6-sunburst",
+        "gpt-image-2.6-flare",
+        "GPT Image"
+      ],
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "summary": "OpenAI's image generation models on the OpenAI API, priced per million image tokens.",
+      "why_it_matters": "It is the image model many agent skills call by default; its price is in tokens, so the per-image cost must come from the calculator.",
+      "concepts": [
+        "concept:image-models",
+        "concept:cost"
+      ],
+      "fit": "medium",
+      "fit_notes": "The column header unit is 'Prices per 1M tokens unless noted'. The per-image calculator in the image generation guide was not read, so no per-image dollar figure is recorded. Runway resells gpt_image_2 at 1-41 credits ($0.01-0.41) per image by quality and resolution. The page tabs (Standard, Batch) render as text without clear grouping; the gpt-image-2 row sat under the Batch heading in the saved text.",
+      "modes": [
+        "t2i",
+        "i2i"
+      ],
+      "claims": [
+        {
+          "text": "gpt-image-2.6-sunburst costs $8.00 per million image input tokens and $30.00 per million image output tokens.",
+          "quote": "Prices per 1M tokens unless noted. Images Speed StandardBatch Standard | Model | Modality | Input | Output | Cached input | gpt-image-2.6-sunburst | Image | $8.00 | $30.00 | $2.00",
+          "locator": "API pricing page, Images section, Standard tab",
+          "url": "https://developers.openai.com/api/docs/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "OpenAI points to a calculator for per-image cost estimates.",
+          "quote": "For image generation cost estimates, use the calculator in the image generation guide.",
+          "locator": "API pricing page, Images section, note under the tables",
+          "url": "https://developers.openai.com/api/docs/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "OpenAI API pricing page, Images section, against both claims",
+        "source_sha256": "cb733aa776e21d83af339bb2718b404a2be0edf93ce821e915f8199047e5fd38",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "level": "intermediate",
+      "maturity": "active",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "hosted-models-2",
+      "status": "current",
+      "url_status": "live",
+      "access": "api",
+      "apple_silicon": "no-documented-path",
+      "licence_class": "proprietary",
+      "id": "model:heygen/heygen-video-1",
+      "title": "HeyGen Video 1",
+      "aliases": [
+        "heygen-video-1"
+      ],
+      "url": "https://developers.heygen.com/docs/models/heygen-video",
+      "summary": "HeyGen's general-purpose video generation model, built on MiniMax H3 and post-trained by HeyGen. It makes the scene and its sound in one call.",
+      "why_it_matters": "It led the silent text-to-video board on Artificial Analysis read 2026-11-12, and it returns dialogue, ambience and effects with the clip.",
+      "concepts": [
+        "concept:hosted-video-models",
+        "concept:audio-and-captions"
+      ],
+      "fit": "medium",
+      "fit_notes": "Only the generation model is in scope here, not HeyGen avatars. The page gives no dollar price; OpenRouter lists $0.036 per second at 768p and $0.10 at 1080p, which is close to the stated 3x. Runs on paid API keys only. Unknown request fields are rejected, so copy field names exactly.",
+      "related": [
+        {
+          "id": "model:minimaxai/minimax-h3",
+          "rel": "extends",
+          "note": "HeyGen says it is built on MiniMax H3"
+        },
+        {
+          "id": "tool:openrouter/video-generation",
+          "rel": "integrates_with"
+        }
+      ],
+      "modes": [
+        "t2v",
+        "i2v"
+      ],
+      "claims": [
+        {
+          "text": "Text-to-video and image-to-video clips run 5 to 30 seconds and each has its own generated audio track.",
+          "quote": "Text-to-video and image-to-video clips can run 5 to 30 seconds with compatible settings; reference-to-video stays at 5 to 15 seconds. Each clip has its own audio track of dialogue, ambience and sound effects",
+          "locator": "HeyGen Video model page, intro",
+          "url": "https://developers.heygen.com/docs/models/heygen-video",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Resolution defaults to 768p, and 1080p and 2k bill at three times the 768p rate.",
+          "quote": "resolution defaults to 768p (1080p and 2k bill at 3× the 768p rate)",
+          "locator": "HeyGen Video model page, request fields paragraph",
+          "url": "https://developers.heygen.com/docs/models/heygen-video",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The model is built on MiniMax H3.",
+          "quote": "built on MiniMax H3 and post-trained by HeyGen",
+          "locator": "HeyGen Video model page, intro",
+          "url": "https://developers.heygen.com/docs/models/heygen-video",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "HeyGen developer docs model page against all three claims",
+        "source_sha256": "70f6cb613ba1dfea9c7e5e43266e9300155d7792c642ae911d9a4d793cc70c62",
+        "next_due": "2026-12-12"
+      }
+    }
+  ]
+}

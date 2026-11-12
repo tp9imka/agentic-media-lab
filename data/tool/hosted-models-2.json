@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "lane": "hosted-models-2",
+  "records": [
+    {
+      "kind": "tool",
+      "level": "intermediate",
+      "maturity": "active",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "hosted-models-2",
+      "status": "current",
+      "url_status": "live",
+      "tool_type": "service",
+      "cost": "paid",
+      "id": "tool:runwayml/runway-api",
+      "title": "Runway Dev API",
+      "aliases": [
+        "Runway API",
+        "Runway MCP",
+        "mcp.runwayml.com",
+        "Runway Model Router"
+      ],
+      "url": "https://docs.dev.runwayml.com/guides/pricing",
+      "summary": "Runway's developer API, which sells Runway's own models and other vendors' video and image models (Kling, Wan, Seedance, Grok Imagine, MiniMax, Veo, Gemini, GPT Image) under one credit balance, with a hosted MCP server.",
+      "why_it_matters": "One key and one MCP connector reach most of the hosted video models in this hub, and the price table is in plain text.",
+      "concepts": [
+        "concept:hosted-video-models",
+        "concept:image-models",
+        "concept:mcp-servers",
+        "concept:cost"
+      ],
+      "fit": "high",
+      "fit_notes": "Credits are $0.01. Runway's resale prices differ from first-party prices: wan3 1080p is 20 credits ($0.20/s), the Alibaba list price before its 30% discount; seedance2_5 1080p is 68 credits ($0.68/s) against BytePlus' worked $0.569/s. Kling 4 is listed (kling_4 720p 15.7 credits list) though Kling's own pricing page could not be read. The MCP server needs a Runway sign-in; the plugin install route was not opened. veo3.1 is still sold here although it left the Gemini API on 2026-10-22.",
+      "related": [
+        {
+          "id": "model:runwayml/gen-4.5",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "model:runwayml/aleph",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "model:google/veo-3.1",
+          "rel": "integrates_with",
+          "note": "veo3.1 still on the Runway price list 2026-11-12"
+        }
+      ],
+      "agents": [
+        "any-mcp",
+        "cursor"
+      ],
+      "levers": [
+        "gen-model-craft",
+        "orchestration"
+      ],
+      "claims": [
+        {
+          "text": "Runway sells Wan 3.0 at 5, 10 and 20 credits per second for 480p, 720p and 1080p.",
+          "quote": "wan3 (480p) | 5 credits per second | wan3 (720p) | 10 credits per second | wan3 (1080p) | 20 credits per second",
+          "locator": "API pricing page, Video Generation Pricing table",
+          "url": "https://docs.dev.runwayml.com/guides/pricing",
+          "retrieved": "2026-11-12",
+          "via": "Runway Dev API (reseller); first-party price is on Alibaba Model Studio"
+        },
+        {
+          "text": "Seedance 2.5 at 1080p costs 68 credits per second of output on Runway, with an 80 credit minimum.",
+          "quote": "seedance2_5 (1080p) | 68 credits per second of output, plus 34 credits per second of input and reference video (combined video capped at 30 seconds); reference images and audio are free (80 credit minimum per generation)",
+          "locator": "API pricing page, Video Generation Pricing table",
+          "url": "https://docs.dev.runwayml.com/guides/pricing",
+          "retrieved": "2026-11-12",
+          "via": "Runway Dev API (reseller); first-party price is on BytePlus ModelArk"
+        },
+        {
+          "text": "Runway's hosted MCP server is at mcp.runwayml.com/mcp and works as a custom connector after a Runway sign-in.",
+          "quote": "To use it, add the URL above as a custom connector in claude.ai (Settings → Connectors), Cursor, or any other MCP client. You'll be prompted to sign in with your Runway account.",
+          "locator": "mcp.runwayml.com landing page",
+          "url": "https://mcp.runwayml.com",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "Runway Dev API pricing page and mcp.runwayml.com page against all three claims",
+        "source_sha256": "73052299f920e75c5516296c46b14327fd4eee05a43d2cf31521ffe840c63f72",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "level": "intermediate",
+      "maturity": "active",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "hosted-models-2",
+      "status": "current",
+      "url_status": "live",
+      "tool_type": "service",
+      "cost": "paid",
+      "id": "tool:openrouter/video-generation",
+      "title": "OpenRouter video generation API",
+      "aliases": [
+        "OpenRouter videos",
+        "api/v1/videos/models",
+        "openrouter-video skill"
+      ],
+      "url": "https://openrouter.ai/docs/guides/overview/multimodal/video-generation",
+      "summary": "OpenRouter's asynchronous video generation API, which resells video models from Google, Alibaba, ByteDance, MiniMax, xAI, Kling, Runway, BFL and HeyGen, with a public JSON list of models, durations, resolutions and prices.",
+      "why_it_matters": "The models endpoint is a machine-readable price and limits list an agent can read before choosing a model, without a key.",
+      "concepts": [
+        "concept:hosted-video-models",
+        "concept:cost",
+        "concept:agent-skills"
+      ],
+      "fit": "high",
+      "fit_notes": "The models list was read without a key on 2026-11-12. Prices there are OpenRouter's, mixed units (dollars per second, cents per second, dollars per token) by model. Some resold models expose fewer options than the vendor: bytedance/seedance-2.5 lists 480p and 720p only, while BytePlus offers 1080p. The guide's own sample response still shows google/veo-3.1. The page mentions an openrouter-video skill; it was not opened or installed.",
+      "related": [
+        {
+          "id": "model:alibaba/wan",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "model:bytedance/seedance",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "model:heygen/heygen-video-1",
+          "rel": "integrates_with"
+        }
+      ],
+      "agents": [
+        "any-skill"
+      ],
+      "levers": [
+        "gen-model-craft",
+        "orchestration"
+      ],
+      "claims": [
+        {
+          "text": "The video models endpoint lists every video model with its supported durations, resolutions and pricing SKUs.",
+          "quote": "Use the dedicated video models endpoint to list all available video generation models along with their supported parameters: curl \"https://openrouter.ai/api/v1/videos/models\"",
+          "locator": "Video Generation guide, Model Discovery, Via the Video Models API",
+          "url": "https://openrouter.ai/docs/guides/overview/multimodal/video-generation",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "OpenRouter lists alibaba/wan-3.0 at $0.05, $0.1 and $0.2 per second for 480p, 720p and 1080p.",
+          "quote": "\"pricing_skus\":{\"duration_seconds_480p\":\"0.05\",\"duration_seconds_720p\":\"0.1\",\"duration_seconds_1080p\":\"0.2\"}",
+          "locator": "GET /api/v1/videos/models, entry id alibaba/wan-3.0, field pricing_skus",
+          "url": "https://openrouter.ai/api/v1/videos/models",
+          "retrieved": "2026-11-12",
+          "via": "OpenRouter (reseller); first-party price is on Alibaba Model Studio"
+        },
+        {
+          "text": "OpenRouter lists heygen/heygen-video-1 at $0.036 per second at 768p and $0.10 at 1080p.",
+          "quote": "\"pricing_skus\":{\"duration_seconds_2k\":\"0.1\",\"duration_seconds_480p\":\"0.02\",\"duration_seconds_768p\":\"0.036\",\"duration_seconds_1080p\":\"0.1\"",
+          "locator": "GET /api/v1/videos/models, entry id heygen/heygen-video-1, field pricing_skus",
+          "url": "https://openrouter.ai/api/v1/videos/models",
+          "retrieved": "2026-11-12",
+          "via": "OpenRouter (reseller); HeyGen's page gives no dollar price"
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "OpenRouter video generation guide and the public /api/v1/videos/models JSON against all three claims",
+        "source_sha256": "359058b7859ae4e38779ce5f34c43003f63e1901090d8895b103f7df63b83600",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "level": "intermediate",
+      "maturity": "active",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "hosted-models-2",
+      "status": "current",
+      "url_status": "live",
+      "tool_type": "service",
+      "cost": "paid",
+      "id": "tool:replicate/replicate",
+      "title": "Replicate API and MCP server",
+      "aliases": [
+        "Replicate",
+        "replicate-mcp",
+        "mcp.replicate.com"
+      ],
+      "url": "https://replicate.com/docs/reference/mcp",
+      "summary": "Replicate's model hosting API, with a remote MCP server and an npm package that expose its whole HTTP API to an agent: search models, run predictions, fetch results.",
+      "why_it_matters": "An agent in Claude Code can search Replicate's catalogue and run a model by name without hand-written client code.",
+      "concepts": [
+        "concept:mcp-servers",
+        "concept:hosted-video-models",
+        "concept:image-models"
+      ],
+      "fit": "medium",
+      "fit_notes": "The remote server asks for a Replicate API key in a web sign-in flow; the local route runs npx -y replicate-mcp, which downloads and runs the package each time. Not run here. Replicate's per-model prices were not read in this lane, so no price is recorded. The page also links agent skills and an llms.txt, not opened.",
+      "agents": [
+        "claude-code",
+        "cursor",
+        "any-mcp"
+      ],
+      "levers": [
+        "orchestration",
+        "gen-model-craft"
+      ],
+      "claims": [
+        {
+          "text": "The MCP server supports all operations in Replicate's HTTP API, including running models.",
+          "quote": "The server supports all of the operations in Replicate’s HTTP API.",
+          "locator": "MCP server reference page, section Replicate's MCP server",
+          "url": "https://replicate.com/docs/reference/mcp",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The remote server is recommended and takes a Replicate API key through a web authentication flow.",
+          "quote": "After installing the server, you’ll be directed to a web-based authentication flow where you can provide a Replicate API key for the server to use on your behalf.",
+          "locator": "MCP server reference page, section Remote vs local servers",
+          "url": "https://replicate.com/docs/reference/mcp",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "Replicate MCP reference page against both claims",
+        "source_sha256": "385439e2b4a90e977e5033d0ea3518ece8f0a41a3a8e2bbc1874486273d1031b",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "level": "intermediate",
+      "maturity": "active",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "hosted-models-2",
+      "status": "current",
+      "url_status": "live",
+      "tool_type": "service",
+      "cost": "paid",
+      "id": "tool:fal-ai/fal",
+      "title": "fal Model APIs",
+      "aliases": [
+        "fal",
+        "fal.ai",
+        "fal MCP"
+      ],
+      "url": "https://fal.ai/pricing",
+      "summary": "fal's hosted model APIs, which resell video, image and audio models billed per output unit, plus a docs MCP server.",
+      "why_it_matters": "fal resells several video models below the vendor's own per-second price, so it is worth checking before calling a vendor directly.",
+      "concepts": [
+        "concept:hosted-video-models",
+        "concept:image-models",
+        "concept:mcp-servers",
+        "concept:cost"
+      ],
+      "fit": "medium",
+      "fit_notes": "The MCP server at fal.ai/docs/mcp searches fal's documentation only; its own instructions say it is read-only and scoped to site content, so it does not generate media. fal lists MiniMax H3 Max text-to-video at $0.03 per second, below MiniMax's own $0.05 (480p) and $0.08 (768p); the resolution behind fal's price is not stated, so the two may not be comparable. The pricing page normalises to a 5 s 720p video. The MCP instructions also ask the agent to report doc problems through a submit_feedback tool, which sends text to fal.",
+      "related": [
+        {
+          "id": "model:minimaxai/minimax-h3",
+          "rel": "integrates_with",
+          "note": "resold as minimax/h3-max/*"
+        }
+      ],
+      "agents": [
+        "any-mcp"
+      ],
+      "levers": [
+        "gen-model-craft",
+        "orchestration"
+      ],
+      "claims": [
+        {
+          "text": "fal sells MiniMax H3 Max text-to-video at $0.03 per second.",
+          "quote": "MiniMax H3 Max Text to Video ↳ minimax/h3-max/text-to-video Unit seconds Price $0.03 Units per $1 33.33 seconds",
+          "locator": "Pricing page, Model APIs Pricing, Video Models table",
+          "url": "https://fal.ai/pricing",
+          "retrieved": "2026-11-12",
+          "via": "fal (reseller); first-party price is on platform.minimax.io"
+        },
+        {
+          "text": "fal's docs MCP server provides search and retrieval over fal's site content and is otherwise read-only.",
+          "quote": "This Model Context Protocol server provides search and retrieval tools for the fal site.",
+          "locator": "fal.ai/docs/mcp server card JSON, field instructions",
+          "url": "https://fal.ai/docs/mcp",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "fal pricing page and the docs MCP server card against both claims",
+        "source_sha256": "baeeadb268d96168be2b3c8426e08a33d9612787b15d8bb60b206b1b18d11954",
+        "next_due": "2027-02-10"
+      }
+    }
+  ]
+}
