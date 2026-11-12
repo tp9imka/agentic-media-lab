@@ -1,0 +1,6 @@
+Remotion docs (saved copy for tests)
+
+Remotion lets you create real MP4 videos
+programmatically using React.
+
+Rendering happens locally with a headless browser.

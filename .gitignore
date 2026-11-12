@@ -14,10 +14,10 @@ node_modules/
 *.log
 
 # Local scratch and references
-.ref/
-.tmp/
-raw/
-out/
+/.ref/
+/.tmp/
+/raw/
+/out/
 
 # Model weights under examples
 examples/**/models/**/*.safetensors
