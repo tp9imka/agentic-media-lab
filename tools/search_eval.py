@@ -107,9 +107,10 @@ def main(argv=None):
         ids = [i for i, _ in python_top(index, it["query"], top)]
         want = it.get("expect_any") or []
         for w in want:
-            if w not in known:
+            if w not in known and not w.startswith(("guide:", "example:")):
                 print(f"warning: expected id not in index: {w}")
-        rank = next((n for n, i in enumerate(ids, 1) if i in want), None)
+        # A page hit is `<page id>#<anchor>`; an expected page id matches any of its sections.
+        rank = next((n for n, i in enumerate(ids, 1) if i in want or i.split("#")[0] in want), None)
         if rank:
             print(f"PASS  {it['query']!r}: {ids[rank - 1]} at rank {rank} (top {top})")
         else:
