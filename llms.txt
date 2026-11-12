@@ -1,6 +1,6 @@
 # Agentic Media Lab
 
-> Which skill, renderer and model to use when a coding agent makes your video - with runs you can repeat. Records: 185 (81 tool, 29 model, 75 source, 0 recipe). Concepts: 35. Pages: 4. Size: about 184751 tokens (estimate, characters / 4).
+> Which skill, renderer and model to use when a coding agent makes your video - with runs you can repeat. Records: 185 (81 tool, 29 model, 75 source, 0 recipe). Concepts: 35. Pages: 8. Size: about 192220 tokens (estimate, characters / 4).
 
 ## Entry points
 
@@ -14,6 +14,10 @@
 
 ## Guides
 
+- [bb for scheduled Claude Code and Codex runs](https://tp9imka.github.io/agentic-media-lab/docs/cards/bb.md): Use this page when you are deciding whether to schedule Claude Code or Codex runs with bb.
+- [What runs free on an Apple Silicon Mac](https://tp9imka.github.io/agentic-media-lab/docs/cheatsheets/local-stack-apple-silicon.md): Use this page when you want to make video, images, speech, music or captions on an Apple Silicon Mac without a paid service and need to know what has a documented path and which licences bite.
+- [What each platform requires for automated, AI-assisted posts from one developer's own account](https://tp9imka.github.io/agentic-media-lab/docs/cheatsheets/publishing-rules.md): Use this page when you want to post agent-made clips to your own accounts through official APIs and need each platform's audit, limit and AI-label rules.
+- [Run it on a schedule with an approval step](https://tp9imka.github.io/agentic-media-lab/docs/cheatsheets/schedule-with-approval.md): Use this page when you want an agent pipeline to run on a timer and stop for a human approval before it publishes.
 - [Fact-check results](https://tp9imka.github.io/agentic-media-lab/docs/fact-check.md): Use this page when you need to know how far to trust a record's wording, or which research lanes were least accurate.
 
 ## Examples
