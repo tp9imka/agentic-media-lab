@@ -12,7 +12,7 @@ Also known as: gemini-omni-1.2-flash, Omni Flash
 
 **Why:** It is the replacement Google names for Veo 3.1 on the Gemini API.
 
-**Last checked:** 2026-11-12, primary-read, by agent:driver. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -45,7 +45,7 @@ Paid tier only, so it cannot be tried for free. Priced in output tokens; the per
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:driver, depth primary-read. Gemini API pricing page against both claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

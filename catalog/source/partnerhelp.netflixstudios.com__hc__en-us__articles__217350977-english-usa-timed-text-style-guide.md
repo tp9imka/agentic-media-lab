@@ -12,13 +12,13 @@ Tags: subtitles, reading-speed, cps
 
 **Why:** Every number here is a direct lint rule for an SRT or VTT file an agent writes: line length, characters per second, minimum and maximum time on screen.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-11-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-11-12.
 
 ## Fit notes
 
 Fit: high. Level: intro. Maturity: -.
 
-Lint each cue: max 2 lines, <= 42 characters per line, <= 20 characters per second, duration between 0.834 s and 7 s. The 42-character line assumes a 16:9 frame; for 9:16 use the BBC width rule instead. One skill in the hub ships a caption validator with the same 42 and 20 defaults. Written for long-form dialogue, not for word-by-word kinetic captions.
+Lint each cue: max 2 lines, <= 42 characters per line, <= 20 characters per second (17 for children's programmes), duration between 0.834 s and 7 s. The guides size the font to fit 42 characters across the screen and name no aspect ratio; for 9:16 use the BBC width rule instead. One skill in the hub ships a caption validator with the same 42 and 20 defaults. Written for any timed text made for Netflix; it does not address word-by-word kinetic captions.
 
 ## Claims
 
@@ -44,7 +44,7 @@ Lint each cue: max 2 lines, <= 42 characters per line, <= 20 characters per seco
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. English (USA) guide and General Requirements article against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-11-12
 - Licence: unknown
 - URL status: live

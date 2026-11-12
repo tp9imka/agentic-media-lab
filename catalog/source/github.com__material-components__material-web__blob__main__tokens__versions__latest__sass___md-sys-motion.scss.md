@@ -12,7 +12,7 @@ Tags: easing, duration, design-tokens
 
 **Why:** An agent animating UI-style titles can use these values as named durations and curves instead of one default ease for everything.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-11-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-11-12.
 
 ## Fit notes
 
@@ -28,7 +28,7 @@ Read from the token file because m3.material.io renders by script and returned n
 
    Locator: _md-sys-motion.scss, duration tokens. Source: <https://github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss>, retrieved 2026-11-12.
 
-2. The emphasized-decelerate curve, used for elements entering, is cubic-bezier(0.05, 0.7, 0.1, 1).
+2. The emphasized-decelerate curve is cubic-bezier(0.05, 0.7, 0.1, 1).
 
    > $easing-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
 
@@ -44,7 +44,7 @@ Read from the token file because m3.material.io renders by script and returned n
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. token file (design system version 34.0.21) against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-11-12
 - Licence: Apache-2.0
 - URL status: live

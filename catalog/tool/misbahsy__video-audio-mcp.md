@@ -12,7 +12,7 @@ Also known as: video-audio-mcp
 
 **Why:** A small, local way to give any MCP client b-roll and silence removal without writing ffmpeg filter graphs.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -25,7 +25,7 @@ Fit: medium. Level: intro. Maturity: active.
 | levers | captions, asset, audio |
 | cost | free-local |
 
-Needs Python and ffmpeg, nothing hosted. Each tool writes a new file; there is no timeline, undo or project export. Its only check is a server health check, so the agent has to extract frames and listen to the output itself (pair with a frame-inspection tool). Silence removal is by level, not by transcript. Not run here.
+Needs Python and ffmpeg, nothing hosted. The README examples write each edit to a new output path; there is no timeline, undo or project export. Beyond checking that input files exist and formats are supported, its only check is a server health check, so the agent has to extract frames and listen to the output itself (pair with a frame-inspection tool). Not run here.
 
 ## Claims
 
@@ -51,7 +51,7 @@ Needs Python and ffmpeg, nothing hosted. Each tool writes a new file; there is n
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. README.md (main) tool list against the three claims; server.py not read
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

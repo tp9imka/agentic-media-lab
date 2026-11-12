@@ -12,7 +12,7 @@ Also known as: blender-vse-mcp, Blender VSE MCP
 
 **Why:** A free desktop editor an agent can drive through typed operations rather than arbitrary Python, with the .blend left editable for a person.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -51,7 +51,7 @@ Alpha; Blender 5.1 is the verified target. Its verify step checks saved structur
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. README.md and skills/blender-vse/SKILL.md against the three claims; docs/mcp.md and docs/plugin.md not opened
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

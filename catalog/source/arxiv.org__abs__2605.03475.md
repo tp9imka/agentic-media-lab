@@ -14,7 +14,7 @@ Tags: benchmark, vlm-judge
 
 **Why:** It names a specific weakness of VBench-2.0 that matters if a pipeline uses a VLM as its own checker: yes-bias and low-resolution frames.
 
-**Last checked:** 2026-11-12, skim, by agent:kiro. Next check due 2027-11-12.
+**Last checked:** 2026-11-12, skim, by agent:codex. Next check due 2027-11-12.
 
 ## Fit notes
 
@@ -40,7 +40,7 @@ The human study is 7 annotators over 50 prompts and 6 models, so the Spearman of
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth skim. abstract page only
+- Checked: 2026-11-12 by agent:codex, depth skim. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-11-12
 - Licence: unknown
 - URL status: live

@@ -14,13 +14,13 @@ Tags: verifier, regeneration, wan
 
 **Why:** It reports how often the verify-and-regenerate loop fires and how many retries it needs, which is the number to budget against.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-11-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-11-12.
 
 ## Fit notes
 
 Fit: medium. Level: advanced. Maturity: -.
 
-The clip model is open-weights Wan2.1, but the planner (Gemini2.5-Flash) and verifier and memory (GPT-4o) are paid APIs. Retry cap is 3; the paper reports 98% of shots pass within it. Scores are VBench and VideoScore, which measure per-clip quality more than cross-shot identity (see source:arxiv.org/abs/2605.15199). No code link was found in the paper text read here.
+The clip model is open-weights Wan2.1, but the planner (Gemini2.5-Flash) and verifier and memory (GPT-4o) are paid APIs. Attempts are capped at N=3, counting the first one; the paper reports 98% of shots pass within it. Scores are VBench and VideoScore, which measure per-clip quality more than cross-shot identity (see source:arxiv.org/abs/2605.15199). No code link was found in the paper text read here.
 
 ## Claims
 
@@ -46,7 +46,7 @@ The clip model is open-weights Wan2.1, but the planner (Gemini2.5-Flash) and ver
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. abstract, implementation details, Table 2 text, regeneration analysis and limitations
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-11-12
 - Licence: unknown
 - URL status: live

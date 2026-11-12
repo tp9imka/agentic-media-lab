@@ -12,7 +12,7 @@ Also known as: wan3.0-video, wan3.0-video-prime, Wan, Wanx, Alibaba Model Studio
 
 **Why:** It led the Artificial Analysis text-to-video board on 2026-11-12, and its 1080P list price is lower than Seedance 2.5 or FLUX 3 Video at 1080p.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -25,11 +25,11 @@ Fit: high. Level: intermediate. Maturity: active.
 | apple_silicon | no-documented-path |
 | licence_class | proprietary |
 
-Input video is billed too: billable seconds are input plus output, so a 10 s video-to-video edit bills 20 s. The 30 s free quota exists only in the Singapore region and only for wan3.0-video. The 30% discount is labelled limited-time with no end date on the page. Maximum duration and whether audio is generated are not on the pricing page; OpenRouter lists 2-30 s for its resold copy, not checked at Alibaba.
+Input video is billed too: billable seconds are input plus output, so a video-to-video edit with a 10 s input and a 10 s output bills 20 s. The 30 s free quota exists only in the Singapore region and only for wan3.0-video, and is valid for 90 days from activation, model release or approval, whichever is later. The 30% discount is labelled limited-time with no end date on the page. Maximum duration and whether audio is generated are not on the pricing page; OpenRouter lists 2-30 s for its resold copy, not checked at Alibaba.
 
 ## Claims
 
-1. In the Singapore region wan3.0-video lists at $0.05 per second at 480P, $0.1 at 720P and $0.2 at 1080P, shown with a limited-time 30% discount, and carries a 30 second free quota.
+1. In the Singapore region wan3.0-video lists at $0.05 per second at 480P, $0.1 at 720P and $0.2 at 1080P, shown with a limited-time 30% discount, and carries a 30 second free quota valid for 90 days from Model Studio activation, model release or application approval, whichever is later.
 
    > wan3.0-video | International | 480P | List price $0.05/second (Limited-time 30% off) | 30 seconds | 720P | List price $0.1/second (Limited-time 30% off) | 1080P | List price $0.2/second (Limited-time 30% off)
 
@@ -51,7 +51,7 @@ Input video is billed too: billable seconds are input plus output, so a 10 s vid
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. Alibaba Cloud Model Studio pricing page, Wan 3.0 section, against all three claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

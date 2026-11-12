@@ -12,7 +12,7 @@ Also known as: whisper-cli, ggerganov/whisper.cpp
 
 **Why:** It gives an agent a local transcript with timestamps for captions, on the Mac GPU, from one command.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -51,7 +51,7 @@ It has to be built with cmake; the Core ML encoder needs Python, coremltools and
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. whisper.cpp README against the three claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

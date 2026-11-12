@@ -10,7 +10,7 @@ Concepts: [Automation](../../docs/glossary.md#automation), [Scheduling and runti
 
 **Why:** Its suspend-until-approval step is a run-time human gate in the free edition, which fits a 'render, then wait for my OK, then publish' flow.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -23,7 +23,7 @@ Fit: medium. Level: advanced. Maturity: active.
 | levers | orchestration, review-loop |
 | cost | mixed |
 
-Licence gotcha: the Community Edition is free to use internally but may not be sold, resold or run as a managed service without an agreement; the source build is AGPLv3. Approval works through secret resume URLs, so anyone who gets the URL can approve; send it only to the approver. Telemetry default and schedule docs were not read.
+Licence gotcha: the Community Edition is free to use internally but may not be sold, resold or run as a managed service without an agreement; a source build without the "enterprise" feature flag is AGPLv3. Approval works through secret resume URLs, so unless the step requires logged-in approvers or group membership, anyone who gets the URL can approve; send it only to the approver. Telemetry default and schedule docs were not read.
 
 ## Claims
 
@@ -43,7 +43,7 @@ Licence gotcha: the Community Edition is free to use internally but may not be s
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. LICENSE from the main repo and flow approval doc from windmilldocs-public against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: unknown
 - URL status: live

@@ -2,7 +2,7 @@
 
 `tool:vincentwei1021/video-shotcraft` - tool - <https://github.com/Vincentwei1021/video-shotcraft>
 
-A product-promo skill built on shot-recipe cards and real page captures, written in Chinese, stating support for Claude Code and Codex.
+A product-promo skill built on shot-recipe cards and real page captures, written in Chinese.
 
 Concepts: [Review loop](../../docs/glossary.md#review-loop), [Agent Skills](../../docs/glossary.md#agent-skills), [Story and decomposition](../../docs/glossary.md#story-and-decomposition), [Agent portability](../../docs/glossary.md#agent-portability)
 
@@ -12,7 +12,7 @@ Also known as: shotcraft
 
 **Why:** It makes the reviewer a different agent from the maker, which is the strongest review-loop rule found so far.
 
-**Last checked:** 2026-11-12, primary-read, by agent:driver. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -25,7 +25,7 @@ Fit: medium. Level: intermediate. Maturity: active.
 | levers | motion, story, audio, review-loop, asset |
 | cost | not-checked |
 
-The repo is four months old with a high star count; treat popularity as unconfirmed. Needs network for page capture and sound search. Instructions are in Chinese.
+The repo is four months old with a high star count; treat popularity as unconfirmed. Needs network for Freesound sound search; page capture can run against a local dev server. Instructions are in Chinese.
 
 ## Claims
 
@@ -39,7 +39,7 @@ The repo is four months old with a high star count; treat popularity as unconfir
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:driver, depth primary-read. SKILL.md (Chinese) against the claim
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: Apache-2.0
 - URL status: live

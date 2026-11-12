@@ -8,9 +8,9 @@ Concepts: [Motion and transitions](../../docs/glossary.md#motion-and-transitions
 
 **Badge:** quoted, primary source read (`quoted-primary`): primary source read.
 
-**Why:** Its checklist turns motion taste into checks an agent can tick before rendering, with a stated severity for each miss.
+**Why:** Its checklist turns motion taste into checks an agent can tick before rendering, with critical, high and medium severity tiers for many of the misses.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -23,7 +23,7 @@ Fit: medium. Level: intermediate. Maturity: active.
 | levers | motion, review-loop |
 | cost | free-local |
 
-Written for UI motion first: some checks (prefers-reduced-motion, pausable animations over 5 s) do not apply to a rendered MP4; skip them. The checklist is for the agent to read code or frames against; the skill ships no tool that measures a render. Its ban on linear easing matches tool:haidrrrry/claude-remotion-skill.
+Written for UI motion first: some checks (prefers-reduced-motion, pausable animations over 5 s) do not apply to a rendered MP4; skip them. The checklist is for the agent to read code or frames against; the skill ships no tool that measures a render. Its ban on linear easing for spatial movement matches tool:haidrrrry/claude-remotion-skill.
 
 ## Claims
 
@@ -43,7 +43,7 @@ Written for UI motion first: some checks (prefers-reduced-motion, pausable anima
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. quality-checklist.md and README.md against both claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

@@ -12,7 +12,7 @@ Also known as: veo-3.1-generate-preview, Veo 3.1 Fast
 
 **Why:** Code and skills that call Veo through the Gemini API need to migrate.
 
-**Last checked:** 2026-11-12, primary-read, by agent:driver. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -39,7 +39,7 @@ Whether it stays available on Google's enterprise platform or through resellers 
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:driver, depth primary-read. Gemini API deprecations page against the claim
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

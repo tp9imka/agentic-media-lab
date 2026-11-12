@@ -12,7 +12,7 @@ Tags: easing, duration
 
 **Why:** It states the rule that duration grows with distance or size and gives curves in both CSS and After Effects terms, which maps onto code-driven video.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-11-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-11-12.
 
 ## Fit notes
 
@@ -44,7 +44,7 @@ Use productive curves for small UI moves and expressive for a hero element. The 
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. motion overview page text against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-11-12
 - Licence: unknown
 - URL status: live

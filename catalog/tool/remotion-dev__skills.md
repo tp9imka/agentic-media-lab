@@ -12,7 +12,7 @@ Also known as: remotion-best-practices, remotion-create, remotion skills
 
 **Why:** The reference skills for the other dominant renderer. They state support for Codex and Cursor as well as Claude Code.
 
-**Last checked:** 2026-11-12, primary-read, by agent:driver. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -45,7 +45,7 @@ The skills repo has no licence file, and Remotion itself has a company licence: 
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:driver, depth primary-read. video-layout.md in the remotion-create skill against both claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: unknown
 - URL status: live

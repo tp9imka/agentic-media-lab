@@ -12,7 +12,7 @@ Also known as: LTX-2.3, LTX-2.5, LTX Video, Lightricks LTX
 
 **Why:** It is the open video model with the most documented Mac routes: the official PyTorch code on MPS, mlx-video for LTX-2 and 2.3, and Draw Things for 2.3.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -25,7 +25,7 @@ Fit: medium. Level: advanced. Maturity: active.
 | apple_silicon | documented |
 | licence_class | commercial-threshold |
 
-Free under the licence only while your organisation earns under $10M a year. The official Mac path is PyTorch on MPS; the fastest VAE backend (natten) is Linux and CUDA only and is skipped on macOS. The LTX-2.5 file names give a 22B transformer and a 12B text encoder in bf16, which by our arithmetic is over 64 GB before any quantization; no Mac memory figure is published. Not run here.
+Free under the licence while your organisation earns under $10M a year; at or above that, only use solely for a non-commercial purpose stays free. The official Mac path is PyTorch on MPS; the fastest VAE backend (natten) is Linux and CUDA only and is skipped on macOS. The LTX-2.5 file names give a 22B transformer and a 12B text encoder in bf16, which by our arithmetic is over 64 GB before any quantization; no Mac memory figure is published. Not run here.
 
 ## Claims
 
@@ -51,7 +51,7 @@ Free under the licence only while your organisation earns under $10M a year. The
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. LTX-2 CHANGELOG, LICENSE-2_x and README against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: Apache-2.0
 - URL status: live

@@ -2,7 +2,7 @@
 
 `source:about.fb.com/news/2026/03/rewarding-original-creators-on-facebook` - source - <https://about.fb.com/news/2026/03/rewarding-original-creators-on-facebook/>
 
-Meta's March 2026 newsroom post that updates Facebook's original content guidelines and says unoriginal content is deprioritised in Feed and Reels, with demonetisation for accounts that keep posting it.
+Meta's March 2026 newsroom post that updates Facebook's original content guidelines and says unoriginal content is deprioritised in Feed and Reels, with possible demonetisation for accounts that continue to post primarily unoriginal content.
 
 Concepts: [Platform rules](../../docs/glossary.md#platform-rules), [Publishing](../../docs/glossary.md#publishing)
 
@@ -10,9 +10,9 @@ Tags: meta, unoriginal-content
 
 **Badge:** quoted, primary source read (`quoted-primary`): primary source read.
 
-**Why:** An agent pipeline that stitches stock or third-party clips with narration or captions is the pattern Meta names as unoriginal, so reach and payouts on Facebook depend on what the pipeline adds.
+**Why:** An agent pipeline that stitches stock or third-party clips with narration or captions, without adding anything meaningful, is the pattern Meta names as unoriginal, so reach and payouts on Facebook depend on what the pipeline adds.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -44,7 +44,7 @@ The post does not mention AI by name; the test is creative contribution, not the
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. about.fb.com newsroom post visible text against the three claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: unknown
 - URL status: live

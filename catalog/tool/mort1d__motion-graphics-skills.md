@@ -10,7 +10,7 @@ Concepts: [Code-driven video](../../docs/glossary.md#code-driven-video), [Review
 
 **Why:** It fixes a master spec, forbids copying reference material, and makes the agent critique until every score is 8 or more before the final render.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -49,7 +49,7 @@ No npm packages or API keys per its compatibility line; needs Node 22.4+, ffmpeg
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. skills/motion-graphics/SKILL.md and README.md against the three claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: unknown
 - URL status: live

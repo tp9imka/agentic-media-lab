@@ -12,7 +12,7 @@ Also known as: hermes kanban video
 
 **Why:** A worked example of an agent video pipeline driven by a task board instead of a person, with a block-and-notify path when something fails.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -25,7 +25,7 @@ Fit: medium. Level: advanced. Maturity: experimental.
 | levers | orchestration, story, review-loop |
 | cost | paid |
 
-Needs Hermes, a running gateway and an OpenRouter key (the README names claude-opus-4.6), so every run is paid. No approval step before the final cut: a person only steps in when a worker blocks. The setup sources ~/.hermes/.env into the shell. It is a demo of one video, not a reusable product; setup.sh was not run or read in full.
+Needs Hermes, a running gateway and an OpenRouter key (the README names claude-opus-4.6), so every run is paid. No approval step before the final cut: a person steps in when a worker blocks, or by choice to nudge, skip to the editor or re-render a scene. The setup sources ~/.hermes/.env into the shell. It is built around one demo video, with README steps to adapt it to your own brief; setup.sh was not run or read in full.
 
 ## Claims
 
@@ -35,7 +35,7 @@ Needs Hermes, a running gateway and an OpenRouter key (the README names claude-o
 
    Locator: README.md, section What This Is. Source: <https://github.com/NousResearch/kanban-video-pipeline/blob/main/README.md>, retrieved 2026-11-12.
 
-2. The gateway hosts the board dispatcher, which picks up ready tasks every 60 seconds; stuck tasks mean the gateway is down.
+2. The gateway hosts the board dispatcher, which picks up ready tasks every 60 seconds; tasks stuck in "ready" mean the gateway is not running.
 
    > The gateway hosts the kanban dispatcher that picks up ready tasks every 60 seconds.
 
@@ -51,7 +51,7 @@ Needs Hermes, a running gateway and an OpenRouter key (the README names claude-o
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. README.md and RUN.md against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: unknown
 - URL status: live

@@ -12,13 +12,13 @@ Tags: youtube, ai-label, c2pa
 
 **Why:** It is the only first-party page read here that says a platform reads C2PA, and it says a C2PA-triggered label cannot be removed.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
 Fit: high. Level: intro. Maturity: -.
 
-Disclosure is needed for realistic content and AI music, not for clearly fantastical or animated content or for script, caption and thumbnail help. The page says disclosure alone does not limit reach or monetisation, but repeated non-disclosure can lead to removal or YPP suspension. If your generator embeds C2PA, expect a label you cannot turn off. The API equivalent is status.containsSyntheticMedia (revision history record). Title read here: 'Disclosing use of GenAI content'.
+Disclosure is needed for realistic content and AI music, not for clearly fantastical or animated content or for script, caption and thumbnail help. Repeated non-disclosure can lead to removal or YPP suspension. If your generator embeds C2PA, expect a label you cannot turn off. The API equivalent is status.containsSyntheticMedia (revision history record). Title read here: 'Disclosing use of GenAI content'.
 
 ## Claims
 
@@ -44,7 +44,7 @@ Disclosure is needed for realistic content and AI music, not for clearly fantast
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. visible help page text (hl=en) against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

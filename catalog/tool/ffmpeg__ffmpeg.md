@@ -12,7 +12,7 @@ Also known as: ffmpeg, ffprobe, libav
 
 **Why:** An agent can finish or assemble a clip with FFmpeg alone, and most render failures that reach the reader are FFmpeg input mismatches.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -51,7 +51,7 @@ xfade fails unless both inputs share resolution, pixel format, frame rate and ti
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. ffmpeg-filters.html sections xfade, loudnorm and drawtext against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: unknown
 - URL status: live

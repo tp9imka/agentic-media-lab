@@ -12,13 +12,13 @@ Tags: c2pa
 
 **Why:** YouTube states it labels content with C2PA metadata as AI and does not let the creator undo it, so a pipeline should know whether its generator embeds a manifest.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
 Fit: medium. Level: advanced. Maturity: -.
 
-A trusted manifest is signed with a certificate that only products in the C2PA Conformance Program receive, so a solo developer cannot simply self-sign one that validators trust. In practice the manifest comes from the generator or editor; check whether yours embeds one and whether your ffmpeg step keeps it. Only YouTube's own page was found here stating it reads C2PA; Meta's labelling pages did not render. The spec itself was not read.
+A manifest trusted under the official C2PA Trust List is signed with a certificate that only products in the C2PA Conformance Program receive; legacy ITL certificates still validate in tools that use the ITL, but validators need not respect them. In practice the manifest comes from the generator or editor; check whether yours embeds one and whether your ffmpeg step keeps it. Only YouTube's own page was found here stating it reads C2PA; Meta's labelling pages did not render. The spec itself was not read.
 
 ## Claims
 
@@ -28,7 +28,7 @@ A trusted manifest is signed with a certificate that only products in the C2PA C
 
    Locator: How can consumers of C2PA data be assured the data was captured correctly?. Source: <https://c2pa.org/faqs/>, retrieved 2026-11-12.
 
-2. The specification can be implemented without joining, but a trusted signing certificate requires the Conformance Program.
+2. The specification can be implemented without joining, but a Claim Signing Certificate and a place on the Conforming Products List require the Conformance Program.
 
    > However, to receive a Claim Signing Certificate and be listed on the official Conforming Products List, your product must undergo evaluation and legal onboarding through the C2PA Conformance Program.
 
@@ -38,7 +38,7 @@ A trusted manifest is signed with a certificate that only products in the C2PA C
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. visible FAQ text against the claims; c2pa.org home page read but held no operative sentence
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

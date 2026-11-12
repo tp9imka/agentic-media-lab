@@ -12,7 +12,7 @@ Also known as: Hailuo 3, MiniMax-H3, H3
 
 **Why:** A leading open-weights video model whose licence does not cover several major regions.
 
-**Last checked:** 2026-11-12, primary-read, by agent:driver. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -45,7 +45,7 @@ Read the licence for where you are before using the weights. Ports for Apple Sil
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:driver, depth primary-read. LICENSE file on the model repository against both claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: other
 - URL status: live

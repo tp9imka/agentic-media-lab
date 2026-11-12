@@ -12,7 +12,7 @@ Also known as: remotion, npx remotion
 
 **Why:** The most established code renderer an agent can drive locally, and the one most skills target. Its licence is the first thing to check before company work.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -25,11 +25,11 @@ Fit: high. Level: intermediate. Maturity: established.
 | levers | motion, design, captions, review-loop |
 | cost | mixed |
 
-Free for a person or a company of up to 3 employees; a bigger company needs a paid Company License, and the FAQ adds a per-render plan for automations (code that calls renderMedia() and similar). The repo says a changed licence ships with Remotion 5.0 (PR #3750); re-read LICENSE.md when you upgrade. For agent feedback, `npx remotion still <entry> <id> out.png --frame=N` gives one PNG without a full render, and `npx remotion render <id> out/frames --frames=0,30,90 --image-format=png` gives several (v4.0.502+). Animations written with CSS keyframes or setTimeout flicker or freeze because tabs render frames out of order.
+Free for a person or a company of up to 3 employees (contractors on the project, or a client that operates it, count toward the headcount); a bigger company needs a paid Company License unless an exemption such as a qualifying non-profit applies, and the FAQ adds a per-render plan for automations (code that calls renderMedia() and similar). The repo says a changed licence ships with Remotion 5.0 (PR #3750); re-read LICENSE.md when you upgrade. For agent feedback, `npx remotion still <entry> <id> out.png --frame=N` gives one PNG without a full render, and `npx remotion render <id> out/frames --frames=0,30,90 --image-format=png` gives several (v4.0.502+). Animations written with CSS keyframes or setTimeout flicker or freeze because tabs render frames out of order.
 
 ## Claims
 
-1. The free licence covers individuals, for-profit companies with up to 3 employees, non-profits and evaluation; others need a Company License.
+1. The free licence covers individuals, for-profit companies with up to 3 employees, non-profits (some need written permission) and evaluation before commercial use; others need a Company License.
 
    > a for-profit organization with up to 3 employees
 
@@ -51,7 +51,7 @@ Free for a person or a company of up to 3 employees; a bigger company needs a pa
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. LICENSE.md, license/faq.mdx, cli/still.mdx and troubleshooting/css-animations.mdx against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

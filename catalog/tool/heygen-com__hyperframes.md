@@ -12,7 +12,7 @@ Also known as: hyperframes skill, HeyGen HyperFrames
 
 **Why:** One of the two renderers most agent-made video runs on, and its skill carries numeric motion, review and loudness rules.
 
-**Last checked:** 2026-11-12, primary-read, by agent:driver. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -45,7 +45,7 @@ Start here for a fully local render with no licence fee. The skill asks the agen
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:driver, depth primary-read. motion.md in the skill folder against both claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: Apache-2.0
 - URL status: live

@@ -12,7 +12,7 @@ Also known as: hermes, hermes cron
 
 **Why:** It is a full agent, not a wrapper for Claude Code, and its cron plus chat approvals is the most complete unattended loop with a human answer step found in this lane.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -25,7 +25,7 @@ Fit: medium. Level: advanced. Maturity: active.
 | levers | orchestration, review-loop |
 | cost | mixed |
 
-Needs a model provider key or the Nous Portal; it does not drive your Claude Code subscription. Jobs live in ~/.hermes/cron/jobs.json and secrets in ~/.hermes/.env. Dangerous commands in cron are denied by default (see the security source). The plugin catalog lists third-party plugins, including one that opens an unauthenticated local dashboard; read a plugin before enabling it. Telemetry default not found in README or the pages read.
+Agent jobs need a model provider key, a subscription provider or the Nous Portal (script-only jobs use no model); it does not drive your Claude Code subscription. Jobs live in ~/.hermes/cron/jobs.json and secrets in the owning profile's .env or an external secret source. Dangerous commands in cron are denied by default (see the security source). The plugin catalog lists third-party plugins, including one that opens an unauthenticated local dashboard; read a plugin before enabling it. Telemetry default not found in README or the pages read.
 
 ## Claims
 
@@ -35,7 +35,7 @@ Needs a model provider key or the Nous Portal; it does not drive your Claude Cod
 
    Locator: section How it works. Source: <https://hermes-agent.nousresearch.com/docs/user-guide/features/cron>, retrieved 2026-11-12.
 
-2. A missed cron occurrence runs late only inside a catch-up window of half the period, clamped to 2 minutes - 2 hours, settable per job.
+2. By default a missed cron occurrence runs late only inside a catch-up window of half the period, clamped to 2 minutes - 2 hours; --grace-minutes or --catch-up on change this per job.
 
    > A missed cron occurrence is run late only inside a catch-up window: half the job's period, clamped to 2 minutes–2 hours.
 
@@ -51,7 +51,7 @@ Needs a model provider key or the Nous Portal; it does not drive your Claude Cod
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. website/docs/user-guide/features/cron.md (source of the docs page) against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

@@ -10,9 +10,9 @@ Tags: shot-detection, qc
 
 **Badge:** quoted, primary source read (`quoted-primary`): primary source read.
 
-**Why:** Run on a render, it gives the real cut times and shot lengths, so a review step can check pacing and catch accidental cuts or a missing transition.
+**Why:** Run on a render, it gives detected cut times and shot lengths (they depend on detector thresholds and minimum scene length), so a review step can check pacing and catch accidental cuts or a missing transition.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -25,7 +25,7 @@ Fit: high. Level: intro. Maturity: active.
 | levers | review-loop, motion |
 | cost | free-local |
 
-For a generated clip, run `scenedetect -i out.mp4 detect-adaptive list-scenes` and compare cut count and shot lengths with the shot list. Fades are missed by the content detectors; use detect-threshold or ffmpeg blackdetect for those. Needs Python and OpenCV; not installed or run here.
+For a generated clip, run `scenedetect -i out.mp4 detect-adaptive list-scenes` and compare cut count and shot lengths with the shot list. The docs name detect-threshold, not the content detectors, for fades in/out; use it or ffmpeg blackdetect for those. Needs Python and a video backend (OpenCV by default; PyAV and MoviePy are also listed); not installed or run here.
 
 ## Claims
 
@@ -51,7 +51,7 @@ For a generated clip, run `scenedetect -i out.mp4 detect-adaptive list-scenes` a
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. official CLI reference against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: BSD-3-Clause
 - URL status: live

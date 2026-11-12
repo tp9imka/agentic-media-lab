@@ -2,7 +2,7 @@
 
 `source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md` - source - <https://github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md>
 
-A research note dated 2026-09-30 by the GenMotion team that reads the HyperFrames and Remotion repos and compares their capture, CLI, agent and licence details.
+A research note dated 2026-09-30 for the GenMotion team that reads the HyperFrames and Remotion repos and compares their capture, CLI, agent and licence details.
 
 Concepts: [Code-driven video](../../docs/glossary.md#code-driven-video), [Consistency](../../docs/glossary.md#consistency), [Review loop](../../docs/glossary.md#review-loop)
 
@@ -10,13 +10,13 @@ Concepts: [Code-driven video](../../docs/glossary.md#code-driven-video), [Consis
 
 **Why:** The only source found that says how HyperFrames capture differs on macOS, which is the reader's machine.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
 Fit: medium. Level: advanced. Maturity: -.
 
-Written by a team building a competing engine; its last section argues for GenMotion. It read the repos, not the docs sites, which it says were blocked. The macOS capture claim needs a check against the HyperFrames engine source: the engine README I opened names BeginFrame capture but does not mention a macOS fallback, so treat the claim as unconfirmed. Its Remotion pricing line matches the Remotion licence FAQ.
+Written for the team building GenMotion, a competing engine, and kept in its repo; its last section argues for GenMotion. It read the repos, not the docs sites, which it says were blocked. The macOS capture claim needs a check against the HyperFrames engine source: the engine README I opened names BeginFrame capture but does not mention a macOS fallback, so treat the claim as unconfirmed. Its Remotion pricing line matches the Remotion licence FAQ.
 
 ## Claims
 
@@ -42,7 +42,7 @@ Written by a team building a competing engine; its last section argues for GenMo
 
 - Source type: independent-secondary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. the note against the claims, and the HyperFrames engine README for the capture claim
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

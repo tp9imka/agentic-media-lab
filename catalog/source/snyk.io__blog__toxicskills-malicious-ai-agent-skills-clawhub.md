@@ -12,7 +12,7 @@ Tags: supply-chain, prompt-injection
 
 **Why:** Video skills come from the same registries; the audit puts a number on how many skills carry critical issues and shows that malicious ones pair code with prompt injection.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -34,7 +34,7 @@ Snyk sells scanning tools, so treat the detector claims as a vendor's. The page 
 
    Locator: intro, paragraph 2. Source: <https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/>, retrieved 2026-11-12.
 
-3. Every confirmed malicious skill had malicious code and 91% also used prompt injection.
+3. Every confirmed malicious skill contained malicious code patterns and 91% also used prompt injection techniques.
 
    > 100% of confirmed malicious skills contain malicious code patterns, while 91% simultaneously employ prompt injection techniques.
 
@@ -44,7 +44,7 @@ Snyk sells scanning tools, so treat the detector claims as a vendor's. The page 
 
 - Source type: independent-secondary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. Snyk blog visible text against the three claims and the title
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: unknown
 - URL status: live

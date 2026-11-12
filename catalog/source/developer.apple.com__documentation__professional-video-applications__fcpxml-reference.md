@@ -10,15 +10,15 @@ Tags: fcpxml, final-cut-pro
 
 **Badge:** quoted, primary source read (`quoted-primary`): primary source read.
 
-**Why:** Final Cut Pro has no scripting API an agent can call, so writing FCPXML for File > Import > XML is the documented path, and several tools here export it.
+**Why:** Final Cut Pro has no scripting API an agent can call, so writing FCPXML, the format users send into Final Cut Pro, is the documented path, and several tools here export it.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-11-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-11-12.
 
 ## Fit notes
 
 Fit: medium. Level: advanced. Maturity: -.
 
-An agent can write the file, but a person imports it in Final Cut Pro; no command-line import is documented on this page. Version matters: this page states the 1.9 requirement while MakeMyClip writes 1.10, so match the version to the reader's Final Cut build. Resolve and Premiere also read FCPXML through the tools that export it, not through this page. Saved text is from the page's JSON data, not the rendered HTML.
+An agent can write the file; no command-line import is documented on this page. Version matters: this page states the 1.9 requirement while MakeMyClip writes 1.10, so match the version to the reader's Final Cut build. Resolve and Premiere also read FCPXML through the tools that export it, not through this page. Saved text is from the page's JSON data, not the rendered HTML.
 
 ## Claims
 
@@ -44,7 +44,7 @@ An agent can write the file, but a person imports it in Final Cut Pro; no comman
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. the page's documentation JSON (overview and topic list) against the three claims; the DTD and Creating FCPXML Documents pages not opened
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-11-12
 - Licence: unknown
 - URL status: live

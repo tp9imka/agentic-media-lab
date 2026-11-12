@@ -12,7 +12,7 @@ Also known as: CapCutAPI, VectCut, CapCut MCP, Jianying
 
 **Why:** The only route found to hand an agent-built timeline to CapCut, which many short-form editors already use.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -51,7 +51,7 @@ The open part writes drafts locally; the vendor's cloud preview and cloud render
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. README.md (main) against the three claims; skill README and MCP docs not opened
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: Apache-2.0
 - URL status: live

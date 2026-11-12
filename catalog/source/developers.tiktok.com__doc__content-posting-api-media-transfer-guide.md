@@ -2,7 +2,7 @@
 
 `source:developers.tiktok.com/doc/content-posting-api-media-transfer-guide` - source - <https://developers.tiktok.com/doc/content-posting-api-media-transfer-guide>
 
-TikTok's rules for sending the file: chunked FILE_UPLOAD sizes, PULL_FROM_URL with a verified domain, and the accepted video formats, frame rates, resolution, length and size.
+TikTok's rules for sending the file: chunked FILE_UPLOAD sizes, PULL_FROM_URL with a verified domain or URL prefix, and the accepted video formats, frame rates, resolution, length and size.
 
 Concepts: [Publishing](../../docs/glossary.md#publishing), [Platform rules](../../docs/glossary.md#platform-rules), [Delivery](../../docs/glossary.md#delivery)
 
@@ -12,13 +12,13 @@ Tags: tiktok, video-specs
 
 **Why:** These are the encode targets for a clip an agent renders for TikTok, from TikTok's own API page rather than a creator blog.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
 Fit: high. Level: intermediate. Maturity: -.
 
-Render H.264 MP4 at 23-60 fps, 360-4096 px per side, at most 4 GB. The API accepts up to 10 minutes, but the account's own cap (3, 5 or 10 minutes) applies and creator_info returns it as max_video_post_duration_sec. Chunks must be 5-64 MB, files under 5 MB go in one piece. PULL_FROM_URL needs a domain verified in the TikTok developer portal, so a laptop pipeline usually uses FILE_UPLOAD.
+Render H.264 MP4 at 23-60 fps, 360-4096 px per side, at most 4 GB. The API accepts up to 10 minutes, but the account's own cap (3, 5 or 10 minutes) applies and creator_info returns it as max_video_post_duration_sec. Chunks must be 5-64 MB (the final chunk up to 128 MB), files under 5 MB go in one piece. PULL_FROM_URL needs a domain or URL prefix verified in the TikTok developer portal, so a laptop pipeline usually uses FILE_UPLOAD.
 
 ## Claims
 
@@ -34,7 +34,7 @@ Render H.264 MP4 at 23-60 fps, 360-4096 px per side, at most 4 GB. The API accep
 
    Locator: Video restrictions, Duration restrictions. Source: <https://developers.tiktok.com/doc/content-posting-api-media-transfer-guide>, retrieved 2026-11-12.
 
-3. Upload chunks must be between 5 MB and 64 MB, and the final chunk may be up to 128 MB.
+3. Upload chunks must be between 5 MB and 64 MB, and the final chunk may be up to 128 MB; a video under 5 MB is uploaded whole as one chunk.
 
    > Each chunk must be at least 5 MB but no greater than 64 MB, except for the final chunk, which can be greater than chunk_size (up to 128 MB) to accommodate any trailing bytes.
 
@@ -44,7 +44,7 @@ Render H.264 MP4 at 23-60 fps, 360-4096 px per side, at most 4 GB. The API accep
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. visible guide text, Video restrictions and chunk rules, against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

@@ -12,9 +12,9 @@ Tags: frame-anchoring, last-frame
 
 **Badge:** quoted, primary source read (`quoted-primary`): primary source read.
 
-**Why:** Its DirectorAgent rules (cut at shot boundaries, fit each segment to the model window with a 10% buffer, feed the last frame forward) are a technique any pipeline can copy.
+**Why:** Its DirectorAgent rules (cut at shot boundaries, fit each segment to the model window with a 10% buffer, feed the last frame forward) are a technique any pipeline can copy if its video model accepts a conditioning image.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-11-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-11-12.
 
 ## Fit notes
 
@@ -46,7 +46,7 @@ The last-frame relay needs a model with image-to-video or first-frame input; the
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. abstract, DirectorAgent section, results text
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-11-12
 - Licence: unknown
 - URL status: live

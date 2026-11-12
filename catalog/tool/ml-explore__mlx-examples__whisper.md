@@ -12,7 +12,7 @@ Also known as: mlx_whisper, MLX Whisper
 
 **Why:** It is the pip-installable way for an agent on a Mac to get a transcript file without compiling anything.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -41,7 +41,7 @@ Needs ffmpeg. The default model is whisper-tiny, which is too weak for captions;
 
    Locator: whisper/README.md, section Run > CLI. Source: <https://github.com/ml-explore/mlx-examples/blob/main/whisper/README.md>, retrieved 2026-11-12.
 
-3. Without --model it uses the tiny model.
+3. In the Python API the default model is mlx-community/whisper-tiny.
 
    > The default model is "mlx-community/whisper-tiny".
 
@@ -51,7 +51,7 @@ Needs ffmpeg. The default model is whisper-tiny, which is too weak for captions;
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. mlx-examples whisper README against the three claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

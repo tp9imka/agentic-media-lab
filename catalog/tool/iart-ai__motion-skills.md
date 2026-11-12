@@ -10,7 +10,7 @@ Concepts: [Review loop](../../docs/glossary.md#review-loop), [Agent Skills](../.
 
 **Why:** The verify scripts are a renderer-neutral review loop: look at three frames on one sheet, then assert resolution, codec, fps and duration of the file.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -43,7 +43,7 @@ The skills themselves live in 19 other repos; this record covers only the index 
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. tools/verify/README.md and README.md against both claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

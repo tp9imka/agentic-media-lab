@@ -12,13 +12,13 @@ Tags: skills-sh, install-counts
 
 **Why:** skills.sh install counts are the popularity number most video skills advertise; the directory itself says they come from CLI telemetry and that it does not guarantee a listed skill is safe.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
 Fit: high. Level: intro. Maturity: -.
 
-An install is counted when the skills CLI reports it, with telemetry on by default (opt out with DISABLE_TELEMETRY=1 or DO_NOT_TRACK=1). Nothing on the page says installs are de-duplicated per user or machine, so CI runs and scripted installs count the same as people; this was not checked against the CLI source. See the ai-video-generation clone record for what that allows. The audits are run by Vercel, which also runs the directory; the audit method is not described on this page.
+An install is counted when the skills CLI reports it, with telemetry on by default (opt out with DISABLE_TELEMETRY=1 or DO_NOT_TRACK=1). Nothing on the page says installs are de-duplicated per user or machine; this was not checked against the CLI source. See the ai-video-generation clone record for what that allows. The page does not say who runs the audits; security reports go to security.vercel.com and the site is made by Vercel. The audit method is not described on this page.
 
 ## Claims
 
@@ -44,7 +44,7 @@ An install is counted when the skills CLI reports it, with telemetry on by defau
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. skills.sh/docs visible text and vercel-labs/skills troubleshooting.md Telemetry section against the three claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: unknown
 - URL status: live

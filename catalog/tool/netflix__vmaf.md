@@ -12,7 +12,7 @@ Tags: quality-metric, qc, banding
 
 **Why:** It measures what an export step lost against the master, and the phone model fits clips watched on a phone.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -25,7 +25,7 @@ Fit: medium. Level: intermediate. Maturity: active.
 | levers | review-loop, delivery |
 | cost | free-local |
 
-Full-reference only: it needs the lossless master and the encode at the same size and frame count, so it checks the encode, not whether a generated clip looks good. Use the phone model for 9:16 shorts. CAMBI is useful on generated gradients and skies. The v1 models date from 2026-06; an ffmpeg build may still ship v0, check the model path. Not run here.
+Full-reference only: it needs a reference (the master) and the encode at the same size and frame count, so it checks the encode, not whether a generated clip looks good. Use the phone model for 9:16 shorts. CAMBI is useful on generated gradients and skies. The v1 models date from 2026-06; an ffmpeg build may still ship v0, check the model path. Not run here.
 
 ## Claims
 
@@ -51,7 +51,7 @@ Full-reference only: it needs the lossless master and the encode at the same siz
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. README and models_v1.md against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: unknown
 - URL status: live

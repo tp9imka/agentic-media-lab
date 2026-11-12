@@ -12,23 +12,23 @@ Tags: facebook, rate-limit, ai-label, video-specs
 
 **Why:** Facebook Page Reels have a lower daily cap and a shorter maximum length than Instagram Reels, which matters when one render goes to both.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
 Fit: medium. Level: intermediate. Maturity: -.
 
-Posts to a Page, not a personal profile. 30 Reels per 24 hours, 3-90 seconds, 9:16, at least 540x960, 24-60 fps; a 3-minute YouTube Short will be rejected here (error 1363128). is_ai_generated discloses AI use. The earlier scan's '30 API-published posts' wording is confirmed. Permissions and app review were not read in depth.
+Posts to a Page, not a personal profile. 30 Reels per 24 hours, 3-90 seconds (60 s max as a Page story), 9:16, at least 540x960, 24-60 fps; a 3-minute YouTube Short will be rejected here (error 1363128). is_ai_generated discloses AI use. The earlier scan's '30 API-published posts' wording is confirmed. Permissions and app review were not read in depth.
 
 ## Claims
 
-1. The Reels API allows 30 API-published Reels per Page in a moving 24-hour window.
+1. The Reels API allows 30 API-published posts in a moving 24-hour window, enforced on the POST /{page_id}/video_reels endpoint.
 
    > Reels API is limited to 30 API-published posts within a 24-hour moving period.
 
    Locator: Limitations, Rate Limit. Source: <https://developers.facebook.com/docs/video-api/guides/reels-publishing>, retrieved 2026-11-12.
 
-2. A Page Reel must be 3 to 90 seconds long.
+2. A Page Reel must be 3 to 90 seconds long; one published as a Page story can not exceed 60 seconds.
 
    > | Duration | 3 to 90 seconds.<br><br>A reel published as a story on a Facebook Page can not exceed 60 seconds. |
 
@@ -44,7 +44,7 @@ Posts to a Page, not a personal profile. 30 Reels per 24 hours, 3-90 seconds, 9:
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. guide served as markdown, against the claims and the earlier scan's 30-post figure
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

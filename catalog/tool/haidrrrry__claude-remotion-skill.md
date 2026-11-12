@@ -12,7 +12,7 @@ Also known as: remotion-motion-graphics
 
 **Why:** Adds the frame-inspection step the official Remotion skills leave to a person.
 
-**Last checked:** 2026-11-12, primary-read, by agent:driver. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -39,7 +39,7 @@ Two of its rules (idle elements breathe; never a flat background) contradict the
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:driver, depth primary-read. SKILL.md against the claim
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

@@ -14,13 +14,13 @@ Tags: awesome-list
 
 **Why:** Covers the skill layer that this lane's research pipelines lack; its no-skill baseline is a useful reality check before installing a pipeline.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
 Fit: medium. Level: intro. Maturity: -.
 
-Third-party aggregator; its security grades come from agentskillshub.top, which runs the list, and were not checked here. The 16-skill test was one brief, one run each, on 2026-10-11. A list entry is a lead, not an endorsement; read each skill before installing.
+Third-party aggregator; its security grades come from agentskillshub.top, which runs the list, and were not checked here. The 16-skill test was one brief, with one reported film per skill, on 2026-10-11. A list entry is a lead, not an endorsement; read each skill before installing.
 
 ## Claims
 
@@ -46,7 +46,7 @@ Third-party aggregator; its security grades come from agentskillshub.top, which 
 
 - Source type: aggregator
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. README intro, test summary and footer
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: unknown
 - URL status: live

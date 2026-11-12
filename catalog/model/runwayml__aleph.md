@@ -12,7 +12,7 @@ Also known as: aleph2, Aleph
 
 **Why:** It edits an existing video by prompt, the step after generation when one shot is almost right.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -25,7 +25,7 @@ Fit: medium. Level: intermediate. Maturity: active.
 | apple_silicon | no-documented-path |
 | licence_class | proprietary |
 
-28 credits = $0.28 per second with a 56 credit ($0.56) minimum, so even a 1 s edit costs $0.56. A video edit bills the source video's length as output. Maximum input length was not found on the pricing page.
+28 credits = $0.28 per second with a 56 credit ($0.56) minimum, so even a 1 s edit costs $0.56. Maximum input length was not found on the pricing page.
 
 ## Claims
 
@@ -45,7 +45,7 @@ Fit: medium. Level: intermediate. Maturity: active.
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. Runway Dev API pricing page against both claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

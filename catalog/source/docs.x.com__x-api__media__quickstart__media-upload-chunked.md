@@ -12,7 +12,7 @@ Tags: x, video-specs
 
 **Why:** It gives the video caps for a post on X and says they depend on the posting account's Premium status.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -38,7 +38,7 @@ tweet_video: 20 minutes and 8 GB by default, 125 minutes and 16 GB for Premium. 
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. visible quickstart text against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

@@ -10,9 +10,9 @@ Also known as: gemini-nano-banana-2.1, Nano Banana 2.1, gemini-3-pro-image, Nano
 
 **Badge:** quoted, primary source read (`quoted-primary`): primary source read.
 
-**Why:** Code that calls imagen-4.0-* on the Gemini API stopped working on 2026-08-17; Nano Banana 2.1 is the named replacement.
+**Why:** Code that calls the GA imagen-4.0-*-001 ids on the Gemini API stopped working on 2026-08-17 (the preview ids on 2026-02-17); Nano Banana 2.1 is the named replacement.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -51,7 +51,7 @@ Billed in output tokens; Google converts to per-image prices. Nano Banana 2.1 is
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. Gemini API pricing and deprecations pages, markdown versions, against all three claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

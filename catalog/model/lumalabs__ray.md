@@ -12,7 +12,7 @@ Also known as: Ray3.2, Ray 3.2, Ray, Dream Machine API
 
 **Why:** Native HDR and 16-bit EXR export are rare among hosted models and matter when the clip is composited with live footage.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -25,7 +25,7 @@ Fit: low. Level: intermediate. Maturity: active.
 | apple_silicon | no-documented-path |
 | licence_class | proprietary |
 
-The pricing page gives credits only, with no dollar value per credit, so the dollar cost cannot be worked out from it. 1080p for 10 s is 1,200 credits SDR; HDR doubles it. The docs page opened (docs.lumalabs.ai video-generation) shows ray-2 examples, not Ray3.2 ids, so the exact Ray3.2 model id was not confirmed. Audio not stated.
+The pricing page gives credits only, with no dollar value per credit, so the dollar cost cannot be worked out from it. 1080p text- or image-to-video for 10 s is 1,200 credits SDR (1,440 for video-to-video); HDR doubles it. The docs page opened (docs.lumalabs.ai video-generation) shows ray-2 examples, not Ray3.2 ids, so the exact Ray3.2 model id was not confirmed. Audio not stated.
 
 ## Claims
 
@@ -45,7 +45,7 @@ The pricing page gives credits only, with no dollar value per credit, so the dol
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. Luma API pricing page against both claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

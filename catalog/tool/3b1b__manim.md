@@ -10,9 +10,9 @@ Also known as: manimgl, 3b1b manim
 
 **Badge:** quoted, primary source read (`quoted-primary`): primary source read.
 
-**Why:** The original engine behind 3Blue1Brown videos. An agent that writes ManimCE code for it, or the reverse, gets errors, so the reader must pick one.
+**Why:** The original engine behind 3Blue1Brown videos. Its README warns that using one edition's install instructions for the other will cause problems, so the reader must pick one.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -25,7 +25,7 @@ Fit: medium. Level: advanced. Maturity: active.
 | levers | motion, design |
 | cost | free-local |
 
-On a Mac it needs FFmpeg and, on ARM, Cairo from Homebrew; LaTeX is optional (MacTeX is about 6 GB, BasicTeX is the README's lighter path). The default run opens a window for a person; an agent needs `-w` to write a file or `-so` to save the final frame. Fewer tests and docs than ManimCE by its own README's account.
+On a Mac it needs FFmpeg and, on ARM, Cairo from Homebrew; LaTeX is optional (MacTeX is about 6 GB, BasicTeX is the README's lighter path). The default run opens a window for a person; an agent can pass `-w` (or `-o`) to write a file or `-so` to save the final frame. Its README says ManimCE was forked with a goal of being more stable and better tested.
 
 ## Claims
 
@@ -51,7 +51,7 @@ On a Mac it needs FFmpeg and, on ARM, Cairo from Homebrew; LaTeX is optional (Ma
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. README.md against the claims and against the ManimCE README
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

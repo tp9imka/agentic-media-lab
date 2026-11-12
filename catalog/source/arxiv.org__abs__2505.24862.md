@@ -12,15 +12,15 @@ Tags: benchmark, story-visualization
 
 **Badge:** quoted, not read at the primary source (`quoted-secondary`): checked by skim.
 
-**Why:** The standard test for the storyboard-image stage of a pipeline, before any video model runs; Google's Co-Director post reports results on it.
+**Why:** A benchmark for the storyboard-image stage of a pipeline, before any video model runs; Google's Co-Director post reports results on it.
 
-**Last checked:** 2026-11-12, skim, by agent:kiro. Next check due 2027-11-12.
+**Last checked:** 2026-11-12, skim, by agent:codex. Next check due 2027-11-12.
 
 ## Fit notes
 
 Fit: medium. Level: intermediate. Maturity: -.
 
-It scores image sequences, not video, so it covers the keyframe stage only. The copy-paste metric catches pipelines that paste the reference image instead of drawing the character. Code and dataset links are on the abstract page; not opened here. Only the abstract page was read.
+It scores image sequences, not video, so it does not test the video clips themselves. One metric scores copy-paste behaviour; the abstract does not say how it works. Code and dataset links are on the abstract page; not opened here. Only the abstract page was read.
 
 ## Claims
 
@@ -40,7 +40,7 @@ It scores image sequences, not video, so it covers the keyframe stage only. The 
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth skim. abstract page only
+- Checked: 2026-11-12 by agent:codex, depth skim. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-11-12
 - Licence: unknown
 - URL status: live

@@ -12,7 +12,7 @@ Also known as: editly
 
 **Why:** A declarative format an agent can write without a frame model, with a `--fast` flag for a low-cost preview render.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -25,7 +25,7 @@ Fit: medium. Level: intro. Maturity: dormant.
 | levers | motion, audio, captions |
 | cost | free-local |
 
-Needs ffmpeg and ffprobe on PATH and a native headless-gl build; the README's troubleshooting is mostly native-module errors. Without `--fast`, every clip is converted to the first input's size and frame rate, which surprises mixed inputs. The last push to the repo was 2025-05-12 (GitHub API, read 2026-11-12), so I marked it dormant. It is a single-maintainer project by its README.
+Needs ffmpeg and ffprobe on PATH and, on Linux, may need extra headless-gl setup; the README's troubleshooting is mostly native-module errors. Without `--fast`, every clip is converted to the first input's size and frame rate unless you set them, which surprises mixed inputs. The last push to the repo was 2025-05-12 (GitHub API, read 2026-11-12), so I marked it dormant. It is a single-maintainer project by its README.
 
 ## Claims
 
@@ -35,7 +35,7 @@ Needs ffmpeg and ffprobe on PATH and a native headless-gl build; the README's tr
 
    Locator: README.md, Edit spec options table, fast. Source: <https://github.com/mifi/editly/blob/master/README.md>, retrieved 2026-11-12.
 
-2. Without fast mode, output size and frame rate come from the first input video.
+2. Without fast mode, output size and frame rate default to those of the first input video unless set explicitly.
 
    > Without `--fast`, it will default to using the **width**, **height** and **frame rate** from the **first** input video.
 
@@ -51,7 +51,7 @@ Needs ffmpeg and ffprobe on PATH and a native headless-gl build; the README's tr
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. README.md against the claims; push date from the GitHub API
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

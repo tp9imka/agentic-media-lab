@@ -12,7 +12,7 @@ Also known as: Kokoro, kokoro TTS, KPipeline
 
 **Why:** It gives an agent a free, local narration voice with commercial use allowed, small enough to run beside a video model.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -45,7 +45,7 @@ The Mac route is PyTorch MPS with a CPU fallback for unsupported ops, set by an 
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. kokoro GitHub README and Kokoro-82M model card against both claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: apache-2.0
 - URL status: live

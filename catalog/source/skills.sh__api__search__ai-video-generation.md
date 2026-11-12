@@ -12,7 +12,7 @@ Tags: install-counts, cloned-skills, supply-chain
 
 **Why:** A reader who sorts video skills by installs will land on these copies first; the listing itself shows that install rank is not evidence of quality or of who maintains the skill.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -22,7 +22,7 @@ Install counts are not copied here; data/observed.json carries them. Read on 202
 
 ## Claims
 
-1. The same skill id is listed under many unrelated owners, including the inference-sh org that the skill text names.
+1. The same skill id is listed under many owners, some of them GitHub forks of another listed repo, including the inference-sh org that the skill text names.
 
    > "id": "inference-sh/skills/ai-video-generation",
 
@@ -44,7 +44,7 @@ Install counts are not copied here; data/observed.json carries them. Read on 202
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. skills.sh search API JSON, GitHub repo metadata for seven listed repos, the 101-skills SKILL.md and the linked cli-install.md
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: unknown
 - URL status: live

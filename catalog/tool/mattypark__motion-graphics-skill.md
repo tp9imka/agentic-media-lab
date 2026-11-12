@@ -12,7 +12,7 @@ Also known as: motion-video-director
 
 **Why:** It is the candidate with the most explicit asset rules: a manifest with source and licence for every downloaded file, and no font shipped without a verified licence.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -25,7 +25,7 @@ Fit: medium. Level: intermediate. Maturity: active.
 | levers | asset, story, audio, motion |
 | cost | mixed |
 
-Asset search needs Pixabay, Freesound and Firecrawl keys. It adds the Playwright MCP through npx with @latest, which runs whatever version is newest; pin a version. It uses Pinterest, Behance and Dribbble for style references and says reference-only unless licensed; check that the agent keeps to that. The SKILL.md is 53 KB.
+Asset search through the API routes needs Pixabay, Freesound and Firecrawl keys; it also browses free-licence sites through the Playwright MCP. It adds the Playwright MCP through npx with @latest, which runs whatever version is newest; pin a version. It uses Pinterest, Behance and Dribbble for style references and says reference-only unless licensed; check that the agent keeps to that. The SKILL.md is 53 KB.
 
 ## Claims
 
@@ -51,7 +51,7 @@ Asset search needs Pixabay, Freesound and Firecrawl keys. It adds the Playwright
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. skills/motion-video-director/SKILL.md against the three claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: unknown
 - URL status: live

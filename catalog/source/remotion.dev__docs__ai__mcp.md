@@ -12,7 +12,7 @@ Also known as: Remotion MCP shutdown
 
 **Why:** A vendor's own account of choosing skills over an MCP server for code-driven video.
 
-**Last checked:** 2026-11-12, primary-read, by agent:driver. Next check due 2027-11-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-11-12.
 
 ## Fit notes
 
@@ -38,7 +38,7 @@ One vendor's experience with a documentation server. Hosted render and generatio
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:driver, depth primary-read. Remotion docs page against both claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-11-12
 - Licence: unknown
 - URL status: live

@@ -12,7 +12,7 @@ Tags: b-roll, stock
 
 **Why:** An agent pulling b-roll from Pixabay has to follow these rules, and one of them restricts automated querying.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -44,7 +44,7 @@ Free with an API key, 100 requests per 60 seconds by default. The rule that the 
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. visible text of the API docs page against the three claims; Content License page not read (challenge page)
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

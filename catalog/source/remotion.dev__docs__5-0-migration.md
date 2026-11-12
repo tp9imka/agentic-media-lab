@@ -2,7 +2,7 @@
 
 `source:remotion.dev/docs/5-0-migration` - source - <https://www.remotion.dev/docs/5-0-migration>
 
-Remotion's planned breaking changes for 5.0 (not released on 2026-11-12) and its telemetry page, which make render telemetry and a licence key mandatory for Company License and Automators customers.
+Remotion's planned breaking changes for 5.0 (not released on 2026-11-12) and its telemetry page, which make render telemetry and a licence key mandatory for Company License customers on the Automators option, with Creators exempt.
 
 Concepts: [Licences and territory](../../docs/glossary.md#licences-and-territory), [Code-driven video](../../docs/glossary.md#code-driven-video), [Automation](../../docs/glossary.md#automation)
 
@@ -10,19 +10,19 @@ Tags: remotion, telemetry, licence-change
 
 **Badge:** quoted, primary source read (`quoted-primary`): primary source read.
 
-**Why:** An automated video pipeline on Remotion is the 'Automators' case, so upgrading to 5.0 means sending render events to Remotion or arranging another way to report counts.
+**Why:** An automated video pipeline on Remotion is the 'Automators' case, so for a company on that option, upgrading to 5.0 means sending render events to Remotion or arranging another way to report counts.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
 Fit: high. Level: intermediate. Maturity: -.
 
-Updates tool:remotion-dev/remotion, whose fit_notes point to the 5.0 licence change. Free-licence users are not obliged to send telemetry, but client-side rendering always sends an event, including the end user's IP address, even without a licence key. renderFrames() and stitchFramesToVideo() do not report on their own, so a pipeline built on them must call registerUsageEvent() itself. Telemetry never fails a render, per the page. Pin Remotion 4.x if your company policy blocks outbound calls, until a reporting arrangement exists.
+Updates tool:remotion-dev/remotion, whose fit_notes point to the 5.0 licence change. Free-licence users are not obliged to send telemetry, but client-side rendering sends an event for every render that is not aborted, including the end user's IP address, even without a licence key. renderFrames() and stitchFramesToVideo() do not report on their own, so a pipeline built on them must call registerUsageEvent() itself. Telemetry never fails a render, per the page. Pin Remotion 4.x if your company policy blocks outbound calls, until a reporting arrangement exists.
 
 ## Claims
 
-1. Upgrading to 5.0 requires company licence holders to enable telemetry or arrange another way to deliver render counts.
+1. Upgrading to 5.0 requires company licence holders to enable telemetry or arrange another way to deliver render counts; the telemetry page exempts companies on the Remotion for Creators option.
 
    > If you upgrade to Remotion 5.0, you must enable telemetry if you are a company license holder or contact Remotion to arrange a plausible delivery of render counts.
 
@@ -34,7 +34,7 @@ Updates tool:remotion-dev/remotion, whose fit_notes point to the 5.0 licence cha
 
    Locator: license/telemetry, 5.0 section. Source: <https://www.remotion.dev/docs/license/telemetry>, retrieved 2026-11-12.
 
-3. Client-side rendering sends a telemetry event for every render even with no licence key, including the end user's IP address.
+3. Client-side rendering sends a telemetry event for every render that succeeds or fails, even with no licence key, including the end user's IP address; an aborted render sends none.
 
    > Client-side rendering APIs always send a telemetry event for every render, even if no licenseKey is set:
 
@@ -44,7 +44,7 @@ Updates tool:remotion-dev/remotion, whose fit_notes point to the 5.0 licence cha
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. remotion.dev 5-0-migration and license/telemetry visible text against the three claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: unknown
 - URL status: live

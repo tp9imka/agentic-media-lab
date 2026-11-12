@@ -10,7 +10,7 @@ Concepts: [Automation](../../docs/glossary.md#automation), [Scheduling and runti
 
 **Why:** The heaviest option here, but the one with explicit, documented rules for overlapping and late runs.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -43,7 +43,7 @@ Needs a Temporal server plus your own workers, which is a lot for one developer 
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. schedule.mdx from temporalio/documentation against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

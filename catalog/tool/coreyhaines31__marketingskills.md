@@ -12,7 +12,7 @@ Also known as: product-demo-recording
 
 **Why:** Screen demos are the most common developer clip, and this reference fixes their usual tells: an invisible cursor, captions covering the click, a blank first frame.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -25,7 +25,7 @@ Fit: medium. Level: intermediate. Maturity: active.
 | levers | captions, motion, asset |
 | cost | mixed |
 
-It tells the agent to set bypassCSP on the browser context and, on a non-localhost host, to drop the Secure cookie flag for the recording run. Do that only on a local or staging build, never against production. It also tells the agent never to take an API key pasted into chat, which is the opposite of the video-use README. The TTS step needs a paid key.
+It tells the agent to set bypassCSP on the browser context and, when a non-localhost host is served over plain HTTP, to drop the Secure cookie flag for the recording run or serve HTTPS instead. Do that only on a local or staging build, never against production. It also tells the agent never to take an API key pasted into chat, which is the opposite of the video-use README. The TTS step needs a paid key.
 
 ## Claims
 
@@ -35,7 +35,7 @@ It tells the agent to set bypassCSP on the browser context and, on a non-localho
 
    Locator: skills/video/references/product-demo-recording.md, step 5 Make the cursor visible. Source: <https://github.com/coreyhaines31/marketingskills/blob/HEAD/skills/video/references/product-demo-recording.md>, retrieved 2026-11-12.
 
-2. It sizes each scene caption at 50-80 characters.
+2. Its guidelines recommend scene captions of 50-80 characters.
 
    > - **Captions of 50-80 characters** read well and keep pauses short
 
@@ -51,7 +51,7 @@ It tells the agent to set bypassCSP on the browser context and, on a non-localho
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. skills/video/references/product-demo-recording.md against the three claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

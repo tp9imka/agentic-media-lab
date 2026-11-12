@@ -2,7 +2,7 @@
 
 `source:arxiv.org/abs/2606.20799` - source - <https://arxiv.org/abs/2606.20799>
 
-A training-free agent loop for multi-shot video: it generates the shots that best establish characters, objects and places first, crops each entity from accepted shots into a memory, checks each new shot with a VLM critic, and repairs failures by issue type.
+A training-free agent loop for multi-shot video: it generates the shots that best establish characters, objects and places first, crops entities from accepted shots into a memory if they pass quality checks, checks each new shot with a VLM critic, and repairs failures by issue type.
 
 Concepts: [Agentic pipelines](../../docs/glossary.md#agentic-pipelines), [Consistency](../../docs/glossary.md#consistency), [Review loop](../../docs/glossary.md#review-loop), [Local video models](../../docs/glossary.md#local-video-models)
 
@@ -12,9 +12,9 @@ Tags: entity-memory, shot-scheduling, vlm-critic
 
 **Badge:** quoted, primary source read (`quoted-primary`): primary source read.
 
-**Why:** It turns consistency into a scheduling and reference-management job that works with any reference-to-video model, including an open-weights one.
+**Why:** It turns consistency into a scheduling and reference-management job that works with any compatible text-to-video or reference-conditioned model, including an open-weights one.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-11-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-11-12.
 
 ## Fit notes
 
@@ -30,7 +30,7 @@ Primary backend is Vidu (paid); Kling and Wan2.1 + Phantom-14B were also run, so
 
    Locator: arXiv 2606.20799 HTML, overhead analysis. Source: <https://arxiv.org/html/2606.20799>, retrieved 2026-11-12.
 
-2. Each failure type has its own repair: identity mismatch => stronger or different reference; missing entities => explicit count in the prompt.
+2. Failure types trigger targeted repairs, for example: identity mismatch => stronger or different reference; missing or extra entities => explicit count and presence instructions in the prompt.
 
    > For example, identity mismatch can trigger stronger reference conditioning or a different retrieved reference; missing or extra entities can add explicit count and presence instructions to the revised prompt
 
@@ -46,7 +46,7 @@ Primary backend is Vidu (paid); Kling and Wan2.1 + Phantom-14B were also run, so
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. abstract, method, implementation, Table 1 text, overhead and conclusion
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-11-12
 - Licence: unknown
 - URL status: live

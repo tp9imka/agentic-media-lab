@@ -10,9 +10,9 @@ Also known as: GreenSock, gsap
 
 **Badge:** quoted, primary source read (`quoted-primary`): primary source read.
 
-**Why:** Most HTML video an agent writes moves with GSAP, so its licence travels with every HyperFrames clip.
+**Why:** Most HTML video an agent writes moves with GSAP, so its licence terms apply to every HyperFrames project that uses it.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -25,7 +25,7 @@ Fit: high. Level: intro. Maturity: established.
 | levers | motion |
 | cost | free-local |
 
-Commercial use costs nothing, including the plugins that used to be paid. The licence is not open source: it bans use in no-code visual animation builders that compete with Webflow, and Webflow can change the terms by posting new ones. A renderer must pause and seek GSAP timelines per frame; a tween left playing on the wall clock is what breaks HyperFrames and Remotion renders.
+Commercial use costs nothing, including the plugins that used to be paid. The licence is not open source: it bans use in no-code visual animation builders that compete with Webflow without prior written consent, and Webflow can change the terms by posting new ones. A renderer must pause and seek GSAP timelines per frame; a tween left playing on the wall clock is what breaks HyperFrames and Remotion renders.
 
 ## Claims
 
@@ -35,7 +35,7 @@ Commercial use costs nothing, including the plugins that used to be paid. The li
 
    Locator: gsap.com/standard-license, FAQ. Source: <https://gsap.com/standard-license>, retrieved 2026-11-12.
 
-2. Use inside no-code visual animation tools that compete with Webflow is prohibited.
+2. Use inside no-code visual animation tools that compete with Webflow is prohibited without prior written consent.
 
    > "Prohibited Uses" means any implementation and/or use of GSAP Products in tools that allow users to build visual animations without code that encourages, induces, or materially assists in creating a solution that competes with Webflow’s visual animation building capabilities.
 
@@ -51,7 +51,7 @@ Commercial use costs nothing, including the plugins that used to be paid. The li
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. gsap.com/standard-license (effective 2025-04-30, modified 2025-05-30) and README.md against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: unknown
 - URL status: live

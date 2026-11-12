@@ -14,7 +14,7 @@ Tags: screen-recording, auto-zoom
 
 **Why:** It covers recording and screen-recording polish from one CLI an agent can call, and its MCP tools let the agent read what a take contains without watching it.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -53,7 +53,7 @@ Free and local for recording, editing, captions and export; sharing uploads to a
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. README.md (main) against the three claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

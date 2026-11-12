@@ -12,7 +12,7 @@ Also known as: Replicate, replicate-mcp, mcp.replicate.com
 
 **Why:** An agent in Claude Code can search Replicate's catalogue and run a model by name without hand-written client code.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -25,7 +25,7 @@ Fit: medium. Level: intermediate. Maturity: active.
 | levers | orchestration, gen-model-craft |
 | cost | paid |
 
-The remote server asks for a Replicate API key in a web sign-in flow; the local route runs npx -y replicate-mcp, which downloads and runs the package each time. Not run here. Replicate's per-model prices were not read in this lane, so no price is recorded. The page also links agent skills and an llms.txt, not opened.
+The remote server asks for a Replicate API key in a web sign-in flow; the local route runs npx -y replicate-mcp, which downloads and runs the npm package without a separate install. Not run here. Replicate's per-model prices were not read in this lane, so no price is recorded. The page also links agent skills and an llms.txt, not opened.
 
 ## Claims
 
@@ -45,7 +45,7 @@ The remote server asks for a Replicate API key in a web sign-in flow; the local 
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. Replicate MCP reference page against both claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: unknown
 - URL status: live

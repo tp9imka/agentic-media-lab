@@ -12,7 +12,7 @@ Also known as: captions-media-accessibility, media-qc-delivery, character-design
 
 **Why:** It is the only candidate found that covers caption limits, delivery specs and character continuity in one place, with a caption validator that turns line length and reading speed into numbers.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -25,7 +25,7 @@ Fit: high. Level: intermediate. Maturity: active.
 | levers | captions, delivery, consistency, audio, review-loop |
 | cost | free-local |
 
-Load single skills, not the whole library: each SKILL.md is 25-30 KB, so three of them fill a lot of context. The caption validator checks timing and line counts only; its own text says it does not judge accuracy, contrast or placement. The platform specs inside are dated by the author (verified 2026-07-10 in the text); re-check them before a paid ad delivery. I did not run any of its scripts. The README links to calesthio/OpenMontage, which is the same project as tool:openmontageinc/openmontage.
+Load single skills, not the whole library: the three SKILL.md files read here are 25-30 KB each, so three of them fill a lot of context. The caption validator checks file structure, timing, cue text, line counts, characters per line and reading speed; its own text says it does not judge accuracy, contrast or placement. The platform specs inside are dated by the author (verified 2026-07-10 in the text); re-check them before a paid ad delivery. I did not run any of its scripts. The README links to calesthio/OpenMontage, which is the same project as tool:openmontageinc/openmontage.
 
 ## Claims
 
@@ -41,7 +41,7 @@ Load single skills, not the whole library: each SKILL.md is 25-30 KB, so three o
 
    Locator: skills/production/governance-delivery/media-qc-delivery/SKILL.md, export and encode rules. Source: <https://github.com/calesthio/generative-media-skills/blob/HEAD/skills/production/governance-delivery/media-qc-delivery/SKILL.md>, retrieved 2026-11-12.
 
-3. Its continuity skill marks a character's features as locked, so they may not change across shots unless the user approves.
+3. Its continuity skill sets a tolerance per feature; a feature marked Locked must stay constant unless the user approves a redesign.
 
    > **Locked**: must remain constant unless user approves a redesign.
 
@@ -51,7 +51,7 @@ Load single skills, not the whole library: each SKILL.md is 25-30 KB, so three o
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. captions-media-accessibility, media-qc-delivery and character-design-continuity SKILL.md files and the README against the three claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

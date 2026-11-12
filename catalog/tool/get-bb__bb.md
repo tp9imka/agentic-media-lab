@@ -12,7 +12,7 @@ Also known as: get-bb, bb-app, bb automations
 
 **Why:** The closest fit found for a single developer who wants a scheduled Claude Code or Codex run on their own Mac, with run history and a sidebar to pause or re-run it.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -51,7 +51,7 @@ Free to run locally; agent runs bill to the provider you already pay for. The sc
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. README Telemetry section, automations SKILL.md, references/creation.md and PLUGIN_OVERVIEW.md against the claims; sweep.ts, data.ts, rpc-types.ts read for fit_notes only
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

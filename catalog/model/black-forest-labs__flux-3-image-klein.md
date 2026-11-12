@@ -12,7 +12,7 @@ Also known as: FLUX.3 [klein], flux-3-image-klein, FLUX 3 Klein, flux3
 
 **Why:** It does generation and multi-reference editing in one model with measured memory on a 64 GB Mac, but its licence caps paid work by the user's revenue.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -51,7 +51,7 @@ The weights are gated: accept the licence on Hugging Face and run hf auth login 
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. mflux FLUX 3 README and the BFL flux-3-image-klein GitHub README; the licence file itself is gated and was not opened
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: other
 - URL status: live

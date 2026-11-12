@@ -12,17 +12,17 @@ Tags: hyperframes, determinism
 
 **Why:** HyperFrames' skill tells the agent every render is identical; this report, with a repro and a named unmerged fix, shows parallel renders can differ between runs.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
 Fit: high. Level: intermediate. Maturity: -.
 
-Gotcha for agents: the render exits normally, so only a frame check catches it. Until the issue closes, render final output with `--workers 1` or scan for blank frames at worker shard boundaries (frame = worker index x total frames / workers). A related open issue, 5888 (0.8.145), reports the same class with GSAP and PNG sequences. The vendor's determinism page says output is identical but also says a local render can shift by a pixel between machines and recommends `--docker` for exact output. The repro was not run here.
+Gotcha for agents: the report finds the blank frames with an ffmpeg alpha scan of the output. Until the issue closes, render final output with `--workers 1` or scan for blank frames at worker shard boundaries (frame = worker index x total frames / workers). A related open issue, 5888 (0.8.145), reports the same class with GSAP and PNG sequences. The vendor's determinism page says output is identical but also says a local render can shift by a pixel between machines and recommends `--docker` for exact output. The repro was not run here.
 
 ## Claims
 
-1. With 4 parallel workers in screenshot capture mode, frames at each worker's first frame came out fully transparent, intermittently; one worker gave no blank frames.
+1. With 4 parallel workers in screenshot capture mode, the first frame of workers 1-3 came out fully transparent, intermittently; worker 0's first frame equals t=0, so the scan cannot show it.
 
    > `--workers 1` produces zero blank frames; the anomaly is deterministic in position across parallel runs but intermittent (some runs clean), matching the paint-settle race described in #2477.
 
@@ -44,7 +44,7 @@ Gotcha for agents: the render exits normally, so only a frame check catches it. 
 
 - Source type: community
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. issue 4435 body via gh issue view, docs/concepts/determinism.mdx and SKILL.md line 12 on main
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: Apache-2.0
 - URL status: live

@@ -12,7 +12,7 @@ Also known as: /loop, claude code desktop scheduled tasks
 
 **Why:** The comparison table answers where each Claude Code schedule runs and what must stay on, in one place.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -44,7 +44,7 @@ Fit: high. Level: intro. Maturity: -.
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. scheduled-tasks.md (markdown version) against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: unknown
 - URL status: live

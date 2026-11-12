@@ -12,7 +12,7 @@ Also known as: browser-use video-use
 
 **Why:** The clearest example of a skill that inspects its own output at every cut before handing it over.
 
-**Last checked:** 2026-11-12, primary-read, by agent:driver. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -25,7 +25,7 @@ Fit: medium. Level: intermediate. Maturity: active.
 | levers | motion, audio, captions, review-loop |
 | cost | paid |
 
-Transcription uses a paid ElevenLabs key, so it is not a free local path as shipped. Its README tells the agent to ask you to paste the key into chat; set it in the environment yourself.
+Transcription uses a paid ElevenLabs key, so it is not a free local path as shipped. Its SKILL.md tells the agent, if the key is missing, to ask you to paste one and write it to .env; set it in the environment yourself.
 
 ## Claims
 
@@ -39,7 +39,7 @@ Transcription uses a paid ElevenLabs key, so it is not a free local path as ship
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:driver, depth primary-read. SKILL.md against the claim
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

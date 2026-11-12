@@ -12,7 +12,7 @@ Also known as: comfyanonymous/ComfyUI, comfy-cli, comfy run
 
 **Why:** Many model vendors ship ComfyUI workflows first, and comfy-cli gives an agent a command to run them locally on a Mac.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -51,7 +51,7 @@ On a Mac it runs on PyTorch MPS, and the README asks for a nightly PyTorch build
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. ComfyUI README (Apple Mac silicon section) and comfy-cli README against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: GPL-3.0
 - URL status: live

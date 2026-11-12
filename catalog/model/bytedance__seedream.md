@@ -2,7 +2,7 @@
 
 `model:bytedance/seedream` - model - <https://ai.byteplus.com/ark/docs/model-pricing.md>
 
-ByteDance's image generation and editing family on BytePlus ModelArk, priced per output image.
+ByteDance's image generation and editing family on BytePlus ModelArk, priced per output image; the Pro id also charges $0.003 per input image after the first.
 
 Concepts: [Image models](../../docs/glossary.md#image-models), [Cost](../../docs/glossary.md#cost)
 
@@ -12,7 +12,7 @@ Also known as: dola-seedream-5-0-pro-260628, dola-seedream-5-0-flash-260915, see
 
 **Why:** The flash id is one of the cheapest first-party image prices found here, and input images are free on most ids.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -29,7 +29,7 @@ Pro charges by output pixel count: above 2.61 million pixels (higher than 1.5K) 
 
 ## Claims
 
-1. dola-seedream-5-0-pro-260628 costs $0.045 per image up to 2.61 million pixels and $0.09 above.
+1. For single-image generation, dola-seedream-5-0-pro-260628 costs $0.045 per image up to 2.61 million pixels and $0.09 above.
 
    > * Up to 2.61 million pixels (1.5K or lower): $0.045 |
 
@@ -45,7 +45,7 @@ Pro charges by output pixel count: above 2.61 million pixels (higher than 1.5K) 
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. BytePlus ModelArk pricing page, markdown version, image section, against both claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live
