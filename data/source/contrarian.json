@@ -383,63 +383,6 @@
       ]
     },
     {
-      "id": "source:arxiv.org/abs/2605.15199",
-      "kind": "source",
-      "title": "EntityBench: Towards Entity-Consistent Long-Range Multi-Shot Video Generation",
-      "url": "https://arxiv.org/abs/2605.15199",
-      "summary": "A benchmark of 140 episodes (2,491 shots) from real narrative media that tracks characters, objects and locations across up to 50 shots, with a memory-based baseline.",
-      "why_it_matters": "Multi-shot clips made by chaining generated shots lose their characters as the gap between appearances grows; this paper measures that drift and names the fix that scored best.",
-      "concepts": [
-        "concept:consistency",
-        "concept:evaluation",
-        "concept:agentic-pipelines"
-      ],
-      "level": "advanced",
-      "fit": "medium",
-      "fit_notes": "Plan shots so a recurring character or prop is regenerated from a stored reference image, not from the previous shot or a text description; that is what the paper's best method does. The abstract does not name which hosted models were tested, so it does not rank Seedance, Wan or others; the full paper and project page were not opened. No hub record claims long-range consistency outright, so this is linked by concept, not by 'contradicts'.",
-      "related": [],
-      "source_type": "independent-secondary",
-      "corroboration": "single-source",
-      "lane": "contrarian",
-      "claims": [
-        {
-          "text": "In existing methods, entity consistency across shots falls sharply as the distance between an entity's appearances grows.",
-          "quote": "Experiments show that cross-shot entity consistency degrades sharply with recurrence distance in existing methods,",
-          "locator": "arXiv abstract, results",
-          "url": "https://arxiv.org/abs/2605.15199",
-          "retrieved": "2026-11-12",
-          "via": null
-        },
-        {
-          "text": "Storing a verified reference per entity before generation gave the highest character fidelity among the methods tested.",
-          "quote": "explicit per-entity memory yields the highest character fidelity (Cohen's d = +2.33) and presence among methods evaluated.",
-          "locator": "arXiv abstract, results",
-          "url": "https://arxiv.org/abs/2605.15199",
-          "retrieved": "2026-11-12",
-          "via": null
-        }
-      ],
-      "checked": {
-        "date": "2026-11-12",
-        "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "arXiv abstract page against the two claims",
-        "source_sha256": "ec0d448d33ad87d10bec3b057f730ff5cc5fb429133697a1a1df663fe3bc3388",
-        "next_due": "2027-11-12"
-      },
-      "url_status": "live",
-      "status": "current",
-      "tags": [
-        "multi-shot"
-      ],
-      "citation": {
-        "type": "article",
-        "doi": "10.48550/arXiv.2605.15199",
-        "url": "https://arxiv.org/abs/2605.15199",
-        "accessed": "2026-11-12"
-      }
-    },
-    {
       "id": "source:arxiv.org/abs/2605.15585",
       "kind": "source",
       "title": "See Before You Code: Learning Visual Priors for Spatially Aware Educational Animation Generation (OmniManim)",

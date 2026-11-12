@@ -1,0 +1,384 @@
+{
+  "schema_version": 1,
+  "lane": "pipelines-research",
+  "records": [
+    {
+      "id": "tool:hkuds/vimax",
+      "kind": "tool",
+      "title": "ViMax",
+      "url": "https://github.com/HKUDS/ViMax",
+      "summary": "A multi-agent video framework from HKUDS that turns an idea, a screenplay or a novel into a multi-scene, multi-shot video. Agents write the script, plan shots and a camera dependency graph, generate keyframes and clips, pick the best keyframe with a VLM judge, and assemble the cut.",
+      "why_it_matters": "The most complete open-source idea-to-video pipeline found in this lane, with a paper that states its cost per story and admits it depends on proprietary models.",
+      "concepts": [
+        "concept:agentic-pipelines",
+        "concept:story-and-decomposition",
+        "concept:consistency",
+        "concept:review-loop",
+        "concept:generated-footage"
+      ],
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Needs API keys for an LLM, an image model and a video model; the paper default is Gemini-3-Flash, Gemini-3-Pro-Image and Veo 3.1, so a run is paid. The paper also ran Wan2.2 as the clip backend, the only open-weights route it reports. The README lists Linux and Windows as the OS; macOS is not listed and was not tried here. Its VLM check only chooses among keyframes, it does not re-check the finished clips, and the paper says audio and dialogue sync are not handled. The AutoCameo mode puts a person from a photo into the story; this hub does not cover that mode. Whether ViMax-Bench (35 GPT-5.2-written stories) is downloadable was not checked. Not run here.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "tool_type": "framework",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "orchestration",
+        "story",
+        "consistency",
+        "review-loop"
+      ],
+      "cost": "paid",
+      "claims": [
+        {
+          "text": "At the paper's default setting (best-of-2 keyframes) one ViMax-Bench story costs about 17.50 USD in API fees and 405 s end to end.",
+          "quote": "Best-of-2 yields Overall GC of 0.5571 at an average cost of $17.500 and 405s per task.",
+          "locator": "arXiv 2606.07649 HTML, sec. on Best-of-k ablation",
+          "url": "https://arxiv.org/html/2606.07649",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The VLM judge picks the best of k keyframes per shot, not the best of several videos.",
+          "quote": "This selection operates at the keyframe stage, not as parallel video generation.",
+          "locator": "arXiv 2606.07649 HTML, sec. on Best-of-k ablation",
+          "url": "https://arxiv.org/html/2606.07649",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The authors state that reasoning, keyframes, video and quality control all run on proprietary models, so results move when those models update.",
+          "quote": "First, the system depends on proprietary foundation models for reasoning, keyframe and video generation, and VLM-based quality control, making performance sensitive to model updates.",
+          "locator": "arXiv 2606.07649 HTML, Limitations",
+          "url": "https://arxiv.org/html/2606.07649",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "aliases": [
+        "ViMax agentic video generation",
+        "ViMax-Bench",
+        "Idea2Video",
+        "Script2Video",
+        "Novel2Video"
+      ],
+      "modes": [
+        "t2v",
+        "i2v",
+        "t2i"
+      ],
+      "video_types": [
+        "short-film"
+      ],
+      "tags": [
+        "multi-shot",
+        "storyboard",
+        "vlm-judge",
+        "best-of-k"
+      ],
+      "citation": {
+        "type": "article",
+        "author": [
+          "Lingxuan Huang",
+          "Sizhe He",
+          "Hengji Zhou",
+          "Liqiang Nie",
+          "Lianghao Xia",
+          "Chao Huang"
+        ],
+        "issued": "2026-06-02",
+        "container_title": "arXiv preprint",
+        "doi": "10.48550/arXiv.2606.07649",
+        "url": "https://arxiv.org/abs/2606.07649",
+        "accessed": "2026-11-12"
+      },
+      "related": [
+        {
+          "id": "source:arxiv.org/abs/2503.07314",
+          "rel": "alternative_to",
+          "note": "MovieAgent is a baseline in ViMax Table 1 (GC 0.4716 vs 0.5571)."
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README quick start and features; paper abstract, method, ablations, limitations against the claims",
+        "source_sha256": "5e772aff1df631e0de2e0d0d8d108001649dcfcb26a41246049926af7d435f69",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "pipelines-research"
+    },
+    {
+      "id": "tool:showlab/code2video",
+      "kind": "tool",
+      "title": "Code2Video",
+      "url": "https://github.com/showlab/Code2Video",
+      "summary": "A three-agent system from Show Lab (NUS) that writes Manim code for educational videos: a Planner builds the storyboard and assets, a Coder writes and auto-fixes the Python, a Critic uses a VLM on rendered frames to fix layout. It ships the MMMC benchmark of 117 topics.",
+      "why_it_matters": "The reference pipeline for agent-written explainer video in code, and the base that later Manim checking work (SGA) is measured on.",
+      "concepts": [
+        "concept:agentic-pipelines",
+        "concept:code-driven-video",
+        "concept:review-loop",
+        "concept:evaluation"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "high",
+      "fit_notes": "Renders locally with Manim Community v0.19.0, so no video-model fee; the cost is LLM and VLM tokens. It needs an LLM key for Planner and Coder, a Gemini key for the Critic, and optionally an IconFinder key for icons. The SGA paper (source:arxiv.org/abs/2607.18116) measured 6.4 minutes per topic with GPT-5.1 and 8.8 minutes with the VLM critic on. It drives its own scripts, not Claude Code or Codex. Not run here.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "tool_type": "framework",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "orchestration",
+        "story",
+        "review-loop",
+        "design"
+      ],
+      "cost": "paid",
+      "claims": [
+        {
+          "text": "The README says Manim code quality was best with Claude-4-Opus as the LLM.",
+          "quote": "Best Manim code quality achieved with **Claude-4-Opus**.",
+          "locator": "README.md, 2. Configure LLM API Keys",
+          "url": "https://github.com/showlab/Code2Video",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The Critic checks layout with a VLM and visual anchor prompts on the rendered output.",
+          "quote": "(iii) Critic, which leverages vision-language models (VLM) with visual anchor prompts to refine spatial layout and ensure clarity.",
+          "locator": "arXiv 2510.01174 abstract",
+          "url": "https://arxiv.org/abs/2510.01174",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The authors report a 40% gain over direct code generation on their own benchmark.",
+          "quote": "achieving 40% improvement over direct code generation and producing videos comparable to human-crafted tutorials",
+          "locator": "arXiv 2510.01174 abstract",
+          "url": "https://arxiv.org/abs/2510.01174",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "aliases": [
+        "MMMC benchmark",
+        "TeachQuiz"
+      ],
+      "video_types": [
+        "explainer",
+        "diagram"
+      ],
+      "tags": [
+        "manim",
+        "vlm-critic"
+      ],
+      "citation": {
+        "type": "article",
+        "author": [
+          "Yanzhe Chen",
+          "Kevin Qinghong Lin",
+          "Mike Zheng Shou"
+        ],
+        "issued": "2025-10-01",
+        "container_title": "ICML 2026 (per README); arXiv preprint",
+        "doi": "10.48550/arXiv.2510.01174",
+        "url": "https://arxiv.org/abs/2510.01174",
+        "accessed": "2026-11-12"
+      },
+      "related": [
+        {
+          "id": "tool:manimcommunity/manim",
+          "rel": "depends_on"
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README setup and API key sections; paper abstract",
+        "source_sha256": "d5fa6e47c8919f0905b00cdc8eec96d37f92b80b7db497695ae6da62f659cdd9",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "pipelines-research"
+    },
+    {
+      "id": "tool:harry0703/moneyprinterturbo",
+      "kind": "tool",
+      "title": "MoneyPrinterTurbo",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "summary": "A topic-to-short-video app: an LLM writes the script, the app matches stock or generated footage, adds TTS voiceover, subtitles and music, and renders the file. It runs as WebUI, API, CLI or through an agent skill.",
+      "why_it_matters": "A widely used template-style pipeline that can run on free stock footage and free TTS; it has no shot planning for consistency and no step that checks the output.",
+      "concepts": [
+        "concept:agentic-pipelines",
+        "concept:audio-and-captions",
+        "concept:cost",
+        "concept:popularity-and-trust"
+      ],
+      "level": "intro",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Cheapest route in this lane: stock footage from Pexels or Pixabay and Edge TTS, plus an LLM key. The skill route has the agent fetch a remote SKILL.md, install the app and ask for missing API keys during the chat; read that SKILL.md first and set keys in config.toml yourself. The README is dense with sponsor and referral links. It also offers voice cloning from reference audio; this hub does not cover that feature. Nothing in the README inspects the render before delivery. Not run here.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "tool_type": "framework",
+      "agents": [
+        "any-skill"
+      ],
+      "levers": [
+        "orchestration",
+        "audio",
+        "captions",
+        "asset",
+        "delivery"
+      ],
+      "cost": "mixed",
+      "claims": [
+        {
+          "text": "From a topic or keyword it writes the script, matches footage, adds subtitles and music and renders a short video.",
+          "quote": "Provide a video <b>topic</b> or <b>keyword</b>, and MoneyPrinterTurbo will generate the script, match footage, create subtitles and background music, and produce an HD short video.",
+          "locator": "README-en.md, header",
+          "url": "https://github.com/harry0703/MoneyPrinterTurbo/blob/main/README-en.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A GPU is optional; it only speeds up local transcription and processing.",
+          "quote": "A GPU is not required, but it is recommended if you want faster local transcription, faster video processing, or smoother batch generation",
+          "locator": "README-en.md, requirements",
+          "url": "https://github.com/harry0703/MoneyPrinterTurbo/blob/main/README-en.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The agent route installs the app from a remote skill file and asks the user for missing API keys; it supports macOS and Windows.",
+          "quote": "It will ask only for required API keys that are not already configured. This workflow currently supports macOS and Windows.",
+          "locator": "README-en.md, Generate Videos with an AI Agent",
+          "url": "https://github.com/harry0703/MoneyPrinterTurbo/blob/main/README-en.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "modes": [
+        "tts",
+        "stt",
+        "t2v",
+        "t2i"
+      ],
+      "video_types": [
+        "reel",
+        "explainer"
+      ],
+      "tags": [
+        "stock-footage",
+        "edge-tts",
+        "short-video"
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "English README features, requirements and agent workflow sections",
+        "source_sha256": "2cdbbcfa59e42512189d12dbd5eaf0fec9cd877df7f3bed262545ad3aae3d935",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "pipelines-research"
+    },
+    {
+      "id": "tool:seme-org/open-director",
+      "kind": "tool",
+      "title": "OpenDirector",
+      "url": "https://github.com/seme-org/open-director",
+      "summary": "A self-hosted Docker studio where nine LangGraph agents (research, script, art style, storyboard, character, location, voice, music, media) turn one sentence into a storyboard of generated stills with voiceover and music, then render a video.",
+      "why_it_matters": "Shows the reference-image route to character consistency in a small, readable stack, and names the model setting that silently breaks it.",
+      "concepts": [
+        "concept:agentic-pipelines",
+        "concept:story-and-decomposition",
+        "concept:consistency",
+        "concept:still-images"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Paid parts: a WaveSpeed key for images and an OpenAI-compatible LLM (default gpt-4o-mini; Ollama is listed). The nine agents include no reviewer, so nothing checks the frames. The pipeline in the README generates images, not video-model clips. The README calls Edge TTS local; Edge TTS is usually a Microsoft online voice service (not verified here). docker compose ships fixed default MinIO credentials; change them before exposing the host. Not run here.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "tool_type": "framework",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "orchestration",
+        "story",
+        "consistency",
+        "audio"
+      ],
+      "cost": "mixed",
+      "claims": [
+        {
+          "text": "Storyboard frames that show a character must go through an image-to-image or edit model so the character reference is used.",
+          "quote": "OpenDirector uses WaveSpeed for image generation. Character and location plates use a text-to-image model, while storyboard frames with character references must use an image-to-image/edit model so reference images are honored.",
+          "locator": "README.md, Media Generation",
+          "url": "https://github.com/seme-org/open-director",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Setting the image-to-image model to the plain nano-banana alias sends frames to a text-to-image endpoint that can ignore character references.",
+          "quote": "Do not set `WAVESPEED_IMAGE_TO_IMAGE_MODEL` to `nano-banana`: that alias routes to a text-to-image endpoint and can ignore character reference images.",
+          "locator": "README.md, Media Generation",
+          "url": "https://github.com/seme-org/open-director",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The default MinIO console runs with fixed credentials.",
+          "quote": "| MinIO Console | http://localhost:9001 | `opendirector` / `opendirector-secret` |",
+          "locator": "README.md, Default services table",
+          "url": "https://github.com/seme-org/open-director",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "modes": [
+        "t2i",
+        "i2i",
+        "tts"
+      ],
+      "video_types": [
+        "short-film",
+        "reel"
+      ],
+      "tags": [
+        "langgraph",
+        "docker",
+        "storyboard"
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README pipeline, media generation, LLM and services sections",
+        "source_sha256": "761ce2662c1295ec211935e6cd17b83aea0c94307d58a4c95b3301b96c0bcab9",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "pipelines-research"
+    }
+  ]
+}

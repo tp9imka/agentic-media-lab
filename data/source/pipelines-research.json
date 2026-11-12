@@ -1,0 +1,875 @@
+{
+  "schema_version": 1,
+  "lane": "pipelines-research",
+  "records": [
+    {
+      "id": "source:arxiv.org/abs/2503.07314",
+      "kind": "source",
+      "title": "MovieAgent: Automated Movie Generation via Multi-Agent CoT Planning",
+      "url": "https://arxiv.org/abs/2503.07314",
+      "summary": "Show Lab paper and code: from a script synopsis and a character bank, LLM agents acting as director, screenwriter, storyboard artist and location manager plan scenes and shots, then image and video models render them with subtitles and audio.",
+      "why_it_matters": "An early multi-agent movie pipeline (March 2025) that later systems (ViMax, Co-Director) use as a baseline and beat.",
+      "concepts": [
+        "concept:agentic-pipelines",
+        "concept:story-and-decomposition",
+        "concept:consistency"
+      ],
+      "level": "advanced",
+      "fit": "low",
+      "fit_notes": "Consistency comes from per-character customisation (ROICtrl with a trained ED-LoRA per movie), so each new cast needs photos and a LoRA; the demo weights are for a commercial film's characters. The plan has no verifier step. Later papers score it below themselves: ViMax GC 0.4716 vs 0.5571, Co-Director 65.3 vs 81.4, both run by those rival authors. Needs a GPT-4o key; the image and video models are open weights. Code not run here.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "The planning is split across LLM agents named for film roles.",
+          "quote": "By employing multiple LLM agents to simulate the roles of a director, screenwriter, storyboard artist, and location manager, MovieAgent streamlines the production pipeline.",
+          "locator": "arXiv 2503.07314 abstract",
+          "url": "https://arxiv.org/abs/2503.07314",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The supported model set is GPT-4o for planning, ROICtrl for character images and SVD or HunyuanVideo image-to-video for clips.",
+          "quote": "| GPT4-o               | ROICtrl                   | SVD/HunyuanVideo_I2V             |",
+          "locator": "github.com/showlab/MovieAgent README, Supported Model Zoo",
+          "url": "https://github.com/showlab/MovieAgent",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Each character needs reference photos and an audio file in the input folder.",
+          "quote": "First, you need to prepare the `script synopsis of movie` and  `photo,audio of character` as follow:",
+          "locator": "github.com/showlab/MovieAgent README, Model and Data Preparation",
+          "url": "https://github.com/showlab/MovieAgent",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "aliases": [
+        "MovieAgent"
+      ],
+      "tags": [
+        "multi-shot",
+        "film-roles"
+      ],
+      "citation": {
+        "type": "article",
+        "author": [
+          "Weijia Wu",
+          "Zeyu Zhu",
+          "Mike Zheng Shou"
+        ],
+        "issued": "2025-03-10",
+        "container_title": "arXiv preprint",
+        "doi": "10.48550/arXiv.2503.07314",
+        "url": "https://arxiv.org/abs/2503.07314",
+        "accessed": "2026-11-12"
+      },
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "abstract, README model zoo and data preparation",
+        "source_sha256": "b34cb0bce317dee9bb7e2c4bb7ef042a25f413f6261061a7ab388ad08cd18091",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "pipelines-research"
+    },
+    {
+      "id": "source:arxiv.org/abs/2512.22536",
+      "kind": "source",
+      "title": "CoAgent: Collaborative Planning and Consistency Agent for Coherent Video Generation",
+      "url": "https://arxiv.org/abs/2512.22536",
+      "summary": "A plan-synthesize-verify-edit pipeline: a Storyboard Planner writes shot plans, a Global Context Manager keeps entity memory, Wan2.1 renders each shot, a Verifier Agent scores it and triggers regeneration below a threshold, and a pacing-aware editor sets rhythm and transitions.",
+      "why_it_matters": "It reports how often the verify-and-regenerate loop fires and how many retries it needs, which is the number to budget against.",
+      "concepts": [
+        "concept:agentic-pipelines",
+        "concept:review-loop",
+        "concept:consistency",
+        "concept:evaluation"
+      ],
+      "level": "advanced",
+      "fit": "medium",
+      "fit_notes": "The clip model is open-weights Wan2.1, but the planner (Gemini2.5-Flash) and verifier and memory (GPT-4o) are paid APIs. Retry cap is 3; the paper reports 98% of shots pass within it. Scores are VBench and VideoScore, which measure per-clip quality more than cross-shot identity (see source:arxiv.org/abs/2605.15199). No code link was found in the paper text read here.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "72% of shots pass the verifier first time; the rest need about 1.4 more generations on average.",
+          "quote": "Pass Rate: On average, 72% of shots pass on the first attempt",
+          "locator": "arXiv 2512.22536 HTML, 7.3 Regeneration Efficiency Analysis",
+          "url": "https://arxiv.org/html/2512.22536",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Wrapping Wan2.1 in the agent loop raised its VideoScore visual quality from 2.788 to 2.953 and text-video alignment from 2.550 to 2.731.",
+          "quote": "we improve Visual Quality from 2.788 to 2.953 (+5.9%) and Text-Video Alignment from 2.550 to 2.731 (+7.1%)",
+          "locator": "arXiv 2512.22536 HTML, comparison with foundation models, Table 2",
+          "url": "https://arxiv.org/html/2512.22536",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The authors say the system still makes physics errors such as objects passing through each other.",
+          "quote": "the system occasionally produces ”physics hallucinations,” such as solid objects passing through one another.",
+          "locator": "arXiv 2512.22536 HTML, 8.2 Limitations",
+          "url": "https://arxiv.org/html/2512.22536",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "aliases": [
+        "CoAgent"
+      ],
+      "tags": [
+        "verifier",
+        "regeneration",
+        "wan"
+      ],
+      "citation": {
+        "type": "article",
+        "author": [
+          "Qinglin Zeng",
+          "Kaitong Cai",
+          "Ruiqi Chen",
+          "Qinhan Lv",
+          "Keze Wang"
+        ],
+        "issued": "2025-12-27",
+        "container_title": "arXiv preprint",
+        "doi": "10.48550/arXiv.2512.22536",
+        "url": "https://arxiv.org/abs/2512.22536",
+        "accessed": "2026-11-12"
+      },
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "abstract, implementation details, Table 2 text, regeneration analysis and limitations",
+        "source_sha256": "dd87e6ffcc2d98be97bd5dfbe3362a9ed7a589200c9c2647e5cb69f826af1277",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "pipelines-research"
+    },
+    {
+      "id": "source:arxiv.org/abs/2601.17737",
+      "kind": "source",
+      "title": "The Script is All You Need: ScripterAgent and DirectorAgent for dialogue-to-cinematic video",
+      "url": "https://arxiv.org/abs/2601.17737",
+      "summary": "Tencent paper: ScripterAgent (a trained model) turns dialogue into a shot-level cinematic script, DirectorAgent splits it into model-sized segments and chains them by last frame, and CriticAgent (gemini-2.5-pro) scores scripts and videos. Adds ScriptBench and a Visual-Script Alignment metric.",
+      "why_it_matters": "Its DirectorAgent rules (cut at shot boundaries, fit each segment to the model window with a 10% buffer, feed the last frame forward) are a technique any pipeline can copy.",
+      "concepts": [
+        "concept:agentic-pipelines",
+        "concept:story-and-decomposition",
+        "concept:consistency",
+        "concept:model-prompting"
+      ],
+      "level": "advanced",
+      "fit": "high",
+      "fit_notes": "The last-frame relay needs a model with image-to-video or first-frame input; the paper ran it on Sora2-Pro, Veo3.1, Kling2.6, Wan2.6, Seedance1.5-Pro and HYVideo1.5. The script model is a trained one; training is out of this hub's scope, so read it for the segmentation rules. The paper lists github.com/Tencent/digitalhuman (ScriptAgent folder) as code; not opened here. Lip sync is a stated weak spot.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "DirectorAgent segments at shot boundaries and conditions each segment on the last frame of the one before.",
+          "quote": "This strategy combines (1) intelligent, shot-aware segmentation that respects cinematographic boundaries with (2) a frame-anchoring mechanism that conditions each new segment on the final state of the previous one.",
+          "locator": "arXiv 2601.17737 HTML, DirectorAgent",
+          "url": "https://arxiv.org/html/2601.17737",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Each segment is sized to the video model's generation window with a 10% safety margin.",
+          "quote": "Duration Adaptation: The total duration of a scene is constrained to fit within the target model’s generation window, with a 10% safety buffer.",
+          "locator": "arXiv 2601.17737 HTML, Intelligent Shot-Based Segmentation",
+          "url": "https://arxiv.org/html/2601.17737",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "In their tests HYVideo1.5 led on script faithfulness and character consistency while Sora2-Pro led on visual appeal.",
+          "quote": "Conversely, HYVideo1.5 prioritizes narrative integrity, leading in Script Faithfulness (4.6), Character Consistency (4.4), and Narrative Coherence (4.3).",
+          "locator": "arXiv 2601.17737 HTML, results on video generation",
+          "url": "https://arxiv.org/html/2601.17737",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "aliases": [
+        "ScripterAgent",
+        "DirectorAgent",
+        "CriticAgent",
+        "ScriptBench",
+        "VSA metric"
+      ],
+      "tags": [
+        "frame-anchoring",
+        "last-frame"
+      ],
+      "citation": {
+        "type": "article",
+        "author": [
+          "Chenyu Mu",
+          "Xin He",
+          "Qu Yang",
+          "Wanshun Chen",
+          "Jiadi Yao",
+          "Huang Liu",
+          "Zihao Yi",
+          "Bo Zhao",
+          "Xingyu Chen",
+          "Ruotian Ma",
+          "Fanghua Ye",
+          "Erkun Yang",
+          "Cheng Deng",
+          "Zhaopeng Tu",
+          "Xiaolong Li",
+          "Linus"
+        ],
+        "issued": "2026-01-25",
+        "container_title": "arXiv preprint",
+        "doi": "10.48550/arXiv.2601.17737",
+        "url": "https://arxiv.org/abs/2601.17737",
+        "accessed": "2026-11-12"
+      },
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "abstract, DirectorAgent section, results text",
+        "source_sha256": "bd43119c30532b948736978ac4822a82532b0e1353e0d18e97bea9d77121652c",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "pipelines-research"
+    },
+    {
+      "id": "source:arxiv.org/abs/2606.20799",
+      "kind": "source",
+      "title": "GroundShot: Entity-Grounded Shot Scheduling for multi-shot video (and GroundBench)",
+      "url": "https://arxiv.org/abs/2606.20799",
+      "summary": "A training-free agent loop for multi-shot video: it generates the shots that best establish characters, objects and places first, crops each entity from accepted shots into a memory, checks each new shot with a VLM critic, and repairs failures by issue type.",
+      "why_it_matters": "It turns consistency into a scheduling and reference-management job that works with any reference-to-video model, including an open-weights one.",
+      "concepts": [
+        "concept:agentic-pipelines",
+        "concept:consistency",
+        "concept:review-loop",
+        "concept:local-video-models"
+      ],
+      "level": "advanced",
+      "fit": "high",
+      "fit_notes": "Primary backend is Vidu (paid); Kling and Wan2.1 + Phantom-14B were also run, so a local route exists if you can run a 14B model (not checked on Apple Silicon). Decisions use GPT-4o and GPT-4.1; entity cropping runs locally with ReferDINO. About 1.2 generations per final shot is the cost to plan for. The authors say it is capped by the generator's own quality. No code or GroundBench release link was found in the text read here.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "Average cost is 1.20 video generations per final shot; 83.1% of shots pass the critic first time.",
+          "quote": "On GroundBench, GroundShot averages 1.20 video generation calls per final shot, with 83.1% of shots passing on the first attempt; regeneration is therefore occasional rather than the default.",
+          "locator": "arXiv 2606.20799 HTML, overhead analysis",
+          "url": "https://arxiv.org/html/2606.20799",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Each failure type has its own repair: identity mismatch => stronger or different reference; missing entities => explicit count in the prompt.",
+          "quote": "For example, identity mismatch can trigger stronger reference conditioning or a different retrieved reference; missing or extra entities can add explicit count and presence instructions to the revised prompt",
+          "locator": "arXiv 2606.20799 HTML, Shot verification",
+          "url": "https://arxiv.org/html/2606.20799",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The gain also held with the open-source Wan2.1 + Phantom backend.",
+          "quote": "The open-source Wan2.1+Phantom setting further indicates that the framework is not tied to commercial backends: even with a weaker open-source backend, the same grounded entity-level memory and shot scheduling yield gains.",
+          "locator": "arXiv 2606.20799 HTML, backend analysis of Table 1",
+          "url": "https://arxiv.org/html/2606.20799",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "aliases": [
+        "GroundShot",
+        "GroundBench"
+      ],
+      "tags": [
+        "entity-memory",
+        "shot-scheduling",
+        "vlm-critic"
+      ],
+      "citation": {
+        "type": "article",
+        "author": [
+          "Yixuan Lai",
+          "Tianjia Shao",
+          "Weijia Dou",
+          "Siyu Zhu",
+          "Jingdong Wang"
+        ],
+        "issued": "2026-06-18",
+        "container_title": "arXiv preprint",
+        "doi": "10.48550/arXiv.2606.20799",
+        "url": "https://arxiv.org/abs/2606.20799",
+        "accessed": "2026-11-12"
+      },
+      "related": [
+        {
+          "id": "source:arxiv.org/abs/2605.15199",
+          "rel": "alternative_to",
+          "note": "Both store per-entity references; EntityMem builds them before generation, GroundShot from accepted shots."
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "abstract, method, implementation, Table 1 text, overhead and conclusion",
+        "source_sha256": "042cbd5fc2402744f644c3b988be9e8494a408b70e15098a8dd677bbc4036995",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "pipelines-research"
+    },
+    {
+      "id": "source:arxiv.org/abs/2605.15199",
+      "kind": "source",
+      "title": "EntityBench: entity-consistent long-range multi-shot video benchmark",
+      "url": "https://arxiv.org/abs/2605.15199",
+      "summary": "A benchmark of 140 episodes and 2,491 shots from real narrative media, with per-shot schedules of which characters, objects and locations appear. It scores quality, prompt following and cross-shot consistency with 51 metrics and a fidelity gate, and adds EntityMem, a per-entity memory baseline.",
+      "why_it_matters": "It shows that a high VBench-style score says little about whether the right character keeps appearing, which matters when picking a pipeline by its reported numbers.",
+      "concepts": [
+        "concept:evaluation",
+        "concept:consistency",
+        "concept:agentic-pipelines"
+      ],
+      "level": "advanced",
+      "fit": "high",
+      "fit_notes": "Use it to read other papers' claims: consistency drops as the gap between appearances grows, and embedding similarity (DINOv2) can rate a repeated face as consistent while an LLM judge says it is the wrong person. The authors' own memory baseline loses on objects (a 'sticker look'). Code and data are said to be released; the repo was not opened here.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "The benchmark has 140 episodes and 2,491 shots taken from real narrative media.",
+          "quote": "We introduce EntityBench, a benchmark of 140 episodes (2,491 shots) derived from real narrative media",
+          "locator": "arXiv 2605.15199 abstract",
+          "url": "https://arxiv.org/abs/2605.15199",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "One method won every highlighted VBench dimension yet had the lowest character presence and character accuracy.",
+          "quote": "CineTrans wins all four highlighted VBench dimensions (subject_consistency 0.97, imaging_quality 68.6) yet has the lowest character presence (0.80) and the worst LLM character accuracy (0.09) of all four methods.",
+          "locator": "arXiv 2605.15199 HTML, F.4 Trade-offs and Limitations",
+          "url": "https://arxiv.org/html/2605.15199",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Code and data are stated to be available.",
+          "quote": "Code and data are available at this https URL.",
+          "locator": "arXiv 2605.15199 abstract",
+          "url": "https://arxiv.org/abs/2605.15199",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "aliases": [
+        "EntityBench",
+        "EntityMem"
+      ],
+      "tags": [
+        "multi-shot",
+        "benchmark",
+        "entity-memory"
+      ],
+      "citation": {
+        "type": "article",
+        "author": [
+          "Ruozhen He",
+          "Meng Wei",
+          "Ziyan Yang",
+          "Vicente Ordonez"
+        ],
+        "issued": "2026-05-14",
+        "container_title": "arXiv preprint",
+        "doi": "10.48550/arXiv.2605.15199",
+        "url": "https://arxiv.org/abs/2605.15199",
+        "accessed": "2026-11-12"
+      },
+      "related": [
+        {
+          "id": "source:arxiv.org/abs/2503.21755",
+          "rel": "contradicts",
+          "note": "Per-clip VBench-family scores did not predict entity consistency here."
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "abstract and appendix F.4 trade-offs",
+        "source_sha256": "adb3d6fcadf02ac06c45c468f3bc8fa3f36aabbdf1a743c3d26fffc3ab874b25",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "pipelines-research"
+    },
+    {
+      "id": "source:arxiv.org/abs/2607.18116",
+      "kind": "source",
+      "title": "SGA: Plug&Play Geometric Verification for Educational Video Synthesis",
+      "url": "https://arxiv.org/abs/2607.18116",
+      "summary": "KAUST paper: a module for Manim pipelines that partially executes the LLM's code, builds a scene graph of object boxes, finds overlaps and off-canvas objects, and asks the LLM to fix them, without rendering. Tested inside Code2Video and TheoremExplainAgent.",
+      "why_it_matters": "A cheaper check than a VLM looking at rendered frames for the commonest Manim defect, overlapping labels, with runtime numbers.",
+      "concepts": [
+        "concept:review-loop",
+        "concept:code-driven-video",
+        "concept:evaluation"
+      ],
+      "level": "advanced",
+      "fit": "medium",
+      "fit_notes": "Applies to 2D Manim only, and it does not catch timing errors such as a label appearing late. The idea transfers: check bounding boxes in code before a full render. Its MVQS metric is the authors' own proxy; human raters preferred SGA in 84.4% of pairs versus the raw output. Whether code is released was not checked; the paper links a project page.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "Inside Code2Video with GPT-5.1 it reached MVQS 73.11, 16.1% above the raw baseline, and improved 7 of 8 setups.",
+          "quote": "SGA achieves a peak MVQS of 73.11 (Code2Video + GPT-5.1), corresponding to a 16.1% relative improvement over the raw baseline, and improves MVQS in 7 of 8 backbone x pipeline configurations.",
+          "locator": "arXiv 2607.18116 abstract",
+          "url": "https://arxiv.org/abs/2607.18116",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Code2Video with GPT-5.1 takes 6.4 minutes per sample, and 8.8 minutes with a VLM layout critic.",
+          "quote": "At the pipeline level, using GPT-5.1 as the backbone, the baseline Code2Video system requires 6.4 minutes per sample and increases to 8.8 minutes when augmented with a VLM layout critic.",
+          "locator": "arXiv 2607.18116 HTML, efficiency analysis",
+          "url": "https://arxiv.org/html/2607.18116",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It only handles 2D primitives in Manim.",
+          "quote": "First, the current implementation is specialized for 2D geometric primitives within the Manim engine",
+          "locator": "arXiv 2607.18116 HTML, Limitations",
+          "url": "https://arxiv.org/html/2607.18116",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "aliases": [
+        "Symbolic Geometric Agent",
+        "MVQS",
+        "MMMC-Code"
+      ],
+      "tags": [
+        "manim",
+        "layout-check"
+      ],
+      "citation": {
+        "type": "article",
+        "author": [
+          "Jhon Lopez",
+          "Carlos Hinojosa",
+          "Bernard Ghanem"
+        ],
+        "issued": "2026-07-20",
+        "container_title": "arXiv preprint",
+        "doi": "10.48550/arXiv.2607.18116",
+        "url": "https://arxiv.org/abs/2607.18116",
+        "accessed": "2026-11-12"
+      },
+      "related": [
+        {
+          "id": "tool:showlab/code2video",
+          "rel": "extends"
+        },
+        {
+          "id": "tool:manimcommunity/manim",
+          "rel": "integrates_with"
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "abstract, efficiency section and limitations",
+        "source_sha256": "435d71c8983de976a90687c6242c5ef0ca401ee6359d0ec50f617fc57cab7f60",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "pipelines-research"
+    },
+    {
+      "id": "source:arxiv.org/abs/2505.24862",
+      "kind": "source",
+      "title": "ViStoryBench: benchmark suite for story visualization",
+      "url": "https://arxiv.org/abs/2505.24862",
+      "summary": "A CVPR 2026 benchmark of multi-shot scripts with curated character references, scoring image sequences for character consistency, style similarity, prompt alignment, aesthetics and copy-paste artifacts.",
+      "why_it_matters": "The standard test for the storyboard-image stage of a pipeline, before any video model runs; Google's Co-Director post reports results on it.",
+      "concepts": [
+        "concept:evaluation",
+        "concept:consistency",
+        "concept:still-images",
+        "concept:story-and-decomposition"
+      ],
+      "level": "intermediate",
+      "fit": "medium",
+      "fit_notes": "It scores image sequences, not video, so it covers the keyframe stage only. The copy-paste metric catches pipelines that paste the reference image instead of drawing the character. Code and dataset links are on the abstract page; not opened here. Only the abstract page was read.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "It measures character consistency, style similarity, prompt alignment, aesthetics and copy-paste artifacts.",
+          "quote": "ViStoryBench proposes a suite of multi-dimensional automated metrics to evaluate character consistency, style similarity, prompt alignment, aesthetic quality, and artifacts like copy-paste behavior.",
+          "locator": "arXiv 2505.24862 abstract",
+          "url": "https://arxiv.org/abs/2505.24862",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Accepted at CVPR 2026, with code and dataset links.",
+          "quote": "Accepted by CVPR 2026. 44 Pages, Project Page: this https URL, Code: this https URL, Dataset: this https URL",
+          "locator": "arXiv 2505.24862 abstract page, Comments",
+          "url": "https://arxiv.org/abs/2505.24862",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "aliases": [
+        "ViStoryBench"
+      ],
+      "tags": [
+        "benchmark",
+        "story-visualization"
+      ],
+      "citation": {
+        "type": "article",
+        "author": [
+          "Cailin Zhuang",
+          "Ailin Huang",
+          "Yaoqi Hu",
+          "Jingwei Wu",
+          "Wei Cheng",
+          "Jiaqi Liao",
+          "Hongyuan Wang",
+          "Xinyao Liao",
+          "Weiwei Cai",
+          "Hengyuan Xu",
+          "Xuanyang Zhang",
+          "Xianfang Zeng",
+          "Zhewei Huang",
+          "Gang Yu",
+          "Chi Zhang"
+        ],
+        "issued": "2025-05-30",
+        "container_title": "CVPR 2026",
+        "doi": "10.48550/arXiv.2505.24862",
+        "url": "https://arxiv.org/abs/2505.24862",
+        "accessed": "2026-11-12"
+      },
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "skim",
+        "by": "agent:kiro",
+        "what": "abstract page only",
+        "source_sha256": "5dc876127a25815569e15436ab467f7d4db1d3ece5d13623df061098cd314339",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "pipelines-research"
+    },
+    {
+      "id": "source:arxiv.org/abs/2503.21755",
+      "kind": "source",
+      "title": "VBench-2.0: benchmark suite for intrinsic faithfulness",
+      "url": "https://arxiv.org/abs/2503.21755",
+      "summary": "The second VBench suite: it scores single-prompt videos on human fidelity, controllability, creativity, physics and commonsense, using VLMs, LLMs and specialist detectors checked against human labels.",
+      "why_it_matters": "Many pipeline papers in this lane (CoAgent, MovieAgent) report VBench-family numbers, so a reader needs to know what they do and do not measure.",
+      "concepts": [
+        "concept:evaluation",
+        "concept:generated-footage"
+      ],
+      "level": "intermediate",
+      "fit": "medium",
+      "fit_notes": "It judges one clip at a time; it says nothing about the same character across shots. WorldJen (source:arxiv.org/abs/2605.03475) argues its binary VQA questions lean towards yes. Code and project page are linked from the abstract page; not opened here. Only the abstract page was read.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "It covers five dimensions, each split into finer capabilities.",
+          "quote": "VBench-2.0 assesses five key dimensions: Human Fidelity, Controllability, Creativity, Physics, and Commonsense, each further broken down into fine-grained capabilities.",
+          "locator": "arXiv 2503.21755 abstract",
+          "url": "https://arxiv.org/abs/2503.21755",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Project page and code are linked.",
+          "quote": "Equal contributions from first two authors. Project page: this https URL Code: this https URL",
+          "locator": "arXiv 2503.21755 abstract page, Comments",
+          "url": "https://arxiv.org/abs/2503.21755",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "aliases": [
+        "VBench-2.0",
+        "VBench 2",
+        "VBench2"
+      ],
+      "tags": [
+        "benchmark"
+      ],
+      "citation": {
+        "type": "article",
+        "author": [
+          "Dian Zheng",
+          "Ziqi Huang",
+          "Hongbo Liu",
+          "Kai Zou",
+          "Yinan He",
+          "Fan Zhang",
+          "Lulu Gu",
+          "Yuanhan Zhang",
+          "Jingwen He",
+          "Wei-Shi Zheng",
+          "Yu Qiao",
+          "Ziwei Liu"
+        ],
+        "issued": "2025-03-27",
+        "container_title": "arXiv preprint",
+        "doi": "10.48550/arXiv.2503.21755",
+        "url": "https://arxiv.org/abs/2503.21755",
+        "accessed": "2026-11-12"
+      },
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "skim",
+        "by": "agent:kiro",
+        "what": "abstract page only",
+        "source_sha256": "96926d2f9635ee905f359e3f2fdaaf9f3b8857339a41fca9ebd1bedf860eaba6",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "pipelines-research"
+    },
+    {
+      "id": "source:arxiv.org/abs/2605.03475",
+      "kind": "source",
+      "title": "WorldJen: end-to-end multi-dimensional benchmark for generative video models",
+      "url": "https://arxiv.org/abs/2605.03475",
+      "summary": "A video-model benchmark that replaces yes/no VQA with Likert questionnaires graded by a VLM at native resolution, uses prompts that test up to 16 dimensions at once, and checks the VLM ranking against a blind human preference study.",
+      "why_it_matters": "It names a specific weakness of VBench-2.0 that matters if a pipeline uses a VLM as its own checker: yes-bias and low-resolution frames.",
+      "concepts": [
+        "concept:evaluation",
+        "concept:review-loop"
+      ],
+      "level": "advanced",
+      "fit": "low",
+      "fit_notes": "The human study is 7 annotators over 50 prompts and 6 models, so the Spearman of 1.000 is agreement on three tiers across six models, not a fine ranking. Useful as a prompt-design idea for a VLM checker (ask graded questions, send full-resolution frames). Release of prompts or code was not checked. Only the abstract page was read.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "The authors say binary-VQA benchmarks such as VBench 2.0 show yes-bias and miss temporal failures.",
+          "quote": "Binary Visual Question Answering (VQA) based benchmarks like VBench~2.0 are prone to yes-bias and rely on low-resolution auditors that miss temporal failures.",
+          "locator": "arXiv 2605.03475 abstract",
+          "url": "https://arxiv.org/abs/2605.03475",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The VLM judge's Spearman of 1.000 is read as tier agreement with the human study.",
+          "quote": "The VLM achieves a Spearman $\\hat{\\rho}=1.000,~p=0.0014$ that is interpreted as tier agreement with the human results.",
+          "locator": "arXiv 2605.03475 abstract",
+          "url": "https://arxiv.org/abs/2605.03475",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "aliases": [
+        "WorldJen"
+      ],
+      "tags": [
+        "benchmark",
+        "vlm-judge"
+      ],
+      "citation": {
+        "type": "article",
+        "author": [
+          "Karthik Inbasekar",
+          "Guy Rom",
+          "Omer Shlomovits"
+        ],
+        "issued": "2026-05-05",
+        "container_title": "arXiv preprint",
+        "doi": "10.48550/arXiv.2605.03475",
+        "url": "https://arxiv.org/abs/2605.03475",
+        "accessed": "2026-11-12"
+      },
+      "downgrade": {
+        "reason": "tiny-sample",
+        "note": "Human ground truth covers 6 models and 50 prompts."
+      },
+      "related": [
+        {
+          "id": "source:arxiv.org/abs/2503.21755",
+          "rel": "contradicts",
+          "note": "Disputes the reliability of binary VQA scoring."
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "skim",
+        "by": "agent:kiro",
+        "what": "abstract page only",
+        "source_sha256": "e7271a1a6a95c43bdec3ecfbde118b6f57d314d15dc224c4c69634b361726292",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "pipelines-research"
+    },
+    {
+      "id": "source:arxiv.org/abs/2605.19382",
+      "kind": "source",
+      "title": "PRISM: benchmark for programmatic spatial-temporal reasoning",
+      "url": "https://arxiv.org/abs/2605.19382",
+      "summary": "A benchmark for code-generated animation that scores executability, spatial layout over the whole animation, visual complexity and temporal density, across 437 subject categories, on seven LLMs.",
+      "why_it_matters": "It puts a number on why an agent must look at its Manim render: code that runs is often laid out wrong.",
+      "concepts": [
+        "concept:evaluation",
+        "concept:code-driven-video",
+        "concept:review-loop"
+      ],
+      "level": "intermediate",
+      "fit": "medium",
+      "fit_notes": "Supports a render-and-inspect step in any code-video skill: a clean run is not a pass. Which seven LLMs, and whether data and code are released, were not checked. Only the abstract page was read.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "Across seven LLMs, the pass rate drops by about 41% from 'the code runs' to 'the layout is right'.",
+          "quote": "the average drop from execution success rate to spatial pass rate is approximately 41%, showing that runnable code does not necessarily yield spatially coherent visual output.",
+          "locator": "arXiv 2605.19382 abstract",
+          "url": "https://arxiv.org/abs/2605.19382",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "aliases": [
+        "PRISM benchmark",
+        "Execution-Spatial Gap"
+      ],
+      "tags": [
+        "manim",
+        "benchmark"
+      ],
+      "citation": {
+        "type": "article",
+        "author": [
+          "Qiran Zhang",
+          "Yuheng Wang",
+          "Runde Yang",
+          "Lin Wu",
+          "Jingru Fan",
+          "Shu Yao",
+          "Jie Zhang",
+          "Tianle Zhou",
+          "Huatao Li",
+          "Ruijie Shi",
+          "Yihan Li",
+          "Chen Qian"
+        ],
+        "issued": "2026-05-19",
+        "container_title": "arXiv preprint",
+        "doi": "10.48550/arXiv.2605.19382",
+        "url": "https://arxiv.org/abs/2605.19382",
+        "accessed": "2026-11-12"
+      },
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "skim",
+        "by": "agent:kiro",
+        "what": "abstract page only",
+        "source_sha256": "cfe104313149bd1f7b19d4cd4c51fa303b37543dc2f1299b10ed5e632a6f2cb4",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "pipelines-research"
+    },
+    {
+      "id": "source:github.com/zhuyansen/awesome-claude-video-skills",
+      "kind": "source",
+      "title": "Awesome Claude Video Skills (zhuyansen)",
+      "url": "https://github.com/zhuyansen/awesome-claude-video-skills",
+      "summary": "A curated list of video-making skills and toolkits for coding agents, generated from Agent Skills Hub, with a type breakdown, security grades and a one-brief test of 16 skills run with Claude Code.",
+      "why_it_matters": "Covers the skill layer that this lane's research pipelines lack; its no-skill baseline is a useful reality check before installing a pipeline.",
+      "concepts": [
+        "concept:agent-skills",
+        "concept:popularity-and-trust",
+        "concept:evaluation"
+      ],
+      "level": "intro",
+      "fit": "medium",
+      "fit_notes": "Third-party aggregator; its security grades come from agentskillshub.top, which runs the list, and were not checked here. The 16-skill test was one brief, one run each, on 2026-10-11. A list entry is a lead, not an endorsement; read each skill before installing.",
+      "source_type": "aggregator",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "In its own test, Claude Code with no skill made a film that passed all four checks in 4.4 minutes.",
+          "quote": "Claude Code with no skill made a film that passed every check in 4.4 minutes.",
+          "locator": "README.md, Which one to install",
+          "url": "https://github.com/zhuyansen/awesome-claude-video-skills",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It lists 469 repos, graded by Agent Skills Hub.",
+          "quote": "469 repos, each one read and security-graded by [Agent Skills Hub (agentskillshub.top)](https://agentskillshub.top).",
+          "locator": "README.md, intro",
+          "url": "https://github.com/zhuyansen/awesome-claude-video-skills",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The machine-readable copy was generated on 2026-11-10.",
+          "quote": "Generated 2026-11-10.",
+          "locator": "README.md, footer",
+          "url": "https://github.com/zhuyansen/awesome-claude-video-skills",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "aliases": [
+        "awesome-claude-video-skills"
+      ],
+      "tags": [
+        "awesome-list"
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README intro, test summary and footer",
+        "source_sha256": "626d878da2c1d9c23a65bfab10233fa890095e59de188966799cd26d9f68e1ac",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "pipelines-research"
+    }
+  ]
+}
