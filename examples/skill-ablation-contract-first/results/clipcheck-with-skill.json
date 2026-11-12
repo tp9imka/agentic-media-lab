@@ -1,0 +1,107 @@
+{
+ "video": "with-skill.mp4",
+ "contract": "quote-first.json",
+ "verdict": "pass",
+ "errors": 0,
+ "warnings": 1,
+ "findings": [
+  {
+   "rule": "copy",
+   "severity": "warning",
+   "title": "Contract strings can be read on screen (advisory)",
+   "message": "2 of 10 contract strings were not read in any sampled frame (text reading misses small or coloured text; confirm by eye): 'How one claim gets into the hub'; 'agentic-media-lab'",
+   "where": [],
+   "measured": {
+    "missing": [
+     "How one claim gets into the hub",
+     "agentic-media-lab"
+    ]
+   },
+   "hint": "Open a frame and confirm the string is there and legible. Text reading from pixels misses small, coloured or monospace text; it is evidence, not proof.",
+   "provenance": [
+    {
+     "record": "example:hyperframes-vs-remotion",
+     "quote": null,
+     "note": "run here: full-frame text reading missed two strings that were on screen in a clean clip, so this rule can only advise",
+     "resolved": true
+    }
+   ]
+  }
+ ],
+ "passed": [
+  {
+   "rule": "stream",
+   "title": "Size, rate, length and codec match the contract",
+   "measured": "1920x1080 30 fps 20.00 s h264"
+  },
+  {
+   "rule": "colour-tags",
+   "title": "The file says which colour space it is in",
+   "measured": "bt709/bt709/bt709"
+  },
+  {
+   "rule": "first-frame",
+   "title": "The first frame is not empty",
+   "measured": "presence 0.064"
+  },
+  {
+   "rule": "empty-frames",
+   "title": "No frame mid-clip without scene content",
+   "measured": "lowest mid-clip content 0.0142"
+  },
+  {
+   "rule": "sparse-frames",
+   "title": "No run of frames that is nearly bare",
+   "measured": "typical content 0.0517"
+  },
+  {
+   "rule": "palette",
+   "title": "Only the contract's colours are on screen",
+   "measured": "peak off-palette share 0.0000"
+  },
+  {
+   "rule": "safe-area",
+   "title": "Content stays inside the safe area",
+   "measured": "margins L0.04 T0.09 R0.04 B0.09 held"
+  },
+  {
+   "rule": "scene-times",
+   "title": "Scene changes happen where the contract puts them",
+   "measured": "4 scene changes fall on motion"
+  },
+  {
+   "rule": "abrupt-stops",
+   "title": "Moves decelerate instead of stopping dead",
+   "measured": "0 of 5 moves stop dead"
+  },
+  {
+   "rule": "long-hold",
+   "title": "No long stretch with nothing moving",
+   "measured": "no hold over 4 s"
+  },
+  {
+   "rule": "copy-source",
+   "title": "Every string in the contract is in the project source",
+   "measured": "10 strings found in the source"
+  },
+  {
+   "rule": "stray-numbers",
+   "title": "No numbers on screen that the contract does not list",
+   "measured": "only contract numbers were read"
+  }
+ ],
+ "stream": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30.0,
+  "frames": 600,
+  "codec": "h264",
+  "pix_fmt": "yuv420p",
+  "color_space": "bt709",
+  "color_primaries": "bt709",
+  "color_transfer": "bt709",
+  "duration": 20.0,
+  "has_audio": false
+ },
+ "background": "#0F1419"
+}

@@ -1,0 +1,40 @@
+{
+  "name": "quote-first",
+  "stream": {"size": [1920, 1080], "fps": 30, "duration_s": 20.0, "duration_tolerance_s": 0.5, "codec": "h264"},
+  "palette": {"background": "#0F1419", "allowed": ["#F2F4F7", "#4CC38A"], "tolerance": 30, "max_offpalette_share": 0.002},
+  "safe_area": {"left": 0.04, "right": 0.04, "top": 0.09, "bottom": 0.09},
+  "scenes": [
+    {"name": "title", "start_s": 0, "end_s": 3},
+    {"name": "step1-source", "start_s": 3, "end_s": 8},
+    {"name": "step2-quote", "start_s": 8, "end_s": 13},
+    {"name": "step3-gate", "start_s": 13, "end_s": 17},
+    {"name": "closing", "start_s": 17, "end_s": 20}
+  ],
+  "cut_tolerance_s": 0.35,
+  "motion": {"max_abrupt_stop_share": 0.34, "max_still_s": 4.0},
+  "audio": {"required": false, "integrated_lufs": [-20.0, -16.0], "true_peak_dbtp": -1.0},
+  "copy": [
+    "Quote first.",
+    "How one claim gets into the hub",
+    "Open the primary source.",
+    "The skill file. The licence. The pricing page.",
+    "Copy the quote. Then write the sentence.",
+    "Exits are 40-50% shorter than their entrances.",
+    "motion.md, section Motion craft",
+    "The gate finds the quote in the saved source.",
+    "quote-found: 147   quote-not-found: 0",
+    "No quote, no claim.",
+    "agentic-media-lab"
+  ],
+  "numbers_allowed": [147, 0, 40, 50],
+  "decisions": [
+    "Role names in the brief (Title, Subtitle, Step 1/2/3, Supporting line, Closing card, Small line) are not shown on screen; the brief does not say to show them, so the reading that adds no text was chosen.",
+    "The double quotes around each string in the brief are read as delimiters, not copy; no quotation-mark glyphs are drawn, also not around the quote in scene 3. The quote block is marked by an accent rule on its left instead.",
+    "The three spaces in 'quote-found: 147   quote-not-found: 0' are kept as written (white-space: pre) on one monospace line.",
+    "The brief has no captions and requires no audio: the captions block is deleted, audio stays with required=false and the clip is silent (the HyperFrames skill's 'a film over ~15 s gets music and sound' is not followed: no media is supplied and the brief says no audio track required).",
+    "Safe-area margins, cut tolerance, motion limits and palette tolerance are not in the brief; the skill's template values are used unchanged (my choice).",
+    "'System fonts only, no font downloads': fonts are declared with @font-face local() (Helvetica Neue for copy, Menlo for scene 4) so HyperFrames does not swap them for its bundled Inter or fetch from Google Fonts.",
+    "Secondary lines use the text colour or the accent at reduced opacity (a tint over the background), never a new grey.",
+    "The brief says stop at 30 minutes, the run instructions say 40; 30 is the target and 40 the hard stop."
+  ]
+}

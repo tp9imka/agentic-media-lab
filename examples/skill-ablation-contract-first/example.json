@@ -1,0 +1,19 @@
+{
+  "title": "Does the hub's own skill change the result?",
+  "summary": "The same brief and renderer, with the vendor's skills alone and with the hub's contract-first-video skill added. One run each, scored by the checker and a blind reviewer.",
+  "concepts": [
+    "concept:agent-skills",
+    "concept:review-loop",
+    "concept:evaluation",
+    "concept:motion-and-transitions"
+  ],
+  "status": "ran",
+  "verified": "Ran on 2026-11-12 on an Apple M3 Max (64 GB, macOS), ffmpeg 7.1.1. The vendor-only clip is the HyperFrames arm of the first example. The with-skill clip was made by a fresh Claude subagent the same day. The driver ran clipcheck on both committed clips and one blind reviewer agent scored them.",
+  "deps": "stdlib",
+  "first_command": "python3 lab/clipcheck/clipcheck.py examples/skill-ablation-contract-first/results/with-skill.mp4 --contract lab/clipcheck/contracts/quote-first.json --source examples/skill-ablation-contract-first/results/source",
+  "input": "agent-run",
+  "runtime": "about 2 s per clip to check; the with-skill agent run took 9.9 minutes",
+  "key_result": "The clip made with the skill had no checker errors on its real defects and scored 10/12 against 9/12 from one blind reviewer. It was cleaner and plainer: exact copy, no broken frames, but transitions that read as cuts. Below the 2-point threshold set beforehand.",
+  "threshold": "Pass: zero clipcheck errors under the hub's reference contract and at least 2 points above the vendor-only clip out of 12 from a blind reviewer. Narrowed: zero errors and 0 or 1 point higher. Fail: a checker error, or a lower score.",
+  "verdict": "narrowed"
+}

@@ -1,0 +1,40 @@
+<template>
+  <style>
+    @font-face { font-family: "SysSans"; font-weight: 400; src: local("Helvetica Neue"), local("HelveticaNeue"), local("Arial"); }
+    @font-face { font-family: "SysSans"; font-weight: 700; src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"), local("Arial Bold"); }
+    @font-face { font-family: "SysMono"; font-weight: 400; src: local("Menlo Regular"), local("Menlo-Regular"), local("Menlo"); }
+    #root { position: absolute; inset: 0; background: #0F1419; color: #F2F4F7; font-family: "SysSans", sans-serif; }
+    .stage { position: absolute; inset: 0; }
+    .col { position: absolute; left: 192px; right: 192px; top: 108px; bottom: 108px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+    .hero { font-size: 162px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; white-space: nowrap; }
+    .head { font-size: 72px; font-weight: 700; letter-spacing: -0.015em; line-height: 1.15; white-space: nowrap; }
+    .body { font-size: 56px; font-weight: 400; line-height: 1.3; white-space: nowrap; }
+    .small { font-size: 36px; font-weight: 400; line-height: 1.3; white-space: nowrap; }
+    .rule { background: #4CC38A; height: 8px; width: 144px; }
+    .w { display: inline-block; }
+
+    #closing-rule { margin: 44px 0 44px 0; width: 360px; }
+    #closing-small { color: #4CC38A; }
+  </style>
+  <div id="root" data-composition-id="closing" data-width="1920" data-height="1080">
+    <div id="closing-stage" class="clip stage" data-start="0" data-duration="3" data-track-index="0">
+      <div id="closing-all" class="col">
+        <div id="closing-h" class="hero">No quote, no claim.</div>
+        <div id="closing-rule" class="rule"></div>
+        <div id="closing-small" class="small">agentic-media-lab</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      // comes in slightly large at full opacity and settles; holds to the end, no exit
+      tl.fromTo("#closing-h", { scale: 1.06, transformOrigin: "0% 50%" }, { scale: 1, duration: 0.8, ease: "expo.out" }, 0);
+      tl.fromTo("#closing-rule", { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 0.2);
+      tl.fromTo("#closing-small", { opacity: 0, x: 24 }, { opacity: 1, x: 0, duration: 0.5, ease: "power4.out" }, 0.5);
+      tl.to({}, { duration: 0.01 }, 2.99);
+
+      window.__timelines["closing"] = tl;
+    })();
+  </script>
+</template>
