@@ -54,7 +54,22 @@ The skills repo has no licence file, and Remotion itself has a company licence: 
 
 ## Observed
 
-Nothing collected yet.
+Collected by `tools/enrich.py`, not typed by hand.
+
+- archived: false
+- created: 2026-01-19
+- default_branch: main
+- fetched_at: 2026-11-12
+- forks: 741
+- installs: 800255
+- installs_by_skill: {"remotion-best-practices": 800255}
+- last_activity: 2026-11-11
+- licence: unknown
+- open_issues: 23
+- registry: skills.sh
+- sources: https://api.github.com/repos/remotion-dev/skills, https://skills.sh/api/search?q=skills
+- stars: 6888
+- Popularity: installs and stars differ by more than 100x
 
 ## Related
 

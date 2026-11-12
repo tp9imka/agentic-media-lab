@@ -47,14 +47,23 @@ Read the licence for where you are before using the weights. Ports for Apple Sil
 - Corroboration: single-source
 - Checked: 2026-11-12 by agent:driver, depth primary-read. LICENSE file on the model repository against both claims
 - Next check due: 2026-12-12
-- Licence: unknown
+- Licence: other
 - URL status: live
 - Saved source sha256: `59b99642b95ea21630e311198ddbfffbfe05aadba0c2f5d884cbdf4efcc90f44`
 - Lane: hosted-models
 
 ## Observed
 
-Nothing collected yet.
+Collected by `tools/enrich.py`, not typed by hand.
+
+- created: 2026-07-28
+- fetched_at: 2026-11-12
+- gated: false
+- hf_downloads: 6502936
+- hf_likes: 6825
+- last_activity: 2026-11-09
+- licence: other
+- sources: https://huggingface.co/api/models/MiniMaxAI/MiniMax-H3
 
 ## Related
 

@@ -41,14 +41,28 @@ Transcription uses a paid ElevenLabs key, so it is not a free local path as ship
 - Corroboration: single-source
 - Checked: 2026-11-12 by agent:driver, depth primary-read. SKILL.md against the claim
 - Next check due: 2027-02-10
-- Licence: unknown
+- Licence: MIT
 - URL status: live
 - Saved source sha256: `d3bbeb19bc0e81e197d74806fba15e0a5f5694a0cdf33f0a2348bffe8472a27b`
 - Lane: quality-skills
 
 ## Observed
 
-Nothing collected yet.
+Collected by `tools/enrich.py`, not typed by hand.
+
+- archived: false
+- created: 2026-04-12
+- default_branch: main
+- fetched_at: 2026-11-12
+- forks: 3578
+- installs: 5774
+- installs_by_skill: {"manim-video": 209, "video-use": 5774}
+- last_activity: 2026-10-08
+- licence: MIT
+- open_issues: 165
+- registry: skills.sh
+- sources: https://api.github.com/repos/browser-use/video-use, https://skills.sh/api/search?q=video-use
+- stars: 30930
 
 ## Related
 

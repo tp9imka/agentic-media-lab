@@ -47,14 +47,28 @@ Start here for a fully local render with no licence fee. The skill asks the agen
 - Corroboration: single-source
 - Checked: 2026-11-12 by agent:driver, depth primary-read. motion.md in the skill folder against both claims
 - Next check due: 2027-02-10
-- Licence: unknown
+- Licence: Apache-2.0
 - URL status: live
 - Saved source sha256: `bd55ea56343346060cd612a30874996e82f48ac5051ecb2bd1ab01efe4e2fc71`
 - Lane: quality-skills
 
 ## Observed
 
-Nothing collected yet.
+Collected by `tools/enrich.py`, not typed by hand.
+
+- archived: false
+- created: 2026-03-10
+- default_branch: main
+- fetched_at: 2026-11-12
+- forks: 7665
+- installs: 1524572
+- installs_by_skill: {"general-video": 661816, "hyperframes": 1486779, "hyperframes-animation": 1005453, "hyperframes-audio": 663932, "hyperframes-cli": 1524572, "hyperframes-core": 931131, "hyperframes-creative": 917182, "hyperframes-keyframes": 754861, "hyperframes-registry": 1274564, "media-use": 1395655}
+- last_activity: 2026-11-12
+- licence: Apache-2.0
+- open_issues: 243
+- registry: skills.sh
+- sources: https://api.github.com/repos/heygen-com/hyperframes, https://skills.sh/api/search?q=hyperframes
+- stars: 83101
 
 ## Related
 

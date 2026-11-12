@@ -10,7 +10,7 @@ Built 2026-11-12 by `tools/build.py`.
 - recipe: 0
 - concepts: 35
 - primary-read share: 1.0
-- Hub size: 50561 characters, about 12640 tokens (estimate, characters / 4).
+- Hub size: 53798 characters, about 13449 tokens (estimate, characters / 4).
 
 ## Validation
 
@@ -24,9 +24,9 @@ None.
 
 None.
 
-## Popularity disagreements (0)
+## Popularity disagreements (1)
 
-None.
+- `tool:remotion-dev/skills`: stars 6888, installs 800255
 
 ## Seen, not reviewed (checked.depth not-checked) (0)
 

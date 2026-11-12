@@ -41,14 +41,28 @@ Two of its rules (idle elements breathe; never a flat background) contradict the
 - Corroboration: single-source
 - Checked: 2026-11-12 by agent:driver, depth primary-read. SKILL.md against the claim
 - Next check due: 2027-02-10
-- Licence: unknown
+- Licence: MIT
 - URL status: live
 - Saved source sha256: `7bc57dcc03c9812feb94b32785bb2fb26ab9740f523f7def580a1b372b3b6336`
 - Lane: quality-skills
 
 ## Observed
 
-Nothing collected yet.
+Collected by `tools/enrich.py`, not typed by hand.
+
+- archived: false
+- created: 2026-06-13
+- default_branch: main
+- fetched_at: 2026-11-12
+- forks: 131
+- installs: 1608
+- installs_by_skill: {"remotion-motion-graphics": 1608}
+- last_activity: 2026-08-12
+- licence: MIT
+- open_issues: 2
+- registry: skills.sh
+- sources: https://api.github.com/repos/haidrrrry/claude-remotion-skill, https://skills.sh/api/search?q=claude-remotion-skill
+- stars: 961
 
 ## Related
 

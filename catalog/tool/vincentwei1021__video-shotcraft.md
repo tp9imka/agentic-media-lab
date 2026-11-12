@@ -41,14 +41,28 @@ The repo is four months old with a high star count; treat popularity as unconfir
 - Corroboration: single-source
 - Checked: 2026-11-12 by agent:driver, depth primary-read. SKILL.md (Chinese) against the claim
 - Next check due: 2027-02-10
-- Licence: unknown
+- Licence: Apache-2.0
 - URL status: live
 - Saved source sha256: `9e6b2d68f50cae3d5405178d35d2bd305ee2045691fa726b63bae3ab8bb62e6b`
 - Lane: quality-skills
 
 ## Observed
 
-Nothing collected yet.
+Collected by `tools/enrich.py`, not typed by hand.
+
+- archived: false
+- created: 2026-07-19
+- default_branch: main
+- fetched_at: 2026-11-12
+- forks: 1780
+- installs: 8444
+- installs_by_skill: {"video-shotcraft": 8444}
+- last_activity: 2026-11-11
+- licence: Apache-2.0
+- open_issues: 4
+- registry: skills.sh
+- sources: https://api.github.com/repos/Vincentwei1021/video-shotcraft, https://skills.sh/api/search?q=video-shotcraft
+- stars: 18866
 
 ## Related
 
