@@ -1,4 +1,68 @@
 {
+  "model:ace-step/ace-step": {
+    "archived": false,
+    "created": "2025-09-04",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 1944,
+    "installs": 202,
+    "installs_by_skill": {
+      "acestep": 120,
+      "acestep-docs": 78,
+      "acestep-lyrics-transcription": 69,
+      "acestep-simplemv": 79,
+      "acestep-songwriting": 202,
+      "acestep-thumbnail": 27
+    },
+    "last_activity": "2026-11-08",
+    "licence": "MIT",
+    "open_issues": 164,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/ace-step/ACE-Step-1.5",
+      "https://skills.sh/api/search?q=ACE-Step-1.5"
+    ],
+    "stars": 14672
+  },
+  "model:black-forest-labs/flux-3-image-klein": {
+    "created": "2026-10-13",
+    "fetched_at": "2026-11-12",
+    "gated": "auto",
+    "hf_downloads": 192532,
+    "hf_likes": 935,
+    "last_activity": "2026-11-02",
+    "licence": "other",
+    "sources": [
+      "https://huggingface.co/api/models/black-forest-labs/flux-3-image-klein"
+    ]
+  },
+  "model:bytedance-seed/seedvr": {
+    "archived": false,
+    "created": "2025-06-10",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 91,
+    "last_activity": "2026-01-27",
+    "licence": "Apache-2.0",
+    "open_issues": 51,
+    "sources": [
+      "https://api.github.com/repos/ByteDance-Seed/SeedVR",
+      "https://skills.sh/api/search?q=SeedVR"
+    ],
+    "stars": 1441
+  },
+  "model:hexgrad/kokoro": {
+    "created": "2024-12-26",
+    "fetched_at": "2026-11-12",
+    "gated": false,
+    "hf_downloads": 12580963,
+    "hf_likes": 7401,
+    "last_activity": "2025-04-10",
+    "licence": "apache-2.0",
+    "sources": [
+      "https://huggingface.co/api/models/hexgrad/Kokoro-82M"
+    ]
+  },
   "model:minimaxai/minimax-h3": {
     "created": "2026-07-28",
     "fetched_at": "2026-11-12",
