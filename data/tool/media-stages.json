@@ -1,0 +1,782 @@
+{
+  "schema_version": 1,
+  "lane": "media-stages",
+  "records": [
+    {
+      "kind": "tool",
+      "lane": "media-stages",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:ohf-voice/piper1-gpl",
+      "title": "Piper (piper1-gpl)",
+      "aliases": [
+        "Piper TTS",
+        "piper-tts",
+        "rhasspy/piper"
+      ],
+      "url": "https://github.com/OHF-Voice/piper1-gpl",
+      "summary": "A local neural text-to-speech engine with a CLI, a Python API and an HTTP server, installed with pip install piper-tts. Development moved from rhasspy/piper to OHF-Voice/piper1-gpl under the Open Home Foundation.",
+      "why_it_matters": "It runs on CPU with many stock voices in many languages, and its docs say per voice whether the training chain allows commercial use. Most narration guides miss that check.",
+      "concepts": [
+        "concept:audio-and-captions",
+        "concept:licences-and-territory"
+      ],
+      "level": "intro",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "The CLI example voice, en_US-lessac-medium, descends from a corpus that excludes commercial use, so the copy-paste path is the wrong one for client work. Pick a voice from the COMMERCIAL_USE.md tables and read the MODEL_CARD of the copy on disk: a file downloaded before the late-2026 retrain has the same name but the old chain. CC BY voices need a credit line in the video description. The CLI reloads the model per call; for many lines use the HTTP server. The README asks for new maintainers. No Apple Silicon note was found in the pages read; GPU flags shown are CUDA only. Not run here.",
+      "related": [
+        {
+          "id": "model:hexgrad/kokoro",
+          "rel": "alternative_to",
+          "note": "Kokoro weights are Apache-licensed as a whole; Piper licensing is per voice."
+        }
+      ],
+      "tool_type": "library",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "audio",
+        "asset"
+      ],
+      "cost": "free-local",
+      "tags": [
+        "tts",
+        "voiceover",
+        "voice-licensing"
+      ],
+      "claims": [
+        {
+          "text": "The project grants a licence for the engine only; each voice's rights come from its training data, and the project takes no position on derivative-work questions.",
+          "quote": "The Piper project makes **no license grant of its own over voice models**, and\n  adds no restriction of its own either.",
+          "locator": "docs/LICENSING.md, The short version, second bullet",
+          "url": "https://github.com/OHF-Voice/piper1-gpl/blob/main/docs/LICENSING.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The lessac base voice, used in the CLI example and as the base of many voices, comes from a corpus whose licence excludes commercial use of the synthesis.",
+          "quote": "`en_US-lessac-medium` was trained on the\n[Lessac Blizzard 2013 corpus][blizzard], whose license limits use to \"research\nand exploration of speech technologies\" and excludes commercial use of the\nresulting synthesis.",
+          "locator": "docs/LICENSING.md, section The lessac base voice",
+          "url": "https://github.com/OHF-Voice/piper1-gpl/blob/main/docs/LICENSING.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A voice retrained in late 2026 keeps its file name, so an older downloaded copy does not qualify for the commercial-use list.",
+          "quote": "A copy downloaded before the\nretrain is the old version and **does not qualify**, even though it has the\nsame file name.",
+          "locator": "docs/COMMERCIAL_USE.md, section Check the copy you have",
+          "url": "https://github.com/OHF-Voice/piper1-gpl/blob/main/docs/COMMERCIAL_USE.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README, docs/LICENSING.md, docs/COMMERCIAL_USE.md and docs/CLI.md of OHF-Voice/piper1-gpl, plus the rhasspy/piper README redirect, against the claims",
+        "source_sha256": "95d626f6415d1962535b75185d2c85590f4bd771686ce51aab3cf63b7627b921",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "lane": "media-stages",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:blaizzy/mlx-audio",
+      "title": "MLX-Audio",
+      "aliases": [
+        "mlx_audio",
+        "mlx-audio"
+      ],
+      "url": "https://github.com/Blaizzy/mlx-audio",
+      "summary": "A Python library and CLI that runs text-to-speech, speech-to-text, speech-to-speech and music models on Apple Silicon through MLX. It also starts a local server with an OpenAI-compatible speech endpoint.",
+      "why_it_matters": "It is one install that puts Kokoro, Qwen3-TTS stock voices and Stable Audio 3 SFX and music on the reader's Mac GPU, callable from a shell command.",
+      "concepts": [
+        "concept:audio-and-captions",
+        "concept:models"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "high",
+      "fit_notes": "Each model keeps its own licence; the library's MIT licence says nothing about the weights it downloads, and many listed models are cloning models (out of scope here). When a text yields several segments the CLI writes numbered files, so an agent that expects one WAV must pass --join_audio. The README starts the server on 0.0.0.0, which listens on every network interface; use 127.0.0.1 on a shared network. MP3 and other compressed formats need ffmpeg; WAV does not. No speed or memory figures for an M3 Max are given. Not run here.",
+      "related": [
+        {
+          "id": "model:hexgrad/kokoro",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "model:stabilityai/stable-audio",
+          "rel": "integrates_with",
+          "note": "Lists Stable Audio 3 small-sfx and small-music MLX ports."
+        },
+        {
+          "id": "tool:blaizzy/mlx-video",
+          "rel": "alternative_to",
+          "note": "Same author; video models instead of audio."
+        }
+      ],
+      "tool_type": "library",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "audio",
+        "asset"
+      ],
+      "cost": "free-local",
+      "tags": [
+        "tts",
+        "sound-effects",
+        "music",
+        "apple-silicon",
+        "mlx"
+      ],
+      "claims": [
+        {
+          "text": "It targets Apple Silicon Macs and covers speech and music generation.",
+          "quote": "Text-to-speech, speech-to-text, speech-to-speech, and music generation. Built on MLX.",
+          "locator": "README.md, header tagline",
+          "url": "https://github.com/Blaizzy/mlx-audio/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Multi-segment output is saved as numbered files unless --join_audio is passed.",
+          "quote": "By default, when generation yields multiple segments, mlx-audio saves numbered files such as `audio_000.wav` and `audio_001.wav`. Use `--join_audio` to save one combined file instead.",
+          "locator": "README.md, Quick Start, Command Line, note under the examples",
+          "url": "https://github.com/Blaizzy/mlx-audio/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Stable Audio 3 is listed for sound effects or music, 44.1 kHz stereo, up to 120 seconds.",
+          "quote": "| **Stable Audio 3** | Text to sound effects or music, 44.1 kHz stereo, up to 120 seconds | EN |",
+          "locator": "README.md, Supported Models, Music Generation table",
+          "url": "https://github.com/Blaizzy/mlx-audio/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "Blaizzy/mlx-audio README (install, quick start, supported models, server, requirements) against the claims",
+        "source_sha256": "35ebe7265230f5bec319a7f9e23ef3972e53f7b8cb619c8928b24f542a209a46",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "lane": "media-stages",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:openai/skills",
+      "title": "OpenAI Agent Skills (imagegen, speech)",
+      "aliases": [
+        "openai skills",
+        "imagegen skill",
+        "speech skill",
+        "$skill-installer"
+      ],
+      "url": "https://github.com/openai/skills",
+      "summary": "OpenAI's catalogue of Codex skills, marked deprecated in favour of the openai/plugins repository. Its imagegen skill prefers the built-in Codex image tool, and its speech skill wraps the OpenAI speech endpoint with built-in voices.",
+      "why_it_matters": "These are the default image and voiceover hooks a Codex user meets, and the speech skill states the AI-voice disclosure rule an agent must pass on.",
+      "concepts": [
+        "concept:agent-skills",
+        "concept:audio-and-captions",
+        "concept:still-images"
+      ],
+      "level": "intro",
+      "maturity": "dormant",
+      "fit": "medium",
+      "fit_notes": "The speech skill defaults to gpt-4o-mini-tts-2025-12-15, and OpenAI's TTS guide says the gpt-4o-mini-tts models shut down on 2027-01-06, so the skill stops working then unless it is updated. Both skills need OPENAI_API_KEY for the CLI path and outbound network. The speech skill's codex-network.md suggests approval_policy = \"never\" to cut prompts; do not adopt that for an untrusted repo. The successor plugin creative-production is built around a Codex desktop board app and MCP tool, not a plain CLI. Licence per skill is in each LICENSE.txt, not read here. Not run here.",
+      "related": [
+        {
+          "id": "model:openai/gpt-4o-mini-tts",
+          "rel": "contradicts",
+          "note": "Skill default model is deprecated with shutdown 2027-01-06 per the TTS guide."
+        },
+        {
+          "id": "model:openai/gpt-image",
+          "rel": "integrates_with"
+        }
+      ],
+      "tool_type": "skill",
+      "agents": [
+        "codex"
+      ],
+      "levers": [
+        "audio",
+        "asset",
+        "review-loop"
+      ],
+      "cost": "paid",
+      "tags": [
+        "tts",
+        "voiceover",
+        "image-generation",
+        "disclosure",
+        "deprecated"
+      ],
+      "claims": [
+        {
+          "text": "The repository is deprecated; OpenAI points to openai/plugins instead.",
+          "quote": "**This repository is deprecated.** For current Codex skill and plugin examples, use the [OpenAI Plugins repository](https://github.com/openai/plugins).",
+          "locator": "README.md, notice at the top",
+          "url": "https://github.com/openai/skills/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The speech skill uses the built-in voices only; custom voice creation is outside it.",
+          "quote": "- Built-in voices only. Custom voices are out of scope for this skill.",
+          "locator": "skills/.curated/speech/SKILL.md, Defaults & rules",
+          "url": "https://github.com/openai/skills/blob/main/skills/.curated/speech/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Before shipping an important clip the speech skill asks the agent to check intelligibility, pacing and pronunciation, then change one thing at a time.",
+          "quote": "6. For important clips, validate: intelligibility, pacing, pronunciation, and adherence to constraints.\n7. Iterate with a single targeted change (voice, speed, or instructions), then re-check.",
+          "locator": "skills/.curated/speech/SKILL.md, Workflow, steps 6-7",
+          "url": "https://github.com/openai/skills/blob/main/skills/.curated/speech/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "openai/skills README, skills/.system/imagegen/SKILL.md, skills/.curated/speech/SKILL.md, speech references voiceover.md and codex-network.md, and openai/plugins creative-production README and produce SKILL.md, against the claims",
+        "source_sha256": "a215225825369b96630c12476bd8536c2cbc5b887c1fa9c371db5d9cc4388079",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "lane": "media-stages",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:anthropics/skills",
+      "title": "Anthropic Agent Skills (canvas-design, algorithmic-art)",
+      "aliases": [
+        "canvas-design",
+        "algorithmic-art",
+        "anthropic skills"
+      ],
+      "url": "https://github.com/anthropics/skills",
+      "summary": "Anthropic's public skill repository. canvas-design writes a short design philosophy and then draws a single-page PNG or PDF in code; algorithmic-art writes a seeded p5.js sketch as one HTML file.",
+      "why_it_matters": "It gives a model-free route to posters, title cards and abstract backgrounds, with no image API cost and no generation watermark question.",
+      "concepts": [
+        "concept:agent-skills",
+        "concept:still-images",
+        "concept:visual-design"
+      ],
+      "level": "intro",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "canvas-design tells the agent to download whatever fonts it needs, which conflicts with the font-licence rule in tool:mattypark/motion-graphics-skill; check each font's licence before a client job. algorithmic-art outputs HTML that loads p5.js from a CDN, so a still for the video needs a headless browser screenshot step the skill does not provide. Its layout rule (nothing overlaps, everything inside the margins) is the only built-in check; there is no stated safe area for video crops. canvas-design/LICENSE.txt is Apache 2.0 text. Not run here.",
+      "related": [
+        {
+          "id": "tool:mattypark/motion-graphics-skill",
+          "rel": "contradicts",
+          "note": "Font sourcing: download any font vs never ship an unverified font licence."
+        }
+      ],
+      "tool_type": "skill",
+      "agents": [
+        "claude-code",
+        "any-skill"
+      ],
+      "levers": [
+        "design",
+        "asset"
+      ],
+      "cost": "free-local",
+      "tags": [
+        "thumbnail",
+        "title-card",
+        "generative-art",
+        "fonts"
+      ],
+      "claims": [
+        {
+          "text": "canvas-design requires that nothing overlaps and every element stays inside the canvas with margins.",
+          "quote": "Regardless of text scale, nothing falls off the page and nothing overlaps. Every element must be contained within the canvas boundaries with proper margins.",
+          "locator": "skills/canvas-design/SKILL.md, Text as a contextual element",
+          "url": "https://github.com/anthropics/skills/blob/main/skills/canvas-design/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "canvas-design tells the agent to download any fonts it needs.",
+          "quote": "Download and use whatever fonts are needed to make this a reality.",
+          "locator": "skills/canvas-design/SKILL.md, paragraph after Text as a contextual element",
+          "url": "https://github.com/anthropics/skills/blob/main/skills/canvas-design/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "algorithmic-art produces one HTML file that loads p5.js from a CDN, reproducible by seed.",
+          "quote": "The HTML artifact contains everything: p5.js (from CDN), the algorithm, parameter controls, and UI - all in one file that works immediately in claude.ai artifacts or any browser.",
+          "locator": "skills/algorithmic-art/SKILL.md, output section",
+          "url": "https://github.com/anthropics/skills/blob/main/skills/algorithmic-art/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "skills/canvas-design/SKILL.md, skills/algorithmic-art/SKILL.md and skills/canvas-design/LICENSE.txt in anthropics/skills against the claims",
+        "source_sha256": "99b371776b2d6db9320a5a36a486e415e5565493814c18cadb58e569e940fe63",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "lane": "media-stages",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:gemini-cli-extensions/nanobanana",
+      "title": "Nano Banana extension for Gemini CLI",
+      "aliases": [
+        "nanobanana",
+        "gemini-cli nanobanana"
+      ],
+      "url": "https://github.com/gemini-cli-extensions/nanobanana",
+      "summary": "A Gemini CLI extension with an MCP server that adds /generate, /edit, /icon, /diagram and related commands backed by the Gemini image models.",
+      "why_it_matters": "It is the first-party-adjacent hook for Gemini image generation from a terminal agent, including icon and diagram presets for explainer stills.",
+      "concepts": [
+        "concept:mcp-servers",
+        "concept:still-images",
+        "concept:image-models"
+      ],
+      "level": "intro",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Built for Gemini CLI; use from Claude Code or Codex is not documented in the README. Its default model id is gemini-3.1-flash-image-preview; the Gemini pricing page read on 2026-11-12 lists gemini-3.1-flash-image at $0.067 per 1K image and gemini-nano-banana-2.1 at half that, and it was not checked whether the -preview alias still answers. Needs a paid Gemini key in NANOBANANA_API_KEY. Images land in ./nanobanana-output/. Not run here.",
+      "related": [
+        {
+          "id": "model:google/nano-banana",
+          "rel": "integrates_with",
+          "note": "Default is not the 2.1 model named on Google's pricing page."
+        },
+        {
+          "id": "tool:kingbootoshi/nano-banana-2-skill",
+          "rel": "alternative_to"
+        }
+      ],
+      "tool_type": "mcp-server",
+      "agents": [
+        "gemini-cli"
+      ],
+      "levers": [
+        "asset",
+        "design"
+      ],
+      "cost": "paid",
+      "tags": [
+        "image-generation",
+        "thumbnail",
+        "diagram",
+        "gemini"
+      ],
+      "claims": [
+        {
+          "text": "Nano Banana 2 under the preview id is the default model; NANOBANANA_MODEL switches it.",
+          "quote": "Nano Banana 2 (`gemini-3.1-flash-image-preview`) is now the default model (v1.0.11+)!",
+          "locator": "README.md, notice at the top",
+          "url": "https://github.com/gemini-cli-extensions/nanobanana/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It needs a Gemini API key in NANOBANANA_API_KEY.",
+          "quote": "**API Key**: Set the `NANOBANANA_API_KEY` environment variable with your Gemini API key.",
+          "locator": "README.md, Prerequisites, item 3",
+          "url": "https://github.com/gemini-cli-extensions/nanobanana/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Generated images go to a fixed subdirectory.",
+          "quote": "Generated images are saved to `./nanobanana-output/` which is created automatically.",
+          "locator": "README.md, Output Directory",
+          "url": "https://github.com/gemini-cli-extensions/nanobanana/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "gemini-cli-extensions/nanobanana README against the claims; model ids compared with the Gemini API pricing page read for model:google/gemini-tts",
+        "source_sha256": "b6242eac1241dee7856c1301421c8174c20f9791b8a18f25532907646192b75e",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "lane": "media-stages",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:kingbootoshi/nano-banana-2-skill",
+      "title": "Nano Banana 2 Skill",
+      "aliases": [
+        "nano-banana CLI",
+        "nano-banana-2-skill"
+      ],
+      "url": "https://github.com/kingbootoshi/nano-banana-2-skill",
+      "summary": "A Bun CLI, also packaged as a Claude Code skill, that calls Gemini image models with size, aspect ratio, reference images, cost logging and a green-screen transparency mode.",
+      "why_it_matters": "It gives Claude Code a one-line route to 16:9 or 9:16 stills with a cost log, and transparent PNG overlays for compositing.",
+      "concepts": [
+        "concept:agent-skills",
+        "concept:still-images",
+        "concept:cost"
+      ],
+      "level": "intro",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "The /init step has the agent clone the repo, run bun install and link a global command, which is remote code on your machine: read the repo first. The key is stored in plain text at ~/.nano-banana/.env. Its cost table matches Google's gemini-3.1-flash-image prices read on 2026-11-12 ($0.067 per 1K image); gemini-nano-banana-2.1 is $0.0336 on the same page and is not the default. Transparent mode needs ffmpeg and ImageMagick and keys out green, so green subjects lose pixels. Not run here.",
+      "related": [
+        {
+          "id": "model:google/nano-banana",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "tool:gemini-cli-extensions/nanobanana",
+          "rel": "alternative_to"
+        }
+      ],
+      "tool_type": "skill",
+      "agents": [
+        "claude-code"
+      ],
+      "levers": [
+        "asset",
+        "design"
+      ],
+      "cost": "paid",
+      "tags": [
+        "image-generation",
+        "thumbnail",
+        "transparency",
+        "gemini"
+      ],
+      "claims": [
+        {
+          "text": "Installing it as a skill makes the agent clone the repo, install dependencies and link the command.",
+          "quote": "When installed as a Claude Code skill, just say `/init` and Claude will clone the repo, install deps, and link the command for you.",
+          "locator": "README.md, As a Claude Code Skill",
+          "url": "https://github.com/kingbootoshi/nano-banana-2-skill/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Its cost table gives about $0.067 per 1K image for the Flash default and twice that for Pro.",
+          "quote": "| `1K` | ~1024x1024 | ~$0.067 | ~$0.134 |",
+          "locator": "README.md, Sizes and Costs table",
+          "url": "https://github.com/kingbootoshi/nano-banana-2-skill/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Transparency works by generating on a green screen and keying it out with FFmpeg.",
+          "quote": "The `-t` flag automatically prompts the AI to generate on a green screen, then uses FFmpeg `colorkey` + `despill` to key out the background and remove green spill from edge pixels.",
+          "locator": "README.md, Transparent Assets",
+          "url": "https://github.com/kingbootoshi/nano-banana-2-skill/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "kingbootoshi/nano-banana-2-skill README against the claims; cost table compared with the Gemini API pricing page read for model:google/gemini-tts",
+        "source_sha256": "446c4d06e12dc032e8d96bce4d55c45bfabd38d80fd0855280bbf39c00670f13",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "lane": "media-stages",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:elevenlabs.io",
+      "title": "ElevenLabs API",
+      "aliases": [
+        "ElevenLabs",
+        "Eleven Music",
+        "ElevenLabs Sound Effects"
+      ],
+      "url": "https://elevenlabs.io/pricing/api",
+      "summary": "A hosted voice and audio API: text to speech with stock voices, sound effects, music, speech to text and dubbing, billed in US dollars per character or per minute.",
+      "why_it_matters": "It is the one hosted vendor that sells TTS, sound effects and music under one key with per-unit prices on the page, which makes a full audio bed costable before the run.",
+      "concepts": [
+        "concept:audio-and-captions",
+        "concept:cost",
+        "concept:licences-and-territory"
+      ],
+      "level": "intro",
+      "maturity": "established",
+      "fit": "medium",
+      "fit_notes": "Free-plan output may only be used non-commercially, so a free key is not enough for client or monetised video. The terms give ElevenLabs a perpetual licence to your Input and Output for improving services. The terms make the user responsible for reviewing output before use, and say output may match another user's, so do not treat a generated jingle or effect as exclusive. Voice cloning features exist and are out of scope here; use library or stock voices. Its MCP server was not opened in this lane. Prices go stale in about 30 days.",
+      "related": [
+        {
+          "id": "model:google/gemini-tts",
+          "rel": "alternative_to"
+        },
+        {
+          "id": "model:openai/gpt-4o-mini-tts",
+          "rel": "alternative_to"
+        },
+        {
+          "id": "tool:browser-use/video-use",
+          "rel": "integrates_with",
+          "note": "video-use uses an ElevenLabs key for transcription."
+        }
+      ],
+      "tool_type": "service",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "audio",
+        "asset"
+      ],
+      "cost": "mixed",
+      "tags": [
+        "tts",
+        "voiceover",
+        "sound-effects",
+        "music",
+        "pricing"
+      ],
+      "claims": [
+        {
+          "text": "Text to speech costs $0.08 per 1,000 characters on multilingual models or $0.04 on Flash/Turbo, billed in dollars.",
+          "quote": "API usage is billed in US dollars, not credits. Text to Speech $0.08 per 1,000 characters (multilingual models) or $0.04 (Flash/Turbo).",
+          "locator": "API pricing page, FAQ, billing answer",
+          "url": "https://elevenlabs.io/pricing/api",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Eleven Music costs $0.15 per minute and Sound Effects $0.12 per minute.",
+          "quote": "Eleven Music $0.15 per minute. Voice Changer and Voice Isolator $0.12 per minute. Sound Effects $0.12 per minute.",
+          "locator": "API pricing page, FAQ, billing answer",
+          "url": "https://elevenlabs.io/pricing/api",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Free users may use the services only for non-commercial purposes; paid users may use them commercially.",
+          "quote": "(i) if you access or use our Services free of charge (such a user, a “Free User”), you may only use the Services for non-commercial purposes; (ii) if you access or use our Services through a paid subscription plan (such a user, a “Paid User”), you may use the Services for commercial purposes",
+          "locator": "Terms of Service, Use Restrictions (c)",
+          "url": "https://elevenlabs.io/terms-of-use",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "ElevenLabs API pricing page FAQ and Terms of Service (use restrictions, inputs and outputs, output responsibility) against the claims",
+        "source_sha256": "d2e42a6dbf929f07a2bff090409839592f207dc36ed6024fda1d413cd9ae7bff",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "tool",
+      "lane": "media-stages",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:freesound.org",
+      "title": "Freesound API",
+      "aliases": [
+        "Freesound",
+        "freesound apiv2"
+      ],
+      "url": "https://freesound.org/docs/api/",
+      "summary": "A collaborative library of Creative Commons sound recordings with a REST API (APIv2) for search, metadata and download, using token or OAuth2 authentication.",
+      "why_it_matters": "It is the free source of real recorded sound effects an agent can search by text, but each sound carries its own licence, so the agent must filter and credit.",
+      "concepts": [
+        "concept:audio-and-captions",
+        "concept:licences-and-territory"
+      ],
+      "level": "intermediate",
+      "maturity": "established",
+      "fit": "medium",
+      "fit_notes": "Filter to CC0 for zero obligations; CC BY needs a credit line in the description; drop CC BY-NC and the legacy Sampling+ for monetised or ad work. A key needs a free account at freesound.org/apiv2/apply. Some resources are OAuth2-only; which ones (likely full-quality download) was not checked here, previews are low-bitrate mp3 or ogg per the FAQ. Stable Audio Open was trained mostly on Freesound CC audio, which does not change the licence of a sound you download.",
+      "related": [
+        {
+          "id": "model:stabilityai/stable-audio",
+          "rel": "alternative_to",
+          "note": "Generated SFX instead of recorded; trained on Freesound CC0, CC BY and CC Sampling+ audio."
+        }
+      ],
+      "tool_type": "service",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "audio",
+        "asset"
+      ],
+      "cost": "free-tier",
+      "tags": [
+        "sound-effects",
+        "creative-commons",
+        "attribution"
+      ],
+      "claims": [
+        {
+          "text": "Freesound's own summary of its licences: CC0 allows almost anything, CC BY needs credit, and non-commercial bars earning money from the work.",
+          "quote": "for the \"zero\" license you can do pretty much what you want with the sound. You could even sell the sound, ... but you can't claim you are the author! For \"attribution\" you should always mention the original creators of the sounds when you use them. \"Noncommercial\" works like attribution, but you can't earn any money with the piece of work you create!",
+          "locator": "FAQ, Licenses, answer to which files you can use",
+          "url": "https://freesound.org/help/faq/",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Legacy Sampling+ sounds also cannot be used in commercial advertising.",
+          "quote": "you can do pretty much what you could do with the attribution noncommercial license, but additionally you can't make commercial advertisement with the sound.",
+          "locator": "FAQ, Licenses, Sampling+ paragraph",
+          "url": "https://freesound.org/help/faq/",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Token authentication is enough for most resources, but some are restricted to OAuth2.",
+          "quote": "Most of the resources are accessible using both authentication strategies but some of them\nare restricted to the use of OAuth2.",
+          "locator": "API docs, Authentication, introduction",
+          "url": "https://freesound.org/docs/api/authentication.html",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "Freesound API index, API authentication page and the Freesound FAQ licence sections against the claims",
+        "source_sha256": "baf87a342f9f61d86a814c940acbf6387a27c671044c497554b768545c9a06c6",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "lane": "media-stages",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:recraft.ai",
+      "title": "Recraft API and MCP server",
+      "aliases": [
+        "Recraft",
+        "Recraft V4.1",
+        "mcp.recraft.ai"
+      ],
+      "url": "https://www.recraft.ai/docs/api-reference/pricing",
+      "summary": "A hosted image API with raster and vector (SVG) output, editing tools and a hosted MCP server at mcp.recraft.ai with OAuth.",
+      "why_it_matters": "Vector output means an illustration or icon for an explainer scales to any resolution and can be animated in code, which raster models cannot give.",
+      "concepts": [
+        "concept:image-models",
+        "concept:mcp-servers",
+        "concept:cost"
+      ],
+      "level": "intro",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Two separate balances: the API is prepaid units ($1 = 1,000), while the MCP server spends the Studio subscription credits. Free-plan images are public, owned by Recraft and not licensed for commercial use, so the MCP route on a free plan is unfit for client work. Assets may not be used to train AI models on any plan. On Claude Code on the web, img.recraft.ai must be allowlisted to download results. The pricing page was read; per-credit rates of the Studio plan were not.",
+      "related": [
+        {
+          "id": "model:google/nano-banana",
+          "rel": "alternative_to"
+        },
+        {
+          "id": "model:openai/gpt-image",
+          "rel": "alternative_to"
+        }
+      ],
+      "tool_type": "service",
+      "agents": [
+        "claude-code",
+        "any-mcp"
+      ],
+      "levers": [
+        "asset",
+        "design"
+      ],
+      "cost": "mixed",
+      "tags": [
+        "image-generation",
+        "vector",
+        "svg",
+        "pricing"
+      ],
+      "claims": [
+        {
+          "text": "V4.1 costs $0.035 per raster image and $0.08 per vector image through the API; V4.1 Flash is $0.007 raster only.",
+          "quote": "| [V4.1](https://www.recraft.ai/docs/api-reference/models/recraft-v4-1.md) and V4.1 Utility | \\$0.035 | \\$0.08 | \\$0.21 | \\$0.30 |",
+          "locator": "API reference, Pricing, model table (Raster, Vector, Pro raster, Pro vector)",
+          "url": "https://www.recraft.ai/docs/api-reference/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Free-plan images are public, stay Recraft's property and are not licensed for commercial use; paid-plan images carry full commercial rights.",
+          "quote": "Images generated under the **Free plan** are publicly visible in the community gallery and remain the property of Recraft. These images are not licensed for commercial use.",
+          "locator": "Plans and billing, Commercial rights and ownership",
+          "url": "https://www.recraft.ai/docs/plans-and-billing/commercial-rights-and-ownership",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The MCP server draws on subscription credits, not on API units.",
+          "quote": "The MCP server consumes **subscription credits** from your Recraft plan — the same balance used by the Recraft Studio app.",
+          "locator": "MCP reference, MCP server, Billing",
+          "url": "https://www.recraft.ai/docs/mcp-reference/remote-server",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "Recraft API pricing page (markdown), Commercial rights and ownership page and MCP server page against the claims",
+        "source_sha256": "d61ebbdd96ea1768fb1a9b515750565de256b3ee987805c8f00f5c8a58bf2011",
+        "next_due": "2026-12-12"
+      }
+    }
+  ]
+}

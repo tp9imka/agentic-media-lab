@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "lane": "media-stages",
+  "records": [
+    {
+      "kind": "source",
+      "lane": "media-stages",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "source:support.google.com/youtube/answer/72431",
+      "title": "YouTube Help - Add video thumbnails",
+      "aliases": [
+        "YouTube custom thumbnail specs",
+        "thumbnail size"
+      ],
+      "url": "https://support.google.com/youtube/answer/72431",
+      "summary": "YouTube's help page for custom video and Shorts thumbnails: who can upload them, recommended resolution, file size limits per device, aspect ratios and the policy on strikes.",
+      "why_it_matters": "It is the target an agent should render a thumbnail to, and it says 16:9 thumbnails on vertical videos get replaced by a 4:5 crop in some feeds.",
+      "concepts": [
+        "concept:platform-rules",
+        "concept:still-images",
+        "concept:delivery"
+      ],
+      "level": "intro",
+      "fit": "high",
+      "fit_notes": "Render 3840x2160 (or 2160x3840 for Shorts) and export JPG or PNG under 2 MB if the upload may come from a phone; desktop allows 50 MB. Many guides still say 1280x720 from memory; this page asks for larger. Keep the subject and text inside a 4:5 centre crop when the video is vertical. Custom thumbnails need a verified account. A thumbnail that breaks Community Guidelines can earn a strike. Limits change; re-check before a launch.",
+      "related": [
+        {
+          "id": "source:support.google.com/youtube/answer/14328491",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "source:support.google.com/youtube/answer/1722171",
+          "rel": "integrates_with"
+        }
+      ],
+      "tags": [
+        "thumbnail",
+        "youtube",
+        "safe-crop"
+      ],
+      "claims": [
+        {
+          "text": "YouTube recommends 3840x2160 for video thumbnails and 2160x3840 for Shorts, with a 640 px minimum.",
+          "quote": "Have a resolution of 3840 x 2160 pixels for videos and 2160 x 3840 for Shorts, with a minimum width of 640 pixels for videos and a minimum height of 640 pixels for Shorts.",
+          "locator": "Custom thumbnail best practices, Image size & resolution",
+          "url": "https://support.google.com/youtube/answer/72431",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The upload limit is 2 MB from mobile and 50 MB from desktop.",
+          "quote": "Mobile: 2 MB for video thumbnails or 10 MB for podcasts.\nDesktop: 50MB for video, Shorts, and podcast thumbnails.",
+          "locator": "Custom thumbnail best practices, Image size & resolution",
+          "url": "https://support.google.com/youtube/answer/72431",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A 16:9 custom thumbnail on a vertical video is replaced by an auto-generated 4:5 one on home, explore and subscription pages.",
+          "quote": "Note: Vertical videos with 16:9 custom thumbnails will be replaced by an auto-generated 4:5 thumbnail on the home, explore, and subscription pages.",
+          "locator": "Custom thumbnail best practices, note under aspect ratios",
+          "url": "https://support.google.com/youtube/answer/72431",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "YouTube Help article 72431 (custom thumbnails), best-practices and policy sections, against the claims",
+        "source_sha256": "4f4408617b11939db48b2716a8bacfbc101a65f8a7df0f1a74f98ac4d1fb1cd4",
+        "next_due": "2026-12-12"
+      }
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "schema_version": 1,
+  "lane": "media-stages",
+  "records": [
+    {
+      "kind": "model",
+      "lane": "media-stages",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "model:openai/gpt-4o-mini-tts",
+      "title": "OpenAI TTS (gpt-4o-mini-tts, tts-1, tts-1-hd)",
+      "aliases": [
+        "OpenAI speech endpoint",
+        "/v1/audio/speech",
+        "tts-1",
+        "tts-1-hd"
+      ],
+      "url": "https://developers.openai.com/api/docs/guides/text-to-speech",
+      "summary": "OpenAI's text-to-speech models behind /v1/audio/speech, with built-in voices and an instructions field on gpt-4o-mini-tts. All three models are deprecated with a shutdown date.",
+      "why_it_matters": "Many skills and scripts call this endpoint for narration; they stop working on 2027-01-06 and the named successor uses a different API.",
+      "concepts": [
+        "concept:audio-and-captions",
+        "concept:models"
+      ],
+      "level": "intro",
+      "maturity": "active",
+      "fit": "low",
+      "status_note": "Deprecated; OpenAI's TTS guide gives a shutdown date of 2027-01-06 (read 2026-11-12).",
+      "fit_notes": "Do not start a new pipeline on it: migration goes to gpt-realtime-2.1-mini on the Realtime API, which is not a drop-in for /v1/audio/speech. Until then use wav or pcm for video sync (pcm is 24 kHz 16-bit with no header). The page says 11 built-in voices in its intro and 13 in the voice list. Per-minute or per-character price was not read here. Usage policy requires telling listeners the voice is AI.",
+      "related": [
+        {
+          "id": "tool:openai/skills",
+          "rel": "contradicts",
+          "note": "The speech skill still defaults to gpt-4o-mini-tts."
+        },
+        {
+          "id": "model:google/gemini-tts",
+          "rel": "alternative_to"
+        }
+      ],
+      "modes": [
+        "tts"
+      ],
+      "access": "api",
+      "apple_silicon": "no-documented-path",
+      "licence_class": "proprietary",
+      "tags": [
+        "tts",
+        "voiceover",
+        "deprecated",
+        "disclosure"
+      ],
+      "claims": [
+        {
+          "text": "tts-1, tts-1-hd and gpt-4o-mini-tts shut down on 2027-01-06; the successor is not supported on /v1/audio/speech.",
+          "quote": "The tts-1, tts-1-hd, and gpt-4o-mini-tts models are deprecated and will\nshut down on January 6, 2027. Migrate to gpt-realtime-2.1-mini using the\nRealtime API. This is a change of API workflow:\ngpt-realtime-2.1-mini isn’t a supported model for /v1/audio/speech.",
+          "locator": "Text to speech guide, deprecation notice at the top",
+          "url": "https://developers.openai.com/api/docs/guides/text-to-speech",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "OpenAI's usage policies require a clear disclosure that the voice is AI-generated.",
+          "quote": "Our usage policies require you\nto provide a clear disclosure to end users that the TTS voice they are hearing\nis AI-generated and not a human voice.",
+          "locator": "Text to speech guide, introduction",
+          "url": "https://developers.openai.com/api/docs/guides/text-to-speech",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "OpenAI recommends marin or cedar for best quality.",
+          "quote": "For best quality, we recommend using marin or cedar.",
+          "locator": "Text to speech guide, Voice options",
+          "url": "https://developers.openai.com/api/docs/guides/text-to-speech",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "OpenAI text-to-speech guide (deprecation notice, voice options, output formats, usage-policy note) against the claims",
+        "source_sha256": "ab653afa94c3286533c7ac99c0a90a4d791473f358cb78a59360da7eacfeb6b3",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "lane": "media-stages",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "model:google/gemini-tts",
+      "title": "Gemini TTS (Gemini 3.8 Flash TTS)",
+      "aliases": [
+        "gemini-3.8-flash-tts",
+        "gemini-3.8-flash-lite-tts",
+        "Gemini speech generation"
+      ],
+      "url": "https://ai.google.dev/gemini-api/docs/speech-generation",
+      "summary": "Google's text-to-speech models on the Gemini API, with prebuilt voices, style control through turn metadata and inline tags, and two-speaker dialogue in one request.",
+      "why_it_matters": "It is the cheapest first-party hosted narration with a price on the page, and the price doubles on 2027-01-01.",
+      "concepts": [
+        "concept:audio-and-captions",
+        "concept:cost",
+        "concept:models"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Paid output is $9 per 1M audio tokens ($0.00225 per 10 s) through 2026-12-31 and $18 from 2027-01-01; budget with the 2027 number. The free tier exists but its data is used to improve Google products; use the paid tier for client scripts. Gemini 3.8 returns full WAV with a 44-byte header; strip it or request audio/l16 before joining turns. Voice design, remixing and replication features exist; replication is cloning and out of scope here; use prebuilt voices. No SynthID statement was found on the TTS page.",
+      "related": [
+        {
+          "id": "model:openai/gpt-4o-mini-tts",
+          "rel": "alternative_to"
+        },
+        {
+          "id": "tool:elevenlabs.io",
+          "rel": "alternative_to"
+        }
+      ],
+      "modes": [
+        "tts"
+      ],
+      "access": "api",
+      "apple_silicon": "no-documented-path",
+      "licence_class": "proprietary",
+      "tags": [
+        "tts",
+        "voiceover",
+        "pricing",
+        "gemini"
+      ],
+      "claims": [
+        {
+          "text": "Gemini 3.8 Flash TTS output costs $9.00 per 1M audio tokens through 2026-12-31 and $18.00 from 2027-01-01.",
+          "quote": "$9.00 (audio) through December 31, 2026.   \n  $18.00 (audio) starting January 1, 2027.",
+          "locator": "Pricing page (markdown), Gemini 3.8 Flash TTS, Standard tab, Output price",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Google equates the 2027 output price to $0.0045 per 10 seconds of audio.",
+          "quote": "Equivalent to $0.0045 per 10s audio",
+          "locator": "Pricing page (markdown), Gemini 3.8 Flash TTS, Standard tab, Output price",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Joining separately generated turns needs raw PCM or the WAV header stripped.",
+          "quote": "Because unary requests return `audio/wav` with a 44-byte RIFF header by\n  default, request raw PCM (`{\"type\": \"audio\", \"mime_type\": \"audio/l16\"}`) or\n  strip the WAV header from each turn before concatenating the 24kHz PCM\n  audio frames.",
+          "locator": "Speech generation guide (markdown), Limitations, second bullet",
+          "url": "https://ai.google.dev/gemini-api/docs/speech-generation",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "Gemini API speech-generation guide (markdown) and Gemini API pricing page (markdown), Gemini 3.8 Flash TTS section, against the claims",
+        "source_sha256": "77761a4179968cff32621b86fd62affb1393b3b29614b965d6435c8ebeed6e6e",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "lane": "media-stages",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "model:stabilityai/stable-audio",
+      "title": "Stable Audio Open",
+      "aliases": [
+        "stable-audio-open-1.0",
+        "Stable Audio 3",
+        "stable-audio-tools"
+      ],
+      "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+      "summary": "Stability AI's open-weight text-to-audio models. Stable Audio Open 1.0 makes up to 47 seconds of 44.1 kHz stereo from a text prompt and is stronger on sound effects than music. Stable Audio 3 checkpoints exist on Hugging Face behind a gate.",
+      "why_it_matters": "It is the local route to generated sound effects and ambience for a clip, under a licence that allows commercial use below a revenue line.",
+      "concepts": [
+        "concept:audio-and-captions",
+        "concept:licences-and-territory",
+        "concept:models"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Weights are gated: a Hugging Face login and accepting the licence form are needed before download, so an agent cannot fetch them unattended. Commercial use is free under USD 1M annual revenue; above it an Enterprise licence is needed. Outputs belong to the user. Keep clips under 47 s per generation and plan crossfades for longer beds. No Mac path is documented on the 1.0 card; mlx-audio lists Stable Audio 3 MLX ports, whose card was not read here.",
+      "related": [
+        {
+          "id": "model:ace-step/ace-step",
+          "rel": "alternative_to",
+          "note": "ACE-Step is stronger for songs; Stable Audio Open for effects."
+        },
+        {
+          "id": "tool:blaizzy/mlx-audio",
+          "rel": "integrates_with"
+        }
+      ],
+      "modes": [
+        "music"
+      ],
+      "access": "weights",
+      "apple_silicon": "not-checked",
+      "licence_class": "commercial-threshold",
+      "tags": [
+        "sound-effects",
+        "music",
+        "stability"
+      ],
+      "claims": [
+        {
+          "text": "Stable Audio Open 1.0 generates up to 47 seconds of 44.1 kHz stereo audio.",
+          "quote": "Stable Audio Open 1.0 generates variable-length (up to 47s) stereo audio at 44.1kHz from text prompts.",
+          "locator": "Model card, Model Details",
+          "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The card says it is better at sound effects and field recordings than music.",
+          "quote": "The model is better at generating sound effects and field recordings than music.",
+          "locator": "Model card, Limitations",
+          "url": "https://huggingface.co/stabilityai/stable-audio-open-1.0",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The Community License allows commercial use for individuals and organisations under USD 1M annual revenue.",
+          "quote": "The Stability AI Community License allows for research, non-commercial, and commercial use of the Core Models for individuals or organizations that generate under $1M (or local currency equivalent) of annual revenue, regardless of the source of that revenue.",
+          "locator": "stability.ai/license, FAQ",
+          "url": "https://stability.ai/license",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "stable-audio-open-1.0 model card page, stability.ai/license FAQ and the Stability AI Community License Agreement page against the claims; the stable-audio-3 card was gated and not read",
+        "source_sha256": "a1b3f236e09b21be58ad3e03ab864b4d2090c0c292dc94cb62905f0f253717fe",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "lane": "media-stages",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "model:facebook/musicgen",
+      "title": "MusicGen and AudioGen (AudioCraft)",
+      "aliases": [
+        "AudioCraft",
+        "MusicGen",
+        "AudioGen",
+        "facebook/musicgen"
+      ],
+      "url": "https://github.com/facebookresearch/audiocraft",
+      "summary": "Meta's AudioCraft library with the MusicGen text-to-music and AudioGen text-to-sound models. Code is MIT, weights are CC BY-NC 4.0.",
+      "why_it_matters": "Older guides still suggest MusicGen for a soundtrack; its weights licence is non-commercial, which rules it out for monetised or client video.",
+      "concepts": [
+        "concept:audio-and-captions",
+        "concept:licences-and-territory",
+        "concept:models"
+      ],
+      "level": "intro",
+      "maturity": "established",
+      "fit": "low",
+      "fit_notes": "Use only for drafts or internal tests. For a commercial clip use model:ace-step/ace-step (output stated usable commercially) or model:stabilityai/stable-audio under its revenue threshold. Mac support and output-ownership terms were not checked here.",
+      "related": [
+        {
+          "id": "model:ace-step/ace-step",
+          "rel": "alternative_to"
+        },
+        {
+          "id": "model:stabilityai/stable-audio",
+          "rel": "alternative_to"
+        }
+      ],
+      "modes": [
+        "music"
+      ],
+      "access": "weights",
+      "apple_silicon": "not-checked",
+      "licence_class": "non-commercial",
+      "tags": [
+        "music",
+        "sound-effects",
+        "non-commercial"
+      ],
+      "claims": [
+        {
+          "text": "The code is MIT but the model weights are CC BY-NC 4.0.",
+          "quote": "The models weights in this repository are released under the CC-BY-NC 4.0 license",
+          "locator": "README.md, License",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The weights licence file is the Creative Commons Attribution-NonCommercial 4.0 text.",
+          "quote": "Attribution-NonCommercial 4.0 International",
+          "locator": "LICENSE_weights, title line",
+          "url": "https://github.com/facebookresearch/audiocraft/blob/main/LICENSE_weights",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "facebookresearch/audiocraft README License section and LICENSE_weights against the claim",
+        "source_sha256": "8d526b3d35b142ce2d4a8329149d90a67e24d66d258e8b1b750f0bf009cc30d5",
+        "next_due": "2026-12-12"
+      }
+    }
+  ]
+}
