@@ -46,14 +46,28 @@ Gotcha for agents: the render exits normally, so only a frame check catches it. 
 - Corroboration: single-source
 - Checked: 2026-11-12 by agent:kiro, depth primary-read. issue 4435 body via gh issue view, docs/concepts/determinism.mdx and SKILL.md line 12 on main
 - Next check due: 2027-02-10
-- Licence: unknown
+- Licence: Apache-2.0
 - URL status: live
 - Saved source sha256: `691385421b1b245435e87141a0f2e0a816318b47a951e238b80b655827c720da`
 - Lane: contrarian
 
 ## Observed
 
-Nothing collected yet.
+Collected by `tools/enrich.py`, not typed by hand.
+
+- archived: false
+- created: 2026-03-10
+- default_branch: main
+- fetched_at: 2026-11-12
+- forks: 7671
+- installs: 1524572
+- installs_by_skill: {"general-video": 661816, "hyperframes": 1486779, "hyperframes-animation": 1005453, "hyperframes-audio": 663932, "hyperframes-cli": 1524572, "hyperframes-core": 931131, "hyperframes-creative": 917182, "hyperframes-keyframes": 754861, "hyperframes-registry": 1274564, "media-use": 1395655}
+- last_activity: 2026-11-12
+- licence: Apache-2.0
+- open_issues: 245
+- registry: skills.sh
+- sources: https://api.github.com/repos/heygen-com/hyperframes, https://skills.sh/api/search?q=hyperframes
+- stars: 83132
 
 ## Related
 

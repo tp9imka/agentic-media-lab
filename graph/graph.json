@@ -384,6 +384,78 @@
    ]
   },
   {
+   "id": "source:arxiv.org/abs/2503.07314",
+   "kind": "source",
+   "label": "MovieAgent: Automated Movie Generation via Multi-Agent CoT Planning",
+   "path": "catalog/source/arxiv.org__abs__2503.07314.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:agentic-pipelines",
+    "concept:story-and-decomposition",
+    "concept:consistency"
+   ]
+  },
+  {
+   "id": "source:arxiv.org/abs/2503.21755",
+   "kind": "source",
+   "label": "VBench-2.0: benchmark suite for intrinsic faithfulness",
+   "path": "catalog/source/arxiv.org__abs__2503.21755.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-secondary",
+   "concepts": [
+    "concept:evaluation",
+    "concept:generated-footage"
+   ]
+  },
+  {
+   "id": "source:arxiv.org/abs/2505.24862",
+   "kind": "source",
+   "label": "ViStoryBench: benchmark suite for story visualization",
+   "path": "catalog/source/arxiv.org__abs__2505.24862.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-secondary",
+   "concepts": [
+    "concept:evaluation",
+    "concept:consistency",
+    "concept:still-images",
+    "concept:story-and-decomposition"
+   ]
+  },
+  {
+   "id": "source:arxiv.org/abs/2512.22536",
+   "kind": "source",
+   "label": "CoAgent: Collaborative Planning and Consistency Agent for Coherent Video Generation",
+   "path": "catalog/source/arxiv.org__abs__2512.22536.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:agentic-pipelines",
+    "concept:review-loop",
+    "concept:consistency",
+    "concept:evaluation"
+   ]
+  },
+  {
+   "id": "source:arxiv.org/abs/2601.17737",
+   "kind": "source",
+   "label": "The Script is All You Need: ScripterAgent and DirectorAgent for dialogue-to-cinematic video",
+   "path": "catalog/source/arxiv.org__abs__2601.17737.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:agentic-pipelines",
+    "concept:story-and-decomposition",
+    "concept:consistency",
+    "concept:model-prompting"
+   ]
+  },
+  {
    "id": "source:arxiv.org/abs/2604.24842",
    "kind": "source",
    "label": "Co-Director: Agentic Generative Video Storytelling (arXiv 2604.24842)",
@@ -394,6 +466,19 @@
    "concepts": [
     "concept:story-and-decomposition",
     "concept:agentic-pipelines",
+    "concept:review-loop"
+   ]
+  },
+  {
+   "id": "source:arxiv.org/abs/2605.03475",
+   "kind": "source",
+   "label": "WorldJen: end-to-end multi-dimensional benchmark for generative video models",
+   "path": "catalog/source/arxiv.org__abs__2605.03475.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "unverified",
+   "concepts": [
+    "concept:evaluation",
     "concept:review-loop"
    ]
   },
@@ -413,14 +498,14 @@
   {
    "id": "source:arxiv.org/abs/2605.15199",
    "kind": "source",
-   "label": "EntityBench: Towards Entity-Consistent Long-Range Multi-Shot Video Generation",
+   "label": "EntityBench: entity-consistent long-range multi-shot video benchmark",
    "path": "catalog/source/arxiv.org__abs__2605.15199.md",
    "status": "current",
    "inactive": false,
    "badge": "quoted-primary",
    "concepts": [
-    "concept:consistency",
     "concept:evaluation",
+    "concept:consistency",
     "concept:agentic-pipelines"
    ]
   },
@@ -439,6 +524,20 @@
    ]
   },
   {
+   "id": "source:arxiv.org/abs/2605.19382",
+   "kind": "source",
+   "label": "PRISM: benchmark for programmatic spatial-temporal reasoning",
+   "path": "catalog/source/arxiv.org__abs__2605.19382.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-secondary",
+   "concepts": [
+    "concept:evaluation",
+    "concept:code-driven-video",
+    "concept:review-loop"
+   ]
+  },
+  {
    "id": "source:arxiv.org/abs/2606.07649",
    "kind": "source",
    "label": "ViMax: Agentic Video Generation (arXiv 2606.07649)",
@@ -450,6 +549,35 @@
     "concept:story-and-decomposition",
     "concept:agentic-pipelines",
     "concept:review-loop"
+   ]
+  },
+  {
+   "id": "source:arxiv.org/abs/2606.20799",
+   "kind": "source",
+   "label": "GroundShot: Entity-Grounded Shot Scheduling for multi-shot video (and GroundBench)",
+   "path": "catalog/source/arxiv.org__abs__2606.20799.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:agentic-pipelines",
+    "concept:consistency",
+    "concept:review-loop",
+    "concept:local-video-models"
+   ]
+  },
+  {
+   "id": "source:arxiv.org/abs/2607.18116",
+   "kind": "source",
+   "label": "SGA: Plug&Play Geometric Verification for Educational Video Synthesis",
+   "path": "catalog/source/arxiv.org__abs__2607.18116.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:review-loop",
+    "concept:code-driven-video",
+    "concept:evaluation"
    ]
   },
   {
@@ -851,6 +979,20 @@
    "badge": "quoted-primary",
    "concepts": [
     "concept:motion-and-transitions"
+   ]
+  },
+  {
+   "id": "source:github.com/zhuyansen/awesome-claude-video-skills",
+   "kind": "source",
+   "label": "Awesome Claude Video Skills (zhuyansen)",
+   "path": "catalog/source/github.com__zhuyansen__awesome-claude-video-skills.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-secondary",
+   "concepts": [
+    "concept:agent-skills",
+    "concept:popularity-and-trust",
+    "concept:evaluation"
    ]
   },
   {
@@ -1483,6 +1625,21 @@
    ]
   },
   {
+   "id": "tool:harry0703/moneyprinterturbo",
+   "kind": "tool",
+   "label": "MoneyPrinterTurbo",
+   "path": "catalog/tool/harry0703__moneyprinterturbo.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:agentic-pipelines",
+    "concept:audio-and-captions",
+    "concept:cost",
+    "concept:popularity-and-trust"
+   ]
+  },
+  {
    "id": "tool:heygen-com/hyperframes",
    "kind": "tool",
    "label": "HyperFrames",
@@ -1495,6 +1652,22 @@
     "concept:agent-skills",
     "concept:motion-and-transitions",
     "concept:review-loop"
+   ]
+  },
+  {
+   "id": "tool:hkuds/vimax",
+   "kind": "tool",
+   "label": "ViMax",
+   "path": "catalog/tool/hkuds__vimax.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:agentic-pipelines",
+    "concept:story-and-decomposition",
+    "concept:consistency",
+    "concept:review-loop",
+    "concept:generated-footage"
    ]
   },
   {
@@ -1852,6 +2025,36 @@
     "concept:image-models",
     "concept:mcp-servers",
     "concept:cost"
+   ]
+  },
+  {
+   "id": "tool:seme-org/open-director",
+   "kind": "tool",
+   "label": "OpenDirector",
+   "path": "catalog/tool/seme-org__open-director.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:agentic-pipelines",
+    "concept:story-and-decomposition",
+    "concept:consistency",
+    "concept:still-images"
+   ]
+  },
+  {
+   "id": "tool:showlab/code2video",
+   "kind": "tool",
+   "label": "Code2Video",
+   "path": "catalog/tool/showlab__code2video.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:agentic-pipelines",
+    "concept:code-driven-video",
+    "concept:review-loop",
+    "concept:evaluation"
    ]
   },
   {
@@ -2630,6 +2833,91 @@
    "rel": "about"
   },
   {
+   "source": "source:arxiv.org/abs/2503.07314",
+   "target": "concept:agentic-pipelines",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2503.07314",
+   "target": "concept:consistency",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2503.07314",
+   "target": "concept:story-and-decomposition",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2503.21755",
+   "target": "concept:evaluation",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2503.21755",
+   "target": "concept:generated-footage",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2505.24862",
+   "target": "concept:consistency",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2505.24862",
+   "target": "concept:evaluation",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2505.24862",
+   "target": "concept:still-images",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2505.24862",
+   "target": "concept:story-and-decomposition",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2512.22536",
+   "target": "concept:agentic-pipelines",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2512.22536",
+   "target": "concept:consistency",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2512.22536",
+   "target": "concept:evaluation",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2512.22536",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2601.17737",
+   "target": "concept:agentic-pipelines",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2601.17737",
+   "target": "concept:consistency",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2601.17737",
+   "target": "concept:model-prompting",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2601.17737",
+   "target": "concept:story-and-decomposition",
+   "rel": "about"
+  },
+  {
    "source": "source:arxiv.org/abs/2604.24842",
    "target": "concept:agentic-pipelines",
    "rel": "about"
@@ -2653,6 +2941,21 @@
    "source": "source:arxiv.org/abs/2604.24842",
    "target": "source:arxiv.org/abs/2606.07649",
    "rel": "alternative_to"
+  },
+  {
+   "source": "source:arxiv.org/abs/2605.03475",
+   "target": "concept:evaluation",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2605.03475",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2605.03475",
+   "target": "source:arxiv.org/abs/2503.21755",
+   "rel": "contradicts"
   },
   {
    "source": "source:arxiv.org/abs/2605.11418",
@@ -2685,6 +2988,11 @@
    "rel": "about"
   },
   {
+   "source": "source:arxiv.org/abs/2605.15199",
+   "target": "source:arxiv.org/abs/2503.21755",
+   "rel": "contradicts"
+  },
+  {
    "source": "source:arxiv.org/abs/2605.15585",
    "target": "concept:code-driven-video",
    "rel": "about"
@@ -2705,6 +3013,21 @@
    "rel": "evaluated_on"
   },
   {
+   "source": "source:arxiv.org/abs/2605.19382",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2605.19382",
+   "target": "concept:evaluation",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2605.19382",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
    "source": "source:arxiv.org/abs/2606.07649",
    "target": "concept:agentic-pipelines",
    "rel": "about"
@@ -2723,6 +3046,56 @@
    "source": "source:arxiv.org/abs/2606.07649",
    "target": "source:arxiv.org/abs/2604.24842",
    "rel": "alternative_to"
+  },
+  {
+   "source": "source:arxiv.org/abs/2606.20799",
+   "target": "concept:agentic-pipelines",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2606.20799",
+   "target": "concept:consistency",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2606.20799",
+   "target": "concept:local-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2606.20799",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2606.20799",
+   "target": "source:arxiv.org/abs/2605.15199",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "source:arxiv.org/abs/2607.18116",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2607.18116",
+   "target": "concept:evaluation",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2607.18116",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2607.18116",
+   "target": "tool:manimcommunity/manim",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:arxiv.org/abs/2607.18116",
+   "target": "tool:showlab/code2video",
+   "rel": "extends"
   },
   {
    "source": "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
@@ -3278,6 +3651,21 @@
    "source": "source:github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss",
    "target": "source:carbondesignsystem.com/elements/motion/overview",
    "rel": "alternative_to"
+  },
+  {
+   "source": "source:github.com/zhuyansen/awesome-claude-video-skills",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/zhuyansen/awesome-claude-video-skills",
+   "target": "concept:evaluation",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/zhuyansen/awesome-claude-video-skills",
+   "target": "concept:popularity-and-trust",
+   "rel": "about"
   },
   {
    "source": "source:help.x.com/en/rules-and-policies/authenticity",
@@ -4185,6 +4573,26 @@
    "rel": "extends"
   },
   {
+   "source": "tool:harry0703/moneyprinterturbo",
+   "target": "concept:agentic-pipelines",
+   "rel": "about"
+  },
+  {
+   "source": "tool:harry0703/moneyprinterturbo",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:harry0703/moneyprinterturbo",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "tool:harry0703/moneyprinterturbo",
+   "target": "concept:popularity-and-trust",
+   "rel": "about"
+  },
+  {
    "source": "tool:heygen-com/hyperframes",
    "target": "concept:agent-skills",
    "rel": "about"
@@ -4207,6 +4615,36 @@
   {
    "source": "tool:heygen-com/hyperframes",
    "target": "tool:remotion-dev/skills",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:hkuds/vimax",
+   "target": "concept:agentic-pipelines",
+   "rel": "about"
+  },
+  {
+   "source": "tool:hkuds/vimax",
+   "target": "concept:consistency",
+   "rel": "about"
+  },
+  {
+   "source": "tool:hkuds/vimax",
+   "target": "concept:generated-footage",
+   "rel": "about"
+  },
+  {
+   "source": "tool:hkuds/vimax",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:hkuds/vimax",
+   "target": "concept:story-and-decomposition",
+   "rel": "about"
+  },
+  {
+   "source": "tool:hkuds/vimax",
+   "target": "source:arxiv.org/abs/2503.07314",
    "rel": "alternative_to"
   },
   {
@@ -4803,6 +5241,51 @@
    "source": "tool:runwayml/runway-api",
    "target": "model:runwayml/gen-4.5",
    "rel": "integrates_with"
+  },
+  {
+   "source": "tool:seme-org/open-director",
+   "target": "concept:agentic-pipelines",
+   "rel": "about"
+  },
+  {
+   "source": "tool:seme-org/open-director",
+   "target": "concept:consistency",
+   "rel": "about"
+  },
+  {
+   "source": "tool:seme-org/open-director",
+   "target": "concept:still-images",
+   "rel": "about"
+  },
+  {
+   "source": "tool:seme-org/open-director",
+   "target": "concept:story-and-decomposition",
+   "rel": "about"
+  },
+  {
+   "source": "tool:showlab/code2video",
+   "target": "concept:agentic-pipelines",
+   "rel": "about"
+  },
+  {
+   "source": "tool:showlab/code2video",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:showlab/code2video",
+   "target": "concept:evaluation",
+   "rel": "about"
+  },
+  {
+   "source": "tool:showlab/code2video",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:showlab/code2video",
+   "target": "tool:manimcommunity/manim",
+   "rel": "depends_on"
   },
   {
    "source": "tool:temporalio/temporal",

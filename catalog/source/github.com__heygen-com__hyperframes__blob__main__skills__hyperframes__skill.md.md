@@ -46,14 +46,28 @@ Updates tool:heygen-com/hyperframes (its fit_notes mention the beacon without a 
 - Corroboration: single-source
 - Checked: 2026-11-12 by agent:kiro, depth primary-read. SKILL.md, docs/faq.mdx and the telemetry section of docs/packages/cli.mdx on main against the three claims
 - Next check due: 2027-02-10
-- Licence: unknown
+- Licence: Apache-2.0
 - URL status: live
 - Saved source sha256: `19cdd930c83d69c5ed7843a011ba4e3c9aa6e8823a77452fca007ae6f9489b1f`
 - Lane: contrarian
 
 ## Observed
 
-Nothing collected yet.
+Collected by `tools/enrich.py`, not typed by hand.
+
+- archived: false
+- created: 2026-03-10
+- default_branch: main
+- fetched_at: 2026-11-12
+- forks: 7671
+- installs: 1524572
+- installs_by_skill: {"general-video": 661816, "hyperframes": 1486779, "hyperframes-animation": 1005453, "hyperframes-audio": 663932, "hyperframes-cli": 1524572, "hyperframes-core": 931131, "hyperframes-creative": 917182, "hyperframes-keyframes": 754861, "hyperframes-registry": 1274564, "media-use": 1395655}
+- last_activity: 2026-11-12
+- licence: Apache-2.0
+- open_issues: 245
+- registry: skills.sh
+- sources: https://api.github.com/repos/heygen-com/hyperframes, https://skills.sh/api/search?q=hyperframes
+- stars: 83132
 
 ## Related
 

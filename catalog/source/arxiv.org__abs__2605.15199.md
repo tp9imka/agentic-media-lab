@@ -1,50 +1,58 @@
-# EntityBench: Towards Entity-Consistent Long-Range Multi-Shot Video Generation
+# EntityBench: entity-consistent long-range multi-shot video benchmark
 
 `source:arxiv.org/abs/2605.15199` - source - <https://arxiv.org/abs/2605.15199>
 
-A benchmark of 140 episodes (2,491 shots) from real narrative media that tracks characters, objects and locations across up to 50 shots, with a memory-based baseline.
+A benchmark of 140 episodes and 2,491 shots from real narrative media, with per-shot schedules of which characters, objects and locations appear. It scores quality, prompt following and cross-shot consistency with 51 metrics and a fidelity gate, and adds EntityMem, a per-entity memory baseline.
 
-Concepts: [Consistency](../../docs/glossary.md#consistency), [Evaluation](../../docs/glossary.md#evaluation), [Agentic pipelines](../../docs/glossary.md#agentic-pipelines)
+Concepts: [Evaluation](../../docs/glossary.md#evaluation), [Consistency](../../docs/glossary.md#consistency), [Agentic pipelines](../../docs/glossary.md#agentic-pipelines)
 
-Tags: multi-shot
+Also known as: EntityBench, EntityMem
+
+Tags: multi-shot, benchmark, entity-memory
 
 **Badge:** quoted, primary source read (`quoted-primary`): primary source read.
 
-**Why:** Multi-shot clips made by chaining generated shots lose their characters as the gap between appearances grows; this paper measures that drift and names the fix that scored best.
+**Why:** It shows that a high VBench-style score says little about whether the right character keeps appearing, which matters when picking a pipeline by its reported numbers.
 
 **Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-11-12.
 
 ## Fit notes
 
-Fit: medium. Level: advanced. Maturity: -.
+Fit: high. Level: advanced. Maturity: -.
 
-Plan shots so a recurring character or prop is regenerated from a stored reference image, not from the previous shot or a text description; that is what the paper's best method does. The abstract does not name which hosted models were tested, so it does not rank Seedance, Wan or others; the full paper and project page were not opened. No hub record claims long-range consistency outright, so this is linked by concept, not by 'contradicts'.
+Use it to read other papers' claims: consistency drops as the gap between appearances grows, and embedding similarity (DINOv2) can rate a repeated face as consistent while an LLM judge says it is the wrong person. The authors' own memory baseline loses on objects (a 'sticker look'). Code and data are said to be released; the repo was not opened here.
 
 ## Claims
 
-1. In existing methods, entity consistency across shots falls sharply as the distance between an entity's appearances grows.
+1. The benchmark has 140 episodes and 2,491 shots taken from real narrative media.
 
-   > Experiments show that cross-shot entity consistency degrades sharply with recurrence distance in existing methods,
+   > We introduce EntityBench, a benchmark of 140 episodes (2,491 shots) derived from real narrative media
 
-   Locator: arXiv abstract, results. Source: <https://arxiv.org/abs/2605.15199>, retrieved 2026-11-12.
+   Locator: arXiv 2605.15199 abstract. Source: <https://arxiv.org/abs/2605.15199>, retrieved 2026-11-12.
 
-2. Storing a verified reference per entity before generation gave the highest character fidelity among the methods tested.
+2. One method won every highlighted VBench dimension yet had the lowest character presence and character accuracy.
 
-   > explicit per-entity memory yields the highest character fidelity (Cohen's d = +2.33) and presence among methods evaluated.
+   > CineTrans wins all four highlighted VBench dimensions (subject_consistency 0.97, imaging_quality 68.6) yet has the lowest character presence (0.80) and the worst LLM character accuracy (0.09) of all four methods.
 
-   Locator: arXiv abstract, results. Source: <https://arxiv.org/abs/2605.15199>, retrieved 2026-11-12.
+   Locator: arXiv 2605.15199 HTML, F.4 Trade-offs and Limitations. Source: <https://arxiv.org/html/2605.15199>, retrieved 2026-11-12.
+
+3. Code and data are stated to be available.
+
+   > Code and data are available at this https URL.
+
+   Locator: arXiv 2605.15199 abstract. Source: <https://arxiv.org/abs/2605.15199>, retrieved 2026-11-12.
 
 ## Provenance
 
-- Source type: independent-secondary
+- Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. arXiv abstract page against the two claims
+- Checked: 2026-11-12 by agent:kiro, depth primary-read. abstract and appendix F.4 trade-offs
 - Next check due: 2027-11-12
 - Licence: unknown
 - URL status: live
-- Saved source sha256: `ec0d448d33ad87d10bec3b057f730ff5cc5fb429133697a1a1df663fe3bc3388`
-- Citation: type article; doi 10.48550/arXiv.2605.15199; url https://arxiv.org/abs/2605.15199; accessed 2026-11-12
-- Lane: contrarian
+- Saved source sha256: `adb3d6fcadf02ac06c45c468f3bc8fa3f36aabbdf1a743c3d26fffc3ab874b25`
+- Citation: type article; author Ruozhen He, Meng Wei, Ziyan Yang, Vicente Ordonez; issued 2026-05-14; container_title arXiv preprint; doi 10.48550/arXiv.2605.15199; url https://arxiv.org/abs/2605.15199; accessed 2026-11-12
+- Lane: pipelines-research
 
 ## Observed
 
@@ -52,11 +60,11 @@ Nothing collected yet.
 
 ## Related
 
-None.
+- contradicts: [VBench-2.0: benchmark suite for intrinsic faithfulness](arxiv.org__abs__2503.21755.md) - Per-clip VBench-family scores did not predict entity consistency here.
 
 ## Referenced by
 
-None.
+- [GroundShot: Entity-Grounded Shot Scheduling for multi-shot video (and GroundBench)](arxiv.org__abs__2606.20799.md) (alternative_to)
 
 ## Status
 

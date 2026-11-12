@@ -80,7 +80,9 @@ Collected by `tools/enrich.py`, not typed by hand.
 ## Referenced by
 
 - [See Before You Code: Learning Visual Priors for Spatially Aware Educational Animation Generation (OmniManim)](../source/arxiv.org__abs__2605.15585.md) (evaluated_on)
+- [SGA: Plug&Play Geometric Verification for Educational Video Synthesis](../source/arxiv.org__abs__2607.18116.md) (integrates_with)
 - [ManimGL (3b1b/manim)](3b1b__manim.md) (alternative_to)
+- [Code2Video](showlab__code2video.md) (depends_on)
 
 ## Status
 

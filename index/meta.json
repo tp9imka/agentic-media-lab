@@ -1,13 +1,13 @@
 {
  "built": "2026-11-12",
  "counts": {
-  "tool": 54,
+  "tool": 58,
   "model": 25,
-  "source": 62,
+  "source": 72,
   "recipe": 0
  },
- "primary_read_share": 1.0,
- "chars_total": 550591,
- "tokens_estimate": 137647,
+ "primary_read_share": 0.974,
+ "chars_total": 607170,
+ "tokens_estimate": 151792,
  "lifetime": "living"
 }
