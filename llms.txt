@@ -1,6 +1,6 @@
 # Agentic Media Lab
 
-> Which skill, renderer and model to use when a coding agent makes your video - with runs you can repeat. Records: 129 (54 tool, 25 model, 50 source, 0 recipe). Concepts: 35. Pages: 2. Size: about 123626 tokens (estimate, characters / 4).
+> Which skill, renderer and model to use when a coding agent makes your video - with runs you can repeat. Records: 129 (54 tool, 25 model, 50 source, 0 recipe). Concepts: 35. Pages: 3. Size: about 125523 tokens (estimate, characters / 4).
 
 ## Entry points
 
@@ -11,6 +11,10 @@
 - [All records as JSON lines](https://tp9imka.github.io/agentic-media-lab/index/records.jsonl): the full machine dump
 - [README.md](https://tp9imka.github.io/agentic-media-lab/README.md): what the hub is
 - [AGENTS.md](https://tp9imka.github.io/agentic-media-lab/AGENTS.md): how agents query and extend the hub
+
+## Examples
+
+- [Same brief, HyperFrames vs Remotion, vendor skills only](https://tp9imka.github.io/agentic-media-lab/examples/hyperframes-vs-remotion/README.md) (ran): Two fresh Claude agents get one fixed 20 s brief, one with the HyperFrames skills and one with the Remotion Agent Skills, and render ...
 
 ## Records
 
