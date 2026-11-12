@@ -151,7 +151,7 @@
       "kind": "source",
       "title": "TikTok Content Posting API - Media Transfer Guide",
       "url": "https://developers.tiktok.com/doc/content-posting-api-media-transfer-guide",
-      "summary": "TikTok's rules for sending the file: chunked FILE_UPLOAD sizes, PULL_FROM_URL with a verified domain, and the accepted video formats, frame rates, resolution, length and size.",
+      "summary": "TikTok's rules for sending the file: chunked FILE_UPLOAD sizes, PULL_FROM_URL with a verified domain or URL prefix, and the accepted video formats, frame rates, resolution, length and size.",
       "why_it_matters": "These are the encode targets for a clip an agent renders for TikTok, from TikTok's own API page rather than a creator blog.",
       "concepts": [
         "concept:publishing",
@@ -160,7 +160,7 @@
       ],
       "level": "intermediate",
       "fit": "high",
-      "fit_notes": "Render H.264 MP4 at 23-60 fps, 360-4096 px per side, at most 4 GB. The API accepts up to 10 minutes, but the account's own cap (3, 5 or 10 minutes) applies and creator_info returns it as max_video_post_duration_sec. Chunks must be 5-64 MB, files under 5 MB go in one piece. PULL_FROM_URL needs a domain verified in the TikTok developer portal, so a laptop pipeline usually uses FILE_UPLOAD.",
+      "fit_notes": "Render H.264 MP4 at 23-60 fps, 360-4096 px per side, at most 4 GB. The API accepts up to 10 minutes, but the account's own cap (3, 5 or 10 minutes) applies and creator_info returns it as max_video_post_duration_sec. Chunks must be 5-64 MB (the final chunk up to 128 MB), files under 5 MB go in one piece. PULL_FROM_URL needs a domain or URL prefix verified in the TikTok developer portal, so a laptop pipeline usually uses FILE_UPLOAD.",
       "related": [
         {
           "id": "source:developers.tiktok.com/doc/content-posting-api-reference-direct-post",
@@ -187,7 +187,7 @@
           "via": null
         },
         {
-          "text": "Upload chunks must be between 5 MB and 64 MB, and the final chunk may be up to 128 MB.",
+          "text": "Upload chunks must be between 5 MB and 64 MB, and the final chunk may be up to 128 MB; a video under 5 MB is uploaded whole as one chunk.",
           "quote": "Each chunk must be at least 5 MB but no greater than 64 MB, except for the final chunk, which can be greater than chunk_size (up to 128 MB) to accommodate any trailing bytes.",
           "locator": "File upload, chunk restrictions",
           "url": "https://developers.tiktok.com/doc/content-posting-api-media-transfer-guide",
@@ -198,8 +198,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "visible guide text, Video restrictions and chunk rules, against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "next_due": "2026-12-12",
         "source_sha256": "aec1d1c8efddd2a158489acfef49404e71b2156ce863e7cc51d1c8673cc8f603"
       },
@@ -481,7 +481,7 @@
       ],
       "level": "intro",
       "fit": "high",
-      "fit_notes": "Disclosure is needed for realistic content and AI music, not for clearly fantastical or animated content or for script, caption and thumbnail help. The page says disclosure alone does not limit reach or monetisation, but repeated non-disclosure can lead to removal or YPP suspension. If your generator embeds C2PA, expect a label you cannot turn off. The API equivalent is status.containsSyntheticMedia (revision history record). Title read here: 'Disclosing use of GenAI content'.",
+      "fit_notes": "Disclosure is needed for realistic content and AI music, not for clearly fantastical or animated content or for script, caption and thumbnail help. Repeated non-disclosure can lead to removal or YPP suspension. If your generator embeds C2PA, expect a label you cannot turn off. The API equivalent is status.containsSyntheticMedia (revision history record). Title read here: 'Disclosing use of GenAI content'.",
       "related": [
         {
           "id": "source:developers.google.com/youtube/v3/revision_history",
@@ -523,8 +523,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "visible help page text (hl=en) against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "next_due": "2026-12-12",
         "source_sha256": "17af815566f0f9cfc25748919a8726d87960f0314e1eb60c7da45fb5ba5a8e30"
       },
@@ -542,21 +542,21 @@
       "kind": "source",
       "title": "YouTube Help - Understand three-minute YouTube Shorts",
       "url": "https://support.google.com/youtube/answer/15424877",
-      "summary": "YouTube's page on which uploads count as Shorts: square or vertical video up to three minutes, with a copyright rule for Shorts over one minute.",
-      "why_it_matters": "It tells an agent the aspect ratio and length that make an upload land in the Shorts feed.",
+      "summary": "YouTube's page on which uploads count as Shorts: square or vertical video up to three minutes uploaded on or after 2024-10-15 (2025-12-08 for Official Artist Channels), with a copyright rule for Shorts over one minute.",
+      "why_it_matters": "It tells an agent the aspect ratio and length that make an upload count as a Short.",
       "concepts": [
         "concept:delivery",
         "concept:publishing"
       ],
       "level": "intro",
       "fit": "medium",
-      "fit_notes": "Shorts classification is automatic from aspect ratio and length, so the API upload needs no Shorts flag. A Short over one minute with any active copyright claim is blocked worldwide, so generated music must be clean. No resolution or bitrate figures on this page.",
+      "fit_notes": "Shorts classification is automatic from aspect ratio, length and upload date (with a later cutoff for Official Artist Channels), so the API upload needs no Shorts flag. A Short over one minute with any active copyright claim is blocked worldwide, so generated music must be clean. No resolution or bitrate figures on this page.",
       "related": [],
       "source_type": "primary",
       "corroboration": "single-source",
       "claims": [
         {
-          "text": "A square or vertical upload up to three minutes is categorised as a Short.",
+          "text": "On a standard channel, a square or vertical upload up to three minutes made on or after 2024-10-15 is categorised as a Short (from 2025-12-08 for Official Artist Channels).",
           "quote": "Any videos uploaded on or after this date with a square or vertical aspect ratio up to three minutes in length will be categorized as Shorts on YouTube.",
           "locator": "Eligibility for three-minute Shorts",
           "url": "https://support.google.com/youtube/answer/15424877",
@@ -575,8 +575,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "visible help page text against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "next_due": "2026-12-12",
         "source_sha256": "251d33b792fffab3291f5a83ce6800a8dc968aa4885a2867ae790987be008834"
       },
@@ -674,7 +674,7 @@
       ],
       "level": "intermediate",
       "fit": "medium",
-      "fit_notes": "Posts to a Page, not a personal profile. 30 Reels per 24 hours, 3-90 seconds, 9:16, at least 540x960, 24-60 fps; a 3-minute YouTube Short will be rejected here (error 1363128). is_ai_generated discloses AI use. The earlier scan's '30 API-published posts' wording is confirmed. Permissions and app review were not read in depth.",
+      "fit_notes": "Posts to a Page, not a personal profile. 30 Reels per 24 hours, 3-90 seconds (60 s max as a Page story), 9:16, at least 540x960, 24-60 fps; a 3-minute YouTube Short will be rejected here (error 1363128). is_ai_generated discloses AI use. The earlier scan's '30 API-published posts' wording is confirmed. Permissions and app review were not read in depth.",
       "related": [
         {
           "id": "source:developers.facebook.com/docs/instagram-platform/content-publishing",
@@ -685,7 +685,7 @@
       "corroboration": "single-source",
       "claims": [
         {
-          "text": "The Reels API allows 30 API-published Reels per Page in a moving 24-hour window.",
+          "text": "The Reels API allows 30 API-published posts in a moving 24-hour window, enforced on the POST /{page_id}/video_reels endpoint.",
           "quote": "Reels API is limited to 30 API-published posts within a 24-hour moving period.",
           "locator": "Limitations, Rate Limit",
           "url": "https://developers.facebook.com/docs/video-api/guides/reels-publishing",
@@ -693,7 +693,7 @@
           "via": null
         },
         {
-          "text": "A Page Reel must be 3 to 90 seconds long.",
+          "text": "A Page Reel must be 3 to 90 seconds long; one published as a Page story can not exceed 60 seconds.",
           "quote": "| Duration | 3 to 90 seconds.<br><br>A reel published as a story on a Facebook Page can not exceed 60 seconds. |",
           "locator": "Video Specifications table",
           "url": "https://developers.facebook.com/docs/video-api/guides/reels-publishing",
@@ -712,8 +712,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "guide served as markdown, against the claims and the earlier scan's 30-post figure",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "next_due": "2026-12-12",
         "source_sha256": "74a8515bbc13283f9fcc502095de29352c51ebd69d2dcb1a49a6ef6cb0f957a0"
       },
@@ -897,8 +897,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "visible quickstart text against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "next_due": "2026-12-12",
         "source_sha256": "925bc5de8d3a12ee936d7b235a8ac256b8e5a5a3932042b9f44adaf9223d1f9d"
       },
@@ -1199,7 +1199,7 @@
       ],
       "level": "advanced",
       "fit": "medium",
-      "fit_notes": "A trusted manifest is signed with a certificate that only products in the C2PA Conformance Program receive, so a solo developer cannot simply self-sign one that validators trust. In practice the manifest comes from the generator or editor; check whether yours embeds one and whether your ffmpeg step keeps it. Only YouTube's own page was found here stating it reads C2PA; Meta's labelling pages did not render. The spec itself was not read.",
+      "fit_notes": "A manifest trusted under the official C2PA Trust List is signed with a certificate that only products in the C2PA Conformance Program receive; legacy ITL certificates still validate in tools that use the ITL, but validators need not respect them. In practice the manifest comes from the generator or editor; check whether yours embeds one and whether your ffmpeg step keeps it. Only YouTube's own page was found here stating it reads C2PA; Meta's labelling pages did not render. The spec itself was not read.",
       "related": [
         {
           "id": "source:support.google.com/youtube/answer/14328491",
@@ -1219,7 +1219,7 @@
           "via": null
         },
         {
-          "text": "The specification can be implemented without joining, but a trusted signing certificate requires the Conformance Program.",
+          "text": "The specification can be implemented without joining, but a Claim Signing Certificate and a place on the Conforming Products List require the Conformance Program.",
           "quote": "However, to receive a Claim Signing Certificate and be listed on the official Conforming Products List, your product must undergo evaluation and legal onboarding through the C2PA Conformance Program.",
           "locator": "Do I need to join C2PA to implement the specification?",
           "url": "https://c2pa.org/faqs/",
@@ -1230,8 +1230,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "visible FAQ text against the claims; c2pa.org home page read but held no operative sentence",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "next_due": "2026-12-12",
         "source_sha256": "60fa9c700f9296c58e359176ca00cf7ce6a5dea79fb55ad3c597cb44a4070d2d"
       },

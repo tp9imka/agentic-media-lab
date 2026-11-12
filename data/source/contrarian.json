@@ -72,7 +72,7 @@
       ],
       "level": "intro",
       "fit": "high",
-      "fit_notes": "An install is counted when the skills CLI reports it, with telemetry on by default (opt out with DISABLE_TELEMETRY=1 or DO_NOT_TRACK=1). Nothing on the page says installs are de-duplicated per user or machine, so CI runs and scripted installs count the same as people; this was not checked against the CLI source. See the ai-video-generation clone record for what that allows. The audits are run by Vercel, which also runs the directory; the audit method is not described on this page.",
+      "fit_notes": "An install is counted when the skills CLI reports it, with telemetry on by default (opt out with DISABLE_TELEMETRY=1 or DO_NOT_TRACK=1). Nothing on the page says installs are de-duplicated per user or machine; this was not checked against the CLI source. See the ai-video-generation clone record for what that allows. The page does not say who runs the audits; security reports go to security.vercel.com and the site is made by Vercel. The audit method is not described on this page.",
       "related": [],
       "source_type": "vendor-or-author",
       "corroboration": "single-source",
@@ -106,8 +106,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "skills.sh/docs visible text and vercel-labs/skills troubleshooting.md Telemetry section against the three claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "715044ecf908476b54f01e60a2151282270210009323f76bf1a73ec7eff4838f",
         "next_due": "2027-02-10"
       },
@@ -150,7 +150,7 @@
       "lane": "contrarian",
       "claims": [
         {
-          "text": "The same skill id is listed under many unrelated owners, including the inference-sh org that the skill text names.",
+          "text": "The same skill id is listed under many owners, some of them GitHub forks of another listed repo, including the inference-sh org that the skill text names.",
           "quote": "\"id\": \"inference-sh/skills/ai-video-generation\",",
           "locator": "skills.sh /api/search response, skills[] entry",
           "url": "https://skills.sh/api/search?q=ai-video-generation&limit=30",
@@ -177,8 +177,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "skills.sh search API JSON, GitHub repo metadata for seven listed repos, the 101-skills SKILL.md and the linked cli-install.md",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "726fc1f9062eb05ac6f6d568f552b892972bb9d1cc48bcbf563d24e42823afad",
         "next_due": "2027-02-10"
       },
@@ -232,7 +232,7 @@
           "via": null
         },
         {
-          "text": "Every confirmed malicious skill had malicious code and 91% also used prompt injection.",
+          "text": "Every confirmed malicious skill contained malicious code patterns and 91% also used prompt injection techniques.",
           "quote": "100% of confirmed malicious skills contain malicious code patterns, while 91% simultaneously employ prompt injection techniques.",
           "locator": "section 100% of confirmed malicious skills contain malicious code",
           "url": "https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/",
@@ -243,8 +243,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "Snyk blog visible text against the three claims and the title",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "6e0bd92555ba5e4e11f0d5f9d30d524bc8faee622d7b6e074d0f49ed8f82b2f9",
         "next_due": "2027-02-10"
       },
@@ -451,8 +451,8 @@
       "kind": "source",
       "title": "Remotion 5.0 migration: mandatory telemetry for licensed companies",
       "url": "https://www.remotion.dev/docs/5-0-migration",
-      "summary": "Remotion's planned breaking changes for 5.0 (not released on 2026-11-12) and its telemetry page, which make render telemetry and a licence key mandatory for Company License and Automators customers.",
-      "why_it_matters": "An automated video pipeline on Remotion is the 'Automators' case, so upgrading to 5.0 means sending render events to Remotion or arranging another way to report counts.",
+      "summary": "Remotion's planned breaking changes for 5.0 (not released on 2026-11-12) and its telemetry page, which make render telemetry and a licence key mandatory for Company License customers on the Automators option, with Creators exempt.",
+      "why_it_matters": "An automated video pipeline on Remotion is the 'Automators' case, so for a company on that option, upgrading to 5.0 means sending render events to Remotion or arranging another way to report counts.",
       "concepts": [
         "concept:licences-and-territory",
         "concept:code-driven-video",
@@ -460,7 +460,7 @@
       ],
       "level": "intermediate",
       "fit": "high",
-      "fit_notes": "Updates tool:remotion-dev/remotion, whose fit_notes point to the 5.0 licence change. Free-licence users are not obliged to send telemetry, but client-side rendering always sends an event, including the end user's IP address, even without a licence key. renderFrames() and stitchFramesToVideo() do not report on their own, so a pipeline built on them must call registerUsageEvent() itself. Telemetry never fails a render, per the page. Pin Remotion 4.x if your company policy blocks outbound calls, until a reporting arrangement exists.",
+      "fit_notes": "Updates tool:remotion-dev/remotion, whose fit_notes point to the 5.0 licence change. Free-licence users are not obliged to send telemetry, but client-side rendering sends an event for every render that is not aborted, including the end user's IP address, even without a licence key. renderFrames() and stitchFramesToVideo() do not report on their own, so a pipeline built on them must call registerUsageEvent() itself. Telemetry never fails a render, per the page. Pin Remotion 4.x if your company policy blocks outbound calls, until a reporting arrangement exists.",
       "related": [
         {
           "id": "tool:remotion-dev/remotion",
@@ -473,7 +473,7 @@
       "lane": "contrarian",
       "claims": [
         {
-          "text": "Upgrading to 5.0 requires company licence holders to enable telemetry or arrange another way to deliver render counts.",
+          "text": "Upgrading to 5.0 requires company licence holders to enable telemetry or arrange another way to deliver render counts; the telemetry page exempts companies on the Remotion for Creators option.",
           "quote": "If you upgrade to Remotion 5.0, you must enable telemetry if you are a company license holder or contact Remotion to arrange a plausible delivery of render counts.",
           "locator": "5-0-migration, section Telemetry is now mandatory for Company License customers",
           "url": "https://www.remotion.dev/docs/5-0-migration",
@@ -489,7 +489,7 @@
           "via": null
         },
         {
-          "text": "Client-side rendering sends a telemetry event for every render even with no licence key, including the end user's IP address.",
+          "text": "Client-side rendering sends a telemetry event for every render that succeeds or fails, even with no licence key, including the end user's IP address; an aborted render sends none.",
           "quote": "Client-side rendering APIs always send a telemetry event for every render, even if no licenseKey is set:",
           "locator": "license/telemetry, section Telemetry in client-side rendering",
           "url": "https://www.remotion.dev/docs/license/telemetry",
@@ -500,8 +500,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "remotion.dev 5-0-migration and license/telemetry visible text against the three claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "2e25fe264f53994b713b2debac8f785ffd02fd23e8876fc36e805499ef4b9430",
         "next_due": "2027-02-10"
       },
@@ -591,7 +591,7 @@
       ],
       "level": "intermediate",
       "fit": "high",
-      "fit_notes": "Gotcha for agents: the render exits normally, so only a frame check catches it. Until the issue closes, render final output with `--workers 1` or scan for blank frames at worker shard boundaries (frame = worker index x total frames / workers). A related open issue, 5888 (0.8.145), reports the same class with GSAP and PNG sequences. The vendor's determinism page says output is identical but also says a local render can shift by a pixel between machines and recommends `--docker` for exact output. The repro was not run here.",
+      "fit_notes": "Gotcha for agents: the report finds the blank frames with an ffmpeg alpha scan of the output. Until the issue closes, render final output with `--workers 1` or scan for blank frames at worker shard boundaries (frame = worker index x total frames / workers). A related open issue, 5888 (0.8.145), reports the same class with GSAP and PNG sequences. The vendor's determinism page says output is identical but also says a local render can shift by a pixel between machines and recommends `--docker` for exact output. The repro was not run here.",
       "related": [
         {
           "id": "tool:heygen-com/hyperframes",
@@ -608,7 +608,7 @@
       "lane": "contrarian",
       "claims": [
         {
-          "text": "With 4 parallel workers in screenshot capture mode, frames at each worker's first frame came out fully transparent, intermittently; one worker gave no blank frames.",
+          "text": "With 4 parallel workers in screenshot capture mode, the first frame of workers 1-3 came out fully transparent, intermittently; worker 0's first frame equals t=0, so the scan cannot show it.",
           "quote": "`--workers 1` produces zero blank frames; the anomaly is deterministic in position across parallel runs but intermittent (some runs clean), matching the paint-settle race described in #2477.",
           "locator": "issue 4435 body, section Describe the bug, paragraph 2",
           "url": "https://github.com/heygen-com/hyperframes/issues/4435",
@@ -635,8 +635,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "issue 4435 body via gh issue view, docs/concepts/determinism.mdx and SKILL.md line 12 on main",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "691385421b1b245435e87141a0f2e0a816318b47a951e238b80b655827c720da",
         "next_due": "2027-02-10"
       },
@@ -652,8 +652,8 @@
       "kind": "source",
       "title": "Meta: Rewarding Original Creators on Facebook (March 2026)",
       "url": "https://about.fb.com/news/2026/03/rewarding-original-creators-on-facebook/",
-      "summary": "Meta's March 2026 newsroom post that updates Facebook's original content guidelines and says unoriginal content is deprioritised in Feed and Reels, with demonetisation for accounts that keep posting it.",
-      "why_it_matters": "An agent pipeline that stitches stock or third-party clips with narration or captions is the pattern Meta names as unoriginal, so reach and payouts on Facebook depend on what the pipeline adds.",
+      "summary": "Meta's March 2026 newsroom post that updates Facebook's original content guidelines and says unoriginal content is deprioritised in Feed and Reels, with possible demonetisation for accounts that continue to post primarily unoriginal content.",
+      "why_it_matters": "An agent pipeline that stitches stock or third-party clips with narration or captions, without adding anything meaningful, is the pattern Meta names as unoriginal, so reach and payouts on Facebook depend on what the pipeline adds.",
       "concepts": [
         "concept:platform-rules",
         "concept:publishing"
@@ -700,8 +700,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "about.fb.com newsroom post visible text against the three claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "d5a055636731d410bc3e4a44ea591a9d5eee292d3cba520cdad325b3992bea64",
         "next_due": "2027-02-10"
       },

@@ -31,7 +31,7 @@
         "concept:cost"
       ],
       "fit": "high",
-      "fit_notes": "Input video is billed too: billable seconds are input plus output, so a 10 s video-to-video edit bills 20 s. The 30 s free quota exists only in the Singapore region and only for wan3.0-video. The 30% discount is labelled limited-time with no end date on the page. Maximum duration and whether audio is generated are not on the pricing page; OpenRouter lists 2-30 s for its resold copy, not checked at Alibaba.",
+      "fit_notes": "Input video is billed too: billable seconds are input plus output, so a video-to-video edit with a 10 s input and a 10 s output bills 20 s. The 30 s free quota exists only in the Singapore region and only for wan3.0-video, and is valid for 90 days from activation, model release or approval, whichever is later. The 30% discount is labelled limited-time with no end date on the page. Maximum duration and whether audio is generated are not on the pricing page; OpenRouter lists 2-30 s for its resold copy, not checked at Alibaba.",
       "related": [
         {
           "id": "source:artificialanalysis.ai/video/leaderboard/text-to-video",
@@ -49,7 +49,7 @@
       ],
       "claims": [
         {
-          "text": "In the Singapore region wan3.0-video lists at $0.05 per second at 480P, $0.1 at 720P and $0.2 at 1080P, shown with a limited-time 30% discount, and carries a 30 second free quota.",
+          "text": "In the Singapore region wan3.0-video lists at $0.05 per second at 480P, $0.1 at 720P and $0.2 at 1080P, shown with a limited-time 30% discount, and carries a 30 second free quota valid for 90 days from Model Studio activation, model release or application approval, whichever is later.",
           "quote": "wan3.0-video | International | 480P | List price $0.05/second (Limited-time 30% off) | 30 seconds | 720P | List price $0.1/second (Limited-time 30% off) | 1080P | List price $0.2/second (Limited-time 30% off)",
           "locator": "Model pricing page, section Wan 3.0-Video Generation, Singapore table",
           "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
@@ -76,8 +76,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "Alibaba Cloud Model Studio pricing page, Wan 3.0 section, against all three claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "82c4a2150ab95f586777787139ffa93a50c21878c02b8471026d644058f55a1e",
         "next_due": "2026-12-12"
       }
@@ -252,7 +252,7 @@
         "Seedream"
       ],
       "url": "https://ai.byteplus.com/ark/docs/model-pricing.md",
-      "summary": "ByteDance's image generation and editing family on BytePlus ModelArk, priced per output image.",
+      "summary": "ByteDance's image generation and editing family on BytePlus ModelArk, priced per output image; the Pro id also charges $0.003 per input image after the first.",
       "why_it_matters": "The flash id is one of the cheapest first-party image prices found here, and input images are free on most ids.",
       "concepts": [
         "concept:image-models",
@@ -266,7 +266,7 @@
       ],
       "claims": [
         {
-          "text": "dola-seedream-5-0-pro-260628 costs $0.045 per image up to 2.61 million pixels and $0.09 above.",
+          "text": "For single-image generation, dola-seedream-5-0-pro-260628 costs $0.045 per image up to 2.61 million pixels and $0.09 above.",
           "quote": "* Up to 2.61 million pixels (1.5K or lower): $0.045 |",
           "locator": "Model pricing, Image generation models, Pricing table, row dola-seedream-5-0-pro-260628",
           "url": "https://ai.byteplus.com/ark/docs/model-pricing.md",
@@ -285,8 +285,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "BytePlus ModelArk pricing page, markdown version, image section, against both claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "501a4aaae8fe6c6e62cb0735a4db2ac3c6277473765b9ca3535f5614dfe9011e",
         "next_due": "2026-12-12"
       }
@@ -383,7 +383,7 @@
         "concept:cost"
       ],
       "fit": "medium",
-      "fit_notes": "28 credits = $0.28 per second with a 56 credit ($0.56) minimum, so even a 1 s edit costs $0.56. A video edit bills the source video's length as output. Maximum input length was not found on the pricing page.",
+      "fit_notes": "28 credits = $0.28 per second with a 56 credit ($0.56) minimum, so even a 1 s edit costs $0.56. Maximum input length was not found on the pricing page.",
       "related": [
         {
           "id": "tool:runwayml/runway-api",
@@ -419,8 +419,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "Runway Dev API pricing page against both claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "d7c0e02a094e7889d3804758531245be8295700e43b05f1b1d85c1e1c15383c0",
         "next_due": "2026-12-12"
       }
@@ -453,7 +453,7 @@
         "concept:cost"
       ],
       "fit": "low",
-      "fit_notes": "The pricing page gives credits only, with no dollar value per credit, so the dollar cost cannot be worked out from it. 1080p for 10 s is 1,200 credits SDR; HDR doubles it. The docs page opened (docs.lumalabs.ai video-generation) shows ray-2 examples, not Ray3.2 ids, so the exact Ray3.2 model id was not confirmed. Audio not stated.",
+      "fit_notes": "The pricing page gives credits only, with no dollar value per credit, so the dollar cost cannot be worked out from it. 1080p text- or image-to-video for 10 s is 1,200 credits SDR (1,440 for video-to-video); HDR doubles it. The docs page opened (docs.lumalabs.ai video-generation) shows ray-2 examples, not Ray3.2 ids, so the exact Ray3.2 model id was not confirmed. Audio not stated.",
       "modes": [
         "t2v",
         "i2v",
@@ -480,8 +480,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "Luma API pricing page against both claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "6c998d1fb0ebc092cfb37b8c7019de1056c391539241eb55ab04dfa4f4725c70",
         "next_due": "2026-12-12"
       }
@@ -663,7 +663,7 @@
       ],
       "url": "https://ai.google.dev/gemini-api/docs/pricing",
       "summary": "Google's image generation models on the Gemini API: gemini-nano-banana-2.1 and gemini-3-pro-image. Imagen 4 was shut down on the Gemini API and points to Nano Banana 2.1.",
-      "why_it_matters": "Code that calls imagen-4.0-* on the Gemini API stopped working on 2026-08-17; Nano Banana 2.1 is the named replacement.",
+      "why_it_matters": "Code that calls the GA imagen-4.0-*-001 ids on the Gemini API stopped working on 2026-08-17 (the preview ids on 2026-02-17); Nano Banana 2.1 is the named replacement.",
       "concepts": [
         "concept:image-models",
         "concept:cost"
@@ -710,8 +710,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "Gemini API pricing and deprecations pages, markdown versions, against all three claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "71d69e7dcc56b3cad537cb0287976d85b709420f1f564df9cf38f3546da9c6ff",
         "next_due": "2026-12-12"
       }

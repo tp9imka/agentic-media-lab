@@ -70,8 +70,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:driver",
-        "what": "motion.md in the skill folder against both claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "bd55ea56343346060cd612a30874996e82f48ac5051ecb2bd1ab01efe4e2fc71",
         "next_due": "2027-02-10"
       },
@@ -146,8 +146,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:driver",
-        "what": "video-layout.md in the remotion-create skill against both claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "7ad94c22e3ad87671292ebb9b22f234c544d6c7fed13f8cb112b84b0f7077d4c",
         "next_due": "2027-02-10"
       },
@@ -173,7 +173,7 @@
       "level": "intermediate",
       "maturity": "active",
       "fit": "medium",
-      "fit_notes": "Transcription uses a paid ElevenLabs key, so it is not a free local path as shipped. Its README tells the agent to ask you to paste the key into chat; set it in the environment yourself.",
+      "fit_notes": "Transcription uses a paid ElevenLabs key, so it is not a free local path as shipped. Its SKILL.md tells the agent, if the key is missing, to ask you to paste one and write it to .env; set it in the environment yourself.",
       "source_type": "vendor-or-author",
       "corroboration": "single-source",
       "lane": "quality-skills",
@@ -203,8 +203,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:driver",
-        "what": "SKILL.md against the claim",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "d3bbeb19bc0e81e197d74806fba15e0a5f5694a0cdf33f0a2348bffe8472a27b",
         "next_due": "2027-02-10"
       },
@@ -325,8 +325,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:driver",
-        "what": "SKILL.md against the claim",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "7bc57dcc03c9812feb94b32785bb2fb26ab9740f523f7def580a1b372b3b6336",
         "next_due": "2027-02-10"
       },
@@ -341,7 +341,7 @@
         "shotcraft"
       ],
       "url": "https://github.com/Vincentwei1021/video-shotcraft",
-      "summary": "A product-promo skill built on shot-recipe cards and real page captures, written in Chinese, stating support for Claude Code and Codex.",
+      "summary": "A product-promo skill built on shot-recipe cards and real page captures, written in Chinese.",
       "why_it_matters": "It makes the reviewer a different agent from the maker, which is the strongest review-loop rule found so far.",
       "concepts": [
         "concept:review-loop",
@@ -352,7 +352,7 @@
       "level": "intermediate",
       "maturity": "active",
       "fit": "medium",
-      "fit_notes": "The repo is four months old with a high star count; treat popularity as unconfirmed. Needs network for page capture and sound search. Instructions are in Chinese.",
+      "fit_notes": "The repo is four months old with a high star count; treat popularity as unconfirmed. Needs network for Freesound sound search; page capture can run against a local dev server. Instructions are in Chinese.",
       "source_type": "vendor-or-author",
       "corroboration": "single-source",
       "lane": "quality-skills",
@@ -382,8 +382,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:driver",
-        "what": "SKILL.md (Chinese) against the claim",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "9e6b2d68f50cae3d5405178d35d2bd305ee2045691fa726b63bae3ab8bb62e6b",
         "next_due": "2027-02-10"
       },

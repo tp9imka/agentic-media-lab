@@ -29,7 +29,7 @@
       "level": "advanced",
       "maturity": "active",
       "fit": "medium",
-      "fit_notes": "Free under the licence only while your organisation earns under $10M a year. The official Mac path is PyTorch on MPS; the fastest VAE backend (natten) is Linux and CUDA only and is skipped on macOS. The LTX-2.5 file names give a 22B transformer and a 12B text encoder in bf16, which by our arithmetic is over 64 GB before any quantization; no Mac memory figure is published. Not run here.",
+      "fit_notes": "Free under the licence while your organisation earns under $10M a year; at or above that, only use solely for a non-commercial purpose stays free. The official Mac path is PyTorch on MPS; the fastest VAE backend (natten) is Linux and CUDA only and is skipped on macOS. The LTX-2.5 file names give a 22B transformer and a 12B text encoder in bf16, which by our arithmetic is over 64 GB before any quantization; no Mac memory figure is published. Not run here.",
       "related": [
         {
           "id": "tool:blaizzy/mlx-video",
@@ -79,8 +79,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "LTX-2 CHANGELOG, LICENSE-2_x and README against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "4ffa66289ae55b2e5b71463ff7f596d192c26af8d4bcc53e62c2d2080c630d35",
         "next_due": "2026-12-12"
       }
@@ -400,8 +400,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "mflux FLUX 3 README and the BFL flux-3-image-klein GitHub README; the licence file itself is gated and was not opened",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "e5751ee95117905b55146a1d3a7bbfb826511633c1dd29317efe958ac95183a3",
         "next_due": "2026-12-12"
       }
@@ -537,8 +537,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "kokoro GitHub README and Kokoro-82M model card against both claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "f29dc56bb31eb63c65885b4bbd9c2ddbb4f0e23f1ac97b87c4a5eb70ee3327bd",
         "next_due": "2026-12-12"
       }

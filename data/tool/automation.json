@@ -86,8 +86,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "README Telemetry section, automations SKILL.md, references/creation.md and PLUGIN_OVERVIEW.md against the claims; sweep.ts, data.ts, rpc-types.ts read for fit_notes only",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "dc08dc68e6b50036b2362dfef189eac8f4287b9f6d38010b2de139be8fb24eb5",
         "next_due": "2027-02-10"
       },
@@ -114,7 +114,7 @@
       "level": "advanced",
       "maturity": "active",
       "fit": "medium",
-      "fit_notes": "Needs a model provider key or the Nous Portal; it does not drive your Claude Code subscription. Jobs live in ~/.hermes/cron/jobs.json and secrets in ~/.hermes/.env. Dangerous commands in cron are denied by default (see the security source). The plugin catalog lists third-party plugins, including one that opens an unauthenticated local dashboard; read a plugin before enabling it. Telemetry default not found in README or the pages read.",
+      "fit_notes": "Agent jobs need a model provider key, a subscription provider or the Nous Portal (script-only jobs use no model); it does not drive your Claude Code subscription. Jobs live in ~/.hermes/cron/jobs.json and secrets in the owning profile's .env or an external secret source. Dangerous commands in cron are denied by default (see the security source). The plugin catalog lists third-party plugins, including one that opens an unauthenticated local dashboard; read a plugin before enabling it. Telemetry default not found in README or the pages read.",
       "related": [
         {
           "id": "source:hermes-agent.nousresearch.com/docs/user-guide/security",
@@ -147,7 +147,7 @@
           "via": null
         },
         {
-          "text": "A missed cron occurrence runs late only inside a catch-up window of half the period, clamped to 2 minutes - 2 hours, settable per job.",
+          "text": "By default a missed cron occurrence runs late only inside a catch-up window of half the period, clamped to 2 minutes - 2 hours; --grace-minutes or --catch-up on change this per job.",
           "quote": "A missed cron occurrence is run late only inside a catch-up window: half the job's period, clamped to 2 minutes–2 hours.",
           "locator": "section Catch-up window",
           "url": "https://hermes-agent.nousresearch.com/docs/user-guide/features/cron",
@@ -166,8 +166,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "website/docs/user-guide/features/cron.md (source of the docs page) against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "7b51974af933fe3f6f0a953c00d0871e0c46d3b9f5b26774baac075ae1e3c5fb",
         "next_due": "2027-02-10"
       },
@@ -192,7 +192,7 @@
       "level": "advanced",
       "maturity": "experimental",
       "fit": "medium",
-      "fit_notes": "Needs Hermes, a running gateway and an OpenRouter key (the README names claude-opus-4.6), so every run is paid. No approval step before the final cut: a person only steps in when a worker blocks. The setup sources ~/.hermes/.env into the shell. It is a demo of one video, not a reusable product; setup.sh was not run or read in full.",
+      "fit_notes": "Needs Hermes, a running gateway and an OpenRouter key (the README names claude-opus-4.6), so every run is paid. No approval step before the final cut: a person steps in when a worker blocks, or by choice to nudge, skip to the editor or re-render a scene. The setup sources ~/.hermes/.env into the shell. It is built around one demo video, with README steps to adapt it to your own brief; setup.sh was not run or read in full.",
       "related": [
         {
           "id": "tool:nousresearch/hermes-agent",
@@ -222,7 +222,7 @@
           "via": null
         },
         {
-          "text": "The gateway hosts the board dispatcher, which picks up ready tasks every 60 seconds; stuck tasks mean the gateway is down.",
+          "text": "The gateway hosts the board dispatcher, which picks up ready tasks every 60 seconds; tasks stuck in \"ready\" mean the gateway is not running.",
           "quote": "The gateway hosts the kanban dispatcher that picks up ready tasks every 60 seconds.",
           "locator": "RUN.md, step 2 Gateway must be running",
           "url": "https://github.com/NousResearch/kanban-video-pipeline/blob/main/RUN.md",
@@ -241,8 +241,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "README.md and RUN.md against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "8c1720d1337450b34b6d652d1d0765b17f1b5c85b30ded1a4a9d1541fc9773ec",
         "next_due": "2027-02-10"
       },
@@ -415,7 +415,7 @@
       "level": "advanced",
       "maturity": "active",
       "fit": "medium",
-      "fit_notes": "Licence gotcha: the Community Edition is free to use internally but may not be sold, resold or run as a managed service without an agreement; the source build is AGPLv3. Approval works through secret resume URLs, so anyone who gets the URL can approve; send it only to the approver. Telemetry default and schedule docs were not read.",
+      "fit_notes": "Licence gotcha: the Community Edition is free to use internally but may not be sold, resold or run as a managed service without an agreement; a source build without the \"enterprise\" feature flag is AGPLv3. Approval works through secret resume URLs, so unless the step requires logged-in approvers or group membership, anyone who gets the URL can approve; send it only to the approver. Telemetry default and schedule docs were not read.",
       "related": [
         {
           "id": "tool:n8n-io/n8n",
@@ -459,8 +459,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "LICENSE from the main repo and flow approval doc from windmilldocs-public against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "366b8be6bd6e5ba6489f275e7f8d2ee3d199aaf07f4755e6796d2abd7b4ebf61",
         "next_due": "2027-02-10"
       },
@@ -593,8 +593,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "schedule.mdx from temporalio/documentation against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "14a7c7a69742023463deb3e0422a32f1c258e38a52d81e9f9d6de5513d4d1e93",
         "next_due": "2027-02-10"
       },

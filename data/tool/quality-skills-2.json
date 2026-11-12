@@ -24,7 +24,7 @@
       "level": "intermediate",
       "maturity": "active",
       "fit": "high",
-      "fit_notes": "Load single skills, not the whole library: each SKILL.md is 25-30 KB, so three of them fill a lot of context. The caption validator checks timing and line counts only; its own text says it does not judge accuracy, contrast or placement. The platform specs inside are dated by the author (verified 2026-07-10 in the text); re-check them before a paid ad delivery. I did not run any of its scripts. The README links to calesthio/OpenMontage, which is the same project as tool:openmontageinc/openmontage.",
+      "fit_notes": "Load single skills, not the whole library: the three SKILL.md files read here are 25-30 KB each, so three of them fill a lot of context. The caption validator checks file structure, timing, cue text, line counts, characters per line and reading speed; its own text says it does not judge accuracy, contrast or placement. The platform specs inside are dated by the author (verified 2026-07-10 in the text); re-check them before a paid ad delivery. I did not run any of its scripts. The README links to calesthio/OpenMontage, which is the same project as tool:openmontageinc/openmontage.",
       "related": [
         {
           "id": "tool:openmontageinc/openmontage",
@@ -68,7 +68,7 @@
           "via": null
         },
         {
-          "text": "Its continuity skill marks a character's features as locked, so they may not change across shots unless the user approves.",
+          "text": "Its continuity skill sets a tolerance per feature; a feature marked Locked must stay constant unless the user approves a redesign.",
           "quote": "**Locked**: must remain constant unless user approves a redesign.",
           "locator": "skills/production/creative-direction/character-design-continuity/SKILL.md, section Identity lock",
           "url": "https://github.com/calesthio/generative-media-skills/blob/HEAD/skills/production/creative-direction/character-design-continuity/SKILL.md",
@@ -79,8 +79,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "captions-media-accessibility, media-qc-delivery and character-design-continuity SKILL.md files and the README against the three claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "db48605a44d26c71a0beede32bffbbaf1aa63fc0ba05e93194699512f1b2b43c",
         "next_due": "2027-02-10"
       },
@@ -242,7 +242,7 @@
       "title": "motion-design skill (LottieFiles)",
       "url": "https://github.com/LottieFiles/motion-design-skill",
       "summary": "A tool-agnostic motion design skill: director notes, easing and timing tables, patterns, and a quality checklist with severity tiers.",
-      "why_it_matters": "Its checklist turns motion taste into checks an agent can tick before rendering, with a stated severity for each miss.",
+      "why_it_matters": "Its checklist turns motion taste into checks an agent can tick before rendering, with critical, high and medium severity tiers for many of the misses.",
       "concepts": [
         "concept:motion-and-transitions",
         "concept:agent-skills",
@@ -251,7 +251,7 @@
       "level": "intermediate",
       "maturity": "active",
       "fit": "medium",
-      "fit_notes": "Written for UI motion first: some checks (prefers-reduced-motion, pausable animations over 5 s) do not apply to a rendered MP4; skip them. The checklist is for the agent to read code or frames against; the skill ships no tool that measures a render. Its ban on linear easing matches tool:haidrrrry/claude-remotion-skill.",
+      "fit_notes": "Written for UI motion first: some checks (prefers-reduced-motion, pausable animations over 5 s) do not apply to a rendered MP4; skip them. The checklist is for the agent to read code or frames against; the skill ships no tool that measures a render. Its ban on linear easing for spatial movement matches tool:haidrrrry/claude-remotion-skill.",
       "related": [
         {
           "id": "tool:haidrrrry/claude-remotion-skill",
@@ -294,8 +294,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "quality-checklist.md and README.md against both claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "d2399cd6df302b7d1970d973a0b98fe105e71cb187d912fe04675150ede4d271",
         "next_due": "2027-02-10"
       },
@@ -553,7 +553,7 @@
       "level": "intermediate",
       "maturity": "active",
       "fit": "medium",
-      "fit_notes": "It tells the agent to set bypassCSP on the browser context and, on a non-localhost host, to drop the Secure cookie flag for the recording run. Do that only on a local or staging build, never against production. It also tells the agent never to take an API key pasted into chat, which is the opposite of the video-use README. The TTS step needs a paid key.",
+      "fit_notes": "It tells the agent to set bypassCSP on the browser context and, when a non-localhost host is served over plain HTTP, to drop the Secure cookie flag for the recording run or serve HTTPS instead. Do that only on a local or staging build, never against production. It also tells the agent never to take an API key pasted into chat, which is the opposite of the video-use README. The TTS step needs a paid key.",
       "source_type": "vendor-or-author",
       "corroboration": "single-source",
       "lane": "quality-skills-2",
@@ -580,7 +580,7 @@
           "via": null
         },
         {
-          "text": "It sizes each scene caption at 50-80 characters.",
+          "text": "Its guidelines recommend scene captions of 50-80 characters.",
           "quote": "- **Captions of 50-80 characters** read well and keep pauses short",
           "locator": "skills/video/references/product-demo-recording.md, step 4 scene helper notes",
           "url": "https://github.com/coreyhaines31/marketingskills/blob/HEAD/skills/video/references/product-demo-recording.md",
@@ -599,8 +599,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "skills/video/references/product-demo-recording.md against the three claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "2f81e4f762c4aeae0c452072506ffa34731ab844de94b125b55ce02e4dfae53d",
         "next_due": "2027-02-10"
       },
@@ -742,8 +742,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "tools/verify/README.md and README.md against both claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "10c9457e7f240309b77ab6042e402c64d0ae66ce4d06008d58c9a361d2541c96",
         "next_due": "2027-02-10"
       },
@@ -821,8 +821,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "skills/motion-graphics/SKILL.md and README.md against the three claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "e7b90c6073b7e5a8782403144dd323f63463c7131f39af19a4e5b22e64c949e0",
         "next_due": "2027-02-10"
       },
@@ -848,7 +848,7 @@
       "level": "intermediate",
       "maturity": "active",
       "fit": "medium",
-      "fit_notes": "Asset search needs Pixabay, Freesound and Firecrawl keys. It adds the Playwright MCP through npx with @latest, which runs whatever version is newest; pin a version. It uses Pinterest, Behance and Dribbble for style references and says reference-only unless licensed; check that the agent keeps to that. The SKILL.md is 53 KB.",
+      "fit_notes": "Asset search through the API routes needs Pixabay, Freesound and Firecrawl keys; it also browses free-licence sites through the Playwright MCP. It adds the Playwright MCP through npx with @latest, which runs whatever version is newest; pin a version. It uses Pinterest, Behance and Dribbble for style references and says reference-only unless licensed; check that the agent keeps to that. The SKILL.md is 53 KB.",
       "source_type": "vendor-or-author",
       "corroboration": "single-source",
       "lane": "quality-skills-2",
@@ -894,8 +894,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "skills/motion-video-director/SKILL.md against the three claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "02f07b4e640b2fd04512ad8b82386aaa70f8aebf5904f3b07ca9529c598f6697",
         "next_due": "2027-02-10"
       },

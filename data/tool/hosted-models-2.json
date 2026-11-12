@@ -201,7 +201,7 @@
         "concept:image-models"
       ],
       "fit": "medium",
-      "fit_notes": "The remote server asks for a Replicate API key in a web sign-in flow; the local route runs npx -y replicate-mcp, which downloads and runs the package each time. Not run here. Replicate's per-model prices were not read in this lane, so no price is recorded. The page also links agent skills and an llms.txt, not opened.",
+      "fit_notes": "The remote server asks for a Replicate API key in a web sign-in flow; the local route runs npx -y replicate-mcp, which downloads and runs the npm package without a separate install. Not run here. Replicate's per-model prices were not read in this lane, so no price is recorded. The page also links agent skills and an llms.txt, not opened.",
       "agents": [
         "claude-code",
         "cursor",
@@ -232,8 +232,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "Replicate MCP reference page against both claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "385439e2b4a90e977e5033d0ea3518ece8f0a41a3a8e2bbc1874486273d1031b",
         "next_due": "2027-02-10"
       }

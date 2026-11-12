@@ -8,14 +8,14 @@
       "title": "PySceneDetect",
       "url": "https://github.com/Breakthrough/PySceneDetect",
       "summary": "A Python library and CLI that finds shot boundaries in a video and can split it, save frames or write a cut list.",
-      "why_it_matters": "Run on a render, it gives the real cut times and shot lengths, so a review step can check pacing and catch accidental cuts or a missing transition.",
+      "why_it_matters": "Run on a render, it gives detected cut times and shot lengths (they depend on detector thresholds and minimum scene length), so a review step can check pacing and catch accidental cuts or a missing transition.",
       "concepts": [
         "concept:footage-editing",
         "concept:review-loop"
       ],
       "level": "intro",
       "fit": "high",
-      "fit_notes": "For a generated clip, run `scenedetect -i out.mp4 detect-adaptive list-scenes` and compare cut count and shot lengths with the shot list. Fades are missed by the content detectors; use detect-threshold or ffmpeg blackdetect for those. Needs Python and OpenCV; not installed or run here.",
+      "fit_notes": "For a generated clip, run `scenedetect -i out.mp4 detect-adaptive list-scenes` and compare cut count and shot lengths with the shot list. The docs name detect-threshold, not the content detectors, for fades in/out; use it or ffmpeg blackdetect for those. Needs Python and a video backend (OpenCV by default; PyAV and MoviePy are also listed); not installed or run here.",
       "related": [
         {
           "id": "tool:ffmpeg/ffmpeg",
@@ -69,8 +69,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "official CLI reference against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "93a7b5bb24f4ac6fcc3e76c001bf04529ce8ecf83e22ca5cf5f0217cadfa9e5c",
         "next_due": "2027-02-10"
       },
@@ -90,7 +90,7 @@
       ],
       "level": "intermediate",
       "fit": "medium",
-      "fit_notes": "Full-reference only: it needs the lossless master and the encode at the same size and frame count, so it checks the encode, not whether a generated clip looks good. Use the phone model for 9:16 shorts. CAMBI is useful on generated gradients and skies. The v1 models date from 2026-06; an ffmpeg build may still ship v0, check the model path. Not run here.",
+      "fit_notes": "Full-reference only: it needs a reference (the master) and the encode at the same size and frame count, so it checks the encode, not whether a generated clip looks good. Use the phone model for 9:16 shorts. CAMBI is useful on generated gradients and skies. The v1 models date from 2026-06; an ffmpeg build may still ship v0, check the model path. Not run here.",
       "related": [
         {
           "id": "tool:ffmpeg/ffmpeg",
@@ -145,8 +145,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "README and models_v1.md against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "ae6e2809e193fda254223d36202e361af8f6b3b7c1deb848fb4801bdb712d72f",
         "next_due": "2027-02-10"
       },

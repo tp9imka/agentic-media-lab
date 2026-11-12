@@ -8,14 +8,14 @@
       "title": "FCPXML Reference (Apple Developer)",
       "url": "https://developer.apple.com/documentation/professional-video-applications/fcpxml-reference",
       "summary": "Apple's reference for FCPXML, the XML format for sending media, timelines, markers and metadata into and out of Final Cut Pro.",
-      "why_it_matters": "Final Cut Pro has no scripting API an agent can call, so writing FCPXML for File > Import > XML is the documented path, and several tools here export it.",
+      "why_it_matters": "Final Cut Pro has no scripting API an agent can call, so writing FCPXML, the format users send into Final Cut Pro, is the documented path, and several tools here export it.",
       "concepts": [
         "concept:footage-editing",
         "concept:delivery"
       ],
       "level": "advanced",
       "fit": "medium",
-      "fit_notes": "An agent can write the file, but a person imports it in Final Cut Pro; no command-line import is documented on this page. Version matters: this page states the 1.9 requirement while MakeMyClip writes 1.10, so match the version to the reader's Final Cut build. Resolve and Premiere also read FCPXML through the tools that export it, not through this page. Saved text is from the page's JSON data, not the rendered HTML.",
+      "fit_notes": "An agent can write the file; no command-line import is documented on this page. Version matters: this page states the 1.9 requirement while MakeMyClip writes 1.10, so match the version to the reader's Final Cut build. Resolve and Premiere also read FCPXML through the tools that export it, not through this page. Saved text is from the page's JSON data, not the rendered HTML.",
       "related": [
         {
           "id": "tool:makemyclip/editor",
@@ -58,8 +58,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "the page's documentation JSON (overview and topic list) against the three claims; the DTD and Creating FCPXML Documents pages not opened",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "8a54a617efcf6429bf628c8001d2d67084ed4128cf2522067e306b7b174c792c",
         "next_due": "2027-11-12"
       },
@@ -122,8 +122,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "visible text of the API docs page against the three claims; Content License page not read (challenge page)",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "75eeeb0a5ebc254a5dd84e939358b88155494a71ba2e2b9c196caaf2e046419d",
         "next_due": "2026-12-12"
       },

@@ -46,8 +46,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:driver",
-        "what": "OpenAI deprecations page against the claim",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "14e9ebb480f7a794eafc6fdd84f37c9a11469c53875f03503735f9ea0266aea2",
         "next_due": "2026-12-12"
       },
@@ -103,8 +103,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:driver",
-        "what": "Gemini API deprecations page against the claim",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "551f6e9db25a8a8a16cfb09011bbd9a055c4301d7f2139de96102edddd6e0234",
         "next_due": "2026-12-12"
       },
@@ -162,8 +162,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:driver",
-        "what": "Gemini API pricing page against both claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "e508333dc4ae245e20b992701878879c4f30d70b7e4ed300151bbc11f30baca0",
         "next_due": "2026-12-12"
       },
@@ -222,8 +222,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:driver",
-        "what": "LICENSE file on the model repository against both claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "59b99642b95ea21630e311198ddbfffbfe05aadba0c2f5d884cbdf4efcc90f44",
         "next_due": "2026-12-12"
       },

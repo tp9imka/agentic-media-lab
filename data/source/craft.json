@@ -236,7 +236,7 @@
       ],
       "level": "intro",
       "fit": "high",
-      "fit_notes": "Lint each cue: max 2 lines, <= 42 characters per line, <= 20 characters per second, duration between 0.834 s and 7 s. The 42-character line assumes a 16:9 frame; for 9:16 use the BBC width rule instead. One skill in the hub ships a caption validator with the same 42 and 20 defaults. Written for long-form dialogue, not for word-by-word kinetic captions.",
+      "fit_notes": "Lint each cue: max 2 lines, <= 42 characters per line, <= 20 characters per second (17 for children's programmes), duration between 0.834 s and 7 s. The guides size the font to fit 42 characters across the screen and name no aspect ratio; for 9:16 use the BBC width rule instead. One skill in the hub ships a caption validator with the same 42 and 20 defaults. Written for any timed text made for Netflix; it does not address word-by-word kinetic captions.",
       "related": [
         {
           "id": "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
@@ -285,8 +285,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "English (USA) guide and General Requirements article against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "728a2b5bbb9081dfeff0c1c9626c7c9181defdb937f8574ff3bd828e61644ff9",
         "next_due": "2027-11-12"
       },
@@ -389,7 +389,7 @@
           "via": null
         },
         {
-          "text": "The emphasized-decelerate curve, used for elements entering, is cubic-bezier(0.05, 0.7, 0.1, 1).",
+          "text": "The emphasized-decelerate curve is cubic-bezier(0.05, 0.7, 0.1, 1).",
           "quote": "$easing-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);",
           "locator": "_md-sys-motion.scss, easing tokens",
           "url": "https://github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss",
@@ -408,8 +408,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "token file (design system version 34.0.21) against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "2493ded90850d1593f0c4271564ef716c6717f8cfa1b53b704f12371229de6f7",
         "next_due": "2027-11-12"
       },
@@ -476,8 +476,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "motion overview page text against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "0ccd3f80b030d3d9b2e8a4ef95b77a74b87e28f7c68496977f3483ae2daa9b43",
         "next_due": "2027-11-12"
       },
@@ -496,7 +496,7 @@
       ],
       "level": "intro",
       "fit": "medium",
-      "fit_notes": "Emit one scene heading per scene and put shot notes in synopses (= lines) so they survive editing but stay out of printed pages. Fountain has no field for duration, camera or asset; keep a separate JSON shot list keyed by scene number (#1#, #1A#) for those. Parsers differ on edge cases; none were run here.",
+      "fit_notes": "Emit one scene heading per scene and put shot notes in synopses (= lines) so they stay out of printed pages; not every screenwriting app supports synopses, and some import them as notes. Fountain has no field for duration, camera or asset; keep a separate JSON shot list keyed by scene number (#1#, #1A#) for those. Parsers differ on edge cases; none were run here.",
       "source_type": "vendor-or-author",
       "corroboration": "single-source",
       "lane": "craft",
@@ -506,7 +506,7 @@
       ],
       "claims": [
         {
-          "text": "A scene heading is a line starting with INT, EXT or similar, followed by a blank line.",
+          "text": "Unless forced with a leading period, a scene heading is a line starting with INT, EXT or similar, with a blank line before and after it.",
           "quote": "A Scene Heading is any line that has a blank line following it, and either begins with INT or EXT or similar (full list below).",
           "locator": "section Scene Headings",
           "url": "https://fountain.io/syntax/",
@@ -514,7 +514,7 @@
           "via": null
         },
         {
-          "text": "A transition is uppercase, has empty lines around it and ends in TO:.",
+          "text": "Unless forced with a leading >, a transition is uppercase, has empty lines around it and ends in TO:.",
           "quote": "Uppercase Preceded by and followed by an empty line Ending in TO:",
           "locator": "section Transition",
           "url": "https://fountain.io/syntax/",
@@ -533,8 +533,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "syntax page against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "e573bf613686a703ca1126c360df489c5e3f472612171a240bbd127df6731a79",
         "next_due": "2027-11-12"
       },

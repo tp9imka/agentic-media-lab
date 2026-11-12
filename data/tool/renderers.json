@@ -27,7 +27,7 @@
       "level": "intermediate",
       "maturity": "established",
       "fit": "high",
-      "fit_notes": "Free for a person or a company of up to 3 employees; a bigger company needs a paid Company License, and the FAQ adds a per-render plan for automations (code that calls renderMedia() and similar). The repo says a changed licence ships with Remotion 5.0 (PR #3750); re-read LICENSE.md when you upgrade. For agent feedback, `npx remotion still <entry> <id> out.png --frame=N` gives one PNG without a full render, and `npx remotion render <id> out/frames --frames=0,30,90 --image-format=png` gives several (v4.0.502+). Animations written with CSS keyframes or setTimeout flicker or freeze because tabs render frames out of order.",
+      "fit_notes": "Free for a person or a company of up to 3 employees (contractors on the project, or a client that operates it, count toward the headcount); a bigger company needs a paid Company License unless an exemption such as a qualifying non-profit applies, and the FAQ adds a per-render plan for automations (code that calls renderMedia() and similar). The repo says a changed licence ships with Remotion 5.0 (PR #3750); re-read LICENSE.md when you upgrade. For agent feedback, `npx remotion still <entry> <id> out.png --frame=N` gives one PNG without a full render, and `npx remotion render <id> out/frames --frames=0,30,90 --image-format=png` gives several (v4.0.502+). Animations written with CSS keyframes or setTimeout flicker or freeze because tabs render frames out of order.",
       "related": [
         {
           "id": "tool:remotion-dev/skills",
@@ -56,7 +56,7 @@
       "cost": "mixed",
       "claims": [
         {
-          "text": "The free licence covers individuals, for-profit companies with up to 3 employees, non-profits and evaluation; others need a Company License.",
+          "text": "The free licence covers individuals, for-profit companies with up to 3 employees, non-profits (some need written permission) and evaluation before commercial use; others need a Company License.",
           "quote": "a for-profit organization with up to 3 employees",
           "locator": "LICENSE.md, Free License, Eligibility",
           "url": "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md",
@@ -83,8 +83,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "LICENSE.md, license/faq.mdx, cli/still.mdx and troubleshooting/css-animations.mdx against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "184be77958f8ff26028d73637b86a7ef347c4206e085ab56923fce4b4fd0df97",
         "next_due": "2026-12-12"
       }
@@ -181,7 +181,7 @@
       ],
       "url": "https://github.com/3b1b/manim",
       "summary": "Grant Sanderson's own Manim, installed as `manimgl`. It plays scenes in an OpenGL window and writes a file with `-w`.",
-      "why_it_matters": "The original engine behind 3Blue1Brown videos. An agent that writes ManimCE code for it, or the reverse, gets errors, so the reader must pick one.",
+      "why_it_matters": "The original engine behind 3Blue1Brown videos. Its README warns that using one edition's install instructions for the other will cause problems, so the reader must pick one.",
       "concepts": [
         "concept:code-driven-video",
         "concept:motion-and-transitions"
@@ -189,7 +189,7 @@
       "level": "advanced",
       "maturity": "active",
       "fit": "medium",
-      "fit_notes": "On a Mac it needs FFmpeg and, on ARM, Cairo from Homebrew; LaTeX is optional (MacTeX is about 6 GB, BasicTeX is the README's lighter path). The default run opens a window for a person; an agent needs `-w` to write a file or `-so` to save the final frame. Fewer tests and docs than ManimCE by its own README's account.",
+      "fit_notes": "On a Mac it needs FFmpeg and, on ARM, Cairo from Homebrew; LaTeX is optional (MacTeX is about 6 GB, BasicTeX is the README's lighter path). The default run opens a window for a person; an agent can pass `-w` (or `-o`) to write a file or `-so` to save the final frame. Its README says ManimCE was forked with a goal of being more stable and better tested.",
       "related": [
         {
           "id": "tool:manimcommunity/manim",
@@ -234,8 +234,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "README.md against the claims and against the ManimCE README",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "11b1db61a963e7168ed0af276cfb88f4f9110892c851638815b9a6a2f61e1324",
         "next_due": "2027-02-10"
       }
@@ -715,8 +715,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "ffmpeg-filters.html sections xfade, loudnorm and drawtext against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "de713d78ed02106ab97410b2bbe763ad1f8372b5dff9461befa59d6cfcfdcf56",
         "next_due": "2027-02-10"
       }
@@ -744,7 +744,7 @@
       "level": "intro",
       "maturity": "dormant",
       "fit": "medium",
-      "fit_notes": "Needs ffmpeg and ffprobe on PATH and a native headless-gl build; the README's troubleshooting is mostly native-module errors. Without `--fast`, every clip is converted to the first input's size and frame rate, which surprises mixed inputs. The last push to the repo was 2025-05-12 (GitHub API, read 2026-11-12), so I marked it dormant. It is a single-maintainer project by its README.",
+      "fit_notes": "Needs ffmpeg and ffprobe on PATH and, on Linux, may need extra headless-gl setup; the README's troubleshooting is mostly native-module errors. Without `--fast`, every clip is converted to the first input's size and frame rate unless you set them, which surprises mixed inputs. The last push to the repo was 2025-05-12 (GitHub API, read 2026-11-12), so I marked it dormant. It is a single-maintainer project by its README.",
       "related": [
         {
           "id": "tool:ffmpeg/ffmpeg",
@@ -771,7 +771,7 @@
           "via": null
         },
         {
-          "text": "Without fast mode, output size and frame rate come from the first input video.",
+          "text": "Without fast mode, output size and frame rate default to those of the first input video unless set explicitly.",
           "quote": "Without `--fast`, it will default to using the **width**, **height** and **frame rate** from the **first** input video.",
           "locator": "README.md, Usage: Command line video editor",
           "url": "https://github.com/mifi/editly/blob/master/README.md",
@@ -790,8 +790,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "README.md against the claims; push date from the GitHub API",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "b1a8788f9066986c60a0160c338036c5302f06aa43cd537c6a47e96239aaafce",
         "next_due": "2027-02-10"
       }
@@ -952,7 +952,7 @@
       ],
       "url": "https://github.com/greensock/GSAP",
       "summary": "A JavaScript animation library, owned by Webflow, that HyperFrames uses for motion and Remotion projects can seek. It has no renderer of its own; a frame-seeking renderer captures it.",
-      "why_it_matters": "Most HTML video an agent writes moves with GSAP, so its licence travels with every HyperFrames clip.",
+      "why_it_matters": "Most HTML video an agent writes moves with GSAP, so its licence terms apply to every HyperFrames project that uses it.",
       "concepts": [
         "concept:motion-and-transitions",
         "concept:licences-and-territory",
@@ -961,7 +961,7 @@
       "level": "intro",
       "maturity": "established",
       "fit": "high",
-      "fit_notes": "Commercial use costs nothing, including the plugins that used to be paid. The licence is not open source: it bans use in no-code visual animation builders that compete with Webflow, and Webflow can change the terms by posting new ones. A renderer must pause and seek GSAP timelines per frame; a tween left playing on the wall clock is what breaks HyperFrames and Remotion renders.",
+      "fit_notes": "Commercial use costs nothing, including the plugins that used to be paid. The licence is not open source: it bans use in no-code visual animation builders that compete with Webflow without prior written consent, and Webflow can change the terms by posting new ones. A renderer must pause and seek GSAP timelines per frame; a tween left playing on the wall clock is what breaks HyperFrames and Remotion renders.",
       "related": [
         {
           "id": "tool:heygen-com/hyperframes",
@@ -986,7 +986,7 @@
           "via": null
         },
         {
-          "text": "Use inside no-code visual animation tools that compete with Webflow is prohibited.",
+          "text": "Use inside no-code visual animation tools that compete with Webflow is prohibited without prior written consent.",
           "quote": "\"Prohibited Uses\" means any implementation and/or use of GSAP Products in tools that allow users to build visual animations without code that encourages, induces, or materially assists in creating a solution that competes with Webflow’s visual animation building capabilities.",
           "locator": "gsap.com/standard-license, I. Definitions",
           "url": "https://gsap.com/standard-license",
@@ -1005,8 +1005,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "gsap.com/standard-license (effective 2025-04-30, modified 2025-05-30) and README.md against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "6340dffdce733fa2af357358defa467bbfcadddda8c566fa07cfed48fbb85b21",
         "next_due": "2027-02-10"
       }

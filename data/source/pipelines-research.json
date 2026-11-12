@@ -92,7 +92,7 @@
       ],
       "level": "advanced",
       "fit": "medium",
-      "fit_notes": "The clip model is open-weights Wan2.1, but the planner (Gemini2.5-Flash) and verifier and memory (GPT-4o) are paid APIs. Retry cap is 3; the paper reports 98% of shots pass within it. Scores are VBench and VideoScore, which measure per-clip quality more than cross-shot identity (see source:arxiv.org/abs/2605.15199). No code link was found in the paper text read here.",
+      "fit_notes": "The clip model is open-weights Wan2.1, but the planner (Gemini2.5-Flash) and verifier and memory (GPT-4o) are paid APIs. Attempts are capped at N=3, counting the first one; the paper reports 98% of shots pass within it. Scores are VBench and VideoScore, which measure per-clip quality more than cross-shot identity (see source:arxiv.org/abs/2605.15199). No code link was found in the paper text read here.",
       "source_type": "vendor-or-author",
       "corroboration": "single-source",
       "claims": [
@@ -147,8 +147,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "abstract, implementation details, Table 2 text, regeneration analysis and limitations",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "dd87e6ffcc2d98be97bd5dfbe3362a9ed7a589200c9c2647e5cb69f826af1277",
         "next_due": "2027-11-12"
       },
@@ -162,7 +162,7 @@
       "title": "The Script is All You Need: ScripterAgent and DirectorAgent for dialogue-to-cinematic video",
       "url": "https://arxiv.org/abs/2601.17737",
       "summary": "Tencent paper: ScripterAgent (a trained model) turns dialogue into a shot-level cinematic script, DirectorAgent splits it into model-sized segments and chains them by last frame, and CriticAgent (gemini-2.5-pro) scores scripts and videos. Adds ScriptBench and a Visual-Script Alignment metric.",
-      "why_it_matters": "Its DirectorAgent rules (cut at shot boundaries, fit each segment to the model window with a 10% buffer, feed the last frame forward) are a technique any pipeline can copy.",
+      "why_it_matters": "Its DirectorAgent rules (cut at shot boundaries, fit each segment to the model window with a 10% buffer, feed the last frame forward) are a technique any pipeline can copy if its video model accepts a conditioning image.",
       "concepts": [
         "concept:agentic-pipelines",
         "concept:story-and-decomposition",
@@ -240,8 +240,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "abstract, DirectorAgent section, results text",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "bd43119c30532b948736978ac4822a82532b0e1353e0d18e97bea9d77121652c",
         "next_due": "2027-11-12"
       },
@@ -254,8 +254,8 @@
       "kind": "source",
       "title": "GroundShot: Entity-Grounded Shot Scheduling for multi-shot video (and GroundBench)",
       "url": "https://arxiv.org/abs/2606.20799",
-      "summary": "A training-free agent loop for multi-shot video: it generates the shots that best establish characters, objects and places first, crops each entity from accepted shots into a memory, checks each new shot with a VLM critic, and repairs failures by issue type.",
-      "why_it_matters": "It turns consistency into a scheduling and reference-management job that works with any reference-to-video model, including an open-weights one.",
+      "summary": "A training-free agent loop for multi-shot video: it generates the shots that best establish characters, objects and places first, crops entities from accepted shots into a memory if they pass quality checks, checks each new shot with a VLM critic, and repairs failures by issue type.",
+      "why_it_matters": "It turns consistency into a scheduling and reference-management job that works with any compatible text-to-video or reference-conditioned model, including an open-weights one.",
       "concepts": [
         "concept:agentic-pipelines",
         "concept:consistency",
@@ -277,7 +277,7 @@
           "via": null
         },
         {
-          "text": "Each failure type has its own repair: identity mismatch => stronger or different reference; missing entities => explicit count in the prompt.",
+          "text": "Failure types trigger targeted repairs, for example: identity mismatch => stronger or different reference; missing or extra entities => explicit count and presence instructions in the prompt.",
           "quote": "For example, identity mismatch can trigger stronger reference conditioning or a different retrieved reference; missing or extra entities can add explicit count and presence instructions to the revised prompt",
           "locator": "arXiv 2606.20799 HTML, Shot verification",
           "url": "https://arxiv.org/html/2606.20799",
@@ -327,8 +327,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "abstract, method, implementation, Table 1 text, overhead and conclusion",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "042cbd5fc2402744f644c3b988be9e8494a408b70e15098a8dd677bbc4036995",
         "next_due": "2027-11-12"
       },
@@ -514,7 +514,7 @@
       "title": "ViStoryBench: benchmark suite for story visualization",
       "url": "https://arxiv.org/abs/2505.24862",
       "summary": "A CVPR 2026 benchmark of multi-shot scripts with curated character references, scoring image sequences for character consistency, style similarity, prompt alignment, aesthetics and copy-paste artifacts.",
-      "why_it_matters": "The standard test for the storyboard-image stage of a pipeline, before any video model runs; Google's Co-Director post reports results on it.",
+      "why_it_matters": "A benchmark for the storyboard-image stage of a pipeline, before any video model runs; Google's Co-Director post reports results on it.",
       "concepts": [
         "concept:evaluation",
         "concept:consistency",
@@ -523,7 +523,7 @@
       ],
       "level": "intermediate",
       "fit": "medium",
-      "fit_notes": "It scores image sequences, not video, so it covers the keyframe stage only. The copy-paste metric catches pipelines that paste the reference image instead of drawing the character. Code and dataset links are on the abstract page; not opened here. Only the abstract page was read.",
+      "fit_notes": "It scores image sequences, not video, so it does not test the video clips themselves. One metric scores copy-paste behaviour; the abstract does not say how it works. Code and dataset links are on the abstract page; not opened here. Only the abstract page was read.",
       "source_type": "vendor-or-author",
       "corroboration": "single-source",
       "claims": [
@@ -579,8 +579,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "skim",
-        "by": "agent:kiro",
-        "what": "abstract page only",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "5dc876127a25815569e15436ab467f7d4db1d3ece5d13623df061098cd314339",
         "next_due": "2027-11-12"
       },
@@ -732,8 +732,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "skim",
-        "by": "agent:kiro",
-        "what": "abstract page only",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "e7271a1a6a95c43bdec3ecfbde118b6f57d314d15dc224c4c69634b361726292",
         "next_due": "2027-11-12"
       },
@@ -824,7 +824,7 @@
       ],
       "level": "intro",
       "fit": "medium",
-      "fit_notes": "Third-party aggregator; its security grades come from agentskillshub.top, which runs the list, and were not checked here. The 16-skill test was one brief, one run each, on 2026-10-11. A list entry is a lead, not an endorsement; read each skill before installing.",
+      "fit_notes": "Third-party aggregator; its security grades come from agentskillshub.top, which runs the list, and were not checked here. The 16-skill test was one brief, with one reported film per skill, on 2026-10-11. A list entry is a lead, not an endorsement; read each skill before installing.",
       "source_type": "aggregator",
       "corroboration": "single-source",
       "claims": [
@@ -862,8 +862,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "README intro, test summary and footer",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "626d878da2c1d9c23a65bfab10233fa890095e59de188966799cd26d9f68e1ac",
         "next_due": "2027-02-10"
       },
