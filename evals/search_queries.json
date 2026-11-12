@@ -1,0 +1,60 @@
+[
+ {
+  "query": "my video looks amateur",
+  "expect_any": [
+   "tool:digitalsamba/claude-code-video-toolkit"
+  ],
+  "top": 3
+ },
+ {
+  "query": "veo gemini api shutdown replacement",
+  "expect_any": [
+   "model:google/veo-3.1",
+   "model:google/gemini-omni-flash"
+  ],
+  "top": 2
+ },
+ {
+  "query": "can i use commercially where I live",
+  "expect_any": [
+   "model:minimaxai/minimax-h3"
+  ],
+  "top": 3
+ },
+ {
+  "query": "cut my video on word boundaries",
+  "expect_any": [
+   "tool:browser-use/video-use"
+  ],
+  "top": 2
+ },
+ {
+  "query": "mcp or skill for remotion",
+  "expect_any": [
+   "source:remotion.dev/docs/ai/mcp",
+   "tool:remotion-dev/skills"
+  ],
+  "top": 2
+ },
+ {
+  "query": "easing exits shorter than entrances",
+  "expect_any": [
+   "tool:heygen-com/hyperframes"
+  ],
+  "top": 2
+ },
+ {
+  "query": "reviewer sub-agent clean context",
+  "expect_any": [
+   "tool:vincentwei1021/video-shotcraft"
+  ],
+  "top": 2
+ },
+ {
+  "query": "price per second 10s clip",
+  "expect_any": [
+   "model:google/gemini-omni-flash"
+  ],
+  "top": 2
+ }
+]

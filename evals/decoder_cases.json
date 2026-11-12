@@ -1,0 +1,22 @@
+[
+ {"question": "Should my coding agent build the clip with HyperFrames or with Remotion?", "expect_row": "q01"},
+ {"question": "The videos my agent renders look cheap and unpolished, what skill helps?", "expect_row": "q02"},
+ {"question": "Fastest way to make a short product demo clip with Claude Code", "expect_row": "q03"},
+ {"question": "I want an explainer made offline with no cloud and no cost", "expect_row": "q04"},
+ {"question": "Is a skill enough or should I set up an MCP server for this?", "expect_row": "q05"},
+ {"question": "Will the same skills run under Codex instead of Claude?", "expect_row": "q06"},
+ {"question": "How can the agent verify the rendered frames itself before it reports done?", "expect_row": "q07"},
+ {"question": "Turn my script into a shot list with scenes and transitions", "expect_row": "q08"},
+ {"question": "Sora was shut down, which video API replaces it and what is the price?", "expect_row": "q09"},
+ {"question": "Does any local video model run on Apple Silicon and how slow is it?", "expect_row": "q10"},
+ {"question": "Am I allowed to use this model commercially in my country, what does the licence say?", "expect_row": "q11"},
+ {"question": "Same character keeps changing face between shots, how to fix it?", "expect_row": "q12"},
+ {"question": "Free voiceover and background music plus subtitles for my clip", "expect_row": "q13"},
+ {"question": "Agent that trims my screencast and adds captions", "expect_row": "q14"},
+ {"question": "Can I trust this skill before installing it, are its stars real?", "expect_row": "q15"},
+ {"question": "Run the video job on a cron with a human approval before posting", "expect_row": "q16"},
+ {"question": "Using Hermes or bb to orchestrate a content pipeline", "expect_row": "q17"},
+ {"question": "Rules for posting AI generated videos to TikTok and YouTube automatically", "expect_row": "q18"},
+ {"question": "Best way to generate a thumbnail image or first frame", "expect_row": "q19"},
+ {"question": "Is there a benchmark to evaluate an agentic video pipeline?", "expect_row": "q20"}
+]
