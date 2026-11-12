@@ -1,0 +1,6 @@
+# Email addresses that may appear in repo files. One per line.
+# A line starting with @ allows a whole domain. # starts a comment.
+@example.com
+@example.org
+@users.noreply.github.com
+git@github.com

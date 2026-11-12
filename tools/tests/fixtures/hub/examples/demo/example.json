@@ -1,0 +1,14 @@
+{
+  "title": "Demo example",
+  "summary": "Renders a three second title card.",
+  "concepts": ["concept:code-driven-video"],
+  "status": "ran",
+  "verified": "Ran 2026-11-01 on Python 3.12 with the fixture data.",
+  "deps": "stdlib",
+  "first_command": "python3 run.py",
+  "input": "scripted-run",
+  "runtime": "2 s",
+  "key_result": "3 s clip, 90 frames",
+  "threshold": "clip exists and lasts 3 s",
+  "verdict": "pass"
+}

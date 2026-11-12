@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "concept.schema.json",
+  "title": "Concept",
+  "description": "One vocabulary entry in data/concepts.json. SKOS ideas in plain JSON. The id never changes; the label may. At most 2 broader concepts. A concept has no licence.",
+  "type": "object",
+  "required": ["id", "label"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string", "pattern": "^concept:[a-z0-9][a-z0-9-]*$"},
+    "label": {"type": "string", "description": "Preferred label."},
+    "alt_labels": {"type": "array", "items": {"type": "string"}, "description": "Synonyms and acronyms, shown and indexed."},
+    "hidden_labels": {"type": "array", "items": {"type": "string"}, "description": "Misspellings and reader slang, indexed only."},
+    "scope_note": {"type": "string", "description": "What is in and what is out."},
+    "broader": {"type": "array", "items": {"type": "string", "pattern": "^concept:[a-z0-9][a-z0-9-]*$"}, "description": "Parent concepts, at most 2."},
+    "related": {"type": "array", "items": {"type": "string", "pattern": "^concept:[a-z0-9][a-z0-9-]*$"}},
+    "same_as": {"type": ["string", "null"], "pattern": "^https?://"}
+  }
+}

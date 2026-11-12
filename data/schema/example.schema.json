@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "example.schema.json",
+  "title": "Example",
+  "description": "examples/<name>/example.json. The threshold is fixed before the run.",
+  "type": "object",
+  "required": ["status", "verified", "deps", "first_command", "input", "threshold"],
+  "additionalProperties": false,
+  "properties": {
+    "title": {"type": "string"},
+    "summary": {"type": "string", "description": "One sentence: what the example shows."},
+    "concepts": {"type": "array", "items": {"type": "string", "pattern": "^concept:[a-z0-9][a-z0-9-]*$"}},
+    "status": {"type": "string", "enum": ["ran", "partial", "sketch"]},
+    "verified": {"type": "string", "description": "What ran, when, on which interpreter and data."},
+    "deps": {"type": "string", "enum": ["stdlib", "venv", "docker"]},
+    "first_command": {"type": "string"},
+    "input": {"type": "string", "enum": ["agent-run", "scripted-run", "static-read"], "description": "The evidence rung."},
+    "runtime": {"type": "string"},
+    "key_result": {"type": "string"},
+    "threshold": {"type": "string", "description": "The pass/fail line fixed before the run."},
+    "verdict": {"type": "string", "enum": ["pass", "fail", "negative", "narrowed"]}
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "record.schema.json",
+  "title": "Record",
+  "description": "One record in data/<kind>/<lane>.json. The id is <kind>:<slug>. Fields shared by all kinds are listed here; allOf adds the fields each kind requires.",
+  "type": "object",
+  "required": ["id", "kind", "title", "summary", "why_it_matters", "concepts", "level", "fit", "fit_notes", "source_type", "corroboration", "claims", "checked", "status", "url_status"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string", "pattern": "^(tool|model|source|recipe):[a-z0-9][a-z0-9._/-]*$", "description": "Stable id, <kind>:<slug>. Never reused."},
+    "kind": {"type": "string", "enum": ["tool", "model", "source", "recipe"]},
+    "title": {"type": "string", "description": "Exact name."},
+    "aliases": {"type": "array", "items": {"type": "string"}, "description": "Old names and abbreviations, indexed by search."},
+    "url": {"type": "string", "pattern": "^https?://", "description": "Canonical URL."},
+    "summary": {"type": "string", "description": "1-3 sentences in our own words: what it is."},
+    "why_it_matters": {"type": "string", "description": "1-2 sentences for this hub's reader."},
+    "concepts": {"type": "array", "items": {"type": "string", "pattern": "^concept:[a-z0-9][a-z0-9-]*$"}, "description": "Ids from data/concepts.json."},
+    "level": {"type": "string", "enum": ["intro", "intermediate", "advanced"]},
+    "maturity": {"type": "string", "enum": ["experimental", "active", "established", "dormant", "shut-down"]},
+    "fit": {"type": "string", "enum": ["high", "medium", "low"], "description": "Judged against the reader's job."},
+    "fit_notes": {"type": "string", "description": "Concrete way to use it. Cost, gotchas. Something a search result would not say."},
+    "related": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "rel"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^(tool|model|source|recipe):[a-z0-9][a-z0-9._/-]*$"},
+          "rel": {"type": "string", "enum": ["depends_on", "integrates_with", "alternative_to", "extends", "evaluated_on", "supersedes", "contradicts"]},
+          "note": {"type": "string"}
+        }
+      }
+    },
+    "source_type": {"type": "string", "enum": ["primary", "independent-secondary", "vendor-or-author", "community", "aggregator", "unknown"]},
+    "corroboration": {"type": "string", "enum": ["confirmed-by-independent-source", "single-source", "contested", "cannot-judge"]},
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["text", "quote", "locator", "url", "retrieved"],
+        "additionalProperties": false,
+        "properties": {
+          "text": {"type": "string", "description": "Our sentence."},
+          "quote": {"type": "string", "description": "Verbatim source words."},
+          "locator": {"type": "string", "description": "Where in the source, for example sec 4.2, table 3."},
+          "url": {"type": "string", "pattern": "^https?://"},
+          "retrieved": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+          "via": {"type": ["string", "null"], "description": "The secondary source, when the original was not opened. Blocks the quoted-primary tier."}
+        }
+      }
+    },
+    "checked": {
+      "type": "object",
+      "required": ["date", "depth", "by", "next_due"],
+      "additionalProperties": false,
+      "properties": {
+        "date": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "description": "Changes only when someone actually checks."},
+        "depth": {"type": "string", "enum": ["primary-read", "skim", "not-checked"]},
+        "by": {"type": "string", "pattern": "^(human|agent|process):[A-Za-z0-9._-]+$"},
+        "what": {"type": "string", "description": "What was compared with what."},
+        "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$", "description": "sha256 of the saved source the claims were checked against."},
+        "next_due": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "description": "From review_interval_days in hub.config.json."}
+      }
+    },
+    "status": {"type": "string", "enum": ["current", "disputed", "outdated", "archived", "retracted"]},
+    "status_note": {"type": "string", "description": "Why, and the date."},
+    "superseded_by": {"type": ["string", "null"], "pattern": "^(tool|model|source|recipe):[a-z0-9][a-z0-9._/-]*$"},
+    "archive_url": {"type": ["string", "null"], "pattern": "^https?://"},
+    "url_status": {"type": "string", "enum": ["live", "dead", "moved"]},
+    "lane": {"type": "string", "description": "Research lane that wrote it. The data file carries it too."},
+    "tags": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"}, "description": "Free and secondary. The build reports tags used once."},
+    "licence_override": {"type": "string", "description": "Hand override of the collected licence."},
+    "licence_reason": {"type": "string"},
+    "citation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {"type": "string"},
+        "author": {"type": "array", "items": {"type": "string"}},
+        "issued": {"type": "string"},
+        "container_title": {"type": "string"},
+        "doi": {"type": "string"},
+        "url": {"type": "string", "pattern": "^https?://"},
+        "accessed": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"}
+      }
+    },
+    "measured": {
+      "type": "object",
+      "required": ["rung", "command", "input", "commit"],
+      "additionalProperties": false,
+      "description": "Set only when this hub measured it. Gives the measured tier.",
+      "properties": {
+        "rung": {"type": "string", "enum": ["agent-run", "scripted-run", "static-read"]},
+        "command": {"type": "string"},
+        "input": {"type": "string"},
+        "commit": {"type": "string"},
+        "result": {"type": "string"},
+        "example": {"type": "string", "description": "examples/<name> that holds the run."}
+      }
+    },
+    "downgrade": {
+      "type": "object",
+      "required": ["reason"],
+      "additionalProperties": false,
+      "description": "One-step badge downgrade with a named reason.",
+      "properties": {
+        "reason": {"type": "string", "enum": ["indirect", "inconsistent", "tiny-sample", "interested-party"]},
+        "note": {"type": "string"}
+      }
+    },
+    "tool_type": {"type": "string", "enum": ["skill", "plugin", "mcp-server", "renderer", "library", "framework", "runtime", "service", "app"]},
+    "agents": {"type": "array", "items": {"type": "string", "enum": ["claude-code", "codex", "cursor", "gemini-cli", "hermes", "any-skill", "any-mcp", "none-stated"]}},
+    "levers": {"type": "array", "items": {"type": "string", "enum": ["motion", "design", "story", "consistency", "audio", "captions", "review-loop", "delivery", "gen-model-craft", "asset", "orchestration", "publishing"]}},
+    "cost": {"type": "string", "enum": ["free-local", "free-tier", "paid", "mixed", "not-checked"]},
+    "modes": {"type": "array", "items": {"type": "string", "enum": ["t2v", "i2v", "v2v", "edit", "lipsync", "t2i", "i2i", "tts", "music", "stt", "upscale"]}},
+    "access": {"type": "string", "enum": ["api", "weights", "app-only", "shut-down"]},
+    "apple_silicon": {"type": "string", "enum": ["measured-by-us", "documented", "no-documented-path", "not-checked"]},
+    "licence_class": {"type": "string", "enum": ["permissive", "commercial-threshold", "non-commercial", "territory-restricted", "proprietary", "unknown"]},
+    "stages": {
+      "type": "array",
+      "description": "Ordered stages of a recipe.",
+      "items": {
+        "type": "object",
+        "required": ["stage", "record_id"],
+        "additionalProperties": false,
+        "properties": {
+          "stage": {"type": "string"},
+          "record_id": {"type": "string", "pattern": "^(tool|model|source|recipe):[a-z0-9][a-z0-9._/-]*$"},
+          "note": {"type": "string"}
+        }
+      }
+    },
+    "video_types": {"type": "array", "items": {"type": "string", "enum": ["explainer", "reel", "product-demo", "ad", "short-film", "music-video", "diagram", "screencast"]}}
+  },
+  "allOf": [
+    {"if": {"required": ["kind"], "properties": {"kind": {"enum": ["tool"]}}}, "then": {"required": ["url", "maturity", "tool_type", "agents", "levers", "cost"]}},
+    {"if": {"required": ["kind"], "properties": {"kind": {"enum": ["model"]}}}, "then": {"required": ["url", "maturity", "modes", "access", "apple_silicon", "licence_class"]}},
+    {"if": {"required": ["kind"], "properties": {"kind": {"enum": ["source"]}}}, "then": {"required": ["url"]}},
+    {"if": {"required": ["kind"], "properties": {"kind": {"enum": ["recipe"]}}}, "then": {"required": ["maturity", "stages", "video_types"]}}
+  ]
+}

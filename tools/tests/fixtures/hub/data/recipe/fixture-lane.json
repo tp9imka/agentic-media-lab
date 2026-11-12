@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "lane": "fixture-lane",
+  "records": [
+    {
+      "id": "recipe:remotion-explainer",
+      "kind": "recipe",
+      "title": "Remotion explainer with local footage",
+      "summary": "Remotion for layout and motion, a local model for one footage shot.",
+      "why_it_matters": "A free, local stack for a short explainer.",
+      "concepts": ["concept:code-driven-video", "concept:local-video-models"],
+      "level": "intermediate",
+      "maturity": "experimental",
+      "fit": "high",
+      "fit_notes": "The footage stage is the slow one.",
+      "source_type": "unknown",
+      "corroboration": "cannot-judge",
+      "claims": [],
+      "checked": {"date": "2026-11-01", "depth": "not-checked", "by": "agent:fixture", "next_due": "2027-01-30"},
+      "status": "current",
+      "url_status": "live",
+      "stages": [
+        {"stage": "footage", "record_id": "model:example/wan-video", "note": "one shot"},
+        {"stage": "render", "record_id": "tool:remotion-dev/remotion"}
+      ],
+      "video_types": ["explainer"]
+    }
+  ]
+}

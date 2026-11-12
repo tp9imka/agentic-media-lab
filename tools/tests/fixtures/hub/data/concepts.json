@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "lane": "vocabulary",
+  "records": [
+    {"id": "concept:making", "label": "Making", "scope_note": "How the pixels get made.", "broader": []},
+    {"id": "concept:code-driven-video", "label": "Code-driven video", "alt_labels": ["programmatic video"],
+     "hidden_labels": ["code video"], "scope_note": "Video rendered from code. Not generated footage.",
+     "broader": ["concept:making"], "related": ["concept:agent-skills"]},
+    {"id": "concept:agent-surface", "label": "Agent surface", "scope_note": "How an agent picks up a capability."},
+    {"id": "concept:agent-skills", "label": "Agent skills", "alt_labels": ["SKILL.md"],
+     "scope_note": "Skill folders an agent loads on demand.", "broader": ["concept:agent-surface"]},
+    {"id": "concept:local-video-models", "label": "Local video models", "scope_note": "Models that run on your machine.",
+     "broader": ["concept:making"], "same_as": "https://www.wikidata.org/wiki/Q0"}
+  ]
+}

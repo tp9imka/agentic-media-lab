@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "lane": "fixture-lane",
+  "records": [
+    {
+      "id": "model:example/wan-video",
+      "kind": "model",
+      "title": "Example local video model",
+      "url": "https://example.com/wan-video",
+      "summary": "An open-weights image-to-video model.",
+      "why_it_matters": "Free local footage when a clip needs real motion.",
+      "concepts": ["concept:local-video-models"],
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Slow on a laptop. Expect minutes per second of video.",
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "claims": [{
+        "text": "The weights are public.",
+        "quote": "Weights are available for download.",
+        "locator": "model card, licence section",
+        "url": "https://example.com/wan-video",
+        "retrieved": "2026-11-01"
+      }],
+      "checked": {"date": "2026-11-01", "depth": "primary-read", "by": "process:fixture", "next_due": "2026-12-01"},
+      "status": "current",
+      "url_status": "live",
+      "measured": {"rung": "scripted-run", "command": "python3 run.py", "input": "one 512x512 frame", "commit": "abc1234",
+                   "result": "4 s clip in 6 min"},
+      "modes": ["i2v", "t2v"],
+      "access": "weights",
+      "apple_silicon": "measured-by-us",
+      "licence_class": "permissive"
+    },
+    {
+      "id": "model:example/gone-video",
+      "kind": "model",
+      "title": "Example hosted video model",
+      "url": "https://example.com/gone-video",
+      "summary": "A hosted text-to-video API that closed.",
+      "why_it_matters": "Readers still search for it.",
+      "concepts": ["concept:making"],
+      "level": "intro",
+      "maturity": "shut-down",
+      "fit": "low",
+      "fit_notes": "The API no longer answers.",
+      "source_type": "independent-secondary",
+      "corroboration": "confirmed-by-independent-source",
+      "claims": [{
+        "text": "The API closed.",
+        "quote": "The API was shut down.",
+        "locator": "news post, second paragraph",
+        "url": "https://example.com/news",
+        "retrieved": "2026-10-01"
+      }],
+      "checked": {"date": "2026-10-01", "depth": "primary-read", "by": "human:fixture", "next_due": "2026-10-31"},
+      "status": "outdated",
+      "status_note": "Shut down 2026-09-30.",
+      "url_status": "live",
+      "modes": ["t2v"],
+      "access": "shut-down",
+      "apple_silicon": "not-checked",
+      "licence_class": "proprietary"
+    }
+  ]
+}
