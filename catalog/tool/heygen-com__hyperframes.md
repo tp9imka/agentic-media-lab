@@ -78,6 +78,8 @@ Collected by `tools/enrich.py`, not typed by hand.
 
 - [IBM Carbon Design System - Motion](../source/carbondesignsystem.com__elements__motion__overview.md) (integrates_with)
 - [HyperFrames vs Remotion research note (GenMotion)](../source/github.com__haxzie__genmotion__blob__main__docs__research__hyperframes-remotion.md.md) (evaluated_on)
+- [HyperFrames skill: usage beacon and CLI telemetry](../source/github.com__heygen-com__hyperframes__blob__main__skills__hyperframes__skill.md.md) (extends)
+- [HyperFrames issue 4435: parallel render workers capture a blank first frame](../source/github.com__heygen-com__hyperframes__issues__4435.md) (evaluated_on)
 - [HyperFrames vs Remotion (HeyGen guide)](../source/hyperframes.heygen.com__guides__hyperframes-vs-remotion.md) (evaluated_on)
 - [Kinetograph](0xs4n4tg__kinetograph.md) (alternative_to)
 - [smooth-animation-skill](flchntc__smooth-animation-skill.md) (extends)

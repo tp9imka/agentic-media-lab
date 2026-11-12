@@ -332,6 +332,19 @@
    ]
   },
   {
+   "id": "source:about.fb.com/news/2026/03/rewarding-original-creators-on-facebook",
+   "kind": "source",
+   "label": "Meta: Rewarding Original Creators on Facebook (March 2026)",
+   "path": "catalog/source/about.fb.com__news__2026__03__rewarding-original-creators-on-facebook.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:platform-rules",
+    "concept:publishing"
+   ]
+  },
+  {
    "id": "source:ads.tiktok.com/help/article/creative-best-practices",
    "kind": "source",
    "label": "TikTok Ads - Creative best practices for performance ads",
@@ -359,6 +372,18 @@
    ]
   },
   {
+   "id": "source:arxiv.org/abs/2412.13459",
+   "kind": "source",
+   "label": "Six Million (Suspected) Fake Stars in GitHub: A Growing Spiral of Popularity Contests, Spams, and Malware",
+   "path": "catalog/source/arxiv.org__abs__2412.13459.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:popularity-and-trust"
+   ]
+  },
+  {
    "id": "source:arxiv.org/abs/2604.24842",
    "kind": "source",
    "label": "Co-Director: Agentic Generative Video Storytelling (arXiv 2604.24842)",
@@ -370,6 +395,47 @@
     "concept:story-and-decomposition",
     "concept:agentic-pipelines",
     "concept:review-loop"
+   ]
+  },
+  {
+   "id": "source:arxiv.org/abs/2605.11418",
+   "kind": "source",
+   "label": "Under the Hood of SKILL.md: Semantic Supply-chain Attacks on AI Agent Skill Registry",
+   "path": "catalog/source/arxiv.org__abs__2605.11418.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:popularity-and-trust",
+    "concept:agent-skills"
+   ]
+  },
+  {
+   "id": "source:arxiv.org/abs/2605.15199",
+   "kind": "source",
+   "label": "EntityBench: Towards Entity-Consistent Long-Range Multi-Shot Video Generation",
+   "path": "catalog/source/arxiv.org__abs__2605.15199.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:consistency",
+    "concept:evaluation",
+    "concept:agentic-pipelines"
+   ]
+  },
+  {
+   "id": "source:arxiv.org/abs/2605.15585",
+   "kind": "source",
+   "label": "See Before You Code: Learning Visual Priors for Spatially Aware Educational Animation Generation (OmniManim)",
+   "path": "catalog/source/arxiv.org__abs__2605.15585.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:review-loop",
+    "concept:evaluation"
    ]
   },
   {
@@ -749,6 +815,33 @@
    ]
   },
   {
+   "id": "source:github.com/heygen-com/hyperframes/blob/main/skills/hyperframes/skill.md",
+   "kind": "source",
+   "label": "HyperFrames skill: usage beacon and CLI telemetry",
+   "path": "catalog/source/github.com__heygen-com__hyperframes__blob__main__skills__hyperframes__skill.md.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:agent-skills",
+    "concept:popularity-and-trust",
+    "concept:code-driven-video"
+   ]
+  },
+  {
+   "id": "source:github.com/heygen-com/hyperframes/issues/4435",
+   "kind": "source",
+   "label": "HyperFrames issue 4435: parallel render workers capture a blank first frame",
+   "path": "catalog/source/github.com__heygen-com__hyperframes__issues__4435.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-secondary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:review-loop"
+   ]
+  },
+  {
    "id": "source:github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss",
    "kind": "source",
    "label": "Material 3 motion tokens (material-web, _md-sys-motion.scss)",
@@ -866,6 +959,20 @@
    ]
   },
   {
+   "id": "source:remotion.dev/docs/5-0-migration",
+   "kind": "source",
+   "label": "Remotion 5.0 migration: mandatory telemetry for licensed companies",
+   "path": "catalog/source/remotion.dev__docs__5-0-migration.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:licences-and-territory",
+    "concept:code-driven-video",
+    "concept:automation"
+   ]
+  },
+  {
    "id": "source:remotion.dev/docs/ai/mcp",
    "kind": "source",
    "label": "Remotion's Model Context Protocol (shut down)",
@@ -875,6 +982,46 @@
    "badge": "quoted-primary",
    "concepts": [
     "concept:mcp-servers",
+    "concept:agent-skills"
+   ]
+  },
+  {
+   "id": "source:skills.sh/api/search/ai-video-generation",
+   "kind": "source",
+   "label": "skills.sh search results for 'ai-video-generation': cloned listings on new repos",
+   "path": "catalog/source/skills.sh__api__search__ai-video-generation.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:popularity-and-trust",
+    "concept:agent-skills",
+    "concept:hosted-video-models"
+   ]
+  },
+  {
+   "id": "source:skills.sh/docs",
+   "kind": "source",
+   "label": "skills.sh docs: how the leaderboard ranks skills and what audits cover",
+   "path": "catalog/source/skills.sh__docs.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:popularity-and-trust",
+    "concept:agent-skills"
+   ]
+  },
+  {
+   "id": "source:snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub",
+   "kind": "source",
+   "label": "Snyk ToxicSkills: security audit of agent skills on ClawHub and skills.sh",
+   "path": "catalog/source/snyk.io__blog__toxicskills-malicious-ai-agent-skills-clawhub.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:popularity-and-trust",
     "concept:agent-skills"
    ]
   },
@@ -965,6 +1112,19 @@
    "concepts": [
     "concept:audio-and-captions",
     "concept:delivery"
+   ]
+  },
+  {
+   "id": "source:vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals",
+   "kind": "source",
+   "label": "Vercel: AGENTS.md outperforms skills in our agent evals",
+   "path": "catalog/source/vercel.com__blog__agents-md-outperforms-skills-in-our-agent-evals.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:agent-skills",
+    "concept:agent-surface"
    ]
   },
   {
@@ -2410,6 +2570,21 @@
    "rel": "integrates_with"
   },
   {
+   "source": "source:about.fb.com/news/2026/03/rewarding-original-creators-on-facebook",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:about.fb.com/news/2026/03/rewarding-original-creators-on-facebook",
+   "target": "concept:publishing",
+   "rel": "about"
+  },
+  {
+   "source": "source:about.fb.com/news/2026/03/rewarding-original-creators-on-facebook",
+   "target": "source:support.google.com/youtube/answer/1311392",
+   "rel": "alternative_to"
+  },
+  {
    "source": "source:ads.tiktok.com/help/article/creative-best-practices",
    "target": "concept:audio-and-captions",
    "rel": "about"
@@ -2450,6 +2625,11 @@
    "rel": "evaluated_on"
   },
   {
+   "source": "source:arxiv.org/abs/2412.13459",
+   "target": "concept:popularity-and-trust",
+   "rel": "about"
+  },
+  {
    "source": "source:arxiv.org/abs/2604.24842",
    "target": "concept:agentic-pipelines",
    "rel": "about"
@@ -2473,6 +2653,56 @@
    "source": "source:arxiv.org/abs/2604.24842",
    "target": "source:arxiv.org/abs/2606.07649",
    "rel": "alternative_to"
+  },
+  {
+   "source": "source:arxiv.org/abs/2605.11418",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2605.11418",
+   "target": "concept:popularity-and-trust",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2605.11418",
+   "target": "source:skills.sh/docs",
+   "rel": "contradicts"
+  },
+  {
+   "source": "source:arxiv.org/abs/2605.15199",
+   "target": "concept:agentic-pipelines",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2605.15199",
+   "target": "concept:consistency",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2605.15199",
+   "target": "concept:evaluation",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2605.15585",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2605.15585",
+   "target": "concept:evaluation",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2605.15585",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2605.15585",
+   "target": "tool:manimcommunity/manim",
+   "rel": "evaluated_on"
   },
   {
    "source": "source:arxiv.org/abs/2606.07649",
@@ -3000,6 +3230,46 @@
    "rel": "evaluated_on"
   },
   {
+   "source": "source:github.com/heygen-com/hyperframes/blob/main/skills/hyperframes/skill.md",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/heygen-com/hyperframes/blob/main/skills/hyperframes/skill.md",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/heygen-com/hyperframes/blob/main/skills/hyperframes/skill.md",
+   "target": "concept:popularity-and-trust",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/heygen-com/hyperframes/blob/main/skills/hyperframes/skill.md",
+   "target": "tool:heygen-com/hyperframes",
+   "rel": "extends"
+  },
+  {
+   "source": "source:github.com/heygen-com/hyperframes/issues/4435",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/heygen-com/hyperframes/issues/4435",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/heygen-com/hyperframes/issues/4435",
+   "target": "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+   "rel": "contradicts"
+  },
+  {
+   "source": "source:github.com/heygen-com/hyperframes/issues/4435",
+   "target": "tool:heygen-com/hyperframes",
+   "rel": "evaluated_on"
+  },
+  {
    "source": "source:github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss",
    "target": "concept:motion-and-transitions",
    "rel": "about"
@@ -3150,6 +3420,26 @@
    "rel": "integrates_with"
   },
   {
+   "source": "source:remotion.dev/docs/5-0-migration",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "source:remotion.dev/docs/5-0-migration",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "source:remotion.dev/docs/5-0-migration",
+   "target": "concept:licences-and-territory",
+   "rel": "about"
+  },
+  {
+   "source": "source:remotion.dev/docs/5-0-migration",
+   "target": "tool:remotion-dev/remotion",
+   "rel": "extends"
+  },
+  {
    "source": "source:remotion.dev/docs/ai/mcp",
    "target": "concept:agent-skills",
    "rel": "about"
@@ -3158,6 +3448,56 @@
    "source": "source:remotion.dev/docs/ai/mcp",
    "target": "concept:mcp-servers",
    "rel": "about"
+  },
+  {
+   "source": "source:skills.sh/api/search/ai-video-generation",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "source:skills.sh/api/search/ai-video-generation",
+   "target": "concept:hosted-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "source:skills.sh/api/search/ai-video-generation",
+   "target": "concept:popularity-and-trust",
+   "rel": "about"
+  },
+  {
+   "source": "source:skills.sh/api/search/ai-video-generation",
+   "target": "model:google/veo-3.1",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:skills.sh/api/search/ai-video-generation",
+   "target": "source:skills.sh/docs",
+   "rel": "extends"
+  },
+  {
+   "source": "source:skills.sh/docs",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "source:skills.sh/docs",
+   "target": "concept:popularity-and-trust",
+   "rel": "about"
+  },
+  {
+   "source": "source:snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "source:snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub",
+   "target": "concept:popularity-and-trust",
+   "rel": "about"
+  },
+  {
+   "source": "source:snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub",
+   "target": "source:skills.sh/docs",
+   "rel": "evaluated_on"
   },
   {
    "source": "source:support.google.com/youtube/answer/1311392",
@@ -3258,6 +3598,21 @@
    "source": "source:tech.ebu.ch/publications/r128",
    "target": "tool:ffmpeg/ffmpeg",
    "rel": "integrates_with"
+  },
+  {
+   "source": "source:vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "source:vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals",
+   "target": "concept:agent-surface",
+   "rel": "about"
+  },
+  {
+   "source": "source:vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals",
+   "target": "source:remotion.dev/docs/ai/mcp",
+   "rel": "contradicts"
   },
   {
    "source": "source:w3.org/tr/wcag22",

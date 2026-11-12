@@ -79,6 +79,7 @@ Collected by `tools/enrich.py`, not typed by hand.
 
 ## Referenced by
 
+- [See Before You Code: Learning Visual Priors for Spatially Aware Educational Animation Generation (OmniManim)](../source/arxiv.org__abs__2605.15585.md) (evaluated_on)
 - [ManimGL (3b1b/manim)](3b1b__manim.md) (alternative_to)
 
 ## Status

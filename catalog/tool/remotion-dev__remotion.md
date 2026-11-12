@@ -86,6 +86,7 @@ Collected by `tools/enrich.py`, not typed by hand.
 
 - [HyperFrames vs Remotion research note (GenMotion)](../source/github.com__haxzie__genmotion__blob__main__docs__research__hyperframes-remotion.md.md) (evaluated_on)
 - [HyperFrames vs Remotion (HeyGen guide)](../source/hyperframes.heygen.com__guides__hyperframes-vs-remotion.md) (evaluated_on)
+- [Remotion 5.0 migration: mandatory telemetry for licensed companies](../source/remotion.dev__docs__5-0-migration.md) (extends)
 - [Kinetograph](0xs4n4tg__kinetograph.md) (alternative_to)
 - [fframes](dmtrkovalenko__fframes.md) (alternative_to)
 - [html-video](nexu-io__html-video.md) (contradicts)

@@ -62,6 +62,7 @@ Nothing collected yet.
 ## Referenced by
 
 - [HyperFrames vs Remotion research note (GenMotion)](github.com__haxzie__genmotion__blob__main__docs__research__hyperframes-remotion.md.md) (alternative_to)
+- [HyperFrames issue 4435: parallel render workers capture a blank first frame](github.com__heygen-com__hyperframes__issues__4435.md) (contradicts)
 
 ## Status
 

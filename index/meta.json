@@ -3,11 +3,11 @@
  "counts": {
   "tool": 54,
   "model": 25,
-  "source": 50,
+  "source": 62,
   "recipe": 0
  },
  "primary_read_share": 1.0,
- "chars_total": 502095,
- "tokens_estimate": 125523,
+ "chars_total": 550591,
+ "tokens_estimate": 137647,
  "lifetime": "living"
 }

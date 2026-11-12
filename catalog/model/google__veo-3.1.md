@@ -57,6 +57,7 @@ Nothing collected yet.
 ## Referenced by
 
 - [Co-Director: Agentic Generative Video Storytelling (arXiv 2604.24842)](../source/arxiv.org__abs__2604.24842.md) (depends_on)
+- [skills.sh search results for 'ai-video-generation': cloned listings on new repos](../source/skills.sh__api__search__ai-video-generation.md) (integrates_with)
 - [Runway Dev API](../tool/runwayml__runway-api.md) (integrates_with)
 
 ## Status

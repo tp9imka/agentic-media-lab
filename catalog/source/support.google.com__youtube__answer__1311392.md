@@ -61,7 +61,7 @@ Nothing collected yet.
 
 ## Referenced by
 
-None.
+- [Meta: Rewarding Original Creators on Facebook (March 2026)](about.fb.com__news__2026__03__rewarding-original-creators-on-facebook.md) (alternative_to)
 
 ## Status
 

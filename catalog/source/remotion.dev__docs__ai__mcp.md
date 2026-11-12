@@ -55,6 +55,7 @@ None.
 
 ## Referenced by
 
+- [Vercel: AGENTS.md outperforms skills in our agent evals](vercel.com__blog__agents-md-outperforms-skills-in-our-agent-evals.md) (contradicts)
 - [Remotion Agent Skills](../tool/remotion-dev__skills.md) (supersedes)
 
 ## Status

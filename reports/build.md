@@ -6,11 +6,11 @@ Built 2026-11-12 by `tools/build.py`.
 
 - tool: 54
 - model: 25
-- source: 50
+- source: 62
 - recipe: 0
 - concepts: 35
 - primary-read share: 1.0
-- Hub size: 502095 characters, about 125523 tokens (estimate, characters / 4).
+- Hub size: 550591 characters, about 137647 tokens (estimate, characters / 4).
 
 ## Validation
 
@@ -20,38 +20,50 @@ dangling: 0 bad concepts: 0 invalid: 0
 
 None.
 
-## Tags used once (32)
+## Tags used once (44)
 
 - `accessibility`
 - `analytics`
 - `automation`
 - `banding`
 - `bluesky`
+- `cloned-skills`
 - `contrast`
 - `cps`
 - `cuts`
 - `design-tokens`
+- `determinism`
 - `editing`
 - `facebook`
+- `fake-stars`
 - `flashing`
 - `h264`
 - `instagram`
+- `licence-change`
 - `linkedin`
+- `manim`
 - `mastodon`
 - `mcp`
+- `meta`
 - `monetisation`
+- `multi-shot`
 - `pricing`
 - `quality-metric`
 - `quota`
 - `reels`
+- `remotion`
+- `render-check`
 - `retention`
 - `screenplay`
 - `script-format`
 - `shot-detection`
+- `skill-invocation`
+- `skills-sh`
 - `storyboard`
 - `streaming`
 - `threads`
 - `true-peak`
+- `unoriginal-content`
 - `validator`
 - `vertical-video`
 

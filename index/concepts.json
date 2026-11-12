@@ -51,7 +51,13 @@
    ],
    "related": [],
    "record_ids": [
+    "source:arxiv.org/abs/2605.11418",
+    "source:github.com/heygen-com/hyperframes/blob/main/skills/hyperframes/skill.md",
     "source:remotion.dev/docs/ai/mcp",
+    "source:skills.sh/api/search/ai-video-generation",
+    "source:skills.sh/docs",
+    "source:snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub",
+    "source:vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals",
     "tool:browser-use/video-use",
     "tool:calesthio/generative-media-skills",
     "tool:coreyhaines31/marketingskills",
@@ -66,7 +72,7 @@
     "tool:remotion-dev/skills",
     "tool:vincentwei1021/video-shotcraft"
    ],
-   "count": 14
+   "count": 20
   },
   {
    "id": "concept:agent-surface",
@@ -76,8 +82,10 @@
    "scope_note": "How a coding agent gets the capability.",
    "broader": [],
    "related": [],
-   "record_ids": [],
-   "count": 0
+   "record_ids": [
+    "source:vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals"
+   ],
+   "count": 1
   },
   {
    "id": "concept:agentic-pipelines",
@@ -98,13 +106,14 @@
    "related": [],
    "record_ids": [
     "source:arxiv.org/abs/2604.24842",
+    "source:arxiv.org/abs/2605.15199",
     "source:arxiv.org/abs/2606.07649",
     "tool:comfy-org/comfyui",
     "tool:nexu-io/html-video",
     "tool:nousresearch/kanban-video-pipeline",
     "tool:openmontageinc/openmontage"
    ],
-   "count": 6
+   "count": 7
   },
   {
    "id": "concept:audio-and-captions",
@@ -179,6 +188,7 @@
     "source:hermes-agent.nousresearch.com/docs/user-guide/security",
     "source:learn.chatgpt.com/docs/automations",
     "source:learn.chatgpt.com/docs/non-interactive-mode",
+    "source:remotion.dev/docs/5-0-migration",
     "tool:activepieces/activepieces",
     "tool:get-bb/bb",
     "tool:n8n-io/n8n",
@@ -187,7 +197,7 @@
     "tool:triggerdotdev/trigger.dev",
     "tool:windmill-labs/windmill"
    ],
-   "count": 21
+   "count": 22
   },
   {
    "id": "concept:code-driven-video",
@@ -210,8 +220,12 @@
    ],
    "related": [],
    "record_ids": [
+    "source:arxiv.org/abs/2605.15585",
     "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
+    "source:github.com/heygen-com/hyperframes/blob/main/skills/hyperframes/skill.md",
+    "source:github.com/heygen-com/hyperframes/issues/4435",
     "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+    "source:remotion.dev/docs/5-0-migration",
     "tool:0xs4n4tg/kinetograph",
     "tool:3b1b/manim",
     "tool:ahujasid/mcp-for-blender",
@@ -233,7 +247,7 @@
     "tool:remotion-dev/skills",
     "tool:zulko/moviepy"
    ],
-   "count": 22
+   "count": 26
   },
   {
    "id": "concept:consistency",
@@ -255,12 +269,13 @@
    "record_ids": [
     "model:black-forest-labs/flux-3-image-klein",
     "model:bytedance/seedance",
+    "source:arxiv.org/abs/2605.15199",
     "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
     "tool:0xs4n4tg/kinetograph",
     "tool:calesthio/generative-media-skills",
     "tool:digitalsamba/claude-code-video-toolkit"
    ],
-   "count": 6
+   "count": 7
   },
   {
    "id": "concept:cost",
@@ -375,10 +390,12 @@
    "related": [],
    "record_ids": [
     "source:artificialanalysis.ai/video/leaderboard/text-to-video",
+    "source:arxiv.org/abs/2605.15199",
+    "source:arxiv.org/abs/2605.15585",
     "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
     "tool:netflix/vmaf"
    ],
-   "count": 3
+   "count": 5
   },
   {
    "id": "concept:feedback-loop",
@@ -493,12 +510,13 @@
     "model:runwayml/gen-4.5",
     "model:xai/grok-imagine",
     "source:artificialanalysis.ai/video/leaderboard/text-to-video",
+    "source:skills.sh/api/search/ai-video-generation",
     "tool:fal-ai/fal",
     "tool:openrouter/video-generation",
     "tool:replicate/replicate",
     "tool:runwayml/runway-api"
    ],
-   "count": 18
+   "count": 19
   },
   {
    "id": "concept:image-models",
@@ -560,13 +578,14 @@
     "model:minimaxai/minimax-h3",
     "model:qwen/qwen-image",
     "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+    "source:remotion.dev/docs/5-0-migration",
     "tool:activepieces/activepieces",
     "tool:greensock/gsap",
     "tool:n8n-io/n8n",
     "tool:remotion-dev/remotion",
     "tool:windmill-labs/windmill"
    ],
-   "count": 10
+   "count": 11
   },
   {
    "id": "concept:local-video-models",
@@ -771,6 +790,7 @@
    ],
    "related": [],
    "record_ids": [
+    "source:about.fb.com/news/2026/03/rewarding-original-creators-on-facebook",
     "source:c2pa.org/faqs",
     "source:developers.facebook.com/docs/instagram-platform/content-publishing",
     "source:developers.facebook.com/docs/threads/posts",
@@ -791,7 +811,7 @@
     "source:support.google.com/youtube/answer/14328491",
     "source:www.tiktok.com/community-guidelines/en/integrity-authenticity"
    ],
-   "count": 19
+   "count": 20
   },
   {
    "id": "concept:plugins",
@@ -836,9 +856,15 @@
    ],
    "related": [],
    "record_ids": [
+    "source:arxiv.org/abs/2412.13459",
+    "source:arxiv.org/abs/2605.11418",
+    "source:github.com/heygen-com/hyperframes/blob/main/skills/hyperframes/skill.md",
+    "source:skills.sh/api/search/ai-video-generation",
+    "source:skills.sh/docs",
+    "source:snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub",
     "tool:ahujasid/mcp-for-blender"
    ],
-   "count": 1
+   "count": 7
   },
   {
    "id": "concept:publishing",
@@ -860,6 +886,7 @@
    ],
    "related": [],
    "record_ids": [
+    "source:about.fb.com/news/2026/03/rewarding-original-creators-on-facebook",
     "source:developers.facebook.com/docs/instagram-platform/content-publishing",
     "source:developers.facebook.com/docs/threads/posts",
     "source:developers.facebook.com/docs/video-api/guides/reels-publishing",
@@ -877,7 +904,7 @@
     "tool:gitroomhq/postiz-app",
     "tool:inovector/mixpost"
    ],
-   "count": 16
+   "count": 17
   },
   {
    "id": "concept:review-loop",
@@ -901,11 +928,13 @@
    "related": [],
    "record_ids": [
     "source:arxiv.org/abs/2604.24842",
+    "source:arxiv.org/abs/2605.15585",
     "source:arxiv.org/abs/2606.07649",
     "source:code.claude.com/docs/en/routines",
     "source:docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
     "source:github.com/get-bb/bb/blob/main/docs/configuration.md",
     "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
+    "source:github.com/heygen-com/hyperframes/issues/4435",
     "source:hermes-agent.nousresearch.com/docs/user-guide/security",
     "source:learn.chatgpt.com/docs/automations",
     "tool:0xs4n4tg/kinetograph",
@@ -932,7 +961,7 @@
     "tool:vincentwei1021/video-shotcraft",
     "tool:windmill-labs/windmill"
    ],
-   "count": 31
+   "count": 33
   },
   {
    "id": "concept:scheduling-and-runtimes",
