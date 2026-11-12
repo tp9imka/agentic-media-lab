@@ -53,14 +53,25 @@ It has to be built with cmake; the Core ML encoder needs Python, coremltools and
 - Corroboration: single-source
 - Checked: 2026-11-12 by agent:kiro, depth primary-read. whisper.cpp README against the three claims
 - Next check due: 2027-02-10
-- Licence: unknown
+- Licence: MIT
 - URL status: live
 - Saved source sha256: `f8ec51916700b997caa70307d95d1ac15401d40dc6e88822d3b7f6896ecfd379`
 - Lane: local-models
 
 ## Observed
 
-Nothing collected yet.
+Collected by `tools/enrich.py`, not typed by hand.
+
+- archived: false
+- created: 2022-09-25
+- default_branch: master
+- fetched_at: 2026-11-12
+- forks: 6297
+- last_activity: 2026-11-10
+- licence: MIT
+- open_issues: 364
+- sources: https://api.github.com/repos/ggml-org/whisper.cpp, https://skills.sh/api/search?q=whisper.cpp
+- stars: 55123
 
 ## Related
 

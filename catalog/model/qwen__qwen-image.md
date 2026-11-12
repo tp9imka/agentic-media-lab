@@ -53,14 +53,23 @@ Keep 2.1 output out of client or paid work unless Qwen grants a separate licence
 - Corroboration: single-source
 - Checked: 2026-11-12 by agent:kiro, depth primary-read. Qwen-Image-2.1 LICENSE and mflux Qwen Image 2.1 README against the claims
 - Next check due: 2026-12-12
-- Licence: unknown
+- Licence: other
 - URL status: live
 - Saved source sha256: `30daee6b2099cad6ee217723d786e4873db97afaf9ddea27fcca054b92a67bb1`
 - Lane: local-models
 
 ## Observed
 
-Nothing collected yet.
+Collected by `tools/enrich.py`, not typed by hand.
+
+- created: 2026-09-14
+- fetched_at: 2026-11-12
+- gated: false
+- hf_downloads: 261646
+- hf_likes: 3607
+- last_activity: 2026-09-30
+- licence: other
+- sources: https://huggingface.co/api/models/Qwen/Qwen-Image-2.1
 
 ## Related
 

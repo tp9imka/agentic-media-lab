@@ -55,14 +55,25 @@ Self-hosting means your own app per platform: YouTube now publishes publicly wit
 - Corroboration: single-source
 - Checked: 2026-11-12 by agent:kiro, depth primary-read. GitHub README visible text against the claims
 - Next check due: 2027-02-10
-- Licence: unknown
+- Licence: AGPL-3.0
 - URL status: live
 - Saved source sha256: `e4830dfc8177daee415b33b804f2b57ce885add85c72c07952055cb31cdc5219`
 - Lane: publishing
 
 ## Observed
 
-Nothing collected yet.
+Collected by `tools/enrich.py`, not typed by hand.
+
+- archived: false
+- created: 2023-07-08
+- default_branch: main
+- fetched_at: 2026-11-12
+- forks: 7900
+- last_activity: 2026-11-12
+- licence: AGPL-3.0
+- open_issues: 209
+- sources: https://api.github.com/repos/gitroomhq/postiz-app, https://skills.sh/api/search?q=postiz-app
+- stars: 41418
 
 ## Related
 

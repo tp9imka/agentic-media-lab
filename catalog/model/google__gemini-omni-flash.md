@@ -62,6 +62,7 @@ None.
 
 ## Referenced by
 
+- [Nano Banana (Gemini image models)](google__nano-banana.md) (integrates_with)
 - [Veo 3.1](google__veo-3.1.md) (alternative_to)
 - [Veo 3.1](google__veo-3.1.md) (superseded_by)
 

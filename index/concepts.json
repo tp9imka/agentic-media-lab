@@ -62,10 +62,11 @@
     "tool:iart-ai/motion-skills",
     "tool:lottiefiles/motion-design-skill",
     "tool:mattypark/motion-graphics-skill",
+    "tool:openrouter/video-generation",
     "tool:remotion-dev/skills",
     "tool:vincentwei1021/video-shotcraft"
    ],
-   "count": 13
+   "count": 14
   },
   {
    "id": "concept:agent-surface",
@@ -129,6 +130,7 @@
    "record_ids": [
     "model:ace-step/ace-step",
     "model:hexgrad/kokoro",
+    "model:heygen/heygen-video-1",
     "tool:browser-use/video-use",
     "tool:calesthio/generative-media-skills",
     "tool:coreyhaines31/marketingskills",
@@ -143,7 +145,7 @@
     "tool:motion-canvas/motion-canvas",
     "tool:openmontageinc/openmontage"
    ],
-   "count": 15
+   "count": 16
   },
   {
    "id": "concept:automation",
@@ -243,12 +245,13 @@
    "related": [],
    "record_ids": [
     "model:black-forest-labs/flux-3-image-klein",
+    "model:bytedance/seedance",
     "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
     "tool:0xs4n4tg/kinetograph",
     "tool:calesthio/generative-media-skills",
     "tool:digitalsamba/claude-code-video-toolkit"
    ],
-   "count": 5
+   "count": 6
   },
   {
    "id": "concept:cost",
@@ -268,10 +271,24 @@
    ],
    "related": [],
    "record_ids": [
+    "model:alibaba/happyhorse",
+    "model:alibaba/wan",
+    "model:black-forest-labs/flux-3",
+    "model:bytedance/seedance",
+    "model:bytedance/seedream",
     "model:google/gemini-omni-flash",
-    "source:docs.x.com/x-api/getting-started/pricing"
+    "model:google/nano-banana",
+    "model:lumalabs/ray",
+    "model:openai/gpt-image",
+    "model:runwayml/aleph",
+    "model:runwayml/gen-4.5",
+    "model:xai/grok-imagine",
+    "source:docs.x.com/x-api/getting-started/pricing",
+    "tool:fal-ai/fal",
+    "tool:openrouter/video-generation",
+    "tool:runwayml/runway-api"
    ],
-   "count": 2
+   "count": 16
   },
   {
    "id": "concept:craft",
@@ -306,6 +323,7 @@
    "related": [],
    "record_ids": [
     "model:bytedance-seed/seedvr",
+    "model:runwayml/gen-4.5",
     "source:c2pa.org/faqs",
     "source:developers.facebook.com/docs/instagram-platform/content-publishing",
     "source:developers.facebook.com/docs/video-api/guides/reels-publishing",
@@ -319,7 +337,7 @@
     "tool:kajisho5/ffmpeg-skill",
     "tool:mort1d/motion-graphics-skills"
    ],
-   "count": 13
+   "count": 14
   },
   {
    "id": "concept:evaluation",
@@ -341,9 +359,10 @@
    ],
    "related": [],
    "record_ids": [
+    "source:artificialanalysis.ai/video/leaderboard/text-to-video",
     "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion"
    ],
-   "count": 1
+   "count": 2
   },
   {
    "id": "concept:feedback-loop",
@@ -383,13 +402,14 @@
    ],
    "related": [],
    "record_ids": [
+    "model:runwayml/aleph",
     "tool:browser-use/video-use",
     "tool:coreyhaines31/marketingskills",
     "tool:kajisho5/ffmpeg-skill",
     "tool:mifi/editly",
     "tool:zulko/moviepy"
    ],
-   "count": 5
+   "count": 6
   },
   {
    "id": "concept:generated-footage",
@@ -439,12 +459,26 @@
    ],
    "related": [],
    "record_ids": [
+    "model:alibaba/happyhorse",
+    "model:alibaba/wan",
+    "model:black-forest-labs/flux-3",
+    "model:bytedance/seedance",
     "model:google/gemini-omni-flash",
     "model:google/veo-3.1",
+    "model:heygen/heygen-video-1",
+    "model:lumalabs/ray",
     "model:minimaxai/minimax-h3",
-    "model:openai/sora-2"
+    "model:openai/sora-2",
+    "model:runwayml/aleph",
+    "model:runwayml/gen-4.5",
+    "model:xai/grok-imagine",
+    "source:artificialanalysis.ai/video/leaderboard/text-to-video",
+    "tool:fal-ai/fal",
+    "tool:openrouter/video-generation",
+    "tool:replicate/replicate",
+    "tool:runwayml/runway-api"
    ],
-   "count": 4
+   "count": 18
   },
   {
    "id": "concept:image-models",
@@ -465,14 +499,22 @@
    ],
    "related": [],
    "record_ids": [
+    "model:black-forest-labs/flux-3",
     "model:black-forest-labs/flux-3-image-klein",
+    "model:bytedance/seedream",
+    "model:google/nano-banana",
+    "model:openai/gpt-image",
     "model:qwen/qwen-image",
     "model:tongyi-mai/z-image",
+    "model:xai/grok-imagine",
     "tool:comfy-org/comfyui",
     "tool:drawthings.ai",
-    "tool:mflux-community/mflux"
+    "tool:fal-ai/fal",
+    "tool:mflux-community/mflux",
+    "tool:replicate/replicate",
+    "tool:runwayml/runway-api"
    ],
-   "count": 6
+   "count": 14
   },
   {
    "id": "concept:licences-and-territory",
@@ -567,9 +609,12 @@
    "record_ids": [
     "source:remotion.dev/docs/ai/mcp",
     "tool:ahujasid/mcp-for-blender",
-    "tool:jordanrendric/claude-video-vision"
+    "tool:fal-ai/fal",
+    "tool:jordanrendric/claude-video-vision",
+    "tool:replicate/replicate",
+    "tool:runwayml/runway-api"
    ],
-   "count": 3
+   "count": 6
   },
   {
    "id": "concept:model-prompting",

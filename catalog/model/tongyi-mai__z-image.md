@@ -53,14 +53,23 @@ Run it with mflux-generate-z-image-turbo -q 8. The full bf16 download is about 3
 - Corroboration: single-source
 - Checked: 2026-11-12 by agent:kiro, depth primary-read. Z-Image-Turbo model card and mflux Z-Image README against the claims
 - Next check due: 2026-12-12
-- Licence: unknown
+- Licence: apache-2.0
 - URL status: live
 - Saved source sha256: `8657a6beed1109ffb4a481599f48089a27e3c1d4726dfabe5d098c68e31fd7b0`
 - Lane: local-models
 
 ## Observed
 
-Nothing collected yet.
+Collected by `tools/enrich.py`, not typed by hand.
+
+- created: 2025-11-25
+- fetched_at: 2026-11-12
+- gated: false
+- hf_downloads: 743417
+- hf_likes: 5591
+- last_activity: 2026-01-30
+- licence: apache-2.0
+- sources: https://huggingface.co/api/models/Tongyi-MAI/Z-Image-Turbo
 
 ## Related
 

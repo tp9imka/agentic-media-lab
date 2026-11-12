@@ -53,14 +53,23 @@ Only the Lite distilled model has an MLX build; the full 11.7B models run throug
 - Corroboration: single-source
 - Checked: 2026-11-12 by agent:kiro, depth primary-read. Vimoo-1.0 model card and Vimoo-1.0-MLX README against the claims
 - Next check due: 2026-12-12
-- Licence: unknown
+- Licence: apache-2.0
 - URL status: live
 - Saved source sha256: `39393351efd118f5349f76165c3ed6e395c7933ea175e91fa0684f1059eb2482`
 - Lane: local-models
 
 ## Observed
 
-Nothing collected yet.
+Collected by `tools/enrich.py`, not typed by hand.
+
+- created: 2026-09-30
+- fetched_at: 2026-11-12
+- gated: false
+- hf_downloads: 52
+- hf_likes: 17
+- last_activity: 2026-11-04
+- licence: apache-2.0
+- sources: https://huggingface.co/api/models/Vimoo-AI/Vimoo-1.0
 
 ## Related
 

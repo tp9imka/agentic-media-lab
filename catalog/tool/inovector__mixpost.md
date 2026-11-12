@@ -53,14 +53,25 @@ Lite (free) publishes only to Facebook Pages, X and Mastodon per the pricing pag
 - Corroboration: single-source
 - Checked: 2026-11-12 by agent:kiro, depth primary-read. GitHub README and mixpost.app/pricing, visible text, against the claims
 - Next check due: 2027-02-10
-- Licence: unknown
+- Licence: MIT
 - URL status: live
 - Saved source sha256: `88f7ede78369d4de8a497aa4e13cda381c8bdf19a3986a665f1b413cda16403e`
 - Lane: publishing
 
 ## Observed
 
-Nothing collected yet.
+Collected by `tools/enrich.py`, not typed by hand.
+
+- archived: false
+- created: 2022-07-22
+- default_branch: main
+- fetched_at: 2026-11-12
+- forks: 591
+- last_activity: 2026-03-16
+- licence: MIT
+- open_issues: 35
+- sources: https://api.github.com/repos/inovector/mixpost, https://skills.sh/api/search?q=mixpost
+- stars: 3928
 
 ## Related
 

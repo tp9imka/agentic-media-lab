@@ -13,6 +13,46 @@
    ]
   },
   {
+   "id": "model:alibaba/happyhorse",
+   "kind": "model",
+   "label": "HappyHorse",
+   "path": "catalog/model/alibaba__happyhorse.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:hosted-video-models",
+    "concept:cost"
+   ]
+  },
+  {
+   "id": "model:alibaba/wan",
+   "kind": "model",
+   "label": "Wan 3.0",
+   "path": "catalog/model/alibaba__wan.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:hosted-video-models",
+    "concept:cost"
+   ]
+  },
+  {
+   "id": "model:black-forest-labs/flux-3",
+   "kind": "model",
+   "label": "FLUX 3",
+   "path": "catalog/model/black-forest-labs__flux-3.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:hosted-video-models",
+    "concept:image-models",
+    "concept:cost"
+   ]
+  },
+  {
    "id": "model:black-forest-labs/flux-3-image-klein",
    "kind": "model",
    "label": "FLUX 3 Image Klein",
@@ -41,6 +81,33 @@
    ]
   },
   {
+   "id": "model:bytedance/seedance",
+   "kind": "model",
+   "label": "Dreamina Seedance 2.5",
+   "path": "catalog/model/bytedance__seedance.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:hosted-video-models",
+    "concept:cost",
+    "concept:consistency"
+   ]
+  },
+  {
+   "id": "model:bytedance/seedream",
+   "kind": "model",
+   "label": "Seedream 5.0",
+   "path": "catalog/model/bytedance__seedream.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:image-models",
+    "concept:cost"
+   ]
+  },
+  {
    "id": "model:google/gemini-omni-flash",
    "kind": "model",
    "label": "Gemini Omni Flash",
@@ -50,6 +117,19 @@
    "badge": "quoted-primary",
    "concepts": [
     "concept:hosted-video-models",
+    "concept:cost"
+   ]
+  },
+  {
+   "id": "model:google/nano-banana",
+   "kind": "model",
+   "label": "Nano Banana (Gemini image models)",
+   "path": "catalog/model/google__nano-banana.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:image-models",
     "concept:cost"
    ]
   },
@@ -78,6 +158,19 @@
    ]
   },
   {
+   "id": "model:heygen/heygen-video-1",
+   "kind": "model",
+   "label": "HeyGen Video 1",
+   "path": "catalog/model/heygen__heygen-video-1.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:hosted-video-models",
+    "concept:audio-and-captions"
+   ]
+  },
+  {
    "id": "model:lightricks/ltx-2",
    "kind": "model",
    "label": "LTX-2",
@@ -92,6 +185,19 @@
    ]
   },
   {
+   "id": "model:lumalabs/ray",
+   "kind": "model",
+   "label": "Luma Ray3.2",
+   "path": "catalog/model/lumalabs__ray.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:hosted-video-models",
+    "concept:cost"
+   ]
+  },
+  {
    "id": "model:minimaxai/minimax-h3",
    "kind": "model",
    "label": "MiniMax H3",
@@ -103,6 +209,19 @@
     "concept:local-video-models",
     "concept:hosted-video-models",
     "concept:licences-and-territory"
+   ]
+  },
+  {
+   "id": "model:openai/gpt-image",
+   "kind": "model",
+   "label": "GPT Image 2",
+   "path": "catalog/model/openai__gpt-image.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:image-models",
+    "concept:cost"
    ]
   },
   {
@@ -129,6 +248,34 @@
     "concept:image-models",
     "concept:still-images",
     "concept:licences-and-territory"
+   ]
+  },
+  {
+   "id": "model:runwayml/aleph",
+   "kind": "model",
+   "label": "Runway Aleph 2.0",
+   "path": "catalog/model/runwayml__aleph.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:hosted-video-models",
+    "concept:footage-editing",
+    "concept:cost"
+   ]
+  },
+  {
+   "id": "model:runwayml/gen-4.5",
+   "kind": "model",
+   "label": "Runway Gen-4.5",
+   "path": "catalog/model/runwayml__gen-4.5.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:hosted-video-models",
+    "concept:cost",
+    "concept:delivery"
    ]
   },
   {
@@ -168,6 +315,33 @@
    "concepts": [
     "concept:local-video-models",
     "concept:generated-footage"
+   ]
+  },
+  {
+   "id": "model:xai/grok-imagine",
+   "kind": "model",
+   "label": "Grok Imagine",
+   "path": "catalog/model/xai__grok-imagine.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:hosted-video-models",
+    "concept:image-models",
+    "concept:cost"
+   ]
+  },
+  {
+   "id": "source:artificialanalysis.ai/video/leaderboard/text-to-video",
+   "kind": "source",
+   "label": "Artificial Analysis Video Arena: text-to-video and image-to-video leaderboards",
+   "path": "catalog/source/artificialanalysis.ai__video__leaderboard__text-to-video.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:evaluation",
+    "concept:hosted-video-models"
    ]
   },
   {
@@ -815,6 +989,21 @@
    ]
   },
   {
+   "id": "tool:fal-ai/fal",
+   "kind": "tool",
+   "label": "fal Model APIs",
+   "path": "catalog/tool/fal-ai__fal.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-secondary",
+   "concepts": [
+    "concept:hosted-video-models",
+    "concept:image-models",
+    "concept:mcp-servers",
+    "concept:cost"
+   ]
+  },
+  {
    "id": "tool:ffmpeg/ffmpeg",
    "kind": "tool",
    "label": "FFmpeg",
@@ -1200,6 +1389,20 @@
    ]
   },
   {
+   "id": "tool:openrouter/video-generation",
+   "kind": "tool",
+   "label": "OpenRouter video generation API",
+   "path": "catalog/tool/openrouter__video-generation.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-secondary",
+   "concepts": [
+    "concept:hosted-video-models",
+    "concept:cost",
+    "concept:agent-skills"
+   ]
+  },
+  {
    "id": "tool:remotion-dev/remotion",
    "kind": "tool",
    "label": "Remotion",
@@ -1227,6 +1430,35 @@
     "concept:agent-skills",
     "concept:visual-design",
     "concept:agent-portability"
+   ]
+  },
+  {
+   "id": "tool:replicate/replicate",
+   "kind": "tool",
+   "label": "Replicate API and MCP server",
+   "path": "catalog/tool/replicate__replicate.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:mcp-servers",
+    "concept:hosted-video-models",
+    "concept:image-models"
+   ]
+  },
+  {
+   "id": "tool:runwayml/runway-api",
+   "kind": "tool",
+   "label": "Runway Dev API",
+   "path": "catalog/tool/runwayml__runway-api.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-secondary",
+   "concepts": [
+    "concept:hosted-video-models",
+    "concept:image-models",
+    "concept:mcp-servers",
+    "concept:cost"
    ]
   },
   {
@@ -1520,6 +1752,56 @@
    "rel": "about"
   },
   {
+   "source": "model:alibaba/happyhorse",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "model:alibaba/happyhorse",
+   "target": "concept:hosted-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:alibaba/happyhorse",
+   "target": "model:alibaba/wan",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "model:alibaba/wan",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "model:alibaba/wan",
+   "target": "concept:hosted-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:alibaba/wan",
+   "target": "source:artificialanalysis.ai/video/leaderboard/text-to-video",
+   "rel": "evaluated_on"
+  },
+  {
+   "source": "model:alibaba/wan",
+   "target": "tool:openrouter/video-generation",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "model:black-forest-labs/flux-3",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "model:black-forest-labs/flux-3",
+   "target": "concept:hosted-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:black-forest-labs/flux-3",
+   "target": "concept:image-models",
+   "rel": "about"
+  },
+  {
    "source": "model:black-forest-labs/flux-3-image-klein",
    "target": "concept:consistency",
    "rel": "about"
@@ -1575,6 +1857,41 @@
    "rel": "integrates_with"
   },
   {
+   "source": "model:bytedance/seedance",
+   "target": "concept:consistency",
+   "rel": "about"
+  },
+  {
+   "source": "model:bytedance/seedance",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "model:bytedance/seedance",
+   "target": "concept:hosted-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:bytedance/seedance",
+   "target": "source:artificialanalysis.ai/video/leaderboard/text-to-video",
+   "rel": "evaluated_on"
+  },
+  {
+   "source": "model:bytedance/seedance",
+   "target": "tool:runwayml/runway-api",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "model:bytedance/seedream",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "model:bytedance/seedream",
+   "target": "concept:image-models",
+   "rel": "about"
+  },
+  {
    "source": "model:google/gemini-omni-flash",
    "target": "concept:cost",
    "rel": "about"
@@ -1583,6 +1900,21 @@
    "source": "model:google/gemini-omni-flash",
    "target": "concept:hosted-video-models",
    "rel": "about"
+  },
+  {
+   "source": "model:google/nano-banana",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "model:google/nano-banana",
+   "target": "concept:image-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:google/nano-banana",
+   "target": "model:google/gemini-omni-flash",
+   "rel": "integrates_with"
   },
   {
    "source": "model:google/veo-3.1",
@@ -1598,6 +1930,26 @@
    "source": "model:hexgrad/kokoro",
    "target": "concept:audio-and-captions",
    "rel": "about"
+  },
+  {
+   "source": "model:heygen/heygen-video-1",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "model:heygen/heygen-video-1",
+   "target": "concept:hosted-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:heygen/heygen-video-1",
+   "target": "model:minimaxai/minimax-h3",
+   "rel": "extends"
+  },
+  {
+   "source": "model:heygen/heygen-video-1",
+   "target": "tool:openrouter/video-generation",
+   "rel": "integrates_with"
   },
   {
    "source": "model:lightricks/ltx-2",
@@ -1630,6 +1982,16 @@
    "rel": "integrates_with"
   },
   {
+   "source": "model:lumalabs/ray",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "model:lumalabs/ray",
+   "target": "concept:hosted-video-models",
+   "rel": "about"
+  },
+  {
    "source": "model:minimaxai/minimax-h3",
    "target": "concept:hosted-video-models",
    "rel": "about"
@@ -1642,6 +2004,16 @@
   {
    "source": "model:minimaxai/minimax-h3",
    "target": "concept:local-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:openai/gpt-image",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "model:openai/gpt-image",
+   "target": "concept:image-models",
    "rel": "about"
   },
   {
@@ -1673,6 +2045,51 @@
    "source": "model:qwen/qwen-image",
    "target": "tool:mflux-community/mflux",
    "rel": "integrates_with"
+  },
+  {
+   "source": "model:runwayml/aleph",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "model:runwayml/aleph",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "model:runwayml/aleph",
+   "target": "concept:hosted-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:runwayml/aleph",
+   "target": "model:runwayml/gen-4.5",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "model:runwayml/aleph",
+   "target": "tool:runwayml/runway-api",
+   "rel": "depends_on"
+  },
+  {
+   "source": "model:runwayml/gen-4.5",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "model:runwayml/gen-4.5",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "model:runwayml/gen-4.5",
+   "target": "concept:hosted-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:runwayml/gen-4.5",
+   "target": "tool:runwayml/runway-api",
+   "rel": "depends_on"
   },
   {
    "source": "model:tongyi-mai/z-image",
@@ -1738,6 +2155,46 @@
    "source": "model:wan-ai/wan2.2",
    "target": "tool:drawthings.ai",
    "rel": "integrates_with"
+  },
+  {
+   "source": "model:xai/grok-imagine",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "model:xai/grok-imagine",
+   "target": "concept:hosted-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:xai/grok-imagine",
+   "target": "concept:image-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:xai/grok-imagine",
+   "target": "tool:openrouter/video-generation",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:artificialanalysis.ai/video/leaderboard/text-to-video",
+   "target": "concept:evaluation",
+   "rel": "about"
+  },
+  {
+   "source": "source:artificialanalysis.ai/video/leaderboard/text-to-video",
+   "target": "concept:hosted-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "source:artificialanalysis.ai/video/leaderboard/text-to-video",
+   "target": "model:alibaba/wan",
+   "rel": "evaluated_on"
+  },
+  {
+   "source": "source:artificialanalysis.ai/video/leaderboard/text-to-video",
+   "target": "model:bytedance/seedance",
+   "rel": "evaluated_on"
   },
   {
    "source": "source:c2pa.org/faqs",
@@ -2670,6 +3127,31 @@
    "rel": "integrates_with"
   },
   {
+   "source": "tool:fal-ai/fal",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "tool:fal-ai/fal",
+   "target": "concept:hosted-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "tool:fal-ai/fal",
+   "target": "concept:image-models",
+   "rel": "about"
+  },
+  {
+   "source": "tool:fal-ai/fal",
+   "target": "concept:mcp-servers",
+   "rel": "about"
+  },
+  {
+   "source": "tool:fal-ai/fal",
+   "target": "model:minimaxai/minimax-h3",
+   "rel": "integrates_with"
+  },
+  {
    "source": "tool:ffmpeg/ffmpeg",
    "target": "concept:audio-and-captions",
    "rel": "about"
@@ -3310,6 +3792,36 @@
    "rel": "contradicts"
   },
   {
+   "source": "tool:openrouter/video-generation",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:openrouter/video-generation",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "tool:openrouter/video-generation",
+   "target": "concept:hosted-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "tool:openrouter/video-generation",
+   "target": "model:alibaba/wan",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:openrouter/video-generation",
+   "target": "model:bytedance/seedance",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:openrouter/video-generation",
+   "target": "model:heygen/heygen-video-1",
+   "rel": "integrates_with"
+  },
+  {
    "source": "tool:remotion-dev/remotion",
    "target": "concept:code-driven-video",
    "rel": "about"
@@ -3373,6 +3885,56 @@
    "source": "tool:remotion-dev/skills",
    "target": "tool:heygen-com/hyperframes",
    "rel": "alternative_to"
+  },
+  {
+   "source": "tool:replicate/replicate",
+   "target": "concept:hosted-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "tool:replicate/replicate",
+   "target": "concept:image-models",
+   "rel": "about"
+  },
+  {
+   "source": "tool:replicate/replicate",
+   "target": "concept:mcp-servers",
+   "rel": "about"
+  },
+  {
+   "source": "tool:runwayml/runway-api",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "tool:runwayml/runway-api",
+   "target": "concept:hosted-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "tool:runwayml/runway-api",
+   "target": "concept:image-models",
+   "rel": "about"
+  },
+  {
+   "source": "tool:runwayml/runway-api",
+   "target": "concept:mcp-servers",
+   "rel": "about"
+  },
+  {
+   "source": "tool:runwayml/runway-api",
+   "target": "model:google/veo-3.1",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:runwayml/runway-api",
+   "target": "model:runwayml/aleph",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:runwayml/runway-api",
+   "target": "model:runwayml/gen-4.5",
+   "rel": "integrates_with"
   },
   {
    "source": "tool:temporalio/temporal",

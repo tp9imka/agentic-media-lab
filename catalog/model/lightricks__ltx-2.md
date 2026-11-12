@@ -53,14 +53,29 @@ Free under the licence only while your organisation earns under $10M a year. The
 - Corroboration: single-source
 - Checked: 2026-11-12 by agent:kiro, depth primary-read. LTX-2 CHANGELOG, LICENSE-2_x and README against the claims
 - Next check due: 2026-12-12
-- Licence: unknown
+- Licence: Apache-2.0
 - URL status: live
 - Saved source sha256: `4ffa66289ae55b2e5b71463ff7f596d192c26af8d4bcc53e62c2d2080c630d35`
 - Lane: local-models
 
 ## Observed
 
-Nothing collected yet.
+Collected by `tools/enrich.py`, not typed by hand.
+
+- archived: false
+- created: 2026-01-03
+- default_branch: main
+- fetched_at: 2026-11-12
+- forks: 1623
+- installs: 11
+- installs_by_skill: {"train-model": 11}
+- last_activity: 2026-11-05
+- licence: Apache-2.0
+- open_issues: 37
+- registry: skills.sh
+- sources: https://api.github.com/repos/Lightricks/LTX-2, https://skills.sh/api/search?q=LTX-2
+- stars: 10201
+- Popularity: installs and stars differ by more than 100x
 
 ## Related
 

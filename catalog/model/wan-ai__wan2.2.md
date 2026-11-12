@@ -53,14 +53,23 @@ Wan's own card documents only NVIDIA GPUs (24 GB VRAM for the 5B command). The M
 - Corroboration: single-source
 - Checked: 2026-11-12 by agent:kiro, depth primary-read. Wan2.2-TI2V-5B model card and mlx-video README against the claims; LICENSE.txt read (Apache 2.0 text)
 - Next check due: 2026-12-12
-- Licence: unknown
+- Licence: apache-2.0
 - URL status: live
 - Saved source sha256: `15891244bc1534af1b818aaf977d28ea360be9b6bc8a4f1541ff2c1c4693c7eb`
 - Lane: local-models
 
 ## Observed
 
-Nothing collected yet.
+Collected by `tools/enrich.py`, not typed by hand.
+
+- created: 2025-07-18
+- fetched_at: 2026-11-12
+- gated: false
+- hf_downloads: 18923
+- hf_likes: 962
+- last_activity: 2025-08-07
+- licence: apache-2.0
+- sources: https://huggingface.co/api/models/Wan-AI/Wan2.2-TI2V-5B
 
 ## Related
 

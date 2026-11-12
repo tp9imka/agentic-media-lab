@@ -53,14 +53,25 @@ Needs ffmpeg. The default model is whisper-tiny, which is too weak for captions;
 - Corroboration: single-source
 - Checked: 2026-11-12 by agent:kiro, depth primary-read. mlx-examples whisper README against the three claims
 - Next check due: 2027-02-10
-- Licence: unknown
+- Licence: MIT
 - URL status: live
 - Saved source sha256: `f73e9067d444d7aa247199ea0ae13e5243426bf82469ba08036685e8a966fcdd`
 - Lane: local-models
 
 ## Observed
 
-Nothing collected yet.
+Collected by `tools/enrich.py`, not typed by hand.
+
+- archived: false
+- created: 2023-11-28
+- default_branch: main
+- fetched_at: 2026-11-12
+- forks: 1227
+- last_activity: 2026-04-06
+- licence: MIT
+- open_issues: 187
+- sources: https://api.github.com/repos/ml-explore/mlx-examples, https://skills.sh/api/search?q=mlx-examples
+- stars: 9063
 
 ## Related
 

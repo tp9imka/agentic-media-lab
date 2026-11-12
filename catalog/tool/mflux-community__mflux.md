@@ -53,14 +53,29 @@ Install with uv tool install --upgrade mflux; an agent then calls the mflux-gene
 - Corroboration: single-source
 - Checked: 2026-11-12 by agent:kiro, depth primary-read. mflux README (top level) against the three claims
 - Next check due: 2027-02-10
-- Licence: unknown
+- Licence: MIT
 - URL status: live
 - Saved source sha256: `d562e3cd4a12e5a6ae322da6354eed6633bc2621d05ca1c91c02da57461fbf7d`
 - Lane: local-models
 
 ## Observed
 
-Nothing collected yet.
+Collected by `tools/enrich.py`, not typed by hand.
+
+- archived: false
+- created: 2024-08-10
+- default_branch: main
+- fetched_at: 2026-11-12
+- forks: 209
+- installs: 1
+- installs_by_skill: {"mflux-dev-env": 1, "remediating-dependabot": 1}
+- last_activity: 2026-11-08
+- licence: MIT
+- open_issues: 9
+- registry: skills.sh
+- sources: https://api.github.com/repos/mflux-community/mflux, https://skills.sh/api/search?q=mflux
+- stars: 2598
+- Popularity: installs and stars differ by more than 100x
 
 ## Related
 

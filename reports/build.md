@@ -4,13 +4,13 @@ Built 2026-11-12 by `tools/build.py`.
 
 ## Counts
 
-- tool: 47
-- model: 13
-- source: 34
+- tool: 51
+- model: 25
+- source: 35
 - recipe: 0
 - concepts: 35
 - primary-read share: 1.0
-- Hub size: 367978 characters, about 91994 tokens (estimate, characters / 4).
+- Hub size: 430230 characters, about 107557 tokens (estimate, characters / 4).
 
 ## Validation
 
@@ -35,10 +35,12 @@ None.
 - `shorts`
 - `threads`
 
-## Popularity disagreements (4)
+## Popularity disagreements (6)
 
+- `model:lightricks/ltx-2`: stars 10201, installs 11
 - `tool:activepieces/activepieces`: stars 25490, installs 72
 - `tool:josiahsiegel/claude-plugin-marketplace`: stars 61, installs 8185
+- `tool:mflux-community/mflux`: stars 2598, installs 1
 - `tool:n8n-io/n8n`: stars 210255, installs 847
 - `tool:remotion-dev/skills`: stars 6888, installs 800255
 

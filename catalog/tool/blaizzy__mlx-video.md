@@ -53,14 +53,25 @@ Installs from git, not from a package index, so pin a commit. Wan weights must b
 - Corroboration: single-source
 - Checked: 2026-11-12 by agent:kiro, depth primary-read. mlx-video README against the three claims
 - Next check due: 2027-02-10
-- Licence: unknown
+- Licence: MIT
 - URL status: live
 - Saved source sha256: `56215953175bdf3852aede2d08e7dcee0958e229e4a2c64bb1c8a789b443edf3`
 - Lane: local-models
 
 ## Observed
 
-Nothing collected yet.
+Collected by `tools/enrich.py`, not typed by hand.
+
+- archived: false
+- created: 2025-05-07
+- default_branch: main
+- fetched_at: 2026-11-12
+- forks: 61
+- last_activity: 2026-05-13
+- licence: MIT
+- open_issues: 34
+- sources: https://api.github.com/repos/Blaizzy/mlx-video, https://skills.sh/api/search?q=mlx-video
+- stars: 324
 
 ## Related
 

@@ -53,14 +53,25 @@ On a Mac it runs on PyTorch MPS, and the README asks for a nightly PyTorch build
 - Corroboration: single-source
 - Checked: 2026-11-12 by agent:kiro, depth primary-read. ComfyUI README (Apple Mac silicon section) and comfy-cli README against the claims
 - Next check due: 2027-02-10
-- Licence: unknown
+- Licence: GPL-3.0
 - URL status: live
 - Saved source sha256: `6af0d57adb5acfde5884700af74dd8e7ebceb96fefb0ae44be6ec40f485c2963`
 - Lane: local-models
 
 ## Observed
 
-Nothing collected yet.
+Collected by `tools/enrich.py`, not typed by hand.
+
+- archived: false
+- created: 2023-01-17
+- default_branch: master
+- fetched_at: 2026-11-12
+- forks: 17446
+- last_activity: 2026-11-12
+- licence: GPL-3.0
+- open_issues: 5529
+- sources: https://api.github.com/repos/Comfy-Org/ComfyUI, https://skills.sh/api/search?q=ComfyUI
+- stars: 146436
 
 ## Related
 

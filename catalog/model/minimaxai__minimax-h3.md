@@ -71,7 +71,9 @@ None.
 
 ## Referenced by
 
+- [HeyGen Video 1](heygen__heygen-video-1.md) (extends)
 - [Draw Things](../tool/drawthings.ai.md) (integrates_with)
+- [fal Model APIs](../tool/fal-ai__fal.md) (integrates_with)
 
 ## Status
 

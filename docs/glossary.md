@@ -71,7 +71,7 @@ Scope: Instruction packs in the Agent Skills format that an agent loads on deman
 
 Broader: [Agent surface](glossary.md#agent-surface)
 
-Records (13): [Remotion's Model Context Protocol (shut down)](../catalog/source/remotion.dev__docs__ai__mcp.md), [video-use](../catalog/tool/browser-use__video-use.md), [generative-media-skills](../catalog/tool/calesthio__generative-media-skills.md), [marketingskills (video, product-demo-recording)](../catalog/tool/coreyhaines31__marketingskills.md), [claude-code-video-toolkit](../catalog/tool/digitalsamba__claude-code-video-toolkit.md), [fframes](../catalog/tool/dmtrkovalenko__fframes.md), [claude-remotion-skill](../catalog/tool/haidrrrry__claude-remotion-skill.md), [HyperFrames](../catalog/tool/heygen-com__hyperframes.md), [motion-skills (iArt)](../catalog/tool/iart-ai__motion-skills.md), [motion-design skill (LottieFiles)](../catalog/tool/lottiefiles__motion-design-skill.md), and 3 more in the [catalog](../catalog/README.md)
+Records (14): [Remotion's Model Context Protocol (shut down)](../catalog/source/remotion.dev__docs__ai__mcp.md), [video-use](../catalog/tool/browser-use__video-use.md), [generative-media-skills](../catalog/tool/calesthio__generative-media-skills.md), [marketingskills (video, product-demo-recording)](../catalog/tool/coreyhaines31__marketingskills.md), [claude-code-video-toolkit](../catalog/tool/digitalsamba__claude-code-video-toolkit.md), [fframes](../catalog/tool/dmtrkovalenko__fframes.md), [claude-remotion-skill](../catalog/tool/haidrrrry__claude-remotion-skill.md), [HyperFrames](../catalog/tool/heygen-com__hyperframes.md), [motion-skills (iArt)](../catalog/tool/iart-ai__motion-skills.md), [motion-design skill (LottieFiles)](../catalog/tool/lottiefiles__motion-design-skill.md), and 4 more in the [catalog](../catalog/README.md)
 
 ## <a id="agent-surface"></a>Agent surface
 
@@ -103,7 +103,7 @@ Scope: Narration, music, effects, their mix, and on-screen text timed to speech.
 
 Broader: [Craft](glossary.md#craft)
 
-Records (15): [ACE-Step 1.5](../catalog/model/ace-step__ace-step.md), [Kokoro-82M](../catalog/model/hexgrad__kokoro.md), [video-use](../catalog/tool/browser-use__video-use.md), [generative-media-skills](../catalog/tool/calesthio__generative-media-skills.md), [marketingskills (video, product-demo-recording)](../catalog/tool/coreyhaines31__marketingskills.md), [remotion-superpowers](../catalog/tool/dojocodinglabs__remotion-superpowers.md), [FFmpeg](../catalog/tool/ffmpeg__ffmpeg.md), [whisper.cpp](../catalog/tool/ggml-org__whisper.cpp.md), [claude-plugin-marketplace (ffmpeg-kinetic-captions)](../catalog/tool/josiahsiegel__claude-plugin-marketplace.md), [Revideo](../catalog/tool/midrender__revideo.md), and 5 more in the [catalog](../catalog/README.md)
+Records (16): [ACE-Step 1.5](../catalog/model/ace-step__ace-step.md), [Kokoro-82M](../catalog/model/hexgrad__kokoro.md), [HeyGen Video 1](../catalog/model/heygen__heygen-video-1.md), [video-use](../catalog/tool/browser-use__video-use.md), [generative-media-skills](../catalog/tool/calesthio__generative-media-skills.md), [marketingskills (video, product-demo-recording)](../catalog/tool/coreyhaines31__marketingskills.md), [remotion-superpowers](../catalog/tool/dojocodinglabs__remotion-superpowers.md), [FFmpeg](../catalog/tool/ffmpeg__ffmpeg.md), [whisper.cpp](../catalog/tool/ggml-org__whisper.cpp.md), [claude-plugin-marketplace (ffmpeg-kinetic-captions)](../catalog/tool/josiahsiegel__claude-plugin-marketplace.md), and 6 more in the [catalog](../catalog/README.md)
 
 ## <a id="automation"></a>Automation
 
@@ -135,7 +135,7 @@ Scope: Keeping characters, style and world stable across shots and scenes.
 
 Broader: [Craft](glossary.md#craft)
 
-Records (5): [FLUX 3 Image Klein](../catalog/model/black-forest-labs__flux-3-image-klein.md), [HyperFrames vs Remotion research note (GenMotion)](../catalog/source/github.com__haxzie__genmotion__blob__main__docs__research__hyperframes-remotion.md.md), [Kinetograph](../catalog/tool/0xs4n4tg__kinetograph.md), [generative-media-skills](../catalog/tool/calesthio__generative-media-skills.md), [claude-code-video-toolkit](../catalog/tool/digitalsamba__claude-code-video-toolkit.md)
+Records (6): [FLUX 3 Image Klein](../catalog/model/black-forest-labs__flux-3-image-klein.md), [Dreamina Seedance 2.5](../catalog/model/bytedance__seedance.md), [HyperFrames vs Remotion research note (GenMotion)](../catalog/source/github.com__haxzie__genmotion__blob__main__docs__research__hyperframes-remotion.md.md), [Kinetograph](../catalog/tool/0xs4n4tg__kinetograph.md), [generative-media-skills](../catalog/tool/calesthio__generative-media-skills.md), [claude-code-video-toolkit](../catalog/tool/digitalsamba__claude-code-video-toolkit.md)
 
 ## <a id="cost"></a>Cost
 
@@ -147,7 +147,7 @@ Scope: What a clip or image costs to produce on each route.
 
 Broader: [Models](glossary.md#models)
 
-Records (2): [Gemini Omni Flash](../catalog/model/google__gemini-omni-flash.md), [X API pay-per-usage pricing](../catalog/source/docs.x.com__x-api__getting-started__pricing.md)
+Records (16): [HappyHorse](../catalog/model/alibaba__happyhorse.md), [Wan 3.0](../catalog/model/alibaba__wan.md), [FLUX 3](../catalog/model/black-forest-labs__flux-3.md), [Dreamina Seedance 2.5](../catalog/model/bytedance__seedance.md), [Seedream 5.0](../catalog/model/bytedance__seedream.md), [Gemini Omni Flash](../catalog/model/google__gemini-omni-flash.md), [Nano Banana (Gemini image models)](../catalog/model/google__nano-banana.md), [Luma Ray3.2](../catalog/model/lumalabs__ray.md), [GPT Image 2](../catalog/model/openai__gpt-image.md), [Runway Aleph 2.0](../catalog/model/runwayml__aleph.md), and 6 more in the [catalog](../catalog/README.md)
 
 ## <a id="craft"></a>Craft
 
@@ -167,7 +167,7 @@ Scope: Getting the finished file into the format a platform or client accepts.
 
 Broader: [Craft](glossary.md#craft)
 
-Records (13): [SeedVR2](../catalog/model/bytedance-seed__seedvr.md), [C2PA FAQs (Content Credentials)](../catalog/source/c2pa.org__faqs.md), [Instagram Platform - Content Publishing (with Reels specs)](../catalog/source/developers.facebook.com__docs__instagram-platform__content-publishing.md), [Facebook Video API - Reels Publishing guide](../catalog/source/developers.facebook.com__docs__video-api__guides__reels-publishing.md), [TikTok Content Posting API - Media Transfer Guide](../catalog/source/developers.tiktok.com__doc__content-posting-api-media-transfer-guide.md), [Mastodon docs - Posting (attachments) and Instance media configuration](../catalog/source/docs.joinmastodon.org__user__posting.md), [X API - chunked media upload quickstart](../catalog/source/docs.x.com__x-api__media__quickstart__media-upload-chunked.md), [YouTube Help - Disclosing use of GenAI content](../catalog/source/support.google.com__youtube__answer__14328491.md), [YouTube Help - Understand three-minute YouTube Shorts](../catalog/source/support.google.com__youtube__answer__15424877.md), [generative-media-skills](../catalog/tool/calesthio__generative-media-skills.md), and 3 more in the [catalog](../catalog/README.md)
+Records (14): [SeedVR2](../catalog/model/bytedance-seed__seedvr.md), [Runway Gen-4.5](../catalog/model/runwayml__gen-4.5.md), [C2PA FAQs (Content Credentials)](../catalog/source/c2pa.org__faqs.md), [Instagram Platform - Content Publishing (with Reels specs)](../catalog/source/developers.facebook.com__docs__instagram-platform__content-publishing.md), [Facebook Video API - Reels Publishing guide](../catalog/source/developers.facebook.com__docs__video-api__guides__reels-publishing.md), [TikTok Content Posting API - Media Transfer Guide](../catalog/source/developers.tiktok.com__doc__content-posting-api-media-transfer-guide.md), [Mastodon docs - Posting (attachments) and Instance media configuration](../catalog/source/docs.joinmastodon.org__user__posting.md), [X API - chunked media upload quickstart](../catalog/source/docs.x.com__x-api__media__quickstart__media-upload-chunked.md), [YouTube Help - Disclosing use of GenAI content](../catalog/source/support.google.com__youtube__answer__14328491.md), [YouTube Help - Understand three-minute YouTube Shorts](../catalog/source/support.google.com__youtube__answer__15424877.md), and 4 more in the [catalog](../catalog/README.md)
 
 ## <a id="evaluation"></a>Evaluation
 
@@ -179,7 +179,7 @@ Scope: How video and image quality, and whole pipelines, are measured.
 
 Broader: [Pipelines](glossary.md#pipelines)
 
-Records (1): [HyperFrames vs Remotion (HeyGen guide)](../catalog/source/hyperframes.heygen.com__guides__hyperframes-vs-remotion.md)
+Records (2): [Artificial Analysis Video Arena: text-to-video and image-to-video leaderboards](../catalog/source/artificialanalysis.ai__video__leaderboard__text-to-video.md), [HyperFrames vs Remotion (HeyGen guide)](../catalog/source/hyperframes.heygen.com__guides__hyperframes-vs-remotion.md)
 
 ## <a id="feedback-loop"></a>Feedback loop
 
@@ -203,7 +203,7 @@ Scope: Cutting, arranging and finishing footage that already exists.
 
 Broader: [Making](glossary.md#making)
 
-Records (5): [video-use](../catalog/tool/browser-use__video-use.md), [marketingskills (video, product-demo-recording)](../catalog/tool/coreyhaines31__marketingskills.md), [ffmpeg-skill](../catalog/tool/kajisho5__ffmpeg-skill.md), [editly](../catalog/tool/mifi__editly.md), [MoviePy](../catalog/tool/zulko__moviepy.md)
+Records (6): [Runway Aleph 2.0](../catalog/model/runwayml__aleph.md), [video-use](../catalog/tool/browser-use__video-use.md), [marketingskills (video, product-demo-recording)](../catalog/tool/coreyhaines31__marketingskills.md), [ffmpeg-skill](../catalog/tool/kajisho5__ffmpeg-skill.md), [editly](../catalog/tool/mifi__editly.md), [MoviePy](../catalog/tool/zulko__moviepy.md)
 
 ## <a id="generated-footage"></a>Generated footage
 
@@ -227,7 +227,7 @@ Scope: Video generation models reached through a paid API.
 
 Broader: [Models](glossary.md#models)
 
-Records (4): [Gemini Omni Flash](../catalog/model/google__gemini-omni-flash.md), [Veo 3.1](../catalog/model/google__veo-3.1.md), [MiniMax H3](../catalog/model/minimaxai__minimax-h3.md), [Sora 2](../catalog/model/openai__sora-2.md)
+Records (18): [HappyHorse](../catalog/model/alibaba__happyhorse.md), [Wan 3.0](../catalog/model/alibaba__wan.md), [FLUX 3](../catalog/model/black-forest-labs__flux-3.md), [Dreamina Seedance 2.5](../catalog/model/bytedance__seedance.md), [Gemini Omni Flash](../catalog/model/google__gemini-omni-flash.md), [Veo 3.1](../catalog/model/google__veo-3.1.md), [HeyGen Video 1](../catalog/model/heygen__heygen-video-1.md), [Luma Ray3.2](../catalog/model/lumalabs__ray.md), [MiniMax H3](../catalog/model/minimaxai__minimax-h3.md), [Sora 2](../catalog/model/openai__sora-2.md), and 8 more in the [catalog](../catalog/README.md)
 
 ## <a id="image-models"></a>Image models
 
@@ -239,7 +239,7 @@ Scope: Image generation and editing models, hosted and local.
 
 Broader: [Models](glossary.md#models)
 
-Records (6): [FLUX 3 Image Klein](../catalog/model/black-forest-labs__flux-3-image-klein.md), [Qwen-Image](../catalog/model/qwen__qwen-image.md), [Z-Image](../catalog/model/tongyi-mai__z-image.md), [ComfyUI](../catalog/tool/comfy-org__comfyui.md), [Draw Things](../catalog/tool/drawthings.ai.md), [MFLUX](../catalog/tool/mflux-community__mflux.md)
+Records (14): [FLUX 3](../catalog/model/black-forest-labs__flux-3.md), [FLUX 3 Image Klein](../catalog/model/black-forest-labs__flux-3-image-klein.md), [Seedream 5.0](../catalog/model/bytedance__seedream.md), [Nano Banana (Gemini image models)](../catalog/model/google__nano-banana.md), [GPT Image 2](../catalog/model/openai__gpt-image.md), [Qwen-Image](../catalog/model/qwen__qwen-image.md), [Z-Image](../catalog/model/tongyi-mai__z-image.md), [Grok Imagine](../catalog/model/xai__grok-imagine.md), [ComfyUI](../catalog/tool/comfy-org__comfyui.md), [Draw Things](../catalog/tool/drawthings.ai.md), and 4 more in the [catalog](../catalog/README.md)
 
 ## <a id="licences-and-territory"></a>Licences and territory
 
@@ -283,7 +283,7 @@ Scope: Tool servers an agent calls over the Model Context Protocol.
 
 Broader: [Agent surface](glossary.md#agent-surface)
 
-Records (3): [Remotion's Model Context Protocol (shut down)](../catalog/source/remotion.dev__docs__ai__mcp.md), [MCP for Blender](../catalog/tool/ahujasid__mcp-for-blender.md), [claude-video-vision](../catalog/tool/jordanrendric__claude-video-vision.md)
+Records (6): [Remotion's Model Context Protocol (shut down)](../catalog/source/remotion.dev__docs__ai__mcp.md), [MCP for Blender](../catalog/tool/ahujasid__mcp-for-blender.md), [fal Model APIs](../catalog/tool/fal-ai__fal.md), [claude-video-vision](../catalog/tool/jordanrendric__claude-video-vision.md), [Replicate API and MCP server](../catalog/tool/replicate__replicate.md), [Runway Dev API](../catalog/tool/runwayml__runway-api.md)
 
 ## <a id="model-prompting"></a>Model prompting
 
