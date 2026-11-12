@@ -388,6 +388,21 @@
     ],
     "stars": 34103
   },
+  "tool:aoike123/blender-vse": {
+    "archived": false,
+    "created": "2026-09-03",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 0,
+    "last_activity": "2026-10-27",
+    "licence": "MIT",
+    "open_issues": 0,
+    "sources": [
+      "https://api.github.com/repos/Aoike123/blender-vse",
+      "https://skills.sh/api/search?q=blender-vse"
+    ],
+    "stars": 4
+  },
   "tool:bbc/ttml-validator": {
     "archived": false,
     "created": "2024-12-13",
@@ -454,6 +469,21 @@
     ],
     "stars": 30930
   },
+  "tool:btahir/reelbird": {
+    "archived": false,
+    "created": "2026-10-13",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 7,
+    "last_activity": "2026-11-10",
+    "licence": "MIT",
+    "open_issues": 0,
+    "sources": [
+      "https://api.github.com/repos/btahir/reelbird",
+      "https://skills.sh/api/search?q=reelbird"
+    ],
+    "stars": 49
+  },
   "tool:calesthio/generative-media-skills": {
     "archived": false,
     "created": "2026-07-11",
@@ -483,6 +513,34 @@
     ],
     "stars": 242
   },
+  "tool:chatcut-inc/agent-plugin": {
+    "archived": false,
+    "created": "2026-06-25",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 84,
+    "installs": 170,
+    "installs_by_skill": {
+      "asset-import": 170,
+      "create-motion-graphics": 167,
+      "export": 165,
+      "product-help": 157,
+      "talking-head-guide": 168,
+      "transcription": 159,
+      "verification": 163,
+      "video-gen": 159,
+      "voice": 157
+    },
+    "last_activity": "2026-11-12",
+    "licence": "Apache-2.0",
+    "open_issues": 12,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/ChatCut-Inc/agent-plugin",
+      "https://skills.sh/api/search?q=agent-plugin"
+    ],
+    "stars": 1030
+  },
   "tool:comfy-org/comfyui": {
     "archived": false,
     "created": "2023-01-17",
@@ -497,6 +555,23 @@
       "https://skills.sh/api/search?q=ComfyUI"
     ],
     "stars": 146436
+  },
+  "tool:connerkward/screenstudio-alternative-skill": {
+    "archived": false,
+    "created": "2026-06-11",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 1,
+    "last_activity": "2026-06-23",
+    "licence": "MIT",
+    "moved_to": "connerkward/screenstudio-alt-skill",
+    "open_issues": 0,
+    "sources": [
+      "https://api.github.com/repos/connerkward/screenstudio-alternative-skill",
+      "https://api.github.com/repositories/1266648955",
+      "https://skills.sh/api/search?q=screenstudio-alternative-skill"
+    ],
+    "stars": 11
   },
   "tool:coreyhaines31/marketingskills": {
     "archived": false,
@@ -650,6 +725,21 @@
     ],
     "stars": 1
   },
+  "tool:garylab/pexels-mcp-server": {
+    "archived": false,
+    "created": "2025-08-18",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 3,
+    "last_activity": "2025-11-02",
+    "licence": "unknown",
+    "open_issues": 2,
+    "sources": [
+      "https://api.github.com/repos/garylab/pexels-mcp-server",
+      "https://skills.sh/api/search?q=pexels-mcp-server"
+    ],
+    "stars": 30
+  },
   "tool:get-bb/bb": {
     "archived": false,
     "created": "2026-02-24",
@@ -710,6 +800,26 @@
     ],
     "stars": 30504
   },
+  "tool:griffinwooldridge/talking-head-editor": {
+    "archived": false,
+    "created": "2026-10-08",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 1,
+    "installs": 6,
+    "installs_by_skill": {
+      "talking-head-editor": 6
+    },
+    "last_activity": "2026-10-27",
+    "licence": "unknown",
+    "open_issues": 0,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/griffinwooldridge/talking-head-editor",
+      "https://skills.sh/api/search?q=talking-head-editor"
+    ],
+    "stars": 10
+  },
   "tool:haidrrrry/claude-remotion-skill": {
     "archived": false,
     "created": "2026-06-13",
@@ -749,6 +859,27 @@
       "https://skills.sh/api/search?q=MoneyPrinterTurbo"
     ],
     "stars": 142725
+  },
+  "tool:hetpatel-11/adobe_premiere_pro_mcp": {
+    "archived": false,
+    "created": "2025-07-07",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 158,
+    "installs": 1001,
+    "installs_by_skill": {
+      "edit-premiere-project": 40,
+      "premiere-pro-mcp": 1001
+    },
+    "last_activity": "2026-11-02",
+    "licence": "MIT",
+    "open_issues": 24,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/hetpatel-11/Adobe_Premiere_Pro_MCP",
+      "https://skills.sh/api/search?q=Adobe_Premiere_Pro_MCP"
+    ],
+    "stars": 857
   },
   "tool:heygen-com/hyperframes": {
     "archived": false,
@@ -922,6 +1053,36 @@
     ],
     "stars": 2966
   },
+  "tool:m-bain/whisperx": {
+    "archived": false,
+    "created": "2022-12-09",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 2545,
+    "last_activity": "2026-10-22",
+    "licence": "BSD-2-Clause",
+    "open_issues": 220,
+    "sources": [
+      "https://api.github.com/repos/m-bain/whisperX",
+      "https://skills.sh/api/search?q=whisperX"
+    ],
+    "stars": 25228
+  },
+  "tool:makemyclip/editor": {
+    "archived": false,
+    "created": "2026-05-26",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 3,
+    "last_activity": "2026-11-07",
+    "licence": "MIT",
+    "open_issues": 0,
+    "sources": [
+      "https://api.github.com/repos/MakeMyClip/editor",
+      "https://skills.sh/api/search?q=editor"
+    ],
+    "stars": 8
+  },
   "tool:manimcommunity/manim": {
     "archived": false,
     "created": "2020-05-19",
@@ -1002,6 +1163,21 @@
       "https://skills.sh/api/search?q=editly"
     ],
     "stars": 5607
+  },
+  "tool:misbahsy/video-audio-mcp": {
+    "archived": false,
+    "created": "2025-05-24",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 15,
+    "last_activity": "2025-05-24",
+    "licence": "MIT",
+    "open_issues": 3,
+    "sources": [
+      "https://api.github.com/repos/misbahsy/video-audio-mcp",
+      "https://skills.sh/api/search?q=video-audio-mcp"
+    ],
+    "stars": 90
   },
   "tool:ml-explore/mlx-examples/whisper": {
     "archived": false,
@@ -1199,6 +1375,21 @@
     ],
     "stars": 79811
   },
+  "tool:relo-video/synthcut": {
+    "archived": false,
+    "created": "2026-07-03",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 10,
+    "last_activity": "2026-07-21",
+    "licence": "GPL-3.0",
+    "open_issues": 15,
+    "sources": [
+      "https://api.github.com/repos/Relo-video/SynthCut",
+      "https://skills.sh/api/search?q=SynthCut"
+    ],
+    "stars": 47
+  },
   "tool:remotion-dev/remotion": {
     "archived": false,
     "created": "2020-06-23",
@@ -1248,6 +1439,35 @@
     ],
     "stars": 6888
   },
+  "tool:samuelgursky/davinci-resolve-mcp": {
+    "archived": false,
+    "created": "2025-03-18",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 473,
+    "installs": 56,
+    "installs_by_skill": {
+      "resolve-audio": 48,
+      "resolve-color": 55,
+      "resolve-delivery": 44,
+      "resolve-edit": 47,
+      "resolve-fusion": 46,
+      "resolve-mcp": 56,
+      "resolve-media-analysis": 48,
+      "resolve-media-pool": 39,
+      "resolve-rough-cut": 44,
+      "resolve-session": 41
+    },
+    "last_activity": "2026-11-11",
+    "licence": "MIT",
+    "open_issues": 10,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/samuelgursky/davinci-resolve-mcp",
+      "https://skills.sh/api/search?q=davinci-resolve-mcp"
+    ],
+    "stars": 4061
+  },
   "tool:seme-org/open-director": {
     "archived": false,
     "created": "2026-05-03",
@@ -1277,6 +1497,26 @@
       "https://skills.sh/api/search?q=Code2Video"
     ],
     "stars": 2370
+  },
+  "tool:sun-guannan/vectcutapi": {
+    "archived": false,
+    "created": "2025-07-11",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 498,
+    "installs": 6,
+    "installs_by_skill": {
+      "capcut-director": 6
+    },
+    "last_activity": "2026-11-07",
+    "licence": "Apache-2.0",
+    "open_issues": 7,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/sun-guannan/VectCutAPI",
+      "https://skills.sh/api/search?q=VectCutAPI"
+    ],
+    "stars": 2374
   },
   "tool:temporalio/temporal": {
     "archived": false,
@@ -1369,6 +1609,30 @@
       "https://skills.sh/api/search?q=windmill"
     ],
     "stars": 18545
+  },
+  "tool:wyattblue/auto-editor": {
+    "archived": false,
+    "created": "2020-04-30",
+    "default_branch": "master",
+    "fetched_at": "2026-11-12",
+    "forks": 726,
+    "installs": 1211,
+    "installs_by_skill": {
+      "auto-editor": 1211,
+      "auto-editor-effects": 984,
+      "auto-editor-export": 1086,
+      "auto-editor-transcribe": 1052,
+      "auto-editor-transitions": 213
+    },
+    "last_activity": "2026-11-12",
+    "licence": "Unlicense",
+    "open_issues": 0,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/WyattBlue/auto-editor",
+      "https://skills.sh/api/search?q=auto-editor"
+    ],
+    "stars": 5856
   },
   "tool:zulko/moviepy": {
     "archived": false,
