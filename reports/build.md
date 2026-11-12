@@ -4,13 +4,13 @@ Built 2026-11-12 by `tools/build.py`.
 
 ## Counts
 
-- tool: 90
-- model: 29
-- source: 75
+- tool: 92
+- model: 30
+- source: 83
 - recipe: 0
 - concepts: 35
-- primary-read share: 0.979
-- Hub size: 842374 characters, about 210593 tokens (estimate, characters / 4).
+- primary-read share: 0.98
+- Hub size: 889420 characters, about 222355 tokens (estimate, characters / 4).
 
 ## Validation
 
@@ -20,18 +20,23 @@ dangling: 0 bad concepts: 0 invalid: 0
 
 None.
 
-## Tags used once (75)
+## Tags used once (86)
 
 - `accessibility`
 - `analytics`
 - `apple-silicon`
+- `async-jobs`
 - `attribution`
+- `audio-check`
 - `automation`
 - `awesome-list`
 - `banding`
 - `best-of-k`
 - `bluesky`
+- `clip-length`
 - `cloned-skills`
+- `codex`
+- `comparison`
 - `contrast`
 - `cps`
 - `creative-commons`
@@ -48,9 +53,9 @@ None.
 - `film-roles`
 - `final-cut-pro`
 - `flashing`
-- `fonts`
 - `frame-anchoring`
 - `generative-art`
+- `gguf`
 - `h264`
 - `hosted`
 - `instagram`
@@ -59,17 +64,22 @@ None.
 - `layout-check`
 - `licence-change`
 - `linkedin`
+- `macos`
 - `mastodon`
 - `mcp`
 - `meta`
+- `minimax-h3`
 - `mlx`
 - `monetisation`
+- `motion-skill`
 - `non-commercial`
+- `postiz`
+- `provenance-log`
 - `quality-metric`
+- `quantized`
 - `quota`
 - `reels`
 - `regeneration`
-- `remotion`
 - `render-check`
 - `retention`
 - `safe-crop`
@@ -80,6 +90,7 @@ None.
 - `shot-scheduling`
 - `silence-removal`
 - `skill-invocation`
+- `skill-routing`
 - `skills-sh`
 - `stability`
 - `stock-footage`

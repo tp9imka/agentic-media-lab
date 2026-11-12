@@ -347,6 +347,20 @@
    ]
   },
   {
+   "id": "model:video-rebirth/hyperflow",
+   "kind": "model",
+   "label": "HyperFlow H3 Flash (Video Rebirth)",
+   "path": "catalog/model/video-rebirth__hyperflow.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:local-video-models",
+    "concept:licences-and-territory",
+    "concept:generated-footage"
+   ]
+  },
+  {
    "id": "model:vimoo-ai/vimoo-1.0",
    "kind": "model",
    "label": "Vimoo 1.0",
@@ -997,6 +1011,20 @@
    ]
   },
   {
+   "id": "source:github.com/gitroomhq/postiz-app/pull/2418",
+   "kind": "source",
+   "label": "Postiz PR 2418: TikTok inbox uploads marked published that never arrive",
+   "path": "catalog/source/github.com__gitroomhq__postiz-app__pull__2418.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-secondary",
+   "concepts": [
+    "concept:publishing",
+    "concept:platform-rules",
+    "concept:automation"
+   ]
+  },
+  {
    "id": "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
    "kind": "source",
    "label": "HyperFrames vs Remotion research note (GenMotion)",
@@ -1047,6 +1075,48 @@
    "badge": "quoted-primary",
    "concepts": [
     "concept:motion-and-transitions"
+   ]
+  },
+  {
+   "id": "source:github.com/openai/codex/issues/60616",
+   "kind": "source",
+   "label": "Codex issue 60616: async video task ended with no file and no check",
+   "path": "catalog/source/github.com__openai__codex__issues__60616.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-secondary",
+   "concepts": [
+    "concept:review-loop",
+    "concept:feedback-loop",
+    "concept:hosted-video-models"
+   ]
+  },
+  {
+   "id": "source:github.com/remotion-dev/remotion/issues/12922",
+   "kind": "source",
+   "label": "Remotion issue 12922: the skill asks agents to check audio they cannot hear",
+   "path": "catalog/source/github.com__remotion-dev__remotion__issues__12922.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-secondary",
+   "concepts": [
+    "concept:agent-skills",
+    "concept:audio-and-captions",
+    "concept:review-loop"
+   ]
+  },
+  {
+   "id": "source:github.com/remotion-dev/remotion/pull/13133",
+   "kind": "source",
+   "label": "Remotion PR 13133: agents skipped the interactivity skill",
+   "path": "catalog/source/github.com__remotion-dev__remotion__pull__13133.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-secondary",
+   "concepts": [
+    "concept:agent-skills",
+    "concept:plugins",
+    "concept:code-driven-video"
    ]
   },
   {
@@ -1154,6 +1224,33 @@
    "concepts": [
     "concept:publishing",
     "concept:platform-rules"
+   ]
+  },
+  {
+   "id": "source:news.ycombinator.com/item/50369261",
+   "kind": "source",
+   "label": "HN comment: Remotion for render infrastructure, HyperFrames 'vibe-coded'",
+   "path": "catalog/source/news.ycombinator.com__item__50369261.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-secondary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:delivery"
+   ]
+  },
+  {
+   "id": "source:news.ycombinator.com/item/50396852",
+   "kind": "source",
+   "label": "HN comment: keep generated clips 5-8 s and log model, host and defaults",
+   "path": "catalog/source/news.ycombinator.com__item__50396852.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-secondary",
+   "concepts": [
+    "concept:generated-footage",
+    "concept:consistency",
+    "concept:story-and-decomposition"
    ]
   },
   {
@@ -1390,6 +1487,34 @@
    ]
   },
   {
+   "id": "source:youtu.be/d5qpbbewtxo",
+   "kind": "source",
+   "label": "How I Make $880/Day with AI Motion Design (Sanji Nai-Chien, video)",
+   "path": "catalog/source/youtu.be__d5qpbbewtxo.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-secondary",
+   "concepts": [
+    "concept:motion-and-transitions",
+    "concept:story-and-decomposition",
+    "concept:visual-design"
+   ]
+  },
+  {
+   "id": "source:youtu.be/fvvrcpcfjyk",
+   "kind": "source",
+   "label": "I Quit Remotion After Claude Made These Motion Graphics (Guney Topcu, video)",
+   "path": "catalog/source/youtu.be__fvvrcpcfjyk.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-secondary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:motion-and-transitions",
+    "concept:evaluation"
+   ]
+  },
+  {
    "id": "tool:0xs4n4tg/kinetograph",
    "kind": "tool",
    "label": "Kinetograph",
@@ -1556,6 +1681,20 @@
     "concept:local-video-models",
     "concept:generated-footage",
     "concept:scheduling-and-runtimes"
+   ]
+  },
+  {
+   "id": "tool:blazejkustra/uncut",
+   "kind": "tool",
+   "label": "Uncut",
+   "path": "catalog/tool/blazejkustra__uncut.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:review-loop",
+    "concept:mcp-servers"
    ]
   },
   {
@@ -2120,6 +2259,21 @@
    "concepts": [
     "concept:agent-skills",
     "concept:still-images",
+    "concept:cost"
+   ]
+  },
+  {
+   "id": "tool:kino.ai",
+   "kind": "tool",
+   "label": "Kino",
+   "path": "catalog/tool/kino.ai.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:code-driven-video",
+    "concept:mcp-servers",
     "concept:cost"
    ]
   },
@@ -3357,6 +3511,26 @@
    "rel": "integrates_with"
   },
   {
+   "source": "model:video-rebirth/hyperflow",
+   "target": "concept:generated-footage",
+   "rel": "about"
+  },
+  {
+   "source": "model:video-rebirth/hyperflow",
+   "target": "concept:licences-and-territory",
+   "rel": "about"
+  },
+  {
+   "source": "model:video-rebirth/hyperflow",
+   "target": "concept:local-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:video-rebirth/hyperflow",
+   "target": "model:minimaxai/minimax-h3",
+   "rel": "extends"
+  },
+  {
    "source": "model:vimoo-ai/vimoo-1.0",
    "target": "concept:generated-footage",
    "rel": "about"
@@ -4237,6 +4411,31 @@
    "rel": "extends"
   },
   {
+   "source": "source:github.com/gitroomhq/postiz-app/pull/2418",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/gitroomhq/postiz-app/pull/2418",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/gitroomhq/postiz-app/pull/2418",
+   "target": "concept:publishing",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/gitroomhq/postiz-app/pull/2418",
+   "target": "source:developers.tiktok.com/doc/content-sharing-guidelines",
+   "rel": "extends"
+  },
+  {
+   "source": "source:github.com/gitroomhq/postiz-app/pull/2418",
+   "target": "tool:gitroomhq/postiz-app",
+   "rel": "evaluated_on"
+  },
+  {
    "source": "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
    "target": "concept:code-driven-video",
    "rel": "about"
@@ -4315,6 +4514,76 @@
    "source": "source:github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss",
    "target": "source:carbondesignsystem.com/elements/motion/overview",
    "rel": "alternative_to"
+  },
+  {
+   "source": "source:github.com/openai/codex/issues/60616",
+   "target": "concept:feedback-loop",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/openai/codex/issues/60616",
+   "target": "concept:hosted-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/openai/codex/issues/60616",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/openai/codex/issues/60616",
+   "target": "source:github.com/remotion-dev/remotion/issues/12922",
+   "rel": "extends"
+  },
+  {
+   "source": "source:github.com/remotion-dev/remotion/issues/12922",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/remotion-dev/remotion/issues/12922",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/remotion-dev/remotion/issues/12922",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/remotion-dev/remotion/issues/12922",
+   "target": "source:github.com/remotion-dev/remotion/pull/13133",
+   "rel": "extends"
+  },
+  {
+   "source": "source:github.com/remotion-dev/remotion/issues/12922",
+   "target": "tool:remotion-dev/skills",
+   "rel": "evaluated_on"
+  },
+  {
+   "source": "source:github.com/remotion-dev/remotion/pull/13133",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/remotion-dev/remotion/pull/13133",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/remotion-dev/remotion/pull/13133",
+   "target": "concept:plugins",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/remotion-dev/remotion/pull/13133",
+   "target": "source:vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals",
+   "rel": "extends"
+  },
+  {
+   "source": "source:github.com/remotion-dev/remotion/pull/13133",
+   "target": "tool:remotion-dev/skills",
+   "rel": "evaluated_on"
   },
   {
    "source": "source:github.com/zhuyansen/awesome-claude-video-skills",
@@ -4455,6 +4724,51 @@
    "source": "source:learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin",
    "target": "concept:publishing",
    "rel": "about"
+  },
+  {
+   "source": "source:news.ycombinator.com/item/50369261",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "source:news.ycombinator.com/item/50369261",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "source:news.ycombinator.com/item/50369261",
+   "target": "source:youtu.be/fvvrcpcfjyk",
+   "rel": "contradicts"
+  },
+  {
+   "source": "source:news.ycombinator.com/item/50369261",
+   "target": "tool:heygen-com/hyperframes",
+   "rel": "evaluated_on"
+  },
+  {
+   "source": "source:news.ycombinator.com/item/50369261",
+   "target": "tool:remotion-dev/remotion",
+   "rel": "evaluated_on"
+  },
+  {
+   "source": "source:news.ycombinator.com/item/50396852",
+   "target": "concept:consistency",
+   "rel": "about"
+  },
+  {
+   "source": "source:news.ycombinator.com/item/50396852",
+   "target": "concept:generated-footage",
+   "rel": "about"
+  },
+  {
+   "source": "source:news.ycombinator.com/item/50396852",
+   "target": "concept:story-and-decomposition",
+   "rel": "about"
+  },
+  {
+   "source": "source:news.ycombinator.com/item/50396852",
+   "target": "source:arxiv.org/abs/2601.17737",
+   "rel": "extends"
   },
   {
    "source": "source:partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-english-usa-timed-text-style-guide",
@@ -4727,6 +5041,61 @@
    "rel": "integrates_with"
   },
   {
+   "source": "source:youtu.be/d5qpbbewtxo",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "source:youtu.be/d5qpbbewtxo",
+   "target": "concept:story-and-decomposition",
+   "rel": "about"
+  },
+  {
+   "source": "source:youtu.be/d5qpbbewtxo",
+   "target": "concept:visual-design",
+   "rel": "about"
+  },
+  {
+   "source": "source:youtu.be/d5qpbbewtxo",
+   "target": "source:youtu.be/fvvrcpcfjyk",
+   "rel": "extends"
+  },
+  {
+   "source": "source:youtu.be/fvvrcpcfjyk",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "source:youtu.be/fvvrcpcfjyk",
+   "target": "concept:evaluation",
+   "rel": "about"
+  },
+  {
+   "source": "source:youtu.be/fvvrcpcfjyk",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "source:youtu.be/fvvrcpcfjyk",
+   "target": "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+   "rel": "extends"
+  },
+  {
+   "source": "source:youtu.be/fvvrcpcfjyk",
+   "target": "source:news.ycombinator.com/item/50369261",
+   "rel": "contradicts"
+  },
+  {
+   "source": "source:youtu.be/fvvrcpcfjyk",
+   "target": "tool:heygen-com/hyperframes",
+   "rel": "evaluated_on"
+  },
+  {
+   "source": "source:youtu.be/fvvrcpcfjyk",
+   "target": "tool:remotion-dev/remotion",
+   "rel": "evaluated_on"
+  },
+  {
    "source": "tool:0xs4n4tg/kinetograph",
    "target": "concept:code-driven-video",
    "rel": "about"
@@ -4984,6 +5353,31 @@
   {
    "source": "tool:blaizzy/mlx-video",
    "target": "tool:drawthings.ai",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:blazejkustra/uncut",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:blazejkustra/uncut",
+   "target": "concept:mcp-servers",
+   "rel": "about"
+  },
+  {
+   "source": "tool:blazejkustra/uncut",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:blazejkustra/uncut",
+   "target": "tool:browser-use/video-use",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:blazejkustra/uncut",
+   "target": "tool:kino.ai",
    "rel": "alternative_to"
   },
   {
@@ -5905,6 +6299,36 @@
    "source": "tool:kingbootoshi/nano-banana-2-skill",
    "target": "tool:gemini-cli-extensions/nanobanana",
    "rel": "alternative_to"
+  },
+  {
+   "source": "tool:kino.ai",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:kino.ai",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "tool:kino.ai",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:kino.ai",
+   "target": "concept:mcp-servers",
+   "rel": "about"
+  },
+  {
+   "source": "tool:kino.ai",
+   "target": "tool:blazejkustra/uncut",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:kino.ai",
+   "target": "tool:remotion-dev/remotion",
+   "rel": "depends_on"
   },
   {
    "source": "tool:lottiefiles/motion-design-skill",

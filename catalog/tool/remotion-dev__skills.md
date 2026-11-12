@@ -78,6 +78,8 @@ Collected by `tools/enrich.py`, not typed by hand.
 
 ## Referenced by
 
+- [Remotion issue 12922: the skill asks agents to check audio they cannot hear](../source/github.com__remotion-dev__remotion__issues__12922.md) (evaluated_on)
+- [Remotion PR 13133: agents skipped the interactivity skill](../source/github.com__remotion-dev__remotion__pull__13133.md) (evaluated_on)
 - [remotion-superpowers](dojocodinglabs__remotion-superpowers.md) (extends)
 - [claude-remotion-skill](haidrrrry__claude-remotion-skill.md) (extends)
 - [HyperFrames](heygen-com__hyperframes.md) (alternative_to)

@@ -56,6 +56,8 @@
    "record_ids": [
     "source:arxiv.org/abs/2605.11418",
     "source:github.com/heygen-com/hyperframes/blob/main/skills/hyperframes/skill.md",
+    "source:github.com/remotion-dev/remotion/issues/12922",
+    "source:github.com/remotion-dev/remotion/pull/13133",
     "source:github.com/zhuyansen/awesome-claude-video-skills",
     "source:remotion.dev/docs/ai/mcp",
     "source:skills.sh/api/search/ai-video-generation",
@@ -93,7 +95,7 @@
     "tool:whaleyxbt/claude-motion",
     "tool:wyattblue/auto-editor"
    ],
-   "count": 38
+   "count": 40
   },
   {
    "id": "concept:agent-surface",
@@ -177,6 +179,7 @@
     "model:stabilityai/stable-audio",
     "source:ads.tiktok.com/help/article/creative-best-practices",
     "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
+    "source:github.com/remotion-dev/remotion/issues/12922",
     "source:partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-english-usa-timed-text-style-guide",
     "source:tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s2.pdf",
     "source:tech.ebu.ch/publications/r128",
@@ -212,7 +215,7 @@
     "tool:whaleyxbt/claude-motion",
     "tool:wyattblue/auto-editor"
    ],
-   "count": 43
+   "count": 44
   },
   {
    "id": "concept:automation",
@@ -233,6 +236,7 @@
     "source:github.com/get-bb/bb/blob/main/docs/configuration.md",
     "source:github.com/get-bb/bb/blob/main/docs/multiple-devices.md",
     "source:github.com/get-bb/bb/blob/main/plugins/automations/skills/automations/references/script-runtime.md",
+    "source:github.com/gitroomhq/postiz-app/pull/2418",
     "source:help.x.com/en/rules-and-policies/x-automation",
     "source:hermes-agent.nousresearch.com/docs/user-guide/security",
     "source:learn.chatgpt.com/docs/automations",
@@ -246,7 +250,7 @@
     "tool:triggerdotdev/trigger.dev",
     "tool:windmill-labs/windmill"
    ],
-   "count": 22
+   "count": 23
   },
   {
    "id": "concept:code-driven-video",
@@ -275,8 +279,11 @@
     "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
     "source:github.com/heygen-com/hyperframes/blob/main/skills/hyperframes/skill.md",
     "source:github.com/heygen-com/hyperframes/issues/4435",
+    "source:github.com/remotion-dev/remotion/pull/13133",
     "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+    "source:news.ycombinator.com/item/50369261",
     "source:remotion.dev/docs/5-0-migration",
+    "source:youtu.be/fvvrcpcfjyk",
     "tool:0xs4n4tg/kinetograph",
     "tool:3b1b/manim",
     "tool:abubakrchan/product-launch-motion",
@@ -290,6 +297,7 @@
     "tool:haidrrrry/claude-remotion-skill",
     "tool:heygen-com/hyperframes",
     "tool:howseen-ai/claude-motion-design",
+    "tool:kino.ai",
     "tool:manimcommunity/manim",
     "tool:mattypark/motion-graphics-skill",
     "tool:midrender/revideo",
@@ -304,7 +312,7 @@
     "tool:showlab/code2video",
     "tool:zulko/moviepy"
    ],
-   "count": 34
+   "count": 38
   },
   {
    "id": "concept:consistency",
@@ -333,6 +341,7 @@
     "source:arxiv.org/abs/2605.15199",
     "source:arxiv.org/abs/2606.20799",
     "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
+    "source:news.ycombinator.com/item/50396852",
     "tool:0xs4n4tg/kinetograph",
     "tool:calesthio/generative-media-skills",
     "tool:charlie947/motion-graphics-skills",
@@ -340,7 +349,7 @@
     "tool:hkuds/vimax",
     "tool:seme-org/open-director"
    ],
-   "count": 15
+   "count": 16
   },
   {
    "id": "concept:cost",
@@ -379,11 +388,12 @@
     "tool:fal-ai/fal",
     "tool:harry0703/moneyprinterturbo",
     "tool:kingbootoshi/nano-banana-2-skill",
+    "tool:kino.ai",
     "tool:openrouter/video-generation",
     "tool:recraft.ai",
     "tool:runwayml/runway-api"
    ],
-   "count": 22
+   "count": 23
   },
   {
    "id": "concept:craft",
@@ -428,6 +438,7 @@
     "source:docs.joinmastodon.org/user/posting",
     "source:docs.x.com/x-api/media/quickstart/media-upload-chunked",
     "source:facebook.com/business/ads-guide/update/video/instagram-reels",
+    "source:news.ycombinator.com/item/50369261",
     "source:support.google.com/youtube/answer/14328491",
     "source:support.google.com/youtube/answer/15424877",
     "source:support.google.com/youtube/answer/1722171",
@@ -440,7 +451,7 @@
     "tool:mort1d/motion-graphics-skills",
     "tool:netflix/vmaf"
    ],
-   "count": 22
+   "count": 23
   },
   {
    "id": "concept:evaluation",
@@ -473,10 +484,11 @@
     "source:arxiv.org/abs/2607.18116",
     "source:github.com/zhuyansen/awesome-claude-video-skills",
     "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+    "source:youtu.be/fvvrcpcfjyk",
     "tool:netflix/vmaf",
     "tool:showlab/code2video"
    ],
-   "count": 13
+   "count": 14
   },
   {
    "id": "concept:feedback-loop",
@@ -495,9 +507,10 @@
    ],
    "related": [],
    "record_ids": [
+    "source:github.com/openai/codex/issues/60616",
     "source:support.google.com/youtube/answer/9314415"
    ],
-   "count": 1
+   "count": 2
   },
   {
    "id": "concept:footage-editing",
@@ -524,6 +537,7 @@
     "source:pixabay.com/api/docs",
     "tool:aoike123/blender-vse",
     "tool:barty-bart/motion-graphics",
+    "tool:blazejkustra/uncut",
     "tool:breakthrough/pyscenedetect",
     "tool:browser-use/video-use",
     "tool:btahir/reelbird",
@@ -534,6 +548,7 @@
     "tool:griffinwooldridge/talking-head-editor",
     "tool:hetpatel-11/adobe_premiere_pro_mcp",
     "tool:kajisho5/ffmpeg-skill",
+    "tool:kino.ai",
     "tool:m-bain/whisperx",
     "tool:makemyclip/editor",
     "tool:mifi/editly",
@@ -545,7 +560,7 @@
     "tool:wyattblue/auto-editor",
     "tool:zulko/moviepy"
    ],
-   "count": 26
+   "count": 28
   },
   {
    "id": "concept:generated-footage",
@@ -568,13 +583,15 @@
    "related": [],
    "record_ids": [
     "model:lightricks/ltx-2",
+    "model:video-rebirth/hyperflow",
     "model:vimoo-ai/vimoo-1.0",
     "model:wan-ai/wan2.2",
     "source:arxiv.org/abs/2503.21755",
+    "source:news.ycombinator.com/item/50396852",
     "tool:blaizzy/mlx-video",
     "tool:hkuds/vimax"
    ],
-   "count": 6
+   "count": 8
   },
   {
    "id": "concept:hosted-video-models",
@@ -611,13 +628,14 @@
     "model:runwayml/gen-4.5",
     "model:xai/grok-imagine",
     "source:artificialanalysis.ai/video/leaderboard/text-to-video",
+    "source:github.com/openai/codex/issues/60616",
     "source:skills.sh/api/search/ai-video-generation",
     "tool:fal-ai/fal",
     "tool:openrouter/video-generation",
     "tool:replicate/replicate",
     "tool:runwayml/runway-api"
    ],
-   "count": 19
+   "count": 20
   },
   {
    "id": "concept:image-models",
@@ -682,6 +700,7 @@
     "model:minimaxai/minimax-h3",
     "model:qwen/qwen-image",
     "model:stabilityai/stable-audio",
+    "model:video-rebirth/hyperflow",
     "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
     "source:pixabay.com/api/docs",
     "source:remotion.dev/docs/5-0-migration",
@@ -695,7 +714,7 @@
     "tool:remotion-dev/remotion",
     "tool:windmill-labs/windmill"
    ],
-   "count": 18
+   "count": 19
   },
   {
    "id": "concept:local-video-models",
@@ -720,6 +739,7 @@
    "record_ids": [
     "model:lightricks/ltx-2",
     "model:minimaxai/minimax-h3",
+    "model:video-rebirth/hyperflow",
     "model:vimoo-ai/vimoo-1.0",
     "model:wan-ai/wan2.2",
     "source:arxiv.org/abs/2606.20799",
@@ -727,7 +747,7 @@
     "tool:comfy-org/comfyui",
     "tool:drawthings.ai"
    ],
-   "count": 8
+   "count": 9
   },
   {
    "id": "concept:making",
@@ -760,6 +780,7 @@
     "source:remotion.dev/docs/ai/mcp",
     "tool:ahujasid/mcp-for-blender",
     "tool:aoike123/blender-vse",
+    "tool:blazejkustra/uncut",
     "tool:btahir/reelbird",
     "tool:chatcut-inc/agent-plugin",
     "tool:fal-ai/fal",
@@ -767,6 +788,7 @@
     "tool:gemini-cli-extensions/nanobanana",
     "tool:hetpatel-11/adobe_premiere_pro_mcp",
     "tool:jordanrendric/claude-video-vision",
+    "tool:kino.ai",
     "tool:makemyclip/editor",
     "tool:misbahsy/video-audio-mcp",
     "tool:recraft.ai",
@@ -776,7 +798,7 @@
     "tool:samuelgursky/davinci-resolve-mcp",
     "tool:sun-guannan/vectcutapi"
    ],
-   "count": 18
+   "count": 20
   },
   {
    "id": "concept:model-prompting",
@@ -842,6 +864,8 @@
     "source:carbondesignsystem.com/elements/motion/overview",
     "source:cloud.wikis.utexas.edu/wiki/spaces/rtf318/pages/80022510",
     "source:github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss",
+    "source:youtu.be/d5qpbbewtxo",
+    "source:youtu.be/fvvrcpcfjyk",
     "tool:199-biotechnologies/motion-dev-animations-skill",
     "tool:3b1b/manim",
     "tool:abubakrchan/product-launch-motion",
@@ -861,7 +885,7 @@
     "tool:remotion-dev/remotion",
     "tool:whaleyxbt/claude-motion"
    ],
-   "count": 21
+   "count": 23
   },
   {
    "id": "concept:orchestration",
@@ -940,6 +964,7 @@
     "source:docs.joinmastodon.org/user/posting",
     "source:docs.x.com/x-api/getting-started/pricing",
     "source:docs.x.com/x-api/media/quickstart/media-upload-chunked",
+    "source:github.com/gitroomhq/postiz-app/pull/2418",
     "source:help.x.com/en/rules-and-policies/authenticity",
     "source:help.x.com/en/rules-and-policies/x-automation",
     "source:learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin",
@@ -948,7 +973,7 @@
     "source:support.google.com/youtube/answer/72431",
     "source:www.tiktok.com/community-guidelines/en/integrity-authenticity"
    ],
-   "count": 21
+   "count": 22
   },
   {
    "id": "concept:plugins",
@@ -967,13 +992,14 @@
    ],
    "related": [],
    "record_ids": [
+    "source:github.com/remotion-dev/remotion/pull/13133",
     "tool:chatcut-inc/agent-plugin",
     "tool:dojocodinglabs/remotion-superpowers",
     "tool:hetpatel-11/adobe_premiere_pro_mcp",
     "tool:jordanrendric/claude-video-vision",
     "tool:josiahsiegel/claude-plugin-marketplace"
    ],
-   "count": 5
+   "count": 6
   },
   {
    "id": "concept:popularity-and-trust",
@@ -1040,12 +1066,13 @@
     "source:docs.joinmastodon.org/user/posting",
     "source:docs.x.com/x-api/getting-started/pricing",
     "source:docs.x.com/x-api/media/quickstart/media-upload-chunked",
+    "source:github.com/gitroomhq/postiz-app/pull/2418",
     "source:learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin",
     "source:support.google.com/youtube/answer/15424877",
     "tool:gitroomhq/postiz-app",
     "tool:inovector/mixpost"
    ],
-   "count": 17
+   "count": 18
   },
   {
    "id": "concept:review-loop",
@@ -1081,6 +1108,8 @@
     "source:github.com/get-bb/bb/blob/main/docs/configuration.md",
     "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
     "source:github.com/heygen-com/hyperframes/issues/4435",
+    "source:github.com/openai/codex/issues/60616",
+    "source:github.com/remotion-dev/remotion/issues/12922",
     "source:hermes-agent.nousresearch.com/docs/user-guide/security",
     "source:learn.chatgpt.com/docs/automations",
     "tool:0xs4n4tg/kinetograph",
@@ -1088,6 +1117,7 @@
     "tool:ahujasid/mcp-for-blender",
     "tool:aoike123/blender-vse",
     "tool:bbc/ttml-validator",
+    "tool:blazejkustra/uncut",
     "tool:breakthrough/pyscenedetect",
     "tool:browser-use/video-use",
     "tool:connerkward/screenstudio-alternative-skill",
@@ -1119,7 +1149,7 @@
     "tool:whaleyxbt/claude-motion",
     "tool:windmill-labs/windmill"
    ],
-   "count": 50
+   "count": 53
   },
   {
    "id": "concept:scheduling-and-runtimes",
@@ -1234,7 +1264,9 @@
     "source:arxiv.org/abs/2606.07649",
     "source:cloud.wikis.utexas.edu/wiki/spaces/rtf318/pages/80022510",
     "source:fountain.io/syntax",
+    "source:news.ycombinator.com/item/50396852",
     "source:support.google.com/youtube/answer/9314415",
+    "source:youtu.be/d5qpbbewtxo",
     "tool:charlie947/motion-graphics-skills",
     "tool:cth9191/animate",
     "tool:hkuds/vimax",
@@ -1242,7 +1274,7 @@
     "tool:seme-org/open-director",
     "tool:vincentwei1021/video-shotcraft"
    ],
-   "count": 15
+   "count": 17
   },
   {
    "id": "concept:visual-design",
@@ -1268,6 +1300,7 @@
     "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
     "source:facebook.com/business/ads-guide/update/video/instagram-reels",
     "source:w3.org/tr/wcag22",
+    "source:youtu.be/d5qpbbewtxo",
     "tool:anthropics/skills",
     "tool:barty-bart/motion-graphics",
     "tool:charlie947/motion-graphics-skills",
@@ -1276,7 +1309,7 @@
     "tool:openmontageinc/openmontage",
     "tool:remotion-dev/skills"
    ],
-   "count": 10
+   "count": 11
   }
  ]
 }

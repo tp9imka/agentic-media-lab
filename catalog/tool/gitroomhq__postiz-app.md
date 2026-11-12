@@ -84,6 +84,7 @@ Collected by `tools/enrich.py`, not typed by hand.
 ## Referenced by
 
 - [TikTok Content Sharing Guidelines (Direct Post API)](../source/developers.tiktok.com__doc__content-sharing-guidelines.md) (integrates_with)
+- [Postiz PR 2418: TikTok inbox uploads marked published that never arrive](../source/github.com__gitroomhq__postiz-app__pull__2418.md) (evaluated_on)
 - [Mixpost](inovector__mixpost.md) (alternative_to)
 
 ## Status

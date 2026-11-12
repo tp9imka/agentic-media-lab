@@ -65,6 +65,7 @@ Nothing collected yet.
 ## Referenced by
 
 - [TikTok Content Posting API - Direct Post reference](developers.tiktok.com__doc__content-posting-api-reference-direct-post.md) (depends_on)
+- [Postiz PR 2418: TikTok inbox uploads marked published that never arrive](github.com__gitroomhq__postiz-app__pull__2418.md) (extends)
 - [Postiz](../tool/gitroomhq__postiz-app.md) (depends_on)
 
 ## Status

@@ -81,6 +81,8 @@ Collected by `tools/enrich.py`, not typed by hand.
 - [HyperFrames skill: usage beacon and CLI telemetry](../source/github.com__heygen-com__hyperframes__blob__main__skills__hyperframes__skill.md.md) (extends)
 - [HyperFrames issue 4435: parallel render workers capture a blank first frame](../source/github.com__heygen-com__hyperframes__issues__4435.md) (evaluated_on)
 - [HyperFrames vs Remotion (HeyGen guide)](../source/hyperframes.heygen.com__guides__hyperframes-vs-remotion.md) (evaluated_on)
+- [HN comment: Remotion for render infrastructure, HyperFrames 'vibe-coded'](../source/news.ycombinator.com__item__50369261.md) (evaluated_on)
+- [I Quit Remotion After Claude Made These Motion Graphics (Guney Topcu, video)](../source/youtu.be__fvvrcpcfjyk.md) (evaluated_on)
 - [Kinetograph](0xs4n4tg__kinetograph.md) (alternative_to)
 - [product-launch-motion](abubakrchan__product-launch-motion.md) (integrates_with)
 - [motion-graphics-skills (Charlie Hills)](charlie947__motion-graphics-skills.md) (depends_on)

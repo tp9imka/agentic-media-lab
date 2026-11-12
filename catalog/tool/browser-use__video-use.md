@@ -70,6 +70,7 @@ None.
 
 ## Referenced by
 
+- [Uncut](blazejkustra__uncut.md) (alternative_to)
 - [ElevenLabs API](elevenlabs.io.md) (integrates_with)
 - [talking-head-editor](griffinwooldridge__talking-head-editor.md) (alternative_to)
 - [ffmpeg-skill](kajisho5__ffmpeg-skill.md) (alternative_to)

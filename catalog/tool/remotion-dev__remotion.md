@@ -86,9 +86,12 @@ Collected by `tools/enrich.py`, not typed by hand.
 
 - [HyperFrames vs Remotion research note (GenMotion)](../source/github.com__haxzie__genmotion__blob__main__docs__research__hyperframes-remotion.md.md) (evaluated_on)
 - [HyperFrames vs Remotion (HeyGen guide)](../source/hyperframes.heygen.com__guides__hyperframes-vs-remotion.md) (evaluated_on)
+- [HN comment: Remotion for render infrastructure, HyperFrames 'vibe-coded'](../source/news.ycombinator.com__item__50369261.md) (evaluated_on)
 - [Remotion 5.0 migration: mandatory telemetry for licensed companies](../source/remotion.dev__docs__5-0-migration.md) (extends)
+- [I Quit Remotion After Claude Made These Motion Graphics (Guney Topcu, video)](../source/youtu.be__fvvrcpcfjyk.md) (evaluated_on)
 - [Kinetograph](0xs4n4tg__kinetograph.md) (alternative_to)
 - [fframes](dmtrkovalenko__fframes.md) (alternative_to)
+- [Kino](kino.ai.md) (depends_on)
 - [html-video](nexu-io__html-video.md) (contradicts)
 - [claude-motion](whaleyxbt__claude-motion.md) (depends_on)
 

@@ -64,7 +64,7 @@ None.
 
 ## Referenced by
 
-None.
+- [HN comment: keep generated clips 5-8 s and log model, host and defaults](news.ycombinator.com__item__50396852.md) (extends)
 
 ## Status
 
