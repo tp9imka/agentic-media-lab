@@ -8,7 +8,7 @@
       "title": "Six Million (Suspected) Fake Stars in GitHub: A Growing Spiral of Popularity Contests, Spams, and Malware",
       "url": "https://arxiv.org/abs/2412.13459",
       "summary": "A measurement study by CMU and Socket researchers that ran a detector, StarScout, over all GitHub star events from 2019 to 2024 to find fake-star campaigns.",
-      "why_it_matters": "Star counts are the first filter most readers use to pick a video skill or renderer; this paper shows the signal is bought at scale and in which categories.",
+      "why_it_matters": "Star counts are the first filter most readers use to pick a video skill or renderer; this paper shows the signal is faked at scale and in which categories.",
       "concepts": [
         "concept:popularity-and-trust"
       ],
@@ -40,8 +40,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "arXiv abstract page v2 against the two claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "7a393296ca9c00b5744c7601a028a118115e8c1aefcd86baddccf79c382cbe38",
         "next_due": "2027-11-12"
       },
@@ -261,14 +261,14 @@
       "title": "Under the Hood of SKILL.md: Semantic Supply-chain Attacks on AI Agent Skill Registry",
       "url": "https://arxiv.org/abs/2605.11418",
       "summary": "A paper that tests attacks using only SKILL.md text against real ClawHub skills at three stages: registry search, agent selection, and registry moderation.",
-      "why_it_matters": "It shows that the description text of a skill decides whether an agent picks it and whether a registry blocks it, so a well-worded copy can beat the original without any code change.",
+      "why_it_matters": "It shows that the description text of a skill biases whether an agent picks it (77.6% of paired trials) and lets malicious skills avoid a registry block in 36.5%-100% of cases, so a well-worded copy can beat the original without any code change.",
       "concepts": [
         "concept:popularity-and-trust",
         "concept:agent-skills"
       ],
       "level": "advanced",
       "fit": "medium",
-      "fit_notes": "Measured on ClawHub mechanisms, not on skills.sh or the Claude Code plugin marketplace, so the numbers do not transfer directly. The arXiv page renders SKILL.md as 'this http URL', which is kept in the quotes. Practical reading: a description that matches your request better is not evidence the skill is better; compare skills by their files, not by how they describe themselves. Only the abstract was read.",
+      "fit_notes": "Measured on ClawHub mechanisms, not on skills.sh or the Claude Code plugin marketplace, so the numbers do not transfer directly. The arXiv page renders SKILL.md as 'this http URL', so the quotes use sentences without it. Practical reading: a description that matches your request better is not evidence the skill is better; compare skills by their files, not by how they describe themselves. Only the abstract was read.",
       "related": [
         {
           "id": "source:skills.sh/docs",
@@ -300,8 +300,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "arXiv abstract page against the two claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "a247faa84e2b6a7c42bf04d2c5e7f88ee238546c778381ce5681293f87f3aebd",
         "next_due": "2027-11-12"
       },
@@ -371,8 +371,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "Vercel blog visible text against the three claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "6c4eae3c0880122a5eb825f2d8142ce80ca60e5f178b24912f5b69fdf7a4f5eb",
         "next_due": "2027-02-10"
       },
@@ -388,7 +388,7 @@
       "title": "See Before You Code: Learning Visual Priors for Spatially Aware Educational Animation Generation (OmniManim)",
       "url": "https://arxiv.org/abs/2605.15585",
       "summary": "A paper on LLM-written Manim animations: it reports that rendered output often has overlap, misalignment and broken continuity, and proposes a planner plus post-render repair.",
-      "why_it_matters": "It says the main failure of code-driven video cannot be seen by reading the code, which is the case for rendering frames and looking at them before delivery.",
+      "why_it_matters": "It says visual defects in LLM-generated educational animations cannot be reliably detected from the code alone, which is the case for rendering frames and looking at them before delivery.",
       "concepts": [
         "concept:code-driven-video",
         "concept:review-loop",
@@ -428,8 +428,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "arXiv abstract page against the two claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "2ad20c7459e206d25c75246f9ef71a6d7105a1bef1dbfff557d5d9a140f9a959",
         "next_due": "2027-11-12"
       },
@@ -519,7 +519,7 @@
       "title": "HyperFrames skill: usage beacon and CLI telemetry",
       "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/hyperframes/SKILL.md",
       "summary": "The HyperFrames skill's instruction to send a usage beacon at start, read with the CLI's telemetry reference and FAQ.",
-      "why_it_matters": "Installing the skill makes the agent report to HeyGen which skill ran, alongside CLI telemetry that is on unless switched off and is tied to a HeyGen account after sign-in.",
+      "why_it_matters": "The skill tells the agent to report to HeyGen which skill ran, once as the skill starts, alongside CLI telemetry that is on unless switched off and is tied to a HeyGen account after sign-in.",
       "concepts": [
         "concept:agent-skills",
         "concept:popularity-and-trust",
@@ -527,7 +527,7 @@
       ],
       "level": "intro",
       "fit": "high",
-      "fit_notes": "Updates tool:heygen-com/hyperframes (its fit_notes mention the beacon without a quote). Telemetry is on until you run `npx hyperframes telemetry disable` or set HYPERFRAMES_NO_TELEMETRY=1 or DO_NOT_TRACK=1; the CLI also reads these from the project .env. It records the coding agent's name (claude_code, codex, cursor) from environment variables. Turning telemetry off also removes the install from canary rollouts. The skill text is an instruction the agent will follow; for a client project, set the opt-out before the first run. Network traffic was not inspected here.",
+      "fit_notes": "Updates tool:heygen-com/hyperframes (its fit_notes mention the beacon without a quote). Telemetry is on until you run `npx hyperframes telemetry disable` or set HYPERFRAMES_NO_TELEMETRY=1 or DO_NOT_TRACK=1; the CLI also reads these from the project .env. It records the coding agent's name (claude_code, codex, cursor) from environment variables. Turning telemetry off also removes the install from canary rollouts. The skill text instructs the agent to send the beacon, and an agent that follows it will; for a client project, set the opt-out before the first run. Network traffic was not inspected here.",
       "related": [
         {
           "id": "tool:heygen-com/hyperframes",
@@ -566,8 +566,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "SKILL.md, docs/faq.mdx and the telemetry section of docs/packages/cli.mdx on main against the three claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "19cdd930c83d69c5ed7843a011ba4e3c9aa6e8823a77452fca007ae6f9489b1f",
         "next_due": "2027-02-10"
       },

@@ -149,7 +149,7 @@
           "via": null
         },
         {
-          "text": "Using the other project's install instructions breaks the install.",
+          "text": "The README warns that using the other project's install instructions will cause problems.",
           "quote": "Trying to use these instructions to install [3b1b/manim](https://github.com/3b1b/manim) or instructions there to install this version will cause problems.",
           "locator": "README.md, Installation, caution box",
           "url": "https://github.com/ManimCommunity/manim/blob/main/README.md",
@@ -160,8 +160,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "README.md and the docs configuration guide against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "b0e80254b6242cff7f662f3e8e528d868f9a94ca88d490585d02235d123fca8d",
         "next_due": "2027-02-10"
       }
@@ -309,8 +309,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "README.md and the docs Rendering page against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "4b7701ce1d31a80717dc873db69e4673f214e1e795b4e39ffd4ed8e0874441c3",
         "next_due": "2027-02-10"
       }
@@ -385,8 +385,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "README.md and the docs welcome page against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "27b5c7bf9de6018a718ef5e27ac194d48157474815276d6b1e916b986ffa43b0",
         "next_due": "2027-02-10"
       }
@@ -471,8 +471,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "README.md against the claims and against Remotion LICENSE.md",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "dc1a5fc6c7f1123ffef42929c0931cf941a78024a740681837be2926feadcce6",
         "next_due": "2027-02-10"
       }
@@ -528,7 +528,7 @@
           "via": null
         },
         {
-          "text": "A missing font falls back silently in the render; the inspect command reports it and the fix is to put the font file in media/.",
+          "text": "When text renders in the wrong font, the inspect command reports no font-family match; the fix is to put the font file in media/ and use its exact family name.",
           "quote": "**Text renders in the wrong font:** `inspect` reports `No match for ... font-family`; put the font file in the",
           "locator": "README.md, Requirements, Troubleshooting",
           "url": "https://github.com/dmtrKovalenko/fframes/blob/main/README.md",
@@ -551,8 +551,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "README.md against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "bacfcc9216c364c300193c95df4041063a59215984fdaa2ee0d40bb6a020dba4",
         "next_due": "2027-02-10"
       }
@@ -632,8 +632,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "README.md and the docs Compatibility page against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "bba2ef425d116dae0fd1bf10002f04e72d46640b10e0de67ae5bcaabaddb2e79",
         "next_due": "2027-02-10"
       }
@@ -818,7 +818,7 @@
       "level": "intro",
       "maturity": "active",
       "fit": "medium",
-      "fit_notes": "Tell the agent to target MoviePy v2 and to read the v1-to-v2 guide: its README example uses v2 names such as `subclipped` and `with_volume_scaled`, and code written against v1 docs fails. It is slower than ffmpeg alone, so use it for logic and let ffmpeg do heavy filters. TextClip takes a font file path, so ship the .ttf with the project. The README asks for maintainers. I did not check a still-frame API.",
+      "fit_notes": "Tell the agent to target MoviePy v2 and to read the v1-to-v2 guide: its README example uses v2 names such as `subclipped` and `with_volume_scaled`, and v2 brought major breaking changes, so code written against v1 docs may break. It is slower than ffmpeg alone, so use it for logic and let ffmpeg do heavy filters. TextClip takes a font file path, so ship the .ttf with the project. The README asks for maintainers. I did not check a still-frame API.",
       "related": [
         {
           "id": "tool:ffmpeg/ffmpeg",
@@ -855,8 +855,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "README.md against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "272feb3c45b86a09aa6266cdc3af1334eac34a6fb1abcb395805f0aaf540c02f",
         "next_due": "2027-02-10"
       }
@@ -931,8 +931,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "README.md and the Blender manual command-line render page against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "3b99ca9b7295f88ca255a51a9245695f2e3812de1873cdc04a3a0583ea116588",
         "next_due": "2027-02-10"
       }

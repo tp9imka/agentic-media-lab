@@ -40,7 +40,7 @@
           "via": null
         },
         {
-          "text": "The audit rejects a tool that only uploads to accounts you or your team manage, which is the single-developer case.",
+          "text": "The guidelines list a utility tool that uploads to accounts you or your team manage as not acceptable; clients must serve a wide audience, not private use.",
           "quote": "Not acceptable: A utility tool to help upload contents to the account(s) you or your team manages. ❌",
           "locator": "Intended Use, item 2",
           "url": "https://developers.tiktok.com/doc/content-sharing-guidelines",
@@ -59,8 +59,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "visible page text (last updated August 4, 2026) against the earlier scan's two quotes; both found verbatim",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "next_due": "2026-12-12",
         "source_sha256": "d8e4021ae965c417a1911395ba50e46901cfc3bfea1c5580437235c5595c073c"
       },
@@ -132,8 +132,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "visible reference text against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "next_due": "2026-12-12",
         "source_sha256": "93f286d53c8282b6543dbc761bcafa7ff546b6cf0ebfb0e7ca72e3853ff02bc0"
       },
@@ -254,8 +254,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "visible policy text after redirect to the safety policies page",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "next_due": "2026-12-12",
         "source_sha256": "0603f24d500c549e2f0972eb3675a17fb58fd10dd88b30a079124d6f68c601aa"
       },
@@ -280,7 +280,7 @@
       ],
       "level": "intermediate",
       "fit": "high",
-      "fit_notes": "The 2020 private-only rule is still on the same page under July 28, 2020; read the date. Set status.privacyStatus explicitly: the default is now public, and a test upload you meant to keep private goes live. Set status.containsSyntheticMedia=true on realistic generated clips (see the disclosure help page). The page URL now redirects to developers.google.com/youtube/data/revision_history. The quota (100 uploads a day) is on the videos.insert record.",
+      "fit_notes": "The 2020 private-only rule is still on the same page under July 28, 2020; read the date. Set status.privacyStatus explicitly: since November 2, 2026 the default is public unless creator account settings make it private, so a test upload you meant to keep private can go live. Set status.containsSyntheticMedia=true on realistic generated clips (see the disclosure help page). The page URL now redirects to developers.google.com/youtube/data/revision_history. The quota (100 uploads a day) is on the videos.insert record.",
       "related": [
         {
           "id": "source:developers.google.com/youtube/v3/docs/videos/insert",
@@ -303,7 +303,7 @@
           "via": null
         },
         {
-          "text": "An upload without status.privacyStatus now defaults to public.",
+          "text": "From the November 2, 2026 entry, an upload without status.privacyStatus defaults to public, though creator account settings can make some uploads default to private.",
           "quote": "If you don't specify a value for the status.privacyStatus property in a videos.insert request, the uploaded video's privacy status defaults to public.",
           "locator": "Entry November 2, 2026",
           "url": "https://developers.google.com/youtube/v3/revision_history",
@@ -322,8 +322,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "visible page text, entries November 2, 2026, October 30, 2024 and July 28, 2020, against the earlier scan's claim; confirmed",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "next_due": "2026-12-12",
         "source_sha256": "40077a7c1bc59481b2f5ccfb5d1858a5d2b8a9d3215a38b3c5517c35d6fc4d00"
       },
@@ -345,7 +345,7 @@
       "title": "YouTube Data API - videos.insert and quota costs",
       "url": "https://developers.google.com/youtube/v3/docs/videos/insert",
       "summary": "The reference for uploading a video through the YouTube Data API, read together with the quota cost page.",
-      "why_it_matters": "It gives the daily upload ceiling and file limits a scheduled pipeline has to plan around.",
+      "why_it_matters": "It gives the default daily upload quota and file limits a scheduled pipeline has to plan around.",
       "concepts": [
         "concept:publishing",
         "concept:platform-rules",
@@ -353,7 +353,7 @@
       ],
       "level": "intermediate",
       "fit": "high",
-      "fit_notes": "Uploads have their own bucket of 100 calls per day per project, separate from the 10,000 units for other calls; this replaces the 1,600-units-per-upload figure many guides still quote. Quotas reset at midnight Pacific Time. Files up to 256 GB, any video/* type. Needs a Google Cloud project and OAuth consent for your own channel; no cost stated. Both pages redirect to developers.google.com/youtube/data/...",
+      "fit_notes": "By default, uploads have their own bucket of 100 calls per day per project, separate from the 10,000 units for other calls; this replaces the 1,600-units-per-upload figure many guides still quote. Quotas reset at midnight Pacific Time. Files up to 256 GB, any video/* type. Needs a Google Cloud project and OAuth consent for your own channel; no cost stated. Both pages redirect to developers.google.com/youtube/data/...",
       "related": [
         {
           "id": "source:developers.google.com/youtube/v3/revision_history",
@@ -364,7 +364,7 @@
       "corroboration": "single-source",
       "claims": [
         {
-          "text": "videos.insert has its own bucket of 100 calls per day, 1 unit each.",
+          "text": "By default, videos.insert has its own bucket of 100 calls per day, 1 unit each.",
           "quote": "Quota impact: 100 calls per day. A call to this method has a quota cost of 1 unit in the Video Uploads quota bucket.",
           "locator": "videos.insert, Quota impact",
           "url": "https://developers.google.com/youtube/v3/docs/videos/insert",
@@ -372,7 +372,7 @@
           "via": null
         },
         {
-          "text": "A project gets 100 search.list calls, 100 videos.insert calls and 10,000 units for all other endpoints per day.",
+          "text": "By default, a project gets 100 search.list calls, 100 videos.insert calls and 10,000 units for all other endpoints per day.",
           "quote": "Projects that enable the YouTube Data API have a default quota allocation of 100 search.list calls, 100 videos.insert calls, and 10,000 units per day combined for all other endpoints.",
           "locator": "Quota cost page, introduction",
           "url": "https://developers.google.com/youtube/v3/determine_quota_cost",
@@ -391,8 +391,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "videos.insert reference and determine_quota_cost page, visible text, against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "next_due": "2026-12-12",
         "source_sha256": "849264d086a81c4c226d6deb914f096c8685d10a4bb7df39a5cd145c8f53fbbf"
       },
@@ -417,7 +417,7 @@
       ],
       "level": "intro",
       "fit": "high",
-      "fit_notes": "AI use is allowed and named as monetisable when it serves your own narrative; templated, interchangeable videos are not. Reused-content review applies to the whole channel, so a run of near-identical generated Shorts can cost monetisation on everything. Separate rule: AI personas giving health, legal, finance or political advice cannot monetise. Policy text, not a measured threshold; reviewers judge.",
+      "fit_notes": "AI use is allowed and named as monetisable when it serves your own narrative; templated, interchangeable videos are not. Reused-content review applies to the whole channel, so a run of near-identical generated Shorts can cost monetisation on everything. Separate rule: channels whose AI personas present themselves as human experts giving health, legal, finance or political advice cannot monetise. Policy text, not a measured threshold; reviewers judge.",
       "related": [
         {
           "id": "source:support.google.com/youtube/answer/14328491",
@@ -455,8 +455,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "visible help page text (hl=en) against the 'mass production' wording from the earlier scan",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "next_due": "2026-12-12",
         "source_sha256": "f5ac801f855ec987acd63b592dd99f81201344d2790eb191b6bff250b5dd07fd"
       },
@@ -618,7 +618,7 @@
       "corroboration": "single-source",
       "claims": [
         {
-          "text": "Instagram allows 100 API-published posts per account in a moving 24-hour window.",
+          "text": "The guide's Rate Limit section allows 100 API-published posts per account in a moving 24-hour window; its carousel section says 50 per 24 hours.",
           "quote": "Instagram accounts are limited to 100 API-published posts within a 24-hour moving period.",
           "locator": "Limitations, Rate Limit",
           "url": "https://developers.facebook.com/docs/instagram-platform/content-publishing",
@@ -645,8 +645,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "content-publishing guide and ig-user/media reference, served as markdown, against the claims and the earlier scan",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "next_due": "2026-12-12",
         "source_sha256": "204de9647c4f896d78f6602830efd45fa9a61b96f65d89793e06ec0b7f18197f"
       },
@@ -778,8 +778,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "guide served as markdown, against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "next_due": "2026-12-12",
         "source_sha256": "c2893f145a2875321e9fa6300a4b47061b86750982f97a494148280891d167e4"
       },
@@ -840,8 +840,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "visible page text against the claims; table cells read as separate lines",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "next_due": "2026-12-12",
         "source_sha256": "8de22b694749b2c102722f2b9a4c9b79ffb23fbe6963e7f539b15b1dc4fec718"
       },
@@ -923,7 +923,7 @@
       ],
       "level": "intro",
       "fit": "high",
-      "fit_notes": "Scheduled original posts to your own account are allowed. Duplicate or near-duplicate posts are not, so vary each post. Scripting the website, for example with a browser agent, risks permanent suspension; use the API. The saved text shows the X logo as '>x<' in place of the word X, so quotes avoid those sentences.",
+      "fit_notes": "Automated posts for entertainment, informational or novelty purposes are allowed if they comply with all other rules. Duplicate or near-duplicate posts are not, so vary each post. Scripting the website, for example with a browser agent, risks permanent suspension; use the API. The saved text shows the X logo as '>x<' in place of the word X, so quotes avoid those sentences.",
       "related": [
         {
           "id": "source:help.x.com/en/rules-and-policies/authenticity",
@@ -965,8 +965,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "visible Help Center text against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "next_due": "2026-12-12",
         "source_sha256": "b1e4e5d421982a0980543eea4d13f636a3f01f63f127158d70953edf0271cc62"
       },
@@ -1020,8 +1020,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "visible Help Center text after redirect from manipulated-media",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "next_due": "2026-12-12",
         "source_sha256": "e91b04e5f9665ee8bd07092af4dc08fa76423ea85d8f5b25580ee7c57f2ba852"
       },
@@ -1046,7 +1046,7 @@
       ],
       "level": "intermediate",
       "fit": "medium",
-      "fit_notes": "For your own profile, add the 'Share on LinkedIn' product in the developer portal to get w_member_social; it supports feedshare-video. Company page posting needs the Community Management API, a vetted product with a Development tier and a Standard tier that asks for a screencast. Video: MP4, 3 s to 30 min, 75 KB to 500 MB per the Videos API; the same page also says the maximum is 5 GB, an inconsistency not resolved here. No daily post limit found.",
+      "fit_notes": "For your own profile, add the 'Share on LinkedIn' product in the developer portal to get w_member_social; it supports feedshare-video. Company page posting needs the Community Management API, a vetted product with a Development tier and a Standard tier that asks for a screencast. Video (non-connected-TV specs): MP4, 3 s to 30 min, 75 KB to 500 MB per the Videos API; the same page also says the maximum is 5 GB, an inconsistency not resolved here. Daily request limits (UTC): 150 per member, 100,000 per application.",
       "related": [],
       "source_type": "primary",
       "corroboration": "single-source",
@@ -1060,7 +1060,7 @@
           "via": null
         },
         {
-          "text": "LinkedIn video must be MP4, 3 seconds to 30 minutes, 75 KB to 500 MB.",
+          "text": "LinkedIn's specs for non-connected-TV video are MP4, 3 seconds to 30 minutes, 75 KB to 500 MB; the upload schema allows up to 5 GB.",
           "quote": "Length: Three seconds to 30 minutes.\n\nFile size: Between 75kb and 500MB.\n\nFile format: MP4.",
           "locator": "Videos API, Video File Size Specifications",
           "url": "https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/videos-api",
@@ -1079,8 +1079,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "Share on LinkedIn, Videos API (view li-lms-2026-10) and Community Management overview, visible text, against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "next_due": "2026-12-12",
         "source_sha256": "c9e4508244bc943c49acbfe0fc905424d88f9883a138585fa0742f0da1cbcb00"
       },
@@ -1105,7 +1105,7 @@
       ],
       "level": "intermediate",
       "fit": "low",
-      "fit_notes": "No audit or app approval is mentioned; posting uses your own account credentials. The account must have a verified email, and a daily video-post limit exists but its number is not on this page. The docs URL redirects to bsky.network/docs/about-bluesky-content/video. Size and length limits were not found on the page.",
+      "fit_notes": "No audit or app approval is mentioned; posting uses your own account credentials. Bluesky-hosted accounts must have a verified email, and a daily video-post limit exists but its number is not on this page. The docs URL redirects to bsky.network/docs/about-bluesky-content/video. Size and length limits were not found on the page.",
       "related": [],
       "source_type": "primary",
       "corroboration": "single-source",
@@ -1122,8 +1122,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "visible tutorial text after redirect to bsky.network",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "next_due": "2026-12-12",
         "source_sha256": "098d52cb341096a7f91ef89ea86c79fa99239eb1ef780449088d767a4d461d36"
       },
@@ -1148,7 +1148,7 @@
       ],
       "level": "intermediate",
       "fit": "low",
-      "fit_notes": "Default: one video per post, up to 99 MB, transcoded to H.264 at max 1300 kbps, so a crisp render will be softened. Read configuration.media_attachments.video_size_limit from GET /api/v2/instance for the server you post to. No app review; a token from your own account works. Rate limits were not read.",
+      "fit_notes": "Default: one video per post, up to 99 MB, transcoded to H.264 at max 1300 kbps, so a render above that bitrate will be re-encoded lower. Read configuration.media_attachments.video_size_limit from GET /api/v2/instance for the server you post to. No app review; a token from your own account works. Rate limits were not read.",
       "related": [],
       "source_type": "primary",
       "corroboration": "single-source",
@@ -1173,8 +1173,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "posting page and Instance entity page, visible text, against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "next_due": "2026-12-12",
         "source_sha256": "09b96ebe76f6c02a9dcf9381187d1f0c7e282db0342252be1cbe170c5cd906dd"
       },

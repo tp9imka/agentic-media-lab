@@ -55,7 +55,7 @@
           "via": null
         },
         {
-          "text": "True peak must stay at or below -1 dBTP during production.",
+          "text": "True peak must stay at or below -1 dBTP during production (linear audio); distribution systems may need a lower ceiling.",
           "quote": "that the True Peak Level of a programme shall not exceed −1 dBTP (dB True Peak) during production (linear audio)",
           "locator": "r128.pdf (v5.0, 2023), recommends item m",
           "url": "https://tech.ebu.ch/files/live/sites/tech/files/shared/r/r128.pdf",
@@ -74,8 +74,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "publication page, R 128 v5.0 PDF and R 128 s1 PDF against the three claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "3884fc6fdb228acb7d988b3c6f7f8a5b8217a6737198f6e2ce35b164b344366f",
         "next_due": "2027-11-12"
       },
@@ -135,7 +135,7 @@
           "via": null
         },
         {
-          "text": "Without loudness metadata, a broadcaster may distribute louder, in an interim range of -20.0 to -16.0 LUFS.",
+          "text": "Without loudness metadata, a broadcaster that wants to control the dynamic treatment may distribute louder, in an interim range of -20.0 to -16.0 LUFS.",
           "quote": "the interim value for the Distribution Loudness Level should be in the range of −20.0 to −16.0 LUFS",
           "locator": "r128s2.pdf (2023), further recommends item g",
           "url": "https://tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s2.pdf",
@@ -146,8 +146,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "R 128 s2 PDF text against both claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "72da8698a1f60d6063411d64ab9f99c1cf6f46f0d54bcb1d793797eef835556f",
         "next_due": "2027-11-12"
       },
@@ -197,7 +197,7 @@
           "via": null
         },
         {
-          "text": "For vertical 9:16 video, a line spans 90% of the width, which fits about 25 characters.",
+          "text": "As a guide, a 90%-width region of vertical 9:16 video holds about 25 characters, the equivalent of 37 characters in a 75%-width 16:9 region.",
           "quote": "As a guide, the equivalent to 37 characters in a 75% width region of a 16:9 (landscape) video is 25 characters in a 90% width region of a 9:16 (vertical) video.",
           "locator": "section 3.1 Line length, table Characters per line and note below it",
           "url": "https://www.bbc.co.uk/accessibility/forproducts/guides/subtitles/",
@@ -216,8 +216,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "guidelines page sections 3.1, 3.3, 4.1, 9.2.1 against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "91cd8d1d9c3edebf1af3f189f77573eb5c463a5226beaf62662f70b530bf2584",
         "next_due": "2027-11-12"
       },
@@ -306,7 +306,7 @@
       ],
       "level": "intro",
       "fit": "high",
-      "fit_notes": "Contrast is defined for text on a solid colour. Over moving video, test the caption colour against the lightest and darkest pixels behind it on sampled frames, or put the text on a plate. Large-scale text means at least 18 point, or 14 point bold. The flash rule matters for glitch and strobe transitions: count luminance flips per second. Written for web pages, applied here to video by analogy.",
+      "fit_notes": "Contrast is measured against the background the text is rendered over in normal use. Over moving video, test the caption colour against the lightest and darkest pixels behind it on sampled frames, or put the text on a plate. Large-scale text means at least 18 point, or 14 point bold. The flash rule matters for glitch and strobe transitions: count luminance flips per second. Written for web pages, applied here to video by analogy.",
       "source_type": "primary",
       "corroboration": "single-source",
       "lane": "craft",
@@ -317,7 +317,7 @@
       ],
       "claims": [
         {
-          "text": "Text needs a contrast ratio of at least 4.5:1 against its background.",
+          "text": "Text needs a contrast ratio of at least 4.5:1 against its background, except large text (3:1), incidental text and logotypes.",
           "quote": "The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following:",
           "locator": "SC 1.4.3 Contrast (Minimum), Level AA",
           "url": "https://www.w3.org/TR/WCAG22/",
@@ -344,8 +344,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "WCAG 2.2 TR text for SC 1.2.2, 1.4.3, 2.3.1 against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "334fdd916bc2432af512dd50f738593ac390222cf8bad96f466165d1881b76f9",
         "next_due": "2027-11-12"
       },
@@ -613,8 +613,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "arXiv abstract page and HTML full text against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "a6d7a006328f69c789d9fd351a41658730c58757331f881ce1a1bfa39eea9e9c",
         "next_due": "2027-11-12"
       },
@@ -708,8 +708,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "arXiv abstract page and HTML full text against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "fe095fe3b10e4ea0c203355da5b0104aec5bd34dc26ff158abac904f087b0446",
         "next_due": "2027-11-12"
       },
@@ -761,7 +761,7 @@
           "via": null
         },
         {
-          "text": "Square or vertical uploads up to three minutes are classed as Shorts.",
+          "text": "On standard channels, square or vertical uploads up to three minutes made on or after October 15, 2024 are classed as Shorts.",
           "quote": "Any videos uploaded on or after this date with a square or vertical aspect ratio up to three minutes in length will be categorized as Shorts on YouTube.",
           "locator": "answer 15424877, Understand three-minute YouTube Shorts",
           "url": "https://support.google.com/youtube/answer/15424877",
@@ -772,8 +772,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "answer 1722171 and answer 15424877 against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "63661d637980bf6e63d699ba76b531d9da0f8562d3420d553f7f67dfd1193c36",
         "next_due": "2026-12-12"
       },
@@ -786,14 +786,14 @@
       "title": "YouTube Help - Measure key moments for audience retention",
       "url": "https://support.google.com/youtube/answer/9314415",
       "summary": "YouTube Studio's key moments report: intro retention at 30 seconds, top moments, spikes and dips, with YouTube's own advice on each.",
-      "why_it_matters": "It is YouTube's own definition of the intro window and tells a feedback loop which clips will get the report at all.",
+      "why_it_matters": "It is YouTube's own definition of the intro window and tells a feedback loop which clips will get highlighted moments at all.",
       "concepts": [
         "concept:feedback-loop",
         "concept:story-and-decomposition"
       ],
       "level": "intro",
       "fit": "medium",
-      "fit_notes": "Under-60-second Shorts do not get this report, so a Shorts feedback loop needs the plain retention curve from the Analytics API instead. YouTube publishes no hook length for Shorts on this page; the 30-second intro window is for long videos. API access was not checked.",
+      "fit_notes": "Under-60-second Shorts do not get the highlighted moments (top moments, spikes, dips), so a Shorts feedback loop needs the plain retention curve from the Analytics API instead. YouTube publishes no hook length for Shorts on this page; the page does not scope the 30-second intro window by video length. API access was not checked.",
       "source_type": "primary",
       "corroboration": "single-source",
       "lane": "craft",
@@ -831,8 +831,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "answer 9314415 against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "98f48d3545ebfd0206b73add6ed575ac1af3f2527e91f7f5701f17b3337f59f7",
         "next_due": "2026-12-12"
       },
@@ -853,7 +853,7 @@
       ],
       "level": "intro",
       "fit": "medium",
-      "fit_notes": "Written for paid ads, not organic posts. The 5-10 words per second is for short text overlays and is two to three times the BBC subtitle rate; do not apply it to full captions of speech. The ads spec page gives safe zones only as downloadable files, not numbers; they were not downloaded. Specs say last updated June 2026.",
+      "fit_notes": "Written for paid ads, not organic posts. The 5-10 words per second is for ad captions or text overlays and is two to three times the BBC subtitle rate; do not apply it to full captions of speech. The ads spec page gives safe zones only as downloadable files, not numbers; they were not downloaded. Specs say last updated June 2026.",
       "related": [
         {
           "id": "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
@@ -887,7 +887,7 @@
           "via": null
         },
         {
-          "text": "Vertical in-feed ads are 9:16 and at least 540x960 px.",
+          "text": "Vertical Non-Spark in-feed ads are 9:16 and at least 540x960 px.",
           "quote": "Vertical (recommended): 9:16, more than or equal to 540*960px.",
           "locator": "video ads specifications, Non-Spark Ads, Dimensions",
           "url": "https://ads.tiktok.com/help/article/video-ads-specifications?lang=en",
@@ -898,8 +898,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "creative best practices page and video ads specifications page against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "6a42aa6dc703b1f6550ec0a2f4f1fefa60f90e5655ced69d69df4a3d96de33d8",
         "next_due": "2026-12-12"
       },
@@ -957,7 +957,7 @@
           "via": null
         },
         {
-          "text": "Reels ads must not use files with edit lists or special container boxes.",
+          "text": "Reels ads should not use files with edit lists or special container boxes.",
           "quote": "Videos that contain edit lists or special boxes in file containers.",
           "locator": "Reels ads should not contain, list",
           "url": "https://www.facebook.com/business/ads-guide/update/video/instagram-reels",
@@ -968,8 +968,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "Ads Guide Reels page against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "deb2d8109a2a30c88a62ef88c233cbd0f348093a60530389edf77f57c2ddb9c2",
         "next_due": "2026-12-12"
       },
@@ -1040,8 +1040,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "course wiki page text against the claims; book not opened",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "e3b147c8c8ee1cfb3889a46851d0b40c6e14cdbb95fbea9d21e92c79f6c12719",
         "next_due": "2027-11-12"
       },

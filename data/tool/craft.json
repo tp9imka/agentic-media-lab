@@ -166,7 +166,7 @@
       ],
       "level": "intermediate",
       "fit": "low",
-      "fit_notes": "Only TTML input (EBU-TT-D or DAPT); SRT and VTT need converting first, and most short-form tools emit SRT or VTT. It checks technical rules only, so reading rate and line breaks still need a separate check. Needs Python 3.14 with poetry or uv. Not installed or run here.",
+      "fit_notes": "Only TTML input (EBU-TT-D or DAPT); SRT and VTT need converting first, and most short-form tools emit SRT or VTT. It checks technical rules only, so reading rate and line breaks still need a separate check. Built with Python 3.14, which the README suggests having available; setup uses poetry or uv. Not installed or run here.",
       "related": [
         {
           "id": "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
@@ -220,8 +220,8 @@
       "checked": {
         "date": "2026-11-12",
         "depth": "primary-read",
-        "by": "agent:kiro",
-        "what": "README.md via GitHub API against the claims",
+        "by": "agent:codex",
+        "what": "independent fact-check: claims, prose and category fields against the saved source",
         "source_sha256": "880f9bb484eb59874760c87f402e964d48586b7227d885bf08a73ba91bcf8ec1",
         "next_due": "2027-02-10"
       },
