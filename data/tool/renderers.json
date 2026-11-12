@@ -1,0 +1,1015 @@
+{
+  "schema_version": 1,
+  "lane": "renderers",
+  "records": [
+    {
+      "kind": "tool",
+      "lane": "renderers",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:remotion-dev/remotion",
+      "title": "Remotion",
+      "aliases": [
+        "remotion",
+        "npx remotion"
+      ],
+      "url": "https://github.com/remotion-dev/remotion",
+      "summary": "A React framework for video. Each frame is a component rendered from the frame number; the CLI renders the frames in headless Chrome and encodes MP4.",
+      "why_it_matters": "The most established code renderer an agent can drive locally, and the one most skills target. Its licence is the first thing to check before company work.",
+      "concepts": [
+        "concept:code-driven-video",
+        "concept:licences-and-territory",
+        "concept:review-loop",
+        "concept:motion-and-transitions"
+      ],
+      "level": "intermediate",
+      "maturity": "established",
+      "fit": "high",
+      "fit_notes": "Free for a person or a company of up to 3 employees; a bigger company needs a paid Company License, and the FAQ adds a per-render plan for automations (code that calls renderMedia() and similar). The repo says a changed licence ships with Remotion 5.0 (PR #3750); re-read LICENSE.md when you upgrade. For agent feedback, `npx remotion still <entry> <id> out.png --frame=N` gives one PNG without a full render, and `npx remotion render <id> out/frames --frames=0,30,90 --image-format=png` gives several (v4.0.502+). Animations written with CSS keyframes or setTimeout flicker or freeze because tabs render frames out of order.",
+      "related": [
+        {
+          "id": "tool:remotion-dev/skills",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "tool:heygen-com/hyperframes",
+          "rel": "alternative_to"
+        },
+        {
+          "id": "tool:0xs4n4tg/kinetograph",
+          "rel": "alternative_to",
+          "note": "Kinetograph states it renders Remotion projects without a browser."
+        }
+      ],
+      "tool_type": "renderer",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "motion",
+        "design",
+        "captions",
+        "review-loop"
+      ],
+      "cost": "mixed",
+      "claims": [
+        {
+          "text": "The free licence covers individuals, for-profit companies with up to 3 employees, non-profits and evaluation; others need a Company License.",
+          "quote": "a for-profit organization with up to 3 employees",
+          "locator": "LICENSE.md, Free License, Eligibility",
+          "url": "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A single frame can be rendered to an image from the CLI, which gives an agent a frame to inspect before the full render.",
+          "quote": "Render a still frame based on the entry point, the composition ID and save it to the output location.",
+          "locator": "packages/docs/docs/cli/still.mdx, npx remotion still",
+          "url": "https://github.com/remotion-dev/remotion/blob/main/packages/docs/docs/cli/still.mdx",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "CSS animations and timers are not captured correctly because frames render independently and out of order.",
+          "quote": "Remotion renders each frame independently. Frame 30 might be rendered before frame 10, or frame 50 might be rendered twice.",
+          "locator": "packages/docs/docs/troubleshooting/css-animations.mdx, Problem",
+          "url": "https://github.com/remotion-dev/remotion/blob/main/packages/docs/docs/troubleshooting/css-animations.mdx",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "LICENSE.md, license/faq.mdx, cli/still.mdx and troubleshooting/css-animations.mdx against the claims",
+        "source_sha256": "184be77958f8ff26028d73637b86a7ef347c4206e085ab56923fce4b4fd0df97",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "tool",
+      "lane": "renderers",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:manimcommunity/manim",
+      "title": "Manim Community Edition",
+      "aliases": [
+        "ManimCE",
+        "manim"
+      ],
+      "url": "https://github.com/ManimCommunity/manim",
+      "summary": "A Python animation engine for explanatory math video, forked from 3b1b/manim in 2020 and run by a community team. The `manim` CLI renders a Scene class to a video file.",
+      "why_it_matters": "The usual route for diagram and equation animation written by an agent in Python, with a one-flag way to get the last frame as a PNG.",
+      "concepts": [
+        "concept:code-driven-video",
+        "concept:review-loop",
+        "concept:motion-and-transitions"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "high",
+      "fit_notes": "`manim -s` (or `--format=png`) writes only the last frame, and `-ql` renders at low quality; both cut the review loop for an agent. Install needs system packages (the README points to per-OS docs; LaTeX only for TeX). The README says a major refactor is in progress, so APIs may move. Do not mix its install steps with 3b1b/manim: the package names differ and both READMEs warn of breakage.",
+      "related": [
+        {
+          "id": "tool:3b1b/manim",
+          "rel": "alternative_to",
+          "note": "Fork of it; different package and CLI."
+        }
+      ],
+      "tool_type": "renderer",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "motion",
+        "design",
+        "review-loop"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "It is the community-maintained fork of 3b1b/manim, and its maintainers recommend it over the original.",
+          "quote": "It was forked from 3b1b/manim, a tool originally created and open-sourced by Grant Sanderson",
+          "locator": "README.md, note under the introduction",
+          "url": "https://github.com/ManimCommunity/manim/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The CLI can skip the animation and save only the final frame as a PNG.",
+          "quote": "-s, --save_last_frame          Fast-forward animations and save the last frame",
+          "locator": "docs.manim.community, Configuration guide, command line help",
+          "url": "https://docs.manim.community/en/stable/guides/configuration.html",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Using the other project's install instructions breaks the install.",
+          "quote": "Trying to use these instructions to install [3b1b/manim](https://github.com/3b1b/manim) or instructions there to install this version will cause problems.",
+          "locator": "README.md, Installation, caution box",
+          "url": "https://github.com/ManimCommunity/manim/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md and the docs configuration guide against the claims",
+        "source_sha256": "b0e80254b6242cff7f662f3e8e528d868f9a94ca88d490585d02235d123fca8d",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "lane": "renderers",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:3b1b/manim",
+      "title": "ManimGL (3b1b/manim)",
+      "aliases": [
+        "manimgl",
+        "3b1b manim"
+      ],
+      "url": "https://github.com/3b1b/manim",
+      "summary": "Grant Sanderson's own Manim, installed as `manimgl`. It plays scenes in an OpenGL window and writes a file with `-w`.",
+      "why_it_matters": "The original engine behind 3Blue1Brown videos. An agent that writes ManimCE code for it, or the reverse, gets errors, so the reader must pick one.",
+      "concepts": [
+        "concept:code-driven-video",
+        "concept:motion-and-transitions"
+      ],
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "On a Mac it needs FFmpeg and, on ARM, Cairo from Homebrew; LaTeX is optional (MacTeX is about 6 GB, BasicTeX is the README's lighter path). The default run opens a window for a person; an agent needs `-w` to write a file or `-so` to save the final frame. Fewer tests and docs than ManimCE by its own README's account.",
+      "related": [
+        {
+          "id": "tool:manimcommunity/manim",
+          "rel": "alternative_to"
+        }
+      ],
+      "tool_type": "renderer",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "motion",
+        "design"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "Its README says the community edition was forked to be more stable, better tested and easier to start with.",
+          "quote": "In 2020 a group of developers forked it into what is now the [community edition](https://github.com/ManimCommunity/manim/), with a goal of being more stable, better tested, quicker to respond to community contributions, and all around friendlier to get started with.",
+          "locator": "README.md, introduction",
+          "url": "https://github.com/3b1b/manim/blob/master/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The pip package is manimgl, not manim.",
+          "quote": "The package name is `manimgl` instead of `manim` or `manimlib`.",
+          "locator": "README.md, Installation, note",
+          "url": "https://github.com/3b1b/manim/blob/master/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A flag saves the final frame as an image, which an agent can inspect.",
+          "quote": "`-so` will save the final frame to an image and show it",
+          "locator": "README.md, Using manim, CLI flags",
+          "url": "https://github.com/3b1b/manim/blob/master/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md against the claims and against the ManimCE README",
+        "source_sha256": "11b1db61a963e7168ed0af276cfb88f4f9110892c851638815b9a6a2f61e1324",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "lane": "renderers",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:motion-canvas/motion-canvas",
+      "title": "Motion Canvas",
+      "aliases": [
+        "motion-canvas"
+      ],
+      "url": "https://github.com/motion-canvas/motion-canvas",
+      "summary": "A TypeScript library that programs vector animation with generators, plus a browser editor with live preview. Rendering is started from the editor.",
+      "why_it_matters": "Good for code explainers synced to voice-over, but its render step is a button in a browser editor, which an agent cannot press without browser automation.",
+      "concepts": [
+        "concept:code-driven-video",
+        "concept:motion-and-transitions",
+        "concept:audio-and-captions"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "low",
+      "fit_notes": "For an agent that must produce the MP4 itself, use Revideo, its fork with a headless render API. The default exporter writes an image sequence; MP4 needs the FFmpeg exporter. Snapshots of the current frame go to /still in the output folder, again from the editor. I did not check for a documented headless or CLI render path beyond the rendering page.",
+      "related": [
+        {
+          "id": "tool:midrender/revideo",
+          "rel": "alternative_to",
+          "note": "Revideo is forked from Motion Canvas and adds headless rendering."
+        }
+      ],
+      "tool_type": "framework",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "motion",
+        "audio"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "It is a generator-based TypeScript library plus an editor for real-time preview, aimed at vector animation synced to voice-over.",
+          "quote": "It's a specialized tool designed to create informative vector animations and synchronize them with voice-overs.",
+          "locator": "README.md, Motion Canvas",
+          "url": "https://github.com/motion-canvas/motion-canvas/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Rendering starts from the RENDER button in the editor, which plays through the animation.",
+          "quote": "Clicking the RENDER button will initialize rendering",
+          "locator": "motion-canvas.io docs, Rendering, Rendering",
+          "url": "https://motion-canvas.io/docs/rendering",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Without an extra exporter the output is an image sequence, not a video.",
+          "quote": "If you don't see this option, it means that you don't have any additional exporters installed and the default Image sequence exporter will be used.",
+          "locator": "motion-canvas.io docs, Rendering, Exporter",
+          "url": "https://motion-canvas.io/docs/rendering",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md and the docs Rendering page against the claims",
+        "source_sha256": "4b7701ce1d31a80717dc873db69e4673f214e1e795b4e39ffd4ed8e0874441c3",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "lane": "renderers",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:midrender/revideo",
+      "title": "Revideo",
+      "aliases": [
+        "redotvideo/revideo",
+        "@revideo/core"
+      ],
+      "url": "https://github.com/midrender/revideo",
+      "summary": "A TypeScript engine for video in code, forked from Motion Canvas, with a headless renderVideo() API and a React player for preview. It renders through Node and a headless browser.",
+      "why_it_matters": "It gives the Motion Canvas authoring model a render call an agent can run, and it names Claude and Codex as authors.",
+      "concepts": [
+        "concept:code-driven-video",
+        "concept:motion-and-transitions",
+        "concept:audio-and-captions"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "The repo moved from redotvideo/revideo to midrender/revideo and is the engine behind the Midrender product. It counts renders through PostHog unless you set DISABLE_TELEMETRY=true. The README says it borrows from Remotion and Rive while its docs say it is a Motion Canvas fork; both can be true, but expect Motion Canvas APIs. I did not find a documented single-frame still command in what I read.",
+      "related": [
+        {
+          "id": "tool:motion-canvas/motion-canvas",
+          "rel": "extends"
+        }
+      ],
+      "tool_type": "renderer",
+      "agents": [
+        "claude-code",
+        "codex"
+      ],
+      "levers": [
+        "motion",
+        "audio"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "Its README names Claude and Codex as able to write a scene, because a scene is plain TypeScript.",
+          "quote": "A scene is plain TypeScript, so Claude or Codex can produce one from a prompt.",
+          "locator": "README.md, Revideo",
+          "url": "https://github.com/midrender/revideo/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Headless rendering runs wherever Node and a headless browser run.",
+          "quote": "It runs anywhere Node and a headless browser run",
+          "locator": "README.md, Capabilities, Headless rendering",
+          "url": "https://github.com/midrender/revideo/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It anonymously counts rendered videos and can be switched off with an environment variable.",
+          "quote": "Revideo anonymously counts how many videos are rendered",
+          "locator": "README.md, Telemetry",
+          "url": "https://github.com/midrender/revideo/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md and the docs welcome page against the claims",
+        "source_sha256": "27b5c7bf9de6018a718ef5e27ac194d48157474815276d6b1e916b986ffa43b0",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "lane": "renderers",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:nexu-io/html-video",
+      "title": "html-video",
+      "aliases": [
+        "nexu-io html-video",
+        "Open Design html-video"
+      ],
+      "url": "https://github.com/nexu-io/html-video",
+      "summary": "A local studio and CLI that has a coding agent write animated HTML frames from a prompt, article or repo, then renders them to MP4 through the HyperFrames engine.",
+      "why_it_matters": "A wrapper that drives Claude Code or Codex as a subprocess and ships 21 templates; only the HyperFrames engine works so far.",
+      "concepts": [
+        "concept:code-driven-video",
+        "concept:agent-portability",
+        "concept:agentic-pipelines"
+      ],
+      "level": "intro",
+      "maturity": "experimental",
+      "fit": "medium",
+      "fit_notes": "Needs Node 20+, pnpm, ffmpeg and Playwright Chromium. Remotion, Motion Canvas, Revideo and Manim adapters are planned, not built. It runs some agents with permission-skipping flags (`--yolo`, `--allow-all-tools`); check what it launches before use. Optional soundtrack needs a paid MiniMax key. Its engine table says Remotion is paid above 4 devs, which differs from Remotion's own licence text (free up to 3 employees).",
+      "related": [
+        {
+          "id": "tool:heygen-com/hyperframes",
+          "rel": "depends_on"
+        },
+        {
+          "id": "tool:remotion-dev/remotion",
+          "rel": "contradicts",
+          "note": "Licence threshold stated differently."
+        }
+      ],
+      "tool_type": "app",
+      "agents": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "gemini-cli",
+        "hermes"
+      ],
+      "levers": [
+        "design",
+        "story",
+        "audio",
+        "orchestration"
+      ],
+      "cost": "mixed",
+      "claims": [
+        {
+          "text": "Only the HyperFrames engine renders today; the other engines are on the roadmap.",
+          "quote": "Remotion, Motion Canvas / Revideo, and Manim are on the roadmap: the adapter interface is designed for them, but their adapters aren't built yet.",
+          "locator": "README.md, Why this exists, Status note",
+          "url": "https://github.com/nexu-io/html-video/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It invokes some agent CLIs with flags that skip permission prompts.",
+          "quote": "`copilot --allow-all-tools`, prompt via stdin",
+          "locator": "README.md, Supported agents, GitHub Copilot CLI row",
+          "url": "https://github.com/nexu-io/html-video/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Its engine table describes Remotion's licence as paid above 4 developers.",
+          "quote": "Source-available, paid above 4 devs",
+          "locator": "README.md, Why this exists, engine table, Remotion row",
+          "url": "https://github.com/nexu-io/html-video/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md against the claims and against Remotion LICENSE.md",
+        "source_sha256": "dc1a5fc6c7f1123ffef42929c0931cf941a78024a740681837be2926feadcce6",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "lane": "renderers",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:dmtrkovalenko/fframes",
+      "title": "fframes",
+      "aliases": [
+        "cargo-fframes"
+      ],
+      "url": "https://github.com/dmtrKovalenko/fframes",
+      "summary": "A Rust framework where each frame is an SVG tree returned by a function, drawn with Skia on the GPU and encoded with statically linked FFmpeg libraries. It ships a skill and a preview window with scrubbing.",
+      "why_it_matters": "A browser-free renderer aimed at agent iteration speed. Its speed claim against Remotion is the vendor's own and unmeasured here.",
+      "concepts": [
+        "concept:code-driven-video",
+        "concept:agent-skills",
+        "concept:review-loop"
+      ],
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Needs Rust and, on macOS, `brew install pkg-config ffmpeg x264 x265 opus nasm ninja`; the first build downloads prebuilt Skia and FFmpeg for macOS arm64. The agent writes Rust, so compile errors are part of the loop. The skill installs from a remote site (`npx skills add https://fframes.studio`); read it before installing. `cargo run --release -- preview` opens a window for a person; I did not find a documented still-frame command for the agent.",
+      "related": [
+        {
+          "id": "tool:remotion-dev/remotion",
+          "rel": "alternative_to"
+        }
+      ],
+      "tool_type": "framework",
+      "agents": [
+        "any-skill"
+      ],
+      "levers": [
+        "motion",
+        "audio",
+        "captions",
+        "review-loop"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "The project claims to render more than 30 times faster than Remotion.",
+          "quote": "we are over 30x faster than remotion",
+          "locator": "README.md, What is it for",
+          "url": "https://github.com/dmtrKovalenko/fframes/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A missing font falls back silently in the render; the inspect command reports it and the fix is to put the font file in media/.",
+          "quote": "**Text renders in the wrong font:** `inspect` reports `No match for ... font-family`; put the font file in the",
+          "locator": "README.md, Requirements, Troubleshooting",
+          "url": "https://github.com/dmtrKovalenko/fframes/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Its skill installs from the project's website rather than from the repo.",
+          "quote": "npx skills add https://fframes.studio",
+          "locator": "README.md, Get started",
+          "url": "https://github.com/dmtrKovalenko/fframes/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "downgrade": {
+        "reason": "interested-party",
+        "note": "The speed claim is the vendor's own benchmark against a competitor."
+      },
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md against the claims",
+        "source_sha256": "bacfcc9216c364c300193c95df4041063a59215984fdaa2ee0d40bb6a020dba4",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "lane": "renderers",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:0xs4n4tg/kinetograph",
+      "title": "Kinetograph",
+      "aliases": [
+        "kinetograph"
+      ],
+      "url": "https://github.com/0xS4N4TG/kinetograph",
+      "summary": "A browser-free video engine: Node runs a Remotion-style TSX or HTML project and a Rust GPU compositor draws each frame. It states that Remotion and HyperFrames projects render unchanged.",
+      "why_it_matters": "It could give Remotion or HyperFrames code a render path with no Chrome, and its docs list in detail what it cannot draw. The repo was created on 2026-10-23 and is in beta.",
+      "concepts": [
+        "concept:code-driven-video",
+        "concept:review-loop",
+        "concept:consistency"
+      ],
+      "level": "advanced",
+      "maturity": "experimental",
+      "fit": "medium",
+      "fit_notes": "Prebuilt package for macOS on Apple Silicon, Node 22+. `kinetograph doctor <entry>` lists every unsupported element and frame before a long render, and `--strict` fails the render instead of drawing an approximation; use both in agent loops. It reads no system fonts: CJK, Arabic and Devanagari draw as boxes unless you load a font. Compatibility claims against Remotion and HyperFrames are the author's; not measured here. Running it on Remotion code does not change what Remotion's licence asks of you; I did not check that question.",
+      "related": [
+        {
+          "id": "tool:remotion-dev/remotion",
+          "rel": "alternative_to"
+        },
+        {
+          "id": "tool:heygen-com/hyperframes",
+          "rel": "alternative_to"
+        }
+      ],
+      "tool_type": "renderer",
+      "agents": [
+        "claude-code",
+        "codex"
+      ],
+      "levers": [
+        "motion",
+        "design",
+        "audio",
+        "review-loop"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "It renders without a browser, using a Rust GPU compositor, and states that Remotion and HyperFrames projects render as they are.",
+          "quote": "Existing Remotion projects render as they are, and so do",
+          "locator": "README.md, introduction",
+          "url": "https://github.com/0xS4N4TG/kinetograph/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A doctor command checks every frame without the GPU and lists what cannot be drawn, before a long render.",
+          "quote": "kinetograph doctor <entry> goes through every frame without the GPU and lists what can't be drawn, on which frames, and any scene a render would refuse.",
+          "locator": "kinetograph.dev docs, Compatibility, introduction",
+          "url": "https://kinetograph.dev/docs/compat/",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Its docs admit rare non-identical output between GPU renders at the same settings, and give a bit-exact fallback.",
+          "quote": "Rarely, when renderers share the GPU, two renders at the same concurrency differ by 1 in one colour channel on a few pixels of a frame.",
+          "locator": "kinetograph.dev docs, Compatibility, last section",
+          "url": "https://kinetograph.dev/docs/compat/",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md and the docs Compatibility page against the claims",
+        "source_sha256": "bba2ef425d116dae0fd1bf10002f04e72d46640b10e0de67ae5bcaabaddb2e79",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "lane": "renderers",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:ffmpeg/ffmpeg",
+      "title": "FFmpeg",
+      "aliases": [
+        "ffmpeg",
+        "ffprobe",
+        "libav"
+      ],
+      "url": "https://ffmpeg.org/",
+      "summary": "The command-line encoder and filter engine under almost every renderer here. Filtergraphs alone can cross-fade clips (xfade), burn in text (drawtext) and normalise loudness (loudnorm).",
+      "why_it_matters": "An agent can finish or assemble a clip with FFmpeg alone, and most render failures that reach the reader are FFmpeg input mismatches.",
+      "concepts": [
+        "concept:code-driven-video",
+        "concept:delivery",
+        "concept:audio-and-captions",
+        "concept:motion-and-transitions"
+      ],
+      "level": "intermediate",
+      "maturity": "established",
+      "fit": "high",
+      "fit_notes": "xfade fails unless both inputs share resolution, pixel format, frame rate and timebase: scale and fps-normalise first. loudnorm defaults to -24 LUFS integrated; set I= to the platform target yourself. drawtext exists only if your build was configured with libfreetype and libharfbuzz; run `ffmpeg -filters | grep drawtext` before relying on it. I did not check which flags the Homebrew build enables.",
+      "related": [
+        {
+          "id": "tool:mifi/editly",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "tool:zulko/moviepy",
+          "rel": "integrates_with"
+        }
+      ],
+      "tool_type": "runtime",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "motion",
+        "audio",
+        "captions",
+        "delivery"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "xfade needs both inputs to match in frame rate, resolution, pixel format and timebase.",
+          "quote": "Both inputs must be constant frame-rate and have the same resolution, pixel format, frame rate and timebase.",
+          "locator": "ffmpeg-filters, 11.292 xfade",
+          "url": "https://ffmpeg.org/ffmpeg-filters.html",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "loudnorm defaults to an integrated loudness target of -24.",
+          "quote": "Range is -70.0 - -5.0. Default value is -24.0.",
+          "locator": "ffmpeg-filters, 8.97 loudnorm, option I",
+          "url": "https://ffmpeg.org/ffmpeg-filters.html",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "drawtext is only compiled in when FFmpeg is configured with libfreetype and libharfbuzz.",
+          "quote": "To enable compilation of this filter, you need to configure FFmpeg with --enable-libfreetype and --enable-libharfbuzz.",
+          "locator": "ffmpeg-filters, 11.76 drawtext",
+          "url": "https://ffmpeg.org/ffmpeg-filters.html",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "ffmpeg-filters.html sections xfade, loudnorm and drawtext against the claims",
+        "source_sha256": "de713d78ed02106ab97410b2bbe763ad1f8372b5dff9461befa59d6cfcfdcf56",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "lane": "renderers",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:mifi/editly",
+      "title": "editly",
+      "aliases": [
+        "editly"
+      ],
+      "url": "https://github.com/mifi/editly",
+      "summary": "A Node.js tool that builds a video from a JSON5 edit spec of clips, images, titles, audio and GL transitions, streaming through ffmpeg.",
+      "why_it_matters": "A declarative format an agent can write without a frame model, with a `--fast` flag for a low-cost preview render.",
+      "concepts": [
+        "concept:code-driven-video",
+        "concept:footage-editing",
+        "concept:audio-and-captions"
+      ],
+      "level": "intro",
+      "maturity": "dormant",
+      "fit": "medium",
+      "fit_notes": "Needs ffmpeg and ffprobe on PATH and a native headless-gl build; the README's troubleshooting is mostly native-module errors. Without `--fast`, every clip is converted to the first input's size and frame rate, which surprises mixed inputs. The last push to the repo was 2025-05-12 (GitHub API, read 2026-11-12), so I marked it dormant. It is a single-maintainer project by its README.",
+      "related": [
+        {
+          "id": "tool:ffmpeg/ffmpeg",
+          "rel": "depends_on"
+        }
+      ],
+      "tool_type": "renderer",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "motion",
+        "audio",
+        "captions"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "Its fast mode renders at low resolution and frame rate for a quick preview.",
+          "quote": "Fast mode (low resolution and FPS, useful for getting a quick preview ⏩)",
+          "locator": "README.md, Edit spec options table, fast",
+          "url": "https://github.com/mifi/editly/blob/master/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Without fast mode, output size and frame rate come from the first input video.",
+          "quote": "Without `--fast`, it will default to using the **width**, **height** and **frame rate** from the **first** input video.",
+          "locator": "README.md, Usage: Command line video editor",
+          "url": "https://github.com/mifi/editly/blob/master/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It needs ffmpeg and ffprobe installed and on PATH.",
+          "quote": "`ffmpeg` (and `ffprobe`) [installed](http://ffmpeg.org/) and available in `PATH`",
+          "locator": "README.md, Requirements",
+          "url": "https://github.com/mifi/editly/blob/master/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md against the claims; push date from the GitHub API",
+        "source_sha256": "b1a8788f9066986c60a0160c338036c5302f06aa43cd537c6a47e96239aaafce",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "lane": "renderers",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:zulko/moviepy",
+      "title": "MoviePy",
+      "aliases": [
+        "moviepy"
+      ],
+      "url": "https://github.com/Zulko/moviepy",
+      "summary": "A Python library for cutting, compositing and titling video. It loads frames as numpy arrays and encodes the result through ffmpeg.",
+      "why_it_matters": "Easy for an agent to script in Python, but agent training data is full of v1 code that v2 broke.",
+      "concepts": [
+        "concept:footage-editing",
+        "concept:code-driven-video"
+      ],
+      "level": "intro",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Tell the agent to target MoviePy v2 and to read the v1-to-v2 guide: its README example uses v2 names such as `subclipped` and `with_volume_scaled`, and code written against v1 docs fails. It is slower than ffmpeg alone, so use it for logic and let ffmpeg do heavy filters. TextClip takes a font file path, so ship the .ttf with the project. The README asks for maintainers. I did not check a still-frame API.",
+      "related": [
+        {
+          "id": "tool:ffmpeg/ffmpeg",
+          "rel": "depends_on"
+        }
+      ],
+      "tool_type": "library",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "captions",
+        "audio"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "Version 2.0 introduced major breaking changes and v1 is no longer maintained.",
+          "quote": "MoviePy recently upgraded to v2.0, introducing major breaking changes.",
+          "locator": "README.md, note at top",
+          "url": "https://github.com/Zulko/moviepy/blob/master/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Its own README says it is slower than using ffmpeg directly.",
+          "quote": "albeit slower than using ffmpeg directly due to heavier data import/export operations",
+          "locator": "README.md, How MoviePy works",
+          "url": "https://github.com/Zulko/moviepy/blob/master/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md against the claims",
+        "source_sha256": "272feb3c45b86a09aa6266cdc3af1334eac34a6fb1abcb395805f0aaf540c02f",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "lane": "renderers",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:ahujasid/mcp-for-blender",
+      "title": "MCP for Blender",
+      "aliases": [
+        "blender-mcp",
+        "mcp-for-blender",
+        "ahujasid/blender-mcp"
+      ],
+      "url": "https://github.com/ahujasid/mcp-for-blender",
+      "summary": "A third-party MCP server and Blender add-on that lets an agent run Python in a live Blender, look at viewport, camera and animation-strip views, and render. Blender itself renders headless with `blender -b file.blend -a`.",
+      "why_it_matters": "The working path for 3D shots driven by an agent, with a built-in way for the agent to see its own frames.",
+      "concepts": [
+        "concept:code-driven-video",
+        "concept:mcp-servers",
+        "concept:review-loop",
+        "concept:popularity-and-trust"
+      ],
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "The server runs any Python the agent writes inside Blender by default; set BLENDER_MCP_SAFE_MODE=1 and save your .blend first. The quick start pipes a remote script to sh; the manual setup avoids that. Some 3D-generation features are premium or need Sketchfab or Hyper3D keys. For the final video, the agent can call Blender's own CLI (`blender -b file.blend -a`, with -f N for one frame); put -o and format flags before -a.",
+      "related": [],
+      "tool_type": "mcp-server",
+      "agents": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "any-mcp"
+      ],
+      "levers": [
+        "asset",
+        "review-loop",
+        "motion"
+      ],
+      "cost": "mixed",
+      "claims": [
+        {
+          "text": "Its tool for running code executes arbitrary Python in Blender, and the README tells you to save your work first.",
+          "quote": "The `execute_blender_code` tool allows running arbitrary Python code in Blender, which can be powerful but potentially dangerous.",
+          "locator": "README.md, Limitations & Security Considerations",
+          "url": "https://github.com/ahujasid/mcp-for-blender/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A look tool returns viewport, camera, multi-angle or animation-strip views so the agent can check a frame.",
+          "quote": "See the result from the `viewport`, `camera`, `angles` (auto-framed multi-view sheet, any direction) or `frames` (animation strip)",
+          "locator": "README.md, tools table, look",
+          "url": "https://github.com/ahujasid/mcp-for-blender/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Blender's CLI renders without the UI, and argument order matters: -f or -a must come last.",
+          "quote": "Always position -f or -a as the last arguments.",
+          "locator": "docs.blender.org, Rendering From The Command Line",
+          "url": "https://docs.blender.org/manual/en/latest/advanced/command_line/render.html",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md and the Blender manual command-line render page against the claims",
+        "source_sha256": "3b99ca9b7295f88ca255a51a9245695f2e3812de1873cdc04a3a0583ea116588",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "lane": "renderers",
+      "url_status": "live",
+      "status": "current",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "id": "tool:greensock/gsap",
+      "title": "GSAP",
+      "aliases": [
+        "GreenSock",
+        "gsap"
+      ],
+      "url": "https://github.com/greensock/GSAP",
+      "summary": "A JavaScript animation library, owned by Webflow, that HyperFrames uses for motion and Remotion projects can seek. It has no renderer of its own; a frame-seeking renderer captures it.",
+      "why_it_matters": "Most HTML video an agent writes moves with GSAP, so its licence travels with every HyperFrames clip.",
+      "concepts": [
+        "concept:motion-and-transitions",
+        "concept:licences-and-territory",
+        "concept:code-driven-video"
+      ],
+      "level": "intro",
+      "maturity": "established",
+      "fit": "high",
+      "fit_notes": "Commercial use costs nothing, including the plugins that used to be paid. The licence is not open source: it bans use in no-code visual animation builders that compete with Webflow, and Webflow can change the terms by posting new ones. A renderer must pause and seek GSAP timelines per frame; a tween left playing on the wall clock is what breaks HyperFrames and Remotion renders.",
+      "related": [
+        {
+          "id": "tool:heygen-com/hyperframes",
+          "rel": "integrates_with"
+        }
+      ],
+      "tool_type": "library",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "motion"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "Commercial use is covered at no charge, including formerly members-only plugins such as SplitText and MorphSVG.",
+          "quote": "Commercial usage is covered under the standard license.",
+          "locator": "gsap.com/standard-license, FAQ",
+          "url": "https://gsap.com/standard-license",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Use inside no-code visual animation tools that compete with Webflow is prohibited.",
+          "quote": "\"Prohibited Uses\" means any implementation and/or use of GSAP Products in tools that allow users to build visual animations without code that encourages, induces, or materially assists in creating a solution that competes with Webflow’s visual animation building capabilities.",
+          "locator": "gsap.com/standard-license, I. Definitions",
+          "url": "https://gsap.com/standard-license",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "AI-generated GSAP code is stated not to be a prohibited use.",
+          "quote": "AI-generated code is not a \"Prohibited Use\".",
+          "locator": "gsap.com/standard-license, FAQ",
+          "url": "https://gsap.com/standard-license",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "gsap.com/standard-license (effective 2025-04-30, modified 2025-05-30) and README.md against the claims",
+        "source_sha256": "6340dffdce733fa2af357358defa467bbfcadddda8c566fa07cfed48fbb85b21",
+        "next_due": "2027-02-10"
+      }
+    }
+  ]
+}

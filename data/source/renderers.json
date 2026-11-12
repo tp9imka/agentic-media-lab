@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "lane": "renderers",
+  "records": [
+    {
+      "id": "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+      "kind": "source",
+      "title": "HyperFrames vs Remotion (HeyGen guide)",
+      "url": "https://hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+      "summary": "HeyGen's own comparison of HyperFrames and Remotion, with one agent run on each and a table of how timing, licence and existing web material differ.",
+      "why_it_matters": "The vendor of one side states where the other is better and admits HyperFrames fails quietly when its rules are broken. Read it as a party with an interest.",
+      "concepts": [
+        "concept:code-driven-video",
+        "concept:licences-and-territory",
+        "concept:evaluation"
+      ],
+      "level": "intro",
+      "fit": "medium",
+      "fit_notes": "Written by HeyGen, which makes HyperFrames. The test was one run each, and the page itself says it decides nothing about quality. Its Remotion licence line matches Remotion's LICENSE.md. The 'no node_modules installed' row is about the project folder; the CLI still needs Node 22 and FFmpeg.",
+      "related": [
+        {
+          "id": "tool:heygen-com/hyperframes",
+          "rel": "evaluated_on"
+        },
+        {
+          "id": "tool:remotion-dev/remotion",
+          "rel": "evaluated_on"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "HyperFrames breaks quietly if an agent does not follow its rules: paused timeline, no wall clocks, no unseeded randomness.",
+          "quote": "HyperFrames asks you to follow rules — paused timeline, no wall clocks, no unseeded randomness — and breaks quietly if you don’t.",
+          "locator": "Section What Remotion does better",
+          "url": "https://hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A HyperFrames timeline that is not registered on window.__timelines renders as a still frame with no motion.",
+          "quote": "Miss the last one and you get a still frame with no motion.",
+          "locator": "Section The same title card, written both ways",
+          "url": "https://hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Its one-run test says a single run decides nothing about quality.",
+          "quote": "Both are good videos; a single run decides nothing about quality.",
+          "locator": "Section Same request, two agents",
+          "url": "https://hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "downgrade": {
+        "reason": "interested-party",
+        "note": "HeyGen makes HyperFrames."
+      },
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "visible page text against the claims and against Remotion LICENSE.md",
+        "source_sha256": "f3eac858117992fd1e9791abfdc69f443b6657ed07666c31f7b7bf26c3f8719a",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "renderers"
+    },
+    {
+      "id": "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
+      "kind": "source",
+      "title": "HyperFrames vs Remotion research note (GenMotion)",
+      "url": "https://github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
+      "summary": "A research note dated 2026-09-30 by the GenMotion team that reads the HyperFrames and Remotion repos and compares their capture, CLI, agent and licence details.",
+      "why_it_matters": "The only source found that says how HyperFrames capture differs on macOS, which is the reader's machine.",
+      "concepts": [
+        "concept:code-driven-video",
+        "concept:consistency",
+        "concept:review-loop"
+      ],
+      "level": "advanced",
+      "fit": "medium",
+      "fit_notes": "Written by a team building a competing engine; its last section argues for GenMotion. It read the repos, not the docs sites, which it says were blocked. The macOS capture claim needs a check against the HyperFrames engine source: the engine README I opened names BeginFrame capture but does not mention a macOS fallback, so treat the claim as unconfirmed. Its Remotion pricing line matches the Remotion licence FAQ.",
+      "related": [
+        {
+          "id": "tool:heygen-com/hyperframes",
+          "rel": "evaluated_on"
+        },
+        {
+          "id": "tool:remotion-dev/remotion",
+          "rel": "evaluated_on"
+        },
+        {
+          "id": "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "independent-secondary",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "It says HyperFrames' atomic BeginFrame capture runs only on Linux, macOS falls back to screenshots, and --docker is the route to exact output.",
+          "quote": "HyperFrames' atomic `BeginFrame` capture only runs on Linux headless-shell; macOS and Windows fall back to screenshots, and it recommends `--docker` for exact output.",
+          "locator": "Section 1 TL;DR, Determinism bullet",
+          "url": "https://github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It says an <audio> element with no id is dropped from a HyperFrames render with no error at render time.",
+          "quote": "An `<audio>` element without an `id` is **dropped silently** (it is a lint error).",
+          "locator": "Section 2.5 Render pipeline, Audio",
+          "url": "https://github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It reports Remotion's automation price as one cent per render with a monthly minimum.",
+          "quote": "\"automated\" products such as prompt-to-video tools pay **$0.01/render with a $100/month minimum**.",
+          "locator": "Section 1 TL;DR, Remotion bullet",
+          "url": "https://github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "downgrade": {
+        "reason": "interested-party",
+        "note": "Written by a competing engine's team."
+      },
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "the note against the claims, and the HyperFrames engine README for the capture claim",
+        "source_sha256": "67b7e0e0eec76cde6967585c4e042f54a1de57585d2cf8a3940525a79d68e99d",
+        "next_due": "2026-12-12"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "renderers"
+    }
+  ]
+}
