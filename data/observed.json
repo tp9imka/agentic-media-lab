@@ -217,6 +217,64 @@
     ],
     "stars": 7
   },
+  "source:github.com/heygen-com/hyperframes/blob/main/skills/hyperframes/skill.md": {
+    "archived": false,
+    "created": "2026-03-10",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 7671,
+    "installs": 1524572,
+    "installs_by_skill": {
+      "general-video": 661816,
+      "hyperframes": 1486779,
+      "hyperframes-animation": 1005453,
+      "hyperframes-audio": 663932,
+      "hyperframes-cli": 1524572,
+      "hyperframes-core": 931131,
+      "hyperframes-creative": 917182,
+      "hyperframes-keyframes": 754861,
+      "hyperframes-registry": 1274564,
+      "media-use": 1395655
+    },
+    "last_activity": "2026-11-12",
+    "licence": "Apache-2.0",
+    "open_issues": 245,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/heygen-com/hyperframes",
+      "https://skills.sh/api/search?q=hyperframes"
+    ],
+    "stars": 83132
+  },
+  "source:github.com/heygen-com/hyperframes/issues/4435": {
+    "archived": false,
+    "created": "2026-03-10",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 7671,
+    "installs": 1524572,
+    "installs_by_skill": {
+      "general-video": 661816,
+      "hyperframes": 1486779,
+      "hyperframes-animation": 1005453,
+      "hyperframes-audio": 663932,
+      "hyperframes-cli": 1524572,
+      "hyperframes-core": 931131,
+      "hyperframes-creative": 917182,
+      "hyperframes-keyframes": 754861,
+      "hyperframes-registry": 1274564,
+      "media-use": 1395655
+    },
+    "last_activity": "2026-11-12",
+    "licence": "Apache-2.0",
+    "open_issues": 245,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/heygen-com/hyperframes",
+      "https://skills.sh/api/search?q=hyperframes"
+    ],
+    "stars": 83132
+  },
   "source:github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss": {
     "archived": false,
     "created": "2018-03-27",
@@ -231,6 +289,21 @@
       "https://skills.sh/api/search?q=material-web"
     ],
     "stars": 11434
+  },
+  "source:github.com/zhuyansen/awesome-claude-video-skills": {
+    "archived": false,
+    "created": "2026-09-27",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 191,
+    "last_activity": "2026-11-10",
+    "licence": "unknown",
+    "open_issues": 15,
+    "sources": [
+      "https://api.github.com/repos/zhuyansen/awesome-claude-video-skills",
+      "https://skills.sh/api/search?q=awesome-claude-video-skills"
+    ],
+    "stars": 1939
   },
   "tool:0xs4n4tg/kinetograph": {
     "archived": false,
@@ -657,6 +730,26 @@
     ],
     "stars": 961
   },
+  "tool:harry0703/moneyprinterturbo": {
+    "archived": false,
+    "created": "2024-03-11",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 22831,
+    "installs": 288,
+    "installs_by_skill": {
+      "moneyprinterturbo-video": 288
+    },
+    "last_activity": "2026-11-12",
+    "licence": "MIT",
+    "open_issues": 79,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/harry0703/MoneyPrinterTurbo",
+      "https://skills.sh/api/search?q=MoneyPrinterTurbo"
+    ],
+    "stars": 142725
+  },
   "tool:heygen-com/hyperframes": {
     "archived": false,
     "created": "2026-03-10",
@@ -685,6 +778,21 @@
       "https://skills.sh/api/search?q=hyperframes"
     ],
     "stars": 83101
+  },
+  "tool:hkuds/vimax": {
+    "archived": false,
+    "created": "2025-03-30",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 1954,
+    "last_activity": "2026-09-30",
+    "licence": "MIT",
+    "open_issues": 55,
+    "sources": [
+      "https://api.github.com/repos/HKUDS/ViMax",
+      "https://skills.sh/api/search?q=ViMax"
+    ],
+    "stars": 12901
   },
   "tool:iart-ai/motion-skills": {
     "archived": false,
@@ -1139,6 +1247,36 @@
       "https://skills.sh/api/search?q=skills"
     ],
     "stars": 6888
+  },
+  "tool:seme-org/open-director": {
+    "archived": false,
+    "created": "2026-05-03",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 25,
+    "last_activity": "2026-05-29",
+    "licence": "LGPL-3.0",
+    "open_issues": 1,
+    "sources": [
+      "https://api.github.com/repos/seme-org/open-director",
+      "https://skills.sh/api/search?q=open-director"
+    ],
+    "stars": 132
+  },
+  "tool:showlab/code2video": {
+    "archived": false,
+    "created": "2025-09-29",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 303,
+    "last_activity": "2026-08-24",
+    "licence": "MIT",
+    "open_issues": 0,
+    "sources": [
+      "https://api.github.com/repos/showlab/Code2Video",
+      "https://skills.sh/api/search?q=Code2Video"
+    ],
+    "stars": 2370
   },
   "tool:temporalio/temporal": {
     "archived": false,
