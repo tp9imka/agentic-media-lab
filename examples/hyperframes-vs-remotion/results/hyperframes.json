@@ -1,0 +1,90 @@
+{
+  "arm": "hyperframes",
+  "file": "hyperframes.mp4",
+  "thresholds": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "duration_s": 20.0,
+    "duration_tolerance_s": 0.5,
+    "black_max_s": 1.0,
+    "black_ignore_before_s": 0.5,
+    "freeze_max_s": 4.0,
+    "freeze_noise_db": -60
+  },
+  "stream": {
+    "codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "frames": 600,
+    "pix_fmt": "yuv420p",
+    "duration_s": 20.0,
+    "bytes": 780393
+  },
+  "black_segments": [
+    {
+      "start_s": 2.97,
+      "duration_s": 0.33
+    }
+  ],
+  "freeze_segments": [
+    {
+      "start_s": 0.9,
+      "duration_s": 1.97
+    },
+    {
+      "start_s": 3.4,
+      "duration_s": 0.87
+    },
+    {
+      "start_s": 4.27,
+      "duration_s": 0.73
+    },
+    {
+      "start_s": 5.0,
+      "duration_s": 0.7
+    },
+    {
+      "start_s": 5.7,
+      "duration_s": 2.17
+    },
+    {
+      "start_s": 8.23,
+      "duration_s": 0.5
+    },
+    {
+      "start_s": 8.9,
+      "duration_s": 0.67
+    },
+    {
+      "start_s": 9.57,
+      "duration_s": 1.0
+    },
+    {
+      "start_s": 10.97,
+      "duration_s": 1.8
+    },
+    {
+      "start_s": 13.37,
+      "duration_s": 0.6
+    },
+    {
+      "start_s": 13.97,
+      "duration_s": 0.77
+    },
+    {
+      "start_s": 14.73,
+      "duration_s": 1.97
+    },
+    {
+      "start_s": 17.37,
+      "duration_s": 0.57
+    }
+  ],
+  "longest_freeze_s": 2.17,
+  "frozen_share": 0.716,
+  "contact_sheet": "hyperframes-sheet.png",
+  "verdict": "pass",
+  "reasons": []
+}

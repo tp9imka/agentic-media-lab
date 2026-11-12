@@ -1,0 +1,39 @@
+<template>
+  <style>
+@font-face { font-family: "SysSans"; font-weight: 400; src: local("Helvetica Neue"), local("HelveticaNeue"); }
+    @font-face { font-family: "SysSans"; font-weight: 700; src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"); }
+    @font-face { font-family: "SysMono"; font-weight: 400; src: local("Menlo"), local("Menlo Regular"), local("Menlo-Regular"); }
+    #root { position: absolute; inset: 0; background: var(--ground, #0F1419); color: var(--ink, #F2F4F7); font-family: "SysSans", sans-serif; overflow: hidden; }
+    .s2-clip { position: absolute; inset: 0; }
+    .s2-bar { position: absolute; left: 192px; top: 108px; width: 12px; height: 864px; background: var(--accent, #4CC38A); }
+    .s2-flood { position: absolute; inset: 0; background: var(--accent, #4CC38A); }
+    .s2-copy { position: absolute; left: 252px; top: 0; width: 1476px; height: 1080px; }
+    .s2-label { position: absolute; left: 0; font-size: 52px; font-weight: 400; color: rgba(242, 244, 247, 0.6); letter-spacing: 0.01em; }
+    .s2-h { position: absolute; left: 0; font-weight: 700; letter-spacing: -0.02em; line-height: 1.08; white-space: nowrap; }
+    .s2-h span, .s2-sub span { display: inline-block; white-space: pre; }
+    .s2-sub { position: absolute; left: 0; font-weight: 400; font-size: 58px; white-space: nowrap; }
+    #s2-label { top: 322px; }
+    #s2-h { top: 398px; font-size: 118px; }
+    #s2-sub { top: 580px; }
+  </style>
+  <div id="root" data-composition-id="s2" data-width="1920" data-height="1080">
+    <div id="s2-barclip" class="clip s2-clip" data-start="0" data-duration="5" data-track-index="0"><div id="s2-bar" class="s2-bar"></div></div>
+    <div id="s2-copyclip" class="clip s2-clip" data-start="0" data-duration="5" data-track-index="1">
+      <div id="s2-copy" class="s2-copy">
+        <p id="s2-label" class="s2-label">Step 1</p>
+        <h2 id="s2-h" class="s2-h"><span class="s2-w">Open </span><span class="s2-w">the </span><span class="s2-w">primary </span><span class="s2-w">source.</span></h2>
+        <p id="s2-sub" class="s2-sub"><span id="s2-a" class="s2-s">The skill file. </span><span id="s2-b" class="s2-s">The licence. </span><span id="s2-c" class="s2-s">The pricing page.</span></p>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#s2-label", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power2.out" }, 0.05);
+    tl.fromTo(".s2-w", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.13, ease: "power4.out", stagger: 0.067 }, 0.15);
+    tl.fromTo("#s2-a", { clipPath: "inset(0% 100% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.4, ease: "expo.out" }, 1.2);
+    tl.fromTo("#s2-b", { clipPath: "inset(0% 100% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.4, ease: "expo.out" }, 1.9);
+    tl.fromTo("#s2-c", { clipPath: "inset(0% 100% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.4, ease: "expo.out" }, 2.6);
+    tl.fromTo("#s2-copy", { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 4.76);
+    window.__timelines["s2"] = tl;
+  </script>
+</template>

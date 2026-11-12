@@ -1,0 +1,19 @@
+{
+  "title": "Same brief, HyperFrames vs Remotion, vendor skills only",
+  "summary": "Two fresh Claude agents get one fixed 20 s brief, one with the HyperFrames skills and one with the Remotion Agent Skills, and render locally with no human help.",
+  "concepts": [
+    "concept:code-driven-video",
+    "concept:agent-skills",
+    "concept:review-loop",
+    "concept:motion-and-transitions"
+  ],
+  "status": "ran",
+  "verified": "Both arms ran on 2026-11-12 on an Apple M3 Max (64 GB, macOS), Node 22, ffmpeg 7.1.1. Agent under test: a Claude subagent per arm, one run each. measure.py was run on both delivered files by the driver.",
+  "deps": "stdlib",
+  "first_command": "python3 examples/hyperframes-vs-remotion/measure.py hyperframes examples/hyperframes-vs-remotion/results/hyperframes.mp4",
+  "input": "agent-run",
+  "runtime": "about 2 s per clip to measure; the agent runs took 7 min 46 s and 11.0 min",
+  "key_result": "Both arms pass the stream and stillness thresholds fixed before the run. One blind reviewer scored the Remotion clip 10/12 and the HyperFrames clip 8/12 on a six-point rubric (judgement, n = 1 per arm).",
+  "threshold": "Per arm: readable MP4, 1920x1080, 30 fps, 20.0 s +/- 0.5 s, h264, no black segment over 1.0 s after the first 0.5 s, no frozen segment over 4.0 s, delivered within 30 min with no human message.",
+  "verdict": "pass"
+}

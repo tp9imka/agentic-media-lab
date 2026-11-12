@@ -1,0 +1,46 @@
+<template>
+  <style>
+@font-face { font-family: "SysSans"; font-weight: 400; src: local("Helvetica Neue"), local("HelveticaNeue"); }
+    @font-face { font-family: "SysSans"; font-weight: 700; src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"); }
+    @font-face { font-family: "SysMono"; font-weight: 400; src: local("Menlo"), local("Menlo Regular"), local("Menlo-Regular"); }
+    #root { position: absolute; inset: 0; background: var(--ground, #0F1419); color: var(--ink, #F2F4F7); font-family: "SysSans", sans-serif; overflow: hidden; }
+    .s3-clip { position: absolute; inset: 0; }
+    .s3-bar { position: absolute; left: 192px; top: 108px; width: 12px; height: 864px; background: var(--accent, #4CC38A); }
+    .s3-flood { position: absolute; inset: 0; background: var(--accent, #4CC38A); }
+    .s3-copy { position: absolute; left: 252px; top: 0; width: 1476px; height: 1080px; }
+    .s3-label { position: absolute; left: 0; font-size: 52px; font-weight: 400; color: rgba(242, 244, 247, 0.6); letter-spacing: 0.01em; }
+    .s3-h { position: absolute; left: 0; font-weight: 700; letter-spacing: -0.02em; line-height: 1.08; white-space: nowrap; }
+    .s3-h span, .s3-sub span { display: inline-block; white-space: pre; }
+    .s3-sub { position: absolute; left: 0; font-weight: 400; font-size: 58px; white-space: nowrap; }
+    #s3-label { top: 124px; }
+    #s3-h1 { top: 196px; font-size: 100px; }
+    #s3-h2 { top: 310px; font-size: 100px; }
+    #s3-panel { position: absolute; left: 0; top: 520px; width: 1476px; height: 330px; background: rgba(242, 244, 247, 0.06); }
+    #s3-quote { position: absolute; left: 56px; top: 76px; font-size: 58px; font-weight: 400; white-space: nowrap; }
+    #s3-src { position: absolute; left: 56px; top: 192px; font-size: 46px; color: rgba(242, 244, 247, 0.6); white-space: nowrap; }
+  </style>
+  <div id="root" data-composition-id="s3" data-width="1920" data-height="1080">
+    <div id="s3-barclip" class="clip s3-clip" data-start="0" data-duration="5" data-track-index="0"><div id="s3-bar" class="s3-bar"></div></div>
+    <div id="s3-copyclip" class="clip s3-clip" data-start="0" data-duration="5" data-track-index="1">
+      <div id="s3-copy" class="s3-copy">
+        <p id="s3-label" class="s3-label">Step 2</p>
+        <h2 id="s3-h1" class="s3-h">Copy the quote.</h2>
+        <h2 id="s3-h2" class="s3-h"><span class="s3-w">Then </span><span class="s3-w">write </span><span class="s3-w">the </span><span class="s3-w">sentence.</span></h2>
+        <div id="s3-panel">
+          <p id="s3-quote">"Exits are 40-50% shorter than their entrances."</p>
+          <p id="s3-src">motion.md, section Motion craft</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#s3-label", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power2.out" }, 0.05);
+    tl.fromTo("#s3-h1", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 0.15);
+    tl.fromTo("#s3-panel", { clipPath: "inset(0% 100% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.6, ease: "expo.out" }, 0.7);
+    tl.fromTo("#s3-src", { opacity: 0 }, { opacity: 1, duration: 0.25, ease: "power2.out" }, 1.5);
+    tl.fromTo(".s3-w", { opacity: 0.22 }, { opacity: 1, duration: 0.25, ease: "power2.out", stagger: 0.09 }, 2.5);
+    tl.fromTo("#s3-copy", { x: 0, opacity: 1, filter: "blur(0px)" }, { x: -520, opacity: 0, filter: "blur(14px)", duration: 0.26, ease: "power3.in" }, 4.72);
+    window.__timelines["s3"] = tl;
+  </script>
+</template>

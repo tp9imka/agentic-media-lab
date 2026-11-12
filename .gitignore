@@ -32,3 +32,6 @@ examples/**/work/
 # Rendered results are tracked
 !examples/**/results/
 __pycache__/
+# example 01: arm working folders hold installs and renders; curated files are copied to results/
+examples/hyperframes-vs-remotion/hyperframes/
+examples/hyperframes-vs-remotion/remotion/

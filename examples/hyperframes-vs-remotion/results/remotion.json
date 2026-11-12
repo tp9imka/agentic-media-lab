@@ -1,0 +1,70 @@
+{
+  "arm": "remotion",
+  "file": "remotion.mp4",
+  "thresholds": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "duration_s": 20.0,
+    "duration_tolerance_s": 0.5,
+    "black_max_s": 1.0,
+    "black_ignore_before_s": 0.5,
+    "freeze_max_s": 4.0,
+    "freeze_noise_db": -60
+  },
+  "stream": {
+    "codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "frames": 600,
+    "pix_fmt": "yuv420p",
+    "duration_s": 20.0,
+    "bytes": 722822
+  },
+  "black_segments": [
+    {
+      "start_s": 0.0,
+      "duration_s": 0.23
+    },
+    {
+      "start_s": 7.93,
+      "duration_s": 0.17
+    }
+  ],
+  "freeze_segments": [
+    {
+      "start_s": 1.07,
+      "duration_s": 1.73
+    },
+    {
+      "start_s": 3.43,
+      "duration_s": 0.57
+    },
+    {
+      "start_s": 5.3,
+      "duration_s": 2.5
+    },
+    {
+      "start_s": 8.53,
+      "duration_s": 0.67
+    },
+    {
+      "start_s": 10.33,
+      "duration_s": 2.47
+    },
+    {
+      "start_s": 13.53,
+      "duration_s": 0.67
+    },
+    {
+      "start_s": 14.53,
+      "duration_s": 2.27
+    }
+  ],
+  "longest_freeze_s": 2.5,
+  "frozen_share": 0.544,
+  "contact_sheet": "remotion-sheet.png",
+  "verdict": "pass",
+  "reasons": []
+}
