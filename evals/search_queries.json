@@ -195,12 +195,10 @@
   "top": 3
  },
  {
-  "query": "check a rendered video against the brief automatically",
+  "query": "agent fixes clip from checker output without looking at frames",
   "expect_any": [
-   "example:clipcheck-fix-loop",
-   "guide:first-render-claude-code",
-   "tool:kajisho5/ffmpeg-skill"
+   "example:clipcheck-fix-loop"
   ],
-  "top": 4
+  "top": 3
  }
 ]
