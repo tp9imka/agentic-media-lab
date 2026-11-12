@@ -79,7 +79,7 @@ None.
 
 ## Referenced by
 
-None.
+- [Blender VSE Control](aoike123__blender-vse.md) (alternative_to)
 
 ## Status
 

@@ -4,13 +4,13 @@ Built 2026-11-12 by `tools/build.py`.
 
 ## Counts
 
-- tool: 58
+- tool: 72
 - model: 25
-- source: 72
+- source: 74
 - recipe: 0
 - concepts: 35
-- primary-read share: 0.974
-- Hub size: 607170 characters, about 151792 tokens (estimate, characters / 4).
+- primary-read share: 0.977
+- Hub size: 669983 characters, about 167495 tokens (estimate, characters / 4).
 
 ## Validation
 
@@ -20,7 +20,7 @@ dangling: 0 bad concepts: 0 invalid: 0
 
 None.
 
-## Tags used once (57)
+## Tags used once (61)
 
 - `accessibility`
 - `analytics`
@@ -40,10 +40,13 @@ None.
 - `editing`
 - `facebook`
 - `fake-stars`
+- `fcpxml`
 - `film-roles`
+- `final-cut-pro`
 - `flashing`
 - `frame-anchoring`
 - `h264`
+- `hosted`
 - `instagram`
 - `langgraph`
 - `last-frame`
@@ -67,6 +70,7 @@ None.
 - `short-video`
 - `shot-detection`
 - `shot-scheduling`
+- `silence-removal`
 - `skill-invocation`
 - `skills-sh`
 - `stock-footage`
@@ -80,7 +84,7 @@ None.
 - `vertical-video`
 - `wan`
 
-## Popularity disagreements (7)
+## Popularity disagreements (8)
 
 - `model:lightricks/ltx-2`: stars 10201, installs 11
 - `tool:activepieces/activepieces`: stars 25490, installs 72
@@ -89,6 +93,7 @@ None.
 - `tool:mflux-community/mflux`: stars 2598, installs 1
 - `tool:n8n-io/n8n`: stars 210255, installs 847
 - `tool:remotion-dev/skills`: stars 6888, installs 800255
+- `tool:sun-guannan/vectcutapi`: stars 2374, installs 6
 
 ## Seen, not reviewed (checked.depth not-checked) (0)
 

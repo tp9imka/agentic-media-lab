@@ -70,7 +70,9 @@ None.
 
 ## Referenced by
 
+- [talking-head-editor](griffinwooldridge__talking-head-editor.md) (alternative_to)
 - [ffmpeg-skill](kajisho5__ffmpeg-skill.md) (alternative_to)
+- [MakeMyClip Editor](makemyclip__editor.md) (alternative_to)
 
 ## Status
 

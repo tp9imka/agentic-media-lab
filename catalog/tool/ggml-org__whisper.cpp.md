@@ -79,7 +79,10 @@ Collected by `tools/enrich.py`, not typed by hand.
 
 ## Referenced by
 
+- [WhisperX](m-bain__whisperx.md) (alternative_to)
+- [MakeMyClip Editor](makemyclip__editor.md) (depends_on)
 - [mlx-whisper](ml-explore__mlx-examples__whisper.md) (alternative_to)
+- [Auto-Editor](wyattblue__auto-editor.md) (integrates_with)
 
 ## Status
 

@@ -84,6 +84,7 @@ Collected by `tools/enrich.py`, not typed by hand.
 - [Kinetograph](0xs4n4tg__kinetograph.md) (alternative_to)
 - [smooth-animation-skill](flchntc__smooth-animation-skill.md) (extends)
 - [GSAP](greensock__gsap.md) (integrates_with)
+- [talking-head-editor](griffinwooldridge__talking-head-editor.md) (depends_on)
 - [claude-remotion-skill](haidrrrry__claude-remotion-skill.md) (contradicts)
 - [html-video](nexu-io__html-video.md) (depends_on)
 - [Remotion](remotion-dev__remotion.md) (alternative_to)

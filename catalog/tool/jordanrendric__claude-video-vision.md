@@ -82,7 +82,7 @@ None.
 
 ## Referenced by
 
-None.
+- [Video & Audio Editing MCP Server](misbahsy__video-audio-mcp.md) (integrates_with)
 
 ## Status
 

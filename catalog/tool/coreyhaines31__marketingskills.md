@@ -82,7 +82,7 @@ None.
 
 ## Referenced by
 
-None.
+- [screenstudio-alt](connerkward__screenstudio-alternative-skill.md) (integrates_with)
 
 ## Status
 

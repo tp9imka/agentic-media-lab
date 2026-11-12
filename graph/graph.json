@@ -673,6 +673,19 @@
    ]
   },
   {
+   "id": "source:developer.apple.com/documentation/professional-video-applications/fcpxml-reference",
+   "kind": "source",
+   "label": "FCPXML Reference (Apple Developer)",
+   "path": "catalog/source/developer.apple.com__documentation__professional-video-applications__fcpxml-reference.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:delivery"
+   ]
+  },
+  {
    "id": "source:developers.facebook.com/docs/instagram-platform/content-publishing",
    "kind": "source",
    "label": "Instagram Platform - Content Publishing (with Reels specs)",
@@ -1101,6 +1114,19 @@
    ]
   },
   {
+   "id": "source:pixabay.com/api/docs",
+   "kind": "source",
+   "label": "Pixabay API documentation",
+   "path": "catalog/source/pixabay.com__api__docs.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:licences-and-territory",
+    "concept:footage-editing"
+   ]
+  },
+  {
    "id": "source:remotion.dev/docs/5-0-migration",
    "kind": "source",
    "label": "Remotion 5.0 migration: mandatory telemetry for licensed companies",
@@ -1352,6 +1378,21 @@
    ]
   },
   {
+   "id": "tool:aoike123/blender-vse",
+   "kind": "tool",
+   "label": "Blender VSE Control",
+   "path": "catalog/tool/aoike123__blender-vse.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:mcp-servers",
+    "concept:agent-skills",
+    "concept:review-loop"
+   ]
+  },
+  {
    "id": "tool:bbc/ttml-validator",
    "kind": "tool",
    "label": "ttml-validator (BBC)",
@@ -1407,6 +1448,21 @@
    ]
   },
   {
+   "id": "tool:btahir/reelbird",
+   "kind": "tool",
+   "label": "Reelbird",
+   "path": "catalog/tool/btahir__reelbird.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:mcp-servers",
+    "concept:audio-and-captions",
+    "concept:agent-portability"
+   ]
+  },
+  {
    "id": "tool:calesthio/generative-media-skills",
    "kind": "tool",
    "label": "generative-media-skills",
@@ -1423,6 +1479,21 @@
    ]
   },
   {
+   "id": "tool:chatcut-inc/agent-plugin",
+   "kind": "tool",
+   "label": "ChatCut agent plugin",
+   "path": "catalog/tool/chatcut-inc__agent-plugin.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:plugins",
+    "concept:mcp-servers",
+    "concept:cost"
+   ]
+  },
+  {
    "id": "tool:comfy-org/comfyui",
    "kind": "tool",
    "label": "ComfyUI",
@@ -1435,6 +1506,21 @@
     "concept:local-video-models",
     "concept:image-models",
     "concept:agentic-pipelines"
+   ]
+  },
+  {
+   "id": "tool:connerkward/screenstudio-alternative-skill",
+   "kind": "tool",
+   "label": "screenstudio-alt",
+   "path": "catalog/tool/connerkward__screenstudio-alternative-skill.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:agent-skills",
+    "concept:motion-and-transitions",
+    "concept:review-loop"
    ]
   },
   {
@@ -1555,6 +1641,20 @@
    ]
   },
   {
+   "id": "tool:garylab/pexels-mcp-server",
+   "kind": "tool",
+   "label": "Pexels MCP Server",
+   "path": "catalog/tool/garylab__pexels-mcp-server.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:mcp-servers",
+    "concept:licences-and-territory"
+   ]
+  },
+  {
    "id": "tool:get-bb/bb",
    "kind": "tool",
    "label": "bb",
@@ -1610,6 +1710,21 @@
    ]
   },
   {
+   "id": "tool:griffinwooldridge/talking-head-editor",
+   "kind": "tool",
+   "label": "talking-head-editor",
+   "path": "catalog/tool/griffinwooldridge__talking-head-editor.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:agent-skills",
+    "concept:review-loop",
+    "concept:audio-and-captions"
+   ]
+  },
+  {
    "id": "tool:haidrrrry/claude-remotion-skill",
    "kind": "tool",
    "label": "claude-remotion-skill",
@@ -1637,6 +1752,21 @@
     "concept:audio-and-captions",
     "concept:cost",
     "concept:popularity-and-trust"
+   ]
+  },
+  {
+   "id": "tool:hetpatel-11/adobe_premiere_pro_mcp",
+   "kind": "tool",
+   "label": "MCP Bridge for Adobe Premiere Pro",
+   "path": "catalog/tool/hetpatel-11__adobe_premiere_pro_mcp.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:mcp-servers",
+    "concept:plugins",
+    "concept:agent-portability"
    ]
   },
   {
@@ -1755,6 +1885,35 @@
    ]
   },
   {
+   "id": "tool:m-bain/whisperx",
+   "kind": "tool",
+   "label": "WhisperX",
+   "path": "catalog/tool/m-bain__whisperx.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:audio-and-captions",
+    "concept:footage-editing"
+   ]
+  },
+  {
+   "id": "tool:makemyclip/editor",
+   "kind": "tool",
+   "label": "MakeMyClip Editor",
+   "path": "catalog/tool/makemyclip__editor.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:agent-skills",
+    "concept:mcp-servers",
+    "concept:review-loop",
+    "concept:audio-and-captions"
+   ]
+  },
+  {
    "id": "tool:manimcommunity/manim",
    "kind": "tool",
    "label": "Manim Community Edition",
@@ -1823,6 +1982,19 @@
     "concept:code-driven-video",
     "concept:footage-editing",
     "concept:audio-and-captions"
+   ]
+  },
+  {
+   "id": "tool:misbahsy/video-audio-mcp",
+   "kind": "tool",
+   "label": "Video & Audio Editing MCP Server",
+   "path": "catalog/tool/misbahsy__video-audio-mcp.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:mcp-servers"
    ]
   },
   {
@@ -1969,6 +2141,21 @@
    ]
   },
   {
+   "id": "tool:relo-video/synthcut",
+   "kind": "tool",
+   "label": "SynthCut",
+   "path": "catalog/tool/relo-video__synthcut.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:mcp-servers",
+    "concept:review-loop",
+    "concept:audio-and-captions"
+   ]
+  },
+  {
    "id": "tool:remotion-dev/remotion",
    "kind": "tool",
    "label": "Remotion",
@@ -2028,6 +2215,21 @@
    ]
   },
   {
+   "id": "tool:samuelgursky/davinci-resolve-mcp",
+   "kind": "tool",
+   "label": "DaVinci Resolve MCP Server",
+   "path": "catalog/tool/samuelgursky__davinci-resolve-mcp.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:mcp-servers",
+    "concept:review-loop",
+    "concept:agent-portability"
+   ]
+  },
+  {
    "id": "tool:seme-org/open-director",
    "kind": "tool",
    "label": "OpenDirector",
@@ -2055,6 +2257,20 @@
     "concept:code-driven-video",
     "concept:review-loop",
     "concept:evaluation"
+   ]
+  },
+  {
+   "id": "tool:sun-guannan/vectcutapi",
+   "kind": "tool",
+   "label": "VectCutAPI",
+   "path": "catalog/tool/sun-guannan__vectcutapi.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:mcp-servers",
+    "concept:agent-skills"
    ]
   },
   {
@@ -2115,6 +2331,20 @@
     "concept:orchestration",
     "concept:review-loop",
     "concept:licences-and-territory"
+   ]
+  },
+  {
+   "id": "tool:wyattblue/auto-editor",
+   "kind": "tool",
+   "label": "Auto-Editor",
+   "path": "catalog/tool/wyattblue__auto-editor.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:agent-skills",
+    "concept:audio-and-captions"
    ]
   },
   {
@@ -3223,6 +3453,21 @@
    "rel": "alternative_to"
   },
   {
+   "source": "source:developer.apple.com/documentation/professional-video-applications/fcpxml-reference",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "source:developer.apple.com/documentation/professional-video-applications/fcpxml-reference",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "source:developer.apple.com/documentation/professional-video-applications/fcpxml-reference",
+   "target": "tool:makemyclip/editor",
+   "rel": "integrates_with"
+  },
+  {
    "source": "source:developers.facebook.com/docs/instagram-platform/content-publishing",
    "target": "concept:delivery",
    "rel": "about"
@@ -3808,6 +4053,21 @@
    "rel": "integrates_with"
   },
   {
+   "source": "source:pixabay.com/api/docs",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "source:pixabay.com/api/docs",
+   "target": "concept:licences-and-territory",
+   "rel": "about"
+  },
+  {
+   "source": "source:pixabay.com/api/docs",
+   "target": "tool:garylab/pexels-mcp-server",
+   "rel": "alternative_to"
+  },
+  {
    "source": "source:remotion.dev/docs/5-0-migration",
    "target": "concept:automation",
    "rel": "about"
@@ -4108,6 +4368,31 @@
    "rel": "about"
   },
   {
+   "source": "tool:aoike123/blender-vse",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:aoike123/blender-vse",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:aoike123/blender-vse",
+   "target": "concept:mcp-servers",
+   "rel": "about"
+  },
+  {
+   "source": "tool:aoike123/blender-vse",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:aoike123/blender-vse",
+   "target": "tool:ahujasid/mcp-for-blender",
+   "rel": "alternative_to"
+  },
+  {
    "source": "tool:bbc/ttml-validator",
    "target": "concept:audio-and-captions",
    "rel": "about"
@@ -4188,6 +4473,31 @@
    "rel": "about"
   },
   {
+   "source": "tool:btahir/reelbird",
+   "target": "concept:agent-portability",
+   "rel": "about"
+  },
+  {
+   "source": "tool:btahir/reelbird",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:btahir/reelbird",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:btahir/reelbird",
+   "target": "concept:mcp-servers",
+   "rel": "about"
+  },
+  {
+   "source": "tool:btahir/reelbird",
+   "target": "tool:connerkward/screenstudio-alternative-skill",
+   "rel": "alternative_to"
+  },
+  {
    "source": "tool:calesthio/generative-media-skills",
    "target": "concept:agent-portability",
    "rel": "about"
@@ -4218,6 +4528,26 @@
    "rel": "integrates_with"
   },
   {
+   "source": "tool:chatcut-inc/agent-plugin",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "tool:chatcut-inc/agent-plugin",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:chatcut-inc/agent-plugin",
+   "target": "concept:mcp-servers",
+   "rel": "about"
+  },
+  {
+   "source": "tool:chatcut-inc/agent-plugin",
+   "target": "concept:plugins",
+   "rel": "about"
+  },
+  {
    "source": "tool:comfy-org/comfyui",
    "target": "concept:agentic-pipelines",
    "rel": "about"
@@ -4246,6 +4576,36 @@
    "source": "tool:comfy-org/comfyui",
    "target": "tool:mflux-community/mflux",
    "rel": "alternative_to"
+  },
+  {
+   "source": "tool:connerkward/screenstudio-alternative-skill",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:connerkward/screenstudio-alternative-skill",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:connerkward/screenstudio-alternative-skill",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:connerkward/screenstudio-alternative-skill",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:connerkward/screenstudio-alternative-skill",
+   "target": "tool:btahir/reelbird",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:connerkward/screenstudio-alternative-skill",
+   "target": "tool:coreyhaines31/marketingskills",
+   "rel": "integrates_with"
   },
   {
    "source": "tool:coreyhaines31/marketingskills",
@@ -4443,6 +4803,26 @@
    "rel": "extends"
   },
   {
+   "source": "tool:garylab/pexels-mcp-server",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:garylab/pexels-mcp-server",
+   "target": "concept:licences-and-territory",
+   "rel": "about"
+  },
+  {
+   "source": "tool:garylab/pexels-mcp-server",
+   "target": "concept:mcp-servers",
+   "rel": "about"
+  },
+  {
+   "source": "tool:garylab/pexels-mcp-server",
+   "target": "source:pixabay.com/api/docs",
+   "rel": "alternative_to"
+  },
+  {
    "source": "tool:get-bb/bb",
    "target": "concept:agent-portability",
    "rel": "about"
@@ -4543,6 +4923,36 @@
    "rel": "integrates_with"
   },
   {
+   "source": "tool:griffinwooldridge/talking-head-editor",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:griffinwooldridge/talking-head-editor",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:griffinwooldridge/talking-head-editor",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:griffinwooldridge/talking-head-editor",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:griffinwooldridge/talking-head-editor",
+   "target": "tool:browser-use/video-use",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:griffinwooldridge/talking-head-editor",
+   "target": "tool:heygen-com/hyperframes",
+   "rel": "depends_on"
+  },
+  {
    "source": "tool:haidrrrry/claude-remotion-skill",
    "target": "concept:agent-skills",
    "rel": "about"
@@ -4590,6 +5000,26 @@
   {
    "source": "tool:harry0703/moneyprinterturbo",
    "target": "concept:popularity-and-trust",
+   "rel": "about"
+  },
+  {
+   "source": "tool:hetpatel-11/adobe_premiere_pro_mcp",
+   "target": "concept:agent-portability",
+   "rel": "about"
+  },
+  {
+   "source": "tool:hetpatel-11/adobe_premiere_pro_mcp",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:hetpatel-11/adobe_premiere_pro_mcp",
+   "target": "concept:mcp-servers",
+   "rel": "about"
+  },
+  {
+   "source": "tool:hetpatel-11/adobe_premiere_pro_mcp",
+   "target": "concept:plugins",
    "rel": "about"
   },
   {
@@ -4763,6 +5193,66 @@
    "rel": "alternative_to"
   },
   {
+   "source": "tool:m-bain/whisperx",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:m-bain/whisperx",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:m-bain/whisperx",
+   "target": "tool:ggml-org/whisper.cpp",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:makemyclip/editor",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:makemyclip/editor",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:makemyclip/editor",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:makemyclip/editor",
+   "target": "concept:mcp-servers",
+   "rel": "about"
+  },
+  {
+   "source": "tool:makemyclip/editor",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:makemyclip/editor",
+   "target": "source:developer.apple.com/documentation/professional-video-applications/fcpxml-reference",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:makemyclip/editor",
+   "target": "tool:browser-use/video-use",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:makemyclip/editor",
+   "target": "tool:ffmpeg/ffmpeg",
+   "rel": "depends_on"
+  },
+  {
+   "source": "tool:makemyclip/editor",
+   "target": "tool:ggml-org/whisper.cpp",
+   "rel": "depends_on"
+  },
+  {
    "source": "tool:manimcommunity/manim",
    "target": "concept:code-driven-video",
    "rel": "about"
@@ -4881,6 +5371,26 @@
    "source": "tool:mifi/editly",
    "target": "tool:ffmpeg/ffmpeg",
    "rel": "depends_on"
+  },
+  {
+   "source": "tool:misbahsy/video-audio-mcp",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:misbahsy/video-audio-mcp",
+   "target": "concept:mcp-servers",
+   "rel": "about"
+  },
+  {
+   "source": "tool:misbahsy/video-audio-mcp",
+   "target": "tool:ffmpeg/ffmpeg",
+   "rel": "depends_on"
+  },
+  {
+   "source": "tool:misbahsy/video-audio-mcp",
+   "target": "tool:jordanrendric/claude-video-vision",
+   "rel": "integrates_with"
   },
   {
    "source": "tool:ml-explore/mlx-examples/whisper",
@@ -5128,6 +5638,31 @@
    "rel": "integrates_with"
   },
   {
+   "source": "tool:relo-video/synthcut",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:relo-video/synthcut",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:relo-video/synthcut",
+   "target": "concept:mcp-servers",
+   "rel": "about"
+  },
+  {
+   "source": "tool:relo-video/synthcut",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:relo-video/synthcut",
+   "target": "tool:remotion-dev/skills",
+   "rel": "integrates_with"
+  },
+  {
    "source": "tool:remotion-dev/remotion",
    "target": "concept:code-driven-video",
    "rel": "about"
@@ -5243,6 +5778,26 @@
    "rel": "integrates_with"
   },
   {
+   "source": "tool:samuelgursky/davinci-resolve-mcp",
+   "target": "concept:agent-portability",
+   "rel": "about"
+  },
+  {
+   "source": "tool:samuelgursky/davinci-resolve-mcp",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:samuelgursky/davinci-resolve-mcp",
+   "target": "concept:mcp-servers",
+   "rel": "about"
+  },
+  {
+   "source": "tool:samuelgursky/davinci-resolve-mcp",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
    "source": "tool:seme-org/open-director",
    "target": "concept:agentic-pipelines",
    "rel": "about"
@@ -5286,6 +5841,21 @@
    "source": "tool:showlab/code2video",
    "target": "tool:manimcommunity/manim",
    "rel": "depends_on"
+  },
+  {
+   "source": "tool:sun-guannan/vectcutapi",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:sun-guannan/vectcutapi",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:sun-guannan/vectcutapi",
+   "target": "concept:mcp-servers",
+   "rel": "about"
   },
   {
    "source": "tool:temporalio/temporal",
@@ -5386,6 +5956,31 @@
    "source": "tool:windmill-labs/windmill",
    "target": "tool:triggerdotdev/trigger.dev",
    "rel": "alternative_to"
+  },
+  {
+   "source": "tool:wyattblue/auto-editor",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:wyattblue/auto-editor",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:wyattblue/auto-editor",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:wyattblue/auto-editor",
+   "target": "source:developer.apple.com/documentation/professional-video-applications/fcpxml-reference",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:wyattblue/auto-editor",
+   "target": "tool:ggml-org/whisper.cpp",
+   "rel": "integrates_with"
   },
   {
    "source": "tool:zulko/moviepy",

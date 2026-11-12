@@ -20,18 +20,21 @@
    ],
    "related": [],
    "record_ids": [
+    "tool:btahir/reelbird",
     "tool:calesthio/generative-media-skills",
     "tool:coreyhaines31/marketingskills",
     "tool:dojocodinglabs/remotion-superpowers",
     "tool:get-bb/bb",
+    "tool:hetpatel-11/adobe_premiere_pro_mcp",
     "tool:kajisho5/ffmpeg-skill",
     "tool:lottiefiles/motion-design-skill",
     "tool:mattypark/motion-graphics-skill",
     "tool:nexu-io/html-video",
     "tool:remotion-dev/skills",
+    "tool:samuelgursky/davinci-resolve-mcp",
     "tool:vincentwei1021/video-shotcraft"
    ],
-   "count": 10
+   "count": 13
   },
   {
    "id": "concept:agent-skills",
@@ -59,21 +62,27 @@
     "source:skills.sh/docs",
     "source:snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub",
     "source:vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals",
+    "tool:aoike123/blender-vse",
     "tool:browser-use/video-use",
     "tool:calesthio/generative-media-skills",
+    "tool:connerkward/screenstudio-alternative-skill",
     "tool:coreyhaines31/marketingskills",
     "tool:digitalsamba/claude-code-video-toolkit",
     "tool:dmtrkovalenko/fframes",
+    "tool:griffinwooldridge/talking-head-editor",
     "tool:haidrrrry/claude-remotion-skill",
     "tool:heygen-com/hyperframes",
     "tool:iart-ai/motion-skills",
     "tool:lottiefiles/motion-design-skill",
+    "tool:makemyclip/editor",
     "tool:mattypark/motion-graphics-skill",
     "tool:openrouter/video-generation",
     "tool:remotion-dev/skills",
-    "tool:vincentwei1021/video-shotcraft"
+    "tool:sun-guannan/vectcutapi",
+    "tool:vincentwei1021/video-shotcraft",
+    "tool:wyattblue/auto-editor"
    ],
-   "count": 21
+   "count": 27
   },
   {
    "id": "concept:agent-surface",
@@ -159,21 +168,27 @@
     "source:w3.org/tr/wcag22",
     "tool:bbc/ttml-validator",
     "tool:browser-use/video-use",
+    "tool:btahir/reelbird",
     "tool:calesthio/generative-media-skills",
     "tool:coreyhaines31/marketingskills",
     "tool:dojocodinglabs/remotion-superpowers",
     "tool:ffmpeg/ffmpeg",
     "tool:ggml-org/whisper.cpp",
+    "tool:griffinwooldridge/talking-head-editor",
     "tool:harry0703/moneyprinterturbo",
     "tool:josiahsiegel/claude-plugin-marketplace",
+    "tool:m-bain/whisperx",
+    "tool:makemyclip/editor",
     "tool:midrender/revideo",
     "tool:mifi/editly",
     "tool:ml-explore/mlx-examples/whisper",
     "tool:mort1d/motion-graphics-skills",
     "tool:motion-canvas/motion-canvas",
-    "tool:openmontageinc/openmontage"
+    "tool:openmontageinc/openmontage",
+    "tool:relo-video/synthcut",
+    "tool:wyattblue/auto-editor"
    ],
-   "count": 24
+   "count": 30
   },
   {
    "id": "concept:automation",
@@ -328,12 +343,13 @@
     "model:runwayml/gen-4.5",
     "model:xai/grok-imagine",
     "source:docs.x.com/x-api/getting-started/pricing",
+    "tool:chatcut-inc/agent-plugin",
     "tool:fal-ai/fal",
     "tool:harry0703/moneyprinterturbo",
     "tool:openrouter/video-generation",
     "tool:runwayml/runway-api"
    ],
-   "count": 17
+   "count": 18
   },
   {
    "id": "concept:craft",
@@ -371,6 +387,7 @@
     "model:runwayml/gen-4.5",
     "source:ads.tiktok.com/help/article/creative-best-practices",
     "source:c2pa.org/faqs",
+    "source:developer.apple.com/documentation/professional-video-applications/fcpxml-reference",
     "source:developers.facebook.com/docs/instagram-platform/content-publishing",
     "source:developers.facebook.com/docs/video-api/guides/reels-publishing",
     "source:developers.tiktok.com/doc/content-posting-api-media-transfer-guide",
@@ -388,7 +405,7 @@
     "tool:mort1d/motion-graphics-skills",
     "tool:netflix/vmaf"
    ],
-   "count": 20
+   "count": 21
   },
   {
    "id": "concept:evaluation",
@@ -468,14 +485,30 @@
    "record_ids": [
     "model:runwayml/aleph",
     "source:cloud.wikis.utexas.edu/wiki/spaces/rtf318/pages/80022510",
+    "source:developer.apple.com/documentation/professional-video-applications/fcpxml-reference",
+    "source:pixabay.com/api/docs",
+    "tool:aoike123/blender-vse",
     "tool:breakthrough/pyscenedetect",
     "tool:browser-use/video-use",
+    "tool:btahir/reelbird",
+    "tool:chatcut-inc/agent-plugin",
+    "tool:connerkward/screenstudio-alternative-skill",
     "tool:coreyhaines31/marketingskills",
+    "tool:garylab/pexels-mcp-server",
+    "tool:griffinwooldridge/talking-head-editor",
+    "tool:hetpatel-11/adobe_premiere_pro_mcp",
     "tool:kajisho5/ffmpeg-skill",
+    "tool:m-bain/whisperx",
+    "tool:makemyclip/editor",
     "tool:mifi/editly",
+    "tool:misbahsy/video-audio-mcp",
+    "tool:relo-video/synthcut",
+    "tool:samuelgursky/davinci-resolve-mcp",
+    "tool:sun-guannan/vectcutapi",
+    "tool:wyattblue/auto-editor",
     "tool:zulko/moviepy"
    ],
-   "count": 8
+   "count": 24
   },
   {
    "id": "concept:generated-footage",
@@ -609,14 +642,16 @@
     "model:minimaxai/minimax-h3",
     "model:qwen/qwen-image",
     "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+    "source:pixabay.com/api/docs",
     "source:remotion.dev/docs/5-0-migration",
     "tool:activepieces/activepieces",
+    "tool:garylab/pexels-mcp-server",
     "tool:greensock/gsap",
     "tool:n8n-io/n8n",
     "tool:remotion-dev/remotion",
     "tool:windmill-labs/windmill"
    ],
-   "count": 11
+   "count": 13
   },
   {
    "id": "concept:local-video-models",
@@ -680,12 +715,22 @@
    "record_ids": [
     "source:remotion.dev/docs/ai/mcp",
     "tool:ahujasid/mcp-for-blender",
+    "tool:aoike123/blender-vse",
+    "tool:btahir/reelbird",
+    "tool:chatcut-inc/agent-plugin",
     "tool:fal-ai/fal",
+    "tool:garylab/pexels-mcp-server",
+    "tool:hetpatel-11/adobe_premiere_pro_mcp",
     "tool:jordanrendric/claude-video-vision",
+    "tool:makemyclip/editor",
+    "tool:misbahsy/video-audio-mcp",
+    "tool:relo-video/synthcut",
     "tool:replicate/replicate",
-    "tool:runwayml/runway-api"
+    "tool:runwayml/runway-api",
+    "tool:samuelgursky/davinci-resolve-mcp",
+    "tool:sun-guannan/vectcutapi"
    ],
-   "count": 6
+   "count": 16
   },
   {
    "id": "concept:model-prompting",
@@ -746,6 +791,7 @@
     "source:cloud.wikis.utexas.edu/wiki/spaces/rtf318/pages/80022510",
     "source:github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss",
     "tool:3b1b/manim",
+    "tool:connerkward/screenstudio-alternative-skill",
     "tool:ffmpeg/ffmpeg",
     "tool:flchntc/smooth-animation-skill",
     "tool:greensock/gsap",
@@ -759,7 +805,7 @@
     "tool:motion-canvas/motion-canvas",
     "tool:remotion-dev/remotion"
    ],
-   "count": 16
+   "count": 17
   },
   {
    "id": "concept:orchestration",
@@ -864,11 +910,13 @@
    ],
    "related": [],
    "record_ids": [
+    "tool:chatcut-inc/agent-plugin",
     "tool:dojocodinglabs/remotion-superpowers",
+    "tool:hetpatel-11/adobe_premiere_pro_mcp",
     "tool:jordanrendric/claude-video-vision",
     "tool:josiahsiegel/claude-plugin-marketplace"
    ],
-   "count": 3
+   "count": 5
   },
   {
    "id": "concept:popularity-and-trust",
@@ -980,31 +1028,37 @@
     "source:learn.chatgpt.com/docs/automations",
     "tool:0xs4n4tg/kinetograph",
     "tool:ahujasid/mcp-for-blender",
+    "tool:aoike123/blender-vse",
     "tool:bbc/ttml-validator",
     "tool:breakthrough/pyscenedetect",
     "tool:browser-use/video-use",
+    "tool:connerkward/screenstudio-alternative-skill",
     "tool:digitalsamba/claude-code-video-toolkit",
     "tool:dmtrkovalenko/fframes",
     "tool:dojocodinglabs/remotion-superpowers",
     "tool:flchntc/smooth-animation-skill",
+    "tool:griffinwooldridge/talking-head-editor",
     "tool:haidrrrry/claude-remotion-skill",
     "tool:heygen-com/hyperframes",
     "tool:hkuds/vimax",
     "tool:iart-ai/motion-skills",
     "tool:jordanrendric/claude-video-vision",
     "tool:kajisho5/ffmpeg-skill",
+    "tool:makemyclip/editor",
     "tool:manimcommunity/manim",
     "tool:mort1d/motion-graphics-skills",
     "tool:n8n-io/n8n",
     "tool:nousresearch/hermes-agent",
     "tool:openmontageinc/openmontage",
+    "tool:relo-video/synthcut",
     "tool:remotion-dev/remotion",
+    "tool:samuelgursky/davinci-resolve-mcp",
     "tool:showlab/code2video",
     "tool:triggerdotdev/trigger.dev",
     "tool:vincentwei1021/video-shotcraft",
     "tool:windmill-labs/windmill"
    ],
-   "count": 40
+   "count": 46
   },
   {
    "id": "concept:scheduling-and-runtimes",
