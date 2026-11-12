@@ -79,6 +79,7 @@ None.
 
 ## Referenced by
 
+- [Anthropic Agent Skills (canvas-design, algorithmic-art)](anthropics__skills.md) (contradicts)
 - [motion-graphics (Mort1d)](mort1d__motion-graphics-skills.md) (alternative_to)
 
 ## Status

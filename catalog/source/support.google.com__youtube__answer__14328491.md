@@ -65,6 +65,7 @@ Nothing collected yet.
 - [C2PA FAQs (Content Credentials)](c2pa.org__faqs.md) (integrates_with)
 - [YouTube Data API (v3) revision history](developers.google.com__youtube__v3__revision_history.md) (integrates_with)
 - [YouTube channel monetization policies (inauthentic content)](support.google.com__youtube__answer__1311392.md) (integrates_with)
+- [YouTube Help - Add video thumbnails](support.google.com__youtube__answer__72431.md) (integrates_with)
 
 ## Status
 

@@ -71,7 +71,8 @@ None.
 
 ## Referenced by
 
-None.
+- [MLX-Audio](../tool/blaizzy__mlx-audio.md) (integrates_with)
+- [Piper (piper1-gpl)](../tool/ohf-voice__piper1-gpl.md) (alternative_to)
 
 ## Status
 

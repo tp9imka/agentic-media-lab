@@ -82,7 +82,8 @@ None.
 
 ## Referenced by
 
-None.
+- [MusicGen and AudioGen (AudioCraft)](facebook__musicgen.md) (alternative_to)
+- [Stable Audio Open](stabilityai__stable-audio.md) (alternative_to)
 
 ## Status
 

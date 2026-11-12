@@ -62,6 +62,7 @@
     "source:skills.sh/docs",
     "source:snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub",
     "source:vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals",
+    "tool:anthropics/skills",
     "tool:aoike123/blender-vse",
     "tool:browser-use/video-use",
     "tool:calesthio/generative-media-skills",
@@ -73,16 +74,18 @@
     "tool:haidrrrry/claude-remotion-skill",
     "tool:heygen-com/hyperframes",
     "tool:iart-ai/motion-skills",
+    "tool:kingbootoshi/nano-banana-2-skill",
     "tool:lottiefiles/motion-design-skill",
     "tool:makemyclip/editor",
     "tool:mattypark/motion-graphics-skill",
+    "tool:openai/skills",
     "tool:openrouter/video-generation",
     "tool:remotion-dev/skills",
     "tool:sun-guannan/vectcutapi",
     "tool:vincentwei1021/video-shotcraft",
     "tool:wyattblue/auto-editor"
    ],
-   "count": 27
+   "count": 30
   },
   {
    "id": "concept:agent-surface",
@@ -158,8 +161,12 @@
    "related": [],
    "record_ids": [
     "model:ace-step/ace-step",
+    "model:facebook/musicgen",
+    "model:google/gemini-tts",
     "model:hexgrad/kokoro",
     "model:heygen/heygen-video-1",
+    "model:openai/gpt-4o-mini-tts",
+    "model:stabilityai/stable-audio",
     "source:ads.tiktok.com/help/article/creative-best-practices",
     "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
     "source:partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-english-usa-timed-text-style-guide",
@@ -167,12 +174,15 @@
     "source:tech.ebu.ch/publications/r128",
     "source:w3.org/tr/wcag22",
     "tool:bbc/ttml-validator",
+    "tool:blaizzy/mlx-audio",
     "tool:browser-use/video-use",
     "tool:btahir/reelbird",
     "tool:calesthio/generative-media-skills",
     "tool:coreyhaines31/marketingskills",
     "tool:dojocodinglabs/remotion-superpowers",
+    "tool:elevenlabs.io",
     "tool:ffmpeg/ffmpeg",
+    "tool:freesound.org",
     "tool:ggml-org/whisper.cpp",
     "tool:griffinwooldridge/talking-head-editor",
     "tool:harry0703/moneyprinterturbo",
@@ -184,11 +194,13 @@
     "tool:ml-explore/mlx-examples/whisper",
     "tool:mort1d/motion-graphics-skills",
     "tool:motion-canvas/motion-canvas",
+    "tool:ohf-voice/piper1-gpl",
+    "tool:openai/skills",
     "tool:openmontageinc/openmontage",
     "tool:relo-video/synthcut",
     "tool:wyattblue/auto-editor"
    ],
-   "count": 30
+   "count": 39
   },
   {
    "id": "concept:automation",
@@ -336,6 +348,7 @@
     "model:bytedance/seedance",
     "model:bytedance/seedream",
     "model:google/gemini-omni-flash",
+    "model:google/gemini-tts",
     "model:google/nano-banana",
     "model:lumalabs/ray",
     "model:openai/gpt-image",
@@ -344,12 +357,15 @@
     "model:xai/grok-imagine",
     "source:docs.x.com/x-api/getting-started/pricing",
     "tool:chatcut-inc/agent-plugin",
+    "tool:elevenlabs.io",
     "tool:fal-ai/fal",
     "tool:harry0703/moneyprinterturbo",
+    "tool:kingbootoshi/nano-banana-2-skill",
     "tool:openrouter/video-generation",
+    "tool:recraft.ai",
     "tool:runwayml/runway-api"
    ],
-   "count": 18
+   "count": 22
   },
   {
    "id": "concept:craft",
@@ -397,6 +413,7 @@
     "source:support.google.com/youtube/answer/14328491",
     "source:support.google.com/youtube/answer/15424877",
     "source:support.google.com/youtube/answer/1722171",
+    "source:support.google.com/youtube/answer/72431",
     "source:tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s2.pdf",
     "source:tech.ebu.ch/publications/r128",
     "tool:calesthio/generative-media-skills",
@@ -405,7 +422,7 @@
     "tool:mort1d/motion-graphics-skills",
     "tool:netflix/vmaf"
    ],
-   "count": 21
+   "count": 22
   },
   {
    "id": "concept:evaluation",
@@ -612,11 +629,13 @@
     "tool:comfy-org/comfyui",
     "tool:drawthings.ai",
     "tool:fal-ai/fal",
+    "tool:gemini-cli-extensions/nanobanana",
     "tool:mflux-community/mflux",
+    "tool:recraft.ai",
     "tool:replicate/replicate",
     "tool:runwayml/runway-api"
    ],
-   "count": 14
+   "count": 16
   },
   {
    "id": "concept:licences-and-territory",
@@ -638,20 +657,25 @@
    "related": [],
    "record_ids": [
     "model:black-forest-labs/flux-3-image-klein",
+    "model:facebook/musicgen",
     "model:lightricks/ltx-2",
     "model:minimaxai/minimax-h3",
     "model:qwen/qwen-image",
+    "model:stabilityai/stable-audio",
     "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
     "source:pixabay.com/api/docs",
     "source:remotion.dev/docs/5-0-migration",
     "tool:activepieces/activepieces",
+    "tool:elevenlabs.io",
+    "tool:freesound.org",
     "tool:garylab/pexels-mcp-server",
     "tool:greensock/gsap",
     "tool:n8n-io/n8n",
+    "tool:ohf-voice/piper1-gpl",
     "tool:remotion-dev/remotion",
     "tool:windmill-labs/windmill"
    ],
-   "count": 13
+   "count": 18
   },
   {
    "id": "concept:local-video-models",
@@ -720,17 +744,19 @@
     "tool:chatcut-inc/agent-plugin",
     "tool:fal-ai/fal",
     "tool:garylab/pexels-mcp-server",
+    "tool:gemini-cli-extensions/nanobanana",
     "tool:hetpatel-11/adobe_premiere_pro_mcp",
     "tool:jordanrendric/claude-video-vision",
     "tool:makemyclip/editor",
     "tool:misbahsy/video-audio-mcp",
+    "tool:recraft.ai",
     "tool:relo-video/synthcut",
     "tool:replicate/replicate",
     "tool:runwayml/runway-api",
     "tool:samuelgursky/davinci-resolve-mcp",
     "tool:sun-guannan/vectcutapi"
    ],
-   "count": 16
+   "count": 18
   },
   {
    "id": "concept:model-prompting",
@@ -763,8 +789,14 @@
    "scope_note": "Generation models and what using one costs.",
    "broader": [],
    "related": [],
-   "record_ids": [],
-   "count": 0
+   "record_ids": [
+    "model:facebook/musicgen",
+    "model:google/gemini-tts",
+    "model:openai/gpt-4o-mini-tts",
+    "model:stabilityai/stable-audio",
+    "tool:blaizzy/mlx-audio"
+   ],
+   "count": 5
   },
   {
    "id": "concept:motion-and-transitions",
@@ -889,9 +921,10 @@
     "source:learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin",
     "source:support.google.com/youtube/answer/1311392",
     "source:support.google.com/youtube/answer/14328491",
+    "source:support.google.com/youtube/answer/72431",
     "source:www.tiktok.com/community-guidelines/en/integrity-authenticity"
    ],
-   "count": 20
+   "count": 21
   },
   {
    "id": "concept:plugins",
@@ -1134,10 +1167,15 @@
     "model:qwen/qwen-image",
     "model:tongyi-mai/z-image",
     "source:arxiv.org/abs/2505.24862",
+    "source:support.google.com/youtube/answer/72431",
+    "tool:anthropics/skills",
+    "tool:gemini-cli-extensions/nanobanana",
+    "tool:kingbootoshi/nano-banana-2-skill",
     "tool:mflux-community/mflux",
+    "tool:openai/skills",
     "tool:seme-org/open-director"
    ],
-   "count": 7
+   "count": 12
   },
   {
    "id": "concept:story-and-decomposition",
@@ -1200,11 +1238,12 @@
     "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
     "source:facebook.com/business/ads-guide/update/video/instagram-reels",
     "source:w3.org/tr/wcag22",
+    "tool:anthropics/skills",
     "tool:digitalsamba/claude-code-video-toolkit",
     "tool:openmontageinc/openmontage",
     "tool:remotion-dev/skills"
    ],
-   "count": 6
+   "count": 7
   }
  ]
 }

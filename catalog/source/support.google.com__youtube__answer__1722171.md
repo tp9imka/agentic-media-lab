@@ -62,6 +62,7 @@ Nothing collected yet.
 ## Referenced by
 
 - [Meta Ads Guide - Instagram Reels video ads](facebook.com__business__ads-guide__update__video__instagram-reels.md) (alternative_to)
+- [YouTube Help - Add video thumbnails](support.google.com__youtube__answer__72431.md) (integrates_with)
 
 ## Status
 

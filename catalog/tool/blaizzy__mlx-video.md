@@ -83,6 +83,7 @@ Collected by `tools/enrich.py`, not typed by hand.
 
 - [LTX-2](../model/lightricks__ltx-2.md) (integrates_with)
 - [Wan 2.2](../model/wan-ai__wan2.2.md) (integrates_with)
+- [MLX-Audio](blaizzy__mlx-audio.md) (alternative_to)
 
 ## Status
 

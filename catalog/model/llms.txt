@@ -1,0 +1,38 @@
+# Agentic Media Lab - model records
+
+> One line per model record. Linked from https://tp9imka.github.io/agentic-media-lab/llms.txt because the cards did not fit there.
+
+## Records
+
+- [Wan 3.0](https://tp9imka.github.io/agentic-media-lab/catalog/model/alibaba__wan.md): model, quoted-primary. It led the Artificial Analysis text-to-video board on 2026-11-12, and its 1080P list price is lower than Seedance 2.5 or FLUX 3 Video at ...
+- [FLUX 3](https://tp9imka.github.io/agentic-media-lab/catalog/model/black-forest-labs__flux-3.md): model, quoted-primary. Its pricing page states video rates for four resolution bands, whether audio is included, and the longest output.
+- [Dreamina Seedance 2.5](https://tp9imka.github.io/agentic-media-lab/catalog/model/bytedance__seedance.md): model, quoted-primary. It ranked first on the Artificial Analysis image-to-video board read 2026-11-12 and gives the longest single clip found here (30 s).
+- [Nano Banana (Gemini image models)](https://tp9imka.github.io/agentic-media-lab/catalog/model/google__nano-banana.md): model, quoted-primary. Code that calls imagen-4.0-* on the Gemini API stopped working on 2026-08-17; Nano Banana 2.1 is the named replacement.
+- [Kokoro-82M](https://tp9imka.github.io/agentic-media-lab/catalog/model/hexgrad__kokoro.md): model, quoted-primary. It gives an agent a free, local narration voice with commercial use allowed, small enough to run beside a video model.
+- [Z-Image](https://tp9imka.github.io/agentic-media-lab/catalog/model/tongyi-mai__z-image.md): model, quoted-primary. It is the small, permissive image model with published memory numbers on a 64 GB Apple Silicon Mac, which makes it the default for local ...
+
+## Optional
+
+- [ACE-Step 1.5](https://tp9imka.github.io/agentic-media-lab/catalog/model/ace-step__ace-step.md): model, quoted-primary. It gives a local soundtrack with a stated permission for commercial use of the output, and its macOS scripts use MLX.
+- [HappyHorse](https://tp9imka.github.io/agentic-media-lab/catalog/model/alibaba__happyhorse.md): model, quoted-primary. It is the cheapest way found here to try an Alibaba video model at 480P, with a small free quota.
+- [FLUX 3 Image Klein](https://tp9imka.github.io/agentic-media-lab/catalog/model/black-forest-labs__flux-3-image-klein.md): model, quoted-secondary. It does generation and multi-reference editing in one model with measured memory on a 64 GB Mac, but its licence caps paid work by the ...
+- [SeedVR2](https://tp9imka.github.io/agentic-media-lab/catalog/model/bytedance-seed__seedvr.md): model, quoted-primary. Upscaling is a cheap last step to make a local clip or still look finished, and mflux ships an MLX upscale command for it.
+- [Seedream 5.0](https://tp9imka.github.io/agentic-media-lab/catalog/model/bytedance__seedream.md): model, quoted-primary. The flash id is one of the cheapest first-party image prices found here, and input images are free on most ids.
+- [MusicGen and AudioGen (AudioCraft)](https://tp9imka.github.io/agentic-media-lab/catalog/model/facebook__musicgen.md): model, quoted-primary. Older guides still suggest MusicGen for a soundtrack; its weights licence is non-commercial, which rules it out for monetised or client ...
+- [Gemini Omni Flash](https://tp9imka.github.io/agentic-media-lab/catalog/model/google__gemini-omni-flash.md): model, quoted-primary. It is the replacement Google names for Veo 3.1 on the Gemini API.
+- [Gemini TTS (Gemini 3.8 Flash TTS)](https://tp9imka.github.io/agentic-media-lab/catalog/model/google__gemini-tts.md): model, quoted-primary. It is the cheapest first-party hosted narration with a price on the page, and the price doubles on 2027-01-01.
+- [Veo 3.1](https://tp9imka.github.io/agentic-media-lab/catalog/model/google__veo-3.1.md): model, quoted-primary. Code and skills that call Veo through the Gemini API need to migrate.
+- [HeyGen Video 1](https://tp9imka.github.io/agentic-media-lab/catalog/model/heygen__heygen-video-1.md): model, quoted-primary. It led the silent text-to-video board on Artificial Analysis read 2026-11-12, and it returns dialogue, ambience and effects with the clip.
+- [LTX-2](https://tp9imka.github.io/agentic-media-lab/catalog/model/lightricks__ltx-2.md): model, quoted-primary. It is the open video model with the most documented Mac routes: the official PyTorch code on MPS, mlx-video for LTX-2 and 2.3, and Draw ...
+- [Luma Ray3.2](https://tp9imka.github.io/agentic-media-lab/catalog/model/lumalabs__ray.md): model, quoted-primary. Native HDR and 16-bit EXR export are rare among hosted models and matter when the clip is composited with live footage.
+- [MiniMax H3](https://tp9imka.github.io/agentic-media-lab/catalog/model/minimaxai__minimax-h3.md): model, quoted-primary. A leading open-weights video model whose licence does not cover several major regions.
+- [OpenAI TTS (gpt-4o-mini-tts, tts-1, tts-1-hd)](https://tp9imka.github.io/agentic-media-lab/catalog/model/openai__gpt-4o-mini-tts.md): model, quoted-primary. Many skills and scripts call this endpoint for narration; they stop working on 2027-01-06 and the named successor uses a different API.
+- [GPT Image 2](https://tp9imka.github.io/agentic-media-lab/catalog/model/openai__gpt-image.md): model, quoted-primary. It is the image model many agent skills call by default; its price is in tokens, so the per-image cost must come from the calculator.
+- [Sora 2](https://tp9imka.github.io/agentic-media-lab/catalog/model/openai__sora-2.md): model (archived), quoted-primary. Many guides and skills still call it. Anything that depends on the Videos API no longer runs.
+- [Qwen-Image](https://tp9imka.github.io/agentic-media-lab/catalog/model/qwen__qwen-image.md): model, quoted-primary. It runs on a 64 GB Mac with published timings, but version 2.1 is licensed for research and evaluation only.
+- [Runway Aleph 2.0](https://tp9imka.github.io/agentic-media-lab/catalog/model/runwayml__aleph.md): model, quoted-primary. It edits an existing video by prompt, the step after generation when one shot is almost right.
+- [Runway Gen-4.5](https://tp9imka.github.io/agentic-media-lab/catalog/model/runwayml__gen-4.5.md): model, quoted-primary. It is one of two models Runway lets export ProRes, PNG sequences and HDR, which matters when the output goes into a grading or compositing ...
+- [Stable Audio Open](https://tp9imka.github.io/agentic-media-lab/catalog/model/stabilityai__stable-audio.md): model, quoted-primary. It is the local route to generated sound effects and ambience for a clip, under a licence that allows commercial use below a revenue line.
+- [Vimoo 1.0](https://tp9imka.github.io/agentic-media-lab/catalog/model/vimoo-ai__vimoo-1.0.md): model, quoted-primary. It is the one open video model whose own vendor publishes an Apple Silicon package with a CLI, under Apache 2.0.
+- [Wan 2.2](https://tp9imka.github.io/agentic-media-lab/catalog/model/wan-ai__wan2.2.md): model, quoted-primary. It is the main Apache-2.0 video family with a documented MLX route on a Mac, so client work carries no revenue cap.
+- [Grok Imagine](https://tp9imka.github.io/agentic-media-lab/catalog/model/xai__grok-imagine.md): model, quoted-primary. The Lite variant gives video with lip-synced speech from $0.02 per second, the lowest first-party video price found here.

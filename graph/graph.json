@@ -108,6 +108,20 @@
    ]
   },
   {
+   "id": "model:facebook/musicgen",
+   "kind": "model",
+   "label": "MusicGen and AudioGen (AudioCraft)",
+   "path": "catalog/model/facebook__musicgen.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:audio-and-captions",
+    "concept:licences-and-territory",
+    "concept:models"
+   ]
+  },
+  {
    "id": "model:google/gemini-omni-flash",
    "kind": "model",
    "label": "Gemini Omni Flash",
@@ -118,6 +132,20 @@
    "concepts": [
     "concept:hosted-video-models",
     "concept:cost"
+   ]
+  },
+  {
+   "id": "model:google/gemini-tts",
+   "kind": "model",
+   "label": "Gemini TTS (Gemini 3.8 Flash TTS)",
+   "path": "catalog/model/google__gemini-tts.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:audio-and-captions",
+    "concept:cost",
+    "concept:models"
    ]
   },
   {
@@ -212,6 +240,19 @@
    ]
   },
   {
+   "id": "model:openai/gpt-4o-mini-tts",
+   "kind": "model",
+   "label": "OpenAI TTS (gpt-4o-mini-tts, tts-1, tts-1-hd)",
+   "path": "catalog/model/openai__gpt-4o-mini-tts.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:audio-and-captions",
+    "concept:models"
+   ]
+  },
+  {
    "id": "model:openai/gpt-image",
    "kind": "model",
    "label": "GPT Image 2",
@@ -276,6 +317,20 @@
     "concept:hosted-video-models",
     "concept:cost",
     "concept:delivery"
+   ]
+  },
+  {
+   "id": "model:stabilityai/stable-audio",
+   "kind": "model",
+   "label": "Stable Audio Open",
+   "path": "catalog/model/stabilityai__stable-audio.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:audio-and-captions",
+    "concept:licences-and-territory",
+    "concept:models"
    ]
   },
   {
@@ -1244,6 +1299,20 @@
    ]
   },
   {
+   "id": "source:support.google.com/youtube/answer/72431",
+   "kind": "source",
+   "label": "YouTube Help - Add video thumbnails",
+   "path": "catalog/source/support.google.com__youtube__answer__72431.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:platform-rules",
+    "concept:still-images",
+    "concept:delivery"
+   ]
+  },
+  {
    "id": "source:support.google.com/youtube/answer/9314415",
    "kind": "source",
    "label": "YouTube Help - Measure key moments for audience retention",
@@ -1378,6 +1447,20 @@
    ]
   },
   {
+   "id": "tool:anthropics/skills",
+   "kind": "tool",
+   "label": "Anthropic Agent Skills (canvas-design, algorithmic-art)",
+   "path": "catalog/tool/anthropics__skills.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:agent-skills",
+    "concept:still-images",
+    "concept:visual-design"
+   ]
+  },
+  {
    "id": "tool:aoike123/blender-vse",
    "kind": "tool",
    "label": "Blender VSE Control",
@@ -1403,6 +1486,19 @@
    "concepts": [
     "concept:audio-and-captions",
     "concept:review-loop"
+   ]
+  },
+  {
+   "id": "tool:blaizzy/mlx-audio",
+   "kind": "tool",
+   "label": "MLX-Audio",
+   "path": "catalog/tool/blaizzy__mlx-audio.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:audio-and-captions",
+    "concept:models"
    ]
   },
   {
@@ -1597,6 +1693,20 @@
    ]
   },
   {
+   "id": "tool:elevenlabs.io",
+   "kind": "tool",
+   "label": "ElevenLabs API",
+   "path": "catalog/tool/elevenlabs.io.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:audio-and-captions",
+    "concept:cost",
+    "concept:licences-and-territory"
+   ]
+  },
+  {
    "id": "tool:fal-ai/fal",
    "kind": "tool",
    "label": "fal Model APIs",
@@ -1641,6 +1751,19 @@
    ]
   },
   {
+   "id": "tool:freesound.org",
+   "kind": "tool",
+   "label": "Freesound API",
+   "path": "catalog/tool/freesound.org.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:audio-and-captions",
+    "concept:licences-and-territory"
+   ]
+  },
+  {
    "id": "tool:garylab/pexels-mcp-server",
    "kind": "tool",
    "label": "Pexels MCP Server",
@@ -1652,6 +1775,20 @@
     "concept:footage-editing",
     "concept:mcp-servers",
     "concept:licences-and-territory"
+   ]
+  },
+  {
+   "id": "tool:gemini-cli-extensions/nanobanana",
+   "kind": "tool",
+   "label": "Nano Banana extension for Gemini CLI",
+   "path": "catalog/tool/gemini-cli-extensions__nanobanana.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:mcp-servers",
+    "concept:still-images",
+    "concept:image-models"
    ]
   },
   {
@@ -1868,6 +2005,20 @@
     "concept:review-loop",
     "concept:footage-editing",
     "concept:agent-portability"
+   ]
+  },
+  {
+   "id": "tool:kingbootoshi/nano-banana-2-skill",
+   "kind": "tool",
+   "label": "Nano Banana 2 Skill",
+   "path": "catalog/tool/kingbootoshi__nano-banana-2-skill.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:agent-skills",
+    "concept:still-images",
+    "concept:cost"
    ]
   },
   {
@@ -2112,6 +2263,33 @@
    ]
   },
   {
+   "id": "tool:ohf-voice/piper1-gpl",
+   "kind": "tool",
+   "label": "Piper (piper1-gpl)",
+   "path": "catalog/tool/ohf-voice__piper1-gpl.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:audio-and-captions",
+    "concept:licences-and-territory"
+   ]
+  },
+  {
+   "id": "tool:openai/skills",
+   "kind": "tool",
+   "label": "OpenAI Agent Skills (imagegen, speech)",
+   "path": "catalog/tool/openai__skills.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:agent-skills",
+    "concept:audio-and-captions",
+    "concept:still-images"
+   ]
+  },
+  {
    "id": "tool:openmontageinc/openmontage",
    "kind": "tool",
    "label": "OpenMontage",
@@ -2138,6 +2316,20 @@
     "concept:hosted-video-models",
     "concept:cost",
     "concept:agent-skills"
+   ]
+  },
+  {
+   "id": "tool:recraft.ai",
+   "kind": "tool",
+   "label": "Recraft API and MCP server",
+   "path": "catalog/tool/recraft.ai.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:image-models",
+    "concept:mcp-servers",
+    "concept:cost"
    ]
   },
   {
@@ -2718,6 +2910,31 @@
    "rel": "about"
   },
   {
+   "source": "model:facebook/musicgen",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "model:facebook/musicgen",
+   "target": "concept:licences-and-territory",
+   "rel": "about"
+  },
+  {
+   "source": "model:facebook/musicgen",
+   "target": "concept:models",
+   "rel": "about"
+  },
+  {
+   "source": "model:facebook/musicgen",
+   "target": "model:ace-step/ace-step",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "model:facebook/musicgen",
+   "target": "model:stabilityai/stable-audio",
+   "rel": "alternative_to"
+  },
+  {
    "source": "model:google/gemini-omni-flash",
    "target": "concept:cost",
    "rel": "about"
@@ -2726,6 +2943,31 @@
    "source": "model:google/gemini-omni-flash",
    "target": "concept:hosted-video-models",
    "rel": "about"
+  },
+  {
+   "source": "model:google/gemini-tts",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "model:google/gemini-tts",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "model:google/gemini-tts",
+   "target": "concept:models",
+   "rel": "about"
+  },
+  {
+   "source": "model:google/gemini-tts",
+   "target": "model:openai/gpt-4o-mini-tts",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "model:google/gemini-tts",
+   "target": "tool:elevenlabs.io",
+   "rel": "alternative_to"
   },
   {
    "source": "model:google/nano-banana",
@@ -2833,6 +3075,26 @@
    "rel": "about"
   },
   {
+   "source": "model:openai/gpt-4o-mini-tts",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "model:openai/gpt-4o-mini-tts",
+   "target": "concept:models",
+   "rel": "about"
+  },
+  {
+   "source": "model:openai/gpt-4o-mini-tts",
+   "target": "model:google/gemini-tts",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "model:openai/gpt-4o-mini-tts",
+   "target": "tool:openai/skills",
+   "rel": "contradicts"
+  },
+  {
    "source": "model:openai/gpt-image",
    "target": "concept:cost",
    "rel": "about"
@@ -2916,6 +3178,31 @@
    "source": "model:runwayml/gen-4.5",
    "target": "tool:runwayml/runway-api",
    "rel": "depends_on"
+  },
+  {
+   "source": "model:stabilityai/stable-audio",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "model:stabilityai/stable-audio",
+   "target": "concept:licences-and-territory",
+   "rel": "about"
+  },
+  {
+   "source": "model:stabilityai/stable-audio",
+   "target": "concept:models",
+   "rel": "about"
+  },
+  {
+   "source": "model:stabilityai/stable-audio",
+   "target": "model:ace-step/ace-step",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "model:stabilityai/stable-audio",
+   "target": "tool:blaizzy/mlx-audio",
+   "rel": "integrates_with"
   },
   {
    "source": "model:tongyi-mai/z-image",
@@ -4198,6 +4485,31 @@
    "rel": "alternative_to"
   },
   {
+   "source": "source:support.google.com/youtube/answer/72431",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "source:support.google.com/youtube/answer/72431",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:support.google.com/youtube/answer/72431",
+   "target": "concept:still-images",
+   "rel": "about"
+  },
+  {
+   "source": "source:support.google.com/youtube/answer/72431",
+   "target": "source:support.google.com/youtube/answer/14328491",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:support.google.com/youtube/answer/72431",
+   "target": "source:support.google.com/youtube/answer/1722171",
+   "rel": "integrates_with"
+  },
+  {
    "source": "source:support.google.com/youtube/answer/9314415",
    "target": "concept:feedback-loop",
    "rel": "about"
@@ -4368,6 +4680,26 @@
    "rel": "about"
   },
   {
+   "source": "tool:anthropics/skills",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:anthropics/skills",
+   "target": "concept:still-images",
+   "rel": "about"
+  },
+  {
+   "source": "tool:anthropics/skills",
+   "target": "concept:visual-design",
+   "rel": "about"
+  },
+  {
+   "source": "tool:anthropics/skills",
+   "target": "tool:mattypark/motion-graphics-skill",
+   "rel": "contradicts"
+  },
+  {
    "source": "tool:aoike123/blender-vse",
    "target": "concept:agent-skills",
    "rel": "about"
@@ -4406,6 +4738,31 @@
    "source": "tool:bbc/ttml-validator",
    "target": "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
    "rel": "depends_on"
+  },
+  {
+   "source": "tool:blaizzy/mlx-audio",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:blaizzy/mlx-audio",
+   "target": "concept:models",
+   "rel": "about"
+  },
+  {
+   "source": "tool:blaizzy/mlx-audio",
+   "target": "model:hexgrad/kokoro",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:blaizzy/mlx-audio",
+   "target": "model:stabilityai/stable-audio",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:blaizzy/mlx-audio",
+   "target": "tool:blaizzy/mlx-video",
+   "rel": "alternative_to"
   },
   {
    "source": "tool:blaizzy/mlx-video",
@@ -4728,6 +5085,36 @@
    "rel": "integrates_with"
   },
   {
+   "source": "tool:elevenlabs.io",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:elevenlabs.io",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "tool:elevenlabs.io",
+   "target": "concept:licences-and-territory",
+   "rel": "about"
+  },
+  {
+   "source": "tool:elevenlabs.io",
+   "target": "model:google/gemini-tts",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:elevenlabs.io",
+   "target": "model:openai/gpt-4o-mini-tts",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:elevenlabs.io",
+   "target": "tool:browser-use/video-use",
+   "rel": "integrates_with"
+  },
+  {
    "source": "tool:fal-ai/fal",
    "target": "concept:cost",
    "rel": "about"
@@ -4803,6 +5190,21 @@
    "rel": "extends"
   },
   {
+   "source": "tool:freesound.org",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:freesound.org",
+   "target": "concept:licences-and-territory",
+   "rel": "about"
+  },
+  {
+   "source": "tool:freesound.org",
+   "target": "model:stabilityai/stable-audio",
+   "rel": "alternative_to"
+  },
+  {
    "source": "tool:garylab/pexels-mcp-server",
    "target": "concept:footage-editing",
    "rel": "about"
@@ -4820,6 +5222,31 @@
   {
    "source": "tool:garylab/pexels-mcp-server",
    "target": "source:pixabay.com/api/docs",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:gemini-cli-extensions/nanobanana",
+   "target": "concept:image-models",
+   "rel": "about"
+  },
+  {
+   "source": "tool:gemini-cli-extensions/nanobanana",
+   "target": "concept:mcp-servers",
+   "rel": "about"
+  },
+  {
+   "source": "tool:gemini-cli-extensions/nanobanana",
+   "target": "concept:still-images",
+   "rel": "about"
+  },
+  {
+   "source": "tool:gemini-cli-extensions/nanobanana",
+   "target": "model:google/nano-banana",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:gemini-cli-extensions/nanobanana",
+   "target": "tool:kingbootoshi/nano-banana-2-skill",
    "rel": "alternative_to"
   },
   {
@@ -5170,6 +5597,31 @@
   {
    "source": "tool:kajisho5/ffmpeg-skill",
    "target": "tool:browser-use/video-use",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:kingbootoshi/nano-banana-2-skill",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:kingbootoshi/nano-banana-2-skill",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "tool:kingbootoshi/nano-banana-2-skill",
+   "target": "concept:still-images",
+   "rel": "about"
+  },
+  {
+   "source": "tool:kingbootoshi/nano-banana-2-skill",
+   "target": "model:google/nano-banana",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:kingbootoshi/nano-banana-2-skill",
+   "target": "tool:gemini-cli-extensions/nanobanana",
    "rel": "alternative_to"
   },
   {
@@ -5578,6 +6030,46 @@
    "rel": "depends_on"
   },
   {
+   "source": "tool:ohf-voice/piper1-gpl",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:ohf-voice/piper1-gpl",
+   "target": "concept:licences-and-territory",
+   "rel": "about"
+  },
+  {
+   "source": "tool:ohf-voice/piper1-gpl",
+   "target": "model:hexgrad/kokoro",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:openai/skills",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:openai/skills",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:openai/skills",
+   "target": "concept:still-images",
+   "rel": "about"
+  },
+  {
+   "source": "tool:openai/skills",
+   "target": "model:openai/gpt-4o-mini-tts",
+   "rel": "contradicts"
+  },
+  {
+   "source": "tool:openai/skills",
+   "target": "model:openai/gpt-image",
+   "rel": "integrates_with"
+  },
+  {
    "source": "tool:openmontageinc/openmontage",
    "target": "concept:agentic-pipelines",
    "rel": "about"
@@ -5636,6 +6128,31 @@
    "source": "tool:openrouter/video-generation",
    "target": "model:heygen/heygen-video-1",
    "rel": "integrates_with"
+  },
+  {
+   "source": "tool:recraft.ai",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "tool:recraft.ai",
+   "target": "concept:image-models",
+   "rel": "about"
+  },
+  {
+   "source": "tool:recraft.ai",
+   "target": "concept:mcp-servers",
+   "rel": "about"
+  },
+  {
+   "source": "tool:recraft.ai",
+   "target": "model:google/nano-banana",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:recraft.ai",
+   "target": "model:openai/gpt-image",
+   "rel": "alternative_to"
   },
   {
    "source": "tool:relo-video/synthcut",

@@ -62,7 +62,8 @@ None.
 
 ## Referenced by
 
-None.
+- [OpenAI Agent Skills (imagegen, speech)](../tool/openai__skills.md) (integrates_with)
+- [Recraft API and MCP server](../tool/recraft.ai.md) (alternative_to)
 
 ## Status
 

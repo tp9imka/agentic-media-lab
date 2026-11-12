@@ -68,7 +68,9 @@ Nothing collected yet.
 
 ## Referenced by
 
-None.
+- [Nano Banana extension for Gemini CLI](../tool/gemini-cli-extensions__nanobanana.md) (integrates_with)
+- [Nano Banana 2 Skill](../tool/kingbootoshi__nano-banana-2-skill.md) (integrates_with)
+- [Recraft API and MCP server](../tool/recraft.ai.md) (alternative_to)
 
 ## Status
 

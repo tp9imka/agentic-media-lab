@@ -4,13 +4,13 @@ Built 2026-11-12 by `tools/build.py`.
 
 ## Counts
 
-- tool: 72
-- model: 25
-- source: 74
+- tool: 81
+- model: 29
+- source: 75
 - recipe: 0
 - concepts: 35
-- primary-read share: 0.977
-- Hub size: 669983 characters, about 167495 tokens (estimate, characters / 4).
+- primary-read share: 0.978
+- Hub size: 728449 characters, about 182112 tokens (estimate, characters / 4).
 
 ## Validation
 
@@ -20,10 +20,12 @@ dangling: 0 bad concepts: 0 invalid: 0
 
 None.
 
-## Tags used once (61)
+## Tags used once (75)
 
 - `accessibility`
 - `analytics`
+- `apple-silicon`
+- `attribution`
 - `automation`
 - `awesome-list`
 - `banding`
@@ -32,9 +34,11 @@ None.
 - `cloned-skills`
 - `contrast`
 - `cps`
+- `creative-commons`
 - `cuts`
 - `design-tokens`
 - `determinism`
+- `diagram`
 - `docker`
 - `edge-tts`
 - `editing`
@@ -44,7 +48,9 @@ None.
 - `film-roles`
 - `final-cut-pro`
 - `flashing`
+- `fonts`
 - `frame-anchoring`
+- `generative-art`
 - `h264`
 - `hosted`
 - `instagram`
@@ -56,8 +62,9 @@ None.
 - `mastodon`
 - `mcp`
 - `meta`
+- `mlx`
 - `monetisation`
-- `pricing`
+- `non-commercial`
 - `quality-metric`
 - `quota`
 - `reels`
@@ -65,6 +72,7 @@ None.
 - `remotion`
 - `render-check`
 - `retention`
+- `safe-crop`
 - `screenplay`
 - `script-format`
 - `short-video`
@@ -73,15 +81,21 @@ None.
 - `silence-removal`
 - `skill-invocation`
 - `skills-sh`
+- `stability`
 - `stock-footage`
 - `story-visualization`
 - `streaming`
+- `svg`
 - `threads`
+- `title-card`
+- `transparency`
 - `true-peak`
 - `unoriginal-content`
 - `validator`
+- `vector`
 - `verifier`
 - `vertical-video`
+- `voice-licensing`
 - `wan`
 
 ## Popularity disagreements (8)
