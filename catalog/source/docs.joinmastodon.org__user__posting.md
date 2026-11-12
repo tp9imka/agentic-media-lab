@@ -12,13 +12,13 @@ Tags: mastodon, video-specs
 
 **Why:** Mastodon limits are set per server, so an agent should read them from the instance instead of hard-coding them.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
 Fit: low. Level: intermediate. Maturity: -.
 
-Default: one video per post, up to 99 MB, transcoded to H.264 at max 1300 kbps, so a crisp render will be softened. Read configuration.media_attachments.video_size_limit from GET /api/v2/instance for the server you post to. No app review; a token from your own account works. Rate limits were not read.
+Default: one video per post, up to 99 MB, transcoded to H.264 at max 1300 kbps, so a render above that bitrate will be re-encoded lower. Read configuration.media_attachments.video_size_limit from GET /api/v2/instance for the server you post to. No app review; a token from your own account works. Rate limits were not read.
 
 ## Claims
 
@@ -38,7 +38,7 @@ Default: one video per post, up to 99 MB, transcoded to H.264 at max 1300 kbps, 
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. posting page and Instance entity page, visible text, against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

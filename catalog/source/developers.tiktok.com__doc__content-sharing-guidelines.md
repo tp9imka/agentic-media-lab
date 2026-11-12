@@ -14,7 +14,7 @@ Tags: tiktok, audit, rate-limit
 
 **Why:** This page decides whether a one-person pipeline can publish to TikTok publicly at all. Without an audit every post is private, and the audit does not accept a tool for your own accounts.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -30,7 +30,7 @@ For one developer posting to their own account this is a dead end for public pos
 
    Locator: Direct Post API - Developer Guidelines, first paragraph. Source: <https://developers.tiktok.com/doc/content-sharing-guidelines>, retrieved 2026-11-12.
 
-2. The audit rejects a tool that only uploads to accounts you or your team manage, which is the single-developer case.
+2. The guidelines list a utility tool that uploads to accounts you or your team manage as not acceptable; clients must serve a wide audience, not private use.
 
    > Not acceptable: A utility tool to help upload contents to the account(s) you or your team manages. ❌
 
@@ -46,7 +46,7 @@ For one developer posting to their own account this is a dead end for public pos
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. visible page text (last updated August 4, 2026) against the earlier scan's two quotes; both found verbatim
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

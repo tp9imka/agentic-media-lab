@@ -12,13 +12,13 @@ Tags: youtube, monetisation
 
 **Why:** An agent pipeline that makes many similar clips is the exact pattern this policy names, so it decides whether the channel can earn.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
 Fit: high. Level: intro. Maturity: -.
 
-AI use is allowed and named as monetisable when it serves your own narrative; templated, interchangeable videos are not. Reused-content review applies to the whole channel, so a run of near-identical generated Shorts can cost monetisation on everything. Separate rule: AI personas giving health, legal, finance or political advice cannot monetise. Policy text, not a measured threshold; reviewers judge.
+AI use is allowed and named as monetisable when it serves your own narrative; templated, interchangeable videos are not. Reused-content review applies to the whole channel, so a run of near-identical generated Shorts can cost monetisation on everything. Separate rule: channels whose AI personas present themselves as human experts giving health, legal, finance or political advice cannot monetise. Policy text, not a measured threshold; reviewers judge.
 
 ## Claims
 
@@ -44,7 +44,7 @@ AI use is allowed and named as monetisable when it serves your own narrative; te
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. visible help page text (hl=en) against the 'mass production' wording from the earlier scan
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

@@ -12,7 +12,7 @@ Tags: tiktok, ai-label, rate-limit
 
 **Why:** It holds the AI-label flag an agent should set on generated video and the error an unaudited client gets when the account is public.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -44,7 +44,7 @@ Set post_info.is_aigc=true on generated clips; the page says it adds the 'Creato
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. visible reference text against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

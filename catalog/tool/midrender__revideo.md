@@ -12,7 +12,7 @@ Also known as: redotvideo/revideo, @revideo/core
 
 **Why:** It gives the Motion Canvas authoring model a render call an agent can run, and it names Claude and Codex as authors.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -51,7 +51,7 @@ The repo moved from redotvideo/revideo to midrender/revideo and is the engine be
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. README.md and the docs welcome page against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

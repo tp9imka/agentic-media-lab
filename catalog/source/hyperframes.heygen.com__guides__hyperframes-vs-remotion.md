@@ -10,7 +10,7 @@ Concepts: [Code-driven video](../../docs/glossary.md#code-driven-video), [Licenc
 
 **Why:** The vendor of one side states where the other is better and admits HyperFrames fails quietly when its rules are broken. Read it as a party with an interest.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -42,7 +42,7 @@ Written by HeyGen, which makes HyperFrames. The test was one run each, and the p
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. visible page text against the claims and against Remotion LICENSE.md
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: unknown
 - URL status: live

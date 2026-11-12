@@ -12,7 +12,7 @@ Tags: safe-zone, export, reels
 
 **Why:** It is the only first-party page opened that states a vertical safe zone as numbers, which converts directly to a pixel check on a 1080x1920 frame.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -34,7 +34,7 @@ On 1080x1920 the margins are about 269 px top, 672 px bottom and 65 px each side
 
    Locator: Design Recommendations. Source: <https://www.facebook.com/business/ads-guide/update/video/instagram-reels>, retrieved 2026-11-12.
 
-3. Reels ads must not use files with edit lists or special container boxes.
+3. Reels ads should not use files with edit lists or special container boxes.
 
    > Videos that contain edit lists or special boxes in file containers.
 
@@ -44,7 +44,7 @@ On 1080x1920 the margins are about 269 px top, 672 px bottom and 65 px each side
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. Ads Guide Reels page against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

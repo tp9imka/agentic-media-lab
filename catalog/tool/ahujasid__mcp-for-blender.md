@@ -12,7 +12,7 @@ Also known as: blender-mcp, mcp-for-blender, ahujasid/blender-mcp
 
 **Why:** The working path for 3D shots driven by an agent, with a built-in way for the agent to see its own frames.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -51,7 +51,7 @@ The server runs any Python the agent writes inside Blender by default; set BLEND
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. README.md and the Blender manual command-line render page against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

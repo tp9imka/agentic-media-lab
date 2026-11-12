@@ -12,7 +12,7 @@ Tags: skill-invocation
 
 **Why:** Many video skills assume the agent will load them when a video task comes up. Vercel measured that an agent often does not, which changes how a reader should wire a renderer skill into a project.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -44,7 +44,7 @@ For a video project: put a short index of the renderer's rules (or a line that s
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. Vercel blog visible text against the three claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: unknown
 - URL status: live

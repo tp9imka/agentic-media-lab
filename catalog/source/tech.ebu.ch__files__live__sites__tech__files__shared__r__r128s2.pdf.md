@@ -12,7 +12,7 @@ Tags: loudness, lufs, streaming
 
 **Why:** It is the only standards-body number found for a louder-than-broadcast streaming mix, the case most short clips fall into.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-11-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-11-12.
 
 ## Fit notes
 
@@ -28,7 +28,7 @@ Pick -16 LUFS integrated with -1 dBTP as a phone-first target and stay inside th
 
    Locator: r128s2.pdf (2023), recommends item e. Source: <https://tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s2.pdf>, retrieved 2026-11-12.
 
-2. Without loudness metadata, a broadcaster may distribute louder, in an interim range of -20.0 to -16.0 LUFS.
+2. Without loudness metadata, a broadcaster that wants to control the dynamic treatment may distribute louder, in an interim range of -20.0 to -16.0 LUFS.
 
    > the interim value for the Distribution Loudness Level should be in the range of −20.0 to −16.0 LUFS
 
@@ -38,7 +38,7 @@ Pick -16 LUFS integrated with -1 dBTP as a phone-first target and stay inside th
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. R 128 s2 PDF text against both claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-11-12
 - Licence: unknown
 - URL status: live

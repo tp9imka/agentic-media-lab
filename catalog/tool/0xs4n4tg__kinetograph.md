@@ -12,7 +12,7 @@ Also known as: kinetograph
 
 **Why:** It could give Remotion or HyperFrames code a render path with no Chrome, and its docs list in detail what it cannot draw. The repo was created on 2026-10-23 and is in beta.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -51,7 +51,7 @@ Prebuilt package for macOS on Apple Silicon, Node 22+. `kinetograph doctor <entr
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. README.md and the docs Compatibility page against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: Apache-2.0
 - URL status: live

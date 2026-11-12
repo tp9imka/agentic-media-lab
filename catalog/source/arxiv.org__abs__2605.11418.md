@@ -10,15 +10,15 @@ Tags: supply-chain, prompt-injection
 
 **Badge:** quoted, primary source read (`quoted-primary`): primary source read.
 
-**Why:** It shows that the description text of a skill decides whether an agent picks it and whether a registry blocks it, so a well-worded copy can beat the original without any code change.
+**Why:** It shows that the description text of a skill biases whether an agent picks it (77.6% of paired trials) and lets malicious skills avoid a registry block in 36.5%-100% of cases, so a well-worded copy can beat the original without any code change.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-11-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-11-12.
 
 ## Fit notes
 
 Fit: medium. Level: advanced. Maturity: -.
 
-Measured on ClawHub mechanisms, not on skills.sh or the Claude Code plugin marketplace, so the numbers do not transfer directly. The arXiv page renders SKILL.md as 'this http URL', which is kept in the quotes. Practical reading: a description that matches your request better is not evidence the skill is better; compare skills by their files, not by how they describe themselves. Only the abstract was read.
+Measured on ClawHub mechanisms, not on skills.sh or the Claude Code plugin marketplace, so the numbers do not transfer directly. The arXiv page renders SKILL.md as 'this http URL', so the quotes use sentences without it. Practical reading: a description that matches your request better is not evidence the skill is better; compare skills by their files, not by how they describe themselves. Only the abstract was read.
 
 ## Claims
 
@@ -38,7 +38,7 @@ Measured on ClawHub mechanisms, not on skills.sh or the Claude Code plugin marke
 
 - Source type: independent-secondary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. arXiv abstract page against the two claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-11-12
 - Licence: unknown
 - URL status: live

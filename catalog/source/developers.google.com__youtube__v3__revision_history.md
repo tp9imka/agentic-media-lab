@@ -14,13 +14,13 @@ Tags: youtube, audit, ai-label
 
 **Why:** Most guides still say an unaudited YouTube project uploads private-only. Since November 2, 2026 that is no longer true, which makes YouTube the easiest public target for a one-person pipeline.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
 Fit: high. Level: intermediate. Maturity: -.
 
-The 2020 private-only rule is still on the same page under July 28, 2020; read the date. Set status.privacyStatus explicitly: the default is now public, and a test upload you meant to keep private goes live. Set status.containsSyntheticMedia=true on realistic generated clips (see the disclosure help page). The page URL now redirects to developers.google.com/youtube/data/revision_history. The quota (100 uploads a day) is on the videos.insert record.
+The 2020 private-only rule is still on the same page under July 28, 2020; read the date. Set status.privacyStatus explicitly: since November 2, 2026 the default is public unless creator account settings make it private, so a test upload you meant to keep private can go live. Set status.containsSyntheticMedia=true on realistic generated clips (see the disclosure help page). The page URL now redirects to developers.google.com/youtube/data/revision_history. The quota (100 uploads a day) is on the videos.insert record.
 
 ## Claims
 
@@ -30,7 +30,7 @@ The 2020 private-only rule is still on the same page under July 28, 2020; read t
 
    Locator: Entry November 2, 2026. Source: <https://developers.google.com/youtube/v3/revision_history>, retrieved 2026-11-12.
 
-2. An upload without status.privacyStatus now defaults to public.
+2. From the November 2, 2026 entry, an upload without status.privacyStatus defaults to public, though creator account settings can make some uploads default to private.
 
    > If you don't specify a value for the status.privacyStatus property in a videos.insert request, the uploaded video's privacy status defaults to public.
 
@@ -46,7 +46,7 @@ The 2020 private-only rule is still on the same page under July 28, 2020; read t
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. visible page text, entries November 2, 2026, October 30, 2024 and July 28, 2020, against the earlier scan's claim; confirmed
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

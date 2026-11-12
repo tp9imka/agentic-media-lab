@@ -12,13 +12,13 @@ Tags: x, automation
 
 **Why:** An agent that posts on a schedule is automation under these rules, and the page says what keeps such an account out of trouble.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
 Fit: high. Level: intro. Maturity: -.
 
-Scheduled original posts to your own account are allowed. Duplicate or near-duplicate posts are not, so vary each post. Scripting the website, for example with a browser agent, risks permanent suspension; use the API. The saved text shows the X logo as '>x<' in place of the word X, so quotes avoid those sentences.
+Automated posts for entertainment, informational or novelty purposes are allowed if they comply with all other rules. Duplicate or near-duplicate posts are not, so vary each post. Scripting the website, for example with a browser agent, risks permanent suspension; use the API. The saved text shows the X logo as '>x<' in place of the word X, so quotes avoid those sentences.
 
 ## Claims
 
@@ -44,7 +44,7 @@ Scheduled original posts to your own account are allowed. Duplicate or near-dupl
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. visible Help Center text against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

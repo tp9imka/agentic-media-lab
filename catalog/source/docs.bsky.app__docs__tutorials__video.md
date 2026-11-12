@@ -12,13 +12,13 @@ Tags: bluesky
 
 **Why:** Bluesky needs no app review, but it does state account-level video limits without giving the numbers.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
 Fit: low. Level: intermediate. Maturity: -.
 
-No audit or app approval is mentioned; posting uses your own account credentials. The account must have a verified email, and a daily video-post limit exists but its number is not on this page. The docs URL redirects to bsky.network/docs/about-bluesky-content/video. Size and length limits were not found on the page.
+No audit or app approval is mentioned; posting uses your own account credentials. Bluesky-hosted accounts must have a verified email, and a daily video-post limit exists but its number is not on this page. The docs URL redirects to bsky.network/docs/about-bluesky-content/video. Size and length limits were not found on the page.
 
 ## Claims
 
@@ -32,7 +32,7 @@ No audit or app approval is mentioned; posting uses your own account credentials
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. visible tutorial text after redirect to bsky.network
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

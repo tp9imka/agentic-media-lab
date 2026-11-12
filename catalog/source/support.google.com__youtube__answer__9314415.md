@@ -10,15 +10,15 @@ Tags: retention, hook, analytics
 
 **Badge:** quoted, primary source read (`quoted-primary`): primary source read.
 
-**Why:** It is YouTube's own definition of the intro window and tells a feedback loop which clips will get the report at all.
+**Why:** It is YouTube's own definition of the intro window and tells a feedback loop which clips will get highlighted moments at all.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
 Fit: medium. Level: intro. Maturity: -.
 
-Under-60-second Shorts do not get this report, so a Shorts feedback loop needs the plain retention curve from the Analytics API instead. YouTube publishes no hook length for Shorts on this page; the 30-second intro window is for long videos. API access was not checked.
+Under-60-second Shorts do not get the highlighted moments (top moments, spikes, dips), so a Shorts feedback loop needs the plain retention curve from the Analytics API instead. YouTube publishes no hook length for Shorts on this page; the page does not scope the 30-second intro window by video length. API access was not checked.
 
 ## Claims
 
@@ -44,7 +44,7 @@ Under-60-second Shorts do not get this report, so a Shorts feedback loop needs t
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. answer 9314415 against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

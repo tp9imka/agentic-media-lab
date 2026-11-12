@@ -12,13 +12,13 @@ Tags: hook, ads, safe-zone
 
 **Why:** It is the only first-party page found that puts numbers on hook timing and on-screen text speed for short-form.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
 Fit: medium. Level: intro. Maturity: -.
 
-Written for paid ads, not organic posts. The 5-10 words per second is for short text overlays and is two to three times the BBC subtitle rate; do not apply it to full captions of speech. The ads spec page gives safe zones only as downloadable files, not numbers; they were not downloaded. Specs say last updated June 2026.
+Written for paid ads, not organic posts. The 5-10 words per second is for ad captions or text overlays and is two to three times the BBC subtitle rate; do not apply it to full captions of speech. The ads spec page gives safe zones only as downloadable files, not numbers; they were not downloaded. Specs say last updated June 2026.
 
 ## Claims
 
@@ -34,7 +34,7 @@ Written for paid ads, not organic posts. The 5-10 words per second is for short 
 
    Locator: creative best practices, section on captions and text. Source: <https://ads.tiktok.com/help/article/creative-best-practices?lang=en>, retrieved 2026-11-12.
 
-3. Vertical in-feed ads are 9:16 and at least 540x960 px.
+3. Vertical Non-Spark in-feed ads are 9:16 and at least 540x960 px.
 
    > Vertical (recommended): 9:16, more than or equal to 540*960px.
 
@@ -44,7 +44,7 @@ Written for paid ads, not organic posts. The 5-10 words per second is for short 
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. creative best practices page and video ads specifications page against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

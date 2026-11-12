@@ -12,7 +12,7 @@ Tags: shot-planning, storyboard
 
 **Why:** It names the fields a shot spec should carry and reports measured cost and quality for keyframe best-of-k, which sets a default for a review loop.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-11-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-11-12.
 
 ## Fit notes
 
@@ -44,7 +44,7 @@ Copy the shot-spec fields into your own shot-list schema, and default to two key
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. arXiv abstract page and HTML full text against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-11-12
 - Licence: unknown
 - URL status: live

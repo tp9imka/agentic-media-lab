@@ -12,7 +12,7 @@ Also known as: ManimCE, manim
 
 **Why:** The usual route for diagram and equation animation written by an agent in Python, with a one-flag way to get the last frame as a PNG.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -41,7 +41,7 @@ Fit: high. Level: intermediate. Maturity: active.
 
    Locator: docs.manim.community, Configuration guide, command line help. Source: <https://docs.manim.community/en/stable/guides/configuration.html>, retrieved 2026-11-12.
 
-3. Using the other project's install instructions breaks the install.
+3. The README warns that using the other project's install instructions will cause problems.
 
    > Trying to use these instructions to install [3b1b/manim](https://github.com/3b1b/manim) or instructions there to install this version will cause problems.
 
@@ -51,7 +51,7 @@ Fit: high. Level: intermediate. Maturity: active.
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. README.md and the docs configuration guide against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

@@ -10,9 +10,9 @@ Tags: manim, render-check
 
 **Badge:** quoted, primary source read (`quoted-primary`): primary source read.
 
-**Why:** It says the main failure of code-driven video cannot be seen by reading the code, which is the case for rendering frames and looking at them before delivery.
+**Why:** It says visual defects in LLM-generated educational animations cannot be reliably detected from the code alone, which is the case for rendering frames and looking at them before delivery.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-11-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-11-12.
 
 ## Fit notes
 
@@ -38,7 +38,7 @@ Practical reading for Manim, Remotion or HyperFrames: do not accept 'the code ra
 
 - Source type: independent-secondary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. arXiv abstract page against the two claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-11-12
 - Licence: unknown
 - URL status: live

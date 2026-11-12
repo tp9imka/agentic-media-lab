@@ -12,13 +12,13 @@ Tags: linkedin, video-specs
 
 **Why:** It separates the self-serve route a single developer can add today from the vetted route needed for company pages.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
 Fit: medium. Level: intermediate. Maturity: -.
 
-For your own profile, add the 'Share on LinkedIn' product in the developer portal to get w_member_social; it supports feedshare-video. Company page posting needs the Community Management API, a vetted product with a Development tier and a Standard tier that asks for a screencast. Video: MP4, 3 s to 30 min, 75 KB to 500 MB per the Videos API; the same page also says the maximum is 5 GB, an inconsistency not resolved here. No daily post limit found.
+For your own profile, add the 'Share on LinkedIn' product in the developer portal to get w_member_social; it supports feedshare-video. Company page posting needs the Community Management API, a vetted product with a Development tier and a Standard tier that asks for a screencast. Video (non-connected-TV specs): MP4, 3 s to 30 min, 75 KB to 500 MB per the Videos API; the same page also says the maximum is 5 GB, an inconsistency not resolved here. Daily request limits (UTC): 150 per member, 100,000 per application.
 
 ## Claims
 
@@ -28,7 +28,7 @@ For your own profile, add the 'Share on LinkedIn' product in the developer porta
 
    Locator: Share on LinkedIn, Permissions. Source: <https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin>, retrieved 2026-11-12.
 
-2. LinkedIn video must be MP4, 3 seconds to 30 minutes, 75 KB to 500 MB.
+2. LinkedIn's specs for non-connected-TV video are MP4, 3 seconds to 30 minutes, 75 KB to 500 MB; the upload schema allows up to 5 GB.
 
    > Length: Three seconds to 30 minutes. File size: Between 75kb and 500MB. File format: MP4.
 
@@ -44,7 +44,7 @@ For your own profile, add the 'Share on LinkedIn' product in the developer porta
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. Share on LinkedIn, Videos API (view li-lms-2026-10) and Community Management overview, visible text, against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

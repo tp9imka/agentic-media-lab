@@ -12,7 +12,7 @@ Tags: editing, cuts
 
 **Why:** It gives an ordered list a review step can use to decide which cut to keep when two rules conflict.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-11-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-11-12.
 
 ## Fit notes
 
@@ -44,7 +44,7 @@ Use the order, not the decimals: when a cut breaks continuity but keeps emotion 
 
 - Source type: independent-secondary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. course wiki page text against the claims; book not opened
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-11-12
 - Licence: unknown
 - URL status: live

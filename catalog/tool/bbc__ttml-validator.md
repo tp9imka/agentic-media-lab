@@ -12,7 +12,7 @@ Tags: subtitles, validator, qc
 
 **Why:** It is a first-party linter for the BBC rules, so an agent can check a subtitle file without re-implementing the guidelines.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -25,7 +25,7 @@ Fit: low. Level: intermediate. Maturity: active.
 | levers | captions, review-loop |
 | cost | free-local |
 
-Only TTML input (EBU-TT-D or DAPT); SRT and VTT need converting first, and most short-form tools emit SRT or VTT. It checks technical rules only, so reading rate and line breaks still need a separate check. Needs Python 3.14 with poetry or uv. Not installed or run here.
+Only TTML input (EBU-TT-D or DAPT); SRT and VTT need converting first, and most short-form tools emit SRT or VTT. It checks technical rules only, so reading rate and line breaks still need a separate check. Built with Python 3.14, which the README suggests having available; setup uses poetry or uv. Not installed or run here.
 
 ## Claims
 
@@ -51,7 +51,7 @@ Only TTML input (EBU-TT-D or DAPT); SRT and VTT need converting first, and most 
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. README.md via GitHub API against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: unknown
 - URL status: live

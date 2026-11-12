@@ -10,25 +10,25 @@ Tags: youtube, quota, video-specs
 
 **Badge:** quoted, primary source read (`quoted-primary`): primary source read.
 
-**Why:** It gives the daily upload ceiling and file limits a scheduled pipeline has to plan around.
+**Why:** It gives the default daily upload quota and file limits a scheduled pipeline has to plan around.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
 Fit: high. Level: intermediate. Maturity: -.
 
-Uploads have their own bucket of 100 calls per day per project, separate from the 10,000 units for other calls; this replaces the 1,600-units-per-upload figure many guides still quote. Quotas reset at midnight Pacific Time. Files up to 256 GB, any video/* type. Needs a Google Cloud project and OAuth consent for your own channel; no cost stated. Both pages redirect to developers.google.com/youtube/data/...
+By default, uploads have their own bucket of 100 calls per day per project, separate from the 10,000 units for other calls; this replaces the 1,600-units-per-upload figure many guides still quote. Quotas reset at midnight Pacific Time. Files up to 256 GB, any video/* type. Needs a Google Cloud project and OAuth consent for your own channel; no cost stated. Both pages redirect to developers.google.com/youtube/data/...
 
 ## Claims
 
-1. videos.insert has its own bucket of 100 calls per day, 1 unit each.
+1. By default, videos.insert has its own bucket of 100 calls per day, 1 unit each.
 
    > Quota impact: 100 calls per day. A call to this method has a quota cost of 1 unit in the Video Uploads quota bucket.
 
    Locator: videos.insert, Quota impact. Source: <https://developers.google.com/youtube/v3/docs/videos/insert>, retrieved 2026-11-12.
 
-2. A project gets 100 search.list calls, 100 videos.insert calls and 10,000 units for all other endpoints per day.
+2. By default, a project gets 100 search.list calls, 100 videos.insert calls and 10,000 units for all other endpoints per day.
 
    > Projects that enable the YouTube Data API have a default quota allocation of 100 search.list calls, 100 videos.insert calls, and 10,000 units per day combined for all other endpoints.
 
@@ -44,7 +44,7 @@ Uploads have their own bucket of 100 calls per day per project, separate from th
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. videos.insert reference and determine_quota_cost page, visible text, against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

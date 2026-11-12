@@ -12,7 +12,7 @@ Also known as: motion-canvas
 
 **Why:** Good for code explainers synced to voice-over, but its render step is a button in a browser editor, which an agent cannot press without browser automation.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -51,7 +51,7 @@ For an agent that must produce the MP4 itself, use Revideo, its fork with a head
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. README.md and the docs Rendering page against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

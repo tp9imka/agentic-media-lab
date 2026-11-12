@@ -12,7 +12,7 @@ Tags: shot-planning, hook, ads
 
 **Why:** It is the closest paper to the reader's job, a 12-second multi-shot ad, and its judge rubric scores the hook in the first 1-2 seconds.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-11-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-11-12.
 
 ## Fit notes
 
@@ -44,7 +44,7 @@ Reuse two of its fixed choices: four shots for a 12-second spot, and a refinemen
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. arXiv abstract page and HTML full text against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-11-12
 - Licence: unknown
 - URL status: live

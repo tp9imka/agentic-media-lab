@@ -12,7 +12,7 @@ Also known as: moviepy
 
 **Why:** Easy for an agent to script in Python, but agent training data is full of v1 code that v2 broke.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -25,7 +25,7 @@ Fit: medium. Level: intro. Maturity: active.
 | levers | captions, audio |
 | cost | free-local |
 
-Tell the agent to target MoviePy v2 and to read the v1-to-v2 guide: its README example uses v2 names such as `subclipped` and `with_volume_scaled`, and code written against v1 docs fails. It is slower than ffmpeg alone, so use it for logic and let ffmpeg do heavy filters. TextClip takes a font file path, so ship the .ttf with the project. The README asks for maintainers. I did not check a still-frame API.
+Tell the agent to target MoviePy v2 and to read the v1-to-v2 guide: its README example uses v2 names such as `subclipped` and `with_volume_scaled`, and v2 brought major breaking changes, so code written against v1 docs may break. It is slower than ffmpeg alone, so use it for logic and let ffmpeg do heavy filters. TextClip takes a font file path, so ship the .ttf with the project. The README asks for maintainers. I did not check a still-frame API.
 
 ## Claims
 
@@ -45,7 +45,7 @@ Tell the agent to target MoviePy v2 and to read the v1-to-v2 guide: its README e
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. README.md against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

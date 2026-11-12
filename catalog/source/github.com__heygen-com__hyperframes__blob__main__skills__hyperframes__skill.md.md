@@ -10,15 +10,15 @@ Tags: telemetry, hyperframes
 
 **Badge:** quoted, primary source read (`quoted-primary`): primary source read.
 
-**Why:** Installing the skill makes the agent report to HeyGen which skill ran, alongside CLI telemetry that is on unless switched off and is tied to a HeyGen account after sign-in.
+**Why:** The skill tells the agent to report to HeyGen which skill ran, once as the skill starts, alongside CLI telemetry that is on unless switched off and is tied to a HeyGen account after sign-in.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
 Fit: high. Level: intro. Maturity: -.
 
-Updates tool:heygen-com/hyperframes (its fit_notes mention the beacon without a quote). Telemetry is on until you run `npx hyperframes telemetry disable` or set HYPERFRAMES_NO_TELEMETRY=1 or DO_NOT_TRACK=1; the CLI also reads these from the project .env. It records the coding agent's name (claude_code, codex, cursor) from environment variables. Turning telemetry off also removes the install from canary rollouts. The skill text is an instruction the agent will follow; for a client project, set the opt-out before the first run. Network traffic was not inspected here.
+Updates tool:heygen-com/hyperframes (its fit_notes mention the beacon without a quote). Telemetry is on until you run `npx hyperframes telemetry disable` or set HYPERFRAMES_NO_TELEMETRY=1 or DO_NOT_TRACK=1; the CLI also reads these from the project .env. It records the coding agent's name (claude_code, codex, cursor) from environment variables. Turning telemetry off also removes the install from canary rollouts. The skill text instructs the agent to send the beacon, and an agent that follows it will; for a client project, set the opt-out before the first run. Network traffic was not inspected here.
 
 ## Claims
 
@@ -44,7 +44,7 @@ Updates tool:heygen-com/hyperframes (its fit_notes mention the beacon without a 
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. SKILL.md, docs/faq.mdx and the telemetry section of docs/packages/cli.mdx on main against the three claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: Apache-2.0
 - URL status: live

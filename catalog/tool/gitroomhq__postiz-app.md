@@ -14,7 +14,7 @@ Tags: scheduler, self-hosted, mcp
 
 **Why:** It is the self-hostable scheduler an agent can drive over MCP or its API, so one render can be queued to several platforms.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -23,7 +23,7 @@ Fit: medium. Level: intermediate. Maturity: active.
 | field | value |
 |---|---|
 | tool_type | app |
-| agents | none-stated |
+| agents | codex, cursor, any-mcp |
 | levers | publishing |
 | cost | mixed |
 
@@ -53,7 +53,7 @@ Self-hosting means your own app per platform: YouTube now publishes publicly wit
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. GitHub README visible text against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: AGPL-3.0
 - URL status: live

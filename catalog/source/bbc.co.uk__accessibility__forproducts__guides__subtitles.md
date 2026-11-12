@@ -12,7 +12,7 @@ Tags: subtitles, reading-speed, vertical-video
 
 **Why:** It is the one primary caption guide found that gives line width and font size for vertical video, which is the frame most agent-made shorts use.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-11-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-11-12.
 
 ## Fit notes
 
@@ -28,7 +28,7 @@ Turn the rate into a check: on-screen seconds >= 0.3 x word count per caption. T
 
    Locator: section 4.1 Target minimum timing. Source: <https://www.bbc.co.uk/accessibility/forproducts/guides/subtitles/>, retrieved 2026-11-12.
 
-2. For vertical 9:16 video, a line spans 90% of the width, which fits about 25 characters.
+2. As a guide, a 90%-width region of vertical 9:16 video holds about 25 characters, the equivalent of 37 characters in a 75%-width 16:9 region.
 
    > As a guide, the equivalent to 37 characters in a 75% width region of a 16:9 (landscape) video is 25 characters in a 90% width region of a 9:16 (vertical) video.
 
@@ -44,7 +44,7 @@ Turn the rate into a check: on-screen seconds >= 0.3 x word count per caption. T
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. guidelines page sections 3.1, 3.3, 4.1, 9.2.1 against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-11-12
 - Licence: unknown
 - URL status: live

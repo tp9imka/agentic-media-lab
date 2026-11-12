@@ -12,7 +12,7 @@ Tags: instagram, rate-limit, ai-label, video-specs
 
 **Why:** It gives the daily limit, the AI self-disclosure flag and the Reels encode targets for Instagram.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -22,7 +22,7 @@ Needs an Instagram professional (Business or Creator) account and the instagram_
 
 ## Claims
 
-1. Instagram allows 100 API-published posts per account in a moving 24-hour window.
+1. The guide's Rate Limit section allows 100 API-published posts per account in a moving 24-hour window; its carousel section says 50 per 24 hours.
 
    > Instagram accounts are limited to 100 API-published posts within a 24-hour moving period.
 
@@ -44,7 +44,7 @@ Needs an Instagram professional (Business or Creator) account and the instagram_
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. content-publishing guide and ig-user/media reference, served as markdown, against the claims and the earlier scan
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

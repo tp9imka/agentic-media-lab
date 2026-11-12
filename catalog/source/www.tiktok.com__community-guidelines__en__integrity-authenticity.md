@@ -12,7 +12,7 @@ Tags: tiktok, ai-label
 
 **Why:** It states when a generated clip must carry the AI label and what happens to unlabelled realistic AI content.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -38,7 +38,7 @@ The duty covers realistic-looking scenes or people; a clearly stylised motion-gr
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. visible policy text after redirect to the safety policies page
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

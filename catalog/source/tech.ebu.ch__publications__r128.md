@@ -12,7 +12,7 @@ Tags: loudness, lufs, true-peak
 
 **Why:** It gives the two numbers a mix check needs, integrated loudness and true peak, plus a third for short clips, all measurable with ffmpeg ebur128.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-11-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-11-12.
 
 ## Fit notes
 
@@ -28,7 +28,7 @@ Check a render with `ffmpeg -i out.mp4 -af ebur128=peak=true -f null -` and comp
 
    Locator: r128.pdf (v5.0, 2023), recommends item h. Source: <https://tech.ebu.ch/files/live/sites/tech/files/shared/r/r128.pdf>, retrieved 2026-11-12.
 
-2. True peak must stay at or below -1 dBTP during production.
+2. True peak must stay at or below -1 dBTP during production (linear audio); distribution systems may need a lower ceiling.
 
    > that the True Peak Level of a programme shall not exceed −1 dBTP (dB True Peak) during production (linear audio)
 
@@ -44,7 +44,7 @@ Check a render with `ffmpeg -i out.mp4 -af ebur128=peak=true -f null -` and comp
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. publication page, R 128 v5.0 PDF and R 128 s1 PDF against the three claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-11-12
 - Licence: unknown
 - URL status: live

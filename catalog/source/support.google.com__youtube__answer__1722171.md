@@ -12,7 +12,7 @@ Tags: export, h264, shorts
 
 **Why:** Each line maps to an ffmpeg flag, so an agent can check its export against YouTube's own list before upload.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -34,7 +34,7 @@ ffmpeg mapping: -movflags +faststart, -c:v libx264 -profile:v high -pix_fmt yuv4
 
    Locator: answer 1722171, section Video codec: H.264. Source: <https://support.google.com/youtube/answer/1722171>, retrieved 2026-11-12.
 
-3. Square or vertical uploads up to three minutes are classed as Shorts.
+3. On standard channels, square or vertical uploads up to three minutes made on or after October 15, 2024 are classed as Shorts.
 
    > Any videos uploaded on or after this date with a square or vertical aspect ratio up to three minutes in length will be categorized as Shorts on YouTube.
 
@@ -44,7 +44,7 @@ ffmpeg mapping: -movflags +faststart, -c:v libx264 -profile:v high -pix_fmt yuv4
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. answer 1722171 and answer 15424877 against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

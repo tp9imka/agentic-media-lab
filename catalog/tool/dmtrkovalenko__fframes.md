@@ -12,7 +12,7 @@ Also known as: cargo-fframes
 
 **Why:** A browser-free renderer aimed at agent iteration speed. Its speed claim against Remotion is the vendor's own and unmeasured here.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -35,7 +35,7 @@ Needs Rust and, on macOS, `brew install pkg-config ffmpeg x264 x265 opus nasm ni
 
    Locator: README.md, What is it for. Source: <https://github.com/dmtrKovalenko/fframes/blob/main/README.md>, retrieved 2026-11-12.
 
-2. A missing font falls back silently in the render; the inspect command reports it and the fix is to put the font file in media/.
+2. When text renders in the wrong font, the inspect command reports no font-family match; the fix is to put the font file in media/ and use its exact family name.
 
    > **Text renders in the wrong font:** `inspect` reports `No match for ... font-family`; put the font file in the
 
@@ -51,7 +51,7 @@ Needs Rust and, on macOS, `brew install pkg-config ffmpeg x264 x265 opus nasm ni
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. README.md against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: MIT
 - URL status: live

@@ -12,7 +12,7 @@ Also known as: nexu-io html-video, Open Design html-video
 
 **Why:** A wrapper that drives Claude Code or Codex as a subprocess and ships 21 templates; only the HyperFrames engine works so far.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-02-10.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-02-10.
 
 ## Fit notes
 
@@ -51,7 +51,7 @@ Needs Node 20+, pnpm, ffmpeg and Playwright Chromium. Remotion, Motion Canvas, R
 
 - Source type: vendor-or-author
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. README.md against the claims and against Remotion LICENSE.md
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-02-10
 - Licence: Apache-2.0
 - URL status: live

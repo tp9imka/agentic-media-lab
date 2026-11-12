@@ -12,7 +12,7 @@ Tags: x, ai-label
 
 **Why:** It is X's only stated rule on AI-made media, and it names no labelling duty.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -38,7 +38,7 @@ No AI label is required or offered here; the rule targets deceptive media that c
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. visible Help Center text after redirect from manipulated-media
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live

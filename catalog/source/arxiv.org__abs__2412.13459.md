@@ -10,9 +10,9 @@ Tags: fake-stars, supply-chain
 
 **Badge:** quoted, primary source read (`quoted-primary`): primary source read.
 
-**Why:** Star counts are the first filter most readers use to pick a video skill or renderer; this paper shows the signal is bought at scale and in which categories.
+**Why:** Star counts are the first filter most readers use to pick a video skill or renderer; this paper shows the signal is faked at scale and in which categories.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2027-11-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2027-11-12.
 
 ## Fit notes
 
@@ -38,7 +38,7 @@ Use it as the reason to never rank skills by stars alone: check star timing (bur
 
 - Source type: independent-secondary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. arXiv abstract page v2 against the two claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2027-11-12
 - Licence: unknown
 - URL status: live

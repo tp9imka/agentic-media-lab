@@ -12,7 +12,7 @@ Tags: threads, rate-limit, ai-label
 
 **Why:** Threads has the highest daily cap of the Meta surfaces and a 5-minute video limit, and its AI flag is documented with what it does not prevent.
 
-**Last checked:** 2026-11-12, primary-read, by agent:kiro. Next check due 2026-12-12.
+**Last checked:** 2026-11-12, primary-read, by agent:codex. Next check due 2026-12-12.
 
 ## Fit notes
 
@@ -44,7 +44,7 @@ Fit: medium. Level: intermediate. Maturity: -.
 
 - Source type: primary
 - Corroboration: single-source
-- Checked: 2026-11-12 by agent:kiro, depth primary-read. guide served as markdown, against the claims
+- Checked: 2026-11-12 by agent:codex, depth primary-read. independent fact-check: claims, prose and category fields against the saved source
 - Next check due: 2026-12-12
 - Licence: unknown
 - URL status: live
