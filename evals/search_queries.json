@@ -57,9 +57,14 @@
  {
   "query": "price per second 10s clip",
   "expect_any": [
-   "model:google/gemini-omni-flash"
+   "model:google/gemini-omni-flash",
+   "model:black-forest-labs/flux-3",
+   "model:alibaba/wan",
+   "model:xai/grok-imagine",
+   "model:bytedance/seedance",
+   "tool:runwayml/runway-api"
   ],
-  "top": 2
+  "top": 3
  },
  {
   "query": "video model licence excluded territories EU US",
@@ -108,5 +113,49 @@
    "tool:dojocodinglabs/remotion-superpowers"
   ],
   "top": 4
+ },
+ {
+  "query": "what does a 10 second clip cost on gemini omni flash",
+  "expect_any": [
+   "model:google/gemini-omni-flash"
+  ],
+  "top": 2
+ },
+ {
+  "query": "one api for kling wan seedance",
+  "expect_any": [
+   "tool:runwayml/runway-api",
+   "tool:openrouter/video-generation",
+   "tool:fal-ai/fal",
+   "tool:replicate/replicate"
+  ],
+  "top": 3
+ },
+ {
+  "query": "tiktok api post public without audit",
+  "expect_any": [
+   "source:developers.tiktok.com/doc/content-sharing-guidelines",
+   "source:developers.tiktok.com/doc/content-posting-api-reference-direct-post"
+  ],
+  "top": 2
+ },
+ {
+  "query": "youtube ai disclosure label",
+  "expect_any": [
+   "source:support.google.com/youtube/answer/14328491",
+   "source:developers.google.com/youtube/v3/revision_history"
+  ],
+  "top": 3
+ },
+ {
+  "query": "run video model locally on apple silicon",
+  "expect_any": [
+   "model:lightricks/ltx-2",
+   "model:wan-ai/wan2.2",
+   "tool:blaizzy/mlx-video",
+   "tool:drawthings.ai",
+   "model:vimoo-ai/vimoo-1.0"
+  ],
+  "top": 3
  }
 ]
