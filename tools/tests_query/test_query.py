@@ -21,7 +21,9 @@ import search_eval  # noqa: E402
 
 FIX = HERE / "fixtures" / "index"
 EMPTY = HERE / "fixtures" / "empty_index"
-DECODER = ROOT / "evals" / "decoder.json"
+# Tests run against a frozen starter decoder; the live file gains routes over time.
+DECODER = ROOT / "tools" / "tests_query" / "fixtures" / "decoder_starter.json"
+LIVE_DECODER = ROOT / "evals" / "decoder.json"
 CASES = ROOT / "evals" / "decoder_cases.json"
 OFF_TOPIC = ("what is the weather in paris", "best pizza recipe in town", "how do I file my taxes",
              "write a python web server", "my cat video", "hello world")
@@ -218,16 +220,19 @@ class Decoder(unittest.TestCase):
     def setUp(self):
         self.rows = query.load_decoder(DECODER)
 
-    def test_starter_file_shape(self):
-        data = json.loads(DECODER.read_text())
+    def test_live_file_shape(self):
+        data = json.loads(LIVE_DECODER.read_text())
         self.assertEqual(data["schema_version"], 1)
-        self.assertEqual([r["id"] for r in self.rows], [f"q{n:02d}" for n in range(1, 21)])
-        for r in self.rows:
-            self.assertEqual(r["status"], "not-covered")
-            self.assertEqual((r["pages"], r["record_ids"]), ([], []))
+        rows = query.load_decoder(LIVE_DECODER)
+        self.assertEqual([r["id"] for r in rows], [f"q{n:02d}" for n in range(1, 21)])
+        for r in rows:
+            self.assertIn(r["status"], ("covered", "thin", "not-covered"))
+            # A row without a route must not carry an approach: decode would then invent one.
+            if r["status"] == "not-covered":
+                self.assertEqual((r["approach"], r["pages"], r["record_ids"]), ("", [], []))
             self.assertTrue(r["keywords"])
         cases = json.loads(CASES.read_text())
-        self.assertEqual(sorted(c["expect_row"] for c in cases), [r["id"] for r in self.rows])
+        self.assertEqual(sorted(c["expect_row"] for c in cases), [r["id"] for r in rows])
 
     def test_not_covered_rows_do_not_invent_a_route(self):
         code, data = run_json("decode", "Do I need an MCP server or is a skill enough?")
