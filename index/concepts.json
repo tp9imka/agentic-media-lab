@@ -1,0 +1,749 @@
+{
+ "schema_version": 1,
+ "lane": "vocabulary",
+ "records": [
+  {
+   "id": "concept:agent-portability",
+   "label": "Agent portability",
+   "alt_labels": [
+    "Codex",
+    "Cursor",
+    "Gemini CLI",
+    "cross-agent",
+    "works with any agent"
+   ],
+   "hidden_labels": [
+    "codex support"
+   ],
+   "scope_note": "Whether a skill or tool works outside the agent it was written for.",
+   "broader": [
+    "concept:agent-surface"
+   ],
+   "related": [],
+   "record_ids": [
+    "tool:remotion-dev/skills",
+    "tool:vincentwei1021/video-shotcraft"
+   ],
+   "count": 2
+  },
+  {
+   "id": "concept:agent-skills",
+   "label": "Agent Skills",
+   "alt_labels": [
+    "SKILL.md",
+    "skills",
+    "Claude skills",
+    "Claude Code skills"
+   ],
+   "hidden_labels": [
+    "skill"
+   ],
+   "scope_note": "Instruction packs in the Agent Skills format that an agent loads on demand.",
+   "broader": [
+    "concept:agent-surface"
+   ],
+   "related": [],
+   "record_ids": [
+    "source:remotion.dev/docs/ai/mcp",
+    "tool:browser-use/video-use",
+    "tool:digitalsamba/claude-code-video-toolkit",
+    "tool:haidrrrry/claude-remotion-skill",
+    "tool:heygen-com/hyperframes",
+    "tool:remotion-dev/skills",
+    "tool:vincentwei1021/video-shotcraft"
+   ],
+   "count": 7
+  },
+  {
+   "id": "concept:agent-surface",
+   "label": "Agent surface",
+   "alt_labels": [],
+   "hidden_labels": [],
+   "scope_note": "How a coding agent gets the capability.",
+   "broader": [],
+   "related": [],
+   "record_ids": [],
+   "count": 0
+  },
+  {
+   "id": "concept:agentic-pipelines",
+   "label": "Agentic pipelines",
+   "alt_labels": [
+    "multi-agent",
+    "director agent",
+    "script to video",
+    "storyboard agent"
+   ],
+   "hidden_labels": [
+    "ai director"
+   ],
+   "scope_note": "Systems where agents plan, generate, check and assemble a multi-shot video.",
+   "broader": [
+    "concept:pipelines"
+   ],
+   "related": [],
+   "record_ids": [],
+   "count": 0
+  },
+  {
+   "id": "concept:audio-and-captions",
+   "label": "Audio and captions",
+   "alt_labels": [
+    "voiceover",
+    "TTS",
+    "music",
+    "sound design",
+    "mixing",
+    "loudness",
+    "LUFS",
+    "subtitles",
+    "captions"
+   ],
+   "hidden_labels": [
+    "voice over",
+    "subs"
+   ],
+   "scope_note": "Narration, music, effects, their mix, and on-screen text timed to speech.",
+   "broader": [
+    "concept:craft"
+   ],
+   "related": [],
+   "record_ids": [
+    "tool:browser-use/video-use"
+   ],
+   "count": 1
+  },
+  {
+   "id": "concept:automation",
+   "label": "Automation",
+   "alt_labels": [],
+   "hidden_labels": [],
+   "scope_note": "Running production on a schedule.",
+   "broader": [],
+   "related": [],
+   "record_ids": [],
+   "count": 0
+  },
+  {
+   "id": "concept:code-driven-video",
+   "label": "Code-driven video",
+   "alt_labels": [
+    "programmatic video",
+    "motion graphics as code",
+    "HTML to video",
+    "React video"
+   ],
+   "hidden_labels": [
+    "html video",
+    "remotion",
+    "hyperframes",
+    "manim"
+   ],
+   "scope_note": "Video rendered from code an agent writes: HTML, React, Python. Not footage from a generative model.",
+   "broader": [
+    "concept:making"
+   ],
+   "related": [],
+   "record_ids": [
+    "tool:haidrrrry/claude-remotion-skill",
+    "tool:heygen-com/hyperframes",
+    "tool:remotion-dev/skills"
+   ],
+   "count": 3
+  },
+  {
+   "id": "concept:consistency",
+   "label": "Consistency",
+   "alt_labels": [
+    "character consistency",
+    "style consistency",
+    "identity drift",
+    "world consistency"
+   ],
+   "hidden_labels": [
+    "same character"
+   ],
+   "scope_note": "Keeping characters, style and world stable across shots and scenes.",
+   "broader": [
+    "concept:craft"
+   ],
+   "related": [],
+   "record_ids": [
+    "tool:digitalsamba/claude-code-video-toolkit"
+   ],
+   "count": 1
+  },
+  {
+   "id": "concept:cost",
+   "label": "Cost",
+   "alt_labels": [
+    "price per second",
+    "credits",
+    "tokens",
+    "free tier"
+   ],
+   "hidden_labels": [
+    "how much"
+   ],
+   "scope_note": "What a clip or image costs to produce on each route.",
+   "broader": [
+    "concept:models"
+   ],
+   "related": [],
+   "record_ids": [
+    "model:google/gemini-omni-flash"
+   ],
+   "count": 1
+  },
+  {
+   "id": "concept:craft",
+   "label": "Craft",
+   "alt_labels": [],
+   "hidden_labels": [],
+   "scope_note": "What separates a rendered clip from a finished one.",
+   "broader": [],
+   "related": [],
+   "record_ids": [],
+   "count": 0
+  },
+  {
+   "id": "concept:delivery",
+   "label": "Delivery",
+   "alt_labels": [
+    "export",
+    "codec",
+    "aspect ratio",
+    "platform specs",
+    "bitrate",
+    "file size"
+   ],
+   "hidden_labels": [
+    "export settings",
+    "9:16"
+   ],
+   "scope_note": "Getting the finished file into the format a platform or client accepts.",
+   "broader": [
+    "concept:craft"
+   ],
+   "related": [],
+   "record_ids": [],
+   "count": 0
+  },
+  {
+   "id": "concept:evaluation",
+   "label": "Evaluation",
+   "alt_labels": [
+    "benchmark",
+    "leaderboard",
+    "arena",
+    "Elo",
+    "VBench",
+    "rubric"
+   ],
+   "hidden_labels": [
+    "which is best"
+   ],
+   "scope_note": "How video and image quality, and whole pipelines, are measured.",
+   "broader": [
+    "concept:pipelines"
+   ],
+   "related": [],
+   "record_ids": [],
+   "count": 0
+  },
+  {
+   "id": "concept:feedback-loop",
+   "label": "Feedback loop",
+   "alt_labels": [
+    "analytics API",
+    "metrics",
+    "topic selection"
+   ],
+   "hidden_labels": [
+    "what performed"
+   ],
+   "scope_note": "Reading results back and using them to choose what to make next.",
+   "broader": [
+    "concept:automation"
+   ],
+   "related": [],
+   "record_ids": [],
+   "count": 0
+  },
+  {
+   "id": "concept:footage-editing",
+   "label": "Editing real footage",
+   "alt_labels": [
+    "video editing",
+    "rough cut",
+    "screen recording edit",
+    "screencast"
+   ],
+   "hidden_labels": [
+    "cut my video",
+    "trim"
+   ],
+   "scope_note": "Cutting, arranging and finishing footage that already exists.",
+   "broader": [
+    "concept:making"
+   ],
+   "related": [],
+   "record_ids": [
+    "tool:browser-use/video-use"
+   ],
+   "count": 1
+  },
+  {
+   "id": "concept:generated-footage",
+   "label": "Generated footage",
+   "alt_labels": [
+    "AI video",
+    "text-to-video",
+    "image-to-video",
+    "t2v",
+    "i2v"
+   ],
+   "hidden_labels": [
+    "ai clips",
+    "gen video"
+   ],
+   "scope_note": "Clips produced by a video generation model, hosted or local.",
+   "broader": [
+    "concept:making"
+   ],
+   "related": [],
+   "record_ids": [],
+   "count": 0
+  },
+  {
+   "id": "concept:hosted-video-models",
+   "label": "Hosted video models",
+   "alt_labels": [
+    "video API",
+    "Veo",
+    "Sora",
+    "Kling",
+    "Seedance",
+    "Wan",
+    "Runway"
+   ],
+   "hidden_labels": [
+    "video api"
+   ],
+   "scope_note": "Video generation models reached through a paid API.",
+   "broader": [
+    "concept:models"
+   ],
+   "related": [],
+   "record_ids": [
+    "model:google/gemini-omni-flash",
+    "model:google/veo-3.1",
+    "model:minimaxai/minimax-h3",
+    "model:openai/sora-2"
+   ],
+   "count": 4
+  },
+  {
+   "id": "concept:image-models",
+   "label": "Image models",
+   "alt_labels": [
+    "FLUX",
+    "Nano Banana",
+    "GPT Image",
+    "Z-Image",
+    "Qwen-Image"
+   ],
+   "hidden_labels": [
+    "image api"
+   ],
+   "scope_note": "Image generation and editing models, hosted and local.",
+   "broader": [
+    "concept:models"
+   ],
+   "related": [],
+   "record_ids": [],
+   "count": 0
+  },
+  {
+   "id": "concept:licences-and-territory",
+   "label": "Licences and territory",
+   "alt_labels": [
+    "commercial use",
+    "non-commercial",
+    "revenue threshold",
+    "excluded territories",
+    "company licence"
+   ],
+   "hidden_labels": [
+    "can i use commercially"
+   ],
+   "scope_note": "What a model or renderer licence allows, for whom and where.",
+   "broader": [
+    "concept:models"
+   ],
+   "related": [],
+   "record_ids": [
+    "model:minimaxai/minimax-h3"
+   ],
+   "count": 1
+  },
+  {
+   "id": "concept:local-video-models",
+   "label": "Local video models",
+   "alt_labels": [
+    "open weights",
+    "Apple Silicon",
+    "MLX",
+    "MPS",
+    "ComfyUI",
+    "run locally"
+   ],
+   "hidden_labels": [
+    "on my mac",
+    "offline"
+   ],
+   "scope_note": "Video models whose weights you can run on your own machine.",
+   "broader": [
+    "concept:models"
+   ],
+   "related": [],
+   "record_ids": [
+    "model:minimaxai/minimax-h3"
+   ],
+   "count": 1
+  },
+  {
+   "id": "concept:making",
+   "label": "Making",
+   "alt_labels": [],
+   "hidden_labels": [],
+   "scope_note": "The four ways a clip or image gets made.",
+   "broader": [],
+   "related": [],
+   "record_ids": [],
+   "count": 0
+  },
+  {
+   "id": "concept:mcp-servers",
+   "label": "MCP servers",
+   "alt_labels": [
+    "Model Context Protocol",
+    "MCP",
+    "remote MCP"
+   ],
+   "hidden_labels": [
+    "mcp"
+   ],
+   "scope_note": "Tool servers an agent calls over the Model Context Protocol.",
+   "broader": [
+    "concept:agent-surface"
+   ],
+   "related": [],
+   "record_ids": [
+    "source:remotion.dev/docs/ai/mcp"
+   ],
+   "count": 1
+  },
+  {
+   "id": "concept:model-prompting",
+   "label": "Model prompting",
+   "alt_labels": [
+    "shot prompt",
+    "camera vocabulary",
+    "reference images",
+    "first and last frame",
+    "negative prompt"
+   ],
+   "hidden_labels": [
+    "prompt for video"
+   ],
+   "scope_note": "How to direct a generation model: prompt structure, references, camera language.",
+   "broader": [
+    "concept:models"
+   ],
+   "related": [],
+   "record_ids": [],
+   "count": 0
+  },
+  {
+   "id": "concept:models",
+   "label": "Models",
+   "alt_labels": [],
+   "hidden_labels": [],
+   "scope_note": "Generation models and what using one costs.",
+   "broader": [],
+   "related": [],
+   "record_ids": [],
+   "count": 0
+  },
+  {
+   "id": "concept:motion-and-transitions",
+   "label": "Motion and transitions",
+   "alt_labels": [
+    "easing",
+    "timing",
+    "choreography",
+    "animation principles",
+    "camera moves",
+    "cuts"
+   ],
+   "hidden_labels": [
+    "animations",
+    "transitions"
+   ],
+   "scope_note": "How things move and how one scene hands over to the next.",
+   "broader": [
+    "concept:craft"
+   ],
+   "related": [],
+   "record_ids": [
+    "tool:haidrrrry/claude-remotion-skill",
+    "tool:heygen-com/hyperframes"
+   ],
+   "count": 2
+  },
+  {
+   "id": "concept:orchestration",
+   "label": "Orchestration",
+   "alt_labels": [
+    "workflow engine",
+    "content factory",
+    "n8n",
+    "queue",
+    "approval gate",
+    "human in the loop"
+   ],
+   "hidden_labels": [
+    "content factory",
+    "automate"
+   ],
+   "scope_note": "Chaining stages, holding state between runs and gating on a human.",
+   "broader": [
+    "concept:automation"
+   ],
+   "related": [],
+   "record_ids": [],
+   "count": 0
+  },
+  {
+   "id": "concept:pipelines",
+   "label": "Pipelines",
+   "alt_labels": [],
+   "hidden_labels": [],
+   "scope_note": "End-to-end systems and how they are judged.",
+   "broader": [],
+   "related": [],
+   "record_ids": [],
+   "count": 0
+  },
+  {
+   "id": "concept:platform-rules",
+   "label": "Platform rules",
+   "alt_labels": [
+    "AI disclosure",
+    "synthetic content label",
+    "automation policy",
+    "monetisation policy",
+    "C2PA"
+   ],
+   "hidden_labels": [
+    "is it allowed",
+    "ai label"
+   ],
+   "scope_note": "What platforms require for automated or AI-made content.",
+   "broader": [
+    "concept:automation"
+   ],
+   "related": [],
+   "record_ids": [],
+   "count": 0
+  },
+  {
+   "id": "concept:plugins",
+   "label": "Plugins",
+   "alt_labels": [
+    "Claude Code plugin",
+    "Codex plugin",
+    "plugin marketplace"
+   ],
+   "hidden_labels": [
+    "plugin"
+   ],
+   "scope_note": "Bundles that install skills, commands, sub-agents or servers into one agent.",
+   "broader": [
+    "concept:agent-surface"
+   ],
+   "related": [],
+   "record_ids": [],
+   "count": 0
+  },
+  {
+   "id": "concept:popularity-and-trust",
+   "label": "Popularity and trust",
+   "alt_labels": [
+    "install counts",
+    "stars",
+    "skill security",
+    "supply chain",
+    "telemetry"
+   ],
+   "hidden_labels": [
+    "is it safe",
+    "fake stars"
+   ],
+   "scope_note": "How to read popularity signals and what a skill does on your machine.",
+   "broader": [
+    "concept:agent-surface"
+   ],
+   "related": [],
+   "record_ids": [],
+   "count": 0
+  },
+  {
+   "id": "concept:publishing",
+   "label": "Publishing",
+   "alt_labels": [
+    "posting API",
+    "YouTube API",
+    "TikTok API",
+    "Instagram API",
+    "scheduler"
+   ],
+   "hidden_labels": [
+    "auto post",
+    "schedule posts"
+   ],
+   "scope_note": "Getting a finished file onto a platform through its official API.",
+   "broader": [
+    "concept:automation"
+   ],
+   "related": [],
+   "record_ids": [],
+   "count": 0
+  },
+  {
+   "id": "concept:review-loop",
+   "label": "Review loop",
+   "alt_labels": [
+    "self-review",
+    "render and inspect",
+    "contact sheet",
+    "QA",
+    "critique",
+    "lint"
+   ],
+   "hidden_labels": [
+    "check its own work",
+    "verify render"
+   ],
+   "scope_note": "The agent renders, looks at the result and fixes what it sees before delivering.",
+   "broader": [
+    "concept:craft"
+   ],
+   "related": [],
+   "record_ids": [
+    "tool:browser-use/video-use",
+    "tool:digitalsamba/claude-code-video-toolkit",
+    "tool:haidrrrry/claude-remotion-skill",
+    "tool:heygen-com/hyperframes",
+    "tool:vincentwei1021/video-shotcraft"
+   ],
+   "count": 5
+  },
+  {
+   "id": "concept:scheduling-and-runtimes",
+   "label": "Scheduling and runtimes",
+   "alt_labels": [
+    "cron",
+    "headless",
+    "always-on agent",
+    "Hermes",
+    "bb",
+    "scheduled task"
+   ],
+   "hidden_labels": [
+    "run every day"
+   ],
+   "scope_note": "Agent runtimes and schedulers that start work without a person.",
+   "broader": [
+    "concept:automation"
+   ],
+   "related": [],
+   "record_ids": [],
+   "count": 0
+  },
+  {
+   "id": "concept:still-images",
+   "label": "Still images",
+   "alt_labels": [
+    "image generation",
+    "thumbnails",
+    "first frames",
+    "text-to-image",
+    "t2i"
+   ],
+   "hidden_labels": [
+    "ai images",
+    "pictures"
+   ],
+   "scope_note": "Images as a deliverable or as input to a video stage.",
+   "broader": [
+    "concept:making"
+   ],
+   "related": [],
+   "record_ids": [],
+   "count": 0
+  },
+  {
+   "id": "concept:story-and-decomposition",
+   "label": "Story and decomposition",
+   "alt_labels": [
+    "script",
+    "storyboard",
+    "shot list",
+    "scene breakdown",
+    "hook",
+    "pacing"
+   ],
+   "hidden_labels": [
+    "scenes",
+    "shots"
+   ],
+   "scope_note": "Turning an idea into scenes, shots and beats before anything is rendered.",
+   "broader": [
+    "concept:craft"
+   ],
+   "related": [],
+   "record_ids": [
+    "tool:vincentwei1021/video-shotcraft"
+   ],
+   "count": 1
+  },
+  {
+   "id": "concept:visual-design",
+   "label": "Visual design",
+   "alt_labels": [
+    "typography",
+    "layout",
+    "colour",
+    "brand kit",
+    "safe area",
+    "visual hierarchy"
+   ],
+   "hidden_labels": [
+    "fonts",
+    "looks amateur"
+   ],
+   "scope_note": "Type, layout, colour and brand consistency inside the frame.",
+   "broader": [
+    "concept:craft"
+   ],
+   "related": [],
+   "record_ids": [
+    "tool:digitalsamba/claude-code-video-toolkit",
+    "tool:remotion-dev/skills"
+   ],
+   "count": 2
+  }
+ ]
+}

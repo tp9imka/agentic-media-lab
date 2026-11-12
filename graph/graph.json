@@ -1,0 +1,565 @@
+{
+ "nodes": [
+  {
+   "id": "model:google/gemini-omni-flash",
+   "kind": "model",
+   "label": "Gemini Omni Flash",
+   "path": "catalog/model/google__gemini-omni-flash.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:hosted-video-models",
+    "concept:cost"
+   ]
+  },
+  {
+   "id": "model:google/veo-3.1",
+   "kind": "model",
+   "label": "Veo 3.1",
+   "path": "catalog/model/google__veo-3.1.md",
+   "status": "outdated",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:hosted-video-models"
+   ]
+  },
+  {
+   "id": "model:minimaxai/minimax-h3",
+   "kind": "model",
+   "label": "MiniMax H3",
+   "path": "catalog/model/minimaxai__minimax-h3.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:local-video-models",
+    "concept:hosted-video-models",
+    "concept:licences-and-territory"
+   ]
+  },
+  {
+   "id": "model:openai/sora-2",
+   "kind": "model",
+   "label": "Sora 2",
+   "path": "catalog/model/openai__sora-2.md",
+   "status": "archived",
+   "inactive": true,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:hosted-video-models"
+   ]
+  },
+  {
+   "id": "source:remotion.dev/docs/ai/mcp",
+   "kind": "source",
+   "label": "Remotion's Model Context Protocol (shut down)",
+   "path": "catalog/source/remotion.dev__docs__ai__mcp.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:mcp-servers",
+    "concept:agent-skills"
+   ]
+  },
+  {
+   "id": "tool:browser-use/video-use",
+   "kind": "tool",
+   "label": "video-use",
+   "path": "catalog/tool/browser-use__video-use.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:agent-skills",
+    "concept:review-loop",
+    "concept:audio-and-captions"
+   ]
+  },
+  {
+   "id": "tool:digitalsamba/claude-code-video-toolkit",
+   "kind": "tool",
+   "label": "claude-code-video-toolkit",
+   "path": "catalog/tool/digitalsamba__claude-code-video-toolkit.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:visual-design",
+    "concept:agent-skills",
+    "concept:review-loop",
+    "concept:consistency"
+   ]
+  },
+  {
+   "id": "tool:haidrrrry/claude-remotion-skill",
+   "kind": "tool",
+   "label": "claude-remotion-skill",
+   "path": "catalog/tool/haidrrrry__claude-remotion-skill.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:motion-and-transitions",
+    "concept:agent-skills",
+    "concept:review-loop",
+    "concept:code-driven-video"
+   ]
+  },
+  {
+   "id": "tool:heygen-com/hyperframes",
+   "kind": "tool",
+   "label": "HyperFrames",
+   "path": "catalog/tool/heygen-com__hyperframes.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:agent-skills",
+    "concept:motion-and-transitions",
+    "concept:review-loop"
+   ]
+  },
+  {
+   "id": "tool:remotion-dev/skills",
+   "kind": "tool",
+   "label": "Remotion Agent Skills",
+   "path": "catalog/tool/remotion-dev__skills.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:agent-skills",
+    "concept:visual-design",
+    "concept:agent-portability"
+   ]
+  },
+  {
+   "id": "tool:vincentwei1021/video-shotcraft",
+   "kind": "tool",
+   "label": "video-shotcraft",
+   "path": "catalog/tool/vincentwei1021__video-shotcraft.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:review-loop",
+    "concept:agent-skills",
+    "concept:story-and-decomposition",
+    "concept:agent-portability"
+   ]
+  },
+  {
+   "id": "concept:agent-portability",
+   "kind": "concept",
+   "label": "Agent portability",
+   "path": "docs/glossary.md#agent-portability"
+  },
+  {
+   "id": "concept:agent-skills",
+   "kind": "concept",
+   "label": "Agent Skills",
+   "path": "docs/glossary.md#agent-skills"
+  },
+  {
+   "id": "concept:agent-surface",
+   "kind": "concept",
+   "label": "Agent surface",
+   "path": "docs/glossary.md#agent-surface"
+  },
+  {
+   "id": "concept:agentic-pipelines",
+   "kind": "concept",
+   "label": "Agentic pipelines",
+   "path": "docs/glossary.md#agentic-pipelines"
+  },
+  {
+   "id": "concept:audio-and-captions",
+   "kind": "concept",
+   "label": "Audio and captions",
+   "path": "docs/glossary.md#audio-and-captions"
+  },
+  {
+   "id": "concept:automation",
+   "kind": "concept",
+   "label": "Automation",
+   "path": "docs/glossary.md#automation"
+  },
+  {
+   "id": "concept:code-driven-video",
+   "kind": "concept",
+   "label": "Code-driven video",
+   "path": "docs/glossary.md#code-driven-video"
+  },
+  {
+   "id": "concept:consistency",
+   "kind": "concept",
+   "label": "Consistency",
+   "path": "docs/glossary.md#consistency"
+  },
+  {
+   "id": "concept:cost",
+   "kind": "concept",
+   "label": "Cost",
+   "path": "docs/glossary.md#cost"
+  },
+  {
+   "id": "concept:craft",
+   "kind": "concept",
+   "label": "Craft",
+   "path": "docs/glossary.md#craft"
+  },
+  {
+   "id": "concept:delivery",
+   "kind": "concept",
+   "label": "Delivery",
+   "path": "docs/glossary.md#delivery"
+  },
+  {
+   "id": "concept:evaluation",
+   "kind": "concept",
+   "label": "Evaluation",
+   "path": "docs/glossary.md#evaluation"
+  },
+  {
+   "id": "concept:feedback-loop",
+   "kind": "concept",
+   "label": "Feedback loop",
+   "path": "docs/glossary.md#feedback-loop"
+  },
+  {
+   "id": "concept:footage-editing",
+   "kind": "concept",
+   "label": "Editing real footage",
+   "path": "docs/glossary.md#footage-editing"
+  },
+  {
+   "id": "concept:generated-footage",
+   "kind": "concept",
+   "label": "Generated footage",
+   "path": "docs/glossary.md#generated-footage"
+  },
+  {
+   "id": "concept:hosted-video-models",
+   "kind": "concept",
+   "label": "Hosted video models",
+   "path": "docs/glossary.md#hosted-video-models"
+  },
+  {
+   "id": "concept:image-models",
+   "kind": "concept",
+   "label": "Image models",
+   "path": "docs/glossary.md#image-models"
+  },
+  {
+   "id": "concept:licences-and-territory",
+   "kind": "concept",
+   "label": "Licences and territory",
+   "path": "docs/glossary.md#licences-and-territory"
+  },
+  {
+   "id": "concept:local-video-models",
+   "kind": "concept",
+   "label": "Local video models",
+   "path": "docs/glossary.md#local-video-models"
+  },
+  {
+   "id": "concept:making",
+   "kind": "concept",
+   "label": "Making",
+   "path": "docs/glossary.md#making"
+  },
+  {
+   "id": "concept:mcp-servers",
+   "kind": "concept",
+   "label": "MCP servers",
+   "path": "docs/glossary.md#mcp-servers"
+  },
+  {
+   "id": "concept:model-prompting",
+   "kind": "concept",
+   "label": "Model prompting",
+   "path": "docs/glossary.md#model-prompting"
+  },
+  {
+   "id": "concept:models",
+   "kind": "concept",
+   "label": "Models",
+   "path": "docs/glossary.md#models"
+  },
+  {
+   "id": "concept:motion-and-transitions",
+   "kind": "concept",
+   "label": "Motion and transitions",
+   "path": "docs/glossary.md#motion-and-transitions"
+  },
+  {
+   "id": "concept:orchestration",
+   "kind": "concept",
+   "label": "Orchestration",
+   "path": "docs/glossary.md#orchestration"
+  },
+  {
+   "id": "concept:pipelines",
+   "kind": "concept",
+   "label": "Pipelines",
+   "path": "docs/glossary.md#pipelines"
+  },
+  {
+   "id": "concept:platform-rules",
+   "kind": "concept",
+   "label": "Platform rules",
+   "path": "docs/glossary.md#platform-rules"
+  },
+  {
+   "id": "concept:plugins",
+   "kind": "concept",
+   "label": "Plugins",
+   "path": "docs/glossary.md#plugins"
+  },
+  {
+   "id": "concept:popularity-and-trust",
+   "kind": "concept",
+   "label": "Popularity and trust",
+   "path": "docs/glossary.md#popularity-and-trust"
+  },
+  {
+   "id": "concept:publishing",
+   "kind": "concept",
+   "label": "Publishing",
+   "path": "docs/glossary.md#publishing"
+  },
+  {
+   "id": "concept:review-loop",
+   "kind": "concept",
+   "label": "Review loop",
+   "path": "docs/glossary.md#review-loop"
+  },
+  {
+   "id": "concept:scheduling-and-runtimes",
+   "kind": "concept",
+   "label": "Scheduling and runtimes",
+   "path": "docs/glossary.md#scheduling-and-runtimes"
+  },
+  {
+   "id": "concept:still-images",
+   "kind": "concept",
+   "label": "Still images",
+   "path": "docs/glossary.md#still-images"
+  },
+  {
+   "id": "concept:story-and-decomposition",
+   "kind": "concept",
+   "label": "Story and decomposition",
+   "path": "docs/glossary.md#story-and-decomposition"
+  },
+  {
+   "id": "concept:visual-design",
+   "kind": "concept",
+   "label": "Visual design",
+   "path": "docs/glossary.md#visual-design"
+  }
+ ],
+ "edges": [
+  {
+   "source": "model:google/gemini-omni-flash",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "model:google/gemini-omni-flash",
+   "target": "concept:hosted-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:google/veo-3.1",
+   "target": "concept:hosted-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:google/veo-3.1",
+   "target": "model:google/gemini-omni-flash",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "model:minimaxai/minimax-h3",
+   "target": "concept:hosted-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:minimaxai/minimax-h3",
+   "target": "concept:licences-and-territory",
+   "rel": "about"
+  },
+  {
+   "source": "model:minimaxai/minimax-h3",
+   "target": "concept:local-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:openai/sora-2",
+   "target": "concept:hosted-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "source:remotion.dev/docs/ai/mcp",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "source:remotion.dev/docs/ai/mcp",
+   "target": "concept:mcp-servers",
+   "rel": "about"
+  },
+  {
+   "source": "tool:browser-use/video-use",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:browser-use/video-use",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:browser-use/video-use",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:browser-use/video-use",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:digitalsamba/claude-code-video-toolkit",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:digitalsamba/claude-code-video-toolkit",
+   "target": "concept:consistency",
+   "rel": "about"
+  },
+  {
+   "source": "tool:digitalsamba/claude-code-video-toolkit",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:digitalsamba/claude-code-video-toolkit",
+   "target": "concept:visual-design",
+   "rel": "about"
+  },
+  {
+   "source": "tool:haidrrrry/claude-remotion-skill",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:haidrrrry/claude-remotion-skill",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:haidrrrry/claude-remotion-skill",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:haidrrrry/claude-remotion-skill",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:haidrrrry/claude-remotion-skill",
+   "target": "tool:heygen-com/hyperframes",
+   "rel": "contradicts"
+  },
+  {
+   "source": "tool:haidrrrry/claude-remotion-skill",
+   "target": "tool:remotion-dev/skills",
+   "rel": "extends"
+  },
+  {
+   "source": "tool:heygen-com/hyperframes",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:heygen-com/hyperframes",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:heygen-com/hyperframes",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:heygen-com/hyperframes",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:heygen-com/hyperframes",
+   "target": "tool:remotion-dev/skills",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:remotion-dev/skills",
+   "target": "concept:agent-portability",
+   "rel": "about"
+  },
+  {
+   "source": "tool:remotion-dev/skills",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:remotion-dev/skills",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:remotion-dev/skills",
+   "target": "concept:visual-design",
+   "rel": "about"
+  },
+  {
+   "source": "tool:remotion-dev/skills",
+   "target": "source:remotion.dev/docs/ai/mcp",
+   "rel": "supersedes"
+  },
+  {
+   "source": "tool:remotion-dev/skills",
+   "target": "tool:heygen-com/hyperframes",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:vincentwei1021/video-shotcraft",
+   "target": "concept:agent-portability",
+   "rel": "about"
+  },
+  {
+   "source": "tool:vincentwei1021/video-shotcraft",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:vincentwei1021/video-shotcraft",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:vincentwei1021/video-shotcraft",
+   "target": "concept:story-and-decomposition",
+   "rel": "about"
+  }
+ ]
+}

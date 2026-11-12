@@ -1,0 +1,29 @@
+# Agentic Media Lab
+
+> Which skill, renderer and model to use when a coding agent makes your video - with runs you can repeat. Records: 11 (6 tool, 4 model, 1 source, 0 recipe). Concepts: 35. Pages: 2. Size: about 12640 tokens (estimate, characters / 4).
+
+## Entry points
+
+- [Index](https://tp9imka.github.io/agentic-media-lab/INDEX.md): concept tree with counts and the hub size
+- [Catalog](https://tp9imka.github.io/agentic-media-lab/catalog/README.md): every record by kind, inactive records listed separately
+- [Data schema](https://tp9imka.github.io/agentic-media-lab/docs/SCHEMA.md): Use this page when you need the exact record fields, allowed values, id rules or how the evidence badge is derived.
+- [Glossary](https://tp9imka.github.io/agentic-media-lab/docs/glossary.md): Use this page when a term in the hub is unclear or you need a concept id.
+- [All records as JSON lines](https://tp9imka.github.io/agentic-media-lab/index/records.jsonl): the full machine dump
+- [README.md](https://tp9imka.github.io/agentic-media-lab/README.md): what the hub is
+
+## Records
+
+- [Remotion's Model Context Protocol (shut down)](https://tp9imka.github.io/agentic-media-lab/catalog/source/remotion.dev__docs__ai__mcp.md): source, quoted-primary. A vendor's own account of choosing skills over an MCP server for code-driven video.
+- [claude-code-video-toolkit](https://tp9imka.github.io/agentic-media-lab/catalog/tool/digitalsamba__claude-code-video-toolkit.md): tool, quoted-primary. Its design rules address the most common amateur tells: wrapped titles, drifting alignment, colour changes with no reason.
+- [HyperFrames](https://tp9imka.github.io/agentic-media-lab/catalog/tool/heygen-com__hyperframes.md): tool, quoted-primary. One of the two renderers most agent-made video runs on, and its skill carries numeric motion, review and loudness rules.
+- [Remotion Agent Skills](https://tp9imka.github.io/agentic-media-lab/catalog/tool/remotion-dev__skills.md): tool, quoted-primary. The reference skills for the other dominant renderer. They state support for Codex and Cursor as well as Claude Code.
+
+## Optional
+
+- [Gemini Omni Flash](https://tp9imka.github.io/agentic-media-lab/catalog/model/google__gemini-omni-flash.md): model, quoted-primary. It is the replacement Google names for Veo 3.1 on the Gemini API.
+- [Veo 3.1](https://tp9imka.github.io/agentic-media-lab/catalog/model/google__veo-3.1.md): model, quoted-primary. Code and skills that call Veo through the Gemini API need to migrate.
+- [MiniMax H3](https://tp9imka.github.io/agentic-media-lab/catalog/model/minimaxai__minimax-h3.md): model, quoted-primary. A leading open-weights video model whose licence does not cover several major regions.
+- [Sora 2](https://tp9imka.github.io/agentic-media-lab/catalog/model/openai__sora-2.md): model (archived), quoted-primary. Many guides and skills still call it. Anything that depends on the Videos API no longer runs.
+- [video-use](https://tp9imka.github.io/agentic-media-lab/catalog/tool/browser-use__video-use.md): tool, quoted-primary. The clearest example of a skill that inspects its own output at every cut before handing it over.
+- [claude-remotion-skill](https://tp9imka.github.io/agentic-media-lab/catalog/tool/haidrrrry__claude-remotion-skill.md): tool, quoted-primary. Adds the frame-inspection step the official Remotion skills leave to a person.
+- [video-shotcraft](https://tp9imka.github.io/agentic-media-lab/catalog/tool/vincentwei1021__video-shotcraft.md): tool, quoted-primary. It makes the reviewer a different agent from the maker, which is the strongest review-loop rule found so far.
