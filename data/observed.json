@@ -51,6 +51,21 @@
     ],
     "stars": 1441
   },
+  "model:facebook/musicgen": {
+    "archived": false,
+    "created": "2023-06-08",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 2712,
+    "last_activity": "2026-03-03",
+    "licence": "MIT",
+    "open_issues": 402,
+    "sources": [
+      "https://api.github.com/repos/facebookresearch/audiocraft",
+      "https://skills.sh/api/search?q=audiocraft"
+    ],
+    "stars": 23853
+  },
   "model:hexgrad/kokoro": {
     "created": "2024-12-26",
     "fetched_at": "2026-11-12",
@@ -105,6 +120,18 @@
     "licence": "other",
     "sources": [
       "https://huggingface.co/api/models/Qwen/Qwen-Image-2.1"
+    ]
+  },
+  "model:stabilityai/stable-audio": {
+    "created": "2024-05-24",
+    "fetched_at": "2026-11-12",
+    "gated": "auto",
+    "hf_downloads": 24904,
+    "hf_likes": 1949,
+    "last_activity": "2025-06-19",
+    "licence": "other",
+    "sources": [
+      "https://huggingface.co/api/models/stabilityai/stable-audio-open-1.0"
     ]
   },
   "model:tongyi-mai/z-image": {
@@ -388,6 +415,26 @@
     ],
     "stars": 34103
   },
+  "tool:anthropics/skills": {
+    "archived": false,
+    "created": "2025-09-22",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 22754,
+    "installs": 1107660,
+    "installs_by_skill": {
+      "frontend-design": 1107660
+    },
+    "last_activity": "2026-11-06",
+    "licence": "unknown",
+    "open_issues": 1523,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/anthropics/skills",
+      "https://skills.sh/api/search?q=skills"
+    ],
+    "stars": 193396
+  },
   "tool:aoike123/blender-vse": {
     "archived": false,
     "created": "2026-09-03",
@@ -417,6 +464,23 @@
       "https://skills.sh/api/search?q=ttml-validator"
     ],
     "stars": 12
+  },
+  "tool:blaizzy/mlx-audio": {
+    "archived": false,
+    "created": "2024-11-27",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 793,
+    "last_activity": "2026-11-11",
+    "licence": "MIT",
+    "moved_to": "Neywa-Labs/mlx-audio",
+    "open_issues": 94,
+    "sources": [
+      "https://api.github.com/repos/Blaizzy/mlx-audio",
+      "https://api.github.com/repositories/895253710",
+      "https://skills.sh/api/search?q=mlx-audio"
+    ],
+    "stars": 8251
   },
   "tool:blaizzy/mlx-video": {
     "archived": false,
@@ -740,6 +804,21 @@
     ],
     "stars": 30
   },
+  "tool:gemini-cli-extensions/nanobanana": {
+    "archived": false,
+    "created": "2025-09-19",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 133,
+    "last_activity": "2026-06-25",
+    "licence": "Apache-2.0",
+    "open_issues": 51,
+    "sources": [
+      "https://api.github.com/repos/gemini-cli-extensions/nanobanana",
+      "https://skills.sh/api/search?q=nanobanana"
+    ],
+    "stars": 1131
+  },
   "tool:get-bb/bb": {
     "archived": false,
     "created": "2026-02-24",
@@ -1032,6 +1111,26 @@
       "https://skills.sh/api/search?q=ffmpeg-skill"
     ],
     "stars": 5134
+  },
+  "tool:kingbootoshi/nano-banana-2-skill": {
+    "archived": false,
+    "created": "2026-02-24",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 50,
+    "installs": 679,
+    "installs_by_skill": {
+      "nano-banana": 679
+    },
+    "last_activity": "2026-10-31",
+    "licence": "MIT",
+    "open_issues": 6,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/kingbootoshi/nano-banana-2-skill",
+      "https://skills.sh/api/search?q=nano-banana-2-skill"
+    ],
+    "stars": 418
   },
   "tool:lottiefiles/motion-design-skill": {
     "archived": false,
@@ -1345,6 +1444,36 @@
       "https://skills.sh/api/search?q=kanban-video-pipeline"
     ],
     "stars": 63
+  },
+  "tool:ohf-voice/piper1-gpl": {
+    "archived": false,
+    "created": "2025-03-28",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 625,
+    "last_activity": "2026-11-11",
+    "licence": "GPL-3.0",
+    "open_issues": 157,
+    "sources": [
+      "https://api.github.com/repos/OHF-Voice/piper1-gpl",
+      "https://skills.sh/api/search?q=piper1-gpl"
+    ],
+    "stars": 6260
+  },
+  "tool:openai/skills": {
+    "archived": false,
+    "created": "2025-11-25",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 2005,
+    "last_activity": "2026-10-28",
+    "licence": "unknown",
+    "open_issues": 297,
+    "sources": [
+      "https://api.github.com/repos/openai/skills",
+      "https://skills.sh/api/search?q=skills"
+    ],
+    "stars": 28704
   },
   "tool:openmontageinc/openmontage": {
     "archived": false,
