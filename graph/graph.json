@@ -171,6 +171,19 @@
    ]
   },
   {
+   "id": "source:c2pa.org/faqs",
+   "kind": "source",
+   "label": "C2PA FAQs (Content Credentials)",
+   "path": "catalog/source/c2pa.org__faqs.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:platform-rules",
+    "concept:delivery"
+   ]
+  },
+  {
    "id": "source:code.claude.com/docs/en/headless",
    "kind": "source",
    "label": "Run Claude Code programmatically (claude -p)",
@@ -211,6 +224,128 @@
    ]
   },
   {
+   "id": "source:developers.facebook.com/docs/instagram-platform/content-publishing",
+   "kind": "source",
+   "label": "Instagram Platform - Content Publishing (with Reels specs)",
+   "path": "catalog/source/developers.facebook.com__docs__instagram-platform__content-publishing.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:publishing",
+    "concept:platform-rules",
+    "concept:delivery"
+   ]
+  },
+  {
+   "id": "source:developers.facebook.com/docs/threads/posts",
+   "kind": "source",
+   "label": "Threads API - Posts",
+   "path": "catalog/source/developers.facebook.com__docs__threads__posts.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:publishing",
+    "concept:platform-rules"
+   ]
+  },
+  {
+   "id": "source:developers.facebook.com/docs/video-api/guides/reels-publishing",
+   "kind": "source",
+   "label": "Facebook Video API - Reels Publishing guide",
+   "path": "catalog/source/developers.facebook.com__docs__video-api__guides__reels-publishing.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:publishing",
+    "concept:platform-rules",
+    "concept:delivery"
+   ]
+  },
+  {
+   "id": "source:developers.google.com/youtube/v3/docs/videos/insert",
+   "kind": "source",
+   "label": "YouTube Data API - videos.insert and quota costs",
+   "path": "catalog/source/developers.google.com__youtube__v3__docs__videos__insert.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:publishing",
+    "concept:platform-rules",
+    "concept:automation"
+   ]
+  },
+  {
+   "id": "source:developers.google.com/youtube/v3/revision_history",
+   "kind": "source",
+   "label": "YouTube Data API (v3) revision history",
+   "path": "catalog/source/developers.google.com__youtube__v3__revision_history.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:publishing",
+    "concept:platform-rules"
+   ]
+  },
+  {
+   "id": "source:developers.tiktok.com/doc/content-posting-api-media-transfer-guide",
+   "kind": "source",
+   "label": "TikTok Content Posting API - Media Transfer Guide",
+   "path": "catalog/source/developers.tiktok.com__doc__content-posting-api-media-transfer-guide.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:publishing",
+    "concept:platform-rules",
+    "concept:delivery"
+   ]
+  },
+  {
+   "id": "source:developers.tiktok.com/doc/content-posting-api-reference-direct-post",
+   "kind": "source",
+   "label": "TikTok Content Posting API - Direct Post reference",
+   "path": "catalog/source/developers.tiktok.com__doc__content-posting-api-reference-direct-post.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:publishing",
+    "concept:platform-rules"
+   ]
+  },
+  {
+   "id": "source:developers.tiktok.com/doc/content-sharing-guidelines",
+   "kind": "source",
+   "label": "TikTok Content Sharing Guidelines (Direct Post API)",
+   "path": "catalog/source/developers.tiktok.com__doc__content-sharing-guidelines.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:publishing",
+    "concept:platform-rules",
+    "concept:automation"
+   ]
+  },
+  {
+   "id": "source:docs.bsky.app/docs/tutorials/video",
+   "kind": "source",
+   "label": "Bluesky docs - Uploading Video",
+   "path": "catalog/source/docs.bsky.app__docs__tutorials__video.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:publishing",
+    "concept:platform-rules"
+   ]
+  },
+  {
    "id": "source:docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
    "kind": "source",
    "label": "GitHub Actions: deployments and environments (required reviewers)",
@@ -235,6 +370,48 @@
    "concepts": [
     "concept:automation",
     "concept:scheduling-and-runtimes"
+   ]
+  },
+  {
+   "id": "source:docs.joinmastodon.org/user/posting",
+   "kind": "source",
+   "label": "Mastodon docs - Posting (attachments) and Instance media configuration",
+   "path": "catalog/source/docs.joinmastodon.org__user__posting.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:publishing",
+    "concept:platform-rules",
+    "concept:delivery"
+   ]
+  },
+  {
+   "id": "source:docs.x.com/x-api/getting-started/pricing",
+   "kind": "source",
+   "label": "X API pay-per-usage pricing",
+   "path": "catalog/source/docs.x.com__x-api__getting-started__pricing.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:publishing",
+    "concept:platform-rules",
+    "concept:cost"
+   ]
+  },
+  {
+   "id": "source:docs.x.com/x-api/media/quickstart/media-upload-chunked",
+   "kind": "source",
+   "label": "X API - chunked media upload quickstart",
+   "path": "catalog/source/docs.x.com__x-api__media__quickstart__media-upload-chunked.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:publishing",
+    "concept:platform-rules",
+    "concept:delivery"
    ]
   },
   {
@@ -289,6 +466,31 @@
     "concept:code-driven-video",
     "concept:consistency",
     "concept:review-loop"
+   ]
+  },
+  {
+   "id": "source:help.x.com/en/rules-and-policies/authenticity",
+   "kind": "source",
+   "label": "X Authenticity policy (synthetic and manipulated media)",
+   "path": "catalog/source/help.x.com__en__rules-and-policies__authenticity.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:platform-rules"
+   ]
+  },
+  {
+   "id": "source:help.x.com/en/rules-and-policies/x-automation",
+   "kind": "source",
+   "label": "X Automation rules",
+   "path": "catalog/source/help.x.com__en__rules-and-policies__x-automation.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:platform-rules",
+    "concept:automation"
    ]
   },
   {
@@ -347,6 +549,19 @@
    ]
   },
   {
+   "id": "source:learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin",
+   "kind": "source",
+   "label": "LinkedIn - Share on LinkedIn (self-serve) and Videos API",
+   "path": "catalog/source/learn.microsoft.com__en-us__linkedin__consumer__integrations__self-serve__share-on-linkedin.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:publishing",
+    "concept:platform-rules"
+   ]
+  },
+  {
    "id": "source:remotion.dev/docs/ai/mcp",
    "kind": "source",
    "label": "Remotion's Model Context Protocol (shut down)",
@@ -357,6 +572,56 @@
    "concepts": [
     "concept:mcp-servers",
     "concept:agent-skills"
+   ]
+  },
+  {
+   "id": "source:support.google.com/youtube/answer/1311392",
+   "kind": "source",
+   "label": "YouTube channel monetization policies (inauthentic content)",
+   "path": "catalog/source/support.google.com__youtube__answer__1311392.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:platform-rules"
+   ]
+  },
+  {
+   "id": "source:support.google.com/youtube/answer/14328491",
+   "kind": "source",
+   "label": "YouTube Help - Disclosing use of GenAI content",
+   "path": "catalog/source/support.google.com__youtube__answer__14328491.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:platform-rules",
+    "concept:delivery"
+   ]
+  },
+  {
+   "id": "source:support.google.com/youtube/answer/15424877",
+   "kind": "source",
+   "label": "YouTube Help - Understand three-minute YouTube Shorts",
+   "path": "catalog/source/support.google.com__youtube__answer__15424877.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:delivery",
+    "concept:publishing"
+   ]
+  },
+  {
+   "id": "source:www.tiktok.com/community-guidelines/en/integrity-authenticity",
+   "kind": "source",
+   "label": "TikTok Community Guidelines - Integrity and Authenticity (Edited Media and AIGC)",
+   "path": "catalog/source/www.tiktok.com__community-guidelines__en__integrity-authenticity.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:platform-rules"
    ]
   },
   {
@@ -607,6 +872,19 @@
    ]
   },
   {
+   "id": "tool:gitroomhq/postiz-app",
+   "kind": "tool",
+   "label": "Postiz",
+   "path": "catalog/tool/gitroomhq__postiz-app.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:publishing",
+    "concept:scheduling-and-runtimes"
+   ]
+  },
+  {
    "id": "tool:greensock/gsap",
    "kind": "tool",
    "label": "GSAP",
@@ -662,6 +940,19 @@
     "concept:review-loop",
     "concept:agent-skills",
     "concept:motion-and-transitions"
+   ]
+  },
+  {
+   "id": "tool:inovector/mixpost",
+   "kind": "tool",
+   "label": "Mixpost",
+   "path": "catalog/tool/inovector__mixpost.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:publishing",
+    "concept:scheduling-and-runtimes"
    ]
   },
   {
@@ -1449,6 +1740,21 @@
    "rel": "integrates_with"
   },
   {
+   "source": "source:c2pa.org/faqs",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "source:c2pa.org/faqs",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:c2pa.org/faqs",
+   "target": "source:support.google.com/youtube/answer/14328491",
+   "rel": "integrates_with"
+  },
+  {
    "source": "source:code.claude.com/docs/en/headless",
    "target": "concept:automation",
    "rel": "about"
@@ -1509,6 +1815,181 @@
    "rel": "alternative_to"
   },
   {
+   "source": "source:developers.facebook.com/docs/instagram-platform/content-publishing",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "source:developers.facebook.com/docs/instagram-platform/content-publishing",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:developers.facebook.com/docs/instagram-platform/content-publishing",
+   "target": "concept:publishing",
+   "rel": "about"
+  },
+  {
+   "source": "source:developers.facebook.com/docs/instagram-platform/content-publishing",
+   "target": "source:developers.facebook.com/docs/threads/posts",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "source:developers.facebook.com/docs/instagram-platform/content-publishing",
+   "target": "source:developers.facebook.com/docs/video-api/guides/reels-publishing",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "source:developers.facebook.com/docs/threads/posts",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:developers.facebook.com/docs/threads/posts",
+   "target": "concept:publishing",
+   "rel": "about"
+  },
+  {
+   "source": "source:developers.facebook.com/docs/threads/posts",
+   "target": "source:developers.facebook.com/docs/instagram-platform/content-publishing",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "source:developers.facebook.com/docs/video-api/guides/reels-publishing",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "source:developers.facebook.com/docs/video-api/guides/reels-publishing",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:developers.facebook.com/docs/video-api/guides/reels-publishing",
+   "target": "concept:publishing",
+   "rel": "about"
+  },
+  {
+   "source": "source:developers.facebook.com/docs/video-api/guides/reels-publishing",
+   "target": "source:developers.facebook.com/docs/instagram-platform/content-publishing",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "source:developers.google.com/youtube/v3/docs/videos/insert",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "source:developers.google.com/youtube/v3/docs/videos/insert",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:developers.google.com/youtube/v3/docs/videos/insert",
+   "target": "concept:publishing",
+   "rel": "about"
+  },
+  {
+   "source": "source:developers.google.com/youtube/v3/docs/videos/insert",
+   "target": "source:developers.google.com/youtube/v3/revision_history",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:developers.google.com/youtube/v3/revision_history",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:developers.google.com/youtube/v3/revision_history",
+   "target": "concept:publishing",
+   "rel": "about"
+  },
+  {
+   "source": "source:developers.google.com/youtube/v3/revision_history",
+   "target": "source:developers.google.com/youtube/v3/docs/videos/insert",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:developers.google.com/youtube/v3/revision_history",
+   "target": "source:support.google.com/youtube/answer/14328491",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:developers.tiktok.com/doc/content-posting-api-media-transfer-guide",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "source:developers.tiktok.com/doc/content-posting-api-media-transfer-guide",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:developers.tiktok.com/doc/content-posting-api-media-transfer-guide",
+   "target": "concept:publishing",
+   "rel": "about"
+  },
+  {
+   "source": "source:developers.tiktok.com/doc/content-posting-api-media-transfer-guide",
+   "target": "source:developers.tiktok.com/doc/content-posting-api-reference-direct-post",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:developers.tiktok.com/doc/content-posting-api-reference-direct-post",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:developers.tiktok.com/doc/content-posting-api-reference-direct-post",
+   "target": "concept:publishing",
+   "rel": "about"
+  },
+  {
+   "source": "source:developers.tiktok.com/doc/content-posting-api-reference-direct-post",
+   "target": "source:developers.tiktok.com/doc/content-posting-api-media-transfer-guide",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:developers.tiktok.com/doc/content-posting-api-reference-direct-post",
+   "target": "source:developers.tiktok.com/doc/content-sharing-guidelines",
+   "rel": "depends_on"
+  },
+  {
+   "source": "source:developers.tiktok.com/doc/content-sharing-guidelines",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "source:developers.tiktok.com/doc/content-sharing-guidelines",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:developers.tiktok.com/doc/content-sharing-guidelines",
+   "target": "concept:publishing",
+   "rel": "about"
+  },
+  {
+   "source": "source:developers.tiktok.com/doc/content-sharing-guidelines",
+   "target": "source:developers.tiktok.com/doc/content-posting-api-reference-direct-post",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:developers.tiktok.com/doc/content-sharing-guidelines",
+   "target": "tool:gitroomhq/postiz-app",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:docs.bsky.app/docs/tutorials/video",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:docs.bsky.app/docs/tutorials/video",
+   "target": "concept:publishing",
+   "rel": "about"
+  },
+  {
    "source": "source:docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
    "target": "concept:automation",
    "rel": "about"
@@ -1546,6 +2027,66 @@
   {
    "source": "source:docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
    "target": "source:docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:docs.joinmastodon.org/user/posting",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "source:docs.joinmastodon.org/user/posting",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:docs.joinmastodon.org/user/posting",
+   "target": "concept:publishing",
+   "rel": "about"
+  },
+  {
+   "source": "source:docs.x.com/x-api/getting-started/pricing",
+   "target": "concept:cost",
+   "rel": "about"
+  },
+  {
+   "source": "source:docs.x.com/x-api/getting-started/pricing",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:docs.x.com/x-api/getting-started/pricing",
+   "target": "concept:publishing",
+   "rel": "about"
+  },
+  {
+   "source": "source:docs.x.com/x-api/getting-started/pricing",
+   "target": "source:docs.x.com/x-api/media/quickstart/media-upload-chunked",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:docs.x.com/x-api/getting-started/pricing",
+   "target": "source:help.x.com/en/rules-and-policies/x-automation",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:docs.x.com/x-api/media/quickstart/media-upload-chunked",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "source:docs.x.com/x-api/media/quickstart/media-upload-chunked",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:docs.x.com/x-api/media/quickstart/media-upload-chunked",
+   "target": "concept:publishing",
+   "rel": "about"
+  },
+  {
+   "source": "source:docs.x.com/x-api/media/quickstart/media-upload-chunked",
+   "target": "source:docs.x.com/x-api/getting-started/pricing",
    "rel": "integrates_with"
   },
   {
@@ -1627,6 +2168,36 @@
    "source": "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
    "target": "tool:remotion-dev/remotion",
    "rel": "evaluated_on"
+  },
+  {
+   "source": "source:help.x.com/en/rules-and-policies/authenticity",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:help.x.com/en/rules-and-policies/authenticity",
+   "target": "source:help.x.com/en/rules-and-policies/x-automation",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:help.x.com/en/rules-and-policies/x-automation",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "source:help.x.com/en/rules-and-policies/x-automation",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:help.x.com/en/rules-and-policies/x-automation",
+   "target": "source:docs.x.com/x-api/getting-started/pricing",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:help.x.com/en/rules-and-policies/x-automation",
+   "target": "source:help.x.com/en/rules-and-policies/authenticity",
+   "rel": "integrates_with"
   },
   {
    "source": "source:hermes-agent.nousresearch.com/docs/user-guide/security",
@@ -1714,6 +2285,16 @@
    "rel": "alternative_to"
   },
   {
+   "source": "source:learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin",
+   "target": "concept:publishing",
+   "rel": "about"
+  },
+  {
    "source": "source:remotion.dev/docs/ai/mcp",
    "target": "concept:agent-skills",
    "rel": "about"
@@ -1722,6 +2303,56 @@
    "source": "source:remotion.dev/docs/ai/mcp",
    "target": "concept:mcp-servers",
    "rel": "about"
+  },
+  {
+   "source": "source:support.google.com/youtube/answer/1311392",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:support.google.com/youtube/answer/1311392",
+   "target": "source:support.google.com/youtube/answer/14328491",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:support.google.com/youtube/answer/14328491",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "source:support.google.com/youtube/answer/14328491",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:support.google.com/youtube/answer/14328491",
+   "target": "source:c2pa.org/faqs",
+   "rel": "depends_on"
+  },
+  {
+   "source": "source:support.google.com/youtube/answer/14328491",
+   "target": "source:developers.google.com/youtube/v3/revision_history",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:support.google.com/youtube/answer/15424877",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "source:support.google.com/youtube/answer/15424877",
+   "target": "concept:publishing",
+   "rel": "about"
+  },
+  {
+   "source": "source:www.tiktok.com/community-guidelines/en/integrity-authenticity",
+   "target": "concept:platform-rules",
+   "rel": "about"
+  },
+  {
+   "source": "source:www.tiktok.com/community-guidelines/en/integrity-authenticity",
+   "target": "source:developers.tiktok.com/doc/content-posting-api-reference-direct-post",
+   "rel": "integrates_with"
   },
   {
    "source": "tool:0xs4n4tg/kinetograph",
@@ -2144,6 +2775,31 @@
    "rel": "alternative_to"
   },
   {
+   "source": "tool:gitroomhq/postiz-app",
+   "target": "concept:publishing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:gitroomhq/postiz-app",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "tool:gitroomhq/postiz-app",
+   "target": "source:developers.google.com/youtube/v3/revision_history",
+   "rel": "depends_on"
+  },
+  {
+   "source": "tool:gitroomhq/postiz-app",
+   "target": "source:developers.tiktok.com/doc/content-sharing-guidelines",
+   "rel": "depends_on"
+  },
+  {
+   "source": "tool:gitroomhq/postiz-app",
+   "target": "tool:inovector/mixpost",
+   "rel": "alternative_to"
+  },
+  {
    "source": "tool:greensock/gsap",
    "target": "concept:code-driven-video",
    "rel": "about"
@@ -2232,6 +2888,21 @@
    "source": "tool:iart-ai/motion-skills",
    "target": "concept:review-loop",
    "rel": "about"
+  },
+  {
+   "source": "tool:inovector/mixpost",
+   "target": "concept:publishing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:inovector/mixpost",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "tool:inovector/mixpost",
+   "target": "tool:gitroomhq/postiz-app",
+   "rel": "alternative_to"
   },
   {
    "source": "tool:jordanrendric/claude-video-vision",

@@ -4,13 +4,13 @@ Built 2026-11-12 by `tools/build.py`.
 
 ## Counts
 
-- tool: 45
+- tool: 47
 - model: 13
-- source: 14
+- source: 34
 - recipe: 0
 - concepts: 35
 - primary-read share: 1.0
-- Hub size: 290762 characters, about 72690 tokens (estimate, characters / 4).
+- Hub size: 367978 characters, about 91994 tokens (estimate, characters / 4).
 
 ## Validation
 
@@ -20,9 +20,20 @@ dangling: 0 bad concepts: 0 invalid: 0
 
 None.
 
-## Tags used once (0)
+## Tags used once (12)
 
-None.
+- `automation`
+- `bluesky`
+- `facebook`
+- `instagram`
+- `linkedin`
+- `mastodon`
+- `mcp`
+- `monetisation`
+- `pricing`
+- `quota`
+- `shorts`
+- `threads`
 
 ## Popularity disagreements (4)
 

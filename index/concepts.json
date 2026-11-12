@@ -157,11 +157,14 @@
     "source:code.claude.com/docs/en/headless",
     "source:code.claude.com/docs/en/routines",
     "source:code.claude.com/docs/en/scheduled-tasks",
+    "source:developers.google.com/youtube/v3/docs/videos/insert",
+    "source:developers.tiktok.com/doc/content-sharing-guidelines",
     "source:docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
     "source:docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
     "source:github.com/get-bb/bb/blob/main/docs/configuration.md",
     "source:github.com/get-bb/bb/blob/main/docs/multiple-devices.md",
     "source:github.com/get-bb/bb/blob/main/plugins/automations/skills/automations/references/script-runtime.md",
+    "source:help.x.com/en/rules-and-policies/x-automation",
     "source:hermes-agent.nousresearch.com/docs/user-guide/security",
     "source:learn.chatgpt.com/docs/automations",
     "source:learn.chatgpt.com/docs/non-interactive-mode",
@@ -173,7 +176,7 @@
     "tool:triggerdotdev/trigger.dev",
     "tool:windmill-labs/windmill"
    ],
-   "count": 18
+   "count": 21
   },
   {
    "id": "concept:code-driven-video",
@@ -265,9 +268,10 @@
    ],
    "related": [],
    "record_ids": [
-    "model:google/gemini-omni-flash"
+    "model:google/gemini-omni-flash",
+    "source:docs.x.com/x-api/getting-started/pricing"
    ],
-   "count": 1
+   "count": 2
   },
   {
    "id": "concept:craft",
@@ -302,12 +306,20 @@
    "related": [],
    "record_ids": [
     "model:bytedance-seed/seedvr",
+    "source:c2pa.org/faqs",
+    "source:developers.facebook.com/docs/instagram-platform/content-publishing",
+    "source:developers.facebook.com/docs/video-api/guides/reels-publishing",
+    "source:developers.tiktok.com/doc/content-posting-api-media-transfer-guide",
+    "source:docs.joinmastodon.org/user/posting",
+    "source:docs.x.com/x-api/media/quickstart/media-upload-chunked",
+    "source:support.google.com/youtube/answer/14328491",
+    "source:support.google.com/youtube/answer/15424877",
     "tool:calesthio/generative-media-skills",
     "tool:ffmpeg/ffmpeg",
     "tool:kajisho5/ffmpeg-skill",
     "tool:mort1d/motion-graphics-skills"
    ],
-   "count": 5
+   "count": 13
   },
   {
    "id": "concept:evaluation",
@@ -690,8 +702,28 @@
     "concept:automation"
    ],
    "related": [],
-   "record_ids": [],
-   "count": 0
+   "record_ids": [
+    "source:c2pa.org/faqs",
+    "source:developers.facebook.com/docs/instagram-platform/content-publishing",
+    "source:developers.facebook.com/docs/threads/posts",
+    "source:developers.facebook.com/docs/video-api/guides/reels-publishing",
+    "source:developers.google.com/youtube/v3/docs/videos/insert",
+    "source:developers.google.com/youtube/v3/revision_history",
+    "source:developers.tiktok.com/doc/content-posting-api-media-transfer-guide",
+    "source:developers.tiktok.com/doc/content-posting-api-reference-direct-post",
+    "source:developers.tiktok.com/doc/content-sharing-guidelines",
+    "source:docs.bsky.app/docs/tutorials/video",
+    "source:docs.joinmastodon.org/user/posting",
+    "source:docs.x.com/x-api/getting-started/pricing",
+    "source:docs.x.com/x-api/media/quickstart/media-upload-chunked",
+    "source:help.x.com/en/rules-and-policies/authenticity",
+    "source:help.x.com/en/rules-and-policies/x-automation",
+    "source:learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin",
+    "source:support.google.com/youtube/answer/1311392",
+    "source:support.google.com/youtube/answer/14328491",
+    "source:www.tiktok.com/community-guidelines/en/integrity-authenticity"
+   ],
+   "count": 19
   },
   {
    "id": "concept:plugins",
@@ -759,8 +791,25 @@
     "concept:automation"
    ],
    "related": [],
-   "record_ids": [],
-   "count": 0
+   "record_ids": [
+    "source:developers.facebook.com/docs/instagram-platform/content-publishing",
+    "source:developers.facebook.com/docs/threads/posts",
+    "source:developers.facebook.com/docs/video-api/guides/reels-publishing",
+    "source:developers.google.com/youtube/v3/docs/videos/insert",
+    "source:developers.google.com/youtube/v3/revision_history",
+    "source:developers.tiktok.com/doc/content-posting-api-media-transfer-guide",
+    "source:developers.tiktok.com/doc/content-posting-api-reference-direct-post",
+    "source:developers.tiktok.com/doc/content-sharing-guidelines",
+    "source:docs.bsky.app/docs/tutorials/video",
+    "source:docs.joinmastodon.org/user/posting",
+    "source:docs.x.com/x-api/getting-started/pricing",
+    "source:docs.x.com/x-api/media/quickstart/media-upload-chunked",
+    "source:learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin",
+    "source:support.google.com/youtube/answer/15424877",
+    "tool:gitroomhq/postiz-app",
+    "tool:inovector/mixpost"
+   ],
+   "count": 16
   },
   {
    "id": "concept:review-loop",
@@ -850,6 +899,8 @@
     "tool:drawthings.ai",
     "tool:get-bb/bb",
     "tool:ggml-org/whisper.cpp",
+    "tool:gitroomhq/postiz-app",
+    "tool:inovector/mixpost",
     "tool:mflux-community/mflux",
     "tool:ml-explore/mlx-examples/whisper",
     "tool:n8n-io/n8n",
@@ -858,7 +909,7 @@
     "tool:triggerdotdev/trigger.dev",
     "tool:windmill-labs/windmill"
    ],
-   "count": 24
+   "count": 26
   },
   {
    "id": "concept:still-images",
