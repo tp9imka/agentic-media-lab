@@ -2,7 +2,8 @@
  {
   "query": "my video looks amateur",
   "expect_any": [
-   "tool:digitalsamba/claude-code-video-toolkit"
+   "tool:digitalsamba/claude-code-video-toolkit",
+   "guide:quality-skill-stack"
   ],
   "top": 3
  },
@@ -175,6 +176,21 @@
    "source:developers.tiktok.com/doc/content-posting-api-reference-direct-post",
    "source:developers.tiktok.com/doc/content-sharing-guidelines",
    "source:support.google.com/youtube/answer/14328491"
+  ],
+  "top": 3
+ },
+ {
+  "query": "skills contradict each other loudness captions",
+  "expect_any": [
+   "guide:skill-rule-conflicts"
+  ],
+  "top": 3
+ },
+ {
+  "query": "first render with claude code",
+  "expect_any": [
+   "guide:first-render-claude-code",
+   "example:hyperframes-vs-remotion"
   ],
   "top": 3
  }
