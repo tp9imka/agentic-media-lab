@@ -1,0 +1,773 @@
+{
+  "schema_version": 1,
+  "lane": "contrarian",
+  "records": [
+    {
+      "id": "source:arxiv.org/abs/2412.13459",
+      "kind": "source",
+      "title": "Six Million (Suspected) Fake Stars in GitHub: A Growing Spiral of Popularity Contests, Spams, and Malware",
+      "url": "https://arxiv.org/abs/2412.13459",
+      "summary": "A measurement study by CMU and Socket researchers that ran a detector, StarScout, over all GitHub star events from 2019 to 2024 to find fake-star campaigns.",
+      "why_it_matters": "Star counts are the first filter most readers use to pick a video skill or renderer; this paper shows the signal is bought at scale and in which categories.",
+      "concepts": [
+        "concept:popularity-and-trust"
+      ],
+      "level": "intro",
+      "fit": "high",
+      "fit_notes": "Use it as the reason to never rank skills by stars alone: check star timing (bursts), stargazer accounts with no other activity, and whether the repo has issues and commits from people other than the owner. The paper says AI/LLM repos are among the promoted categories. The full text, the StarScout tool and its per-repo data were not opened here; only the arXiv abstract page was read.",
+      "related": [],
+      "source_type": "independent-secondary",
+      "corroboration": "single-source",
+      "lane": "contrarian",
+      "claims": [
+        {
+          "text": "Fake-star activity rose sharply in 2024, and most fake stars promote short-lived phishing or malware repos; the rest mostly promote AI/LLM, blockchain, tool and tutorial repos.",
+          "quote": "(1) fake-star-related activities have rapidly surged in 2024; (2) the accounts and repositories in fake star campaigns have highly trivial activity patterns; (3) the majority of fake stars are used to promote short-lived phishing malware repositories; the remaining ones are mostly used to promote AI/LLM, blockchain, tool/application, and tutorial/demo repositories;",
+          "locator": "arXiv abstract, findings (1)-(3)",
+          "url": "https://arxiv.org/abs/2412.13459",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Fake stars give a repo a boost for under two months and then work against it.",
+          "quote": "fake stars only have a promotion effect in the short term (i.e., less than two months) and become a liability in the long term.",
+          "locator": "arXiv abstract, finding (4)",
+          "url": "https://arxiv.org/abs/2412.13459",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "arXiv abstract page v2 against the two claims",
+        "source_sha256": "7a393296ca9c00b5744c7601a028a118115e8c1aefcd86baddccf79c382cbe38",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current",
+      "tags": [
+        "fake-stars",
+        "supply-chain"
+      ],
+      "citation": {
+        "type": "paper-conference",
+        "container_title": "ICSE 2026",
+        "doi": "10.48550/arXiv.2412.13459",
+        "url": "https://arxiv.org/abs/2412.13459",
+        "accessed": "2026-11-12"
+      }
+    },
+    {
+      "id": "source:skills.sh/docs",
+      "kind": "source",
+      "title": "skills.sh docs: how the leaderboard ranks skills and what audits cover",
+      "url": "https://skills.sh/docs",
+      "summary": "The skills.sh directory's own docs page, plus the skills CLI telemetry section, on where install counts come from and what its security audits promise.",
+      "why_it_matters": "skills.sh install counts are the popularity number most video skills advertise; the directory itself says they come from CLI telemetry and that it does not guarantee a listed skill is safe.",
+      "concepts": [
+        "concept:popularity-and-trust",
+        "concept:agent-skills"
+      ],
+      "level": "intro",
+      "fit": "high",
+      "fit_notes": "An install is counted when the skills CLI reports it, with telemetry on by default (opt out with DISABLE_TELEMETRY=1 or DO_NOT_TRACK=1). Nothing on the page says installs are de-duplicated per user or machine, so CI runs and scripted installs count the same as people; this was not checked against the CLI source. See the ai-video-generation clone record for what that allows. The audits are run by Vercel, which also runs the directory; the audit method is not described on this page.",
+      "related": [],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "contrarian",
+      "claims": [
+        {
+          "text": "The leaderboard ranks skills from anonymous install telemetry sent by the skills CLI.",
+          "quote": "The skills leaderboard ranks skills based on anonymous telemetry data collected from the skills CLI.",
+          "locator": "skills.sh/docs, leaderboard section",
+          "url": "https://skills.sh/docs",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "skills.sh runs security audits but says it cannot guarantee the quality or security of any listed skill and asks users to review skills first.",
+          "quote": "We do our best to maintain a safe ecosystem, but we cannot guarantee the quality or security of every skill listed on skills.sh. We encourage you to review skills before installing and use your own judgment.",
+          "locator": "skills.sh/docs, security section",
+          "url": "https://skills.sh/docs",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The CLI sends install telemetry unless DISABLE_TELEMETRY or DO_NOT_TRACK is set.",
+          "quote": "Set `DISABLE_TELEMETRY=1` or `DO_NOT_TRACK=1` to disable both entirely.",
+          "locator": "vercel-labs/skills docs/troubleshooting.md, section Telemetry",
+          "url": "https://github.com/vercel-labs/skills/blob/main/docs/troubleshooting.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "skills.sh/docs visible text and vercel-labs/skills troubleshooting.md Telemetry section against the three claims",
+        "source_sha256": "715044ecf908476b54f01e60a2151282270210009323f76bf1a73ec7eff4838f",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "tags": [
+        "skills-sh",
+        "install-counts"
+      ]
+    },
+    {
+      "id": "source:skills.sh/api/search/ai-video-generation",
+      "kind": "source",
+      "title": "skills.sh search results for 'ai-video-generation': cloned listings on new repos",
+      "url": "https://skills.sh/api/search?q=ai-video-generation&limit=30",
+      "summary": "The skills.sh search API returns the same 'ai-video-generation' skill under many owners. Most of the top listings sit in repos created between August and October 2026, pushed seconds after creation, and the skill text credits inference.sh.",
+      "why_it_matters": "A reader who sorts video skills by installs will land on these copies first; the listing itself shows that install rank is not evidence of quality or of who maintains the skill.",
+      "concepts": [
+        "concept:popularity-and-trust",
+        "concept:agent-skills",
+        "concept:hosted-video-models"
+      ],
+      "level": "intermediate",
+      "fit": "high",
+      "fit_notes": "Install counts are not copied here; data/observed.json carries them. Read on 2026-11-12: the top seven listings point to repos created 2026-08-12 to 2026-10-06, and the listing under the inference-sh org itself ranks far below its copies. The 101-skills copy tells the agent to install the belt CLI, whose install page starts with a curl-pipe-to-shell command, and to run `belt login`, which needs an inference.sh account; generation is paid per model on inference.sh (prices not checked). It lists Veo 3.1 apps; whether inference.sh still serves them after Veo 3.1 left the Gemini API was not checked. Do not install any of the copies; if you want this skill, read the inference-sh/skills original and compare. Other copies (for example the gencraft-labs one) route to a different vendor CLI (runcomfy), so the same name does not mean the same code. Only the 101-skills SKILL.md was read in full.",
+      "related": [
+        {
+          "id": "source:skills.sh/docs",
+          "rel": "extends",
+          "note": "The counting rule that lets copies outrank the original."
+        },
+        {
+          "id": "model:google/veo-3.1",
+          "rel": "integrates_with",
+          "note": "The skill lists Veo 3.1 apps; availability via inference.sh not checked."
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "lane": "contrarian",
+      "claims": [
+        {
+          "text": "The same skill id is listed under many unrelated owners, including the inference-sh org that the skill text names.",
+          "quote": "\"id\": \"inference-sh/skills/ai-video-generation\",",
+          "locator": "skills.sh /api/search response, skills[] entry",
+          "url": "https://skills.sh/api/search?q=ai-video-generation&limit=30",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The top-listed copy's repo was created on 2026-08-31 and last pushed nine seconds later.",
+          "quote": "101-skills/superpowers created_at=2026-08-31T22:58:44Z pushed_at=2026-08-31T22:58:53Z fork=false parent=-",
+          "locator": "GitHub REST repos/101-skills/superpowers, fields created_at and pushed_at",
+          "url": "https://api.github.com/repos/101-skills/superpowers",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The copy requires the inference.sh CLI and points the agent at a remote install page, whose first option pipes a downloaded script to the shell.",
+          "quote": "> Requires inference.sh CLI (`belt`). [Install instructions](https://raw.githubusercontent.com/inference-sh/skills/refs/heads/main/cli-install.md)",
+          "locator": "101-skills/superpowers tools/video/ai-video-generation/SKILL.md, section Quick Start",
+          "url": "https://github.com/101-skills/superpowers/blob/main/tools/video/ai-video-generation/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "skills.sh search API JSON, GitHub repo metadata for seven listed repos, the 101-skills SKILL.md and the linked cli-install.md",
+        "source_sha256": "726fc1f9062eb05ac6f6d568f552b892972bb9d1cc48bcbf563d24e42823afad",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "tags": [
+        "install-counts",
+        "cloned-skills",
+        "supply-chain"
+      ]
+    },
+    {
+      "id": "source:snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub",
+      "kind": "source",
+      "title": "Snyk ToxicSkills: security audit of agent skills on ClawHub and skills.sh",
+      "url": "https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/",
+      "summary": "Snyk's February 2026 scan of 3,984 agent skills from ClawHub and skills.sh for malware, prompt injection and exposed secrets, with human review of the malicious ones.",
+      "why_it_matters": "Video skills come from the same registries; the audit puts a number on how many skills carry critical issues and shows that malicious ones pair code with prompt injection.",
+      "concepts": [
+        "concept:popularity-and-trust",
+        "concept:agent-skills"
+      ],
+      "level": "intro",
+      "fit": "high",
+      "fit_notes": "Snyk sells scanning tools, so treat the detector claims as a vendor's. The page title says '1467 Malicious Payloads' while the body says 1,467 skills have at least one flaw of any severity and 76 payloads were confirmed malicious; several later articles repeat the title's figure. Cite 76 confirmed and 534 critical. The confirmed malicious skills were on ClawHub (OpenClaw); the skills.sh sample was the curated top 100, on which Snyk reports no critical false positives. Snyk's own scanner was not run here.",
+      "related": [
+        {
+          "id": "source:skills.sh/docs",
+          "rel": "evaluated_on",
+          "note": "Snyk scanned the skills.sh top 100 as its benign set."
+        }
+      ],
+      "source_type": "independent-secondary",
+      "corroboration": "single-source",
+      "lane": "contrarian",
+      "claims": [
+        {
+          "text": "13.4% of the 3,984 skills scanned (534) had at least one critical issue, and 36.82% (1,467) had at least one flaw of any severity.",
+          "quote": "The findings are stark: 13.4% of all skills, or 534 in total, all contain at least one critical-level security issue, including malware distribution, prompt injection attacks, and exposed secrets. Expand to any severity level, and over a third of the ecosystem is affected: 36.82% (1,467 skills) have at least one security flaw,",
+          "locator": "intro, paragraph 1",
+          "url": "https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Human review confirmed 76 malicious payloads; 8 of the malicious skills were still public on clawhub.ai at publication.",
+          "quote": "we confirmed active threats through HITL: 76 malicious payloads designed for credential theft, backdoor installation, and data exfiltration. From this small sample alone, 8 of these malicious skills remain publicly available on clawhub.ai as of publication.",
+          "locator": "intro, paragraph 2",
+          "url": "https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Every confirmed malicious skill had malicious code and 91% also used prompt injection.",
+          "quote": "100% of confirmed malicious skills contain malicious code patterns, while 91% simultaneously employ prompt injection techniques.",
+          "locator": "section 100% of confirmed malicious skills contain malicious code",
+          "url": "https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "Snyk blog visible text against the three claims and the title",
+        "source_sha256": "6e0bd92555ba5e4e11f0d5f9d30d524bc8faee622d7b6e074d0f49ed8f82b2f9",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "tags": [
+        "supply-chain",
+        "prompt-injection"
+      ]
+    },
+    {
+      "id": "source:arxiv.org/abs/2605.11418",
+      "kind": "source",
+      "title": "Under the Hood of SKILL.md: Semantic Supply-chain Attacks on AI Agent Skill Registry",
+      "url": "https://arxiv.org/abs/2605.11418",
+      "summary": "A paper that tests attacks using only SKILL.md text against real ClawHub skills at three stages: registry search, agent selection, and registry moderation.",
+      "why_it_matters": "It shows that the description text of a skill decides whether an agent picks it and whether a registry blocks it, so a well-worded copy can beat the original without any code change.",
+      "concepts": [
+        "concept:popularity-and-trust",
+        "concept:agent-skills"
+      ],
+      "level": "advanced",
+      "fit": "medium",
+      "fit_notes": "Measured on ClawHub mechanisms, not on skills.sh or the Claude Code plugin marketplace, so the numbers do not transfer directly. The arXiv page renders SKILL.md as 'this http URL', which is kept in the quotes. Practical reading: a description that matches your request better is not evidence the skill is better; compare skills by their files, not by how they describe themselves. Only the abstract was read.",
+      "related": [
+        {
+          "id": "source:skills.sh/docs",
+          "rel": "contradicts",
+          "note": "Registry audits are what skills.sh offers as its safety step; this paper shows audit verdicts on another registry (ClawHub) can be evaded by wording."
+        }
+      ],
+      "source_type": "independent-secondary",
+      "corroboration": "single-source",
+      "lane": "contrarian",
+      "claims": [
+        {
+          "text": "When two skills do the same thing, description wording alone made agents pick the adversarial one in 77.6% of paired trials on average.",
+          "quote": "In Selection, description-only framing biases agents toward functionally equivalent adversarial variants, which are selected in 77.6% of paired trials on average.",
+          "locator": "arXiv abstract, Selection result",
+          "url": "https://arxiv.org/abs/2605.11418",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Wording changes let malicious skills avoid a blocking verdict from registry moderation in 36.5% to 100% of cases.",
+          "quote": "In Governance, semantic evasion strategies cause malicious skills to avoid a blocking verdict in 36.5%-100% of cases.",
+          "locator": "arXiv abstract, Governance result",
+          "url": "https://arxiv.org/abs/2605.11418",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "arXiv abstract page against the two claims",
+        "source_sha256": "a247faa84e2b6a7c42bf04d2c5e7f88ee238546c778381ce5681293f87f3aebd",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current",
+      "tags": [
+        "supply-chain",
+        "prompt-injection"
+      ],
+      "citation": {
+        "type": "article",
+        "doi": "10.48550/arXiv.2605.11418",
+        "url": "https://arxiv.org/abs/2605.11418",
+        "accessed": "2026-11-12"
+      }
+    },
+    {
+      "id": "source:vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals",
+      "kind": "source",
+      "title": "Vercel: AGENTS.md outperforms skills in our agent evals",
+      "url": "https://vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals",
+      "summary": "A Vercel engineering post (27 Jan 2026) that ran a Next.js docs skill and an AGENTS.md docs index through the same coding-agent eval suite.",
+      "why_it_matters": "Many video skills assume the agent will load them when a video task comes up. Vercel measured that an agent often does not, which changes how a reader should wire a renderer skill into a project.",
+      "concepts": [
+        "concept:agent-skills",
+        "concept:agent-surface"
+      ],
+      "level": "intermediate",
+      "fit": "high",
+      "fit_notes": "For a video project: put a short index of the renderer's rules (or a line that says which skill to load and when) in CLAUDE.md or AGENTS.md instead of relying on the skill's description to trigger it. Vercel also found the wording of that line mattered; 'explore the project first, then invoke the skill' did better than 'you MUST invoke the skill'. One framework, one eval suite, model and agent not named on the page, and Vercel runs skills.sh. It disputes the reading of the Remotion MCP shutdown note that skills are the reliable surface: both pages report agents not calling what is available.",
+      "related": [
+        {
+          "id": "source:remotion.dev/docs/ai/mcp",
+          "rel": "contradicts",
+          "note": "Remotion moved from MCP to skills partly because agents did not invoke MCP reliably; Vercel measured the same failure for skills."
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "contrarian",
+      "claims": [
+        {
+          "text": "With a skill available and no instruction to use it, the agent never invoked the skill in 56% of eval cases, and the pass rate equalled the no-docs baseline.",
+          "quote": "In 56% of eval cases, the skill was never invoked. The agent had access to the documentation but didn't use it. Adding the skill produced no improvement over baseline:",
+          "locator": "section Skills weren't being triggered reliably",
+          "url": "https://vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A compressed 8KB docs index in AGENTS.md passed 100%; skills reached at most 79% even with explicit instructions.",
+          "quote": "A compressed 8KB docs index embedded directly in AGENTS.md achieved a 100% pass rate, while skills maxed out at 79% even with explicit instructions telling the agent to use them.",
+          "locator": "intro, paragraph 2",
+          "url": "https://vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Small wording changes in the instruction to use the skill gave large swings in behaviour.",
+          "quote": "Same skill. Same docs. Different outcomes based on subtle wording changes.",
+          "locator": "section Explicit instructions helped, but wording was fragile",
+          "url": "https://vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "Vercel blog visible text against the three claims",
+        "source_sha256": "6c4eae3c0880122a5eb825f2d8142ce80ca60e5f178b24912f5b69fdf7a4f5eb",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "tags": [
+        "skill-invocation"
+      ]
+    },
+    {
+      "id": "source:arxiv.org/abs/2605.15199",
+      "kind": "source",
+      "title": "EntityBench: Towards Entity-Consistent Long-Range Multi-Shot Video Generation",
+      "url": "https://arxiv.org/abs/2605.15199",
+      "summary": "A benchmark of 140 episodes (2,491 shots) from real narrative media that tracks characters, objects and locations across up to 50 shots, with a memory-based baseline.",
+      "why_it_matters": "Multi-shot clips made by chaining generated shots lose their characters as the gap between appearances grows; this paper measures that drift and names the fix that scored best.",
+      "concepts": [
+        "concept:consistency",
+        "concept:evaluation",
+        "concept:agentic-pipelines"
+      ],
+      "level": "advanced",
+      "fit": "medium",
+      "fit_notes": "Plan shots so a recurring character or prop is regenerated from a stored reference image, not from the previous shot or a text description; that is what the paper's best method does. The abstract does not name which hosted models were tested, so it does not rank Seedance, Wan or others; the full paper and project page were not opened. No hub record claims long-range consistency outright, so this is linked by concept, not by 'contradicts'.",
+      "related": [],
+      "source_type": "independent-secondary",
+      "corroboration": "single-source",
+      "lane": "contrarian",
+      "claims": [
+        {
+          "text": "In existing methods, entity consistency across shots falls sharply as the distance between an entity's appearances grows.",
+          "quote": "Experiments show that cross-shot entity consistency degrades sharply with recurrence distance in existing methods,",
+          "locator": "arXiv abstract, results",
+          "url": "https://arxiv.org/abs/2605.15199",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Storing a verified reference per entity before generation gave the highest character fidelity among the methods tested.",
+          "quote": "explicit per-entity memory yields the highest character fidelity (Cohen's d = +2.33) and presence among methods evaluated.",
+          "locator": "arXiv abstract, results",
+          "url": "https://arxiv.org/abs/2605.15199",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "arXiv abstract page against the two claims",
+        "source_sha256": "ec0d448d33ad87d10bec3b057f730ff5cc5fb429133697a1a1df663fe3bc3388",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current",
+      "tags": [
+        "multi-shot"
+      ],
+      "citation": {
+        "type": "article",
+        "doi": "10.48550/arXiv.2605.15199",
+        "url": "https://arxiv.org/abs/2605.15199",
+        "accessed": "2026-11-12"
+      }
+    },
+    {
+      "id": "source:arxiv.org/abs/2605.15585",
+      "kind": "source",
+      "title": "See Before You Code: Learning Visual Priors for Spatially Aware Educational Animation Generation (OmniManim)",
+      "url": "https://arxiv.org/abs/2605.15585",
+      "summary": "A paper on LLM-written Manim animations: it reports that rendered output often has overlap, misalignment and broken continuity, and proposes a planner plus post-render repair.",
+      "why_it_matters": "It says the main failure of code-driven video cannot be seen by reading the code, which is the case for rendering frames and looking at them before delivery.",
+      "concepts": [
+        "concept:code-driven-video",
+        "concept:review-loop",
+        "concept:evaluation"
+      ],
+      "level": "intermediate",
+      "fit": "high",
+      "fit_notes": "Practical reading for Manim, Remotion or HyperFrames: do not accept 'the code ran' as done; render stills at keyframes and the frames between them, because interpolation creates defects the keyframes do not show. The paper's own system is not in the hub and was not checked for code availability; only the abstract was read, so defect rates for baseline models are not recorded here.",
+      "related": [
+        {
+          "id": "tool:manimcommunity/manim",
+          "rel": "evaluated_on",
+          "note": "The paper's target renderer."
+        }
+      ],
+      "source_type": "independent-secondary",
+      "corroboration": "single-source",
+      "lane": "contrarian",
+      "claims": [
+        {
+          "text": "LLM-generated animation code often renders with overlap, misalignment and broken continuity.",
+          "quote": "the resulting renders often exhibit visual defects, including element overlap, misalignment, and broken animation continuity.",
+          "locator": "arXiv abstract, sentence 1",
+          "url": "https://arxiv.org/abs/2605.15585",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "These defects cannot be reliably found from the code and only show up after rendering.",
+          "quote": "These defects cannot be reliably detected from the code alone and become apparent only after execution.",
+          "locator": "arXiv abstract, sentence 2",
+          "url": "https://arxiv.org/abs/2605.15585",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "arXiv abstract page against the two claims",
+        "source_sha256": "2ad20c7459e206d25c75246f9ef71a6d7105a1bef1dbfff557d5d9a140f9a959",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current",
+      "tags": [
+        "manim",
+        "render-check"
+      ],
+      "citation": {
+        "type": "article",
+        "doi": "10.48550/arXiv.2605.15585",
+        "url": "https://arxiv.org/abs/2605.15585",
+        "accessed": "2026-11-12"
+      }
+    },
+    {
+      "id": "source:remotion.dev/docs/5-0-migration",
+      "kind": "source",
+      "title": "Remotion 5.0 migration: mandatory telemetry for licensed companies",
+      "url": "https://www.remotion.dev/docs/5-0-migration",
+      "summary": "Remotion's planned breaking changes for 5.0 (not released on 2026-11-12) and its telemetry page, which make render telemetry and a licence key mandatory for Company License and Automators customers.",
+      "why_it_matters": "An automated video pipeline on Remotion is the 'Automators' case, so upgrading to 5.0 means sending render events to Remotion or arranging another way to report counts.",
+      "concepts": [
+        "concept:licences-and-territory",
+        "concept:code-driven-video",
+        "concept:automation"
+      ],
+      "level": "intermediate",
+      "fit": "high",
+      "fit_notes": "Updates tool:remotion-dev/remotion, whose fit_notes point to the 5.0 licence change. Free-licence users are not obliged to send telemetry, but client-side rendering always sends an event, including the end user's IP address, even without a licence key. renderFrames() and stitchFramesToVideo() do not report on their own, so a pipeline built on them must call registerUsageEvent() itself. Telemetry never fails a render, per the page. Pin Remotion 4.x if your company policy blocks outbound calls, until a reporting arrangement exists.",
+      "related": [
+        {
+          "id": "tool:remotion-dev/remotion",
+          "rel": "extends",
+          "note": "The 5.0 change its fit_notes refer to."
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "contrarian",
+      "claims": [
+        {
+          "text": "Upgrading to 5.0 requires company licence holders to enable telemetry or arrange another way to deliver render counts.",
+          "quote": "If you upgrade to Remotion 5.0, you must enable telemetry if you are a company license holder or contact Remotion to arrange a plausible delivery of render counts.",
+          "locator": "5-0-migration, section Telemetry is now mandatory for Company License customers",
+          "url": "https://www.remotion.dev/docs/5-0-migration",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "In 5.0, Automators customers must set licenseKey and opt into telemetry; Creators are not obliged.",
+          "quote": "In Remotion 5.0, it becomes obligatory for companies which are under the \"Remotion for Automators\" option to set the licenseKey field and opt into telemetry.",
+          "locator": "license/telemetry, 5.0 section",
+          "url": "https://www.remotion.dev/docs/license/telemetry",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Client-side rendering sends a telemetry event for every render even with no licence key, including the end user's IP address.",
+          "quote": "Client-side rendering APIs always send a telemetry event for every render, even if no licenseKey is set:",
+          "locator": "license/telemetry, section Telemetry in client-side rendering",
+          "url": "https://www.remotion.dev/docs/license/telemetry",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "remotion.dev 5-0-migration and license/telemetry visible text against the three claims",
+        "source_sha256": "2e25fe264f53994b713b2debac8f785ffd02fd23e8876fc36e805499ef4b9430",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "tags": [
+        "remotion",
+        "telemetry",
+        "licence-change"
+      ]
+    },
+    {
+      "id": "source:github.com/heygen-com/hyperframes/blob/main/skills/hyperframes/skill.md",
+      "kind": "source",
+      "title": "HyperFrames skill: usage beacon and CLI telemetry",
+      "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/hyperframes/SKILL.md",
+      "summary": "The HyperFrames skill's instruction to send a usage beacon at start, read with the CLI's telemetry reference and FAQ.",
+      "why_it_matters": "Installing the skill makes the agent report to HeyGen which skill ran, alongside CLI telemetry that is on unless switched off and is tied to a HeyGen account after sign-in.",
+      "concepts": [
+        "concept:agent-skills",
+        "concept:popularity-and-trust",
+        "concept:code-driven-video"
+      ],
+      "level": "intro",
+      "fit": "high",
+      "fit_notes": "Updates tool:heygen-com/hyperframes (its fit_notes mention the beacon without a quote). Telemetry is on until you run `npx hyperframes telemetry disable` or set HYPERFRAMES_NO_TELEMETRY=1 or DO_NOT_TRACK=1; the CLI also reads these from the project .env. It records the coding agent's name (claude_code, codex, cursor) from environment variables. Turning telemetry off also removes the install from canary rollouts. The skill text is an instruction the agent will follow; for a client project, set the opt-out before the first run. Network traffic was not inspected here.",
+      "related": [
+        {
+          "id": "tool:heygen-com/hyperframes",
+          "rel": "extends"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "contrarian",
+      "claims": [
+        {
+          "text": "The skill tells the agent to run a usage-beacon command once at start, account-linked when signed in.",
+          "quote": "**Usage beacon:** run `npx hyperframes events --skill=hyperframes` once as this skill starts. It sends the skill's name with the CLI's usual telemetry (account-linked when signed in) and honours the opt-out.",
+          "locator": "skills/hyperframes/SKILL.md, line 8",
+          "url": "https://github.com/heygen-com/hyperframes/blob/main/skills/hyperframes/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "After `hyperframes auth login`, usage events are linked to the HeyGen account and carry the username.",
+          "quote": "**Signed-in usage\nis not anonymous.**",
+          "locator": "docs/packages/cli.mdx, section telemetry",
+          "url": "https://github.com/heygen-com/hyperframes/blob/main/docs/packages/cli.mdx",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Telemetry includes the name of the coding agent driving the CLI, inferred from environment variables.",
+          "quote": "the _name_ of a coding agent driving the\nCLI when one is detected (`claude_code`, `codex`, `cursor`). That name is\ninferred from which well-known environment variables exist.",
+          "locator": "docs/packages/cli.mdx, section telemetry",
+          "url": "https://github.com/heygen-com/hyperframes/blob/main/docs/packages/cli.mdx",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "SKILL.md, docs/faq.mdx and the telemetry section of docs/packages/cli.mdx on main against the three claims",
+        "source_sha256": "19cdd930c83d69c5ed7843a011ba4e3c9aa6e8823a77452fca007ae6f9489b1f",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "tags": [
+        "telemetry",
+        "hyperframes"
+      ]
+    },
+    {
+      "id": "source:github.com/heygen-com/hyperframes/issues/4435",
+      "kind": "source",
+      "title": "HyperFrames issue 4435: parallel render workers capture a blank first frame",
+      "url": "https://github.com/heygen-com/hyperframes/issues/4435",
+      "summary": "An open HyperFrames bug report (opened 2026-09-24, version 0.8.72) with a repro: in screenshot capture mode with several workers, each worker's first frame can come out blank. Read with the vendor's determinism page.",
+      "why_it_matters": "HyperFrames' skill tells the agent every render is identical; this report, with a repro and a named unmerged fix, shows parallel renders can differ between runs.",
+      "concepts": [
+        "concept:code-driven-video",
+        "concept:review-loop"
+      ],
+      "level": "intermediate",
+      "fit": "high",
+      "fit_notes": "Gotcha for agents: the render exits normally, so only a frame check catches it. Until the issue closes, render final output with `--workers 1` or scan for blank frames at worker shard boundaries (frame = worker index x total frames / workers). A related open issue, 5888 (0.8.145), reports the same class with GSAP and PNG sequences. The vendor's determinism page says output is identical but also says a local render can shift by a pixel between machines and recommends `--docker` for exact output. The repro was not run here.",
+      "related": [
+        {
+          "id": "tool:heygen-com/hyperframes",
+          "rel": "evaluated_on"
+        },
+        {
+          "id": "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+          "rel": "contradicts",
+          "note": "The vendor comparison presents rule-following as the only way HyperFrames breaks; this issue is an engine-side capture race."
+        }
+      ],
+      "source_type": "community",
+      "corroboration": "single-source",
+      "lane": "contrarian",
+      "claims": [
+        {
+          "text": "With 4 parallel workers in screenshot capture mode, frames at each worker's first frame came out fully transparent, intermittently; one worker gave no blank frames.",
+          "quote": "`--workers 1` produces zero blank frames; the anomaly is deterministic in position across parallel runs but intermittent (some runs clean), matching the paint-settle race described in #2477.",
+          "locator": "issue 4435 body, section Describe the bug, paragraph 2",
+          "url": "https://github.com/heygen-com/hyperframes/issues/4435",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The earlier fix for this bug was closed without merging, according to the reporter.",
+          "quote": "The fix PR #2489 was closed unmerged, and `discardWarmupCapture` still has **zero call sites** on current `main` (a3d7736)",
+          "locator": "issue 4435 body, section Describe the bug, paragraph 1",
+          "url": "https://github.com/heygen-com/hyperframes/issues/4435",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The vendor's own determinism page says local renders can differ by a pixel between machines and points to Docker for exact output.",
+          "quote": "Fonts and Chrome versions differ between computers, so a local render can shift\nby a pixel from one machine to the next.",
+          "locator": "docs/concepts/determinism.mdx, section Rule out your machine as a variable",
+          "url": "https://github.com/heygen-com/hyperframes/blob/main/docs/concepts/determinism.mdx",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "issue 4435 body via gh issue view, docs/concepts/determinism.mdx and SKILL.md line 12 on main",
+        "source_sha256": "691385421b1b245435e87141a0f2e0a816318b47a951e238b80b655827c720da",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "tags": [
+        "hyperframes",
+        "determinism"
+      ]
+    },
+    {
+      "id": "source:about.fb.com/news/2026/03/rewarding-original-creators-on-facebook",
+      "kind": "source",
+      "title": "Meta: Rewarding Original Creators on Facebook (March 2026)",
+      "url": "https://about.fb.com/news/2026/03/rewarding-original-creators-on-facebook/",
+      "summary": "Meta's March 2026 newsroom post that updates Facebook's original content guidelines and says unoriginal content is deprioritised in Feed and Reels, with demonetisation for accounts that keep posting it.",
+      "why_it_matters": "An agent pipeline that stitches stock or third-party clips with narration or captions is the pattern Meta names as unoriginal, so reach and payouts on Facebook depend on what the pipeline adds.",
+      "concepts": [
+        "concept:platform-rules",
+        "concept:publishing"
+      ],
+      "level": "intro",
+      "fit": "high",
+      "fit_notes": "The post does not mention AI by name; the test is creative contribution, not the tool. 'Narrating what's already on screen' and 'stitching multiple clips together' are the default output of many faceless-video pipelines, and 'inserting captions' or changing speed on someone else's clip does not make it original. Appeals exist. The help-centre page the post links to was not opened. Pairs with the YouTube inauthentic-content policy record already in the hub.",
+      "related": [
+        {
+          "id": "source:support.google.com/youtube/answer/1311392",
+          "rel": "alternative_to",
+          "note": "The YouTube counterpart for mass-produced content."
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "lane": "contrarian",
+      "claims": [
+        {
+          "text": "Stitching clips together or narrating what is already on screen without adding anything meaningful counts as unoriginal and is likely to be deprioritised.",
+          "quote": "Simply watching along, reacting with facial expressions, stitching multiple clips together, or narrating what’s already on screen — without adding anything meaningful — is considered unoriginal and will likely be deprioritized in Feed and Reels.",
+          "locator": "section Clearer Guidelines for Original Content, bullet 2",
+          "url": "https://about.fb.com/news/2026/03/rewarding-original-creators-on-facebook/",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Minor edits to another creator's post, such as adding captions or changing speed, are also unoriginal.",
+          "quote": "making low-value changes to someone else’s content like adding borders, inserting captions, and changing the reel’s speed,",
+          "locator": "section Clearer Guidelines for Original Content, bullet 3",
+          "url": "https://about.fb.com/news/2026/03/rewarding-original-creators-on-facebook/",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Accounts that keep posting mainly unoriginal content may be made non-recommendable and demonetised.",
+          "quote": "they may see their account deemed non-recommendable and demonetized, if they continue to post primarily unoriginal content.",
+          "locator": "section Clearer Guidelines for Original Content, paragraph after the bullets",
+          "url": "https://about.fb.com/news/2026/03/rewarding-original-creators-on-facebook/",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "about.fb.com newsroom post visible text against the three claims",
+        "source_sha256": "d5a055636731d410bc3e4a44ea591a9d5eee292d3cba520cdad325b3992bea64",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "tags": [
+        "meta",
+        "unoriginal-content"
+      ]
+    }
+  ]
+}
