@@ -47,7 +47,7 @@ class Gate:
 
     def page_budgets(self, budget: int) -> None:
         files = [f for f in h.repo_files(self.root) if f.suffix == ".md"]
-        files += [self.root / n for n in ("llms.txt", "catalog/llms.txt") if (self.root / n).exists()]
+        files += [p for g in ("llms.txt", "catalog/*/llms.txt") for p in self.root.glob(g)]
         over = []
         for f in sorted(set(files)):
             n = len(f.read_text(encoding="utf-8", errors="replace"))

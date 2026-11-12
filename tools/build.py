@@ -526,16 +526,27 @@ class Build:
             cards += ["", "## Records", ""] + [self.card_line(r) for r in top]
         optional = [self.card_line(r) for r in rest]
         text = "\n".join(lines + cards + (["", "## Optional", ""] + optional if optional else [])) + "\n"
-        nested = self.root / NESTED_LLMS
-        if len(text) > self.cfg["page_char_budget"] and self.recs:
-            sub = [f"# {self.cfg['title']} - records", "",
-                   f"> Every record card. Linked from {b}llms.txt because the cards did not fit there.", ""]
-            sub += cards[1:] + (["", "## Optional", ""] + optional if optional else [])
-            self.emit(NESTED_LLMS, "\n".join(sub) + "\n", readable=False)
-            text = "\n".join(lines + ["", "## Optional", "",
-                                      f"- [All record cards]({b}{NESTED_LLMS}): one line per record"]) + "\n"
-        elif nested.exists():
-            nested.unlink()
+        legacy = self.root / NESTED_LLMS
+        if legacy.exists():
+            legacy.unlink()
+        over = len(text) > self.cfg["page_char_budget"] and bool(self.recs)
+        links = []
+        for kind in self.cfg["kinds"]:
+            nested = f"catalog/{kind}/llms.txt"
+            of_kind = [r for r in self.recs if self.recs[r]["kind"] == kind]
+            if not over or not of_kind:
+                if (self.root / nested).exists():
+                    (self.root / nested).unlink()
+                continue
+            first = [self.card_line(r) for r in of_kind if r in set(top)]
+            later = [self.card_line(r) for r in of_kind if r not in set(top)]
+            sub = [f"# {self.cfg['title']} - {kind} records", "",
+                   f"> One line per {kind} record. Linked from {b}llms.txt because the cards did not fit there.", ""]
+            sub += (["## Records", ""] + first if first else []) + (["", "## Optional", ""] + later if later else [])
+            self.emit(nested, "\n".join(sub) + "\n", readable=False)
+            links.append(f"- [{kind} records]({b}{nested}): {len(of_kind)} cards, one line each")
+        if over:
+            text = "\n".join(lines + ["", "## Records by kind", ""] + links) + "\n"
         self.emit("llms.txt", text, readable=False)
 
     def write_report(self, meta: dict) -> None:

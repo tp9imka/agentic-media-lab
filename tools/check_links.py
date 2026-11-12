@@ -15,7 +15,7 @@ import hublib as h  # noqa: E402
 INLINE_LINK = re.compile(r"!?\[[^\]]*\]\(\s*<?([^)\s>]+)>?(?:\s+\"[^\"]*\")?\s*\)")
 REF_LINK = re.compile(r"^\s{0,3}\[[^\]]+\]:\s*<?(\S+?)>?(?:\s+\"[^\"]*\")?\s*$", re.M)
 SCHEME = re.compile(r"^[A-Za-z][A-Za-z0-9+.-]*:")
-LLMS_FILES = ("llms.txt", "catalog/llms.txt")
+LLMS_GLOBS = ("llms.txt", "catalog/*/llms.txt")  # the root file plus one per kind when cards overflow
 
 
 def exists_exact_case(root: Path, path: Path) -> bool:
@@ -73,7 +73,7 @@ def check_llms(root: Path, base: str) -> tuple[int, list[str]]:
     broken, total = [], 0
     if not (root / "llms.txt").exists():
         return 0, ["llms.txt: missing (run tools/build.py)"]
-    for name in LLMS_FILES:
+    for name in sorted(p.relative_to(root).as_posix() for g in LLMS_GLOBS for p in root.glob(g)):
         f = root / name
         if not f.exists():
             continue
