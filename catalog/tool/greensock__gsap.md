@@ -79,7 +79,7 @@ Collected by `tools/enrich.py`, not typed by hand.
 
 ## Referenced by
 
-None.
+- [GSAP Agent Skills](greensock__gsap-skills.md) (extends)
 
 ## Status
 

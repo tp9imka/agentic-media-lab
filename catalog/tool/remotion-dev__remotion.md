@@ -90,6 +90,7 @@ Collected by `tools/enrich.py`, not typed by hand.
 - [Kinetograph](0xs4n4tg__kinetograph.md) (alternative_to)
 - [fframes](dmtrkovalenko__fframes.md) (alternative_to)
 - [html-video](nexu-io__html-video.md) (contradicts)
+- [claude-motion](whaleyxbt__claude-motion.md) (depends_on)
 
 ## Status
 

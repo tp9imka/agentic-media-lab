@@ -62,30 +62,38 @@
     "source:skills.sh/docs",
     "source:snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub",
     "source:vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals",
+    "tool:199-biotechnologies/motion-dev-animations-skill",
+    "tool:abubakrchan/product-launch-motion",
     "tool:anthropics/skills",
     "tool:aoike123/blender-vse",
+    "tool:barty-bart/motion-graphics",
     "tool:browser-use/video-use",
     "tool:calesthio/generative-media-skills",
+    "tool:charlie947/motion-graphics-skills",
     "tool:connerkward/screenstudio-alternative-skill",
     "tool:coreyhaines31/marketingskills",
     "tool:digitalsamba/claude-code-video-toolkit",
     "tool:dmtrkovalenko/fframes",
+    "tool:greensock/gsap-skills",
     "tool:griffinwooldridge/talking-head-editor",
     "tool:haidrrrry/claude-remotion-skill",
     "tool:heygen-com/hyperframes",
+    "tool:howseen-ai/claude-motion-design",
     "tool:iart-ai/motion-skills",
     "tool:kingbootoshi/nano-banana-2-skill",
     "tool:lottiefiles/motion-design-skill",
     "tool:makemyclip/editor",
     "tool:mattypark/motion-graphics-skill",
+    "tool:nateherkai/herk-edit-kit",
     "tool:openai/skills",
     "tool:openrouter/video-generation",
     "tool:remotion-dev/skills",
     "tool:sun-guannan/vectcutapi",
     "tool:vincentwei1021/video-shotcraft",
+    "tool:whaleyxbt/claude-motion",
     "tool:wyattblue/auto-editor"
    ],
-   "count": 30
+   "count": 38
   },
   {
    "id": "concept:agent-surface",
@@ -173,6 +181,7 @@
     "source:tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s2.pdf",
     "source:tech.ebu.ch/publications/r128",
     "source:w3.org/tr/wcag22",
+    "tool:barty-bart/motion-graphics",
     "tool:bbc/ttml-validator",
     "tool:blaizzy/mlx-audio",
     "tool:browser-use/video-use",
@@ -186,6 +195,7 @@
     "tool:ggml-org/whisper.cpp",
     "tool:griffinwooldridge/talking-head-editor",
     "tool:harry0703/moneyprinterturbo",
+    "tool:howseen-ai/claude-motion-design",
     "tool:josiahsiegel/claude-plugin-marketplace",
     "tool:m-bain/whisperx",
     "tool:makemyclip/editor",
@@ -194,13 +204,15 @@
     "tool:ml-explore/mlx-examples/whisper",
     "tool:mort1d/motion-graphics-skills",
     "tool:motion-canvas/motion-canvas",
+    "tool:nateherkai/herk-edit-kit",
     "tool:ohf-voice/piper1-gpl",
     "tool:openai/skills",
     "tool:openmontageinc/openmontage",
     "tool:relo-video/synthcut",
+    "tool:whaleyxbt/claude-motion",
     "tool:wyattblue/auto-editor"
    ],
-   "count": 39
+   "count": 43
   },
   {
    "id": "concept:automation",
@@ -267,19 +279,24 @@
     "source:remotion.dev/docs/5-0-migration",
     "tool:0xs4n4tg/kinetograph",
     "tool:3b1b/manim",
+    "tool:abubakrchan/product-launch-motion",
     "tool:ahujasid/mcp-for-blender",
+    "tool:cth9191/animate",
     "tool:dmtrkovalenko/fframes",
     "tool:ffmpeg/ffmpeg",
     "tool:flchntc/smooth-animation-skill",
     "tool:greensock/gsap",
+    "tool:greensock/gsap-skills",
     "tool:haidrrrry/claude-remotion-skill",
     "tool:heygen-com/hyperframes",
+    "tool:howseen-ai/claude-motion-design",
     "tool:manimcommunity/manim",
     "tool:mattypark/motion-graphics-skill",
     "tool:midrender/revideo",
     "tool:mifi/editly",
     "tool:mort1d/motion-graphics-skills",
     "tool:motion-canvas/motion-canvas",
+    "tool:nateherkai/herk-edit-kit",
     "tool:nexu-io/html-video",
     "tool:nousresearch/kanban-video-pipeline",
     "tool:remotion-dev/remotion",
@@ -287,7 +304,7 @@
     "tool:showlab/code2video",
     "tool:zulko/moviepy"
    ],
-   "count": 29
+   "count": 34
   },
   {
    "id": "concept:consistency",
@@ -318,11 +335,12 @@
     "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
     "tool:0xs4n4tg/kinetograph",
     "tool:calesthio/generative-media-skills",
+    "tool:charlie947/motion-graphics-skills",
     "tool:digitalsamba/claude-code-video-toolkit",
     "tool:hkuds/vimax",
     "tool:seme-org/open-director"
    ],
-   "count": 14
+   "count": 15
   },
   {
    "id": "concept:cost",
@@ -505,6 +523,7 @@
     "source:developer.apple.com/documentation/professional-video-applications/fcpxml-reference",
     "source:pixabay.com/api/docs",
     "tool:aoike123/blender-vse",
+    "tool:barty-bart/motion-graphics",
     "tool:breakthrough/pyscenedetect",
     "tool:browser-use/video-use",
     "tool:btahir/reelbird",
@@ -519,13 +538,14 @@
     "tool:makemyclip/editor",
     "tool:mifi/editly",
     "tool:misbahsy/video-audio-mcp",
+    "tool:nateherkai/herk-edit-kit",
     "tool:relo-video/synthcut",
     "tool:samuelgursky/davinci-resolve-mcp",
     "tool:sun-guannan/vectcutapi",
     "tool:wyattblue/auto-editor",
     "tool:zulko/moviepy"
    ],
-   "count": 24
+   "count": 26
   },
   {
    "id": "concept:generated-footage",
@@ -822,11 +842,14 @@
     "source:carbondesignsystem.com/elements/motion/overview",
     "source:cloud.wikis.utexas.edu/wiki/spaces/rtf318/pages/80022510",
     "source:github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss",
+    "tool:199-biotechnologies/motion-dev-animations-skill",
     "tool:3b1b/manim",
+    "tool:abubakrchan/product-launch-motion",
     "tool:connerkward/screenstudio-alternative-skill",
     "tool:ffmpeg/ffmpeg",
     "tool:flchntc/smooth-animation-skill",
     "tool:greensock/gsap",
+    "tool:greensock/gsap-skills",
     "tool:haidrrrry/claude-remotion-skill",
     "tool:heygen-com/hyperframes",
     "tool:iart-ai/motion-skills",
@@ -835,9 +858,10 @@
     "tool:manimcommunity/manim",
     "tool:midrender/revideo",
     "tool:motion-canvas/motion-canvas",
-    "tool:remotion-dev/remotion"
+    "tool:remotion-dev/remotion",
+    "tool:whaleyxbt/claude-motion"
    ],
-   "count": 17
+   "count": 21
   },
   {
    "id": "concept:orchestration",
@@ -1060,12 +1084,14 @@
     "source:hermes-agent.nousresearch.com/docs/user-guide/security",
     "source:learn.chatgpt.com/docs/automations",
     "tool:0xs4n4tg/kinetograph",
+    "tool:abubakrchan/product-launch-motion",
     "tool:ahujasid/mcp-for-blender",
     "tool:aoike123/blender-vse",
     "tool:bbc/ttml-validator",
     "tool:breakthrough/pyscenedetect",
     "tool:browser-use/video-use",
     "tool:connerkward/screenstudio-alternative-skill",
+    "tool:cth9191/animate",
     "tool:digitalsamba/claude-code-video-toolkit",
     "tool:dmtrkovalenko/fframes",
     "tool:dojocodinglabs/remotion-superpowers",
@@ -1074,6 +1100,7 @@
     "tool:haidrrrry/claude-remotion-skill",
     "tool:heygen-com/hyperframes",
     "tool:hkuds/vimax",
+    "tool:howseen-ai/claude-motion-design",
     "tool:iart-ai/motion-skills",
     "tool:jordanrendric/claude-video-vision",
     "tool:kajisho5/ffmpeg-skill",
@@ -1089,9 +1116,10 @@
     "tool:showlab/code2video",
     "tool:triggerdotdev/trigger.dev",
     "tool:vincentwei1021/video-shotcraft",
+    "tool:whaleyxbt/claude-motion",
     "tool:windmill-labs/windmill"
    ],
-   "count": 46
+   "count": 50
   },
   {
    "id": "concept:scheduling-and-runtimes",
@@ -1207,12 +1235,14 @@
     "source:cloud.wikis.utexas.edu/wiki/spaces/rtf318/pages/80022510",
     "source:fountain.io/syntax",
     "source:support.google.com/youtube/answer/9314415",
+    "tool:charlie947/motion-graphics-skills",
+    "tool:cth9191/animate",
     "tool:hkuds/vimax",
     "tool:mattypark/motion-graphics-skill",
     "tool:seme-org/open-director",
     "tool:vincentwei1021/video-shotcraft"
    ],
-   "count": 13
+   "count": 15
   },
   {
    "id": "concept:visual-design",
@@ -1239,11 +1269,14 @@
     "source:facebook.com/business/ads-guide/update/video/instagram-reels",
     "source:w3.org/tr/wcag22",
     "tool:anthropics/skills",
+    "tool:barty-bart/motion-graphics",
+    "tool:charlie947/motion-graphics-skills",
+    "tool:cth9191/animate",
     "tool:digitalsamba/claude-code-video-toolkit",
     "tool:openmontageinc/openmontage",
     "tool:remotion-dev/skills"
    ],
-   "count": 7
+   "count": 10
   }
  ]
 }

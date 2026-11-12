@@ -1,6 +1,6 @@
 # Agentic Media Lab
 
-> Which skill, renderer and model to use when a coding agent makes your video - with runs you can repeat. Records: 185 (81 tool, 29 model, 75 source, 0 recipe). Concepts: 35. Pages: 11. Size: about 197911 tokens (estimate, characters / 4).
+> Which skill, renderer and model to use when a coding agent makes your video - with runs you can repeat. Records: 194 (90 tool, 29 model, 75 source, 0 recipe). Concepts: 35. Pages: 11. Size: about 208776 tokens (estimate, characters / 4).
 
 ## Entry points
 
@@ -29,6 +29,6 @@
 
 ## Records by kind
 
-- [tool records](https://tp9imka.github.io/agentic-media-lab/catalog/tool/llms.txt): 81 cards, one line each
+- [tool records](https://tp9imka.github.io/agentic-media-lab/catalog/tool/llms.txt): 90 cards, one line each
 - [model records](https://tp9imka.github.io/agentic-media-lab/catalog/model/llms.txt): 29 cards, one line each
 - [source records](https://tp9imka.github.io/agentic-media-lab/catalog/source/llms.txt): 75 cards, one line each

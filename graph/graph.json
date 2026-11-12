@@ -1404,6 +1404,19 @@
    ]
   },
   {
+   "id": "tool:199-biotechnologies/motion-dev-animations-skill",
+   "kind": "tool",
+   "label": "motion-dev-animations skill",
+   "path": "catalog/tool/199-biotechnologies__motion-dev-animations-skill.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:motion-and-transitions",
+    "concept:agent-skills"
+   ]
+  },
+  {
    "id": "tool:3b1b/manim",
    "kind": "tool",
    "label": "ManimGL (3b1b/manim)",
@@ -1414,6 +1427,21 @@
    "concepts": [
     "concept:code-driven-video",
     "concept:motion-and-transitions"
+   ]
+  },
+  {
+   "id": "tool:abubakrchan/product-launch-motion",
+   "kind": "tool",
+   "label": "product-launch-motion",
+   "path": "catalog/tool/abubakrchan__product-launch-motion.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:agent-skills",
+    "concept:motion-and-transitions",
+    "concept:review-loop"
    ]
   },
   {
@@ -1473,6 +1501,21 @@
     "concept:mcp-servers",
     "concept:agent-skills",
     "concept:review-loop"
+   ]
+  },
+  {
+   "id": "tool:barty-bart/motion-graphics",
+   "kind": "tool",
+   "label": "motion-graphics (Bart)",
+   "path": "catalog/tool/barty-bart__motion-graphics.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:audio-and-captions",
+    "concept:agent-skills",
+    "concept:visual-design"
    ]
   },
   {
@@ -1575,6 +1618,21 @@
    ]
   },
   {
+   "id": "tool:charlie947/motion-graphics-skills",
+   "kind": "tool",
+   "label": "motion-graphics-skills (Charlie Hills)",
+   "path": "catalog/tool/charlie947__motion-graphics-skills.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:visual-design",
+    "concept:consistency",
+    "concept:agent-skills",
+    "concept:story-and-decomposition"
+   ]
+  },
+  {
    "id": "tool:chatcut-inc/agent-plugin",
    "kind": "tool",
    "label": "ChatCut agent plugin",
@@ -1632,6 +1690,21 @@
     "concept:audio-and-captions",
     "concept:agent-skills",
     "concept:agent-portability"
+   ]
+  },
+  {
+   "id": "tool:cth9191/animate",
+   "kind": "tool",
+   "label": "Animate (cth9191)",
+   "path": "catalog/tool/cth9191__animate.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:story-and-decomposition",
+    "concept:code-driven-video",
+    "concept:review-loop",
+    "concept:visual-design"
    ]
   },
   {
@@ -1847,6 +1920,20 @@
    ]
   },
   {
+   "id": "tool:greensock/gsap-skills",
+   "kind": "tool",
+   "label": "GSAP Agent Skills",
+   "path": "catalog/tool/greensock__gsap-skills.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:motion-and-transitions",
+    "concept:agent-skills",
+    "concept:code-driven-video"
+   ]
+  },
+  {
    "id": "tool:griffinwooldridge/talking-head-editor",
    "kind": "tool",
    "label": "talking-head-editor",
@@ -1935,6 +2022,21 @@
     "concept:consistency",
     "concept:review-loop",
     "concept:generated-footage"
+   ]
+  },
+  {
+   "id": "tool:howseen-ai/claude-motion-design",
+   "kind": "tool",
+   "label": "claude-motion-design (Howseen)",
+   "path": "catalog/tool/howseen-ai__claude-motion-design.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:review-loop",
+    "concept:audio-and-captions",
+    "concept:code-driven-video",
+    "concept:agent-skills"
    ]
   },
   {
@@ -2204,6 +2306,21 @@
     "concept:orchestration",
     "concept:review-loop",
     "concept:licences-and-territory"
+   ]
+  },
+  {
+   "id": "tool:nateherkai/herk-edit-kit",
+   "kind": "tool",
+   "label": "Herk Edit Kit",
+   "path": "catalog/tool/nateherkai__herk-edit-kit.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:agent-skills",
+    "concept:audio-and-captions",
+    "concept:code-driven-video"
    ]
   },
   {
@@ -2507,6 +2624,21 @@
     "concept:agent-skills",
     "concept:story-and-decomposition",
     "concept:agent-portability"
+   ]
+  },
+  {
+   "id": "tool:whaleyxbt/claude-motion",
+   "kind": "tool",
+   "label": "claude-motion",
+   "path": "catalog/tool/whaleyxbt__claude-motion.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:audio-and-captions",
+    "concept:review-loop",
+    "concept:motion-and-transitions",
+    "concept:agent-skills"
    ]
   },
   {
@@ -4620,6 +4752,21 @@
    "rel": "alternative_to"
   },
   {
+   "source": "tool:199-biotechnologies/motion-dev-animations-skill",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:199-biotechnologies/motion-dev-animations-skill",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:199-biotechnologies/motion-dev-animations-skill",
+   "target": "tool:greensock/gsap-skills",
+   "rel": "alternative_to"
+  },
+  {
    "source": "tool:3b1b/manim",
    "target": "concept:code-driven-video",
    "rel": "about"
@@ -4633,6 +4780,31 @@
    "source": "tool:3b1b/manim",
    "target": "tool:manimcommunity/manim",
    "rel": "alternative_to"
+  },
+  {
+   "source": "tool:abubakrchan/product-launch-motion",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:abubakrchan/product-launch-motion",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:abubakrchan/product-launch-motion",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:abubakrchan/product-launch-motion",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:abubakrchan/product-launch-motion",
+   "target": "tool:heygen-com/hyperframes",
+   "rel": "integrates_with"
   },
   {
    "source": "tool:activepieces/activepieces",
@@ -4723,6 +4895,26 @@
    "source": "tool:aoike123/blender-vse",
    "target": "tool:ahujasid/mcp-for-blender",
    "rel": "alternative_to"
+  },
+  {
+   "source": "tool:barty-bart/motion-graphics",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:barty-bart/motion-graphics",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:barty-bart/motion-graphics",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:barty-bart/motion-graphics",
+   "target": "concept:visual-design",
+   "rel": "about"
   },
   {
    "source": "tool:bbc/ttml-validator",
@@ -4885,6 +5077,31 @@
    "rel": "integrates_with"
   },
   {
+   "source": "tool:charlie947/motion-graphics-skills",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:charlie947/motion-graphics-skills",
+   "target": "concept:consistency",
+   "rel": "about"
+  },
+  {
+   "source": "tool:charlie947/motion-graphics-skills",
+   "target": "concept:story-and-decomposition",
+   "rel": "about"
+  },
+  {
+   "source": "tool:charlie947/motion-graphics-skills",
+   "target": "concept:visual-design",
+   "rel": "about"
+  },
+  {
+   "source": "tool:charlie947/motion-graphics-skills",
+   "target": "tool:heygen-com/hyperframes",
+   "rel": "depends_on"
+  },
+  {
    "source": "tool:chatcut-inc/agent-plugin",
    "target": "concept:cost",
    "rel": "about"
@@ -4982,6 +5199,26 @@
   {
    "source": "tool:coreyhaines31/marketingskills",
    "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:cth9191/animate",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:cth9191/animate",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:cth9191/animate",
+   "target": "concept:story-and-decomposition",
+   "rel": "about"
+  },
+  {
+   "source": "tool:cth9191/animate",
+   "target": "concept:visual-design",
    "rel": "about"
   },
   {
@@ -5350,6 +5587,31 @@
    "rel": "integrates_with"
   },
   {
+   "source": "tool:greensock/gsap-skills",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:greensock/gsap-skills",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:greensock/gsap-skills",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:greensock/gsap-skills",
+   "target": "tool:abubakrchan/product-launch-motion",
+   "rel": "contradicts"
+  },
+  {
+   "source": "tool:greensock/gsap-skills",
+   "target": "tool:greensock/gsap",
+   "rel": "extends"
+  },
+  {
    "source": "tool:griffinwooldridge/talking-head-editor",
    "target": "concept:agent-skills",
    "rel": "about"
@@ -5503,6 +5765,26 @@
    "source": "tool:hkuds/vimax",
    "target": "source:arxiv.org/abs/2503.07314",
    "rel": "alternative_to"
+  },
+  {
+   "source": "tool:howseen-ai/claude-motion-design",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:howseen-ai/claude-motion-design",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:howseen-ai/claude-motion-design",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:howseen-ai/claude-motion-design",
+   "target": "concept:review-loop",
+   "rel": "about"
   },
   {
    "source": "tool:iart-ai/motion-skills",
@@ -5938,6 +6220,31 @@
    "source": "tool:n8n-io/n8n",
    "target": "tool:windmill-labs/windmill",
    "rel": "alternative_to"
+  },
+  {
+   "source": "tool:nateherkai/herk-edit-kit",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:nateherkai/herk-edit-kit",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:nateherkai/herk-edit-kit",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:nateherkai/herk-edit-kit",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:nateherkai/herk-edit-kit",
+   "target": "tool:heygen-com/hyperframes",
+   "rel": "depends_on"
   },
   {
    "source": "tool:netflix/vmaf",
@@ -6438,6 +6745,36 @@
    "source": "tool:vincentwei1021/video-shotcraft",
    "target": "concept:story-and-decomposition",
    "rel": "about"
+  },
+  {
+   "source": "tool:whaleyxbt/claude-motion",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:whaleyxbt/claude-motion",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:whaleyxbt/claude-motion",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:whaleyxbt/claude-motion",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:whaleyxbt/claude-motion",
+   "target": "tool:barty-bart/motion-graphics",
+   "rel": "contradicts"
+  },
+  {
+   "source": "tool:whaleyxbt/claude-motion",
+   "target": "tool:remotion-dev/remotion",
+   "rel": "depends_on"
   },
   {
    "source": "tool:windmill-labs/windmill",

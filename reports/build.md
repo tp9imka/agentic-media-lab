@@ -4,13 +4,13 @@ Built 2026-11-12 by `tools/build.py`.
 
 ## Counts
 
-- tool: 81
+- tool: 90
 - model: 29
 - source: 75
 - recipe: 0
 - concepts: 35
-- primary-read share: 0.978
-- Hub size: 791647 characters, about 197911 tokens (estimate, characters / 4).
+- primary-read share: 0.979
+- Hub size: 835107 characters, about 208776 tokens (estimate, characters / 4).
 
 ## Validation
 
