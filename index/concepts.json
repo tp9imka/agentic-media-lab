@@ -20,10 +20,17 @@
    ],
    "related": [],
    "record_ids": [
+    "tool:calesthio/generative-media-skills",
+    "tool:coreyhaines31/marketingskills",
+    "tool:dojocodinglabs/remotion-superpowers",
+    "tool:kajisho5/ffmpeg-skill",
+    "tool:lottiefiles/motion-design-skill",
+    "tool:mattypark/motion-graphics-skill",
+    "tool:nexu-io/html-video",
     "tool:remotion-dev/skills",
     "tool:vincentwei1021/video-shotcraft"
    ],
-   "count": 2
+   "count": 9
   },
   {
    "id": "concept:agent-skills",
@@ -45,13 +52,19 @@
    "record_ids": [
     "source:remotion.dev/docs/ai/mcp",
     "tool:browser-use/video-use",
+    "tool:calesthio/generative-media-skills",
+    "tool:coreyhaines31/marketingskills",
     "tool:digitalsamba/claude-code-video-toolkit",
+    "tool:dmtrkovalenko/fframes",
     "tool:haidrrrry/claude-remotion-skill",
     "tool:heygen-com/hyperframes",
+    "tool:iart-ai/motion-skills",
+    "tool:lottiefiles/motion-design-skill",
+    "tool:mattypark/motion-graphics-skill",
     "tool:remotion-dev/skills",
     "tool:vincentwei1021/video-shotcraft"
    ],
-   "count": 7
+   "count": 13
   },
   {
    "id": "concept:agent-surface",
@@ -81,8 +94,11 @@
     "concept:pipelines"
    ],
    "related": [],
-   "record_ids": [],
-   "count": 0
+   "record_ids": [
+    "tool:nexu-io/html-video",
+    "tool:openmontageinc/openmontage"
+   ],
+   "count": 2
   },
   {
    "id": "concept:audio-and-captions",
@@ -108,9 +124,19 @@
    ],
    "related": [],
    "record_ids": [
-    "tool:browser-use/video-use"
+    "tool:browser-use/video-use",
+    "tool:calesthio/generative-media-skills",
+    "tool:coreyhaines31/marketingskills",
+    "tool:dojocodinglabs/remotion-superpowers",
+    "tool:ffmpeg/ffmpeg",
+    "tool:josiahsiegel/claude-plugin-marketplace",
+    "tool:midrender/revideo",
+    "tool:mifi/editly",
+    "tool:mort1d/motion-graphics-skills",
+    "tool:motion-canvas/motion-canvas",
+    "tool:openmontageinc/openmontage"
    ],
-   "count": 1
+   "count": 11
   },
   {
    "id": "concept:automation",
@@ -144,11 +170,29 @@
    ],
    "related": [],
    "record_ids": [
+    "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
+    "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+    "tool:0xs4n4tg/kinetograph",
+    "tool:3b1b/manim",
+    "tool:ahujasid/mcp-for-blender",
+    "tool:dmtrkovalenko/fframes",
+    "tool:ffmpeg/ffmpeg",
+    "tool:flchntc/smooth-animation-skill",
+    "tool:greensock/gsap",
     "tool:haidrrrry/claude-remotion-skill",
     "tool:heygen-com/hyperframes",
-    "tool:remotion-dev/skills"
+    "tool:manimcommunity/manim",
+    "tool:mattypark/motion-graphics-skill",
+    "tool:midrender/revideo",
+    "tool:mifi/editly",
+    "tool:mort1d/motion-graphics-skills",
+    "tool:motion-canvas/motion-canvas",
+    "tool:nexu-io/html-video",
+    "tool:remotion-dev/remotion",
+    "tool:remotion-dev/skills",
+    "tool:zulko/moviepy"
    ],
-   "count": 3
+   "count": 21
   },
   {
    "id": "concept:consistency",
@@ -168,9 +212,12 @@
    ],
    "related": [],
    "record_ids": [
+    "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
+    "tool:0xs4n4tg/kinetograph",
+    "tool:calesthio/generative-media-skills",
     "tool:digitalsamba/claude-code-video-toolkit"
    ],
-   "count": 1
+   "count": 4
   },
   {
    "id": "concept:cost",
@@ -225,8 +272,13 @@
     "concept:craft"
    ],
    "related": [],
-   "record_ids": [],
-   "count": 0
+   "record_ids": [
+    "tool:calesthio/generative-media-skills",
+    "tool:ffmpeg/ffmpeg",
+    "tool:kajisho5/ffmpeg-skill",
+    "tool:mort1d/motion-graphics-skills"
+   ],
+   "count": 4
   },
   {
    "id": "concept:evaluation",
@@ -247,8 +299,10 @@
     "concept:pipelines"
    ],
    "related": [],
-   "record_ids": [],
-   "count": 0
+   "record_ids": [
+    "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion"
+   ],
+   "count": 1
   },
   {
    "id": "concept:feedback-loop",
@@ -288,9 +342,13 @@
    ],
    "related": [],
    "record_ids": [
-    "tool:browser-use/video-use"
+    "tool:browser-use/video-use",
+    "tool:coreyhaines31/marketingskills",
+    "tool:kajisho5/ffmpeg-skill",
+    "tool:mifi/editly",
+    "tool:zulko/moviepy"
    ],
-   "count": 1
+   "count": 5
   },
   {
    "id": "concept:generated-footage",
@@ -382,9 +440,12 @@
    ],
    "related": [],
    "record_ids": [
-    "model:minimaxai/minimax-h3"
+    "model:minimaxai/minimax-h3",
+    "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+    "tool:greensock/gsap",
+    "tool:remotion-dev/remotion"
    ],
-   "count": 1
+   "count": 4
   },
   {
    "id": "concept:local-video-models",
@@ -439,9 +500,11 @@
    ],
    "related": [],
    "record_ids": [
-    "source:remotion.dev/docs/ai/mcp"
+    "source:remotion.dev/docs/ai/mcp",
+    "tool:ahujasid/mcp-for-blender",
+    "tool:jordanrendric/claude-video-vision"
    ],
-   "count": 1
+   "count": 3
   },
   {
    "id": "concept:model-prompting",
@@ -496,10 +559,21 @@
    ],
    "related": [],
    "record_ids": [
+    "tool:3b1b/manim",
+    "tool:ffmpeg/ffmpeg",
+    "tool:flchntc/smooth-animation-skill",
+    "tool:greensock/gsap",
     "tool:haidrrrry/claude-remotion-skill",
-    "tool:heygen-com/hyperframes"
+    "tool:heygen-com/hyperframes",
+    "tool:iart-ai/motion-skills",
+    "tool:josiahsiegel/claude-plugin-marketplace",
+    "tool:lottiefiles/motion-design-skill",
+    "tool:manimcommunity/manim",
+    "tool:midrender/revideo",
+    "tool:motion-canvas/motion-canvas",
+    "tool:remotion-dev/remotion"
    ],
-   "count": 2
+   "count": 13
   },
   {
    "id": "concept:orchestration",
@@ -573,8 +647,12 @@
     "concept:agent-surface"
    ],
    "related": [],
-   "record_ids": [],
-   "count": 0
+   "record_ids": [
+    "tool:dojocodinglabs/remotion-superpowers",
+    "tool:jordanrendric/claude-video-vision",
+    "tool:josiahsiegel/claude-plugin-marketplace"
+   ],
+   "count": 3
   },
   {
    "id": "concept:popularity-and-trust",
@@ -595,8 +673,10 @@
     "concept:agent-surface"
    ],
    "related": [],
-   "record_ids": [],
-   "count": 0
+   "record_ids": [
+    "tool:ahujasid/mcp-for-blender"
+   ],
+   "count": 1
   },
   {
    "id": "concept:publishing",
@@ -641,13 +721,26 @@
    ],
    "related": [],
    "record_ids": [
+    "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
+    "tool:0xs4n4tg/kinetograph",
+    "tool:ahujasid/mcp-for-blender",
     "tool:browser-use/video-use",
     "tool:digitalsamba/claude-code-video-toolkit",
+    "tool:dmtrkovalenko/fframes",
+    "tool:dojocodinglabs/remotion-superpowers",
+    "tool:flchntc/smooth-animation-skill",
     "tool:haidrrrry/claude-remotion-skill",
     "tool:heygen-com/hyperframes",
+    "tool:iart-ai/motion-skills",
+    "tool:jordanrendric/claude-video-vision",
+    "tool:kajisho5/ffmpeg-skill",
+    "tool:manimcommunity/manim",
+    "tool:mort1d/motion-graphics-skills",
+    "tool:openmontageinc/openmontage",
+    "tool:remotion-dev/remotion",
     "tool:vincentwei1021/video-shotcraft"
    ],
-   "count": 5
+   "count": 18
   },
   {
    "id": "concept:scheduling-and-runtimes",
@@ -714,9 +807,10 @@
    ],
    "related": [],
    "record_ids": [
+    "tool:mattypark/motion-graphics-skill",
     "tool:vincentwei1021/video-shotcraft"
    ],
-   "count": 1
+   "count": 2
   },
   {
    "id": "concept:visual-design",
@@ -740,9 +834,10 @@
    "related": [],
    "record_ids": [
     "tool:digitalsamba/claude-code-video-toolkit",
+    "tool:openmontageinc/openmontage",
     "tool:remotion-dev/skills"
    ],
-   "count": 2
+   "count": 3
   }
  ]
 }

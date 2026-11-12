@@ -52,6 +52,34 @@
    ]
   },
   {
+   "id": "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
+   "kind": "source",
+   "label": "HyperFrames vs Remotion research note (GenMotion)",
+   "path": "catalog/source/github.com__haxzie__genmotion__blob__main__docs__research__hyperframes-remotion.md.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-secondary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:consistency",
+    "concept:review-loop"
+   ]
+  },
+  {
+   "id": "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+   "kind": "source",
+   "label": "HyperFrames vs Remotion (HeyGen guide)",
+   "path": "catalog/source/hyperframes.heygen.com__guides__hyperframes-vs-remotion.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-secondary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:licences-and-territory",
+    "concept:evaluation"
+   ]
+  },
+  {
    "id": "source:remotion.dev/docs/ai/mcp",
    "kind": "source",
    "label": "Remotion's Model Context Protocol (shut down)",
@@ -62,6 +90,48 @@
    "concepts": [
     "concept:mcp-servers",
     "concept:agent-skills"
+   ]
+  },
+  {
+   "id": "tool:0xs4n4tg/kinetograph",
+   "kind": "tool",
+   "label": "Kinetograph",
+   "path": "catalog/tool/0xs4n4tg__kinetograph.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:review-loop",
+    "concept:consistency"
+   ]
+  },
+  {
+   "id": "tool:3b1b/manim",
+   "kind": "tool",
+   "label": "ManimGL (3b1b/manim)",
+   "path": "catalog/tool/3b1b__manim.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:motion-and-transitions"
+   ]
+  },
+  {
+   "id": "tool:ahujasid/mcp-for-blender",
+   "kind": "tool",
+   "label": "MCP for Blender",
+   "path": "catalog/tool/ahujasid__mcp-for-blender.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:mcp-servers",
+    "concept:review-loop",
+    "concept:popularity-and-trust"
    ]
   },
   {
@@ -80,6 +150,37 @@
    ]
   },
   {
+   "id": "tool:calesthio/generative-media-skills",
+   "kind": "tool",
+   "label": "generative-media-skills",
+   "path": "catalog/tool/calesthio__generative-media-skills.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:audio-and-captions",
+    "concept:delivery",
+    "concept:consistency",
+    "concept:agent-skills",
+    "concept:agent-portability"
+   ]
+  },
+  {
+   "id": "tool:coreyhaines31/marketingskills",
+   "kind": "tool",
+   "label": "marketingskills (video, product-demo-recording)",
+   "path": "catalog/tool/coreyhaines31__marketingskills.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:audio-and-captions",
+    "concept:agent-skills",
+    "concept:agent-portability"
+   ]
+  },
+  {
    "id": "tool:digitalsamba/claude-code-video-toolkit",
    "kind": "tool",
    "label": "claude-code-video-toolkit",
@@ -92,6 +193,78 @@
     "concept:agent-skills",
     "concept:review-loop",
     "concept:consistency"
+   ]
+  },
+  {
+   "id": "tool:dmtrkovalenko/fframes",
+   "kind": "tool",
+   "label": "fframes",
+   "path": "catalog/tool/dmtrkovalenko__fframes.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-secondary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:agent-skills",
+    "concept:review-loop"
+   ]
+  },
+  {
+   "id": "tool:dojocodinglabs/remotion-superpowers",
+   "kind": "tool",
+   "label": "remotion-superpowers",
+   "path": "catalog/tool/dojocodinglabs__remotion-superpowers.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:review-loop",
+    "concept:audio-and-captions",
+    "concept:plugins",
+    "concept:agent-portability"
+   ]
+  },
+  {
+   "id": "tool:ffmpeg/ffmpeg",
+   "kind": "tool",
+   "label": "FFmpeg",
+   "path": "catalog/tool/ffmpeg__ffmpeg.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:delivery",
+    "concept:audio-and-captions",
+    "concept:motion-and-transitions"
+   ]
+  },
+  {
+   "id": "tool:flchntc/smooth-animation-skill",
+   "kind": "tool",
+   "label": "smooth-animation-skill",
+   "path": "catalog/tool/flchntc__smooth-animation-skill.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:motion-and-transitions",
+    "concept:review-loop",
+    "concept:code-driven-video"
+   ]
+  },
+  {
+   "id": "tool:greensock/gsap",
+   "kind": "tool",
+   "label": "GSAP",
+   "path": "catalog/tool/greensock__gsap.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:motion-and-transitions",
+    "concept:licences-and-territory",
+    "concept:code-driven-video"
    ]
   },
   {
@@ -125,6 +298,207 @@
    ]
   },
   {
+   "id": "tool:iart-ai/motion-skills",
+   "kind": "tool",
+   "label": "motion-skills (iArt)",
+   "path": "catalog/tool/iart-ai__motion-skills.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:review-loop",
+    "concept:agent-skills",
+    "concept:motion-and-transitions"
+   ]
+  },
+  {
+   "id": "tool:jordanrendric/claude-video-vision",
+   "kind": "tool",
+   "label": "claude-video-vision",
+   "path": "catalog/tool/jordanrendric__claude-video-vision.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:review-loop",
+    "concept:mcp-servers",
+    "concept:plugins"
+   ]
+  },
+  {
+   "id": "tool:josiahsiegel/claude-plugin-marketplace",
+   "kind": "tool",
+   "label": "claude-plugin-marketplace (ffmpeg-kinetic-captions)",
+   "path": "catalog/tool/josiahsiegel__claude-plugin-marketplace.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:audio-and-captions",
+    "concept:plugins",
+    "concept:motion-and-transitions"
+   ]
+  },
+  {
+   "id": "tool:kajisho5/ffmpeg-skill",
+   "kind": "tool",
+   "label": "ffmpeg-skill",
+   "path": "catalog/tool/kajisho5__ffmpeg-skill.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:delivery",
+    "concept:review-loop",
+    "concept:footage-editing",
+    "concept:agent-portability"
+   ]
+  },
+  {
+   "id": "tool:lottiefiles/motion-design-skill",
+   "kind": "tool",
+   "label": "motion-design skill (LottieFiles)",
+   "path": "catalog/tool/lottiefiles__motion-design-skill.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:motion-and-transitions",
+    "concept:agent-skills",
+    "concept:agent-portability"
+   ]
+  },
+  {
+   "id": "tool:manimcommunity/manim",
+   "kind": "tool",
+   "label": "Manim Community Edition",
+   "path": "catalog/tool/manimcommunity__manim.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:review-loop",
+    "concept:motion-and-transitions"
+   ]
+  },
+  {
+   "id": "tool:mattypark/motion-graphics-skill",
+   "kind": "tool",
+   "label": "motion-video-director (mattypark)",
+   "path": "catalog/tool/mattypark__motion-graphics-skill.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:story-and-decomposition",
+    "concept:agent-skills",
+    "concept:agent-portability"
+   ]
+  },
+  {
+   "id": "tool:midrender/revideo",
+   "kind": "tool",
+   "label": "Revideo",
+   "path": "catalog/tool/midrender__revideo.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:motion-and-transitions",
+    "concept:audio-and-captions"
+   ]
+  },
+  {
+   "id": "tool:mifi/editly",
+   "kind": "tool",
+   "label": "editly",
+   "path": "catalog/tool/mifi__editly.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:footage-editing",
+    "concept:audio-and-captions"
+   ]
+  },
+  {
+   "id": "tool:mort1d/motion-graphics-skills",
+   "kind": "tool",
+   "label": "motion-graphics (Mort1d)",
+   "path": "catalog/tool/mort1d__motion-graphics-skills.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:review-loop",
+    "concept:delivery",
+    "concept:audio-and-captions"
+   ]
+  },
+  {
+   "id": "tool:motion-canvas/motion-canvas",
+   "kind": "tool",
+   "label": "Motion Canvas",
+   "path": "catalog/tool/motion-canvas__motion-canvas.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:motion-and-transitions",
+    "concept:audio-and-captions"
+   ]
+  },
+  {
+   "id": "tool:nexu-io/html-video",
+   "kind": "tool",
+   "label": "html-video",
+   "path": "catalog/tool/nexu-io__html-video.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:agent-portability",
+    "concept:agentic-pipelines"
+   ]
+  },
+  {
+   "id": "tool:openmontageinc/openmontage",
+   "kind": "tool",
+   "label": "OpenMontage",
+   "path": "catalog/tool/openmontageinc__openmontage.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:review-loop",
+    "concept:agentic-pipelines",
+    "concept:visual-design",
+    "concept:audio-and-captions"
+   ]
+  },
+  {
+   "id": "tool:remotion-dev/remotion",
+   "kind": "tool",
+   "label": "Remotion",
+   "path": "catalog/tool/remotion-dev__remotion.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:code-driven-video",
+    "concept:licences-and-territory",
+    "concept:review-loop",
+    "concept:motion-and-transitions"
+   ]
+  },
+  {
    "id": "tool:remotion-dev/skills",
    "kind": "tool",
    "label": "Remotion Agent Skills",
@@ -152,6 +526,19 @@
     "concept:agent-skills",
     "concept:story-and-decomposition",
     "concept:agent-portability"
+   ]
+  },
+  {
+   "id": "tool:zulko/moviepy",
+   "kind": "tool",
+   "label": "MoviePy",
+   "path": "catalog/tool/zulko__moviepy.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:code-driven-video"
    ]
   },
   {
@@ -407,6 +794,61 @@
    "rel": "about"
   },
   {
+   "source": "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
+   "target": "concept:consistency",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
+   "target": "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
+   "target": "tool:heygen-com/hyperframes",
+   "rel": "evaluated_on"
+  },
+  {
+   "source": "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
+   "target": "tool:remotion-dev/remotion",
+   "rel": "evaluated_on"
+  },
+  {
+   "source": "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+   "target": "concept:evaluation",
+   "rel": "about"
+  },
+  {
+   "source": "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+   "target": "concept:licences-and-territory",
+   "rel": "about"
+  },
+  {
+   "source": "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+   "target": "tool:heygen-com/hyperframes",
+   "rel": "evaluated_on"
+  },
+  {
+   "source": "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+   "target": "tool:remotion-dev/remotion",
+   "rel": "evaluated_on"
+  },
+  {
    "source": "source:remotion.dev/docs/ai/mcp",
    "target": "concept:agent-skills",
    "rel": "about"
@@ -414,6 +856,66 @@
   {
    "source": "source:remotion.dev/docs/ai/mcp",
    "target": "concept:mcp-servers",
+   "rel": "about"
+  },
+  {
+   "source": "tool:0xs4n4tg/kinetograph",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:0xs4n4tg/kinetograph",
+   "target": "concept:consistency",
+   "rel": "about"
+  },
+  {
+   "source": "tool:0xs4n4tg/kinetograph",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:0xs4n4tg/kinetograph",
+   "target": "tool:heygen-com/hyperframes",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:0xs4n4tg/kinetograph",
+   "target": "tool:remotion-dev/remotion",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:3b1b/manim",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:3b1b/manim",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:3b1b/manim",
+   "target": "tool:manimcommunity/manim",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:ahujasid/mcp-for-blender",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:ahujasid/mcp-for-blender",
+   "target": "concept:mcp-servers",
+   "rel": "about"
+  },
+  {
+   "source": "tool:ahujasid/mcp-for-blender",
+   "target": "concept:popularity-and-trust",
+   "rel": "about"
+  },
+  {
+   "source": "tool:ahujasid/mcp-for-blender",
+   "target": "concept:review-loop",
    "rel": "about"
   },
   {
@@ -437,6 +939,56 @@
    "rel": "about"
   },
   {
+   "source": "tool:calesthio/generative-media-skills",
+   "target": "concept:agent-portability",
+   "rel": "about"
+  },
+  {
+   "source": "tool:calesthio/generative-media-skills",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:calesthio/generative-media-skills",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:calesthio/generative-media-skills",
+   "target": "concept:consistency",
+   "rel": "about"
+  },
+  {
+   "source": "tool:calesthio/generative-media-skills",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "tool:calesthio/generative-media-skills",
+   "target": "tool:openmontageinc/openmontage",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:coreyhaines31/marketingskills",
+   "target": "concept:agent-portability",
+   "rel": "about"
+  },
+  {
+   "source": "tool:coreyhaines31/marketingskills",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:coreyhaines31/marketingskills",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:coreyhaines31/marketingskills",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
    "source": "tool:digitalsamba/claude-code-video-toolkit",
    "target": "concept:agent-skills",
    "rel": "about"
@@ -455,6 +1007,126 @@
    "source": "tool:digitalsamba/claude-code-video-toolkit",
    "target": "concept:visual-design",
    "rel": "about"
+  },
+  {
+   "source": "tool:dmtrkovalenko/fframes",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:dmtrkovalenko/fframes",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:dmtrkovalenko/fframes",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:dmtrkovalenko/fframes",
+   "target": "tool:remotion-dev/remotion",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:dojocodinglabs/remotion-superpowers",
+   "target": "concept:agent-portability",
+   "rel": "about"
+  },
+  {
+   "source": "tool:dojocodinglabs/remotion-superpowers",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:dojocodinglabs/remotion-superpowers",
+   "target": "concept:plugins",
+   "rel": "about"
+  },
+  {
+   "source": "tool:dojocodinglabs/remotion-superpowers",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:dojocodinglabs/remotion-superpowers",
+   "target": "tool:josiahsiegel/claude-plugin-marketplace",
+   "rel": "contradicts"
+  },
+  {
+   "source": "tool:dojocodinglabs/remotion-superpowers",
+   "target": "tool:remotion-dev/skills",
+   "rel": "extends"
+  },
+  {
+   "source": "tool:ffmpeg/ffmpeg",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:ffmpeg/ffmpeg",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:ffmpeg/ffmpeg",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "tool:ffmpeg/ffmpeg",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:ffmpeg/ffmpeg",
+   "target": "tool:mifi/editly",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:ffmpeg/ffmpeg",
+   "target": "tool:zulko/moviepy",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:flchntc/smooth-animation-skill",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:flchntc/smooth-animation-skill",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:flchntc/smooth-animation-skill",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:flchntc/smooth-animation-skill",
+   "target": "tool:heygen-com/hyperframes",
+   "rel": "extends"
+  },
+  {
+   "source": "tool:greensock/gsap",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:greensock/gsap",
+   "target": "concept:licences-and-territory",
+   "rel": "about"
+  },
+  {
+   "source": "tool:greensock/gsap",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:greensock/gsap",
+   "target": "tool:heygen-com/hyperframes",
+   "rel": "integrates_with"
   },
   {
    "source": "tool:haidrrrry/claude-remotion-skill",
@@ -512,6 +1184,321 @@
    "rel": "alternative_to"
   },
   {
+   "source": "tool:iart-ai/motion-skills",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:iart-ai/motion-skills",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:iart-ai/motion-skills",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:jordanrendric/claude-video-vision",
+   "target": "concept:mcp-servers",
+   "rel": "about"
+  },
+  {
+   "source": "tool:jordanrendric/claude-video-vision",
+   "target": "concept:plugins",
+   "rel": "about"
+  },
+  {
+   "source": "tool:jordanrendric/claude-video-vision",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:josiahsiegel/claude-plugin-marketplace",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:josiahsiegel/claude-plugin-marketplace",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:josiahsiegel/claude-plugin-marketplace",
+   "target": "concept:plugins",
+   "rel": "about"
+  },
+  {
+   "source": "tool:josiahsiegel/claude-plugin-marketplace",
+   "target": "tool:dojocodinglabs/remotion-superpowers",
+   "rel": "contradicts"
+  },
+  {
+   "source": "tool:josiahsiegel/claude-plugin-marketplace",
+   "target": "tool:openmontageinc/openmontage",
+   "rel": "contradicts"
+  },
+  {
+   "source": "tool:kajisho5/ffmpeg-skill",
+   "target": "concept:agent-portability",
+   "rel": "about"
+  },
+  {
+   "source": "tool:kajisho5/ffmpeg-skill",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "tool:kajisho5/ffmpeg-skill",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:kajisho5/ffmpeg-skill",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:kajisho5/ffmpeg-skill",
+   "target": "tool:browser-use/video-use",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:lottiefiles/motion-design-skill",
+   "target": "concept:agent-portability",
+   "rel": "about"
+  },
+  {
+   "source": "tool:lottiefiles/motion-design-skill",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:lottiefiles/motion-design-skill",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:lottiefiles/motion-design-skill",
+   "target": "tool:haidrrrry/claude-remotion-skill",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:manimcommunity/manim",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:manimcommunity/manim",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:manimcommunity/manim",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:manimcommunity/manim",
+   "target": "tool:3b1b/manim",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:mattypark/motion-graphics-skill",
+   "target": "concept:agent-portability",
+   "rel": "about"
+  },
+  {
+   "source": "tool:mattypark/motion-graphics-skill",
+   "target": "concept:agent-skills",
+   "rel": "about"
+  },
+  {
+   "source": "tool:mattypark/motion-graphics-skill",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:mattypark/motion-graphics-skill",
+   "target": "concept:story-and-decomposition",
+   "rel": "about"
+  },
+  {
+   "source": "tool:midrender/revideo",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:midrender/revideo",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:midrender/revideo",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:midrender/revideo",
+   "target": "tool:motion-canvas/motion-canvas",
+   "rel": "extends"
+  },
+  {
+   "source": "tool:mifi/editly",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:mifi/editly",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:mifi/editly",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:mifi/editly",
+   "target": "tool:ffmpeg/ffmpeg",
+   "rel": "depends_on"
+  },
+  {
+   "source": "tool:mort1d/motion-graphics-skills",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:mort1d/motion-graphics-skills",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:mort1d/motion-graphics-skills",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "tool:mort1d/motion-graphics-skills",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:mort1d/motion-graphics-skills",
+   "target": "tool:mattypark/motion-graphics-skill",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:motion-canvas/motion-canvas",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:motion-canvas/motion-canvas",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:motion-canvas/motion-canvas",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:motion-canvas/motion-canvas",
+   "target": "tool:midrender/revideo",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:nexu-io/html-video",
+   "target": "concept:agent-portability",
+   "rel": "about"
+  },
+  {
+   "source": "tool:nexu-io/html-video",
+   "target": "concept:agentic-pipelines",
+   "rel": "about"
+  },
+  {
+   "source": "tool:nexu-io/html-video",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:nexu-io/html-video",
+   "target": "tool:heygen-com/hyperframes",
+   "rel": "depends_on"
+  },
+  {
+   "source": "tool:nexu-io/html-video",
+   "target": "tool:remotion-dev/remotion",
+   "rel": "contradicts"
+  },
+  {
+   "source": "tool:openmontageinc/openmontage",
+   "target": "concept:agentic-pipelines",
+   "rel": "about"
+  },
+  {
+   "source": "tool:openmontageinc/openmontage",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:openmontageinc/openmontage",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:openmontageinc/openmontage",
+   "target": "concept:visual-design",
+   "rel": "about"
+  },
+  {
+   "source": "tool:openmontageinc/openmontage",
+   "target": "tool:digitalsamba/claude-code-video-toolkit",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:openmontageinc/openmontage",
+   "target": "tool:josiahsiegel/claude-plugin-marketplace",
+   "rel": "contradicts"
+  },
+  {
+   "source": "tool:remotion-dev/remotion",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:remotion-dev/remotion",
+   "target": "concept:licences-and-territory",
+   "rel": "about"
+  },
+  {
+   "source": "tool:remotion-dev/remotion",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:remotion-dev/remotion",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:remotion-dev/remotion",
+   "target": "tool:0xs4n4tg/kinetograph",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:remotion-dev/remotion",
+   "target": "tool:heygen-com/hyperframes",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:remotion-dev/remotion",
+   "target": "tool:remotion-dev/skills",
+   "rel": "integrates_with"
+  },
+  {
    "source": "tool:remotion-dev/skills",
    "target": "concept:agent-portability",
    "rel": "about"
@@ -560,6 +1547,21 @@
    "source": "tool:vincentwei1021/video-shotcraft",
    "target": "concept:story-and-decomposition",
    "rel": "about"
+  },
+  {
+   "source": "tool:zulko/moviepy",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:zulko/moviepy",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:zulko/moviepy",
+   "target": "tool:ffmpeg/ffmpeg",
+   "rel": "depends_on"
   }
  ]
 }

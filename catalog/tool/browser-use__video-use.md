@@ -70,7 +70,7 @@ None.
 
 ## Referenced by
 
-None.
+- [ffmpeg-skill](kajisho5__ffmpeg-skill.md) (alternative_to)
 
 ## Status
 

@@ -6,9 +6,9 @@ Saved sources live outside the public repo, so this report is written by a maint
 
 ## Counts
 
-- claims: 16
+- claims: 94
 - missing-fields: 0
-- quote-found: 16
+- quote-found: 94
 - quote-not-found: 0
 - quote-unchecked: 0
 

@@ -76,7 +76,14 @@ Collected by `tools/enrich.py`, not typed by hand.
 
 ## Referenced by
 
+- [HyperFrames vs Remotion research note (GenMotion)](../source/github.com__haxzie__genmotion__blob__main__docs__research__hyperframes-remotion.md.md) (evaluated_on)
+- [HyperFrames vs Remotion (HeyGen guide)](../source/hyperframes.heygen.com__guides__hyperframes-vs-remotion.md) (evaluated_on)
+- [Kinetograph](0xs4n4tg__kinetograph.md) (alternative_to)
+- [smooth-animation-skill](flchntc__smooth-animation-skill.md) (extends)
+- [GSAP](greensock__gsap.md) (integrates_with)
 - [claude-remotion-skill](haidrrrry__claude-remotion-skill.md) (contradicts)
+- [html-video](nexu-io__html-video.md) (depends_on)
+- [Remotion](remotion-dev__remotion.md) (alternative_to)
 - [Remotion Agent Skills](remotion-dev__skills.md) (alternative_to)
 
 ## Status

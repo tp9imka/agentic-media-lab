@@ -78,8 +78,10 @@ Collected by `tools/enrich.py`, not typed by hand.
 
 ## Referenced by
 
+- [remotion-superpowers](dojocodinglabs__remotion-superpowers.md) (extends)
 - [claude-remotion-skill](haidrrrry__claude-remotion-skill.md) (extends)
 - [HyperFrames](heygen-com__hyperframes.md) (alternative_to)
+- [Remotion](remotion-dev__remotion.md) (integrates_with)
 
 ## Status
 

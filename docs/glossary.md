@@ -59,7 +59,7 @@ Scope: Whether a skill or tool works outside the agent it was written for.
 
 Broader: [Agent surface](glossary.md#agent-surface)
 
-Records (2): [Remotion Agent Skills](../catalog/tool/remotion-dev__skills.md), [video-shotcraft](../catalog/tool/vincentwei1021__video-shotcraft.md)
+Records (9): [generative-media-skills](../catalog/tool/calesthio__generative-media-skills.md), [marketingskills (video, product-demo-recording)](../catalog/tool/coreyhaines31__marketingskills.md), [remotion-superpowers](../catalog/tool/dojocodinglabs__remotion-superpowers.md), [ffmpeg-skill](../catalog/tool/kajisho5__ffmpeg-skill.md), [motion-design skill (LottieFiles)](../catalog/tool/lottiefiles__motion-design-skill.md), [motion-video-director (mattypark)](../catalog/tool/mattypark__motion-graphics-skill.md), [html-video](../catalog/tool/nexu-io__html-video.md), [Remotion Agent Skills](../catalog/tool/remotion-dev__skills.md), [video-shotcraft](../catalog/tool/vincentwei1021__video-shotcraft.md)
 
 ## <a id="agent-skills"></a>Agent Skills
 
@@ -71,7 +71,7 @@ Scope: Instruction packs in the Agent Skills format that an agent loads on deman
 
 Broader: [Agent surface](glossary.md#agent-surface)
 
-Records (7): [Remotion's Model Context Protocol (shut down)](../catalog/source/remotion.dev__docs__ai__mcp.md), [video-use](../catalog/tool/browser-use__video-use.md), [claude-code-video-toolkit](../catalog/tool/digitalsamba__claude-code-video-toolkit.md), [claude-remotion-skill](../catalog/tool/haidrrrry__claude-remotion-skill.md), [HyperFrames](../catalog/tool/heygen-com__hyperframes.md), [Remotion Agent Skills](../catalog/tool/remotion-dev__skills.md), [video-shotcraft](../catalog/tool/vincentwei1021__video-shotcraft.md)
+Records (13): [Remotion's Model Context Protocol (shut down)](../catalog/source/remotion.dev__docs__ai__mcp.md), [video-use](../catalog/tool/browser-use__video-use.md), [generative-media-skills](../catalog/tool/calesthio__generative-media-skills.md), [marketingskills (video, product-demo-recording)](../catalog/tool/coreyhaines31__marketingskills.md), [claude-code-video-toolkit](../catalog/tool/digitalsamba__claude-code-video-toolkit.md), [fframes](../catalog/tool/dmtrkovalenko__fframes.md), [claude-remotion-skill](../catalog/tool/haidrrrry__claude-remotion-skill.md), [HyperFrames](../catalog/tool/heygen-com__hyperframes.md), [motion-skills (iArt)](../catalog/tool/iart-ai__motion-skills.md), [motion-design skill (LottieFiles)](../catalog/tool/lottiefiles__motion-design-skill.md), and 3 more in the [catalog](../catalog/README.md)
 
 ## <a id="agent-surface"></a>Agent surface
 
@@ -91,7 +91,7 @@ Scope: Systems where agents plan, generate, check and assemble a multi-shot vide
 
 Broader: [Pipelines](glossary.md#pipelines)
 
-Records (0): none yet
+Records (2): [html-video](../catalog/tool/nexu-io__html-video.md), [OpenMontage](../catalog/tool/openmontageinc__openmontage.md)
 
 ## <a id="audio-and-captions"></a>Audio and captions
 
@@ -103,7 +103,7 @@ Scope: Narration, music, effects, their mix, and on-screen text timed to speech.
 
 Broader: [Craft](glossary.md#craft)
 
-Records (1): [video-use](../catalog/tool/browser-use__video-use.md)
+Records (11): [video-use](../catalog/tool/browser-use__video-use.md), [generative-media-skills](../catalog/tool/calesthio__generative-media-skills.md), [marketingskills (video, product-demo-recording)](../catalog/tool/coreyhaines31__marketingskills.md), [remotion-superpowers](../catalog/tool/dojocodinglabs__remotion-superpowers.md), [FFmpeg](../catalog/tool/ffmpeg__ffmpeg.md), [claude-plugin-marketplace (ffmpeg-kinetic-captions)](../catalog/tool/josiahsiegel__claude-plugin-marketplace.md), [Revideo](../catalog/tool/midrender__revideo.md), [editly](../catalog/tool/mifi__editly.md), [motion-graphics (Mort1d)](../catalog/tool/mort1d__motion-graphics-skills.md), [Motion Canvas](../catalog/tool/motion-canvas__motion-canvas.md), and 1 more in the [catalog](../catalog/README.md)
 
 ## <a id="automation"></a>Automation
 
@@ -123,7 +123,7 @@ Scope: Video rendered from code an agent writes: HTML, React, Python. Not footag
 
 Broader: [Making](glossary.md#making)
 
-Records (3): [claude-remotion-skill](../catalog/tool/haidrrrry__claude-remotion-skill.md), [HyperFrames](../catalog/tool/heygen-com__hyperframes.md), [Remotion Agent Skills](../catalog/tool/remotion-dev__skills.md)
+Records (21): [HyperFrames vs Remotion research note (GenMotion)](../catalog/source/github.com__haxzie__genmotion__blob__main__docs__research__hyperframes-remotion.md.md), [HyperFrames vs Remotion (HeyGen guide)](../catalog/source/hyperframes.heygen.com__guides__hyperframes-vs-remotion.md), [Kinetograph](../catalog/tool/0xs4n4tg__kinetograph.md), [ManimGL (3b1b/manim)](../catalog/tool/3b1b__manim.md), [MCP for Blender](../catalog/tool/ahujasid__mcp-for-blender.md), [fframes](../catalog/tool/dmtrkovalenko__fframes.md), [FFmpeg](../catalog/tool/ffmpeg__ffmpeg.md), [smooth-animation-skill](../catalog/tool/flchntc__smooth-animation-skill.md), [GSAP](../catalog/tool/greensock__gsap.md), [claude-remotion-skill](../catalog/tool/haidrrrry__claude-remotion-skill.md), and 11 more in the [catalog](../catalog/README.md)
 
 ## <a id="consistency"></a>Consistency
 
@@ -135,7 +135,7 @@ Scope: Keeping characters, style and world stable across shots and scenes.
 
 Broader: [Craft](glossary.md#craft)
 
-Records (1): [claude-code-video-toolkit](../catalog/tool/digitalsamba__claude-code-video-toolkit.md)
+Records (4): [HyperFrames vs Remotion research note (GenMotion)](../catalog/source/github.com__haxzie__genmotion__blob__main__docs__research__hyperframes-remotion.md.md), [Kinetograph](../catalog/tool/0xs4n4tg__kinetograph.md), [generative-media-skills](../catalog/tool/calesthio__generative-media-skills.md), [claude-code-video-toolkit](../catalog/tool/digitalsamba__claude-code-video-toolkit.md)
 
 ## <a id="cost"></a>Cost
 
@@ -167,7 +167,7 @@ Scope: Getting the finished file into the format a platform or client accepts.
 
 Broader: [Craft](glossary.md#craft)
 
-Records (0): none yet
+Records (4): [generative-media-skills](../catalog/tool/calesthio__generative-media-skills.md), [FFmpeg](../catalog/tool/ffmpeg__ffmpeg.md), [ffmpeg-skill](../catalog/tool/kajisho5__ffmpeg-skill.md), [motion-graphics (Mort1d)](../catalog/tool/mort1d__motion-graphics-skills.md)
 
 ## <a id="evaluation"></a>Evaluation
 
@@ -179,7 +179,7 @@ Scope: How video and image quality, and whole pipelines, are measured.
 
 Broader: [Pipelines](glossary.md#pipelines)
 
-Records (0): none yet
+Records (1): [HyperFrames vs Remotion (HeyGen guide)](../catalog/source/hyperframes.heygen.com__guides__hyperframes-vs-remotion.md)
 
 ## <a id="feedback-loop"></a>Feedback loop
 
@@ -203,7 +203,7 @@ Scope: Cutting, arranging and finishing footage that already exists.
 
 Broader: [Making](glossary.md#making)
 
-Records (1): [video-use](../catalog/tool/browser-use__video-use.md)
+Records (5): [video-use](../catalog/tool/browser-use__video-use.md), [marketingskills (video, product-demo-recording)](../catalog/tool/coreyhaines31__marketingskills.md), [ffmpeg-skill](../catalog/tool/kajisho5__ffmpeg-skill.md), [editly](../catalog/tool/mifi__editly.md), [MoviePy](../catalog/tool/zulko__moviepy.md)
 
 ## <a id="generated-footage"></a>Generated footage
 
@@ -251,7 +251,7 @@ Scope: What a model or renderer licence allows, for whom and where.
 
 Broader: [Models](glossary.md#models)
 
-Records (1): [MiniMax H3](../catalog/model/minimaxai__minimax-h3.md)
+Records (4): [MiniMax H3](../catalog/model/minimaxai__minimax-h3.md), [HyperFrames vs Remotion (HeyGen guide)](../catalog/source/hyperframes.heygen.com__guides__hyperframes-vs-remotion.md), [GSAP](../catalog/tool/greensock__gsap.md), [Remotion](../catalog/tool/remotion-dev__remotion.md)
 
 ## <a id="local-video-models"></a>Local video models
 
@@ -283,7 +283,7 @@ Scope: Tool servers an agent calls over the Model Context Protocol.
 
 Broader: [Agent surface](glossary.md#agent-surface)
 
-Records (1): [Remotion's Model Context Protocol (shut down)](../catalog/source/remotion.dev__docs__ai__mcp.md)
+Records (3): [Remotion's Model Context Protocol (shut down)](../catalog/source/remotion.dev__docs__ai__mcp.md), [MCP for Blender](../catalog/tool/ahujasid__mcp-for-blender.md), [claude-video-vision](../catalog/tool/jordanrendric__claude-video-vision.md)
 
 ## <a id="model-prompting"></a>Model prompting
 
@@ -315,7 +315,7 @@ Scope: How things move and how one scene hands over to the next.
 
 Broader: [Craft](glossary.md#craft)
 
-Records (2): [claude-remotion-skill](../catalog/tool/haidrrrry__claude-remotion-skill.md), [HyperFrames](../catalog/tool/heygen-com__hyperframes.md)
+Records (13): [ManimGL (3b1b/manim)](../catalog/tool/3b1b__manim.md), [FFmpeg](../catalog/tool/ffmpeg__ffmpeg.md), [smooth-animation-skill](../catalog/tool/flchntc__smooth-animation-skill.md), [GSAP](../catalog/tool/greensock__gsap.md), [claude-remotion-skill](../catalog/tool/haidrrrry__claude-remotion-skill.md), [HyperFrames](../catalog/tool/heygen-com__hyperframes.md), [motion-skills (iArt)](../catalog/tool/iart-ai__motion-skills.md), [claude-plugin-marketplace (ffmpeg-kinetic-captions)](../catalog/tool/josiahsiegel__claude-plugin-marketplace.md), [motion-design skill (LottieFiles)](../catalog/tool/lottiefiles__motion-design-skill.md), [Manim Community Edition](../catalog/tool/manimcommunity__manim.md), and 3 more in the [catalog](../catalog/README.md)
 
 ## <a id="orchestration"></a>Orchestration
 
@@ -359,7 +359,7 @@ Scope: Bundles that install skills, commands, sub-agents or servers into one age
 
 Broader: [Agent surface](glossary.md#agent-surface)
 
-Records (0): none yet
+Records (3): [remotion-superpowers](../catalog/tool/dojocodinglabs__remotion-superpowers.md), [claude-video-vision](../catalog/tool/jordanrendric__claude-video-vision.md), [claude-plugin-marketplace (ffmpeg-kinetic-captions)](../catalog/tool/josiahsiegel__claude-plugin-marketplace.md)
 
 ## <a id="popularity-and-trust"></a>Popularity and trust
 
@@ -371,7 +371,7 @@ Scope: How to read popularity signals and what a skill does on your machine.
 
 Broader: [Agent surface](glossary.md#agent-surface)
 
-Records (0): none yet
+Records (1): [MCP for Blender](../catalog/tool/ahujasid__mcp-for-blender.md)
 
 ## <a id="publishing"></a>Publishing
 
@@ -395,7 +395,7 @@ Scope: The agent renders, looks at the result and fixes what it sees before deli
 
 Broader: [Craft](glossary.md#craft)
 
-Records (5): [video-use](../catalog/tool/browser-use__video-use.md), [claude-code-video-toolkit](../catalog/tool/digitalsamba__claude-code-video-toolkit.md), [claude-remotion-skill](../catalog/tool/haidrrrry__claude-remotion-skill.md), [HyperFrames](../catalog/tool/heygen-com__hyperframes.md), [video-shotcraft](../catalog/tool/vincentwei1021__video-shotcraft.md)
+Records (18): [HyperFrames vs Remotion research note (GenMotion)](../catalog/source/github.com__haxzie__genmotion__blob__main__docs__research__hyperframes-remotion.md.md), [Kinetograph](../catalog/tool/0xs4n4tg__kinetograph.md), [MCP for Blender](../catalog/tool/ahujasid__mcp-for-blender.md), [video-use](../catalog/tool/browser-use__video-use.md), [claude-code-video-toolkit](../catalog/tool/digitalsamba__claude-code-video-toolkit.md), [fframes](../catalog/tool/dmtrkovalenko__fframes.md), [remotion-superpowers](../catalog/tool/dojocodinglabs__remotion-superpowers.md), [smooth-animation-skill](../catalog/tool/flchntc__smooth-animation-skill.md), [claude-remotion-skill](../catalog/tool/haidrrrry__claude-remotion-skill.md), [HyperFrames](../catalog/tool/heygen-com__hyperframes.md), and 8 more in the [catalog](../catalog/README.md)
 
 ## <a id="scheduling-and-runtimes"></a>Scheduling and runtimes
 
@@ -431,7 +431,7 @@ Scope: Turning an idea into scenes, shots and beats before anything is rendered.
 
 Broader: [Craft](glossary.md#craft)
 
-Records (1): [video-shotcraft](../catalog/tool/vincentwei1021__video-shotcraft.md)
+Records (2): [motion-video-director (mattypark)](../catalog/tool/mattypark__motion-graphics-skill.md), [video-shotcraft](../catalog/tool/vincentwei1021__video-shotcraft.md)
 
 ## <a id="visual-design"></a>Visual design
 
@@ -443,6 +443,6 @@ Scope: Type, layout, colour and brand consistency inside the frame.
 
 Broader: [Craft](glossary.md#craft)
 
-Records (2): [claude-code-video-toolkit](../catalog/tool/digitalsamba__claude-code-video-toolkit.md), [Remotion Agent Skills](../catalog/tool/remotion-dev__skills.md)
+Records (3): [claude-code-video-toolkit](../catalog/tool/digitalsamba__claude-code-video-toolkit.md), [OpenMontage](../catalog/tool/openmontageinc__openmontage.md), [Remotion Agent Skills](../catalog/tool/remotion-dev__skills.md)
 
 Index of all pages: https://tp9imka.github.io/agentic-media-lab/llms.txt

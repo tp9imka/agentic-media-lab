@@ -71,7 +71,7 @@ Collected by `tools/enrich.py`, not typed by hand.
 
 ## Referenced by
 
-None.
+- [motion-design skill (LottieFiles)](lottiefiles__motion-design-skill.md) (alternative_to)
 
 ## Status
 
