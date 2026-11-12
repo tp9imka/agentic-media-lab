@@ -217,6 +217,21 @@
     ],
     "stars": 7
   },
+  "source:github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss": {
+    "archived": false,
+    "created": "2018-03-27",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 1171,
+    "last_activity": "2026-11-12",
+    "licence": "Apache-2.0",
+    "open_issues": 193,
+    "sources": [
+      "https://api.github.com/repos/material-components/material-web",
+      "https://skills.sh/api/search?q=material-web"
+    ],
+    "stars": 11434
+  },
   "tool:0xs4n4tg/kinetograph": {
     "archived": false,
     "created": "2026-10-23",
@@ -300,6 +315,21 @@
     ],
     "stars": 34103
   },
+  "tool:bbc/ttml-validator": {
+    "archived": false,
+    "created": "2024-12-13",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 1,
+    "last_activity": "2026-11-09",
+    "licence": "unknown",
+    "open_issues": 5,
+    "sources": [
+      "https://api.github.com/repos/bbc/ttml-validator",
+      "https://skills.sh/api/search?q=ttml-validator"
+    ],
+    "stars": 12
+  },
   "tool:blaizzy/mlx-video": {
     "archived": false,
     "created": "2025-05-07",
@@ -314,6 +344,21 @@
       "https://skills.sh/api/search?q=mlx-video"
     ],
     "stars": 324
+  },
+  "tool:breakthrough/pyscenedetect": {
+    "archived": false,
+    "created": "2014-06-04",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 567,
+    "last_activity": "2026-11-10",
+    "licence": "BSD-3-Clause",
+    "open_issues": 62,
+    "sources": [
+      "https://api.github.com/repos/Breakthrough/PySceneDetect",
+      "https://skills.sh/api/search?q=PySceneDetect"
+    ],
+    "stars": 5437
   },
   "tool:browser-use/video-use": {
     "archived": false,
@@ -928,6 +973,21 @@
       "https://skills.sh/api/search?q=n8n"
     ],
     "stars": 210255
+  },
+  "tool:netflix/vmaf": {
+    "archived": false,
+    "created": "2016-02-08",
+    "default_branch": "master",
+    "fetched_at": "2026-11-12",
+    "forks": 850,
+    "last_activity": "2026-11-02",
+    "licence": "unknown",
+    "open_issues": 188,
+    "sources": [
+      "https://api.github.com/repos/Netflix/vmaf",
+      "https://skills.sh/api/search?q=vmaf"
+    ],
+    "stars": 5597
   },
   "tool:nexu-io/html-video": {
     "archived": false,
