@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "lane": "publishing",
+  "records": [
+    {
+      "id": "tool:gitroomhq/postiz-app",
+      "kind": "tool",
+      "title": "Postiz",
+      "url": "https://github.com/gitroomhq/postiz-app",
+      "summary": "An open-source social media scheduler with a hosted cloud edition. The self-hosted edition posts through developer apps you register on each platform, and offers a public API, MCP and CLI.",
+      "why_it_matters": "It is the self-hostable scheduler an agent can drive over MCP or its API, so one render can be queued to several platforms.",
+      "concepts": [
+        "concept:publishing",
+        "concept:scheduling-and-runtimes"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Self-hosting means your own app per platform: YouTube now publishes publicly without an audit, but TikTok leaves an own-account app private-only (see the TikTok guidelines record). The README states AGPL-3.0 for the self-hosted edition. The README's sponsor table advertises residential proxy IPs 'for social media'; that is a sponsor, not a Postiz feature, and proxy rotation is out of this hub's scope. The supported-platform list is drawn as images in the README and was not read. Not run here.",
+      "related": [
+        {
+          "id": "source:developers.tiktok.com/doc/content-sharing-guidelines",
+          "rel": "depends_on",
+          "note": "TikTok audit rules apply to the app you register."
+        },
+        {
+          "id": "source:developers.google.com/youtube/v3/revision_history",
+          "rel": "depends_on"
+        },
+        {
+          "id": "tool:inovector/mixpost",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "The self-hosted edition requires creating your own developer app on each platform and passing its approval.",
+          "quote": "You create your own developer apps on each platform and go through their approval (Meta, YouTube, TikTok can take weeks)",
+          "locator": "README, Postiz Cloud vs. Open-source table, Social platform apps",
+          "url": "https://github.com/gitroomhq/postiz-app",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The self-hosted edition is free under AGPL-3.0; you pay for your own infrastructure.",
+          "quote": "Free forever (AGPL-3.0); you pay only for your own infra",
+          "locator": "README, Postiz Cloud vs. Open-source table, Cost",
+          "url": "https://github.com/gitroomhq/postiz-app",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It exposes MCP, CLI and agent connectors on a self-hosted instance.",
+          "quote": "Included, you point the MCP / CLI at your own instance",
+          "locator": "README, Postiz Cloud vs. Open-source table, Agentic surfaces",
+          "url": "https://github.com/gitroomhq/postiz-app",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "GitHub README visible text against the claims",
+        "next_due": "2027-02-10",
+        "source_sha256": "e4830dfc8177daee415b33b804f2b57ce885add85c72c07952055cb31cdc5219"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tool_type": "app",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "publishing"
+      ],
+      "cost": "mixed",
+      "tags": [
+        "scheduler",
+        "self-hosted",
+        "mcp"
+      ],
+      "aliases": [
+        "postiz-app",
+        "gitroomhq/postiz-app"
+      ]
+    },
+    {
+      "id": "tool:inovector/mixpost",
+      "kind": "tool",
+      "title": "Mixpost",
+      "url": "https://github.com/inovector/mixpost",
+      "summary": "A self-hosted social media scheduler built on Laravel. The free Lite edition is open source; Pro and Enterprise are paid one-time licences installed on your own server.",
+      "why_it_matters": "It is a self-hosted alternative to Postiz, but the free edition does not post to YouTube, TikTok or Instagram.",
+      "concepts": [
+        "concept:publishing",
+        "concept:scheduling-and-runtimes"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "low",
+      "fit_notes": "Lite (free) publishes only to Facebook Pages, X and Mastodon per the pricing page; YouTube, TikTok, Instagram, Threads, LinkedIn and Bluesky need Pro at $299 one-time (price read 2026-11-12). The README states MIT for this repository; paid editions are source-available and not for resale. No sentence on official API use was found in the README or the pricing page. No agent surface on the Lite README; the docs list API, CLI and MCP for paid editions, not read in depth. Not run here.",
+      "related": [
+        {
+          "id": "tool:gitroomhq/postiz-app",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "The repository holds Mixpost Lite, the free edition of a commercial product.",
+          "quote": "This repository contains the Lite version of Mixpost Pro, a commercial product product.",
+          "locator": "README, Contributing",
+          "url": "https://github.com/inovector/mixpost",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Lite publishes to Facebook Pages, X and Mastodon; all other platforms need Pro.",
+          "quote": "Publish on Facebook Pages\n\nPublish on Mastodon profiles\n\nPublish on X profiles",
+          "locator": "Pricing page, Pro, What's included",
+          "url": "https://mixpost.app/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Pro costs $299 as a one-time payment.",
+          "quote": "Perfect for teams and agencies to manage social media and collaborate efficiently.\n $299",
+          "locator": "Pricing page, Pro",
+          "url": "https://mixpost.app/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "GitHub README and mixpost.app/pricing, visible text, against the claims",
+        "next_due": "2027-02-10",
+        "source_sha256": "88f7ede78369d4de8a497aa4e13cda381c8bdf19a3986a665f1b413cda16403e"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tool_type": "app",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "publishing"
+      ],
+      "cost": "mixed",
+      "tags": [
+        "scheduler",
+        "self-hosted"
+      ]
+    }
+  ]
+}

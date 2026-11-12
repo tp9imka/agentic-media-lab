@@ -1,0 +1,1246 @@
+{
+  "schema_version": 1,
+  "lane": "publishing",
+  "records": [
+    {
+      "id": "source:developers.tiktok.com/doc/content-sharing-guidelines",
+      "kind": "source",
+      "title": "TikTok Content Sharing Guidelines (Direct Post API)",
+      "url": "https://developers.tiktok.com/doc/content-sharing-guidelines",
+      "summary": "TikTok's developer rules for the Content Posting API's Direct Post: what an unaudited client may do, the daily caps, the audit's intended-use test and the UX a posting app must show.",
+      "why_it_matters": "This page decides whether a one-person pipeline can publish to TikTok publicly at all. Without an audit every post is private, and the audit does not accept a tool for your own accounts.",
+      "concepts": [
+        "concept:publishing",
+        "concept:platform-rules",
+        "concept:automation"
+      ],
+      "level": "intermediate",
+      "fit": "high",
+      "fit_notes": "For one developer posting to their own account this is a dead end for public posts: unaudited clients post SELF_ONLY, and the audit's 'Not acceptable' list names a utility tool for accounts you or your team manage. Posts can be made public later by hand in the app. Self-hosted schedulers (Postiz, Mixpost Pro) need their own TikTok app and hit the same wall; a hosted scheduler with an audited app is the remaining official route, not checked here. Unaudited clients are also limited to 5 posting users per 24 hours. The page bans watermarks or promo text on shared content. Page last updated August 4, 2026.",
+      "related": [
+        {
+          "id": "source:developers.tiktok.com/doc/content-posting-api-reference-direct-post",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "tool:gitroomhq/postiz-app",
+          "rel": "integrates_with",
+          "note": "A self-hosted Postiz needs its own TikTok app, which this audit rule leaves private-only for own-account use."
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "Without an audit, every Direct Post upload is private-only; an audit lifts it.",
+          "quote": "As a developer, you can use this API in an unverified status, but all content uploaded via this endpoint will be restricted to private viewing mode. To lift this restriction, your API client must undergo an audit to verify compliance with our Terms of Service.",
+          "locator": "Direct Post API - Developer Guidelines, first paragraph",
+          "url": "https://developers.tiktok.com/doc/content-sharing-guidelines",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The audit rejects a tool that only uploads to accounts you or your team manage, which is the single-developer case.",
+          "quote": "Not acceptable: A utility tool to help upload contents to the account(s) you or your team manages. ❌",
+          "locator": "Intended Use, item 2",
+          "url": "https://developers.tiktok.com/doc/content-sharing-guidelines",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Each creator account has a cap of about 15 Direct Posts a day, shared across every app that posts for it.",
+          "quote": "The upper limit may vary among creators (typically around 15 posts per day/ creator account) and is shared across all API Clients using Direct Post.",
+          "locator": "Direct Post API - Developer Guidelines, Posting cap",
+          "url": "https://developers.tiktok.com/doc/content-sharing-guidelines",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "visible page text (last updated August 4, 2026) against the earlier scan's two quotes; both found verbatim",
+        "next_due": "2026-12-12",
+        "source_sha256": "d8e4021ae965c417a1911395ba50e46901cfc3bfea1c5580437235c5595c073c"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tags": [
+        "tiktok",
+        "audit",
+        "rate-limit"
+      ],
+      "aliases": [
+        "TikTok Direct Post guidelines",
+        "TikTok audit"
+      ]
+    },
+    {
+      "id": "source:developers.tiktok.com/doc/content-posting-api-reference-direct-post",
+      "kind": "source",
+      "title": "TikTok Content Posting API - Direct Post reference",
+      "url": "https://developers.tiktok.com/doc/content-posting-api-reference-direct-post",
+      "summary": "The request and response reference for TikTok's /v2/post/publish/video/init/ endpoint: post_info fields, source types, error codes and the per-token rate limit.",
+      "why_it_matters": "It holds the AI-label flag an agent should set on generated video and the error an unaudited client gets when the account is public.",
+      "concepts": [
+        "concept:publishing",
+        "concept:platform-rules"
+      ],
+      "level": "intermediate",
+      "fit": "high",
+      "fit_notes": "Set post_info.is_aigc=true on generated clips; the page says it adds the 'Creator labeled as AI-generated' tag. The error unaudited_client_can_only_post_to_private_accounts means an unaudited client also needs the account itself set to private, not only the post. 6 init requests per minute per user token is not a constraint at 15 posts a day, but a retry loop can hit it. Rate limits for other endpoints are on a separate page (600 per minute for user/info, video/list), not made a record.",
+      "related": [
+        {
+          "id": "source:developers.tiktok.com/doc/content-sharing-guidelines",
+          "rel": "depends_on"
+        },
+        {
+          "id": "source:developers.tiktok.com/doc/content-posting-api-media-transfer-guide",
+          "rel": "integrates_with"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "Setting is_aigc marks the post with TikTok's creator AI-generated label.",
+          "quote": "Set to true if the video is AI generated content. If set, the video will be labelled with Creator labeled as AI-generated tag in video's description.",
+          "locator": "Request body, post_info.is_aigc",
+          "url": "https://developers.tiktok.com/doc/content-posting-api-reference-direct-post",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "An unaudited client is blocked at init when the target account is not private.",
+          "quote": "Unaudited clients can only post to a private account. The publish attempt will be blocked when calling /publish/video/init/.",
+          "locator": "Error codes, unaudited_client_can_only_post_to_private_accounts",
+          "url": "https://developers.tiktok.com/doc/content-posting-api-reference-direct-post",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The init endpoint allows 6 requests per minute per user access token.",
+          "quote": "Note: Each user access_token is limited to 6 requests per minute.",
+          "locator": "Direct Post, Rate limit note",
+          "url": "https://developers.tiktok.com/doc/content-posting-api-reference-direct-post",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "visible reference text against the claims",
+        "next_due": "2026-12-12",
+        "source_sha256": "93f286d53c8282b6543dbc761bcafa7ff546b6cf0ebfb0e7ca72e3853ff02bc0"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tags": [
+        "tiktok",
+        "ai-label",
+        "rate-limit"
+      ]
+    },
+    {
+      "id": "source:developers.tiktok.com/doc/content-posting-api-media-transfer-guide",
+      "kind": "source",
+      "title": "TikTok Content Posting API - Media Transfer Guide",
+      "url": "https://developers.tiktok.com/doc/content-posting-api-media-transfer-guide",
+      "summary": "TikTok's rules for sending the file: chunked FILE_UPLOAD sizes, PULL_FROM_URL with a verified domain, and the accepted video formats, frame rates, resolution, length and size.",
+      "why_it_matters": "These are the encode targets for a clip an agent renders for TikTok, from TikTok's own API page rather than a creator blog.",
+      "concepts": [
+        "concept:publishing",
+        "concept:platform-rules",
+        "concept:delivery"
+      ],
+      "level": "intermediate",
+      "fit": "high",
+      "fit_notes": "Render H.264 MP4 at 23-60 fps, 360-4096 px per side, at most 4 GB. The API accepts up to 10 minutes, but the account's own cap (3, 5 or 10 minutes) applies and creator_info returns it as max_video_post_duration_sec. Chunks must be 5-64 MB, files under 5 MB go in one piece. PULL_FROM_URL needs a domain verified in the TikTok developer portal, so a laptop pipeline usually uses FILE_UPLOAD.",
+      "related": [
+        {
+          "id": "source:developers.tiktok.com/doc/content-posting-api-reference-direct-post",
+          "rel": "integrates_with"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "TikTok accepts MP4, WebM or MOV in H.264, H.265, VP8 or VP9, at 23 to 60 fps.",
+          "quote": "Framerate restrictions\n\nMinimum of 23 FPS\n\nMaximum of 60 FPS",
+          "locator": "Video restrictions, Framerate restrictions",
+          "url": "https://developers.tiktok.com/doc/content-posting-api-media-transfer-guide",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The API takes videos up to 10 minutes; the creator's own maximum may be shorter and TikTok users may trim.",
+          "quote": "The longest video a developer can send via the initialize Upload Video endpoint is 10 minutes. TikTok users may trim developer-sent videos inside the TikTok app to fit their accounts' actual maximum publish durations.",
+          "locator": "Video restrictions, Duration restrictions",
+          "url": "https://developers.tiktok.com/doc/content-posting-api-media-transfer-guide",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Upload chunks must be between 5 MB and 64 MB, and the final chunk may be up to 128 MB.",
+          "quote": "Each chunk must be at least 5 MB but no greater than 64 MB, except for the final chunk, which can be greater than chunk_size (up to 128 MB) to accommodate any trailing bytes.",
+          "locator": "File upload, chunk restrictions",
+          "url": "https://developers.tiktok.com/doc/content-posting-api-media-transfer-guide",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "visible guide text, Video restrictions and chunk rules, against the claims",
+        "next_due": "2026-12-12",
+        "source_sha256": "aec1d1c8efddd2a158489acfef49404e71b2156ce863e7cc51d1c8673cc8f603"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tags": [
+        "tiktok",
+        "video-specs"
+      ]
+    },
+    {
+      "id": "source:www.tiktok.com/community-guidelines/en/integrity-authenticity",
+      "kind": "source",
+      "title": "TikTok Community Guidelines - Integrity and Authenticity (Edited Media and AIGC)",
+      "url": "https://www.tiktok.com/community-guidelines/en/integrity-authenticity",
+      "summary": "TikTok's community guideline on misinformation, edited media and AI-generated content, including the creator labelling duty.",
+      "why_it_matters": "It states when a generated clip must carry the AI label and what happens to unlabelled realistic AI content.",
+      "concepts": [
+        "concept:platform-rules"
+      ],
+      "level": "intro",
+      "fit": "high",
+      "fit_notes": "The duty covers realistic-looking scenes or people; a clearly stylised motion-graphics clip is not named. Via the API the label is post_info.is_aigc on the Direct Post record. The URL redirects to www.tiktok.com/safety/en/policies-and-engagement/integrity-authenticity. TikTok's support page on AI labels (support.tiktok.com) rendered empty here and was not read.",
+      "related": [
+        {
+          "id": "source:developers.tiktok.com/doc/content-posting-api-reference-direct-post",
+          "rel": "integrates_with",
+          "note": "is_aigc is the API form of this label."
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "TikTok requires creators to label AI-generated or heavily edited content that shows realistic scenes or people, and may remove, restrict or label it if they do not.",
+          "quote": "we require creators to label AI-generated or significantly edited content that shows realistic-looking scenes or people. Unlabeled content may be removed, restricted, or labeled by our team, depending on the harm it could cause.",
+          "locator": "Edited Media and AI-Generated Content (AIGC)",
+          "url": "https://www.tiktok.com/community-guidelines/en/integrity-authenticity",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A label does not make misleading content on matters of public importance acceptable.",
+          "quote": "Even with labels, some edited or AI-generated content can still be harmful. We don’t allow content that’s misleading about matters of public importance or harmful to individuals.",
+          "locator": "Edited Media and AI-Generated Content (AIGC)",
+          "url": "https://www.tiktok.com/community-guidelines/en/integrity-authenticity",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "visible policy text after redirect to the safety policies page",
+        "next_due": "2026-12-12",
+        "source_sha256": "0603f24d500c549e2f0972eb3675a17fb58fd10dd88b30a079124d6f68c601aa"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tags": [
+        "tiktok",
+        "ai-label"
+      ]
+    },
+    {
+      "id": "source:developers.google.com/youtube/v3/revision_history",
+      "kind": "source",
+      "title": "YouTube Data API (v3) revision history",
+      "url": "https://developers.google.com/youtube/v3/revision_history",
+      "summary": "Google's change log for the YouTube Data API v3. Two entries matter here: November 2, 2026, which ends private-only uploads for unverified projects, and October 30, 2024, which adds the synthetic-media flag.",
+      "why_it_matters": "Most guides still say an unaudited YouTube project uploads private-only. Since November 2, 2026 that is no longer true, which makes YouTube the easiest public target for a one-person pipeline.",
+      "concepts": [
+        "concept:publishing",
+        "concept:platform-rules"
+      ],
+      "level": "intermediate",
+      "fit": "high",
+      "fit_notes": "The 2020 private-only rule is still on the same page under July 28, 2020; read the date. Set status.privacyStatus explicitly: the default is now public, and a test upload you meant to keep private goes live. Set status.containsSyntheticMedia=true on realistic generated clips (see the disclosure help page). The page URL now redirects to developers.google.com/youtube/data/revision_history. The quota (100 uploads a day) is on the videos.insert record.",
+      "related": [
+        {
+          "id": "source:developers.google.com/youtube/v3/docs/videos/insert",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "source:support.google.com/youtube/answer/14328491",
+          "rel": "integrates_with"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "Since November 2, 2026, videos uploaded from unverified API projects are no longer forced private, reversing the July 2020 rule.",
+          "quote": "Videos uploaded through the videos.insert method from unverified API projects are no longer restricted to private viewing mode. This change reverses the policy announced on July 28, 2020, which restricted videos uploaded from unverified API projects created after that date to private viewing mode until the project completed an audit.",
+          "locator": "Entry November 2, 2026",
+          "url": "https://developers.google.com/youtube/v3/revision_history",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "An upload without status.privacyStatus now defaults to public.",
+          "quote": "If you don't specify a value for the status.privacyStatus property in a videos.insert request, the uploaded video's privacy status defaults to public.",
+          "locator": "Entry November 2, 2026",
+          "url": "https://developers.google.com/youtube/v3/revision_history",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The API flag for realistic altered or synthetic content is status.containsSyntheticMedia, settable on insert or update.",
+          "quote": "To indicate whether a video contains A/S content, set the status.containsSyntheticMedia property. This property can be set when calling the videos.insert or videos.update methods.",
+          "locator": "Entry October 30, 2024",
+          "url": "https://developers.google.com/youtube/v3/revision_history",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "visible page text, entries November 2, 2026, October 30, 2024 and July 28, 2020, against the earlier scan's claim; confirmed",
+        "next_due": "2026-12-12",
+        "source_sha256": "40077a7c1bc59481b2f5ccfb5d1858a5d2b8a9d3215a38b3c5517c35d6fc4d00"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tags": [
+        "youtube",
+        "audit",
+        "ai-label"
+      ],
+      "aliases": [
+        "YouTube API audit private-only lifted"
+      ]
+    },
+    {
+      "id": "source:developers.google.com/youtube/v3/docs/videos/insert",
+      "kind": "source",
+      "title": "YouTube Data API - videos.insert and quota costs",
+      "url": "https://developers.google.com/youtube/v3/docs/videos/insert",
+      "summary": "The reference for uploading a video through the YouTube Data API, read together with the quota cost page.",
+      "why_it_matters": "It gives the daily upload ceiling and file limits a scheduled pipeline has to plan around.",
+      "concepts": [
+        "concept:publishing",
+        "concept:platform-rules",
+        "concept:automation"
+      ],
+      "level": "intermediate",
+      "fit": "high",
+      "fit_notes": "Uploads have their own bucket of 100 calls per day per project, separate from the 10,000 units for other calls; this replaces the 1,600-units-per-upload figure many guides still quote. Quotas reset at midnight Pacific Time. Files up to 256 GB, any video/* type. Needs a Google Cloud project and OAuth consent for your own channel; no cost stated. Both pages redirect to developers.google.com/youtube/data/...",
+      "related": [
+        {
+          "id": "source:developers.google.com/youtube/v3/revision_history",
+          "rel": "integrates_with"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "videos.insert has its own bucket of 100 calls per day, 1 unit each.",
+          "quote": "Quota impact: 100 calls per day. A call to this method has a quota cost of 1 unit in the Video Uploads quota bucket.",
+          "locator": "videos.insert, Quota impact",
+          "url": "https://developers.google.com/youtube/v3/docs/videos/insert",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A project gets 100 search.list calls, 100 videos.insert calls and 10,000 units for all other endpoints per day.",
+          "quote": "Projects that enable the YouTube Data API have a default quota allocation of 100 search.list calls, 100 videos.insert calls, and 10,000 units per day combined for all other endpoints.",
+          "locator": "Quota cost page, introduction",
+          "url": "https://developers.google.com/youtube/v3/determine_quota_cost",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Uploads may be up to 256 GB of any video MIME type.",
+          "quote": "Maximum file size: 256GB\n\nAccepted Media MIME types: video/*, application/octet-stream",
+          "locator": "videos.insert, Request, Upload",
+          "url": "https://developers.google.com/youtube/v3/docs/videos/insert",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "videos.insert reference and determine_quota_cost page, visible text, against the claims",
+        "next_due": "2026-12-12",
+        "source_sha256": "849264d086a81c4c226d6deb914f096c8685d10a4bb7df39a5cd145c8f53fbbf"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tags": [
+        "youtube",
+        "quota",
+        "video-specs"
+      ]
+    },
+    {
+      "id": "source:support.google.com/youtube/answer/1311392",
+      "kind": "source",
+      "title": "YouTube channel monetization policies (inauthentic content)",
+      "url": "https://support.google.com/youtube/answer/1311392",
+      "summary": "YouTube's Partner Program policy page. Its inauthentic-content section, renamed from 'repetitious content' on July 15, 2025, sets the bar for AI-assisted and templated channels.",
+      "why_it_matters": "An agent pipeline that makes many similar clips is the exact pattern this policy names, so it decides whether the channel can earn.",
+      "concepts": [
+        "concept:platform-rules"
+      ],
+      "level": "intro",
+      "fit": "high",
+      "fit_notes": "AI use is allowed and named as monetisable when it serves your own narrative; templated, interchangeable videos are not. Reused-content review applies to the whole channel, so a run of near-identical generated Shorts can cost monetisation on everything. Separate rule: AI personas giving health, legal, finance or political advice cannot monetise. Policy text, not a measured threshold; reviewers judge.",
+      "related": [
+        {
+          "id": "source:support.google.com/youtube/answer/14328491",
+          "rel": "integrates_with"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "Monetised content must not be mass-produced, generic or repetitive.",
+          "quote": "Not be mass-produced, generic, repetitive, or manipulative. It should be made for the enjoyment or education of viewers, rather than for the sole purpose of getting views.",
+          "locator": "Inauthentic content",
+          "url": "https://support.google.com/youtube/answer/1311392",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "AI content from generic templates that looks mass-produced, without the creator's own insight, is a named example of inauthentic content.",
+          "quote": "AI-generated content made with generic or unoriginal templates giving the impression of mass production without adding the creator’s original, authentic insights or perspective",
+          "locator": "Generic or Repetitive Content, examples",
+          "url": "https://support.google.com/youtube/answer/1311392",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Using AI to visualise a character and story you invented is a named example of content that can monetise.",
+          "quote": "Content that expresses your unique creative voice, like using AI to visualize a unique character and narrative you invented",
+          "locator": "Examples of what is allowed to monetize",
+          "url": "https://support.google.com/youtube/answer/1311392",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "visible help page text (hl=en) against the 'mass production' wording from the earlier scan",
+        "next_due": "2026-12-12",
+        "source_sha256": "f5ac801f855ec987acd63b592dd99f81201344d2790eb191b6bff250b5dd07fd"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tags": [
+        "youtube",
+        "monetisation"
+      ]
+    },
+    {
+      "id": "source:support.google.com/youtube/answer/14328491",
+      "kind": "source",
+      "title": "YouTube Help - Disclosing use of GenAI content",
+      "url": "https://support.google.com/youtube/answer/14328491",
+      "summary": "YouTube's rule on when creators must disclose AI-generated or altered content, how the label shows, and when YouTube applies it automatically, including from C2PA metadata.",
+      "why_it_matters": "It is the only first-party page read here that says a platform reads C2PA, and it says a C2PA-triggered label cannot be removed.",
+      "concepts": [
+        "concept:platform-rules",
+        "concept:delivery"
+      ],
+      "level": "intro",
+      "fit": "high",
+      "fit_notes": "Disclosure is needed for realistic content and AI music, not for clearly fantastical or animated content or for script, caption and thumbnail help. The page says disclosure alone does not limit reach or monetisation, but repeated non-disclosure can lead to removal or YPP suspension. If your generator embeds C2PA, expect a label you cannot turn off. The API equivalent is status.containsSyntheticMedia (revision history record). Title read here: 'Disclosing use of GenAI content'.",
+      "related": [
+        {
+          "id": "source:developers.google.com/youtube/v3/revision_history",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "source:c2pa.org/faqs",
+          "rel": "depends_on"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "Creators must disclose realistic AI-generated or altered content.",
+          "quote": "We require creators to disclose AI-generated or altered content that seems realistic.",
+          "locator": "Disclosing use of GenAI content, intro",
+          "url": "https://support.google.com/youtube/answer/14328491",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "YouTube may label content automatically when it carries C2PA metadata, and that label cannot be changed by the creator.",
+          "quote": "However, content made with YouTube’s AI tools, content containing C2PA metadata, or content labeled after manual review can not be adjusted.",
+          "locator": "Automatic detection of AI content",
+          "url": "https://support.google.com/youtube/answer/14328491",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Repeated failure to disclose can bring a forced label, removal or YouTube Partner Program suspension.",
+          "quote": "Creators who consistently choose not to disclose this information may be subject to manual application of a label, or penalties from YouTube, including removal of content or suspension from the YouTube Partner Program.",
+          "locator": "Risks of not disclosing",
+          "url": "https://support.google.com/youtube/answer/14328491",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "visible help page text (hl=en) against the claims",
+        "next_due": "2026-12-12",
+        "source_sha256": "17af815566f0f9cfc25748919a8726d87960f0314e1eb60c7da45fb5ba5a8e30"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tags": [
+        "youtube",
+        "ai-label",
+        "c2pa"
+      ]
+    },
+    {
+      "id": "source:support.google.com/youtube/answer/15424877",
+      "kind": "source",
+      "title": "YouTube Help - Understand three-minute YouTube Shorts",
+      "url": "https://support.google.com/youtube/answer/15424877",
+      "summary": "YouTube's page on which uploads count as Shorts: square or vertical video up to three minutes, with a copyright rule for Shorts over one minute.",
+      "why_it_matters": "It tells an agent the aspect ratio and length that make an upload land in the Shorts feed.",
+      "concepts": [
+        "concept:delivery",
+        "concept:publishing"
+      ],
+      "level": "intro",
+      "fit": "medium",
+      "fit_notes": "Shorts classification is automatic from aspect ratio and length, so the API upload needs no Shorts flag. A Short over one minute with any active copyright claim is blocked worldwide, so generated music must be clean. No resolution or bitrate figures on this page.",
+      "related": [],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "A square or vertical upload up to three minutes is categorised as a Short.",
+          "quote": "Any videos uploaded on or after this date with a square or vertical aspect ratio up to three minutes in length will be categorized as Shorts on YouTube.",
+          "locator": "Eligibility for three-minute Shorts",
+          "url": "https://support.google.com/youtube/answer/15424877",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A Short over one minute with an active copyright claim is blocked globally.",
+          "quote": "Any Short that is over one minute in duration with an active copyright claim of any type, including manual claims, will be blocked globally on YouTube.",
+          "locator": "Third-party claimed content for Short that is over one minute",
+          "url": "https://support.google.com/youtube/answer/15424877",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "visible help page text against the claims",
+        "next_due": "2026-12-12",
+        "source_sha256": "251d33b792fffab3291f5a83ce6800a8dc968aa4885a2867ae790987be008834"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tags": [
+        "youtube",
+        "shorts",
+        "video-specs"
+      ]
+    },
+    {
+      "id": "source:developers.facebook.com/docs/instagram-platform/content-publishing",
+      "kind": "source",
+      "title": "Instagram Platform - Content Publishing (with Reels specs)",
+      "url": "https://developers.facebook.com/docs/instagram-platform/content-publishing",
+      "summary": "Meta's guide to publishing images, videos, Reels and carousels to an Instagram professional account, read with the IG User media reference that holds the Reels specs.",
+      "why_it_matters": "It gives the daily limit, the AI self-disclosure flag and the Reels encode targets for Instagram.",
+      "concepts": [
+        "concept:publishing",
+        "concept:platform-rules",
+        "concept:delivery"
+      ],
+      "level": "intermediate",
+      "fit": "high",
+      "fit_notes": "Needs an Instagram professional (Business or Creator) account and the instagram_content_publish or instagram_business_content_publish permission; the page lists Standard and Advanced Access, and app review for Advanced Access was not read here. The guide states two different limits: 100 API posts per 24 hours in Rate Limit and 50 published posts per 24 hours in the carousel section. Plan for 50 until Meta resolves it. Reels: H.264 or HEVC, 23-60 fps, 3 s to 15 min, 300 MB, 9:16 recommended. The docs URL redirects to developers.facebook.com/documentation/...",
+      "related": [
+        {
+          "id": "source:developers.facebook.com/docs/video-api/guides/reels-publishing",
+          "rel": "alternative_to"
+        },
+        {
+          "id": "source:developers.facebook.com/docs/threads/posts",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "Instagram allows 100 API-published posts per account in a moving 24-hour window.",
+          "quote": "Instagram accounts are limited to 100 API-published posts within a 24-hour moving period.",
+          "locator": "Limitations, Rate Limit",
+          "url": "https://developers.facebook.com/docs/instagram-platform/content-publishing",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "is_ai_generated=true on the media container is the AI self-disclosure, for both Instagram login routes; on a carousel set it only on the parent.",
+          "quote": "For carousels, only the carousel container needs to have the `is_ai_generated` parameter set to `true`. Setting this parameter on carousel children will result in an error. This parameter is available to both Instagram API with Facebook Login and Instagram Login.",
+          "locator": "AI Content",
+          "url": "https://developers.facebook.com/docs/instagram-platform/content-publishing",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Reels may run from 3 seconds to 15 minutes and up to 300 MB.",
+          "quote": "- Duration: 15 mins maximum, 3 seconds minimum",
+          "locator": "IG User media reference, Reel Specifications",
+          "url": "https://developers.facebook.com/docs/instagram-platform/instagram-graph-api/reference/ig-user/media",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "content-publishing guide and ig-user/media reference, served as markdown, against the claims and the earlier scan",
+        "next_due": "2026-12-12",
+        "source_sha256": "204de9647c4f896d78f6602830efd45fa9a61b96f65d89793e06ec0b7f18197f"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tags": [
+        "instagram",
+        "rate-limit",
+        "ai-label",
+        "video-specs"
+      ]
+    },
+    {
+      "id": "source:developers.facebook.com/docs/video-api/guides/reels-publishing",
+      "kind": "source",
+      "title": "Facebook Video API - Reels Publishing guide",
+      "url": "https://developers.facebook.com/docs/video-api/guides/reels-publishing",
+      "summary": "Meta's guide to publishing Reels to a Facebook Page through the Video API: upload flow, specs, limits and the AI flag.",
+      "why_it_matters": "Facebook Page Reels have a lower daily cap and a shorter maximum length than Instagram Reels, which matters when one render goes to both.",
+      "concepts": [
+        "concept:publishing",
+        "concept:platform-rules",
+        "concept:delivery"
+      ],
+      "level": "intermediate",
+      "fit": "medium",
+      "fit_notes": "Posts to a Page, not a personal profile. 30 Reels per 24 hours, 3-90 seconds, 9:16, at least 540x960, 24-60 fps; a 3-minute YouTube Short will be rejected here (error 1363128). is_ai_generated discloses AI use. The earlier scan's '30 API-published posts' wording is confirmed. Permissions and app review were not read in depth.",
+      "related": [
+        {
+          "id": "source:developers.facebook.com/docs/instagram-platform/content-publishing",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "The Reels API allows 30 API-published Reels per Page in a moving 24-hour window.",
+          "quote": "Reels API is limited to 30 API-published posts within a 24-hour moving period.",
+          "locator": "Limitations, Rate Limit",
+          "url": "https://developers.facebook.com/docs/video-api/guides/reels-publishing",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A Page Reel must be 3 to 90 seconds long.",
+          "quote": "| Duration | 3 to 90 seconds.<br><br>A reel published as a story on a Facebook Page can not exceed 60 seconds. |",
+          "locator": "Video Specifications table",
+          "url": "https://developers.facebook.com/docs/video-api/guides/reels-publishing",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "is_ai_generated=true discloses that the Reel was made or edited with AI.",
+          "quote": "Set to `true` to disclose that the reel was created or edited using AI. Defaults to `false`.",
+          "locator": "Publish parameters, is_ai_generated",
+          "url": "https://developers.facebook.com/docs/video-api/guides/reels-publishing",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "guide served as markdown, against the claims and the earlier scan's 30-post figure",
+        "next_due": "2026-12-12",
+        "source_sha256": "74a8515bbc13283f9fcc502095de29352c51ebd69d2dcb1a49a6ef6cb0f957a0"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tags": [
+        "facebook",
+        "rate-limit",
+        "ai-label",
+        "video-specs"
+      ]
+    },
+    {
+      "id": "source:developers.facebook.com/docs/threads/posts",
+      "kind": "source",
+      "title": "Threads API - Posts",
+      "url": "https://developers.facebook.com/docs/threads/posts",
+      "summary": "Meta's guide to creating text, image, video and carousel posts through the Threads API, with limits and the AI-label parameter.",
+      "why_it_matters": "Threads has the highest daily cap of the Meta surfaces and a 5-minute video limit, and its AI flag is documented with what it does not prevent.",
+      "concepts": [
+        "concept:publishing",
+        "concept:platform-rules"
+      ],
+      "level": "intermediate",
+      "fit": "medium",
+      "fit_notes": "250 posts per 24 hours per profile. Video up to 5 minutes, 23-60 fps, 100 Mbps VBR max. is_made_with_ai goes on the container create call, not on publish. Meta recommends waiting about 30 seconds before publishing a container. App review was not read here.",
+      "related": [
+        {
+          "id": "source:developers.facebook.com/docs/instagram-platform/content-publishing",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "A Threads profile may publish 250 posts per 24 hours.",
+          "quote": "**Note:** Profiles are limited to 250 published posts within a 24-hour period. Publishing a carousel counts as a single post.",
+          "locator": "Carousel posts, step 3 note",
+          "url": "https://developers.facebook.com/docs/threads/posts",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "is_made_with_ai=true shows the AI info label; leaving it false does not stop Meta's automatic labelling.",
+          "quote": "This parameter supports text, image, video, and carousel posts. It defaults to `false`. Omitting it or setting it to `false` does not add an AI self-disclosure and does not prevent automatic AI labeling.",
+          "locator": "Label AI-Generated Content",
+          "url": "https://developers.facebook.com/docs/threads/posts",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Threads video may be up to 5 minutes.",
+          "quote": "* **Duration:** 300 seconds (5 minutes) maximum, minimum longer than 0 seconds.",
+          "locator": "Media specifications, Video",
+          "url": "https://developers.facebook.com/docs/threads/posts",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "guide served as markdown, against the claims",
+        "next_due": "2026-12-12",
+        "source_sha256": "c2893f145a2875321e9fa6300a4b47061b86750982f97a494148280891d167e4"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tags": [
+        "threads",
+        "rate-limit",
+        "ai-label"
+      ]
+    },
+    {
+      "id": "source:docs.x.com/x-api/getting-started/pricing",
+      "kind": "source",
+      "title": "X API pay-per-usage pricing",
+      "url": "https://docs.x.com/x-api/getting-started/pricing",
+      "summary": "X's developer page for API pricing: credits bought in the Developer Console, charged per resource read or per write request, with no subscription.",
+      "why_it_matters": "It answers what a post from an agent costs on X as of 2026-11-12, which replaced the fixed Basic and Pro tiers older guides describe.",
+      "concepts": [
+        "concept:publishing",
+        "concept:platform-rules",
+        "concept:cost"
+      ],
+      "level": "intro",
+      "fit": "high",
+      "fit_notes": "A plain post costs $0.015; a post containing a URL costs $0.200, so put links in a reply or the profile. Media upload pricing was not found on this page beyond 'Media Metadata $0.005'. Needs a payment card and pre-bought credits. Prices go stale fast; recheck before 2026-12-12.",
+      "related": [
+        {
+          "id": "source:docs.x.com/x-api/media/quickstart/media-upload-chunked",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "source:help.x.com/en/rules-and-policies/x-automation",
+          "rel": "integrates_with"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "The X API is pay-per-use with no subscriptions.",
+          "quote": "The X API uses pay-per-usage pricing. No subscriptions—pay only for what you use.",
+          "locator": "Introduction",
+          "url": "https://docs.x.com/x-api/getting-started/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Creating a post costs $0.015 per request, or $0.200 if the post contains a URL.",
+          "quote": "Post: Create\n$0.015 per request\nPost: Create (with URL)\n$0.200 per request",
+          "locator": "Credit consumption details, Write operations table",
+          "url": "https://docs.x.com/x-api/getting-started/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "visible page text against the claims; table cells read as separate lines",
+        "next_due": "2026-12-12",
+        "source_sha256": "8de22b694749b2c102722f2b9a4c9b79ffb23fbe6963e7f539b15b1dc4fec718"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tags": [
+        "x",
+        "pricing"
+      ]
+    },
+    {
+      "id": "source:docs.x.com/x-api/media/quickstart/media-upload-chunked",
+      "kind": "source",
+      "title": "X API - chunked media upload quickstart",
+      "url": "https://docs.x.com/x-api/media/quickstart/media-upload-chunked",
+      "summary": "X's guide to uploading video in chunks with the v2 media endpoints, with the size and duration caps per media category.",
+      "why_it_matters": "It gives the video caps for a post on X and says they depend on the posting account's Premium status.",
+      "concepts": [
+        "concept:publishing",
+        "concept:platform-rules",
+        "concept:delivery"
+      ],
+      "level": "intermediate",
+      "fit": "medium",
+      "fit_notes": "tweet_video: 20 minutes and 8 GB by default, 125 minutes and 16 GB for Premium. Chunks at most 5 MB (server max 8 MB). Limits are checked again at post time, so an upload can succeed and the post still fail with 403. Codec and resolution rules are on a linked page, not read here.",
+      "related": [
+        {
+          "id": "source:docs.x.com/x-api/getting-started/pricing",
+          "rel": "integrates_with"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "A regular post's video may be 20 minutes and 8 GB, or 125 minutes and 16 GB for Premium.",
+          "quote": "20 min / 8 GB · Premium: 125 min / 16 GB",
+          "locator": "Media categories table, tweet_video",
+          "url": "https://docs.x.com/x-api/media/quickstart/media-upload-chunked",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A successful upload can still be rejected when attached to a post.",
+          "quote": "A successful upload can still be rejected when you attach the media_id to POST /2/tweets.",
+          "locator": "Initialize step, note",
+          "url": "https://docs.x.com/x-api/media/quickstart/media-upload-chunked",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "visible quickstart text against the claims",
+        "next_due": "2026-12-12",
+        "source_sha256": "925bc5de8d3a12ee936d7b235a8ac256b8e5a5a3932042b9f44adaf9223d1f9d"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tags": [
+        "x",
+        "video-specs"
+      ]
+    },
+    {
+      "id": "source:help.x.com/en/rules-and-policies/x-automation",
+      "kind": "source",
+      "title": "X Automation rules",
+      "url": "https://help.x.com/en/rules-and-policies/x-automation",
+      "summary": "X's Help Center rules for automated accounts and apps: what automated posting is allowed, the spam limits, and the ban on non-API automation.",
+      "why_it_matters": "An agent that posts on a schedule is automation under these rules, and the page says what keeps such an account out of trouble.",
+      "concepts": [
+        "concept:platform-rules",
+        "concept:automation"
+      ],
+      "level": "intro",
+      "fit": "high",
+      "fit_notes": "Scheduled original posts to your own account are allowed. Duplicate or near-duplicate posts are not, so vary each post. Scripting the website, for example with a browser agent, risks permanent suspension; use the API. The saved text shows the X logo as '>x<' in place of the word X, so quotes avoid those sentences.",
+      "related": [
+        {
+          "id": "source:help.x.com/en/rules-and-policies/authenticity",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "source:docs.x.com/x-api/getting-started/pricing",
+          "rel": "integrates_with"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "Automated posts for entertainment, information or novelty are allowed if other rules are met.",
+          "quote": "Other automated posts (excluding mentions or replies): Provided you comply with all other rules, you may post automated posts for entertainment, informational, or novelty purposes.",
+          "locator": "Automated posts, 1. Posting automated posts",
+          "url": "https://help.x.com/en/rules-and-policies/x-automation",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Duplicate or substantially similar posts are not allowed, on one account or several.",
+          "quote": "Multiple posts/accounts: You may not post duplicative or substantially similar posts on one account or over multiple accounts you operate.",
+          "locator": "Ground rules, spam",
+          "url": "https://help.x.com/en/rules-and-policies/x-automation",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Non-API automation such as scripting the website can lead to permanent suspension.",
+          "quote": "The use of these techniques may result in the permanent suspension of your account.",
+          "locator": "Do not, non-API-based forms of automation",
+          "url": "https://help.x.com/en/rules-and-policies/x-automation",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "visible Help Center text against the claims",
+        "next_due": "2026-12-12",
+        "source_sha256": "b1e4e5d421982a0980543eea4d13f636a3f01f63f127158d70953edf0271cc62"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tags": [
+        "x",
+        "automation"
+      ]
+    },
+    {
+      "id": "source:help.x.com/en/rules-and-policies/authenticity",
+      "kind": "source",
+      "title": "X Authenticity policy (synthetic and manipulated media)",
+      "url": "https://help.x.com/en/rules-and-policies/authenticity",
+      "summary": "X's authenticity policy. It covers inauthentic accounts and, since the old synthetic-media URL now redirects here, the rule on synthetic and manipulated media.",
+      "why_it_matters": "It is X's only stated rule on AI-made media, and it names no labelling duty.",
+      "concepts": [
+        "concept:platform-rules"
+      ],
+      "level": "intro",
+      "fit": "medium",
+      "fit_notes": "No AI label is required or offered here; the rule targets deceptive media that can cause confusion on public issues or serious harm. Sharing manipulated media in non-deceptive ways is listed as allowed. The URL help.x.com/en/rules-and-policies/manipulated-media redirected to this page; synthetic-manipulated-media-policy returned 404.",
+      "related": [
+        {
+          "id": "source:help.x.com/en/rules-and-policies/x-automation",
+          "rel": "integrates_with"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "X bans synthetic, manipulated or out-of-context media that may cause widespread confusion on public issues or serious harm.",
+          "quote": "Synthetic and Manipulated Media: You may not share inauthentic media, including, manipulated, or out-of-context media that may result in widespread confusion on public issues, impact public safety, or cause serious harm (“misleading media”).",
+          "locator": "Synthetic and Manipulated Media",
+          "url": "https://help.x.com/en/rules-and-policies/authenticity",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Sharing manipulated media in non-deceptive ways is allowed.",
+          "quote": "Sharing manipulated or out-of-context media in non-deceptive ways.",
+          "locator": "Synthetic and Manipulated Media, Allowed",
+          "url": "https://help.x.com/en/rules-and-policies/authenticity",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "visible Help Center text after redirect from manipulated-media",
+        "next_due": "2026-12-12",
+        "source_sha256": "e91b04e5f9665ee8bd07092af4dc08fa76423ea85d8f5b25580ee7c57f2ba852"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tags": [
+        "x",
+        "ai-label"
+      ]
+    },
+    {
+      "id": "source:learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin",
+      "kind": "source",
+      "title": "LinkedIn - Share on LinkedIn (self-serve) and Videos API",
+      "url": "https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin",
+      "summary": "LinkedIn's self-serve product for posting to a member's own feed, read with the Videos API specs and the Community Management API overview.",
+      "why_it_matters": "It separates the self-serve route a single developer can add today from the vetted route needed for company pages.",
+      "concepts": [
+        "concept:publishing",
+        "concept:platform-rules"
+      ],
+      "level": "intermediate",
+      "fit": "medium",
+      "fit_notes": "For your own profile, add the 'Share on LinkedIn' product in the developer portal to get w_member_social; it supports feedshare-video. Company page posting needs the Community Management API, a vetted product with a Development tier and a Standard tier that asks for a screencast. Video: MP4, 3 s to 30 min, 75 KB to 500 MB per the Videos API; the same page also says the maximum is 5 GB, an inconsistency not resolved here. No daily post limit found.",
+      "related": [],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "A developer can grant their app w_member_social by adding the Share on LinkedIn product in the developer portal.",
+          "quote": "If your application does not have this permission, you can add it through the Developer Portal. Select your app from My Apps, navigate to the Products tab, and add the Share on LinkedIn product which will grant you w_member_social.",
+          "locator": "Share on LinkedIn, Permissions",
+          "url": "https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "LinkedIn video must be MP4, 3 seconds to 30 minutes, 75 KB to 500 MB.",
+          "quote": "Length: Three seconds to 30 minutes.\n\nFile size: Between 75kb and 500MB.\n\nFile format: MP4.",
+          "locator": "Videos API, Video File Size Specifications",
+          "url": "https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/videos-api",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The Community Management API's Standard tier requires a screencast of each use case.",
+          "quote": "When applying for Standard Tier, provide a screencast video demonstrating each use case specified in your access request form, matching the use cases described in the Standard Tier access request form.",
+          "locator": "Community Management API overview, Program Tiers",
+          "url": "https://learn.microsoft.com/en-us/linkedin/marketing/community-management/community-management-overview",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "Share on LinkedIn, Videos API (view li-lms-2026-10) and Community Management overview, visible text, against the claims",
+        "next_due": "2026-12-12",
+        "source_sha256": "c9e4508244bc943c49acbfe0fc905424d88f9883a138585fa0742f0da1cbcb00"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tags": [
+        "linkedin",
+        "video-specs"
+      ]
+    },
+    {
+      "id": "source:docs.bsky.app/docs/tutorials/video",
+      "kind": "source",
+      "title": "Bluesky docs - Uploading Video",
+      "url": "https://docs.bsky.app/docs/tutorials/video",
+      "summary": "Bluesky's developer tutorial for uploading video through the video service and embedding it with app.bsky.embed.video.",
+      "why_it_matters": "Bluesky needs no app review, but it does state account-level video limits without giving the numbers.",
+      "concepts": [
+        "concept:publishing",
+        "concept:platform-rules"
+      ],
+      "level": "intermediate",
+      "fit": "low",
+      "fit_notes": "No audit or app approval is mentioned; posting uses your own account credentials. The account must have a verified email, and a daily video-post limit exists but its number is not on this page. The docs URL redirects to bsky.network/docs/about-bluesky-content/video. Size and length limits were not found on the page.",
+      "related": [],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "Bluesky-hosted accounts need a verified email to upload video and have a daily limit on video posts.",
+          "quote": "Bluesky-hosted accounts need to have verified their account email before uploading video, and there are limits on the number of video posts which can be posted per day.",
+          "locator": "Uploading Video, introduction",
+          "url": "https://docs.bsky.app/docs/tutorials/video",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "visible tutorial text after redirect to bsky.network",
+        "next_due": "2026-12-12",
+        "source_sha256": "098d52cb341096a7f91ef89ea86c79fa99239eb1ef780449088d767a4d461d36"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tags": [
+        "bluesky"
+      ]
+    },
+    {
+      "id": "source:docs.joinmastodon.org/user/posting",
+      "kind": "source",
+      "title": "Mastodon docs - Posting (attachments) and Instance media configuration",
+      "url": "https://docs.joinmastodon.org/user/posting/",
+      "summary": "Mastodon's user documentation on attachment limits, read with the Instance entity that exposes each server's real limits.",
+      "why_it_matters": "Mastodon limits are set per server, so an agent should read them from the instance instead of hard-coding them.",
+      "concepts": [
+        "concept:publishing",
+        "concept:platform-rules",
+        "concept:delivery"
+      ],
+      "level": "intermediate",
+      "fit": "low",
+      "fit_notes": "Default: one video per post, up to 99 MB, transcoded to H.264 at max 1300 kbps, so a crisp render will be softened. Read configuration.media_attachments.video_size_limit from GET /api/v2/instance for the server you post to. No app review; a token from your own account works. Rate limits were not read.",
+      "related": [],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "By default a Mastodon post takes one video up to 99 MB, transcoded to H.264 MP4 at up to 1300 kbps.",
+          "quote": "Videos (MP4, M4V, MOV, WebM) up to 99MB. Video will be transcoded to H.264 MP4 with a maximum bitrate of 1300kbps and framerate of 120fps. Only one video can be attached, per post.",
+          "locator": "Posting to your profile, Attachments",
+          "url": "https://docs.joinmastodon.org/user/posting/",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Each server reports its own video size limit in the instance configuration.",
+          "quote": "Description: The maximum size of any uploaded video, in bytes.",
+          "locator": "Instance entity, configuration[media_attachments][video_size_limit]",
+          "url": "https://docs.joinmastodon.org/entities/Instance/",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "posting page and Instance entity page, visible text, against the claims",
+        "next_due": "2026-12-12",
+        "source_sha256": "09b96ebe76f6c02a9dcf9381187d1f0c7e282db0342252be1cbe170c5cd906dd"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tags": [
+        "mastodon",
+        "video-specs"
+      ]
+    },
+    {
+      "id": "source:c2pa.org/faqs",
+      "kind": "source",
+      "title": "C2PA FAQs (Content Credentials)",
+      "url": "https://c2pa.org/faqs/",
+      "summary": "The C2PA's own FAQ on Content Credentials: what a C2PA manifest is, how it is signed, and how a product gets a trusted signing certificate.",
+      "why_it_matters": "YouTube states it labels content with C2PA metadata as AI and does not let the creator undo it, so a pipeline should know whether its generator embeds a manifest.",
+      "concepts": [
+        "concept:platform-rules",
+        "concept:delivery"
+      ],
+      "level": "advanced",
+      "fit": "medium",
+      "fit_notes": "A trusted manifest is signed with a certificate that only products in the C2PA Conformance Program receive, so a solo developer cannot simply self-sign one that validators trust. In practice the manifest comes from the generator or editor; check whether yours embeds one and whether your ffmpeg step keeps it. Only YouTube's own page was found here stating it reads C2PA; Meta's labelling pages did not render. The spec itself was not read.",
+      "related": [
+        {
+          "id": "source:support.google.com/youtube/answer/14328491",
+          "rel": "integrates_with",
+          "note": "YouTube applies a fixed AI label to C2PA content."
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "A Content Credential, or C2PA manifest, is digitally signed and hashes the asset, so edits break the link.",
+          "quote": "Consumers can trust that C2PA data was captured correctly because each Content Credential (also known as a C2PA Manifest) is digitally signed by a trusted implementation.",
+          "locator": "How can consumers of C2PA data be assured the data was captured correctly?",
+          "url": "https://c2pa.org/faqs/",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The specification can be implemented without joining, but a trusted signing certificate requires the Conformance Program.",
+          "quote": "However, to receive a Claim Signing Certificate and be listed on the official Conforming Products List, your product must undergo evaluation and legal onboarding through the C2PA Conformance Program.",
+          "locator": "Do I need to join C2PA to implement the specification?",
+          "url": "https://c2pa.org/faqs/",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "visible FAQ text against the claims; c2pa.org home page read but held no operative sentence",
+        "next_due": "2026-12-12",
+        "source_sha256": "60fa9c700f9296c58e359176ca00cf7ce6a5dea79fb55ad3c597cb44a4070d2d"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "publishing",
+      "tags": [
+        "c2pa"
+      ]
+    }
+  ]
+}
