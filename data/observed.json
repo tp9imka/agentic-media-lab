@@ -146,6 +146,21 @@
       "https://huggingface.co/api/models/Tongyi-MAI/Z-Image-Turbo"
     ]
   },
+  "model:video-rebirth/hyperflow": {
+    "archived": false,
+    "created": "2026-11-06",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 12,
+    "last_activity": "2026-11-11",
+    "licence": "Apache-2.0",
+    "open_issues": 0,
+    "sources": [
+      "https://api.github.com/repos/Video-Rebirth/hyperflow-h3-flash",
+      "https://skills.sh/api/search?q=hyperflow-h3-flash"
+    ],
+    "stars": 196
+  },
   "model:vimoo-ai/vimoo-1.0": {
     "created": "2026-09-30",
     "fetched_at": "2026-11-12",
@@ -214,6 +229,21 @@
       "https://skills.sh/api/search?q=bb"
     ],
     "stars": 5381
+  },
+  "source:github.com/gitroomhq/postiz-app/pull/2418": {
+    "archived": false,
+    "created": "2023-07-08",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 7904,
+    "last_activity": "2026-11-12",
+    "licence": "AGPL-3.0",
+    "open_issues": 209,
+    "sources": [
+      "https://api.github.com/repos/gitroomhq/postiz-app",
+      "https://skills.sh/api/search?q=postiz-app"
+    ],
+    "stars": 41429
   },
   "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md": {
     "archived": false,
@@ -316,6 +346,86 @@
       "https://skills.sh/api/search?q=material-web"
     ],
     "stars": 11434
+  },
+  "source:github.com/openai/codex/issues/60616": {
+    "archived": false,
+    "created": "2025-04-13",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 21388,
+    "installs": 4155,
+    "installs_by_skill": {
+      "babysit-pr": 4155,
+      "code-review": 749,
+      "test-tui": 2834
+    },
+    "last_activity": "2026-11-12",
+    "licence": "Apache-2.0",
+    "open_issues": 27422,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/openai/codex",
+      "https://skills.sh/api/search?q=codex"
+    ],
+    "stars": 135000
+  },
+  "source:github.com/remotion-dev/remotion/issues/12922": {
+    "archived": false,
+    "created": "2020-06-23",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 6075,
+    "installs": 2885,
+    "installs_by_skill": {
+      "add-effect": 940,
+      "add-expert": 2550,
+      "add-sfx": 2785,
+      "docs-demo": 2573,
+      "fix-dependabot": 1103,
+      "make-pr": 998,
+      "pr-name": 1103,
+      "video-report": 2812,
+      "web-renderer-test": 2885,
+      "writing-docs": 2865
+    },
+    "last_activity": "2026-11-12",
+    "licence": "unknown",
+    "open_issues": 195,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/remotion-dev/remotion",
+      "https://skills.sh/api/search?q=remotion"
+    ],
+    "stars": 72681
+  },
+  "source:github.com/remotion-dev/remotion/pull/13133": {
+    "archived": false,
+    "created": "2020-06-23",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 6075,
+    "installs": 2885,
+    "installs_by_skill": {
+      "add-effect": 940,
+      "add-expert": 2550,
+      "add-sfx": 2785,
+      "docs-demo": 2573,
+      "fix-dependabot": 1103,
+      "make-pr": 998,
+      "pr-name": 1103,
+      "video-report": 2812,
+      "web-renderer-test": 2885,
+      "writing-docs": 2865
+    },
+    "last_activity": "2026-11-12",
+    "licence": "unknown",
+    "open_issues": 195,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/remotion-dev/remotion",
+      "https://skills.sh/api/search?q=remotion"
+    ],
+    "stars": 72681
   },
   "source:github.com/zhuyansen/awesome-claude-video-skills": {
     "archived": false,
@@ -563,6 +673,21 @@
       "https://skills.sh/api/search?q=mlx-video"
     ],
     "stars": 324
+  },
+  "tool:blazejkustra/uncut": {
+    "archived": false,
+    "created": "2026-10-11",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 1,
+    "last_activity": "2026-11-09",
+    "licence": "MIT",
+    "open_issues": 2,
+    "sources": [
+      "https://api.github.com/repos/blazejkustra/uncut",
+      "https://skills.sh/api/search?q=uncut"
+    ],
+    "stars": 20
   },
   "tool:breakthrough/pyscenedetect": {
     "archived": false,
