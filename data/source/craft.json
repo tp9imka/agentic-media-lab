@@ -1,0 +1,1052 @@
+{
+  "schema_version": 1,
+  "lane": "craft",
+  "records": [
+    {
+      "id": "source:tech.ebu.ch/publications/r128",
+      "kind": "source",
+      "title": "EBU R 128 - Loudness normalisation and permitted maximum level of audio signals",
+      "url": "https://tech.ebu.ch/publications/r128",
+      "summary": "The European Broadcasting Union recommendation that sets programme loudness, true-peak ceiling and the meters to measure them. Version 5.0, November 2023. Supplement s1 adds a short-term loudness cap for adverts and promos.",
+      "why_it_matters": "It gives the two numbers a mix check needs, integrated loudness and true peak, plus a third for short clips, all measurable with ffmpeg ebur128.",
+      "concepts": [
+        "concept:audio-and-captions",
+        "concept:delivery"
+      ],
+      "level": "intermediate",
+      "fit": "high",
+      "fit_notes": "Check a render with `ffmpeg -i out.mp4 -af ebur128=peak=true -f null -` and compare I and True peak with the numbers below. -23 LUFS is a broadcast target: it plays quiet next to phone-first feeds, see the streaming supplement s2 for the interim range. The main text says Loudness Range is not recommended for programmes under 1 minute, so do not gate a short clip on LRA. The publication page sits behind a member-login banner but the PDF opened without one.",
+      "related": [
+        {
+          "id": "tool:ffmpeg/ffmpeg",
+          "rel": "integrates_with",
+          "note": "ebur128 measures, loudnorm corrects; loudnorm defaults to I=-24"
+        },
+        {
+          "id": "source:tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s2.pdf",
+          "rel": "extends"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "lane": "craft",
+      "citation": {
+        "type": "report",
+        "author": [
+          "European Broadcasting Union"
+        ],
+        "issued": "2023-11",
+        "container_title": "EBU Recommendation R 128",
+        "url": "https://tech.ebu.ch/files/live/sites/tech/files/shared/r/r128.pdf",
+        "accessed": "2026-11-12"
+      },
+      "tags": [
+        "loudness",
+        "lufs",
+        "true-peak"
+      ],
+      "claims": [
+        {
+          "text": "The programme's integrated loudness target is -23.0 LUFS.",
+          "quote": "the Programme Loudness Level shall be normalised to a Target Level of −23.0 LUFS",
+          "locator": "r128.pdf (v5.0, 2023), recommends item h",
+          "url": "https://tech.ebu.ch/files/live/sites/tech/files/shared/r/r128.pdf",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "True peak must stay at or below -1 dBTP during production.",
+          "quote": "that the True Peak Level of a programme shall not exceed −1 dBTP (dB True Peak) during production (linear audio)",
+          "locator": "r128.pdf (v5.0, 2023), recommends item m",
+          "url": "https://tech.ebu.ch/files/live/sites/tech/files/shared/r/r128.pdf",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "For short-form content such as adverts and promos, short-term (3 s) loudness must not exceed -18.0 LUFS.",
+          "quote": "that the Short-term Loudness Level (measured in compliance with EBU Tech 3341 [2]) shall not exceed −18.0 LUFS (+5.0 LU on the relative scale)",
+          "locator": "r128s1.pdf (2020), recommends item d",
+          "url": "https://tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s1.pdf",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "publication page, R 128 v5.0 PDF and R 128 s1 PDF against the three claims",
+        "source_sha256": "3884fc6fdb228acb7d988b3c6f7f8a5b8217a6737198f6e2ce35b164b344366f",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s2.pdf",
+      "kind": "source",
+      "title": "EBU R 128 s2 - Loudness in Streaming",
+      "url": "https://tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s2.pdf",
+      "summary": "EBU supplement on loudness for streamed programmes. It keeps -23 LUFS as the default and allows a louder interim distribution level for phones and noisy settings.",
+      "why_it_matters": "It is the only standards-body number found for a louder-than-broadcast streaming mix, the case most short clips fall into.",
+      "concepts": [
+        "concept:audio-and-captions",
+        "concept:delivery"
+      ],
+      "level": "intermediate",
+      "fit": "high",
+      "fit_notes": "Pick -16 LUFS integrated with -1 dBTP as a phone-first target and stay inside the EBU range. A skill in the hub masters at -14 LUFS, which is louder than the top of this range; no first-party platform page stating -14 was opened here. The publication landing page returned HTTP 403 to a scripted fetch, so the PDF is the record URL.",
+      "related": [
+        {
+          "id": "source:tech.ebu.ch/publications/r128",
+          "rel": "extends"
+        },
+        {
+          "id": "tool:mort1d/motion-graphics-skills",
+          "rel": "contradicts",
+          "note": "the skill masters at -14 LUFS, above this range's -16.0 LUFS ceiling"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "lane": "craft",
+      "citation": {
+        "type": "report",
+        "author": [
+          "European Broadcasting Union"
+        ],
+        "issued": "2023",
+        "container_title": "EBU Recommendation R 128 s2",
+        "url": "https://tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s2.pdf",
+        "accessed": "2026-11-12"
+      },
+      "tags": [
+        "loudness",
+        "lufs",
+        "streaming"
+      ],
+      "claims": [
+        {
+          "text": "The default is to stream programmes unchanged at -23.0 LUFS.",
+          "quote": "that programmes should be streamed unchanged, that is at −23.0 LUFS",
+          "locator": "r128s2.pdf (2023), recommends item e",
+          "url": "https://tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s2.pdf",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Without loudness metadata, a broadcaster may distribute louder, in an interim range of -20.0 to -16.0 LUFS.",
+          "quote": "the interim value for the Distribution Loudness Level should be in the range of −20.0 to −16.0 LUFS",
+          "locator": "r128s2.pdf (2023), further recommends item g",
+          "url": "https://tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s2.pdf",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "R 128 s2 PDF text against both claims",
+        "source_sha256": "72da8698a1f60d6063411d64ab9f99c1cf6f46f0d54bcb1d793797eef835556f",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
+      "kind": "source",
+      "title": "BBC Subtitle Guidelines",
+      "url": "https://www.bbc.co.uk/accessibility/forproducts/guides/subtitles/",
+      "summary": "The BBC's editorial and technical rules for subtitles: reading rate, line length, line count, font size and placement, with separate numbers for vertical 9:16 video.",
+      "why_it_matters": "It is the one primary caption guide found that gives line width and font size for vertical video, which is the frame most agent-made shorts use.",
+      "concepts": [
+        "concept:audio-and-captions",
+        "concept:visual-design"
+      ],
+      "level": "intro",
+      "fit": "high",
+      "fit_notes": "Turn the rate into a check: on-screen seconds >= 0.3 x word count per caption. The page also recommends at most three lines for 9:16 and two for 16:9. Width is set as a share of the frame, so measure rendered text width rather than counting characters when the font is proportional. The older address bbc.github.io/subtitle-guidelines returned 404 on 2026-11-12. The page is long; only the sections quoted were compared.",
+      "related": [
+        {
+          "id": "source:partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-english-usa-timed-text-style-guide",
+          "rel": "alternative_to",
+          "note": "Netflix counts characters per second; BBC counts words per minute"
+        },
+        {
+          "id": "tool:bbc/ttml-validator",
+          "rel": "integrates_with"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "lane": "craft",
+      "tags": [
+        "subtitles",
+        "reading-speed",
+        "vertical-video"
+      ],
+      "claims": [
+        {
+          "text": "Leave a caption up for about 0.3 seconds per word, based on 160-180 words per minute.",
+          "quote": "Based on the recommended rate of 160-180 words per minute, you should aim to leave a subtitle on screen for a minimum period of around 0.3 seconds per word (e.g. 1.2 seconds for a 4-word subtitle).",
+          "locator": "section 4.1 Target minimum timing",
+          "url": "https://www.bbc.co.uk/accessibility/forproducts/guides/subtitles/",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "For vertical 9:16 video, a line spans 90% of the width, which fits about 25 characters.",
+          "quote": "As a guide, the equivalent to 37 characters in a 75% width region of a 16:9 (landscape) video is 25 characters in a 90% width region of a 9:16 (vertical) video.",
+          "locator": "section 3.1 Line length, table Characters per line and note below it",
+          "url": "https://www.bbc.co.uk/accessibility/forproducts/guides/subtitles/",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "For 9:16 video, set the font to fit a line height of 3.9% to 4.5% of the active video height.",
+          "quote": "Font size should be set to fit within a line height in the range 3.9% to 4.5% of the active video height for 9:16 aspect ratio videos,",
+          "locator": "section 9.2.1 Authoring font size",
+          "url": "https://www.bbc.co.uk/accessibility/forproducts/guides/subtitles/",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "guidelines page sections 3.1, 3.3, 4.1, 9.2.1 against the claims",
+        "source_sha256": "91cd8d1d9c3edebf1af3f189f77573eb5c463a5226beaf62662f70b530bf2584",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-english-usa-timed-text-style-guide",
+      "kind": "source",
+      "title": "Netflix English (USA) Timed Text Style Guide",
+      "url": "https://partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-English-USA-Timed-Text-Style-Guide",
+      "summary": "Netflix's subtitle rules for English (USA), read together with its general timed-text requirements: characters per line, reading speed and per-event duration limits.",
+      "why_it_matters": "Every number here is a direct lint rule for an SRT or VTT file an agent writes: line length, characters per second, minimum and maximum time on screen.",
+      "concepts": [
+        "concept:audio-and-captions"
+      ],
+      "level": "intro",
+      "fit": "high",
+      "fit_notes": "Lint each cue: max 2 lines, <= 42 characters per line, <= 20 characters per second, duration between 0.834 s and 7 s. The 42-character line assumes a 16:9 frame; for 9:16 use the BBC width rule instead. One skill in the hub ships a caption validator with the same 42 and 20 defaults. Written for long-form dialogue, not for word-by-word kinetic captions.",
+      "related": [
+        {
+          "id": "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
+          "rel": "alternative_to"
+        },
+        {
+          "id": "tool:calesthio/generative-media-skills",
+          "rel": "integrates_with",
+          "note": "its validate_captions.py defaults to 42 characters per line and a 20 cps warning"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "lane": "craft",
+      "tags": [
+        "subtitles",
+        "reading-speed",
+        "cps"
+      ],
+      "claims": [
+        {
+          "text": "Adult programmes allow up to 20 characters per second; children's up to 17.",
+          "quote": "Adult programs: Up to 20 characters per second",
+          "locator": "English (USA) guide, section I.14 Reading Speed Limits",
+          "url": "https://partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-English-USA-Timed-Text-Style-Guide",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A line holds at most 42 characters.",
+          "quote": "I.2. Character Limitation 42 characters per line",
+          "locator": "English (USA) guide, section I.2 Character Limitation",
+          "url": "https://partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-English-USA-Timed-Text-Style-Guide",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Each subtitle event stays on screen at least 5/6 of a second (20 frames at 24 fps) and at most 7 seconds.",
+          "quote": "Minimum duration: 5/6 (five-sixths) of a second per subtitle event (e.g. 20 frames for 24fps) Maximum duration: 7 seconds per subtitle event",
+          "locator": "General Requirements article, section 1 Duration",
+          "url": "https://partnerhelp.netflixstudios.com/hc/en-us/articles/215758617-Timed-Text-Style-Guide-General-Requirements",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "English (USA) guide and General Requirements article against the claims",
+        "source_sha256": "728a2b5bbb9081dfeff0c1c9626c7c9181defdb937f8574ff3bd828e61644ff9",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:w3.org/tr/wcag22",
+      "kind": "source",
+      "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "summary": "The W3C Recommendation for accessible web content. Its success criteria cover captions for prerecorded media (1.2.2), text contrast (1.4.3) and flashing (2.3.1).",
+      "why_it_matters": "It gives a pass or fail number for caption and title contrast and for flashing, which a frame-sampling check can test on a rendered clip.",
+      "concepts": [
+        "concept:visual-design",
+        "concept:audio-and-captions"
+      ],
+      "level": "intro",
+      "fit": "high",
+      "fit_notes": "Contrast is defined for text on a solid colour. Over moving video, test the caption colour against the lightest and darkest pixels behind it on sampled frames, or put the text on a plate. Large-scale text means at least 18 point, or 14 point bold. The flash rule matters for glitch and strobe transitions: count luminance flips per second. Written for web pages, applied here to video by analogy.",
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "lane": "craft",
+      "tags": [
+        "contrast",
+        "accessibility",
+        "flashing"
+      ],
+      "claims": [
+        {
+          "text": "Text needs a contrast ratio of at least 4.5:1 against its background.",
+          "quote": "The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following:",
+          "locator": "SC 1.4.3 Contrast (Minimum), Level AA",
+          "url": "https://www.w3.org/TR/WCAG22/",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Large-scale text may drop to 3:1.",
+          "quote": "Large-scale text and images of large-scale text have a contrast ratio of at least 3:1;",
+          "locator": "SC 1.4.3 Contrast (Minimum), first exception",
+          "url": "https://www.w3.org/TR/WCAG22/",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Nothing may flash more than three times in any one second, unless below the flash thresholds.",
+          "quote": "Web pages do not contain anything that flashes more than three times in any one second period, or the flash is below the general flash and red flash thresholds.",
+          "locator": "SC 2.3.1 Three Flashes or Below Threshold, Level A",
+          "url": "https://www.w3.org/TR/WCAG22/",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "WCAG 2.2 TR text for SC 1.2.2, 1.4.3, 2.3.1 against the claims",
+        "source_sha256": "334fdd916bc2432af512dd50f738593ac390222cf8bad96f466165d1881b76f9",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss",
+      "kind": "source",
+      "title": "Material 3 motion tokens (material-web, _md-sys-motion.scss)",
+      "url": "https://github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss",
+      "summary": "Google's generated Sass file of Material 3 system motion tokens for the web: duration steps from 50 ms to 1000 ms, cubic-bezier easing curves, and spring damping and stiffness values.",
+      "why_it_matters": "An agent animating UI-style titles can use these values as named durations and curves instead of one default ease for everything.",
+      "concepts": [
+        "concept:motion-and-transitions"
+      ],
+      "level": "intermediate",
+      "fit": "medium",
+      "fit_notes": "Read from the token file because m3.material.io renders by script and returned no text. A search snippet from m3.material.io says the easing and duration system is no longer maintained in favour of springs; that page was not opened. The same file carries spring tokens (stiffness and damping) for GSAP or Motion Canvas spring eases. UI durations are for taps; a video title entrance usually runs longer.",
+      "related": [
+        {
+          "id": "source:carbondesignsystem.com/elements/motion/overview",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "craft",
+      "tags": [
+        "easing",
+        "duration",
+        "design-tokens"
+      ],
+      "claims": [
+        {
+          "text": "The medium duration steps are 250, 300, 350 and 400 ms.",
+          "quote": "$duration-medium1: 250ms; /// md.sys.motion.duration.medium2 (Duration) $duration-medium2: 300ms; /// md.sys.motion.duration.medium3 (Duration) $duration-medium3: 350ms; /// md.sys.motion.duration.medium4 (Duration) $duration-medium4: 400ms;",
+          "locator": "_md-sys-motion.scss, duration tokens",
+          "url": "https://github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The emphasized-decelerate curve, used for elements entering, is cubic-bezier(0.05, 0.7, 0.1, 1).",
+          "quote": "$easing-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);",
+          "locator": "_md-sys-motion.scss, easing tokens",
+          "url": "https://github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "In this web token set, the emphasized easing is an alias of standard, not its own curve.",
+          "quote": "/// md.sys.motion.easing.emphasized (Easing) $easing-emphasized: $easing-standard;",
+          "locator": "_md-sys-motion.scss, last token",
+          "url": "https://github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "token file (design system version 34.0.21) against the claims",
+        "source_sha256": "2493ded90850d1593f0c4271564ef716c6717f8cfa1b53b704f12371229de6f7",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:carbondesignsystem.com/elements/motion/overview",
+      "kind": "source",
+      "title": "IBM Carbon Design System - Motion",
+      "url": "https://carbondesignsystem.com/elements/motion/overview/",
+      "summary": "IBM Carbon's motion guidance: productive and expressive easing curves, entrance and exit easing, and six fixed duration tokens from 70 ms to 700 ms.",
+      "why_it_matters": "It states the rule that duration grows with distance or size and gives curves in both CSS and After Effects terms, which maps onto code-driven video.",
+      "concepts": [
+        "concept:motion-and-transitions"
+      ],
+      "level": "intermediate",
+      "fit": "medium",
+      "fit_notes": "Use productive curves for small UI moves and expressive for a hero element. The page also gives exit easing that speeds up as the element leaves, matching the HyperFrames skill rule that exits are shorter than entrances. The duration table is for interface feedback; scale up for video and keep the ratios. Table cells are joined with | in the saved text.",
+      "related": [
+        {
+          "id": "source:github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss",
+          "rel": "alternative_to"
+        },
+        {
+          "id": "tool:heygen-com/hyperframes",
+          "rel": "integrates_with",
+          "note": "both shorten or accelerate exits"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "craft",
+      "tags": [
+        "easing",
+        "duration"
+      ],
+      "claims": [
+        {
+          "text": "Carbon ships six fixed duration tokens; the fastest, fast-01, is 70 ms.",
+          "quote": "duration-fast-01 | Micro-interactions such as button and toggle | 70ms",
+          "locator": "section Duration, token table, first row",
+          "url": "https://carbondesignsystem.com/elements/motion/overview/",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Productive standard easing is cubic-bezier(0.2, 0, 0.38, 0.9).",
+          "quote": "motion(standard, productive) | cubic-bezier(0.2, 0, 0.38, 0.9)",
+          "locator": "section Easing, Standard easing table, Productive row",
+          "url": "https://carbondesignsystem.com/elements/motion/overview/",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Duration should grow with the distance travelled or the size change.",
+          "quote": "the larger the change in distance (traveled) or size (scaling) of the element, the longer the animation takes.",
+          "locator": "section Duration, first paragraph",
+          "url": "https://carbondesignsystem.com/elements/motion/overview/",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "motion overview page text against the claims",
+        "source_sha256": "0ccd3f80b030d3d9b2e8a4ef95b77a74b87e28f7c68496977f3483ae2daa9b43",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:fountain.io/syntax",
+      "kind": "source",
+      "title": "Fountain screenplay syntax",
+      "url": "https://fountain.io/syntax/",
+      "summary": "A plain-text screenplay markup. Scene headings, action, dialogue and transitions are recognised from line shape, and sections and synopses add outline notes that do not print.",
+      "why_it_matters": "An agent can write the script stage as a Fountain file the reader can open in screenwriting apps, with scenes and transitions parseable by line rules.",
+      "concepts": [
+        "concept:story-and-decomposition"
+      ],
+      "level": "intro",
+      "fit": "medium",
+      "fit_notes": "Emit one scene heading per scene and put shot notes in synopses (= lines) so they survive editing but stay out of printed pages. Fountain has no field for duration, camera or asset; keep a separate JSON shot list keyed by scene number (#1#, #1A#) for those. Parsers differ on edge cases; none were run here.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "craft",
+      "tags": [
+        "screenplay",
+        "script-format"
+      ],
+      "claims": [
+        {
+          "text": "A scene heading is a line starting with INT, EXT or similar, followed by a blank line.",
+          "quote": "A Scene Heading is any line that has a blank line following it, and either begins with INT or EXT or similar (full list below).",
+          "locator": "section Scene Headings",
+          "url": "https://fountain.io/syntax/",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A transition is uppercase, has empty lines around it and ends in TO:.",
+          "quote": "Uppercase Preceded by and followed by an empty line Ending in TO:",
+          "locator": "section Transition",
+          "url": "https://fountain.io/syntax/",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Synopses are single lines starting with = and are left out of formatted output.",
+          "quote": "Synopses are single lines prefixed by an equals sign =. They can be located anywhere within the screenplay.",
+          "locator": "section Sections and Synopses",
+          "url": "https://fountain.io/syntax/",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "syntax page against the claims",
+        "source_sha256": "e573bf613686a703ca1126c360df489c5e3f472612171a240bbd127df6731a79",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:arxiv.org/abs/2606.07649",
+      "kind": "source",
+      "title": "ViMax: Agentic Video Generation (arXiv 2606.07649)",
+      "url": "https://arxiv.org/abs/2606.07649",
+      "summary": "A multi-agent pipeline paper: screenwriting, hierarchical story decomposition, a storyboard agent that plans shots, keyframe generation with a VLM judge, then video per shot.",
+      "why_it_matters": "It names the fields a shot spec should carry and reports measured cost and quality for keyframe best-of-k, which sets a default for a review loop.",
+      "concepts": [
+        "concept:story-and-decomposition",
+        "concept:agentic-pipelines",
+        "concept:review-loop"
+      ],
+      "level": "advanced",
+      "fit": "medium",
+      "fit_notes": "Copy the shot-spec fields into your own shot-list schema, and default to two keyframe candidates per shot before spending on video. The 17.5 USD per task is on the paper's own benchmark with Gemini-3-Flash as backbone; it is not a price for the reader's clip. Authors' own evaluation, not reproduced here.",
+      "related": [
+        {
+          "id": "source:arxiv.org/abs/2604.24842",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "craft",
+      "citation": {
+        "type": "article",
+        "author": [
+          "Lingxuan Huang",
+          "Sizhe He",
+          "Hengji Zhou",
+          "Liqiang Nie",
+          "Lianghao Xia",
+          "Chao Huang"
+        ],
+        "issued": "2026",
+        "container_title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.07649",
+        "accessed": "2026-11-12"
+      },
+      "tags": [
+        "shot-planning",
+        "storyboard"
+      ],
+      "claims": [
+        {
+          "text": "Each planned shot carries camera angle, movement, lighting, character positions and duration.",
+          "quote": "contains comprehensive production details including camera angles, movements, lighting conditions, character positioning, and temporal duration, providing the technical blueprint for subsequent video generation stages.",
+          "locator": "HTML, section on Shot Planning",
+          "url": "https://arxiv.org/html/2606.07649",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Two keyframe candidates per shot scored best; three or four cost more and scored lower.",
+          "quote": "Best-of-2 yields Overall GC of 0.5571 at an average cost of $17.500 and 405s per task.",
+          "locator": "HTML, Best-of-k study",
+          "url": "https://arxiv.org/html/2606.07649",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Replacing the storyboard agent with plain screenplay segmentation cut a visual score from 4.94 to 3.10.",
+          "quote": "Replacing StoryboardArtist with deterministic screenplay segmentation preserves story order and shot count but removes agent-based visual articulation; VSU falls from 4.94 to 3.10",
+          "locator": "HTML, ablation, Narrative-Planning Components",
+          "url": "https://arxiv.org/html/2606.07649",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "arXiv abstract page and HTML full text against the claims",
+        "source_sha256": "a6d7a006328f69c789d9fd351a41658730c58757331f881ce1a1bfa39eea9e9c",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:arxiv.org/abs/2604.24842",
+      "kind": "source",
+      "title": "Co-Director: Agentic Generative Video Storytelling (arXiv 2604.24842)",
+      "url": "https://arxiv.org/abs/2604.24842",
+      "summary": "A paper on short ad generation with agents: a pre-production agent writes brief, storyline and storyboard, a production agent makes keyframes, clips and audio, and an LLM judge scores each storyline before it is used.",
+      "why_it_matters": "It is the closest paper to the reader's job, a 12-second multi-shot ad, and its judge rubric scores the hook in the first 1-2 seconds.",
+      "concepts": [
+        "concept:story-and-decomposition",
+        "concept:agentic-pipelines",
+        "concept:review-loop"
+      ],
+      "level": "advanced",
+      "fit": "high",
+      "fit_notes": "Reuse two of its fixed choices: four shots for a 12-second spot, and a refinement loop capped at three retries. The storyline judge rubric in the appendix can be adapted as a pre-render check. The pipeline runs on Google hosted models (Gemini 3 Pro, Veo 3.1 and others), so a replica costs per call; cost was not checked. Authors' own evaluation, not reproduced here.",
+      "related": [
+        {
+          "id": "source:arxiv.org/abs/2606.07649",
+          "rel": "alternative_to"
+        },
+        {
+          "id": "model:google/veo-3.1",
+          "rel": "depends_on"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "craft",
+      "citation": {
+        "type": "article",
+        "author": [
+          "Yale Song",
+          "Yiwen Song",
+          "Nick Losier",
+          "Nathan Hodson",
+          "Ye Jin",
+          "Rhyard Zhu",
+          "Yan Xu",
+          "Daniel Vlasic",
+          "Carina Claassen",
+          "Jasmine Leon",
+          "Khanh G. LeViet",
+          "Zack Chomyn",
+          "Joe Timmons",
+          "Brett Slatkin",
+          "Scott Penberthy",
+          "Tomas Pfister"
+        ],
+        "issued": "2026",
+        "container_title": "arXiv",
+        "url": "https://arxiv.org/abs/2604.24842",
+        "accessed": "2026-11-12"
+      },
+      "tags": [
+        "shot-planning",
+        "hook",
+        "ads"
+      ],
+      "claims": [
+        {
+          "text": "The final videos are four shots totalling 12 seconds.",
+          "quote": "Final videos feature 4 shots totaling 12 seconds.",
+          "locator": "HTML, section on implementation details",
+          "url": "https://arxiv.org/html/2604.24842",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Local refinement is capped at three retries.",
+          "quote": "and local refinement is capped at 3 retries.",
+          "locator": "HTML, section on implementation details",
+          "url": "https://arxiv.org/html/2604.24842",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The storyline judge asks whether the story grabs attention within the first 1-2 seconds.",
+          "quote": "Does the story immediately grab attention within the first 1-2 seconds?",
+          "locator": "HTML, appendix, storyline evaluation prompt, Hook Quality (0-20 pts)",
+          "url": "https://arxiv.org/html/2604.24842",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "arXiv abstract page and HTML full text against the claims",
+        "source_sha256": "fe095fe3b10e4ea0c203355da5b0104aec5bd34dc26ff158abac904f087b0446",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:support.google.com/youtube/answer/1722171",
+      "kind": "source",
+      "title": "YouTube recommended upload encoding settings",
+      "url": "https://support.google.com/youtube/answer/1722171",
+      "summary": "YouTube Help's upload spec: MP4 container with fast start, H.264 High profile with closed GOP, AAC-LC or Opus audio at 48 kHz, and recommended bitrates. A linked page defines when an upload counts as a Short.",
+      "why_it_matters": "Each line maps to an ffmpeg flag, so an agent can check its export against YouTube's own list before upload.",
+      "concepts": [
+        "concept:delivery"
+      ],
+      "level": "intro",
+      "fit": "high",
+      "fit_notes": "ffmpeg mapping: -movflags +faststart, -c:v libx264 -profile:v high -pix_fmt yuv420p -bf 2 -g <fps/2>, -c:a aac -ar 48000. The page also asks for no edit lists, which Meta's Reels spec repeats. The 1080p SDR recommendation is 8 Mbps at 24-30 fps. Upload limits change; recheck within 30 days.",
+      "related": [
+        {
+          "id": "source:facebook.com/business/ads-guide/update/video/instagram-reels",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "lane": "craft",
+      "tags": [
+        "export",
+        "h264",
+        "shorts"
+      ],
+      "claims": [
+        {
+          "text": "Put the moov atom at the front of the file (fast start).",
+          "quote": "moov atom at the front of the file (Fast Start)",
+          "locator": "answer 1722171, section Container: MP4",
+          "url": "https://support.google.com/youtube/answer/1722171",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Use a closed GOP of half the frame rate.",
+          "quote": "Closed GOP. GOP of half the frame rate.",
+          "locator": "answer 1722171, section Video codec: H.264",
+          "url": "https://support.google.com/youtube/answer/1722171",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Square or vertical uploads up to three minutes are classed as Shorts.",
+          "quote": "Any videos uploaded on or after this date with a square or vertical aspect ratio up to three minutes in length will be categorized as Shorts on YouTube.",
+          "locator": "answer 15424877, Understand three-minute YouTube Shorts",
+          "url": "https://support.google.com/youtube/answer/15424877",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "answer 1722171 and answer 15424877 against the claims",
+        "source_sha256": "63661d637980bf6e63d699ba76b531d9da0f8562d3420d553f7f67dfd1193c36",
+        "next_due": "2026-12-12"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:support.google.com/youtube/answer/9314415",
+      "kind": "source",
+      "title": "YouTube Help - Measure key moments for audience retention",
+      "url": "https://support.google.com/youtube/answer/9314415",
+      "summary": "YouTube Studio's key moments report: intro retention at 30 seconds, top moments, spikes and dips, with YouTube's own advice on each.",
+      "why_it_matters": "It is YouTube's own definition of the intro window and tells a feedback loop which clips will get the report at all.",
+      "concepts": [
+        "concept:feedback-loop",
+        "concept:story-and-decomposition"
+      ],
+      "level": "intro",
+      "fit": "medium",
+      "fit_notes": "Under-60-second Shorts do not get this report, so a Shorts feedback loop needs the plain retention curve from the Analytics API instead. YouTube publishes no hook length for Shorts on this page; the 30-second intro window is for long videos. API access was not checked.",
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "lane": "craft",
+      "tags": [
+        "retention",
+        "hook",
+        "analytics"
+      ],
+      "claims": [
+        {
+          "text": "Intro retention is the share of viewers still watching after 30 seconds.",
+          "quote": "Intro tells you what percentage of your audience still watched your video after the first 30 seconds.",
+          "locator": "section Intros",
+          "url": "https://support.google.com/youtube/answer/9314415",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Key moments only appear for videos of at least 60 seconds with at least 100 views.",
+          "quote": "Your video should also be at least 60 seconds long and have at least 100 views.",
+          "locator": "note under the moment types",
+          "url": "https://support.google.com/youtube/answer/9314415",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "YouTube suggests moving compelling content earlier because audiences shrink over a video.",
+          "quote": "consider introducing the compelling content earlier in the video—audience sizes typically decrease over the length of the video.",
+          "locator": "section Top moments, recommendations",
+          "url": "https://support.google.com/youtube/answer/9314415",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "answer 9314415 against the claims",
+        "source_sha256": "98f48d3545ebfd0206b73add6ed575ac1af3f2527e91f7f5701f17b3337f59f7",
+        "next_due": "2026-12-12"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:ads.tiktok.com/help/article/creative-best-practices",
+      "kind": "source",
+      "title": "TikTok Ads - Creative best practices for performance ads",
+      "url": "https://ads.tiktok.com/help/article/creative-best-practices",
+      "summary": "TikTok Business Help advice for ad creative: structure, hook timing and on-screen text rate. Read with TikTok's in-feed ad specifications page for frame and file limits.",
+      "why_it_matters": "It is the only first-party page found that puts numbers on hook timing and on-screen text speed for short-form.",
+      "concepts": [
+        "concept:story-and-decomposition",
+        "concept:audio-and-captions",
+        "concept:delivery"
+      ],
+      "level": "intro",
+      "fit": "medium",
+      "fit_notes": "Written for paid ads, not organic posts. The 5-10 words per second is for short text overlays and is two to three times the BBC subtitle rate; do not apply it to full captions of speech. The ads spec page gives safe zones only as downloadable files, not numbers; they were not downloaded. Specs say last updated June 2026.",
+      "related": [
+        {
+          "id": "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
+          "rel": "contradicts",
+          "note": "5-10 words per second vs 160-180 words per minute (about 3 per second)"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "lane": "craft",
+      "tags": [
+        "hook",
+        "ads",
+        "safe-zone"
+      ],
+      "claims": [
+        {
+          "text": "Put the hook in the first 6 seconds.",
+          "quote": "Prioritize your hook in the first 6 seconds to boost engagement and increase watch time.",
+          "locator": "creative best practices, section on content structure",
+          "url": "https://ads.tiktok.com/help/article/creative-best-practices?lang=en",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "For text overlays TikTok recommends 5-10 words per second.",
+          "quote": "We recommend displaying 5-10 words per second when using text.",
+          "locator": "creative best practices, section on captions and text",
+          "url": "https://ads.tiktok.com/help/article/creative-best-practices?lang=en",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Vertical in-feed ads are 9:16 and at least 540x960 px.",
+          "quote": "Vertical (recommended): 9:16, more than or equal to 540*960px.",
+          "locator": "video ads specifications, Non-Spark Ads, Dimensions",
+          "url": "https://ads.tiktok.com/help/article/video-ads-specifications?lang=en",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "creative best practices page and video ads specifications page against the claims",
+        "source_sha256": "6a42aa6dc703b1f6550ec0a2f4f1fefa60f90e5655ced69d69df4a3d96de33d8",
+        "next_due": "2026-12-12"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:facebook.com/business/ads-guide/update/video/instagram-reels",
+      "kind": "source",
+      "title": "Meta Ads Guide - Instagram Reels video ads",
+      "url": "https://www.facebook.com/business/ads-guide/update/video/instagram-reels",
+      "summary": "Meta's spec page for Instagram Reels ads: 9:16 at 1440x2560, H.264 and AAC settings, up to 15 minutes and 4 GB, and a safe zone stated in percentages.",
+      "why_it_matters": "It is the only first-party page opened that states a vertical safe zone as numbers, which converts directly to a pixel check on a 1080x1920 frame.",
+      "concepts": [
+        "concept:delivery",
+        "concept:visual-design"
+      ],
+      "level": "intro",
+      "fit": "high",
+      "fit_notes": "On 1080x1920 the margins are about 269 px top, 672 px bottom and 65 px each side. A skill in the hub uses a flat 50 px margin, which is inside Meta's side margin. Written for ads; organic Reels UI is similar but Meta does not state it here. Specs change; recheck within 30 days.",
+      "related": [
+        {
+          "id": "tool:josiahsiegel/claude-plugin-marketplace",
+          "rel": "contradicts",
+          "note": "its 50 px safe margin is less than Meta's 6% side margin (65 px at 1080 wide)"
+        },
+        {
+          "id": "source:support.google.com/youtube/answer/1722171",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "lane": "craft",
+      "tags": [
+        "safe-zone",
+        "export",
+        "reels"
+      ],
+      "claims": [
+        {
+          "text": "Keep text and logos out of the top 14%, the bottom 35% and 6% on each side.",
+          "quote": "Consider leaving at least 14% of the top, 35% of the bottom, and 6% on each side of your asset free from text, logos, or other important creative elements.",
+          "locator": "Design Recommendations, safe zone paragraph",
+          "url": "https://www.facebook.com/business/ads-guide/update/video/instagram-reels",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Encode H.264, square pixels, fixed frame rate, progressive, stereo AAC at 128 kbps or more.",
+          "quote": "Video Settings: H.264 compression, square pixels, fixed frame rate, progressive scan and stereo AAC audio compression at 128kbps+",
+          "locator": "Design Recommendations",
+          "url": "https://www.facebook.com/business/ads-guide/update/video/instagram-reels",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Reels ads must not use files with edit lists or special container boxes.",
+          "quote": "Videos that contain edit lists or special boxes in file containers.",
+          "locator": "Reels ads should not contain, list",
+          "url": "https://www.facebook.com/business/ads-guide/update/video/instagram-reels",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "Ads Guide Reels page against the claims",
+        "source_sha256": "deb2d8109a2a30c88a62ef88c233cbd0f348093a60530389edf77f57c2ddb9c2",
+        "next_due": "2026-12-12"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:cloud.wikis.utexas.edu/wiki/spaces/rtf318/pages/80022510",
+      "kind": "source",
+      "title": "Murch's Rule of Six (UT Austin RTF 318 course wiki)",
+      "url": "https://cloud.wikis.utexas.edu/wiki/spaces/rtf318/pages/80022510/Murch+s+Rule+of+Six",
+      "summary": "A University of Texas film course wiki page summarising Walter Murch's Rule of Six from In the Blink of an Eye: six criteria for a cut, ranked with percentage weights.",
+      "why_it_matters": "It gives an ordered list a review step can use to decide which cut to keep when two rules conflict.",
+      "concepts": [
+        "concept:motion-and-transitions",
+        "concept:footage-editing",
+        "concept:story-and-decomposition"
+      ],
+      "level": "intro",
+      "fit": "medium",
+      "fit_notes": "Use the order, not the decimals: when a cut breaks continuity but keeps emotion and story, keep it. The book itself was not opened. Other secondary pages seen in search give different percentages for the lower four items; this page matches the most common set.",
+      "source_type": "independent-secondary",
+      "corroboration": "single-source",
+      "lane": "craft",
+      "downgrade": {
+        "reason": "indirect",
+        "note": "course wiki summarising the book; In the Blink of an Eye was not opened"
+      },
+      "citation": {
+        "type": "book",
+        "author": [
+          "Walter Murch"
+        ],
+        "issued": "2001",
+        "container_title": "In the Blink of an Eye: A Perspective on Film Editing (2nd ed.)",
+        "accessed": "2026-11-12"
+      },
+      "tags": [
+        "editing",
+        "cuts"
+      ],
+      "claims": [
+        {
+          "text": "Murch weights emotion above the other five criteria combined.",
+          "quote": "Ultimately he says that emotion is worth more than the other 5 combined, since if the emotion is right it will mask any other deficiencies.",
+          "locator": "paragraph after the six criteria",
+          "url": "https://cloud.wikis.utexas.edu/wiki/spaces/rtf318/pages/80022510/Murch+s+Rule+of+Six",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The weights are emotion 51%, story 23%, rhythm 10% and eye-trace 7%, with 5% and 4% for 2D and 3D continuity.",
+          "quote": "Emotion – 51% Story – 23% Rhythm – 10% Eye-trace – 7%",
+          "locator": "list Rule of Six: When to Cut",
+          "url": "https://cloud.wikis.utexas.edu/wiki/spaces/rtf318/pages/80022510/Murch+s+Rule+of+Six",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "When something has to give, sacrifice from the bottom of the list up.",
+          "quote": "Murch suggests that if you must sacrifice to make a cut you start from the bottom of this list and work your way up",
+          "locator": "paragraph after the six criteria",
+          "url": "https://cloud.wikis.utexas.edu/wiki/spaces/rtf318/pages/80022510/Murch+s+Rule+of+Six",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "course wiki page text against the claims; book not opened",
+        "source_sha256": "e3b147c8c8ee1cfb3889a46851d0b40c6e14cdbb95fbea9d21e92c79f6c12719",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current"
+    }
+  ]
+}

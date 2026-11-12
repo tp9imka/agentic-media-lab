@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "lane": "craft",
+  "records": [
+    {
+      "id": "tool:breakthrough/pyscenedetect",
+      "kind": "tool",
+      "title": "PySceneDetect",
+      "url": "https://github.com/Breakthrough/PySceneDetect",
+      "summary": "A Python library and CLI that finds shot boundaries in a video and can split it, save frames or write a cut list.",
+      "why_it_matters": "Run on a render, it gives the real cut times and shot lengths, so a review step can check pacing and catch accidental cuts or a missing transition.",
+      "concepts": [
+        "concept:footage-editing",
+        "concept:review-loop"
+      ],
+      "level": "intro",
+      "fit": "high",
+      "fit_notes": "For a generated clip, run `scenedetect -i out.mp4 detect-adaptive list-scenes` and compare cut count and shot lengths with the shot list. Fades are missed by the content detectors; use detect-threshold or ffmpeg blackdetect for those. Needs Python and OpenCV; not installed or run here.",
+      "related": [
+        {
+          "id": "tool:ffmpeg/ffmpeg",
+          "rel": "alternative_to",
+          "note": "ffmpeg scdet gives a per-frame score without splitting"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "craft",
+      "maturity": "active",
+      "tool_type": "library",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "review-loop",
+        "motion"
+      ],
+      "cost": "free-local",
+      "tags": [
+        "shot-detection",
+        "qc"
+      ],
+      "claims": [
+        {
+          "text": "Use detect-adaptive or detect-content for hard cuts and detect-threshold for fades.",
+          "quote": "For [detector] use detect-adaptive or detect-content to find fast cuts, and detect-threshold for fades in/out.",
+          "locator": "CLI docs, scenedetect command",
+          "url": "https://www.scenedetect.com/docs/latest/cli.html",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Scenes shorter than 0.6 s are not split off by default.",
+          "quote": "Minimum length of any scene. TIMECODE can be specified as number of frames (-m 10), time in seconds (-m 2.5), or timecode (-m 00:02:53.633). Default: 0.6s",
+          "locator": "CLI docs, global option -m/--min-scene-len",
+          "url": "https://www.scenedetect.com/docs/latest/cli.html",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "detect-content cuts when the frame difference score exceeds 27.0 by default.",
+          "quote": "Lower values are more sensitive to shot changes. Refers to “content_val” in stats file. Default: 27.0",
+          "locator": "CLI docs, detect-content, option -t/--threshold",
+          "url": "https://www.scenedetect.com/docs/latest/cli.html",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "official CLI reference against the claims",
+        "source_sha256": "93a7b5bb24f4ac6fcc3e76c001bf04529ce8ecf83e22ca5cf5f0217cadfa9e5c",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:netflix/vmaf",
+      "kind": "tool",
+      "title": "VMAF (libvmaf)",
+      "url": "https://github.com/Netflix/vmaf",
+      "summary": "Netflix's full-reference perceptual video quality metric, as a C library, CLI and ffmpeg filter, with PSNR, SSIM and the CAMBI banding detector included.",
+      "why_it_matters": "It measures what an export step lost against the master, and the phone model fits clips watched on a phone.",
+      "concepts": [
+        "concept:evaluation",
+        "concept:delivery"
+      ],
+      "level": "intermediate",
+      "fit": "medium",
+      "fit_notes": "Full-reference only: it needs the lossless master and the encode at the same size and frame count, so it checks the encode, not whether a generated clip looks good. Use the phone model for 9:16 shorts. CAMBI is useful on generated gradients and skies. The v1 models date from 2026-06; an ffmpeg build may still ship v0, check the model path. Not run here.",
+      "related": [
+        {
+          "id": "tool:ffmpeg/ffmpeg",
+          "rel": "integrates_with",
+          "note": "ffmpeg libvmaf filter when built with it"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "craft",
+      "maturity": "active",
+      "tool_type": "library",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "review-loop",
+        "delivery"
+      ],
+      "cost": "free-local",
+      "tags": [
+        "quality-metric",
+        "qc",
+        "banding"
+      ],
+      "claims": [
+        {
+          "text": "The v1 phone model assumes a viewing distance of 5 screen heights.",
+          "quote": "Phone Model: Derived by setting the normalized viewing distance to 5H (based on experimental data)",
+          "locator": "models_v1.md, model list",
+          "url": "https://github.com/Netflix/vmaf/blob/master/resource/doc/models_v1.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A new v1 model set was released in June 2026.",
+          "quote": "(2026-06) We are releasing a new set of VMAF models (v1).",
+          "locator": "README, News",
+          "url": "https://github.com/Netflix/vmaf",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "libvmaf includes CAMBI, a detector for banding artefacts.",
+          "quote": "(2021-10-7) We are open-sourcing CAMBI (Contrast Aware Multiscale Banding Index) - Netflix's detector for banding (aka contouring) artifacts.",
+          "locator": "README, News",
+          "url": "https://github.com/Netflix/vmaf",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README and models_v1.md against the claims",
+        "source_sha256": "ae6e2809e193fda254223d36202e361af8f6b3b7c1deb848fb4801bdb712d72f",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:bbc/ttml-validator",
+      "kind": "tool",
+      "title": "ttml-validator (BBC)",
+      "url": "https://github.com/bbc/ttml-validator",
+      "summary": "A BBC command-line validator that checks EBU-TT-D subtitle files against the technical requirements of the BBC Subtitle Guidelines, and TTML2 files against the DAPT profile.",
+      "why_it_matters": "It is a first-party linter for the BBC rules, so an agent can check a subtitle file without re-implementing the guidelines.",
+      "concepts": [
+        "concept:audio-and-captions",
+        "concept:review-loop"
+      ],
+      "level": "intermediate",
+      "fit": "low",
+      "fit_notes": "Only TTML input (EBU-TT-D or DAPT); SRT and VTT need converting first, and most short-form tools emit SRT or VTT. It checks technical rules only, so reading rate and line breaks still need a separate check. Needs Python 3.14 with poetry or uv. Not installed or run here.",
+      "related": [
+        {
+          "id": "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
+          "rel": "depends_on"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "craft",
+      "maturity": "active",
+      "tool_type": "app",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "captions",
+        "review-loop"
+      ],
+      "cost": "free-local",
+      "tags": [
+        "subtitles",
+        "validator",
+        "qc"
+      ],
+      "claims": [
+        {
+          "text": "It checks EBU-TT-D files against the BBC guidelines' technical rules, not the editorial ones.",
+          "quote": "EBU-TT-D meeting the technical (but not editorial) requirements of the",
+          "locator": "README, intro list",
+          "url": "https://github.com/bbc/ttml-validator/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Its authors say technical validation does not replace previewing subtitles against the video.",
+          "quote": "Note that technical validation of a standalone file is not a substitute for previewing the presented file against the media it relates to",
+          "locator": "README, intro note",
+          "url": "https://github.com/bbc/ttml-validator/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It targets Python 3.14.",
+          "quote": "Built with python 3.14, so you might want to make sure you have that version available.",
+          "locator": "README, Usage",
+          "url": "https://github.com/bbc/ttml-validator/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md via GitHub API against the claims",
+        "source_sha256": "880f9bb484eb59874760c87f402e964d48586b7227d885bf08a73ba91bcf8ec1",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    }
+  ]
+}
