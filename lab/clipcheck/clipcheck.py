@@ -6,8 +6,8 @@ copy. clipcheck measures a rendered MP4 against it frame by frame and prints fin
 timestamps, each tied to the hub record its rule comes from. It is the deterministic half of a
 review loop: cheap to run after every render, exact where sampled stills miss things.
 
-usage: clipcheck.py <video> --contract contract.json [--captions file.vtt] [--json out.json]
-                    [--index index/records.jsonl] [--ocr] [--quiet]
+usage: clipcheck.py <video> --contract contract.json [--source project-dir] [--captions file.vtt]
+                    [--json out.json] [--index index/records.jsonl] [--ocr] [--quiet]
 exit: 0 no error-level findings, 1 at least one, 2 usage or missing tools.
 """
 import argparse
@@ -247,7 +247,28 @@ class Report:
         self.passed.append({"rule": rule_id, "title": self.rules[rule_id]["title"], "measured": measured})
 
 
-def check(video, contract, captions=None, index_path=None, use_ocr=False):
+SOURCE_SUFFIXES = (".html", ".htm", ".tsx", ".jsx", ".ts", ".js", ".mjs", ".py", ".json", ".md", ".svg", ".vue", ".css")
+SOURCE_SKIP_DIRS = ("node_modules", ".git", "out", "dist", "build", ".next", "__pycache__")
+
+
+def source_text(root):
+    """All authored text under a project folder, tags stripped, whitespace collapsed."""
+    parts = []
+    for path in sorted(Path(root).rglob("*")):
+        if not path.is_file() or path.suffix.lower() not in SOURCE_SUFFIXES:
+            continue
+        if any(part in SOURCE_SKIP_DIRS for part in path.parts) or path.name in ("contract.json", "clipcheck.json"):
+            continue
+        try:
+            raw = path.read_text(encoding="utf-8", errors="ignore")
+        except OSError:
+            continue
+        parts.append(raw)
+        parts.append(re.sub(r"<[^>]+>", " ", raw))
+    return " ".join(" ".join(parts).split())
+
+
+def check(video, contract, captions=None, index_path=None, use_ocr=False, source=None):
     rules = {r["id"]: r for r in json.loads((HERE / "rules.json").read_text(encoding="utf-8"))["rules"]}
     index = {}
     if index_path and Path(index_path).exists():
@@ -413,12 +434,22 @@ def check(video, contract, captions=None, index_path=None, use_ocr=False):
             rep.ok("captions", "all cues within limits")
 
     copy = contract.get("copy") or []
+    if copy and source:
+        # Exact copy is checked where text is exact: in the project source, not in pixels.
+        text = source_text(source)
+        absent = [c for c in copy if " ".join(c.split()) not in text]
+        if absent:
+            rep.add("copy-source", f"{len(absent)} of {len(copy)} contract strings are not in the project source: "
+                    + "; ".join(repr(m) for m in absent[:5]), measured={"missing": absent})
+        else:
+            rep.ok("copy-source", f"{len(copy)} strings found in the source")
     if copy and use_ocr and shutil.which("tesseract"):
         timed = [(t, norm_text(x)) for t, x in ocr_text(video, info["duration"])]
         seen = [x for _, x in timed]
         missing = [c for c in copy if not any(norm_text(c) in t for t in seen)]
         if missing:
-            rep.add("copy", f"{len(missing)} of {len(copy)} contract strings were not read in any sampled frame: " +
+            rep.add("copy", f"{len(missing)} of {len(copy)} contract strings were not read in any sampled frame "
+                    "(text reading misses small or coloured text; confirm by eye): " +
                     "; ".join(repr(m) for m in missing[:5]), measured={"missing": missing})
         else:
             rep.ok("copy", f"{len(copy)} strings read by OCR")
@@ -443,6 +474,7 @@ def main():
     ap = argparse.ArgumentParser(description="Check a rendered clip against a contract.")
     ap.add_argument("video")
     ap.add_argument("--contract", required=True)
+    ap.add_argument("--source", help="project folder; contract copy must appear in its source files")
     ap.add_argument("--captions")
     ap.add_argument("--json")
     ap.add_argument("--index", default=str(HERE.parent.parent / "index" / "records.jsonl"))
@@ -453,7 +485,7 @@ def main():
         print("clipcheck needs ffmpeg and ffprobe on PATH", file=sys.stderr)
         return 2
     contract = json.loads(Path(a.contract).read_text(encoding="utf-8"))
-    rep, data = check(a.video, contract, a.captions, a.index, a.ocr)
+    rep, data = check(a.video, contract, a.captions, a.index, a.ocr, a.source)
     errors = [f for f in rep.findings if f["severity"] == "error"]
     result = {"video": Path(a.video).name, "contract": Path(a.contract).name,
               "verdict": "fail" if errors else "pass", "errors": len(errors),

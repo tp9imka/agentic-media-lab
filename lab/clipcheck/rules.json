@@ -183,14 +183,26 @@
    ]
   },
   {
-   "id": "copy",
+   "id": "copy-source",
    "severity": "error",
-   "title": "Every string in the contract appears on screen",
-   "hint": "Compare the on-screen text with the contract's copy list character by character.",
+   "title": "Every string in the contract is in the project source",
+   "hint": "Add the missing string exactly as the contract writes it. Check for a changed character, a split across elements, or a line built by code.",
    "provenance": [
     {
      "record": "example:hyperframes-vs-remotion",
      "note": "run here once: both agents read an ambiguous brief differently and each lost a rubric point for copy"
+    }
+   ]
+  },
+  {
+   "id": "copy",
+   "severity": "warning",
+   "title": "Contract strings can be read on screen (advisory)",
+   "hint": "Open a frame and confirm the string is there and legible. Text reading from pixels misses small, coloured or monospace text; it is evidence, not proof.",
+   "provenance": [
+    {
+     "record": "example:hyperframes-vs-remotion",
+     "note": "run here: full-frame text reading missed two strings that were on screen in a clean clip, so this rule can only advise"
     }
    ]
   },

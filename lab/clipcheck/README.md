@@ -16,7 +16,7 @@ replace looking: see "What it cannot see".
 
 ```sh
 python3 lab/clipcheck/clipcheck.py out/final.mp4 --contract lab/clipcheck/contracts/quote-first.json
-python3 lab/clipcheck/clipcheck.py out/final.mp4 --contract my-contract.json --captions captions.vtt --ocr --json result.json
+python3 lab/clipcheck/clipcheck.py out/final.mp4 --contract my-contract.json --source ./project --captions captions.vtt --ocr --json result.json
 ```
 
 Exit code 0 when there is no error-level finding, 1 when there is, 2 on a usage problem.
@@ -42,7 +42,8 @@ look at a contact sheet once.
 | long-hold | warning | no stretch longer than the contract allows with no change on screen |
 | loudness | error | integrated loudness and true peak inside the contract range |
 | captions | error | lines, characters per line, characters per second and shortest time on screen |
-| copy | error | every contract string is read on screen (with `--ocr`) |
+| copy-source | error | every contract string is in the project's source files (with `--source <folder>`) |
+| copy | warning | contract strings can be read on screen (with `--ocr`); advisory, because text reading misses small, coloured and monospace text |
 | stray-numbers | warning | no number on screen that the contract does not list (with `--ocr`) |
 
 Rule metadata, hints and sources are in [rules.json](rules.json). Contracts:
@@ -75,6 +76,7 @@ Known weaknesses:
 - **An agent optimises against it, including its mistakes.** An early version of the hold rule
   ignored slow motion; an agent sped up a wipe that was fine to clear the warning.
 - Text is read every 0.5 s, so short-lived text can pass unseen.
+- Reading text from pixels is unreliable: in a clean clip it missed two strings that were on screen. Exact copy is therefore checked in the project source, and the on-screen reading only advises.
 - Analysis runs on a 160 x 90 grid; an element under about 12 px on a 1920 px frame may be missed.
 - Thresholds are constants at the top of [clipcheck.py](clipcheck.py), set on two clips.
 - Tints of palette colours pass by design. A brief that forbids them needs a stricter rule.
