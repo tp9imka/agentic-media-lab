@@ -10,7 +10,7 @@ Built 2026-11-12 by `tools/build.py`.
 - recipe: 0
 - concepts: 35
 - primary-read share: 0.979
-- Hub size: 835107 characters, about 208776 tokens (estimate, characters / 4).
+- Hub size: 842374 characters, about 210593 tokens (estimate, characters / 4).
 
 ## Validation
 
