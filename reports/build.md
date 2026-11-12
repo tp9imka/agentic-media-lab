@@ -4,13 +4,13 @@ Built 2026-11-12 by `tools/build.py`.
 
 ## Counts
 
-- tool: 31
+- tool: 39
 - model: 4
-- source: 3
+- source: 14
 - recipe: 0
 - concepts: 35
 - primary-read share: 1.0
-- Hub size: 164944 characters, about 41236 tokens (estimate, characters / 4).
+- Hub size: 238000 characters, about 59500 tokens (estimate, characters / 4).
 
 ## Validation
 
@@ -24,9 +24,11 @@ None.
 
 None.
 
-## Popularity disagreements (2)
+## Popularity disagreements (4)
 
+- `tool:activepieces/activepieces`: stars 25490, installs 72
 - `tool:josiahsiegel/claude-plugin-marketplace`: stars 61, installs 8185
+- `tool:n8n-io/n8n`: stars 210255, installs 847
 - `tool:remotion-dev/skills`: stars 6888, installs 800255
 
 ## Seen, not reviewed (checked.depth not-checked) (0)

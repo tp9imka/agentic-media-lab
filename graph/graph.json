@@ -52,6 +52,113 @@
    ]
   },
   {
+   "id": "source:code.claude.com/docs/en/headless",
+   "kind": "source",
+   "label": "Run Claude Code programmatically (claude -p)",
+   "path": "catalog/source/code.claude.com__docs__en__headless.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:automation",
+    "concept:scheduling-and-runtimes"
+   ]
+  },
+  {
+   "id": "source:code.claude.com/docs/en/routines",
+   "kind": "source",
+   "label": "Claude Code cloud scheduled tasks (formerly routines)",
+   "path": "catalog/source/code.claude.com__docs__en__routines.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:automation",
+    "concept:scheduling-and-runtimes",
+    "concept:review-loop"
+   ]
+  },
+  {
+   "id": "source:code.claude.com/docs/en/scheduled-tasks",
+   "kind": "source",
+   "label": "Claude Code: run prompts on a schedule (/loop) and compare scheduling options",
+   "path": "catalog/source/code.claude.com__docs__en__scheduled-tasks.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:automation",
+    "concept:scheduling-and-runtimes"
+   ]
+  },
+  {
+   "id": "source:docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
+   "kind": "source",
+   "label": "GitHub Actions: deployments and environments (required reviewers)",
+   "path": "catalog/source/docs.github.com__en__actions__reference__workflows-and-actions__deployments-and-environments.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:automation",
+    "concept:scheduling-and-runtimes",
+    "concept:review-loop"
+   ]
+  },
+  {
+   "id": "source:docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+   "kind": "source",
+   "label": "GitHub Actions: events that trigger workflows (schedule)",
+   "path": "catalog/source/docs.github.com__en__actions__reference__workflows-and-actions__events-that-trigger-workflows.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:automation",
+    "concept:scheduling-and-runtimes"
+   ]
+  },
+  {
+   "id": "source:github.com/get-bb/bb/blob/main/docs/configuration.md",
+   "kind": "source",
+   "label": "bb configuration reference",
+   "path": "catalog/source/github.com__get-bb__bb__blob__main__docs__configuration.md.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:automation",
+    "concept:scheduling-and-runtimes",
+    "concept:review-loop"
+   ]
+  },
+  {
+   "id": "source:github.com/get-bb/bb/blob/main/docs/multiple-devices.md",
+   "kind": "source",
+   "label": "Using bb on multiple devices",
+   "path": "catalog/source/github.com__get-bb__bb__blob__main__docs__multiple-devices.md.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:automation",
+    "concept:scheduling-and-runtimes"
+   ]
+  },
+  {
+   "id": "source:github.com/get-bb/bb/blob/main/plugins/automations/skills/automations/references/script-runtime.md",
+   "kind": "source",
+   "label": "bb automations: script runtime reference",
+   "path": "catalog/source/github.com__get-bb__bb__blob__main__plugins__automations__skills__automations__references__script-runtime.md.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:automation",
+    "concept:scheduling-and-runtimes"
+   ]
+  },
+  {
    "id": "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
    "kind": "source",
    "label": "HyperFrames vs Remotion research note (GenMotion)",
@@ -62,6 +169,20 @@
    "concepts": [
     "concept:code-driven-video",
     "concept:consistency",
+    "concept:review-loop"
+   ]
+  },
+  {
+   "id": "source:hermes-agent.nousresearch.com/docs/user-guide/security",
+   "kind": "source",
+   "label": "Hermes Agent security: dangerous command approval",
+   "path": "catalog/source/hermes-agent.nousresearch.com__docs__user-guide__security.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:automation",
+    "concept:scheduling-and-runtimes",
     "concept:review-loop"
    ]
   },
@@ -77,6 +198,33 @@
     "concept:code-driven-video",
     "concept:licences-and-territory",
     "concept:evaluation"
+   ]
+  },
+  {
+   "id": "source:learn.chatgpt.com/docs/automations",
+   "kind": "source",
+   "label": "Codex scheduled tasks (ChatGPT app)",
+   "path": "catalog/source/learn.chatgpt.com__docs__automations.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:automation",
+    "concept:scheduling-and-runtimes",
+    "concept:review-loop"
+   ]
+  },
+  {
+   "id": "source:learn.chatgpt.com/docs/non-interactive-mode",
+   "kind": "source",
+   "label": "Codex non-interactive mode (codex exec)",
+   "path": "catalog/source/learn.chatgpt.com__docs__non-interactive-mode.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:automation",
+    "concept:scheduling-and-runtimes"
    ]
   },
   {
@@ -117,6 +265,21 @@
    "concepts": [
     "concept:code-driven-video",
     "concept:motion-and-transitions"
+   ]
+  },
+  {
+   "id": "tool:activepieces/activepieces",
+   "kind": "tool",
+   "label": "Activepieces",
+   "path": "catalog/tool/activepieces__activepieces.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:automation",
+    "concept:scheduling-and-runtimes",
+    "concept:orchestration",
+    "concept:licences-and-territory"
    ]
   },
   {
@@ -251,6 +414,21 @@
     "concept:motion-and-transitions",
     "concept:review-loop",
     "concept:code-driven-video"
+   ]
+  },
+  {
+   "id": "tool:get-bb/bb",
+   "kind": "tool",
+   "label": "bb",
+   "path": "catalog/tool/get-bb__bb.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:automation",
+    "concept:scheduling-and-runtimes",
+    "concept:orchestration",
+    "concept:agent-portability"
    ]
   },
   {
@@ -455,6 +633,22 @@
    ]
   },
   {
+   "id": "tool:n8n-io/n8n",
+   "kind": "tool",
+   "label": "n8n",
+   "path": "catalog/tool/n8n-io__n8n.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:automation",
+    "concept:scheduling-and-runtimes",
+    "concept:orchestration",
+    "concept:review-loop",
+    "concept:licences-and-territory"
+   ]
+  },
+  {
    "id": "tool:nexu-io/html-video",
    "kind": "tool",
    "label": "html-video",
@@ -466,6 +660,35 @@
     "concept:code-driven-video",
     "concept:agent-portability",
     "concept:agentic-pipelines"
+   ]
+  },
+  {
+   "id": "tool:nousresearch/hermes-agent",
+   "kind": "tool",
+   "label": "Hermes Agent",
+   "path": "catalog/tool/nousresearch__hermes-agent.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:automation",
+    "concept:scheduling-and-runtimes",
+    "concept:orchestration",
+    "concept:review-loop"
+   ]
+  },
+  {
+   "id": "tool:nousresearch/kanban-video-pipeline",
+   "kind": "tool",
+   "label": "Kanban Video Pipeline",
+   "path": "catalog/tool/nousresearch__kanban-video-pipeline.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:agentic-pipelines",
+    "concept:orchestration",
+    "concept:code-driven-video"
    ]
   },
   {
@@ -514,6 +737,35 @@
    ]
   },
   {
+   "id": "tool:temporalio/temporal",
+   "kind": "tool",
+   "label": "Temporal",
+   "path": "catalog/tool/temporalio__temporal.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:automation",
+    "concept:scheduling-and-runtimes",
+    "concept:orchestration"
+   ]
+  },
+  {
+   "id": "tool:triggerdotdev/trigger.dev",
+   "kind": "tool",
+   "label": "Trigger.dev",
+   "path": "catalog/tool/triggerdotdev__trigger.dev.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:automation",
+    "concept:scheduling-and-runtimes",
+    "concept:orchestration",
+    "concept:review-loop"
+   ]
+  },
+  {
    "id": "tool:vincentwei1021/video-shotcraft",
    "kind": "tool",
    "label": "video-shotcraft",
@@ -526,6 +778,22 @@
     "concept:agent-skills",
     "concept:story-and-decomposition",
     "concept:agent-portability"
+   ]
+  },
+  {
+   "id": "tool:windmill-labs/windmill",
+   "kind": "tool",
+   "label": "Windmill",
+   "path": "catalog/tool/windmill-labs__windmill.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:automation",
+    "concept:scheduling-and-runtimes",
+    "concept:orchestration",
+    "concept:review-loop",
+    "concept:licences-and-territory"
    ]
   },
   {
@@ -794,6 +1062,156 @@
    "rel": "about"
   },
   {
+   "source": "source:code.claude.com/docs/en/headless",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "source:code.claude.com/docs/en/headless",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "source:code.claude.com/docs/en/headless",
+   "target": "source:code.claude.com/docs/en/routines",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "source:code.claude.com/docs/en/headless",
+   "target": "source:docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:code.claude.com/docs/en/routines",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "source:code.claude.com/docs/en/routines",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "source:code.claude.com/docs/en/routines",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "source:code.claude.com/docs/en/routines",
+   "target": "source:code.claude.com/docs/en/headless",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "source:code.claude.com/docs/en/routines",
+   "target": "source:code.claude.com/docs/en/scheduled-tasks",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "source:code.claude.com/docs/en/scheduled-tasks",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "source:code.claude.com/docs/en/scheduled-tasks",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "source:code.claude.com/docs/en/scheduled-tasks",
+   "target": "source:code.claude.com/docs/en/routines",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "source:docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "source:docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "source:docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "source:docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
+   "target": "source:docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "source:docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "source:docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+   "target": "source:code.claude.com/docs/en/headless",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+   "target": "source:docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:github.com/get-bb/bb/blob/main/docs/configuration.md",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/get-bb/bb/blob/main/docs/configuration.md",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/get-bb/bb/blob/main/docs/configuration.md",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/get-bb/bb/blob/main/docs/configuration.md",
+   "target": "tool:get-bb/bb",
+   "rel": "extends"
+  },
+  {
+   "source": "source:github.com/get-bb/bb/blob/main/docs/multiple-devices.md",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/get-bb/bb/blob/main/docs/multiple-devices.md",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/get-bb/bb/blob/main/docs/multiple-devices.md",
+   "target": "tool:get-bb/bb",
+   "rel": "extends"
+  },
+  {
+   "source": "source:github.com/get-bb/bb/blob/main/plugins/automations/skills/automations/references/script-runtime.md",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/get-bb/bb/blob/main/plugins/automations/skills/automations/references/script-runtime.md",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/get-bb/bb/blob/main/plugins/automations/skills/automations/references/script-runtime.md",
+   "target": "tool:get-bb/bb",
+   "rel": "extends"
+  },
+  {
    "source": "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
    "target": "concept:code-driven-video",
    "rel": "about"
@@ -824,6 +1242,26 @@
    "rel": "evaluated_on"
   },
   {
+   "source": "source:hermes-agent.nousresearch.com/docs/user-guide/security",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "source:hermes-agent.nousresearch.com/docs/user-guide/security",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "source:hermes-agent.nousresearch.com/docs/user-guide/security",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "source:hermes-agent.nousresearch.com/docs/user-guide/security",
+   "target": "tool:nousresearch/hermes-agent",
+   "rel": "extends"
+  },
+  {
    "source": "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
    "target": "concept:code-driven-video",
    "rel": "about"
@@ -847,6 +1285,46 @@
    "source": "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
    "target": "tool:remotion-dev/remotion",
    "rel": "evaluated_on"
+  },
+  {
+   "source": "source:learn.chatgpt.com/docs/automations",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "source:learn.chatgpt.com/docs/automations",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "source:learn.chatgpt.com/docs/automations",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "source:learn.chatgpt.com/docs/automations",
+   "target": "source:learn.chatgpt.com/docs/non-interactive-mode",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "source:learn.chatgpt.com/docs/non-interactive-mode",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "source:learn.chatgpt.com/docs/non-interactive-mode",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "source:learn.chatgpt.com/docs/non-interactive-mode",
+   "target": "source:code.claude.com/docs/en/headless",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "source:learn.chatgpt.com/docs/non-interactive-mode",
+   "target": "source:learn.chatgpt.com/docs/automations",
+   "rel": "alternative_to"
   },
   {
    "source": "source:remotion.dev/docs/ai/mcp",
@@ -896,6 +1374,31 @@
   {
    "source": "tool:3b1b/manim",
    "target": "tool:manimcommunity/manim",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:activepieces/activepieces",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "tool:activepieces/activepieces",
+   "target": "concept:licences-and-territory",
+   "rel": "about"
+  },
+  {
+   "source": "tool:activepieces/activepieces",
+   "target": "concept:orchestration",
+   "rel": "about"
+  },
+  {
+   "source": "tool:activepieces/activepieces",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "tool:activepieces/activepieces",
+   "target": "tool:n8n-io/n8n",
    "rel": "alternative_to"
   },
   {
@@ -1107,6 +1610,46 @@
    "source": "tool:flchntc/smooth-animation-skill",
    "target": "tool:heygen-com/hyperframes",
    "rel": "extends"
+  },
+  {
+   "source": "tool:get-bb/bb",
+   "target": "concept:agent-portability",
+   "rel": "about"
+  },
+  {
+   "source": "tool:get-bb/bb",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "tool:get-bb/bb",
+   "target": "concept:orchestration",
+   "rel": "about"
+  },
+  {
+   "source": "tool:get-bb/bb",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "tool:get-bb/bb",
+   "target": "source:github.com/get-bb/bb/blob/main/docs/configuration.md",
+   "rel": "depends_on"
+  },
+  {
+   "source": "tool:get-bb/bb",
+   "target": "source:github.com/get-bb/bb/blob/main/docs/multiple-devices.md",
+   "rel": "depends_on"
+  },
+  {
+   "source": "tool:get-bb/bb",
+   "target": "source:github.com/get-bb/bb/blob/main/plugins/automations/skills/automations/references/script-runtime.md",
+   "rel": "depends_on"
+  },
+  {
+   "source": "tool:get-bb/bb",
+   "target": "tool:nousresearch/hermes-agent",
+   "rel": "alternative_to"
   },
   {
    "source": "tool:greensock/gsap",
@@ -1409,6 +1952,41 @@
    "rel": "alternative_to"
   },
   {
+   "source": "tool:n8n-io/n8n",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "tool:n8n-io/n8n",
+   "target": "concept:licences-and-territory",
+   "rel": "about"
+  },
+  {
+   "source": "tool:n8n-io/n8n",
+   "target": "concept:orchestration",
+   "rel": "about"
+  },
+  {
+   "source": "tool:n8n-io/n8n",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:n8n-io/n8n",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "tool:n8n-io/n8n",
+   "target": "tool:activepieces/activepieces",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:n8n-io/n8n",
+   "target": "tool:windmill-labs/windmill",
+   "rel": "alternative_to"
+  },
+  {
    "source": "tool:nexu-io/html-video",
    "target": "concept:agent-portability",
    "rel": "about"
@@ -1432,6 +2010,56 @@
    "source": "tool:nexu-io/html-video",
    "target": "tool:remotion-dev/remotion",
    "rel": "contradicts"
+  },
+  {
+   "source": "tool:nousresearch/hermes-agent",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "tool:nousresearch/hermes-agent",
+   "target": "concept:orchestration",
+   "rel": "about"
+  },
+  {
+   "source": "tool:nousresearch/hermes-agent",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:nousresearch/hermes-agent",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "tool:nousresearch/hermes-agent",
+   "target": "source:hermes-agent.nousresearch.com/docs/user-guide/security",
+   "rel": "depends_on"
+  },
+  {
+   "source": "tool:nousresearch/hermes-agent",
+   "target": "tool:get-bb/bb",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:nousresearch/kanban-video-pipeline",
+   "target": "concept:agentic-pipelines",
+   "rel": "about"
+  },
+  {
+   "source": "tool:nousresearch/kanban-video-pipeline",
+   "target": "concept:code-driven-video",
+   "rel": "about"
+  },
+  {
+   "source": "tool:nousresearch/kanban-video-pipeline",
+   "target": "concept:orchestration",
+   "rel": "about"
+  },
+  {
+   "source": "tool:nousresearch/kanban-video-pipeline",
+   "target": "tool:nousresearch/hermes-agent",
+   "rel": "depends_on"
   },
   {
    "source": "tool:openmontageinc/openmontage",
@@ -1529,6 +2157,51 @@
    "rel": "alternative_to"
   },
   {
+   "source": "tool:temporalio/temporal",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "tool:temporalio/temporal",
+   "target": "concept:orchestration",
+   "rel": "about"
+  },
+  {
+   "source": "tool:temporalio/temporal",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "tool:temporalio/temporal",
+   "target": "tool:triggerdotdev/trigger.dev",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:triggerdotdev/trigger.dev",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "tool:triggerdotdev/trigger.dev",
+   "target": "concept:orchestration",
+   "rel": "about"
+  },
+  {
+   "source": "tool:triggerdotdev/trigger.dev",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:triggerdotdev/trigger.dev",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "tool:triggerdotdev/trigger.dev",
+   "target": "tool:temporalio/temporal",
+   "rel": "alternative_to"
+  },
+  {
    "source": "tool:vincentwei1021/video-shotcraft",
    "target": "concept:agent-portability",
    "rel": "about"
@@ -1547,6 +2220,41 @@
    "source": "tool:vincentwei1021/video-shotcraft",
    "target": "concept:story-and-decomposition",
    "rel": "about"
+  },
+  {
+   "source": "tool:windmill-labs/windmill",
+   "target": "concept:automation",
+   "rel": "about"
+  },
+  {
+   "source": "tool:windmill-labs/windmill",
+   "target": "concept:licences-and-territory",
+   "rel": "about"
+  },
+  {
+   "source": "tool:windmill-labs/windmill",
+   "target": "concept:orchestration",
+   "rel": "about"
+  },
+  {
+   "source": "tool:windmill-labs/windmill",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:windmill-labs/windmill",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "tool:windmill-labs/windmill",
+   "target": "tool:n8n-io/n8n",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:windmill-labs/windmill",
+   "target": "tool:triggerdotdev/trigger.dev",
+   "rel": "alternative_to"
   },
   {
    "source": "tool:zulko/moviepy",

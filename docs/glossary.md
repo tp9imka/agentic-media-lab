@@ -59,7 +59,7 @@ Scope: Whether a skill or tool works outside the agent it was written for.
 
 Broader: [Agent surface](glossary.md#agent-surface)
 
-Records (9): [generative-media-skills](../catalog/tool/calesthio__generative-media-skills.md), [marketingskills (video, product-demo-recording)](../catalog/tool/coreyhaines31__marketingskills.md), [remotion-superpowers](../catalog/tool/dojocodinglabs__remotion-superpowers.md), [ffmpeg-skill](../catalog/tool/kajisho5__ffmpeg-skill.md), [motion-design skill (LottieFiles)](../catalog/tool/lottiefiles__motion-design-skill.md), [motion-video-director (mattypark)](../catalog/tool/mattypark__motion-graphics-skill.md), [html-video](../catalog/tool/nexu-io__html-video.md), [Remotion Agent Skills](../catalog/tool/remotion-dev__skills.md), [video-shotcraft](../catalog/tool/vincentwei1021__video-shotcraft.md)
+Records (10): [generative-media-skills](../catalog/tool/calesthio__generative-media-skills.md), [marketingskills (video, product-demo-recording)](../catalog/tool/coreyhaines31__marketingskills.md), [remotion-superpowers](../catalog/tool/dojocodinglabs__remotion-superpowers.md), [bb](../catalog/tool/get-bb__bb.md), [ffmpeg-skill](../catalog/tool/kajisho5__ffmpeg-skill.md), [motion-design skill (LottieFiles)](../catalog/tool/lottiefiles__motion-design-skill.md), [motion-video-director (mattypark)](../catalog/tool/mattypark__motion-graphics-skill.md), [html-video](../catalog/tool/nexu-io__html-video.md), [Remotion Agent Skills](../catalog/tool/remotion-dev__skills.md), [video-shotcraft](../catalog/tool/vincentwei1021__video-shotcraft.md)
 
 ## <a id="agent-skills"></a>Agent Skills
 
@@ -91,7 +91,7 @@ Scope: Systems where agents plan, generate, check and assemble a multi-shot vide
 
 Broader: [Pipelines](glossary.md#pipelines)
 
-Records (2): [html-video](../catalog/tool/nexu-io__html-video.md), [OpenMontage](../catalog/tool/openmontageinc__openmontage.md)
+Records (3): [html-video](../catalog/tool/nexu-io__html-video.md), [Kanban Video Pipeline](../catalog/tool/nousresearch__kanban-video-pipeline.md), [OpenMontage](../catalog/tool/openmontageinc__openmontage.md)
 
 ## <a id="audio-and-captions"></a>Audio and captions
 
@@ -111,7 +111,7 @@ Records (11): [video-use](../catalog/tool/browser-use__video-use.md), [generativ
 
 Scope: Running production on a schedule.
 
-Records (0): none yet
+Records (18): [Run Claude Code programmatically (claude -p)](../catalog/source/code.claude.com__docs__en__headless.md), [Claude Code cloud scheduled tasks (formerly routines)](../catalog/source/code.claude.com__docs__en__routines.md), [Claude Code: run prompts on a schedule (/loop) and compare scheduling options](../catalog/source/code.claude.com__docs__en__scheduled-tasks.md), [GitHub Actions: deployments and environments (required reviewers)](../catalog/source/docs.github.com__en__actions__reference__workflows-and-actions__deployments-and-environments.md), [GitHub Actions: events that trigger workflows (schedule)](../catalog/source/docs.github.com__en__actions__reference__workflows-and-actions__events-that-trigger-workflows.md), [bb configuration reference](../catalog/source/github.com__get-bb__bb__blob__main__docs__configuration.md.md), [Using bb on multiple devices](../catalog/source/github.com__get-bb__bb__blob__main__docs__multiple-devices.md.md), [bb automations: script runtime reference](../catalog/source/github.com__get-bb__bb__blob__main__plugins__automations__skills__automations__references__script-runtime.md.md), [Hermes Agent security: dangerous command approval](../catalog/source/hermes-agent.nousresearch.com__docs__user-guide__security.md), [Codex scheduled tasks (ChatGPT app)](../catalog/source/learn.chatgpt.com__docs__automations.md), and 8 more in the [catalog](../catalog/README.md)
 
 ## <a id="code-driven-video"></a>Code-driven video
 
@@ -123,7 +123,7 @@ Scope: Video rendered from code an agent writes: HTML, React, Python. Not footag
 
 Broader: [Making](glossary.md#making)
 
-Records (21): [HyperFrames vs Remotion research note (GenMotion)](../catalog/source/github.com__haxzie__genmotion__blob__main__docs__research__hyperframes-remotion.md.md), [HyperFrames vs Remotion (HeyGen guide)](../catalog/source/hyperframes.heygen.com__guides__hyperframes-vs-remotion.md), [Kinetograph](../catalog/tool/0xs4n4tg__kinetograph.md), [ManimGL (3b1b/manim)](../catalog/tool/3b1b__manim.md), [MCP for Blender](../catalog/tool/ahujasid__mcp-for-blender.md), [fframes](../catalog/tool/dmtrkovalenko__fframes.md), [FFmpeg](../catalog/tool/ffmpeg__ffmpeg.md), [smooth-animation-skill](../catalog/tool/flchntc__smooth-animation-skill.md), [GSAP](../catalog/tool/greensock__gsap.md), [claude-remotion-skill](../catalog/tool/haidrrrry__claude-remotion-skill.md), and 11 more in the [catalog](../catalog/README.md)
+Records (22): [HyperFrames vs Remotion research note (GenMotion)](../catalog/source/github.com__haxzie__genmotion__blob__main__docs__research__hyperframes-remotion.md.md), [HyperFrames vs Remotion (HeyGen guide)](../catalog/source/hyperframes.heygen.com__guides__hyperframes-vs-remotion.md), [Kinetograph](../catalog/tool/0xs4n4tg__kinetograph.md), [ManimGL (3b1b/manim)](../catalog/tool/3b1b__manim.md), [MCP for Blender](../catalog/tool/ahujasid__mcp-for-blender.md), [fframes](../catalog/tool/dmtrkovalenko__fframes.md), [FFmpeg](../catalog/tool/ffmpeg__ffmpeg.md), [smooth-animation-skill](../catalog/tool/flchntc__smooth-animation-skill.md), [GSAP](../catalog/tool/greensock__gsap.md), [claude-remotion-skill](../catalog/tool/haidrrrry__claude-remotion-skill.md), and 12 more in the [catalog](../catalog/README.md)
 
 ## <a id="consistency"></a>Consistency
 
@@ -251,7 +251,7 @@ Scope: What a model or renderer licence allows, for whom and where.
 
 Broader: [Models](glossary.md#models)
 
-Records (4): [MiniMax H3](../catalog/model/minimaxai__minimax-h3.md), [HyperFrames vs Remotion (HeyGen guide)](../catalog/source/hyperframes.heygen.com__guides__hyperframes-vs-remotion.md), [GSAP](../catalog/tool/greensock__gsap.md), [Remotion](../catalog/tool/remotion-dev__remotion.md)
+Records (7): [MiniMax H3](../catalog/model/minimaxai__minimax-h3.md), [HyperFrames vs Remotion (HeyGen guide)](../catalog/source/hyperframes.heygen.com__guides__hyperframes-vs-remotion.md), [Activepieces](../catalog/tool/activepieces__activepieces.md), [GSAP](../catalog/tool/greensock__gsap.md), [n8n](../catalog/tool/n8n-io__n8n.md), [Remotion](../catalog/tool/remotion-dev__remotion.md), [Windmill](../catalog/tool/windmill-labs__windmill.md)
 
 ## <a id="local-video-models"></a>Local video models
 
@@ -327,7 +327,7 @@ Scope: Chaining stages, holding state between runs and gating on a human.
 
 Broader: [Automation](glossary.md#automation)
 
-Records (0): none yet
+Records (8): [Activepieces](../catalog/tool/activepieces__activepieces.md), [bb](../catalog/tool/get-bb__bb.md), [n8n](../catalog/tool/n8n-io__n8n.md), [Hermes Agent](../catalog/tool/nousresearch__hermes-agent.md), [Kanban Video Pipeline](../catalog/tool/nousresearch__kanban-video-pipeline.md), [Temporal](../catalog/tool/temporalio__temporal.md), [Trigger.dev](../catalog/tool/triggerdotdev__trigger.dev.md), [Windmill](../catalog/tool/windmill-labs__windmill.md)
 
 ## <a id="pipelines"></a>Pipelines
 
@@ -395,7 +395,7 @@ Scope: The agent renders, looks at the result and fixes what it sees before deli
 
 Broader: [Craft](glossary.md#craft)
 
-Records (18): [HyperFrames vs Remotion research note (GenMotion)](../catalog/source/github.com__haxzie__genmotion__blob__main__docs__research__hyperframes-remotion.md.md), [Kinetograph](../catalog/tool/0xs4n4tg__kinetograph.md), [MCP for Blender](../catalog/tool/ahujasid__mcp-for-blender.md), [video-use](../catalog/tool/browser-use__video-use.md), [claude-code-video-toolkit](../catalog/tool/digitalsamba__claude-code-video-toolkit.md), [fframes](../catalog/tool/dmtrkovalenko__fframes.md), [remotion-superpowers](../catalog/tool/dojocodinglabs__remotion-superpowers.md), [smooth-animation-skill](../catalog/tool/flchntc__smooth-animation-skill.md), [claude-remotion-skill](../catalog/tool/haidrrrry__claude-remotion-skill.md), [HyperFrames](../catalog/tool/heygen-com__hyperframes.md), and 8 more in the [catalog](../catalog/README.md)
+Records (27): [Claude Code cloud scheduled tasks (formerly routines)](../catalog/source/code.claude.com__docs__en__routines.md), [GitHub Actions: deployments and environments (required reviewers)](../catalog/source/docs.github.com__en__actions__reference__workflows-and-actions__deployments-and-environments.md), [bb configuration reference](../catalog/source/github.com__get-bb__bb__blob__main__docs__configuration.md.md), [HyperFrames vs Remotion research note (GenMotion)](../catalog/source/github.com__haxzie__genmotion__blob__main__docs__research__hyperframes-remotion.md.md), [Hermes Agent security: dangerous command approval](../catalog/source/hermes-agent.nousresearch.com__docs__user-guide__security.md), [Codex scheduled tasks (ChatGPT app)](../catalog/source/learn.chatgpt.com__docs__automations.md), [Kinetograph](../catalog/tool/0xs4n4tg__kinetograph.md), [MCP for Blender](../catalog/tool/ahujasid__mcp-for-blender.md), [video-use](../catalog/tool/browser-use__video-use.md), [claude-code-video-toolkit](../catalog/tool/digitalsamba__claude-code-video-toolkit.md), and 17 more in the [catalog](../catalog/README.md)
 
 ## <a id="scheduling-and-runtimes"></a>Scheduling and runtimes
 
@@ -407,7 +407,7 @@ Scope: Agent runtimes and schedulers that start work without a person.
 
 Broader: [Automation](glossary.md#automation)
 
-Records (0): none yet
+Records (18): [Run Claude Code programmatically (claude -p)](../catalog/source/code.claude.com__docs__en__headless.md), [Claude Code cloud scheduled tasks (formerly routines)](../catalog/source/code.claude.com__docs__en__routines.md), [Claude Code: run prompts on a schedule (/loop) and compare scheduling options](../catalog/source/code.claude.com__docs__en__scheduled-tasks.md), [GitHub Actions: deployments and environments (required reviewers)](../catalog/source/docs.github.com__en__actions__reference__workflows-and-actions__deployments-and-environments.md), [GitHub Actions: events that trigger workflows (schedule)](../catalog/source/docs.github.com__en__actions__reference__workflows-and-actions__events-that-trigger-workflows.md), [bb configuration reference](../catalog/source/github.com__get-bb__bb__blob__main__docs__configuration.md.md), [Using bb on multiple devices](../catalog/source/github.com__get-bb__bb__blob__main__docs__multiple-devices.md.md), [bb automations: script runtime reference](../catalog/source/github.com__get-bb__bb__blob__main__plugins__automations__skills__automations__references__script-runtime.md.md), [Hermes Agent security: dangerous command approval](../catalog/source/hermes-agent.nousresearch.com__docs__user-guide__security.md), [Codex scheduled tasks (ChatGPT app)](../catalog/source/learn.chatgpt.com__docs__automations.md), and 8 more in the [catalog](../catalog/README.md)
 
 ## <a id="still-images"></a>Still images
 

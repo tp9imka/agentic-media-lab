@@ -23,6 +23,7 @@
     "tool:calesthio/generative-media-skills",
     "tool:coreyhaines31/marketingskills",
     "tool:dojocodinglabs/remotion-superpowers",
+    "tool:get-bb/bb",
     "tool:kajisho5/ffmpeg-skill",
     "tool:lottiefiles/motion-design-skill",
     "tool:mattypark/motion-graphics-skill",
@@ -30,7 +31,7 @@
     "tool:remotion-dev/skills",
     "tool:vincentwei1021/video-shotcraft"
    ],
-   "count": 9
+   "count": 10
   },
   {
    "id": "concept:agent-skills",
@@ -96,9 +97,10 @@
    "related": [],
    "record_ids": [
     "tool:nexu-io/html-video",
+    "tool:nousresearch/kanban-video-pipeline",
     "tool:openmontageinc/openmontage"
    ],
-   "count": 2
+   "count": 3
   },
   {
    "id": "concept:audio-and-captions",
@@ -146,8 +148,27 @@
    "scope_note": "Running production on a schedule.",
    "broader": [],
    "related": [],
-   "record_ids": [],
-   "count": 0
+   "record_ids": [
+    "source:code.claude.com/docs/en/headless",
+    "source:code.claude.com/docs/en/routines",
+    "source:code.claude.com/docs/en/scheduled-tasks",
+    "source:docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
+    "source:docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+    "source:github.com/get-bb/bb/blob/main/docs/configuration.md",
+    "source:github.com/get-bb/bb/blob/main/docs/multiple-devices.md",
+    "source:github.com/get-bb/bb/blob/main/plugins/automations/skills/automations/references/script-runtime.md",
+    "source:hermes-agent.nousresearch.com/docs/user-guide/security",
+    "source:learn.chatgpt.com/docs/automations",
+    "source:learn.chatgpt.com/docs/non-interactive-mode",
+    "tool:activepieces/activepieces",
+    "tool:get-bb/bb",
+    "tool:n8n-io/n8n",
+    "tool:nousresearch/hermes-agent",
+    "tool:temporalio/temporal",
+    "tool:triggerdotdev/trigger.dev",
+    "tool:windmill-labs/windmill"
+   ],
+   "count": 18
   },
   {
    "id": "concept:code-driven-video",
@@ -188,11 +209,12 @@
     "tool:mort1d/motion-graphics-skills",
     "tool:motion-canvas/motion-canvas",
     "tool:nexu-io/html-video",
+    "tool:nousresearch/kanban-video-pipeline",
     "tool:remotion-dev/remotion",
     "tool:remotion-dev/skills",
     "tool:zulko/moviepy"
    ],
-   "count": 21
+   "count": 22
   },
   {
    "id": "concept:consistency",
@@ -442,10 +464,13 @@
    "record_ids": [
     "model:minimaxai/minimax-h3",
     "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+    "tool:activepieces/activepieces",
     "tool:greensock/gsap",
-    "tool:remotion-dev/remotion"
+    "tool:n8n-io/n8n",
+    "tool:remotion-dev/remotion",
+    "tool:windmill-labs/windmill"
    ],
-   "count": 4
+   "count": 7
   },
   {
    "id": "concept:local-video-models",
@@ -595,8 +620,17 @@
     "concept:automation"
    ],
    "related": [],
-   "record_ids": [],
-   "count": 0
+   "record_ids": [
+    "tool:activepieces/activepieces",
+    "tool:get-bb/bb",
+    "tool:n8n-io/n8n",
+    "tool:nousresearch/hermes-agent",
+    "tool:nousresearch/kanban-video-pipeline",
+    "tool:temporalio/temporal",
+    "tool:triggerdotdev/trigger.dev",
+    "tool:windmill-labs/windmill"
+   ],
+   "count": 8
   },
   {
    "id": "concept:pipelines",
@@ -721,7 +755,12 @@
    ],
    "related": [],
    "record_ids": [
+    "source:code.claude.com/docs/en/routines",
+    "source:docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
+    "source:github.com/get-bb/bb/blob/main/docs/configuration.md",
     "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
+    "source:hermes-agent.nousresearch.com/docs/user-guide/security",
+    "source:learn.chatgpt.com/docs/automations",
     "tool:0xs4n4tg/kinetograph",
     "tool:ahujasid/mcp-for-blender",
     "tool:browser-use/video-use",
@@ -736,11 +775,15 @@
     "tool:kajisho5/ffmpeg-skill",
     "tool:manimcommunity/manim",
     "tool:mort1d/motion-graphics-skills",
+    "tool:n8n-io/n8n",
+    "tool:nousresearch/hermes-agent",
     "tool:openmontageinc/openmontage",
     "tool:remotion-dev/remotion",
-    "tool:vincentwei1021/video-shotcraft"
+    "tool:triggerdotdev/trigger.dev",
+    "tool:vincentwei1021/video-shotcraft",
+    "tool:windmill-labs/windmill"
    ],
-   "count": 18
+   "count": 27
   },
   {
    "id": "concept:scheduling-and-runtimes",
@@ -761,8 +804,27 @@
     "concept:automation"
    ],
    "related": [],
-   "record_ids": [],
-   "count": 0
+   "record_ids": [
+    "source:code.claude.com/docs/en/headless",
+    "source:code.claude.com/docs/en/routines",
+    "source:code.claude.com/docs/en/scheduled-tasks",
+    "source:docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
+    "source:docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows",
+    "source:github.com/get-bb/bb/blob/main/docs/configuration.md",
+    "source:github.com/get-bb/bb/blob/main/docs/multiple-devices.md",
+    "source:github.com/get-bb/bb/blob/main/plugins/automations/skills/automations/references/script-runtime.md",
+    "source:hermes-agent.nousresearch.com/docs/user-guide/security",
+    "source:learn.chatgpt.com/docs/automations",
+    "source:learn.chatgpt.com/docs/non-interactive-mode",
+    "tool:activepieces/activepieces",
+    "tool:get-bb/bb",
+    "tool:n8n-io/n8n",
+    "tool:nousresearch/hermes-agent",
+    "tool:temporalio/temporal",
+    "tool:triggerdotdev/trigger.dev",
+    "tool:windmill-labs/windmill"
+   ],
+   "count": 18
   },
   {
    "id": "concept:still-images",
