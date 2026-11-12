@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Search - Knowledge hub</title>
+<meta name="description" content="Search the hub's records and guide sections. Query and filters live in the URL.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+<link rel="alternate" type="text/markdown" href="../llms.txt">
+<link rel="describedby" href="../llms.txt">
+<script src="theme.js"></script>
+<script type="module" src="search.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="index.html" data-site-link>Knowledge hub</a>
+  <form class="search" role="search" action="search.html" method="get" id="search-form">
+    <label for="q" class="visually-hidden">Search the hub</label>
+    <div class="combo">
+      <input id="q" name="q" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false"
+        aria-controls="q-list" autocomplete="off" spellcheck="false" placeholder="Search  (Ctrl or Cmd + K)">
+      <ul id="q-list" role="listbox" aria-label="Suggestions" hidden></ul>
+    </div>
+    <button type="submit">Search</button>
+    <span id="q-status" class="visually-hidden" role="status" aria-live="polite"></span>
+  </form>
+  <nav aria-label="Site">
+    <a href="../llms.txt">llms.txt</a>
+    <button id="theme-toggle" type="button">Theme: auto</button>
+  </nav>
+</header>
+<main id="main" tabindex="-1">
+  <h1 id="results-title">Search</h1>
+  <form id="filters" class="filters" aria-label="Filters">
+    <details id="filters-box">
+      <summary id="filters-title">Filters</summary>
+      <div class="filter-grid" id="facets"></div>
+      <div class="filter-row">
+        <label class="check"><input type="checkbox" id="f-all" name="all" value="1"> Include archived, retracted and shut-down records</label>
+        <button type="button" id="clear-filters">Clear filters</button>
+      </div>
+    </details>
+  </form>
+  <p id="state" class="state" role="status" aria-live="polite">Loading the index...</p>
+  <section id="decoded" class="decoded" aria-labelledby="decoded-title" hidden>
+    <h2 id="decoded-title" class="small-head">Matching decoder question</h2>
+    <div id="decoded-body"></div>
+  </section>
+  <ol id="results" class="results"></ol>
+  <section id="nearest" aria-labelledby="nearest-title" hidden>
+    <h2 id="nearest-title" class="small-head">Nearest decoder questions</h2>
+    <ul id="nearest-list" class="plain-list"></ul>
+  </section>
+  <section id="examples" aria-labelledby="examples-title" hidden>
+    <h2 id="examples-title" class="small-head">Example questions</h2>
+    <ul id="example-list" class="plain-list"></ul>
+  </section>
+</main>
+<footer class="site-footer">
+  <p>Search runs in your browser over the hub's generated index. Results match <code>python3 tools/query.py search</code>.</p>
+</footer>
+</body>
+</html>

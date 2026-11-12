@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Knowledge hub</title>
+<meta name="description" content="Search the hub's records on agent-made video and images: skills, renderers, models, sources and recipes.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+<link rel="alternate" type="text/markdown" href="../llms.txt">
+<link rel="describedby" href="../llms.txt">
+<script src="theme.js"></script>
+<script type="module" src="home.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="index.html" data-site-link>Knowledge hub</a>
+  <nav aria-label="Site">
+    <a href="search.html" data-site-link>Search</a>
+    <a href="../llms.txt">llms.txt</a>
+    <button id="theme-toggle" type="button">Theme: auto</button>
+  </nav>
+</header>
+<main id="main" tabindex="-1">
+  <section class="hero" aria-labelledby="hub-title">
+    <h1 id="hub-title">Knowledge hub</h1>
+    <p id="hub-tagline" class="lede"></p>
+    <form class="search search-hero" role="search" action="search.html" method="get">
+      <label for="q">Ask a question or search the hub</label>
+      <div class="search-row">
+        <div class="combo">
+          <input id="q" name="q" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false"
+            aria-controls="q-list" autocomplete="off" spellcheck="false" aria-describedby="q-hint">
+          <ul id="q-list" role="listbox" aria-label="Suggestions" hidden></ul>
+        </div>
+        <button type="submit" class="primary">Search</button>
+      </div>
+      <p id="q-hint" class="hint"><kbd>Ctrl</kbd> or <kbd>Cmd</kbd> + <kbd>K</kbd> focuses this box.</p>
+      <span id="q-status" class="visually-hidden" role="status" aria-live="polite"></span>
+    </form>
+    <div id="examples" hidden>
+      <h2 class="small-head">Example questions</h2>
+      <ul id="example-list" class="plain-list"></ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="counters-title">
+    <h2 id="counters-title">The hub in numbers</h2>
+    <p id="counters-state" role="status">Loading the hub's numbers...</p>
+    <dl id="counters" class="counters" hidden></dl>
+  </section>
+
+  <section class="agents" aria-labelledby="agents-title">
+    <h2 id="agents-title">For coding agents</h2>
+    <p>Read the index of all pages first: <a href="../llms.txt">llms.txt</a><span id="llms-live"></span>.</p>
+    <p>With a shell, clone the repository and query it:</p>
+    <pre><code id="clone-line">python3 tools/query.py search "&lt;words&gt;"
+python3 tools/query.py decode "&lt;question&gt;"</code></pre>
+    <p>The full record dump is <a href="../index/records.jsonl">index/records.jsonl</a>, one JSON object per line.</p>
+  </section>
+</main>
+<footer class="site-footer">
+  <p id="footer-line">Static pages over the hub's generated index. No tracking.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Record - Knowledge hub</title>
+<meta name="description" content="One hub record: what it is, why it matters, the evidence behind it and what links to it.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+<link rel="alternate" type="text/markdown" id="md-alternate" href="../llms.txt">
+<link rel="describedby" href="../llms.txt">
+<script src="theme.js"></script>
+<script type="module" src="record.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="index.html" data-site-link>Knowledge hub</a>
+  <form class="search" role="search" action="search.html" method="get">
+    <label for="q" class="visually-hidden">Search the hub</label>
+    <div class="combo">
+      <input id="q" name="q" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false"
+        aria-controls="q-list" autocomplete="off" spellcheck="false" placeholder="Search  (Ctrl or Cmd + K)">
+      <ul id="q-list" role="listbox" aria-label="Suggestions" hidden></ul>
+    </div>
+    <button type="submit">Search</button>
+    <span id="q-status" class="visually-hidden" role="status" aria-live="polite"></span>
+  </form>
+  <nav aria-label="Site">
+    <a href="search.html" data-site-link>Search</a>
+    <button id="theme-toggle" type="button">Theme: auto</button>
+  </nav>
+</header>
+<main id="main" tabindex="-1">
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <ol><li><a href="index.html" data-site-link>Home</a></li><li><a id="crumb-kind" href="search.html" data-site-link>Records</a></li><li aria-current="page" id="crumb-id">Record</li></ol>
+  </nav>
+  <p id="state" class="state" role="status" aria-live="polite">Loading the record...</p>
+  <article id="record" hidden>
+    <header class="record-head">
+      <h1 id="r-title"></h1>
+      <p id="r-badges" class="hit-meta"></p>
+      <p id="r-why" class="lede"></p>
+      <p id="r-checked" class="checked"></p>
+      <p id="r-status" class="note" hidden></p>
+    </header>
+    <section aria-labelledby="h-fit">
+      <h2 id="h-fit">Fit notes</h2>
+      <div id="r-fit"></div>
+    </section>
+    <section aria-labelledby="h-facts">
+      <h2 id="h-facts">Facts</h2>
+      <div class="table-wrap"><table id="r-facts"><caption class="visually-hidden">Facts about this record</caption><tbody></tbody></table></div>
+      <div id="r-stages"></div>
+    </section>
+    <section aria-labelledby="h-claims">
+      <h2 id="h-claims">Claims and sources</h2>
+      <div id="r-claims"></div>
+    </section>
+    <section aria-labelledby="h-observed">
+      <h2 id="h-observed">Observed upstream</h2>
+      <div id="r-observed"></div>
+    </section>
+    <section aria-labelledby="h-links">
+      <h2 id="h-links">Related</h2>
+      <div class="two-col">
+        <div><h3>Links to</h3><ul id="r-related" class="plain-list"></ul></div>
+        <div><h3>Referenced by</h3><ul id="r-refby" class="plain-list"></ul></div>
+      </div>
+    </section>
+    <section aria-labelledby="h-use">
+      <h2 id="h-use">Use this record</h2>
+      <ul class="actions" id="r-actions"></ul>
+    </section>
+  </article>
+</main>
+<footer class="site-footer">
+  <p>Every record page has a markdown version under <code>catalog/</code>. Index of all pages: <a href="../llms.txt">llms.txt</a>.</p>
+</footer>
+</body>
+</html>
