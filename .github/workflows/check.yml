@@ -28,8 +28,11 @@ jobs:
       - name: Unit tests (query)
         run: python3 -m unittest discover tools/tests_query
 
+      # Rebuild for the committed build date, so the stale-output check compares like with like.
       - name: Gate
-        run: python3 tools/gate.py
+        run: |
+          export HUB_BUILD_DATE="$(python3 -c "import json; print(json.load(open('index/meta.json'))['built'])")"
+          python3 tools/gate.py
 
       - name: Generated output is up to date
         run: |
