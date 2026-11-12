@@ -17,7 +17,11 @@
  {
   "query": "can i use commercially where I live",
   "expect_any": [
-   "model:minimaxai/minimax-h3"
+   "model:minimaxai/minimax-h3",
+   "tool:n8n-io/n8n",
+   "tool:greensock/gsap",
+   "tool:activepieces/activepieces",
+   "tool:remotion-dev/remotion"
   ],
   "top": 3
  },
@@ -56,5 +60,53 @@
    "model:google/gemini-omni-flash"
   ],
   "top": 2
+ },
+ {
+  "query": "video model licence excluded territories EU US",
+  "expect_any": [
+   "model:minimaxai/minimax-h3"
+  ],
+  "top": 2
+ },
+ {
+  "query": "schedule claude code with cron on my mac",
+  "expect_any": [
+   "tool:get-bb/bb",
+   "source:code.claude.com/docs/en/scheduled-tasks"
+  ],
+  "top": 3
+ },
+ {
+  "query": "free for company up to 3 employees",
+  "expect_any": [
+   "tool:remotion-dev/remotion"
+  ],
+  "top": 2
+ },
+ {
+  "query": "caption characters per line reading speed",
+  "expect_any": [
+   "tool:calesthio/generative-media-skills",
+   "tool:josiahsiegel/claude-plugin-marketplace"
+  ],
+  "top": 3
+ },
+ {
+  "query": "approval gate before publishing",
+  "expect_any": [
+   "source:docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
+   "tool:get-bb/bb",
+   "tool:nousresearch/hermes-agent"
+  ],
+  "top": 5
+ },
+ {
+  "query": "render one frame to check before full render",
+  "expect_any": [
+   "tool:remotion-dev/remotion",
+   "tool:kajisho5/ffmpeg-skill",
+   "tool:dojocodinglabs/remotion-superpowers"
+  ],
+  "top": 4
  }
 ]
