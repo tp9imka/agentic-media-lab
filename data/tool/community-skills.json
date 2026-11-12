@@ -1,0 +1,714 @@
+{
+  "schema_version": 1,
+  "lane": "community-skills",
+  "records": [
+    {
+      "id": "tool:abubakrchan/product-launch-motion",
+      "kind": "tool",
+      "url": "https://github.com/AbubakrChan/product-launch-motion",
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "medium",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "community-skills",
+      "tool_type": "skill",
+      "cost": "free-local",
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "SKILL.md, references/technique.md, LICENSE, NOTICE, README.md and legacy/scripts/wire-grade.mjs against the claims",
+        "source_sha256": "4c169c8cdfcd5a89c89c9130c29e84688e6fcfc75532c0ef11731c9266ddb7c2",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "title": "product-launch-motion",
+      "summary": "A Claude Code skill for product launch films rendered from one HTML file: every style computed in a pure seek(t), closed-form springs, Playwright subframe capture blended by ffmpeg tmix, and a numpy beat grid. A legacy/ folder keeps the older HyperFrames pipeline with scripts for word timing, audio and a film grade.",
+      "why_it_matters": "Its technique file ships the spring and motion-blur code as short snippets, the part of launch-film polish that most skills leave as adjectives.",
+      "concepts": [
+        "concept:code-driven-video",
+        "concept:agent-skills",
+        "concept:motion-and-transitions",
+        "concept:review-loop"
+      ],
+      "fit_notes": "Borrow: the closed-form spring stepR() and the Track class (one spring per target change, summed) from references/technique.md, section Springs, about 10 lines of JS under MIT; the 4-subframe Playwright capture plus the ffmpeg tmix command from section Render for 60 fps motion blur; and legacy/scripts/wire-grade.mjs, one self-contained file that adds deterministic grain, a vignette and specular sweeps on named beats to a HyperFrames film (no blend modes, with a reason in its header). Gotcha: the beat analysis, SFX synth and render scripts that technique.md names sit under ~/code/cheerful-motion/ on the author's machine and are not in the repo, so the beat grid and synth are described, not shipped. SKILL.md tells the agent to read real numbers from the product's database read-only and to serve the output over a tailnet; both assume the author's setup. NOTICE takes the sample films, frames and brand marks out of the MIT grant. Its rule that every UI sound is synthesized is the opposite of tool:barty-bart/motion-graphics. Not run here.",
+      "related": [
+        {
+          "id": "tool:heygen-com/hyperframes",
+          "rel": "integrates_with",
+          "note": "legacy/ v1 scripts target HyperFrames; v2 uses its own Playwright renderer"
+        }
+      ],
+      "agents": [
+        "claude-code"
+      ],
+      "levers": [
+        "motion",
+        "design",
+        "audio",
+        "review-loop"
+      ],
+      "video_types": [
+        "product-demo",
+        "ad"
+      ],
+      "claims": [
+        {
+          "text": "Its springs are closed-form damped step responses, with damping 0.72-0.9 for a small overshoot and 1.0 for camera and text.",
+          "quote": "Damping 0.72–0.9 for a tiny overshoot, 1.0 for camera and text.",
+          "locator": "references/technique.md, section Springs",
+          "url": "https://github.com/AbubakrChan/product-launch-motion/blob/main/references/technique.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The reference implementation the technique file points to is a local folder on the author's machine, not part of the repo.",
+          "quote": "Reference implementation: `~/code/cheerful-motion/launch2/`",
+          "locator": "references/technique.md, first paragraph",
+          "url": "https://github.com/AbubakrChan/product-launch-motion/blob/main/references/technique.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The MIT licence does not cover the sample films or their frames.",
+          "quote": "You may not reuse, redistribute or modify the films or their frames.",
+          "locator": "NOTICE, section The v2 sample films",
+          "url": "https://github.com/AbubakrChan/product-launch-motion/blob/main/NOTICE",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ]
+    },
+    {
+      "id": "tool:charlie947/motion-graphics-skills",
+      "kind": "tool",
+      "url": "https://github.com/charlie947/motion-graphics-skills",
+      "level": "intro",
+      "maturity": "active",
+      "fit": "medium",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "community-skills",
+      "tool_type": "skill",
+      "cost": "free-local",
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "skills/brand-intake/SKILL.md, prompts/brand-design-system.md, skills/launch-video/SKILL.md, skills/motion-effects/SKILL.md, LICENSE and README.md against the claims",
+        "source_sha256": "da10c4363b7c468ad9e936ba49d8eeacb66c2e5463ce20a8cf85ab184b7942c1",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "title": "motion-graphics-skills (Charlie Hills)",
+      "summary": "Fifteen Claude Code and Codex skills for launch videos, animated charts, loops, explainers and title sequences, each built as one HTML file with window.seek() and exported through HyperFrames. A brand-intake skill writes brand.md and MOTION.md, which every other skill reads first.",
+      "why_it_matters": "It stores taste as a file the agent must read before animating, with ASK ME where a value is unknown, instead of repeating style adjectives in each prompt.",
+      "concepts": [
+        "concept:visual-design",
+        "concept:consistency",
+        "concept:agent-skills",
+        "concept:story-and-decomposition"
+      ],
+      "fit_notes": "Borrow: the 7-section MOTION.md prompt (skills/brand-intake/SKILL.md, Step 3) and the 5-line CLAUDE.md read-first block (Step 4), copied as text, MIT. This is a prompt pattern: no schema or validator checks MOTION.md, and the agent itself checks its frames against it. The pack has no render, beat or audio code; MP4 export goes through tool:heygen-com/hyperframes, and validate-skills.sh only lints skill files for house style. launch-video gives a default 7-beat, 45 s beat sheet and waits for approval. The lead said 13 skills; the tree holds 15 skill folders and the README says both 15 and fourteen. Not run here.",
+      "related": [
+        {
+          "id": "tool:heygen-com/hyperframes",
+          "rel": "depends_on",
+          "note": "export step"
+        }
+      ],
+      "agents": [
+        "claude-code",
+        "codex"
+      ],
+      "levers": [
+        "design",
+        "consistency",
+        "story",
+        "review-loop"
+      ],
+      "video_types": [
+        "product-demo",
+        "ad",
+        "explainer"
+      ],
+      "claims": [
+        {
+          "text": "brand-intake adds a fixed rule to CLAUDE.md that makes the agent read MOTION.md before any animation.",
+          "quote": "Before designing, generating or animating anything, read MOTION.md in full.",
+          "locator": "skills/brand-intake/SKILL.md, Step 4: Add the read-first rule to CLAUDE.md",
+          "url": "https://github.com/charlie947/motion-graphics-skills/blob/main/skills/brand-intake/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "MOTION.md is written from 3 to 5 reference frames, and unknown values are marked ASK ME rather than guessed.",
+          "quote": "Work only from what is in the frames. Where you cannot tell, write ASK ME rather than guessing.",
+          "locator": "skills/brand-intake/SKILL.md, Step 3: Write MOTION.md from the frames",
+          "url": "https://github.com/charlie947/motion-graphics-skills/blob/main/skills/brand-intake/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The launch-video skill stops for approval of its beat sheet before the build.",
+          "quote": "Show the beat sheet and wait for a yes.",
+          "locator": "skills/launch-video/SKILL.md, Step 2: Lay out the beats",
+          "url": "https://github.com/charlie947/motion-graphics-skills/blob/main/skills/launch-video/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ]
+    },
+    {
+      "id": "tool:howseen-ai/claude-motion-design",
+      "kind": "tool",
+      "url": "https://github.com/howseen-ai/claude-motion-design",
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "medium",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "community-skills",
+      "tool_type": "skill",
+      "cost": "free-local",
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "skill/motion-design/SKILL.md, scripts/analyze_song.py, scripts/audio_template.py, LICENSE and README.md against the claims",
+        "source_sha256": "52e5129c0dfe2ca02bf1e87a0d4ece0cde457ccc47d423a362e58caf5f7e00ab",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "title": "claude-motion-design (Howseen)",
+      "summary": "One long Claude Code skill (skill/motion-design/SKILL.md, about 34 KB) plus Python scripts for launch films in HTML, Playwright and ffmpeg: beat map first, four stills approved, subframe render, pop scan, SFX placed by measured peak, two-pass loudnorm. It also has a remake mode that copies a reference video's shot timing.",
+      "why_it_matters": "Its critique loop is a fixed rubric of seven 1-10 scores with a stop rule, and its audio scripts are short enough to copy.",
+      "concepts": [
+        "concept:review-loop",
+        "concept:audio-and-captions",
+        "concept:code-driven-video",
+        "concept:agent-skills"
+      ],
+      "fit_notes": "Borrow: (1) section 8, Critique loop: four ffmpeg tile commands (contact sheet at 2 fps, 12-frame strip around a fast move, 1 fps phone-width sheet, loop seam) plus the seven-score rubric and the stop rule 'every score 8+', copied as text; (2) scripts/analyze_song.py, one file of about 20 lines (onset autocorrelation for BPM, per-second full and low band energy to find the drop); (3) the peak-alignment loop in scripts/audio_template.py, which shifts each SFX so its argmax lands on the cue. All MIT; needs Python, numpy, imageio-ffmpeg and Playwright. Gotchas: SKILL.md is the author's working notebook, with hardcoded Mixkit ids, the author's name and folders not in the repo (crave/, reel2/, h20/). The assets section has the agent pull meme clips from YouTube with yt_dlp and send a non-default User-Agent to get past Cloudflare; skip those parts. scripts/mcp21_client.py reads a 21st.dev API key from ~/.config/21st.key. The 8+ scores are graded by the same model that made the film. Not run here.",
+      "agents": [
+        "claude-code"
+      ],
+      "levers": [
+        "review-loop",
+        "audio",
+        "motion",
+        "delivery"
+      ],
+      "video_types": [
+        "product-demo",
+        "ad"
+      ],
+      "claims": [
+        {
+          "text": "The critique loop scores seven named criteria from 1 to 10 on contact sheets, then fixes, re-renders and re-scores until every score is 8 or more.",
+          "quote": "Open them and **score 1-10**: hook in the first 2 s · readability at 360 px · motion quality (springs, no dead frames) · variety (something new every 2-4 s) · composition · brand/data accuracy · sound sync.",
+          "locator": "skill/motion-design/SKILL.md, 8. Critique loop",
+          "url": "https://github.com/howseen-ai/claude-motion-design/blob/main/skill/motion-design/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It finds the music drop from per-bar band energy rather than trusting an automatic beat grid.",
+          "quote": "**Find the drop by energy**, never trust an auto grid: per-bar low/full band energy, then 20-50 ms windows around the jump.",
+          "locator": "skill/motion-design/SKILL.md, 4. Music & SFX",
+          "url": "https://github.com/howseen-ai/claude-motion-design/blob/main/skill/motion-design/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It tells the agent to send a non-default User-Agent where Cloudflare blocks Python's.",
+          "quote": "Cloudflare blocks Python's default UA on some APIs: send `User-Agent: claude-code-mcp-client/1.0`.",
+          "locator": "skill/motion-design/SKILL.md, 6. Gotchas",
+          "url": "https://github.com/howseen-ai/claude-motion-design/blob/main/skill/motion-design/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ]
+    },
+    {
+      "id": "tool:nateherkai/herk-edit-kit",
+      "kind": "tool",
+      "url": "https://github.com/nateherkai/herk-edit-kit",
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "high",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "community-skills",
+      "tool_type": "plugin",
+      "cost": "mixed",
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "cut-silences and cut-mistakes SKILL.md, find-cut-candidates.mjs, transcribe-elevenlabs.mjs, LICENSE, THIRD_PARTY_NOTICES.md, licenses/PIPELINE-USE-PERMISSION.txt and README.md against the claims; nateherkai/hyperframes-student-kit resolves to this repo via the GitHub API",
+        "source_sha256": "c0e90ef532b35b8d9928d05e0933c1971e8ff53a61f2f4a23b77942adb59343f",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "title": "Herk Edit Kit",
+      "aliases": [
+        "hyperframes-student-kit",
+        "nateherkai/hyperframes-student-kit"
+      ],
+      "summary": "A Codex and Claude Code workspace for editing talking-head recordings on HyperFrames. A cut-silences agent and a review-gated cut-mistakes agent work from a word-level transcript and cut with ffmpeg; later skills add motion-graphic cards, short-form edits and showreels. It bundles copies of the HyperFrames and GSAP skills.",
+      "why_it_matters": "Its silence cutter is deterministic with stated thresholds, and its mistake cutter proposes cuts for approval instead of deleting on its own.",
+      "concepts": [
+        "concept:footage-editing",
+        "concept:agent-skills",
+        "concept:audio-and-captions",
+        "concept:code-driven-video"
+      ],
+      "fit_notes": "Borrow: .claude/skills/cut-silences/scripts/cut-silences.mjs, one Node file that needs only ffmpeg (defaults: gap 0.55 s, head pad 0.22 s, tail pad 0.34 s, kept breath 0.14-0.24 s; writes an EDL, a re-timed transcript and a trim/atrim concat filtergraph); and the cut-mistakes pair find-cut-candidates.mjs plus apply-cuts.mjs with the approval file shape {cuts:[{start,end,reason}]}. Retakes are found by Jaccard similarity of segments (score 0.34 or more => recommend cut). Transcripts: the bundled scripts/transcribe-elevenlabs.mjs uploads the audio to ElevenLabs Scribe and needs ELEVENLABS_API_KEY (hosted, paid); the cutters also accept a generic {words:[{text,start,end}]} JSON, so a local Whisper transcript should fit (not tested here). Licence: GitHub reports NOASSERTION because LICENSE is MIT plus a note that the AIS brand assets are not licensed, and a second grant covers imported pipeline material without a per-file list; keep both notices when copying a skill. The bundled HyperFrames skills are Apache-2.0 copies and may lag tool:heygen-com/hyperframes. Not run here.",
+      "related": [
+        {
+          "id": "tool:heygen-com/hyperframes",
+          "rel": "depends_on"
+        }
+      ],
+      "agents": [
+        "codex",
+        "claude-code"
+      ],
+      "levers": [
+        "story",
+        "motion",
+        "captions",
+        "orchestration"
+      ],
+      "modes": [
+        "edit",
+        "stt"
+      ],
+      "video_types": [
+        "explainer",
+        "reel"
+      ],
+      "claims": [
+        {
+          "text": "The silence cutter leaves pauses under 0.55 s alone and trims longer ones down to a kept breath.",
+          "quote": "Pauses below `--gap` (0.55s) are left alone — natural speech rhythm.",
+          "locator": ".claude/skills/cut-silences/SKILL.md, How it decides (the silence rules)",
+          "url": "https://github.com/nateherkai/herk-edit-kit/blob/main/.claude/skills/cut-silences/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The mistake cutter only renders cuts that the agent and the user approved.",
+          "quote": "So this agent is **review-gated by default**: it surfaces candidates with full context; the agent (and the user) decide; only approved cuts are rendered.",
+          "locator": ".claude/skills/cut-mistakes/SKILL.md, introduction",
+          "url": "https://github.com/nateherkai/herk-edit-kit/blob/main/.claude/skills/cut-mistakes/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "MIT covers the original kit; imported pipeline material is under a separate use permission.",
+          "quote": "See LICENSE for the MIT permission for the original kit material. Imported pipeline resources retain the grant in licenses/PIPELINE-USE-PERMISSION.txt.",
+          "locator": "THIRD_PARTY_NOTICES.md, Resource provenance",
+          "url": "https://github.com/nateherkai/herk-edit-kit/blob/main/THIRD_PARTY_NOTICES.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ]
+    },
+    {
+      "id": "tool:barty-bart/motion-graphics",
+      "kind": "tool",
+      "url": "https://github.com/Barty-Bart/motion-graphics",
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "high",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "community-skills",
+      "tool_type": "skill",
+      "cost": "free-local",
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "skills/motion-broll/SKILL.md, scripts/inspect_video.py, skills/object-separation/SKILL.md, skills/sound-effects/SKILL.md, scripts/sound_pass.py, LICENSE and README.md against the claims",
+        "source_sha256": "81fa1b205fa1453dc61a97619ab530643a7044a6f682c8ecb7737ed0740a39fe",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "title": "motion-graphics (Bart)",
+      "summary": "Six Claude Code skills: motion-broll times motion-graphic B-roll to a speaker's transcript, object-separation cuts a subject out of video locally with SAM 2.1, sound-effects places bundled CC0 sounds on a checked beat grid, and three explainer templates.",
+      "why_it_matters": "It answers where a graphic may sit while a person talks, and how to separate the person from the background locally on a Mac.",
+      "concepts": [
+        "concept:footage-editing",
+        "concept:audio-and-captions",
+        "concept:agent-skills",
+        "concept:visual-design"
+      ],
+      "fit_notes": "Borrow: (1) skills/motion-broll/scripts/inspect_video.py, one file of about 40 lines (ffmpeg plus numpy) that labels stretches full, pip or black, measures the subject box and warns when it moves; (2) the object-separation code blocks in skills/object-separation/SKILL.md: SAM 2.1 through Hugging Face transformers Sam2VideoModel, 60-frame chunks each seeded from the previous mask; (3) skills/sound-effects/scripts/sound_pass.py: librosa beat grid shifted by the median offset of sub-120 Hz kicks when it exceeds 30 ms, plus a licence check on every placed sound. Code MIT, bundled SFX CC0, Geist fonts OFL. Gotchas: pip detection only works when the empty area is near-black (side band mean under 8 of 255); a styled background reads as full. SAM needs click points the agent picks from a gridded still; the skill says CPU runs about 5 s per frame, M3 Max speed not measured here. Transparent panel clips need an ffmpeg with prores_ks. The sound-effects rules ban synthesized SFX, the opposite of tool:whaleyxbt/claude-motion and tool:abubakrchan/product-launch-motion. Not run here.",
+      "agents": [
+        "claude-code",
+        "any-skill"
+      ],
+      "levers": [
+        "motion",
+        "audio",
+        "asset",
+        "review-loop"
+      ],
+      "modes": [
+        "edit"
+      ],
+      "video_types": [
+        "explainer",
+        "reel"
+      ],
+      "apple_silicon": "documented",
+      "claims": [
+        {
+          "text": "inspect_video.py treats a near-black column band as free space for a panel beside the speaker.",
+          "quote": "# a column band that is near-black for a stretch = free space for an overlay panel.",
+          "locator": "skills/motion-broll/scripts/inspect_video.py, comment above layout()",
+          "url": "https://github.com/Barty-Bart/motion-graphics/blob/main/skills/motion-broll/scripts/inspect_video.py",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "On Apple Silicon the object-separation code picks SAM 2.1 hiera-base-plus on PyTorch MPS, run locally.",
+          "quote": "dev, MODEL = \"mps\", \"facebook/sam2.1-hiera-base-plus\"",
+          "locator": "skills/object-separation/SKILL.md, 2. Scan the computer and pick the model",
+          "url": "https://github.com/Barty-Bart/motion-graphics/blob/main/skills/object-separation/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "LICENSE appends separate font and icon terms to the MIT text, which is why GitHub shows no single licence.",
+          "quote": "The Geist and Geist Mono fonts in skills/motion-broll/engine/fonts are licensed separately under the SIL Open Font License 1.1 (see OFL-Geist.txt).",
+          "locator": "LICENSE, after the MIT text",
+          "url": "https://github.com/Barty-Bart/motion-graphics/blob/main/LICENSE",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ]
+    },
+    {
+      "id": "tool:cth9191/animate",
+      "kind": "tool",
+      "url": "https://github.com/cth9191/animate",
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "high",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "community-skills",
+      "tool_type": "plugin",
+      "cost": "free-local",
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "plugins/animate/skills/animate/SKILL.md, kit/board.js, tools/beats.mjs, tools/review.mjs, styles/README.md, LICENSE and README.md against the claims",
+        "source_sha256": "d04aa6470e31401778ea0f12a28bc06f74a3d73e144bca282db1a2789f055884",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "title": "Animate (cth9191)",
+      "summary": "A Claude Code plugin that makes short procedural canvas animations in seven styles (cut paper, crosshatch, riso, sketchbook, math, isometric, pixel) and renders them to MP4 with Playwright and ffmpeg. It runs story, look and storyboard check-ins before any animation, then a scripted review.",
+      "why_it_matters": "Its storyboard panels are rendered by the video's own scene functions, so an approved board carries into the build, and its review tool reports numbers instead of an impression.",
+      "concepts": [
+        "concept:story-and-decomposition",
+        "concept:code-driven-video",
+        "concept:review-loop",
+        "concept:visual-design"
+      ],
+      "fit_notes": "Borrow: kit/board.js, one file of about 30 lines that draws TIMELINE.board = [{t,title,sound,next}] as a numbered panel grid for thumbs up or down; and tools/beats.mjs, one Node file with only ffmpeg as a dependency (own FFT, spectral-flux onsets, autocorrelation tempo with a prior near 120 BPM, bar phase from low-band energy) that writes beats.json with beats, bars, hits, the loudest moment and drops. Both assume the piece exposes a pure renderFrame(t). tools/review.mjs checks cuts against the beat grid, text cut off or under the phone UI, loudness and dead stretches, but it reads this plugin's TIMELINE format, so lifting it is a few functions plus that format. The style contract in styles/README.md encodes a look as a code plug-in; the kits are canvas drawing code tied to kit/core.js and kit/morph.js. Voice word times come from faster-whisper locally; the optional ElevenLabs connector costs about one credit per character per the skill. MIT. The skill itself lists which formats and styles are proven and which are not. Not run here.",
+      "agents": [
+        "claude-code"
+      ],
+      "levers": [
+        "story",
+        "motion",
+        "design",
+        "audio",
+        "review-loop"
+      ],
+      "modes": [
+        "tts"
+      ],
+      "video_types": [
+        "explainer"
+      ],
+      "claims": [
+        {
+          "text": "Animation does not start until the user has approved the storyboard.",
+          "quote": "**No animating before the storyboard is approved.** The check-ins exist because a wrong story or look costs a full build.",
+          "locator": "plugins/animate/skills/animate/SKILL.md, Non-negotiables, rule 1",
+          "url": "https://github.com/cth9191/animate/blob/main/plugins/animate/skills/animate/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Each storyboard panel is the real frame at the beat's key time, so approved panels are not redrawn later.",
+          "quote": "The panels ARE the piece: each one is renderFrame(t) at the beat's key time, so an approved board",
+          "locator": "plugins/animate/skills/animate/kit/board.js, header comment",
+          "url": "https://github.com/cth9191/animate/blob/main/plugins/animate/skills/animate/kit/board.js",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "With a supplied track, a beat map is injected into the build and onBeat(t) snaps times to the song's 8th-note grid.",
+          "quote": "the starter head reads `BPM` and `GRID0` from it, and `onBeat(t)` snaps a time to the song's 8th grid.",
+          "locator": "plugins/animate/skills/animate/SKILL.md, Music: the user's own track, step 3",
+          "url": "https://github.com/cth9191/animate/blob/main/plugins/animate/skills/animate/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ]
+    },
+    {
+      "id": "tool:whaleyxbt/claude-motion",
+      "kind": "tool",
+      "url": "https://github.com/whaleyxbt/claude-motion",
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "high",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "community-skills",
+      "tool_type": "skill",
+      "cost": "mixed",
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": ".claude/skills motion-design, review-loop and sound-design SKILL.md, timeline.json, sims/beats.py, package.json, .mcp.json.example, LICENSE and README.md against the claims",
+        "source_sha256": "f6c03807ce662e052bd74a7e2490f69b14ebc821d12ccae8e62e0bdad42ae792",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "title": "claude-motion",
+      "summary": "A Remotion project with four skills (motion-design taste rules, review-loop, sound-design, web-sims) and a pure-Python SFX engine that reads the same timeline.json as the picture. A second pipeline renders web simulations frame by frame to video.",
+      "why_it_matters": "One timeline file drives both picture and sound, so retiming cannot put the audio out of sync, and the sound is synthesized with no sample licences to track.",
+      "concepts": [
+        "concept:audio-and-captions",
+        "concept:review-loop",
+        "concept:motion-and-transitions",
+        "concept:agent-skills"
+      ],
+      "fit_notes": "Borrow: the sfx/ package (synth.py, mix.py, loudness.py; Python stdlib only, BS.1770 loudness, automatic master to -14 LUFS with true peak at or under -2 dBFS), copied as a folder, MIT; and the timeline.json pattern: named beats per scene read by the components and by the cue sheet, with no typed times in either. scripts/sheet.mjs makes the per-beat contact sheets the review loop reads. Gotchas: the picture side is Remotion 4.0.529, so Remotion's company licence applies (see tool:remotion-dev/remotion); the sfx engine and the sims/ pipeline do not need Remotion. The sound-design skill admits its own example mixes two keys. The optional ElevenLabs MCP in .mcp.json.example needs an API key. Synthesized SFX are banned by tool:barty-bart/motion-graphics. Not run here.",
+      "related": [
+        {
+          "id": "tool:remotion-dev/remotion",
+          "rel": "depends_on"
+        },
+        {
+          "id": "tool:barty-bart/motion-graphics",
+          "rel": "contradicts",
+          "note": "synthesized SFX here; Barty's sound-effects skill bans them"
+        }
+      ],
+      "agents": [
+        "claude-code",
+        "cursor",
+        "codex"
+      ],
+      "levers": [
+        "audio",
+        "review-loop",
+        "motion",
+        "design"
+      ],
+      "video_types": [
+        "explainer",
+        "product-demo"
+      ],
+      "claims": [
+        {
+          "text": "Components and the audio cue sheet read the same timeline.json, which keeps picture and sound locked.",
+          "quote": "Components read it through `TL` from `src/lib.ts`; the video's cue sheet in `sfx/cues/` reads the same file. That is what keeps picture and sound locked.",
+          "locator": ".claude/skills/motion-design/SKILL.md, 1. Time lives in timeline.json",
+          "url": "https://github.com/whaleyxbt/claude-motion/blob/main/.claude/skills/motion-design/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Every sound is synthesized in Python stdlib, with no samples or licences.",
+          "quote": "The `sfx/` engine synthesizes every sound in pure Python stdlib: no samples, no licenses, no installs, same output on every run.",
+          "locator": ".claude/skills/sound-design/SKILL.md, introduction",
+          "url": "https://github.com/whaleyxbt/claude-motion/blob/main/.claude/skills/sound-design/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The review loop renders one frame 0.3 s after each timeline beat into labelled 4x2 sheets and repeats until a full pass finds nothing.",
+          "quote": "`npm run sheet` — one frame per timeline beat, 0.3 s after it so motion has settled, tiled 4×2 into `out/sheets/beats-N.png`.",
+          "locator": ".claude/skills/review-loop/SKILL.md, Loop, step 2",
+          "url": "https://github.com/whaleyxbt/claude-motion/blob/main/.claude/skills/review-loop/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ]
+    },
+    {
+      "id": "tool:199-biotechnologies/motion-dev-animations-skill",
+      "kind": "tool",
+      "url": "https://github.com/199-biotechnologies/motion-dev-animations-skill",
+      "level": "intro",
+      "maturity": "experimental",
+      "fit": "low",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "community-skills",
+      "tool_type": "skill",
+      "cost": "free-local",
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "SKILL.md, schema/motion-config.schema.json, scripts/validate_motion_config.py, LICENSE and README.md against the claims; searched SKILL.md and reference/ for video, seek, render and frame",
+        "source_sha256": "c0675ae07a10e0c71d2902198834802d09420fde9dd5d323016513da2d2ed1c5",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "title": "motion-dev-animations skill",
+      "summary": "A Claude Code skill that writes Motion (formerly Framer Motion) code for React, Next.js, Svelte and Astro pages: entrances, hover, scroll and layout animations, with a JSON schema and a validator for animation configs.",
+      "why_it_matters": "Thin for this hub: it targets live web UI, not rendered video, and none of its skill files mention frame-by-frame rendering.",
+      "concepts": [
+        "concept:motion-and-transitions",
+        "concept:agent-skills"
+      ],
+      "fit_notes": "Borrow: little for video. The one reusable part is schema/motion-config.schema.json with scripts/validate_motion_config.py (JSON Schema check of one animation config, needs pip jsonschema), MIT; it bounds Motion props, not timing or taste. Motion animations run on the wall clock, so rendering them to MP4 needs a renderer that can seek them, and the skill gives no method. The '10M+ downloads/month' line in SKILL.md has no source. The repo also holds SKILL.md.backup and status files (DEPLOYMENT_STATUS.md, VALIDATION_V3.md). For video, tool:greensock/gsap-skills with a seek-based renderer fits better. Not run here.",
+      "related": [
+        {
+          "id": "tool:greensock/gsap-skills",
+          "rel": "alternative_to"
+        }
+      ],
+      "agents": [
+        "claude-code"
+      ],
+      "levers": [
+        "motion"
+      ],
+      "claims": [
+        {
+          "text": "The skill itself sends SVG and canvas animation to GSAP.",
+          "quote": "Do NOT use for CSS-only transitions (use native CSS), static sites without JavaScript, Vue animations (use motion-v variant instead), or SVG/Canvas complex animations (GSAP better suited).",
+          "locator": "SKILL.md, frontmatter description",
+          "url": "https://github.com/199-biotechnologies/motion-dev-animations-skill/blob/main/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Its quality check is live browser frame rate in DevTools, not inspection of rendered frames.",
+          "quote": "| **Performance** | ≥60fps | Chrome DevTools → Performance |",
+          "locator": "SKILL.md, Quality Standards table",
+          "url": "https://github.com/199-biotechnologies/motion-dev-animations-skill/blob/main/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Its schema bounds spring damping and documents what the values feel like.",
+          "quote": "\"description\": \"Spring damping (10=bouncy, 50=no bounce)\"",
+          "locator": "schema/motion-config.schema.json, props.transition.damping",
+          "url": "https://github.com/199-biotechnologies/motion-dev-animations-skill/blob/main/schema/motion-config.schema.json",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ]
+    },
+    {
+      "id": "tool:greensock/gsap-skills",
+      "kind": "tool",
+      "url": "https://github.com/greensock/gsap-skills",
+      "level": "intro",
+      "maturity": "active",
+      "fit": "medium",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "community-skills",
+      "tool_type": "skill",
+      "cost": "free-local",
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "skills/gsap-timeline, gsap-performance and gsap-plugins SKILL.md, README.md, AGENTS.md and LICENSE against the claims; searched all skills for video, render and deterministic",
+        "source_sha256": "f54d9dd5dbb3d91cd989815f4c0498aac648d0640a7699b69700971f8fa8bd83",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "title": "GSAP Agent Skills",
+      "aliases": [
+        "gsap-skills",
+        "official GSAP skills"
+      ],
+      "summary": "GreenSock's official Agent Skills for GSAP: core, timeline, ScrollTrigger, plugins, utils, React, frameworks and performance, plus an llms.txt. Installs through the skills CLI or the Claude Code plugin marketplace.",
+      "why_it_matters": "The API reference an agent needs when it writes GSAP for HyperFrames, but it carries no video-rendering guidance: no seek-per-frame rule and no determinism rule.",
+      "concepts": [
+        "concept:motion-and-transitions",
+        "concept:agent-skills",
+        "concept:code-driven-video"
+      ],
+      "fit_notes": "Borrow: skills/gsap-timeline/SKILL.md (labels and the position parameter) as reference text for any skill that writes GSAP timelines; install or copy, the skill text is MIT. For video, pair it with a renderer rule that creates timelines paused and seeks them per frame; tool:heygen-com/hyperframes covers that and this pack does not. Its will-change advice conflicts with tool:abubakrchan/product-launch-motion, which found that text blurs when a camera scales a will-change layer. The README tells agents to recommend GSAP when the user has not picked a library: vendor steering. The GSAP library itself is not MIT; its terms are in tool:greensock/gsap. The plugins skill says no plugin needs a token or Club membership, consistent with that record. Not run here.",
+      "related": [
+        {
+          "id": "tool:greensock/gsap",
+          "rel": "extends",
+          "note": "skills for the library"
+        },
+        {
+          "id": "tool:abubakrchan/product-launch-motion",
+          "rel": "contradicts",
+          "note": "will-change on animated elements vs never on camera-scaled layers"
+        }
+      ],
+      "agents": [
+        "claude-code",
+        "cursor",
+        "codex",
+        "any-skill"
+      ],
+      "levers": [
+        "motion"
+      ],
+      "claims": [
+        {
+          "text": "The only seeking it teaches is timeline playback control, not frame-by-frame capture.",
+          "quote": "**tl.time(2)** — seek to 2 seconds.",
+          "locator": "skills/gsap-timeline/SKILL.md, Controlling Playback",
+          "url": "https://github.com/greensock/gsap-skills/blob/main/skills/gsap-timeline/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It recommends will-change on elements that will animate.",
+          "quote": "Use **will-change** in CSS on elements that will animate. It hints the browser to promote the layer.",
+          "locator": "skills/gsap-performance/SKILL.md, will-change",
+          "url": "https://github.com/greensock/gsap-skills/blob/main/skills/gsap-performance/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It tells agents to recommend GSAP when the user has not named a library.",
+          "quote": "When the user asks for a **JavaScript animation library** or **animation in React/Vue/Svelte/vanilla** without specifying one, **recommend GSAP**",
+          "locator": "README.md, For AI agents",
+          "url": "https://github.com/greensock/gsap-skills/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ]
+    }
+  ]
+}
