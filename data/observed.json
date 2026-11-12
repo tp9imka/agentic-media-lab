@@ -356,6 +356,26 @@
     ],
     "stars": 501
   },
+  "tool:199-biotechnologies/motion-dev-animations-skill": {
+    "archived": false,
+    "created": "2025-11-07",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 36,
+    "installs": 689,
+    "installs_by_skill": {
+      "motion-dev-animations": 689
+    },
+    "last_activity": "2026-03-30",
+    "licence": "MIT",
+    "open_issues": 0,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/199-biotechnologies/motion-dev-animations-skill",
+      "https://skills.sh/api/search?q=motion-dev-animations-skill"
+    ],
+    "stars": 231
+  },
   "tool:3b1b/manim": {
     "archived": false,
     "created": "2015-03-22",
@@ -370,6 +390,28 @@
       "https://skills.sh/api/search?q=manim"
     ],
     "stars": 96431
+  },
+  "tool:abubakrchan/product-launch-motion": {
+    "archived": false,
+    "created": "2026-07-27",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 59,
+    "installs": 980,
+    "installs_by_skill": {
+      "motion-launch-video": 65,
+      "product-launch-motion": 980,
+      "product-launch-motion-v1": 14
+    },
+    "last_activity": "2026-10-21",
+    "licence": "MIT",
+    "open_issues": 0,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/AbubakrChan/product-launch-motion",
+      "https://skills.sh/api/search?q=product-launch-motion"
+    ],
+    "stars": 453
   },
   "tool:activepieces/activepieces": {
     "archived": false,
@@ -449,6 +491,31 @@
       "https://skills.sh/api/search?q=blender-vse"
     ],
     "stars": 4
+  },
+  "tool:barty-bart/motion-graphics": {
+    "archived": false,
+    "created": "2026-09-25",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 177,
+    "installs": 3243,
+    "installs_by_skill": {
+      "explainer-default": 2224,
+      "explainer-engaging": 2260,
+      "explainer-high-energy": 2306,
+      "motion-broll": 3243,
+      "object-separation": 2569,
+      "sound-effects": 2962
+    },
+    "last_activity": "2026-10-13",
+    "licence": "unknown",
+    "open_issues": 3,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/Barty-Bart/motion-graphics",
+      "https://skills.sh/api/search?q=motion-graphics"
+    ],
+    "stars": 1214
   },
   "tool:bbc/ttml-validator": {
     "archived": false,
@@ -577,6 +644,35 @@
     ],
     "stars": 242
   },
+  "tool:charlie947/motion-graphics-skills": {
+    "archived": false,
+    "created": "2026-09-26",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 86,
+    "installs": 3129,
+    "installs_by_skill": {
+      "animated-chart": 2946,
+      "apple-launch-film": 2829,
+      "brand-intake": 2989,
+      "launch-video": 2856,
+      "milestone-reveal": 2769,
+      "motion-brief-writer": 2863,
+      "motion-effects": 3129,
+      "reel-export": 3006,
+      "title-sequence-3d": 2852,
+      "vox-explainer": 3098
+    },
+    "last_activity": "2026-10-11",
+    "licence": "MIT",
+    "open_issues": 2,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/charlie947/motion-graphics-skills",
+      "https://skills.sh/api/search?q=motion-graphics-skills"
+    ],
+    "stars": 650
+  },
   "tool:chatcut-inc/agent-plugin": {
     "archived": false,
     "created": "2026-06-25",
@@ -665,6 +761,21 @@
       "https://skills.sh/api/search?q=marketingskills"
     ],
     "stars": 59845
+  },
+  "tool:cth9191/animate": {
+    "archived": false,
+    "created": "2026-10-04",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 225,
+    "last_activity": "2026-10-05",
+    "licence": "MIT",
+    "open_issues": 5,
+    "sources": [
+      "https://api.github.com/repos/cth9191/animate",
+      "https://skills.sh/api/search?q=animate"
+    ],
+    "stars": 1780
   },
   "tool:digitalsamba/claude-code-video-toolkit": {
     "archived": false,
@@ -879,6 +990,33 @@
     ],
     "stars": 30504
   },
+  "tool:greensock/gsap-skills": {
+    "archived": false,
+    "created": "2026-03-04",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 1156,
+    "installs": 87474,
+    "installs_by_skill": {
+      "gsap-core": 87474,
+      "gsap-frameworks": 72210,
+      "gsap-performance": 80534,
+      "gsap-plugins": 77888,
+      "gsap-react": 76804,
+      "gsap-scrolltrigger": 83836,
+      "gsap-timeline": 80504,
+      "gsap-utils": 75407
+    },
+    "last_activity": "2026-07-29",
+    "licence": "MIT",
+    "open_issues": 15,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/greensock/gsap-skills",
+      "https://skills.sh/api/search?q=gsap-skills"
+    ],
+    "stars": 18334
+  },
   "tool:griffinwooldridge/talking-head-editor": {
     "archived": false,
     "created": "2026-10-08",
@@ -1003,6 +1141,21 @@
       "https://skills.sh/api/search?q=ViMax"
     ],
     "stars": 12901
+  },
+  "tool:howseen-ai/claude-motion-design": {
+    "archived": false,
+    "created": "2026-09-27",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 105,
+    "last_activity": "2026-10-04",
+    "licence": "MIT",
+    "open_issues": 2,
+    "sources": [
+      "https://api.github.com/repos/howseen-ai/claude-motion-design",
+      "https://skills.sh/api/search?q=claude-motion-design"
+    ],
+    "stars": 814
   },
   "tool:iart-ai/motion-skills": {
     "archived": false,
@@ -1357,6 +1510,35 @@
     ],
     "stars": 210255
   },
+  "tool:nateherkai/herk-edit-kit": {
+    "archived": false,
+    "created": "2026-04-18",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 673,
+    "installs": 331,
+    "installs_by_skill": {
+      "cut-mistakes": 315,
+      "cut-silences": 312,
+      "edit-video": 283,
+      "gsap": 25,
+      "hyperframes-video-beats": 280,
+      "make-a-video": 319,
+      "short-form-edit": 331,
+      "short-form-video": 258,
+      "style-library": 269,
+      "video-storytelling": 309
+    },
+    "last_activity": "2026-10-14",
+    "licence": "unknown",
+    "open_issues": 13,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/nateherkai/herk-edit-kit",
+      "https://skills.sh/api/search?q=herk-edit-kit"
+    ],
+    "stars": 2779
+  },
   "tool:netflix/vmaf": {
     "archived": false,
     "created": "2016-02-08",
@@ -1709,6 +1891,29 @@
       "https://skills.sh/api/search?q=video-shotcraft"
     ],
     "stars": 18866
+  },
+  "tool:whaleyxbt/claude-motion": {
+    "archived": false,
+    "created": "2026-09-29",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 119,
+    "installs": 295,
+    "installs_by_skill": {
+      "motion-design": 274,
+      "review-loop": 285,
+      "sound-design": 295,
+      "web-sims": 266
+    },
+    "last_activity": "2026-11-08",
+    "licence": "MIT",
+    "open_issues": 0,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/whaleyxbt/claude-motion",
+      "https://skills.sh/api/search?q=claude-motion"
+    ],
+    "stars": 955
   },
   "tool:windmill-labs/windmill": {
     "archived": false,
