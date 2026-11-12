@@ -10,6 +10,7 @@
 - [Glossary](https://tp9imka.github.io/agentic-media-lab/docs/glossary.md): Use this page when a term in the hub is unclear or you need a concept id.
 - [All records as JSON lines](https://tp9imka.github.io/agentic-media-lab/index/records.jsonl): the full machine dump
 - [README.md](https://tp9imka.github.io/agentic-media-lab/README.md): what the hub is
+- [AGENTS.md](https://tp9imka.github.io/agentic-media-lab/AGENTS.md): how agents query and extend the hub
 
 ## Records
 
