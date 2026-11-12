@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "lane": "radar-2026-11-12",
+  "records": [
+    {
+      "id": "model:video-rebirth/hyperflow",
+      "kind": "model",
+      "title": "HyperFlow H3 Flash (Video Rebirth)",
+      "aliases": [
+        "HyperFlow",
+        "hyperflow-h3-flash",
+        "HyperFlow H3 Flash"
+      ],
+      "url": "https://github.com/Video-Rebirth/hyperflow-h3-flash",
+      "summary": "Video Rebirth's pruned, INT8 and few-step version of MiniMax-H3: 13.7B parameters instead of about 31B, 4-8 sampling steps without CFG, video with stereo audio in one pass. Ships as a Python package and as GGUF for ComfyUI.",
+      "why_it_matters": "It brings MiniMax-H3 class output to a single consumer NVIDIA card with published end-to-end timings. It keeps the MiniMax-H3 territory exclusions, and the README gives no Apple Silicon path.",
+      "concepts": [
+        "concept:local-video-models",
+        "concept:licences-and-territory",
+        "concept:generated-footage"
+      ],
+      "level": "advanced",
+      "maturity": "experimental",
+      "fit": "low",
+      "fit_notes": "On the M3 Max: no documented path. The Python package needs an NVIDIA GPU and CUDA, and the GGUF route is described for ComfyUI on RTX cards; a stable-diffusion.cpp patch exists, but nothing says it was run on Metal. Rent an RTX 4090 or 5090 instead: 5.2 s takes about 1.5-2.5 min there. First run downloads about 90 GB (68 GB with the fp8 text encoder). Weights inherit the MiniMax-H3 licence, so the same EU, UK, Korea and US exclusion applies as on model:minimaxai/minimax-h3. The vendor published the timings; a commenter asks for a quality comparison against the quants and against FastVideo's FastH3, which was not opened here.",
+      "related": [
+        {
+          "id": "model:minimaxai/minimax-h3",
+          "rel": "extends",
+          "note": "A compressed derivative of the MiniMax-H3 transformer under the same community licence."
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "modes": [
+        "t2v",
+        "i2v"
+      ],
+      "access": "weights",
+      "apple_silicon": "no-documented-path",
+      "licence_class": "territory-restricted",
+      "claims": [
+        {
+          "text": "On the vendor's runs, a 5.2 s clip at 6 steps took 8.7 s on 4x B200, 36 s on one H200 and 92 s on one RTX 5090.",
+          "quote": "**Speed (5.2 s clip, 6 steps):** 8.7 s on 4× B200, 36 s on 1× H200, 92 s on 1× RTX 5090.",
+          "locator": "README, intro bullets, Speed",
+          "url": "https://github.com/Video-Rebirth/hyperflow-h3-flash",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The Python package requires an Ampere or newer NVIDIA GPU with CUDA.",
+          "quote": "Python 3.10+, PyTorch 2.6+ with CUDA and Triton (`pip install triton-windows` on native Windows), an Ampere or newer NVIDIA GPU, and `diffusers >= 0.40`.",
+          "locator": "README, Python Package, Install, Requirements",
+          "url": "https://github.com/Video-Rebirth/hyperflow-h3-flash",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The weights are a MiniMax-H3 derivative whose licence does not cover the EU, UK, South Korea or US without MiniMax's authorization.",
+          "quote": "The weights are a derivative of MiniMax-H3 under its Community License, which does not cover the US, EU, UK or South Korea without MiniMax’s authorization.",
+          "locator": "HN Show HN thread 50405263, submitter's first comment, paragraph License",
+          "url": "https://news.ycombinator.com/item?id=50405264",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README (raw) and the Show HN submitter comment against the record; the README License section states the same territory exclusion",
+        "source_sha256": "291c0750fdca672cf038b8882763422e4b85730da547e159e4957d555f546d4b",
+        "next_due": "2026-12-12"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "radar-2026-11-12",
+      "tags": [
+        "minimax-h3",
+        "quantized",
+        "gguf"
+      ]
+    }
+  ]
+}

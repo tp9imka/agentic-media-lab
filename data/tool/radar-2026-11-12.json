@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "lane": "radar-2026-11-12",
+  "records": [
+    {
+      "id": "tool:blazejkustra/uncut",
+      "kind": "tool",
+      "title": "Uncut",
+      "url": "https://github.com/blazejkustra/uncut",
+      "summary": "A macOS video editor for Apple Silicon that runs the user's installed Claude Code or Codex as the editing agent on a real multi-track timeline, with a separate critic that reviews rendered frames. It also exposes its tools to an outside agent over a local MCP server.",
+      "why_it_matters": "It is a way to edit real footage with the reader's own agent and keep a timeline they can cut by hand, export to Final Cut or Resolve, and lock against the agent.",
+      "concepts": [
+        "concept:footage-editing",
+        "concept:review-loop",
+        "concept:mcp-servers"
+      ],
+      "level": "intro",
+      "maturity": "active",
+      "fit": "high",
+      "fit_notes": "Runs on the reader's machine class (Apple Silicon, macOS 13+). Agent usage is billed through your own Claude or OpenAI plan; generators (GPT Image, Veo, ElevenLabs) need your own keys. If you edit with Codex, the critic still needs Claude Code installed. The comparison lines about Palmier and video-use are the author's own. The outside-agent MCP server is off by default and binds to 127.0.0.1 with a token. Not installed or run here.",
+      "related": [
+        {
+          "id": "tool:browser-use/video-use",
+          "rel": "alternative_to",
+          "note": "The README says video-use returns a finished file with no timeline."
+        },
+        {
+          "id": "tool:kino.ai",
+          "rel": "alternative_to",
+          "note": "Both put a coding agent on a shared timeline; Kino is cloud-backed and built on Remotion."
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "tool_type": "app",
+      "agents": [
+        "claude-code",
+        "codex",
+        "any-mcp"
+      ],
+      "levers": [
+        "review-loop",
+        "captions",
+        "audio",
+        "delivery"
+      ],
+      "cost": "mixed",
+      "claims": [
+        {
+          "text": "Uncut runs the user's installed Claude Code or Codex, which edits on a real timeline.",
+          "quote": "An AI-first video editor for macOS: it runs your installed Claude Code or Codex, which edits with you on a real timeline.",
+          "locator": "README, first line",
+          "url": "https://github.com/blazejkustra/uncut",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Reviews use an independent critic that runs through Claude Code, so it must be installed even when editing with Codex.",
+          "quote": "The independent critic runs through Claude Code, so reviews need it installed even when you edit with Codex.",
+          "locator": "README, Download, first bullet",
+          "url": "https://github.com/blazejkustra/uncut",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Locked clips, ranges or tracks cannot be changed, moved or unlocked by the agent.",
+          "quote": "Lock a clip, a range or a track and the agent can't change, move or unlock it.",
+          "locator": "README, What it does, Locked cuts",
+          "url": "https://github.com/blazejkustra/uncut",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README (raw) against the record",
+        "source_sha256": "208f90a0295639b59bd43466625bba326deef18c8f92d95ebe2e778ed7d37527",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "radar-2026-11-12",
+      "tags": [
+        "video-editor",
+        "timeline",
+        "macos"
+      ]
+    },
+    {
+      "id": "tool:kino.ai",
+      "kind": "tool",
+      "title": "Kino",
+      "aliases": [
+        "Kino AI"
+      ],
+      "url": "https://kino.ai",
+      "summary": "A desktop video editor and media library (Electron) where people and Claude Code or Codex edit one shared timeline over MCP. Every edit, motion graphic and comment is stored as code on top of Remotion, and footage is indexed and proxied to Kino's cloud.",
+      "why_it_matters": "It puts the reader's agent on the same timeline as teammates, with review links whose notes the agent can act on, instead of screenshots in chat.",
+      "concepts": [
+        "concept:footage-editing",
+        "concept:code-driven-video",
+        "concept:mcp-servers",
+        "concept:cost"
+      ],
+      "level": "intro",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Kino uploads low-res proxies of your footage so teammates and cloud inference can see it; check that against client contracts. The free tier caps MCP calls weekly, and the cap applies even when you bring your own Claude or Codex. Price naming differs between the vendor's pages: the 2026-11-04 launch post says 'Pro is $25 per editor per month', the pricing page FAQ names plans Editor and Editor Plus, and the plan prices did not render in the page as fetched. Re-check before buying. Being built on Remotion, Remotion's company licence question is Kino's to answer; not checked. Not installed or run here.",
+      "related": [
+        {
+          "id": "tool:remotion-dev/remotion",
+          "rel": "depends_on"
+        },
+        {
+          "id": "tool:blazejkustra/uncut",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "tool_type": "app",
+      "agents": [
+        "claude-code",
+        "codex",
+        "any-mcp"
+      ],
+      "levers": [
+        "review-loop",
+        "orchestration",
+        "motion"
+      ],
+      "cost": "mixed",
+      "claims": [
+        {
+          "text": "All edits, motion graphics, timeline moves, comments and 3D scenes are stored as code built on Remotion.",
+          "quote": "All editing, all motion graphics, all dragging of timeline items around, all teammate comments, and all 3D scenes are expressed as code, built on Remotion.",
+          "locator": "Launch HN post 50368804 by the founder, paragraph 3",
+          "url": "https://news.ycombinator.com/item?id=50368804",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The launch post says the full editor with MCP access is free and Pro costs $25 per editor per month.",
+          "quote": "The full editor is free, including unlimited imports and exports, real-time collaboration and MCP access for your own agent. Pro is $25 per editor per month",
+          "locator": "Launch HN post 50368804, last paragraphs",
+          "url": "https://news.ycombinator.com/item?id=50368804",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Connecting your own Claude or Codex bills through that provider, and Kino's MCP limit still applies.",
+          "quote": "Connecting your own Claude or Codex account uses that provider’s billing, and Kino’s MCP limit still applies.",
+          "locator": "kino.ai/pricing, Common questions, What are AI credits?",
+          "url": "https://kino.ai/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "founder's Launch HN post (via HN Algolia API) and the visible text of kino.ai/pricing against the record",
+        "source_sha256": "14ae0b2b5d2b5e0d88c9e27a3fd5ee3e43d5782a12936c834f9525905659b0ba",
+        "next_due": "2026-12-12"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "radar-2026-11-12",
+      "tags": [
+        "video-editor",
+        "timeline",
+        "remotion"
+      ]
+    }
+  ]
+}

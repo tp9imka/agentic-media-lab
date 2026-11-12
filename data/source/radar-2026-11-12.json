@@ -1,0 +1,558 @@
+{
+  "schema_version": 1,
+  "lane": "radar-2026-11-12",
+  "records": [
+    {
+      "id": "source:github.com/remotion-dev/remotion/pull/13133",
+      "kind": "source",
+      "title": "Remotion PR 13133: agents skipped the interactivity skill",
+      "url": "https://github.com/remotion-dev/remotion/pull/13133",
+      "summary": "A merged Remotion pull request that explains why an agent with every Remotion skill installed never loaded the interactivity skill: the routing line called it optional, and the publish step removed the links between sibling skills. It rewrites the routing and makes the stripped links name the skill and file.",
+      "why_it_matters": "It is a documented case of an installed skill that an agent never read. The two causes, soft routing wording and links lost in plugin packaging, apply to any skill set a reader writes or installs.",
+      "concepts": [
+        "concept:agent-skills",
+        "concept:plugins",
+        "concept:code-driven-video"
+      ],
+      "level": "intermediate",
+      "fit": "high",
+      "fit_notes": "If you write skills: a sibling-skill link written as a relative path does not survive plugin packaging in Remotion's publish step, so name the skill and file in plain text, and write the routing line as a rule with exceptions, not 'If relevant'. If you use Remotion skills from before 2026-11-09, ask for Studio-editable markup in the prompt. The PR's eval is one replayed session with the pi harness and GPT-6 Astra, written by the PR author; it was not re-run here, and Claude Code was not in it.",
+      "related": [
+        {
+          "id": "tool:remotion-dev/skills",
+          "rel": "evaluated_on"
+        },
+        {
+          "id": "source:vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals",
+          "rel": "extends",
+          "note": "Another case of an agent not loading an available skill; here the cause is named in the skill text and the packaging."
+        }
+      ],
+      "source_type": "community",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "The pull request was merged on 2026-11-09.",
+          "quote": "Merged: 2026-11-09T14:06:46Z",
+          "locator": "GitHub API pulls/13133, merged_at field (saved header)",
+          "url": "https://github.com/remotion-dev/remotion/pull/13133",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The best-practices skill presented interactivity as optional, so the agent read the line and skipped the skill.",
+          "quote": "The skills present interactivity as optional (\"If relevant\").",
+          "locator": "PR body, Problem, cause 1 Wording",
+          "url": "https://github.com/remotion-dev/remotion/pull/13133",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Publishing replaced links to sibling skills with bare text, leaving the agent no skill or file name to load; about 36 links were affected.",
+          "quote": "But the agent was left with \"read editable timeline structure.\" and no skill or file name to load. About 36 links across the skills are affected.",
+          "locator": "PR body, Problem, cause 2 Publishing",
+          "url": "https://github.com/remotion-dev/remotion/pull/13133",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "PR description and merge state from the GitHub API against the record",
+        "source_sha256": "c70e222dc07d2707a717bc4878a72b0993425fbd2dd4f0294359fc006ccf5a72",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "radar-2026-11-12",
+      "tags": [
+        "skill-routing",
+        "remotion"
+      ]
+    },
+    {
+      "id": "source:github.com/remotion-dev/remotion/issues/12922",
+      "kind": "source",
+      "title": "Remotion issue 12922: the skill asks agents to check audio they cannot hear",
+      "url": "https://github.com/remotion-dev/remotion/issues/12922",
+      "summary": "An open Remotion issue, filed by the maintainer, reporting that the official video-editing skill tells agents to check audio around cuts, so agents try to play the composition in Studio. A community fix (PR 13039) was closed without merging, and the line is still in the published skill on 2026-11-12.",
+      "why_it_matters": "An agent cannot listen, so an audio check in a skill turns into wasted Studio sessions or a false 'checked'. The closed PR spells out what an agent can check instead.",
+      "concepts": [
+        "concept:agent-skills",
+        "concept:audio-and-captions",
+        "concept:review-loop"
+      ],
+      "level": "intermediate",
+      "fit": "high",
+      "fit_notes": "Until the skill changes, override the line in your own AGENTS.md or prompt: check audio in code (from, trimBefore, trimAfter, durationInFrames, volume envelope against the cut frames), render stills for the visual side, and hand the user a list of timestamps to listen to. For a real signal, measure loudness and silence with ffmpeg rather than asking the agent to listen. The fix PR was closed without a stated reason in its body; the reason was not checked here.",
+      "related": [
+        {
+          "id": "tool:remotion-dev/skills",
+          "rel": "evaluated_on"
+        },
+        {
+          "id": "source:github.com/remotion-dev/remotion/pull/13133",
+          "rel": "extends",
+          "note": "Same week, same skill set: another case where skill text does not match what an agent can do."
+        }
+      ],
+      "source_type": "community",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "The issue was opened on 2026-11-03 and is open on 2026-11-12; the fix PR 13039 was closed on 2026-11-07 without being merged.",
+          "quote": "Merged: n/a Created: 2026-11-06T21:37:58Z Closed: 2026-11-07T12:56:33Z",
+          "locator": "GitHub API pulls/13039, merged_at and closed_at fields (saved header); issue state in the first block",
+          "url": "https://github.com/remotion-dev/remotion/pull/13039",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The published Remotion skill still tells the agent to check audio around cuts, which it cannot hear.",
+          "quote": "Check visual output and audio around cuts, overlay boundaries, and sound tails.",
+          "locator": "skills/remotion-markup/video-editing.md, section Preserve the edit when restructuring, paragraph 2",
+          "url": "https://github.com/remotion-dev/skills/blob/main/skills/remotion-markup/video-editing.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The proposed replacement checks audio in code: each sound's timing fields and volume envelope against the cuts.",
+          "quote": "for audio, confirm in code that each sound's `from`, `trimBefore`, `trimAfter`, `durationInFrames` and volume envelope still line up with the cuts and leave room for sound tails",
+          "locator": "PR 13039 body, bullet 2",
+          "url": "https://github.com/remotion-dev/remotion/pull/13039",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "issue 12922 and PR 13039 from the GitHub API, and the published skill file on main, against the record",
+        "source_sha256": "fe48f59bb452de06059287f3965529b4ed27f5c6489d8cc27ed1d63538defe90",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "radar-2026-11-12",
+      "tags": [
+        "remotion",
+        "audio-check"
+      ]
+    },
+    {
+      "id": "source:github.com/openai/codex/issues/60616",
+      "kind": "source",
+      "title": "Codex issue 60616: async video task ended with no file and no check",
+      "url": "https://github.com/openai/codex/issues/60616",
+      "summary": "An open Codex Desktop issue (2026-11-10): asked to make a 40-45 s video through the HeyGen connector and save the MP4, the agent reported 'still generating', ended its turn with no file, and only noticed the failed render when the user asked again about 30 minutes later.",
+      "why_it_matters": "Hosted video jobs are asynchronous, and an agent that ends its turn on a job id hands back nothing. The reader needs an explicit poll-until-terminal and file check in the task.",
+      "concepts": [
+        "concept:review-loop",
+        "concept:feedback-loop",
+        "concept:hosted-video-models"
+      ],
+      "level": "intro",
+      "fit": "high",
+      "fit_notes": "Put the done condition in the prompt or AGENTS.md: poll the job to a terminal state, download, then check the file exists at the path and probe it (duration, resolution) with ffprobe before saying done. The same failure applies to any async video API, not only HeyGen. One user report on Windows; the reporter says the HeyGen render failure went to HeyGen separately. Not reproduced here.",
+      "related": [
+        {
+          "id": "source:github.com/remotion-dev/remotion/issues/12922",
+          "rel": "extends",
+          "note": "Both are cases of an agent saying a check happened that it could not or did not do."
+        }
+      ],
+      "source_type": "community",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "The issue was opened on 2026-11-10 and is open on 2026-11-12.",
+          "quote": "State: open Merged: n/a Created: 2026-11-10T16:13:15Z",
+          "locator": "GitHub API issues/60616, state and created_at fields (saved header)",
+          "url": "https://github.com/openai/codex/issues/60616",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The agent ended its turn with no video and no file in the requested folder.",
+          "quote": "then ended its turn without a video or a file in the requested folder.",
+          "locator": "issue body, Product feedback / observed failure, paragraph 1",
+          "url": "https://github.com/openai/codex/issues/60616",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The reporter asks that Codex verify the output file and destination before presenting the task as complete.",
+          "quote": "verify the requested output artifact and destination before presenting the task as complete",
+          "locator": "issue body, Expected behavior",
+          "url": "https://github.com/openai/codex/issues/60616",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "issue body and state from the GitHub API against the record",
+        "source_sha256": "708b0e4212cbafe630b226768cfa89e2f794ce95e17fe81245be77a3c719329d",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "radar-2026-11-12",
+      "tags": [
+        "async-jobs",
+        "codex"
+      ]
+    },
+    {
+      "id": "source:youtu.be/fvvrcpcfjyk",
+      "kind": "source",
+      "title": "I Quit Remotion After Claude Made These Motion Graphics (Guney Topcu, video)",
+      "url": "https://www.youtube.com/watch?v=fvvRCpCFJYk",
+      "summary": "A YouTuber made motion graphics for one talking-head video twice with Claude Code, once with his tuned Remotion workflow and once with HyperFrames with almost no direction, and switched to HyperFrames. Claude counted 54 s of still frames in the Remotion cut and 18 s in the HyperFrames cut.",
+      "why_it_matters": "It is a third-party same-input comparison, and its result runs the other way from this hub's own blind-scored run. Its stillness count is a check the reader can copy.",
+      "concepts": [
+        "concept:code-driven-video",
+        "concept:motion-and-transitions",
+        "concept:evaluation"
+      ],
+      "level": "intro",
+      "fit": "medium",
+      "fit_notes": "The arms were not equal: the Remotion side carried months of his own preferences, the HyperFrames side had motion rules the agent wrote for itself ('the camera never stops'), and he says he did not test Remotion with those rules. One video, judged by the author. The author promotes his own free kit. Its description asks viewers to paste a prompt that has Claude download a GitHub repo, follow its SETUP.md and install whatever is missing; read that repo before running it. The hub's example examples/hyperframes-vs-remotion (one run per arm, blind rubric) scored Remotion 10/12 and HyperFrames 8/12, so the two disagree. Read with the example; neither settles it.",
+      "related": [
+        {
+          "id": "tool:heygen-com/hyperframes",
+          "rel": "evaluated_on"
+        },
+        {
+          "id": "tool:remotion-dev/remotion",
+          "rel": "evaluated_on"
+        },
+        {
+          "id": "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+          "rel": "extends",
+          "note": "A third-party same-input run after the vendor's own one-run test."
+        },
+        {
+          "id": "source:news.ycombinator.com/item/50369261",
+          "rel": "contradicts",
+          "note": "The video prefers HyperFrames; the HN comment calls it vibe-coded and prefers Remotion."
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "downgrade": {
+        "reason": "interested-party",
+        "note": "The author promotes his own HyperFrames motion kit in the video and description."
+      },
+      "claims": [
+        {
+          "text": "A frame-by-frame count by Claude found about 54 s with no motion in the Remotion version and 18 s in the HyperFrames version.",
+          "quote": "In the Remotion version, Claude about 54 seconds where nothing was moving. In the HyperFrames version, it was only 18.",
+          "locator": "transcript 4:03-4:09 (chapter Frame-by-Frame AI Audit)",
+          "url": "https://www.youtube.com/watch?v=fvvRCpCFJYk",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The author did not test Remotion with the motion rules the HyperFrames run wrote for itself.",
+          "quote": "Now, could Remotion do all of this with the same rules? Maybe. I haven't tested it, and I probably won't unless someone proves me otherwise.",
+          "locator": "transcript 4:53-4:59",
+          "url": "https://www.youtube.com/watch?v=fvvRCpCFJYk",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The description's install prompt has Claude download the author's kit, follow its SETUP.md and install anything missing.",
+          "quote": "Download the Guney Motion Kit from https://github.com/GTAI-1/guney-motion-kit into this folder, then read its SETUP.md and set it up for me. Install anything that's missing.",
+          "locator": "video description, FREE MOTION GRAPHICS KIT",
+          "url": "https://www.youtube.com/watch?v=fvvRCpCFJYk",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "description and English auto-caption transcript (YouTube timedtext) against the record; the video itself was not watched",
+        "source_sha256": "91c74a4c570d5ae1d4f02e4cf2263361aaf9fe2ccccc555611e612a0c3808e38",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "radar-2026-11-12",
+      "tags": [
+        "hyperframes",
+        "remotion",
+        "comparison"
+      ]
+    },
+    {
+      "id": "source:news.ycombinator.com/item/50369261",
+      "kind": "source",
+      "title": "HN comment: Remotion for render infrastructure, HyperFrames 'vibe-coded'",
+      "url": "https://news.ycombinator.com/item?id=50369261",
+      "summary": "A Hacker News comment (2026-11-04) under the Kino launch, from someone also building an agent video product, prefers Remotion for its render infrastructure (Lambda fan-out) and says alternatives such as HyperFrames feel vibe-coded and that LLMs must learn their syntax from scratch.",
+      "why_it_matters": "It names render time, not output quality, as the reason to stay on Remotion, a cost the comparison videos do not measure.",
+      "concepts": [
+        "concept:code-driven-video",
+        "concept:delivery"
+      ],
+      "level": "intro",
+      "fit": "low",
+      "fit_notes": "One opinion with no numbers, from a founder building on Remotion (chatoctopus.com). The 'learn their syntax from scratch' point is weak for HyperFrames, which is HTML with GSAP; read tool:heygen-com/hyperframes. The render-speed point is the useful part: if long clips must render fast, price Remotion Lambda; it was not measured here.",
+      "related": [
+        {
+          "id": "tool:remotion-dev/remotion",
+          "rel": "evaluated_on"
+        },
+        {
+          "id": "tool:heygen-com/hyperframes",
+          "rel": "evaluated_on"
+        },
+        {
+          "id": "source:youtu.be/fvvrcpcfjyk",
+          "rel": "contradicts"
+        }
+      ],
+      "source_type": "community",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "The commenter cites Remotion's Lambda fan-out as the reason for faster renders.",
+          "quote": "Rendering takes a lot of time and Remotion's Lambda fanout is amazing for speed up.",
+          "locator": "comment 50369261, paragraph 1",
+          "url": "https://news.ycombinator.com/item?id=50369261",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The commenter calls the alternatives, HyperFrames by name, vibe-coded and says LLMs must learn their syntax from scratch.",
+          "quote": "Others feel vibe-coded (looking at you hyperframes), and LLMs have to learn their syntax from scratch.",
+          "locator": "comment 50369261, paragraph 2",
+          "url": "https://news.ycombinator.com/item?id=50369261",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "comment and its parent read through the HN Algolia API against the record",
+        "source_sha256": "96cbfdd794c1e59098dbd6c891ddf7b4e4ab19a21d066626aad18d740fa50051",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "radar-2026-11-12",
+      "tags": [
+        "hyperframes",
+        "remotion"
+      ]
+    },
+    {
+      "id": "source:news.ycombinator.com/item/50396852",
+      "kind": "source",
+      "title": "HN comment: keep generated clips 5-8 s and log model, host and defaults",
+      "url": "https://news.ycombinator.com/item?id=50396852",
+      "summary": "A Hacker News comment (2026-11-06) from the operator of a multi-model generation site gives two rules for generated footage in an edit: keep each generated clip to 5-8 s and let the editor own continuity, and log the exact model, host and defaults with every file.",
+      "why_it_matters": "Both rules are cheap to put in an agent's instructions, and the second is what makes a client revision reproducible weeks later.",
+      "concepts": [
+        "concept:generated-footage",
+        "concept:consistency",
+        "concept:story-and-decomposition"
+      ],
+      "level": "intro",
+      "fit": "medium",
+      "fit_notes": "Practice in one line: have the agent write a sidecar JSON per clip with model, version, host, mode, duration, seed and prompt. The commenter runs PixelDojo, a multi-model generator, and says so. No numbers behind the 5-8 s figure. Fits with the shot-splitting rules in source:arxiv.org/abs/2601.17737.",
+      "related": [
+        {
+          "id": "source:arxiv.org/abs/2601.17737",
+          "rel": "extends",
+          "note": "Same idea of fitting each shot to a short generation window."
+        }
+      ],
+      "source_type": "community",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "Keep generated clips short, 5-8 s each, and let the editor handle continuity, colour and cleanup.",
+          "quote": "Keep generative clips short (5–8s atomic). Let the editor own continuity, color, and cleanup.",
+          "locator": "comment 50396852, note 1",
+          "url": "https://news.ycombinator.com/item?id=50396852",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Log the exact model, host and defaults with each file; a bare model name cannot reproduce a revision.",
+          "quote": "Log exact model/host/defaults with the media. \"Kling\" without mode/duration/host is how you can't reproduce a client revision two weeks later.",
+          "locator": "comment 50396852, note 2",
+          "url": "https://news.ycombinator.com/item?id=50396852",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "comment read through the HN Algolia API against the record",
+        "source_sha256": "4fa9dc660d6d367f616166bfdd098d6492b5e6ee256c99ed56a2916975cde5db",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "radar-2026-11-12",
+      "tags": [
+        "provenance-log",
+        "clip-length"
+      ]
+    },
+    {
+      "id": "source:github.com/gitroomhq/postiz-app/pull/2418",
+      "kind": "source",
+      "title": "Postiz PR 2418: TikTok inbox uploads marked published that never arrive",
+      "url": "https://github.com/gitroomhq/postiz-app/pull/2418",
+      "summary": "A merged Postiz pull request (2026-11-12) that adds logging after a customer reported TikTok inbox uploads that TikTok acknowledged but that never appeared. Postiz marks an inbox upload published as soon as TikTok answers SEND_TO_USER_INBOX and does not track it afterwards.",
+      "why_it_matters": "A scheduler's 'published' status for a TikTok inbox upload is not proof the video reached the inbox, so an unattended pipeline can report success for a post that does not exist.",
+      "concepts": [
+        "concept:publishing",
+        "concept:platform-rules",
+        "concept:automation"
+      ],
+      "level": "intermediate",
+      "fit": "high",
+      "fit_notes": "The PR only adds a log line; it does not change the post state, so Postiz still shows such posts as published. For an agent pipeline, poll TikTok's post status for the publish id later, or check the inbox, before counting a TikTok upload as delivered. The cause of the missing items is not known in the PR. One customer report, relayed by a maintainer.",
+      "related": [
+        {
+          "id": "tool:gitroomhq/postiz-app",
+          "rel": "evaluated_on"
+        },
+        {
+          "id": "source:developers.tiktok.com/doc/content-sharing-guidelines",
+          "rel": "extends"
+        }
+      ],
+      "source_type": "community",
+      "corroboration": "single-source",
+      "claims": [
+        {
+          "text": "The pull request was merged on 2026-11-12.",
+          "quote": "Merged: 2026-11-12T06:23:51Z",
+          "locator": "GitHub API pulls/2418, merged_at field (saved header)",
+          "url": "https://github.com/gitroomhq/postiz-app/pull/2418",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Postiz marks an inbox upload published when TikTok answers SEND_TO_USER_INBOX and keeps no record of TikTok's later status.",
+          "quote": "Inbox uploads are marked published when TikTok answers `SEND_TO_USER_INBOX`, and Postiz keeps no record of what TikTok reports about the item afterwards.",
+          "locator": "PR body, Why was this change needed?, sentence 1",
+          "url": "https://github.com/gitroomhq/postiz-app/pull/2418",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A customer reports acknowledged uploads that regularly never show up, clustered at one time of day across several accounts.",
+          "quote": "A customer reports that uploads TikTok acknowledged within a minute regularly never show up in the TikTok inbox, concentrated at one time of day across several accounts.",
+          "locator": "PR body, Why was this change needed?, sentence 2",
+          "url": "https://github.com/gitroomhq/postiz-app/pull/2418",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "PR body and merge state from the GitHub API against the record",
+        "source_sha256": "5d572ce318cac566b35de928eea6b062c826d32b8e9d72ac98108907a2058f64",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "radar-2026-11-12",
+      "tags": [
+        "tiktok",
+        "postiz"
+      ]
+    },
+    {
+      "id": "source:youtu.be/d5qpbbewtxo",
+      "kind": "source",
+      "title": "How I Make $880/Day with AI Motion Design (Sanji Nai-Chien, video)",
+      "url": "https://www.youtube.com/watch?v=D5qpBbEWTxo",
+      "summary": "A YouTuber builds a 30 s SaaS launch video with Claude Opus 5.5 and a custom motion skill, shows the broken first render and the cause of each bug, shows the same prompt without a storyboard, and compares the result with a $1,000 human motion designer on the same brief.",
+      "why_it_matters": "The first-render bug list names causes an agent can fix in one line: Figma frames at 1440 px in a 1920 px canvas, and a font not loaded before the first frame. The no-storyboard run shows what skipping the plan costs.",
+      "concepts": [
+        "concept:motion-and-transitions",
+        "concept:story-and-decomposition",
+        "concept:visual-design"
+      ],
+      "level": "intro",
+      "fit": "medium",
+      "fit_notes": "Add both fixes to a motion prompt: lock the canvas to the output size and position from the centre, and load fonts before frame 0 (in Remotion, delayRender until the font loads). The renderer is not named in the transcript. The human-versus-agent part is one brief judged by the author, and the description links the skill through a higgsfield.ai referral link; the channel sells a way to make money with AI. The skill itself was not opened. Transcript only; the video was not watched.",
+      "related": [
+        {
+          "id": "source:youtu.be/fvvrcpcfjyk",
+          "rel": "extends",
+          "note": "Both are storyboard-first, agent-made motion graphics videos with a comparison judged by the author."
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "downgrade": {
+        "reason": "interested-party",
+        "note": "The description links the author's skill through a referral link and the video sells the workflow."
+      },
+      "claims": [
+        {
+          "text": "The first render's layout broke because the Figma screens were 1440 px wide and the video was 1920 px.",
+          "quote": "The layout exploded because the Figma screens were designed 1440 pixels wide, and the video we asked for is 1920.",
+          "locator": "transcript 12:29-12:36",
+          "url": "https://www.youtube.com/watch?v=D5qpBbEWTxo",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The font fell back to Times New Roman because it was not loaded before the first frame.",
+          "quote": "The font, on the other hand, broke because it wasn't loaded before the first frame.",
+          "locator": "transcript 12:45-12:49",
+          "url": "https://www.youtube.com/watch?v=D5qpBbEWTxo",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Without a storyboard, the same assets, skill and prompt gave scenes in random order with everything moving at once.",
+          "quote": "Scenes come in in a totally random order. Everything moves at the same time and there's just no coherent story.",
+          "locator": "transcript 14:19-14:26",
+          "url": "https://www.youtube.com/watch?v=D5qpBbEWTxo",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "description and English auto-caption transcript (YouTube timedtext) against the record; the video itself was not watched",
+        "source_sha256": "c0ab78f967f0c9f63f948a4dbb0f4970f193ff0d8508d258ca2875caa4230651",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current",
+      "lane": "radar-2026-11-12",
+      "tags": [
+        "storyboard",
+        "fonts",
+        "motion-skill"
+      ]
+    }
+  ]
+}
