@@ -63,6 +63,26 @@
       "https://huggingface.co/api/models/hexgrad/Kokoro-82M"
     ]
   },
+  "model:lightricks/ltx-2": {
+    "archived": false,
+    "created": "2026-01-03",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 1623,
+    "installs": 11,
+    "installs_by_skill": {
+      "train-model": 11
+    },
+    "last_activity": "2026-11-05",
+    "licence": "Apache-2.0",
+    "open_issues": 37,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/Lightricks/LTX-2",
+      "https://skills.sh/api/search?q=LTX-2"
+    ],
+    "stars": 10201
+  },
   "model:minimaxai/minimax-h3": {
     "created": "2026-07-28",
     "fetched_at": "2026-11-12",
@@ -73,6 +93,54 @@
     "licence": "other",
     "sources": [
       "https://huggingface.co/api/models/MiniMaxAI/MiniMax-H3"
+    ]
+  },
+  "model:qwen/qwen-image": {
+    "created": "2026-09-14",
+    "fetched_at": "2026-11-12",
+    "gated": false,
+    "hf_downloads": 261646,
+    "hf_likes": 3607,
+    "last_activity": "2026-09-30",
+    "licence": "other",
+    "sources": [
+      "https://huggingface.co/api/models/Qwen/Qwen-Image-2.1"
+    ]
+  },
+  "model:tongyi-mai/z-image": {
+    "created": "2025-11-25",
+    "fetched_at": "2026-11-12",
+    "gated": false,
+    "hf_downloads": 743417,
+    "hf_likes": 5591,
+    "last_activity": "2026-01-30",
+    "licence": "apache-2.0",
+    "sources": [
+      "https://huggingface.co/api/models/Tongyi-MAI/Z-Image-Turbo"
+    ]
+  },
+  "model:vimoo-ai/vimoo-1.0": {
+    "created": "2026-09-30",
+    "fetched_at": "2026-11-12",
+    "gated": false,
+    "hf_downloads": 52,
+    "hf_likes": 17,
+    "last_activity": "2026-11-04",
+    "licence": "apache-2.0",
+    "sources": [
+      "https://huggingface.co/api/models/Vimoo-AI/Vimoo-1.0"
+    ]
+  },
+  "model:wan-ai/wan2.2": {
+    "created": "2025-07-18",
+    "fetched_at": "2026-11-12",
+    "gated": false,
+    "hf_downloads": 18923,
+    "hf_likes": 962,
+    "last_activity": "2025-08-07",
+    "licence": "apache-2.0",
+    "sources": [
+      "https://huggingface.co/api/models/Wan-AI/Wan2.2-TI2V-5B"
     ]
   },
   "source:github.com/get-bb/bb/blob/main/docs/configuration.md": {
@@ -232,6 +300,21 @@
     ],
     "stars": 34103
   },
+  "tool:blaizzy/mlx-video": {
+    "archived": false,
+    "created": "2025-05-07",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 61,
+    "last_activity": "2026-05-13",
+    "licence": "MIT",
+    "open_issues": 34,
+    "sources": [
+      "https://api.github.com/repos/Blaizzy/mlx-video",
+      "https://skills.sh/api/search?q=mlx-video"
+    ],
+    "stars": 324
+  },
   "tool:browser-use/video-use": {
     "archived": false,
     "created": "2026-04-12",
@@ -281,6 +364,21 @@
       "https://skills.sh/api/search?q=generative-media-skills"
     ],
     "stars": 242
+  },
+  "tool:comfy-org/comfyui": {
+    "archived": false,
+    "created": "2023-01-17",
+    "default_branch": "master",
+    "fetched_at": "2026-11-12",
+    "forks": 17446,
+    "last_activity": "2026-11-12",
+    "licence": "GPL-3.0",
+    "open_issues": 5529,
+    "sources": [
+      "https://api.github.com/repos/Comfy-Org/ComfyUI",
+      "https://skills.sh/api/search?q=ComfyUI"
+    ],
+    "stars": 146436
   },
   "tool:coreyhaines31/marketingskills": {
     "archived": false,
@@ -389,6 +487,21 @@
     ],
     "stars": 166
   },
+  "tool:fal-ai/fal": {
+    "archived": false,
+    "created": "2023-12-11",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 108,
+    "last_activity": "2026-11-12",
+    "licence": "Apache-2.0",
+    "open_issues": 55,
+    "sources": [
+      "https://api.github.com/repos/fal-ai/fal",
+      "https://skills.sh/api/search?q=fal"
+    ],
+    "stars": 979
+  },
   "tool:ffmpeg/ffmpeg": {
     "archived": false,
     "created": "2011-04-14",
@@ -433,6 +546,36 @@
       "https://skills.sh/api/search?q=bb"
     ],
     "stars": 5381
+  },
+  "tool:ggml-org/whisper.cpp": {
+    "archived": false,
+    "created": "2022-09-25",
+    "default_branch": "master",
+    "fetched_at": "2026-11-12",
+    "forks": 6297,
+    "last_activity": "2026-11-10",
+    "licence": "MIT",
+    "open_issues": 364,
+    "sources": [
+      "https://api.github.com/repos/ggml-org/whisper.cpp",
+      "https://skills.sh/api/search?q=whisper.cpp"
+    ],
+    "stars": 55123
+  },
+  "tool:gitroomhq/postiz-app": {
+    "archived": false,
+    "created": "2023-07-08",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 7900,
+    "last_activity": "2026-11-12",
+    "licence": "AGPL-3.0",
+    "open_issues": 209,
+    "sources": [
+      "https://api.github.com/repos/gitroomhq/postiz-app",
+      "https://skills.sh/api/search?q=postiz-app"
+    ],
+    "stars": 41418
   },
   "tool:greensock/gsap": {
     "archived": false,
@@ -512,6 +655,21 @@
       "https://skills.sh/api/search?q=motion-skills"
     ],
     "stars": 1389
+  },
+  "tool:inovector/mixpost": {
+    "archived": false,
+    "created": "2022-07-22",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 591,
+    "last_activity": "2026-03-16",
+    "licence": "MIT",
+    "open_issues": 35,
+    "sources": [
+      "https://api.github.com/repos/inovector/mixpost",
+      "https://skills.sh/api/search?q=mixpost"
+    ],
+    "stars": 3928
   },
   "tool:jordanrendric/claude-video-vision": {
     "archived": false,
@@ -641,6 +799,27 @@
     ],
     "stars": 47
   },
+  "tool:mflux-community/mflux": {
+    "archived": false,
+    "created": "2024-08-10",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 209,
+    "installs": 1,
+    "installs_by_skill": {
+      "mflux-dev-env": 1,
+      "remediating-dependabot": 1
+    },
+    "last_activity": "2026-11-08",
+    "licence": "MIT",
+    "open_issues": 9,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/mflux-community/mflux",
+      "https://skills.sh/api/search?q=mflux"
+    ],
+    "stars": 2598
+  },
   "tool:midrender/revideo": {
     "archived": false,
     "created": "2024-03-11",
@@ -670,6 +849,21 @@
       "https://skills.sh/api/search?q=editly"
     ],
     "stars": 5607
+  },
+  "tool:ml-explore/mlx-examples/whisper": {
+    "archived": false,
+    "created": "2023-11-28",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 1227,
+    "last_activity": "2026-04-06",
+    "licence": "MIT",
+    "open_issues": 187,
+    "sources": [
+      "https://api.github.com/repos/ml-explore/mlx-examples",
+      "https://skills.sh/api/search?q=mlx-examples"
+    ],
+    "stars": 9063
   },
   "tool:mort1d/motion-graphics-skills": {
     "archived": false,
