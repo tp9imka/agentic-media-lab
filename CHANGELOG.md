@@ -11,6 +11,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Repository skeleton.
 - `lab/clipcheck`: a contract checker for agent-made video, with a rule pack whose sources resolve to hub quotes.
 - Example: an agent fixes a failing clip from checker output alone, with a blind before and after review.
+- `skills/contract-first-video`: the hub's first own skill, and an example that tests it against the vendor's skills alone (verdict: narrowed).
+- `clipcheck --source`: exact copy is checked in the project source; reading text from pixels is advisory.
 
 ### Changed
 

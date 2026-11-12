@@ -48,7 +48,9 @@
    "pages": [
     "examples/hyperframes-vs-remotion/README.md",
     "docs/cheatsheets/quality-skill-stack.md",
-    "docs/research/skill-rule-conflicts.md"
+    "docs/research/skill-rule-conflicts.md",
+    "examples/skill-ablation-contract-first/README.md",
+    "skills/contract-first-video/SKILL.md"
    ],
    "record_ids": [
     "tool:heygen-com/hyperframes",
@@ -63,9 +65,10 @@
     "source:tech.ebu.ch/publications/r128"
    ],
    "examples": [
-    "hyperframes-vs-remotion"
+    "hyperframes-vs-remotion",
+    "skill-ablation-contract-first"
    ],
-   "risk": "No skill here has an independent before-and-after measurement. Skills contradict each other on idle motion, backgrounds, caption placement and loudness.",
+   "risk": "One skill has a before and after measured here: it removed defects and made the clip plainer, for one rubric point (one run, one reviewer). No other skill has an independent measurement. Skills contradict each other on idle motion, backgrounds, caption placement and loudness.",
    "status": "covered"
   },
   {

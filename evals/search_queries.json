@@ -200,5 +200,12 @@
    "example:clipcheck-fix-loop"
   ],
   "top": 3
+ },
+ {
+  "query": "measured before and after for a video skill",
+  "expect_any": [
+   "example:skill-ablation-contract-first"
+  ],
+  "top": 3
  }
 ]
