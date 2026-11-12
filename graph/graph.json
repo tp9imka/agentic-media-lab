@@ -332,6 +332,20 @@
    ]
   },
   {
+   "id": "source:ads.tiktok.com/help/article/creative-best-practices",
+   "kind": "source",
+   "label": "TikTok Ads - Creative best practices for performance ads",
+   "path": "catalog/source/ads.tiktok.com__help__article__creative-best-practices.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:story-and-decomposition",
+    "concept:audio-and-captions",
+    "concept:delivery"
+   ]
+  },
+  {
    "id": "source:artificialanalysis.ai/video/leaderboard/text-to-video",
    "kind": "source",
    "label": "Artificial Analysis Video Arena: text-to-video and image-to-video leaderboards",
@@ -345,6 +359,47 @@
    ]
   },
   {
+   "id": "source:arxiv.org/abs/2604.24842",
+   "kind": "source",
+   "label": "Co-Director: Agentic Generative Video Storytelling (arXiv 2604.24842)",
+   "path": "catalog/source/arxiv.org__abs__2604.24842.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:story-and-decomposition",
+    "concept:agentic-pipelines",
+    "concept:review-loop"
+   ]
+  },
+  {
+   "id": "source:arxiv.org/abs/2606.07649",
+   "kind": "source",
+   "label": "ViMax: Agentic Video Generation (arXiv 2606.07649)",
+   "path": "catalog/source/arxiv.org__abs__2606.07649.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:story-and-decomposition",
+    "concept:agentic-pipelines",
+    "concept:review-loop"
+   ]
+  },
+  {
+   "id": "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
+   "kind": "source",
+   "label": "BBC Subtitle Guidelines",
+   "path": "catalog/source/bbc.co.uk__accessibility__forproducts__guides__subtitles.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:audio-and-captions",
+    "concept:visual-design"
+   ]
+  },
+  {
    "id": "source:c2pa.org/faqs",
    "kind": "source",
    "label": "C2PA FAQs (Content Credentials)",
@@ -355,6 +410,32 @@
    "concepts": [
     "concept:platform-rules",
     "concept:delivery"
+   ]
+  },
+  {
+   "id": "source:carbondesignsystem.com/elements/motion/overview",
+   "kind": "source",
+   "label": "IBM Carbon Design System - Motion",
+   "path": "catalog/source/carbondesignsystem.com__elements__motion__overview.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:motion-and-transitions"
+   ]
+  },
+  {
+   "id": "source:cloud.wikis.utexas.edu/wiki/spaces/rtf318/pages/80022510",
+   "kind": "source",
+   "label": "Murch's Rule of Six (UT Austin RTF 318 course wiki)",
+   "path": "catalog/source/cloud.wikis.utexas.edu__wiki__spaces__rtf318__pages__80022510.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-secondary",
+   "concepts": [
+    "concept:motion-and-transitions",
+    "concept:footage-editing",
+    "concept:story-and-decomposition"
    ]
   },
   {
@@ -589,6 +670,31 @@
    ]
   },
   {
+   "id": "source:facebook.com/business/ads-guide/update/video/instagram-reels",
+   "kind": "source",
+   "label": "Meta Ads Guide - Instagram Reels video ads",
+   "path": "catalog/source/facebook.com__business__ads-guide__update__video__instagram-reels.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:delivery",
+    "concept:visual-design"
+   ]
+  },
+  {
+   "id": "source:fountain.io/syntax",
+   "kind": "source",
+   "label": "Fountain screenplay syntax",
+   "path": "catalog/source/fountain.io__syntax.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:story-and-decomposition"
+   ]
+  },
+  {
    "id": "source:github.com/get-bb/bb/blob/main/docs/configuration.md",
    "kind": "source",
    "label": "bb configuration reference",
@@ -640,6 +746,18 @@
     "concept:code-driven-video",
     "concept:consistency",
     "concept:review-loop"
+   ]
+  },
+  {
+   "id": "source:github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss",
+   "kind": "source",
+   "label": "Material 3 motion tokens (material-web, _md-sys-motion.scss)",
+   "path": "catalog/source/github.com__material-components__material-web__blob__main__tokens__versions__latest__sass___md-sys-motion.scss.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:motion-and-transitions"
    ]
   },
   {
@@ -736,6 +854,18 @@
    ]
   },
   {
+   "id": "source:partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-english-usa-timed-text-style-guide",
+   "kind": "source",
+   "label": "Netflix English (USA) Timed Text Style Guide",
+   "path": "catalog/source/partnerhelp.netflixstudios.com__hc__en-us__articles__217350977-english-usa-timed-text-style-guide.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:audio-and-captions"
+   ]
+  },
+  {
    "id": "source:remotion.dev/docs/ai/mcp",
    "kind": "source",
    "label": "Remotion's Model Context Protocol (shut down)",
@@ -784,6 +914,70 @@
    "concepts": [
     "concept:delivery",
     "concept:publishing"
+   ]
+  },
+  {
+   "id": "source:support.google.com/youtube/answer/1722171",
+   "kind": "source",
+   "label": "YouTube recommended upload encoding settings",
+   "path": "catalog/source/support.google.com__youtube__answer__1722171.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:delivery"
+   ]
+  },
+  {
+   "id": "source:support.google.com/youtube/answer/9314415",
+   "kind": "source",
+   "label": "YouTube Help - Measure key moments for audience retention",
+   "path": "catalog/source/support.google.com__youtube__answer__9314415.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:feedback-loop",
+    "concept:story-and-decomposition"
+   ]
+  },
+  {
+   "id": "source:tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s2.pdf",
+   "kind": "source",
+   "label": "EBU R 128 s2 - Loudness in Streaming",
+   "path": "catalog/source/tech.ebu.ch__files__live__sites__tech__files__shared__r__r128s2.pdf.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:audio-and-captions",
+    "concept:delivery"
+   ]
+  },
+  {
+   "id": "source:tech.ebu.ch/publications/r128",
+   "kind": "source",
+   "label": "EBU R 128 - Loudness normalisation and permitted maximum level of audio signals",
+   "path": "catalog/source/tech.ebu.ch__publications__r128.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:audio-and-captions",
+    "concept:delivery"
+   ]
+  },
+  {
+   "id": "source:w3.org/tr/wcag22",
+   "kind": "source",
+   "label": "Web Content Accessibility Guidelines (WCAG) 2.2",
+   "path": "catalog/source/w3.org__tr__wcag22.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:visual-design",
+    "concept:audio-and-captions"
    ]
   },
   {
@@ -856,6 +1050,19 @@
    ]
   },
   {
+   "id": "tool:bbc/ttml-validator",
+   "kind": "tool",
+   "label": "ttml-validator (BBC)",
+   "path": "catalog/tool/bbc__ttml-validator.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:audio-and-captions",
+    "concept:review-loop"
+   ]
+  },
+  {
    "id": "tool:blaizzy/mlx-video",
    "kind": "tool",
    "label": "mlx-video",
@@ -867,6 +1074,19 @@
     "concept:local-video-models",
     "concept:generated-footage",
     "concept:scheduling-and-runtimes"
+   ]
+  },
+  {
+   "id": "tool:breakthrough/pyscenedetect",
+   "kind": "tool",
+   "label": "PySceneDetect",
+   "path": "catalog/tool/breakthrough__pyscenedetect.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:footage-editing",
+    "concept:review-loop"
    ]
   },
   {
@@ -1328,6 +1548,19 @@
     "concept:orchestration",
     "concept:review-loop",
     "concept:licences-and-territory"
+   ]
+  },
+  {
+   "id": "tool:netflix/vmaf",
+   "kind": "tool",
+   "label": "VMAF (libvmaf)",
+   "path": "catalog/tool/netflix__vmaf.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:evaluation",
+    "concept:delivery"
    ]
   },
   {
@@ -2177,6 +2410,26 @@
    "rel": "integrates_with"
   },
   {
+   "source": "source:ads.tiktok.com/help/article/creative-best-practices",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "source:ads.tiktok.com/help/article/creative-best-practices",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "source:ads.tiktok.com/help/article/creative-best-practices",
+   "target": "concept:story-and-decomposition",
+   "rel": "about"
+  },
+  {
+   "source": "source:ads.tiktok.com/help/article/creative-best-practices",
+   "target": "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
+   "rel": "contradicts"
+  },
+  {
    "source": "source:artificialanalysis.ai/video/leaderboard/text-to-video",
    "target": "concept:evaluation",
    "rel": "about"
@@ -2197,6 +2450,71 @@
    "rel": "evaluated_on"
   },
   {
+   "source": "source:arxiv.org/abs/2604.24842",
+   "target": "concept:agentic-pipelines",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2604.24842",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2604.24842",
+   "target": "concept:story-and-decomposition",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2604.24842",
+   "target": "model:google/veo-3.1",
+   "rel": "depends_on"
+  },
+  {
+   "source": "source:arxiv.org/abs/2604.24842",
+   "target": "source:arxiv.org/abs/2606.07649",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "source:arxiv.org/abs/2606.07649",
+   "target": "concept:agentic-pipelines",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2606.07649",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2606.07649",
+   "target": "concept:story-and-decomposition",
+   "rel": "about"
+  },
+  {
+   "source": "source:arxiv.org/abs/2606.07649",
+   "target": "source:arxiv.org/abs/2604.24842",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
+   "target": "concept:visual-design",
+   "rel": "about"
+  },
+  {
+   "source": "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
+   "target": "source:partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-english-usa-timed-text-style-guide",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
+   "target": "tool:bbc/ttml-validator",
+   "rel": "integrates_with"
+  },
+  {
    "source": "source:c2pa.org/faqs",
    "target": "concept:delivery",
    "rel": "about"
@@ -2210,6 +2528,36 @@
    "source": "source:c2pa.org/faqs",
    "target": "source:support.google.com/youtube/answer/14328491",
    "rel": "integrates_with"
+  },
+  {
+   "source": "source:carbondesignsystem.com/elements/motion/overview",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "source:carbondesignsystem.com/elements/motion/overview",
+   "target": "source:github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "source:carbondesignsystem.com/elements/motion/overview",
+   "target": "tool:heygen-com/hyperframes",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:cloud.wikis.utexas.edu/wiki/spaces/rtf318/pages/80022510",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "source:cloud.wikis.utexas.edu/wiki/spaces/rtf318/pages/80022510",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "source:cloud.wikis.utexas.edu/wiki/spaces/rtf318/pages/80022510",
+   "target": "concept:story-and-decomposition",
+   "rel": "about"
   },
   {
    "source": "source:code.claude.com/docs/en/headless",
@@ -2547,6 +2895,31 @@
    "rel": "integrates_with"
   },
   {
+   "source": "source:facebook.com/business/ads-guide/update/video/instagram-reels",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "source:facebook.com/business/ads-guide/update/video/instagram-reels",
+   "target": "concept:visual-design",
+   "rel": "about"
+  },
+  {
+   "source": "source:facebook.com/business/ads-guide/update/video/instagram-reels",
+   "target": "source:support.google.com/youtube/answer/1722171",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "source:facebook.com/business/ads-guide/update/video/instagram-reels",
+   "target": "tool:josiahsiegel/claude-plugin-marketplace",
+   "rel": "contradicts"
+  },
+  {
+   "source": "source:fountain.io/syntax",
+   "target": "concept:story-and-decomposition",
+   "rel": "about"
+  },
+  {
    "source": "source:github.com/get-bb/bb/blob/main/docs/configuration.md",
    "target": "concept:automation",
    "rel": "about"
@@ -2625,6 +2998,16 @@
    "source": "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
    "target": "tool:remotion-dev/remotion",
    "rel": "evaluated_on"
+  },
+  {
+   "source": "source:github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss",
+   "target": "concept:motion-and-transitions",
+   "rel": "about"
+  },
+  {
+   "source": "source:github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss",
+   "target": "source:carbondesignsystem.com/elements/motion/overview",
+   "rel": "alternative_to"
   },
   {
    "source": "source:help.x.com/en/rules-and-policies/authenticity",
@@ -2752,6 +3135,21 @@
    "rel": "about"
   },
   {
+   "source": "source:partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-english-usa-timed-text-style-guide",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "source:partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-english-usa-timed-text-style-guide",
+   "target": "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "source:partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-english-usa-timed-text-style-guide",
+   "target": "tool:calesthio/generative-media-skills",
+   "rel": "integrates_with"
+  },
+  {
    "source": "source:remotion.dev/docs/ai/mcp",
    "target": "concept:agent-skills",
    "rel": "about"
@@ -2799,6 +3197,76 @@
   {
    "source": "source:support.google.com/youtube/answer/15424877",
    "target": "concept:publishing",
+   "rel": "about"
+  },
+  {
+   "source": "source:support.google.com/youtube/answer/1722171",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "source:support.google.com/youtube/answer/1722171",
+   "target": "source:facebook.com/business/ads-guide/update/video/instagram-reels",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "source:support.google.com/youtube/answer/9314415",
+   "target": "concept:feedback-loop",
+   "rel": "about"
+  },
+  {
+   "source": "source:support.google.com/youtube/answer/9314415",
+   "target": "concept:story-and-decomposition",
+   "rel": "about"
+  },
+  {
+   "source": "source:tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s2.pdf",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "source:tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s2.pdf",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "source:tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s2.pdf",
+   "target": "source:tech.ebu.ch/publications/r128",
+   "rel": "extends"
+  },
+  {
+   "source": "source:tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s2.pdf",
+   "target": "tool:mort1d/motion-graphics-skills",
+   "rel": "contradicts"
+  },
+  {
+   "source": "source:tech.ebu.ch/publications/r128",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "source:tech.ebu.ch/publications/r128",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "source:tech.ebu.ch/publications/r128",
+   "target": "source:tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s2.pdf",
+   "rel": "extends"
+  },
+  {
+   "source": "source:tech.ebu.ch/publications/r128",
+   "target": "tool:ffmpeg/ffmpeg",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "source:w3.org/tr/wcag22",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "source:w3.org/tr/wcag22",
+   "target": "concept:visual-design",
    "rel": "about"
   },
   {
@@ -2897,6 +3365,21 @@
    "rel": "about"
   },
   {
+   "source": "tool:bbc/ttml-validator",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:bbc/ttml-validator",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:bbc/ttml-validator",
+   "target": "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
+   "rel": "depends_on"
+  },
+  {
    "source": "tool:blaizzy/mlx-video",
    "target": "concept:generated-footage",
    "rel": "about"
@@ -2924,6 +3407,21 @@
   {
    "source": "tool:blaizzy/mlx-video",
    "target": "tool:drawthings.ai",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:breakthrough/pyscenedetect",
+   "target": "concept:footage-editing",
+   "rel": "about"
+  },
+  {
+   "source": "tool:breakthrough/pyscenedetect",
+   "target": "concept:review-loop",
+   "rel": "about"
+  },
+  {
+   "source": "tool:breakthrough/pyscenedetect",
+   "target": "tool:ffmpeg/ffmpeg",
    "rel": "alternative_to"
   },
   {
@@ -3685,6 +4183,21 @@
    "source": "tool:n8n-io/n8n",
    "target": "tool:windmill-labs/windmill",
    "rel": "alternative_to"
+  },
+  {
+   "source": "tool:netflix/vmaf",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "tool:netflix/vmaf",
+   "target": "concept:evaluation",
+   "rel": "about"
+  },
+  {
+   "source": "tool:netflix/vmaf",
+   "target": "tool:ffmpeg/ffmpeg",
+   "rel": "integrates_with"
   },
   {
    "source": "tool:nexu-io/html-video",

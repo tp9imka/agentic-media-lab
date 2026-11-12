@@ -97,12 +97,14 @@
    ],
    "related": [],
    "record_ids": [
+    "source:arxiv.org/abs/2604.24842",
+    "source:arxiv.org/abs/2606.07649",
     "tool:comfy-org/comfyui",
     "tool:nexu-io/html-video",
     "tool:nousresearch/kanban-video-pipeline",
     "tool:openmontageinc/openmontage"
    ],
-   "count": 4
+   "count": 6
   },
   {
    "id": "concept:audio-and-captions",
@@ -131,6 +133,13 @@
     "model:ace-step/ace-step",
     "model:hexgrad/kokoro",
     "model:heygen/heygen-video-1",
+    "source:ads.tiktok.com/help/article/creative-best-practices",
+    "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
+    "source:partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-english-usa-timed-text-style-guide",
+    "source:tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s2.pdf",
+    "source:tech.ebu.ch/publications/r128",
+    "source:w3.org/tr/wcag22",
+    "tool:bbc/ttml-validator",
     "tool:browser-use/video-use",
     "tool:calesthio/generative-media-skills",
     "tool:coreyhaines31/marketingskills",
@@ -145,7 +154,7 @@
     "tool:motion-canvas/motion-canvas",
     "tool:openmontageinc/openmontage"
    ],
-   "count": 16
+   "count": 23
   },
   {
    "id": "concept:automation",
@@ -324,20 +333,26 @@
    "record_ids": [
     "model:bytedance-seed/seedvr",
     "model:runwayml/gen-4.5",
+    "source:ads.tiktok.com/help/article/creative-best-practices",
     "source:c2pa.org/faqs",
     "source:developers.facebook.com/docs/instagram-platform/content-publishing",
     "source:developers.facebook.com/docs/video-api/guides/reels-publishing",
     "source:developers.tiktok.com/doc/content-posting-api-media-transfer-guide",
     "source:docs.joinmastodon.org/user/posting",
     "source:docs.x.com/x-api/media/quickstart/media-upload-chunked",
+    "source:facebook.com/business/ads-guide/update/video/instagram-reels",
     "source:support.google.com/youtube/answer/14328491",
     "source:support.google.com/youtube/answer/15424877",
+    "source:support.google.com/youtube/answer/1722171",
+    "source:tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s2.pdf",
+    "source:tech.ebu.ch/publications/r128",
     "tool:calesthio/generative-media-skills",
     "tool:ffmpeg/ffmpeg",
     "tool:kajisho5/ffmpeg-skill",
-    "tool:mort1d/motion-graphics-skills"
+    "tool:mort1d/motion-graphics-skills",
+    "tool:netflix/vmaf"
    ],
-   "count": 14
+   "count": 20
   },
   {
    "id": "concept:evaluation",
@@ -360,9 +375,10 @@
    "related": [],
    "record_ids": [
     "source:artificialanalysis.ai/video/leaderboard/text-to-video",
-    "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion"
+    "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
+    "tool:netflix/vmaf"
    ],
-   "count": 2
+   "count": 3
   },
   {
    "id": "concept:feedback-loop",
@@ -380,8 +396,10 @@
     "concept:automation"
    ],
    "related": [],
-   "record_ids": [],
-   "count": 0
+   "record_ids": [
+    "source:support.google.com/youtube/answer/9314415"
+   ],
+   "count": 1
   },
   {
    "id": "concept:footage-editing",
@@ -403,13 +421,15 @@
    "related": [],
    "record_ids": [
     "model:runwayml/aleph",
+    "source:cloud.wikis.utexas.edu/wiki/spaces/rtf318/pages/80022510",
+    "tool:breakthrough/pyscenedetect",
     "tool:browser-use/video-use",
     "tool:coreyhaines31/marketingskills",
     "tool:kajisho5/ffmpeg-skill",
     "tool:mifi/editly",
     "tool:zulko/moviepy"
    ],
-   "count": 6
+   "count": 8
   },
   {
    "id": "concept:generated-footage",
@@ -669,6 +689,9 @@
    ],
    "related": [],
    "record_ids": [
+    "source:carbondesignsystem.com/elements/motion/overview",
+    "source:cloud.wikis.utexas.edu/wiki/spaces/rtf318/pages/80022510",
+    "source:github.com/material-components/material-web/blob/main/tokens/versions/latest/sass/_md-sys-motion.scss",
     "tool:3b1b/manim",
     "tool:ffmpeg/ffmpeg",
     "tool:flchntc/smooth-animation-skill",
@@ -683,7 +706,7 @@
     "tool:motion-canvas/motion-canvas",
     "tool:remotion-dev/remotion"
    ],
-   "count": 13
+   "count": 16
   },
   {
    "id": "concept:orchestration",
@@ -877,6 +900,8 @@
    ],
    "related": [],
    "record_ids": [
+    "source:arxiv.org/abs/2604.24842",
+    "source:arxiv.org/abs/2606.07649",
     "source:code.claude.com/docs/en/routines",
     "source:docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
     "source:github.com/get-bb/bb/blob/main/docs/configuration.md",
@@ -885,6 +910,8 @@
     "source:learn.chatgpt.com/docs/automations",
     "tool:0xs4n4tg/kinetograph",
     "tool:ahujasid/mcp-for-blender",
+    "tool:bbc/ttml-validator",
+    "tool:breakthrough/pyscenedetect",
     "tool:browser-use/video-use",
     "tool:digitalsamba/claude-code-video-toolkit",
     "tool:dmtrkovalenko/fframes",
@@ -905,7 +932,7 @@
     "tool:vincentwei1021/video-shotcraft",
     "tool:windmill-labs/windmill"
    ],
-   "count": 27
+   "count": 31
   },
   {
    "id": "concept:scheduling-and-runtimes",
@@ -1005,10 +1032,16 @@
    ],
    "related": [],
    "record_ids": [
+    "source:ads.tiktok.com/help/article/creative-best-practices",
+    "source:arxiv.org/abs/2604.24842",
+    "source:arxiv.org/abs/2606.07649",
+    "source:cloud.wikis.utexas.edu/wiki/spaces/rtf318/pages/80022510",
+    "source:fountain.io/syntax",
+    "source:support.google.com/youtube/answer/9314415",
     "tool:mattypark/motion-graphics-skill",
     "tool:vincentwei1021/video-shotcraft"
    ],
-   "count": 2
+   "count": 8
   },
   {
    "id": "concept:visual-design",
@@ -1031,11 +1064,14 @@
    ],
    "related": [],
    "record_ids": [
+    "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
+    "source:facebook.com/business/ads-guide/update/video/instagram-reels",
+    "source:w3.org/tr/wcag22",
     "tool:digitalsamba/claude-code-video-toolkit",
     "tool:openmontageinc/openmontage",
     "tool:remotion-dev/skills"
    ],
-   "count": 3
+   "count": 6
   }
  ]
 }

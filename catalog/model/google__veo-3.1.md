@@ -56,6 +56,7 @@ Nothing collected yet.
 
 ## Referenced by
 
+- [Co-Director: Agentic Generative Video Storytelling (arXiv 2604.24842)](../source/arxiv.org__abs__2604.24842.md) (depends_on)
 - [Runway Dev API](../tool/runwayml__runway-api.md) (integrates_with)
 
 ## Status

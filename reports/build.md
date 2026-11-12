@@ -4,13 +4,13 @@ Built 2026-11-12 by `tools/build.py`.
 
 ## Counts
 
-- tool: 51
+- tool: 54
 - model: 25
-- source: 35
+- source: 50
 - recipe: 0
 - concepts: 35
 - primary-read share: 1.0
-- Hub size: 430230 characters, about 107557 tokens (estimate, characters / 4).
+- Hub size: 494504 characters, about 123626 tokens (estimate, characters / 4).
 
 ## Validation
 
@@ -20,20 +20,40 @@ dangling: 0 bad concepts: 0 invalid: 0
 
 None.
 
-## Tags used once (12)
+## Tags used once (32)
 
+- `accessibility`
+- `analytics`
 - `automation`
+- `banding`
 - `bluesky`
+- `contrast`
+- `cps`
+- `cuts`
+- `design-tokens`
+- `editing`
 - `facebook`
+- `flashing`
+- `h264`
 - `instagram`
 - `linkedin`
 - `mastodon`
 - `mcp`
 - `monetisation`
 - `pricing`
+- `quality-metric`
 - `quota`
-- `shorts`
+- `reels`
+- `retention`
+- `screenplay`
+- `script-format`
+- `shot-detection`
+- `storyboard`
+- `streaming`
 - `threads`
+- `true-peak`
+- `validator`
+- `vertical-video`
 
 ## Popularity disagreements (6)
 

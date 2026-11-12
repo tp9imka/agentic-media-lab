@@ -91,7 +91,7 @@ Scope: Systems where agents plan, generate, check and assemble a multi-shot vide
 
 Broader: [Pipelines](glossary.md#pipelines)
 
-Records (4): [ComfyUI](../catalog/tool/comfy-org__comfyui.md), [html-video](../catalog/tool/nexu-io__html-video.md), [Kanban Video Pipeline](../catalog/tool/nousresearch__kanban-video-pipeline.md), [OpenMontage](../catalog/tool/openmontageinc__openmontage.md)
+Records (6): [Co-Director: Agentic Generative Video Storytelling (arXiv 2604.24842)](../catalog/source/arxiv.org__abs__2604.24842.md), [ViMax: Agentic Video Generation (arXiv 2606.07649)](../catalog/source/arxiv.org__abs__2606.07649.md), [ComfyUI](../catalog/tool/comfy-org__comfyui.md), [html-video](../catalog/tool/nexu-io__html-video.md), [Kanban Video Pipeline](../catalog/tool/nousresearch__kanban-video-pipeline.md), [OpenMontage](../catalog/tool/openmontageinc__openmontage.md)
 
 ## <a id="audio-and-captions"></a>Audio and captions
 
@@ -103,7 +103,7 @@ Scope: Narration, music, effects, their mix, and on-screen text timed to speech.
 
 Broader: [Craft](glossary.md#craft)
 
-Records (16): [ACE-Step 1.5](../catalog/model/ace-step__ace-step.md), [Kokoro-82M](../catalog/model/hexgrad__kokoro.md), [HeyGen Video 1](../catalog/model/heygen__heygen-video-1.md), [video-use](../catalog/tool/browser-use__video-use.md), [generative-media-skills](../catalog/tool/calesthio__generative-media-skills.md), [marketingskills (video, product-demo-recording)](../catalog/tool/coreyhaines31__marketingskills.md), [remotion-superpowers](../catalog/tool/dojocodinglabs__remotion-superpowers.md), [FFmpeg](../catalog/tool/ffmpeg__ffmpeg.md), [whisper.cpp](../catalog/tool/ggml-org__whisper.cpp.md), [claude-plugin-marketplace (ffmpeg-kinetic-captions)](../catalog/tool/josiahsiegel__claude-plugin-marketplace.md), and 6 more in the [catalog](../catalog/README.md)
+Records (23): [ACE-Step 1.5](../catalog/model/ace-step__ace-step.md), [Kokoro-82M](../catalog/model/hexgrad__kokoro.md), [HeyGen Video 1](../catalog/model/heygen__heygen-video-1.md), [TikTok Ads - Creative best practices for performance ads](../catalog/source/ads.tiktok.com__help__article__creative-best-practices.md), [BBC Subtitle Guidelines](../catalog/source/bbc.co.uk__accessibility__forproducts__guides__subtitles.md), [Netflix English (USA) Timed Text Style Guide](../catalog/source/partnerhelp.netflixstudios.com__hc__en-us__articles__217350977-english-usa-timed-text-style-guide.md), [EBU R 128 s2 - Loudness in Streaming](../catalog/source/tech.ebu.ch__files__live__sites__tech__files__shared__r__r128s2.pdf.md), [EBU R 128 - Loudness normalisation and permitted maximum level of audio signals](../catalog/source/tech.ebu.ch__publications__r128.md), [Web Content Accessibility Guidelines (WCAG) 2.2](../catalog/source/w3.org__tr__wcag22.md), [ttml-validator (BBC)](../catalog/tool/bbc__ttml-validator.md), and 13 more in the [catalog](../catalog/README.md)
 
 ## <a id="automation"></a>Automation
 
@@ -167,7 +167,7 @@ Scope: Getting the finished file into the format a platform or client accepts.
 
 Broader: [Craft](glossary.md#craft)
 
-Records (14): [SeedVR2](../catalog/model/bytedance-seed__seedvr.md), [Runway Gen-4.5](../catalog/model/runwayml__gen-4.5.md), [C2PA FAQs (Content Credentials)](../catalog/source/c2pa.org__faqs.md), [Instagram Platform - Content Publishing (with Reels specs)](../catalog/source/developers.facebook.com__docs__instagram-platform__content-publishing.md), [Facebook Video API - Reels Publishing guide](../catalog/source/developers.facebook.com__docs__video-api__guides__reels-publishing.md), [TikTok Content Posting API - Media Transfer Guide](../catalog/source/developers.tiktok.com__doc__content-posting-api-media-transfer-guide.md), [Mastodon docs - Posting (attachments) and Instance media configuration](../catalog/source/docs.joinmastodon.org__user__posting.md), [X API - chunked media upload quickstart](../catalog/source/docs.x.com__x-api__media__quickstart__media-upload-chunked.md), [YouTube Help - Disclosing use of GenAI content](../catalog/source/support.google.com__youtube__answer__14328491.md), [YouTube Help - Understand three-minute YouTube Shorts](../catalog/source/support.google.com__youtube__answer__15424877.md), and 4 more in the [catalog](../catalog/README.md)
+Records (20): [SeedVR2](../catalog/model/bytedance-seed__seedvr.md), [Runway Gen-4.5](../catalog/model/runwayml__gen-4.5.md), [TikTok Ads - Creative best practices for performance ads](../catalog/source/ads.tiktok.com__help__article__creative-best-practices.md), [C2PA FAQs (Content Credentials)](../catalog/source/c2pa.org__faqs.md), [Instagram Platform - Content Publishing (with Reels specs)](../catalog/source/developers.facebook.com__docs__instagram-platform__content-publishing.md), [Facebook Video API - Reels Publishing guide](../catalog/source/developers.facebook.com__docs__video-api__guides__reels-publishing.md), [TikTok Content Posting API - Media Transfer Guide](../catalog/source/developers.tiktok.com__doc__content-posting-api-media-transfer-guide.md), [Mastodon docs - Posting (attachments) and Instance media configuration](../catalog/source/docs.joinmastodon.org__user__posting.md), [X API - chunked media upload quickstart](../catalog/source/docs.x.com__x-api__media__quickstart__media-upload-chunked.md), [Meta Ads Guide - Instagram Reels video ads](../catalog/source/facebook.com__business__ads-guide__update__video__instagram-reels.md), and 10 more in the [catalog](../catalog/README.md)
 
 ## <a id="evaluation"></a>Evaluation
 
@@ -179,7 +179,7 @@ Scope: How video and image quality, and whole pipelines, are measured.
 
 Broader: [Pipelines](glossary.md#pipelines)
 
-Records (2): [Artificial Analysis Video Arena: text-to-video and image-to-video leaderboards](../catalog/source/artificialanalysis.ai__video__leaderboard__text-to-video.md), [HyperFrames vs Remotion (HeyGen guide)](../catalog/source/hyperframes.heygen.com__guides__hyperframes-vs-remotion.md)
+Records (3): [Artificial Analysis Video Arena: text-to-video and image-to-video leaderboards](../catalog/source/artificialanalysis.ai__video__leaderboard__text-to-video.md), [HyperFrames vs Remotion (HeyGen guide)](../catalog/source/hyperframes.heygen.com__guides__hyperframes-vs-remotion.md), [VMAF (libvmaf)](../catalog/tool/netflix__vmaf.md)
 
 ## <a id="feedback-loop"></a>Feedback loop
 
@@ -191,7 +191,7 @@ Scope: Reading results back and using them to choose what to make next.
 
 Broader: [Automation](glossary.md#automation)
 
-Records (0): none yet
+Records (1): [YouTube Help - Measure key moments for audience retention](../catalog/source/support.google.com__youtube__answer__9314415.md)
 
 ## <a id="footage-editing"></a>Editing real footage
 
@@ -203,7 +203,7 @@ Scope: Cutting, arranging and finishing footage that already exists.
 
 Broader: [Making](glossary.md#making)
 
-Records (6): [Runway Aleph 2.0](../catalog/model/runwayml__aleph.md), [video-use](../catalog/tool/browser-use__video-use.md), [marketingskills (video, product-demo-recording)](../catalog/tool/coreyhaines31__marketingskills.md), [ffmpeg-skill](../catalog/tool/kajisho5__ffmpeg-skill.md), [editly](../catalog/tool/mifi__editly.md), [MoviePy](../catalog/tool/zulko__moviepy.md)
+Records (8): [Runway Aleph 2.0](../catalog/model/runwayml__aleph.md), [Murch's Rule of Six (UT Austin RTF 318 course wiki)](../catalog/source/cloud.wikis.utexas.edu__wiki__spaces__rtf318__pages__80022510.md), [PySceneDetect](../catalog/tool/breakthrough__pyscenedetect.md), [video-use](../catalog/tool/browser-use__video-use.md), [marketingskills (video, product-demo-recording)](../catalog/tool/coreyhaines31__marketingskills.md), [ffmpeg-skill](../catalog/tool/kajisho5__ffmpeg-skill.md), [editly](../catalog/tool/mifi__editly.md), [MoviePy](../catalog/tool/zulko__moviepy.md)
 
 ## <a id="generated-footage"></a>Generated footage
 
@@ -315,7 +315,7 @@ Scope: How things move and how one scene hands over to the next.
 
 Broader: [Craft](glossary.md#craft)
 
-Records (13): [ManimGL (3b1b/manim)](../catalog/tool/3b1b__manim.md), [FFmpeg](../catalog/tool/ffmpeg__ffmpeg.md), [smooth-animation-skill](../catalog/tool/flchntc__smooth-animation-skill.md), [GSAP](../catalog/tool/greensock__gsap.md), [claude-remotion-skill](../catalog/tool/haidrrrry__claude-remotion-skill.md), [HyperFrames](../catalog/tool/heygen-com__hyperframes.md), [motion-skills (iArt)](../catalog/tool/iart-ai__motion-skills.md), [claude-plugin-marketplace (ffmpeg-kinetic-captions)](../catalog/tool/josiahsiegel__claude-plugin-marketplace.md), [motion-design skill (LottieFiles)](../catalog/tool/lottiefiles__motion-design-skill.md), [Manim Community Edition](../catalog/tool/manimcommunity__manim.md), and 3 more in the [catalog](../catalog/README.md)
+Records (16): [IBM Carbon Design System - Motion](../catalog/source/carbondesignsystem.com__elements__motion__overview.md), [Murch's Rule of Six (UT Austin RTF 318 course wiki)](../catalog/source/cloud.wikis.utexas.edu__wiki__spaces__rtf318__pages__80022510.md), [Material 3 motion tokens (material-web, _md-sys-motion.scss)](../catalog/source/github.com__material-components__material-web__blob__main__tokens__versions__latest__sass___md-sys-motion.scss.md), [ManimGL (3b1b/manim)](../catalog/tool/3b1b__manim.md), [FFmpeg](../catalog/tool/ffmpeg__ffmpeg.md), [smooth-animation-skill](../catalog/tool/flchntc__smooth-animation-skill.md), [GSAP](../catalog/tool/greensock__gsap.md), [claude-remotion-skill](../catalog/tool/haidrrrry__claude-remotion-skill.md), [HyperFrames](../catalog/tool/heygen-com__hyperframes.md), [motion-skills (iArt)](../catalog/tool/iart-ai__motion-skills.md), and 6 more in the [catalog](../catalog/README.md)
 
 ## <a id="orchestration"></a>Orchestration
 
@@ -395,7 +395,7 @@ Scope: The agent renders, looks at the result and fixes what it sees before deli
 
 Broader: [Craft](glossary.md#craft)
 
-Records (27): [Claude Code cloud scheduled tasks (formerly routines)](../catalog/source/code.claude.com__docs__en__routines.md), [GitHub Actions: deployments and environments (required reviewers)](../catalog/source/docs.github.com__en__actions__reference__workflows-and-actions__deployments-and-environments.md), [bb configuration reference](../catalog/source/github.com__get-bb__bb__blob__main__docs__configuration.md.md), [HyperFrames vs Remotion research note (GenMotion)](../catalog/source/github.com__haxzie__genmotion__blob__main__docs__research__hyperframes-remotion.md.md), [Hermes Agent security: dangerous command approval](../catalog/source/hermes-agent.nousresearch.com__docs__user-guide__security.md), [Codex scheduled tasks (ChatGPT app)](../catalog/source/learn.chatgpt.com__docs__automations.md), [Kinetograph](../catalog/tool/0xs4n4tg__kinetograph.md), [MCP for Blender](../catalog/tool/ahujasid__mcp-for-blender.md), [video-use](../catalog/tool/browser-use__video-use.md), [claude-code-video-toolkit](../catalog/tool/digitalsamba__claude-code-video-toolkit.md), and 17 more in the [catalog](../catalog/README.md)
+Records (31): [Co-Director: Agentic Generative Video Storytelling (arXiv 2604.24842)](../catalog/source/arxiv.org__abs__2604.24842.md), [ViMax: Agentic Video Generation (arXiv 2606.07649)](../catalog/source/arxiv.org__abs__2606.07649.md), [Claude Code cloud scheduled tasks (formerly routines)](../catalog/source/code.claude.com__docs__en__routines.md), [GitHub Actions: deployments and environments (required reviewers)](../catalog/source/docs.github.com__en__actions__reference__workflows-and-actions__deployments-and-environments.md), [bb configuration reference](../catalog/source/github.com__get-bb__bb__blob__main__docs__configuration.md.md), [HyperFrames vs Remotion research note (GenMotion)](../catalog/source/github.com__haxzie__genmotion__blob__main__docs__research__hyperframes-remotion.md.md), [Hermes Agent security: dangerous command approval](../catalog/source/hermes-agent.nousresearch.com__docs__user-guide__security.md), [Codex scheduled tasks (ChatGPT app)](../catalog/source/learn.chatgpt.com__docs__automations.md), [Kinetograph](../catalog/tool/0xs4n4tg__kinetograph.md), [MCP for Blender](../catalog/tool/ahujasid__mcp-for-blender.md), and 21 more in the [catalog](../catalog/README.md)
 
 ## <a id="scheduling-and-runtimes"></a>Scheduling and runtimes
 
@@ -431,7 +431,7 @@ Scope: Turning an idea into scenes, shots and beats before anything is rendered.
 
 Broader: [Craft](glossary.md#craft)
 
-Records (2): [motion-video-director (mattypark)](../catalog/tool/mattypark__motion-graphics-skill.md), [video-shotcraft](../catalog/tool/vincentwei1021__video-shotcraft.md)
+Records (8): [TikTok Ads - Creative best practices for performance ads](../catalog/source/ads.tiktok.com__help__article__creative-best-practices.md), [Co-Director: Agentic Generative Video Storytelling (arXiv 2604.24842)](../catalog/source/arxiv.org__abs__2604.24842.md), [ViMax: Agentic Video Generation (arXiv 2606.07649)](../catalog/source/arxiv.org__abs__2606.07649.md), [Murch's Rule of Six (UT Austin RTF 318 course wiki)](../catalog/source/cloud.wikis.utexas.edu__wiki__spaces__rtf318__pages__80022510.md), [Fountain screenplay syntax](../catalog/source/fountain.io__syntax.md), [YouTube Help - Measure key moments for audience retention](../catalog/source/support.google.com__youtube__answer__9314415.md), [motion-video-director (mattypark)](../catalog/tool/mattypark__motion-graphics-skill.md), [video-shotcraft](../catalog/tool/vincentwei1021__video-shotcraft.md)
 
 ## <a id="visual-design"></a>Visual design
 
@@ -443,6 +443,6 @@ Scope: Type, layout, colour and brand consistency inside the frame.
 
 Broader: [Craft](glossary.md#craft)
 
-Records (3): [claude-code-video-toolkit](../catalog/tool/digitalsamba__claude-code-video-toolkit.md), [OpenMontage](../catalog/tool/openmontageinc__openmontage.md), [Remotion Agent Skills](../catalog/tool/remotion-dev__skills.md)
+Records (6): [BBC Subtitle Guidelines](../catalog/source/bbc.co.uk__accessibility__forproducts__guides__subtitles.md), [Meta Ads Guide - Instagram Reels video ads](../catalog/source/facebook.com__business__ads-guide__update__video__instagram-reels.md), [Web Content Accessibility Guidelines (WCAG) 2.2](../catalog/source/w3.org__tr__wcag22.md), [claude-code-video-toolkit](../catalog/tool/digitalsamba__claude-code-video-toolkit.md), [OpenMontage](../catalog/tool/openmontageinc__openmontage.md), [Remotion Agent Skills](../catalog/tool/remotion-dev__skills.md)
 
 Index of all pages: https://tp9imka.github.io/agentic-media-lab/llms.txt

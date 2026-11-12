@@ -82,7 +82,7 @@ Collected by `tools/enrich.py`, not typed by hand.
 
 ## Referenced by
 
-None.
+- [Netflix English (USA) Timed Text Style Guide](../source/partnerhelp.netflixstudios.com__hc__en-us__articles__217350977-english-usa-timed-text-style-guide.md) (integrates_with)
 
 ## Status
 

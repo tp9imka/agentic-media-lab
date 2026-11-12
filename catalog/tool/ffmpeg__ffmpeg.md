@@ -80,7 +80,10 @@ Collected by `tools/enrich.py`, not typed by hand.
 
 ## Referenced by
 
+- [EBU R 128 - Loudness normalisation and permitted maximum level of audio signals](../source/tech.ebu.ch__publications__r128.md) (integrates_with)
+- [PySceneDetect](breakthrough__pyscenedetect.md) (alternative_to)
 - [editly](mifi__editly.md) (depends_on)
+- [VMAF (libvmaf)](netflix__vmaf.md) (integrates_with)
 - [MoviePy](zulko__moviepy.md) (depends_on)
 
 ## Status

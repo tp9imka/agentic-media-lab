@@ -76,6 +76,7 @@ Collected by `tools/enrich.py`, not typed by hand.
 
 ## Referenced by
 
+- [IBM Carbon Design System - Motion](../source/carbondesignsystem.com__elements__motion__overview.md) (integrates_with)
 - [HyperFrames vs Remotion research note (GenMotion)](../source/github.com__haxzie__genmotion__blob__main__docs__research__hyperframes-remotion.md.md) (evaluated_on)
 - [HyperFrames vs Remotion (HeyGen guide)](../source/hyperframes.heygen.com__guides__hyperframes-vs-remotion.md) (evaluated_on)
 - [Kinetograph](0xs4n4tg__kinetograph.md) (alternative_to)

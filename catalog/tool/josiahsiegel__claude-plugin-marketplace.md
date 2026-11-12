@@ -84,6 +84,7 @@ Collected by `tools/enrich.py`, not typed by hand.
 
 ## Referenced by
 
+- [Meta Ads Guide - Instagram Reels video ads](../source/facebook.com__business__ads-guide__update__video__instagram-reels.md) (contradicts)
 - [remotion-superpowers](dojocodinglabs__remotion-superpowers.md) (contradicts)
 - [OpenMontage](openmontageinc__openmontage.md) (contradicts)
 

@@ -80,7 +80,7 @@ Collected by `tools/enrich.py`, not typed by hand.
 
 ## Referenced by
 
-None.
+- [EBU R 128 s2 - Loudness in Streaming](../source/tech.ebu.ch__files__live__sites__tech__files__shared__r__r128s2.pdf.md) (contradicts)
 
 ## Status
 
