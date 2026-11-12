@@ -1,0 +1,691 @@
+{
+  "schema_version": 1,
+  "lane": "local-models",
+  "records": [
+    {
+      "kind": "model",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "local-models",
+      "status": "current",
+      "url_status": "live",
+      "access": "weights",
+      "id": "model:lightricks/ltx-2",
+      "title": "LTX-2",
+      "aliases": [
+        "LTX-2.3",
+        "LTX-2.5",
+        "LTX Video",
+        "Lightricks LTX"
+      ],
+      "url": "https://github.com/Lightricks/LTX-2",
+      "summary": "Lightricks' open-weights video model family that generates video and synchronized audio. The repo README points to LTX-2.5 (22B distilled transformer with a Gemma 4 12B text encoder).",
+      "why_it_matters": "It is the open video model with the most documented Mac routes: the official PyTorch code on MPS, mlx-video for LTX-2 and 2.3, and Draw Things for 2.3.",
+      "concepts": [
+        "concept:local-video-models",
+        "concept:generated-footage",
+        "concept:licences-and-territory"
+      ],
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Free under the licence only while your organisation earns under $10M a year. The official Mac path is PyTorch on MPS; the fastest VAE backend (natten) is Linux and CUDA only and is skipped on macOS. The LTX-2.5 file names give a 22B transformer and a 12B text encoder in bf16, which by our arithmetic is over 64 GB before any quantization; no Mac memory figure is published. Not run here.",
+      "related": [
+        {
+          "id": "tool:blaizzy/mlx-video",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "tool:drawthings.ai",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "model:wan-ai/wan2.2",
+          "rel": "alternative_to"
+        }
+      ],
+      "modes": [
+        "t2v",
+        "i2v"
+      ],
+      "apple_silicon": "documented",
+      "licence_class": "commercial-threshold",
+      "claims": [
+        {
+          "text": "Organisations with annual revenue of $10M or more need a paid licence for any use beyond non-commercial purposes.",
+          "quote": "provided however, that Entities with annual revenues of at least $10,000,000 (the \"Commercial Entities\") are required to obtain a paid license for any use",
+          "locator": "LICENSE-2_x, section 2.1 Grant of License",
+          "url": "https://github.com/Lightricks/LTX-2/blob/main/LICENSE-2_x",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Since release 1.3.0 (2026-08-25) the install on macOS uses PyPI PyTorch with MPS on Apple Silicon.",
+          "quote": "`uv sync` on macOS no longer fails looking for CUDA-only torch wheels. Macs use PyPI (MPS on Apple Silicon); Linux and Windows still use the CUDA 13.2 indexes.",
+          "locator": "CHANGELOG.md, 1.3.0 - 2026-08-25, Fixed",
+          "url": "https://github.com/Lightricks/LTX-2/blob/main/CHANGELOG.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Release 1.2.0 (2026-08-11) fixed VAE decode tiling on Apple Silicon, which before could not fit any tile at any resolution.",
+          "quote": "Fixed diffusion-VAE decode tiling on Apple Silicon. The decode memory budget was probed only on CUDA, so on other backends it reported zero bytes available and no decode tile could ever fit, at any resolution. Automatic tiling now sizes itself from the Metal working set on MPS.",
+          "locator": "CHANGELOG.md, 1.2.0 - 2026-08-11, Fixed",
+          "url": "https://github.com/Lightricks/LTX-2/blob/main/CHANGELOG.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "LTX-2 CHANGELOG, LICENSE-2_x and README against the claims",
+        "source_sha256": "4ffa66289ae55b2e5b71463ff7f596d192c26af8d4bcc53e62c2d2080c630d35",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "local-models",
+      "status": "current",
+      "url_status": "live",
+      "access": "weights",
+      "id": "model:wan-ai/wan2.2",
+      "title": "Wan 2.2",
+      "aliases": [
+        "Wan2.2",
+        "Wan2.2-TI2V-5B",
+        "Wan2.2-T2V-A14B",
+        "Wan2.2-I2V-A14B"
+      ],
+      "url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B",
+      "summary": "Alibaba's open video models: a 5B text-and-image-to-video model at 720p 24 fps and larger 14B text-to-video and image-to-video models.",
+      "why_it_matters": "It is the main Apache-2.0 video family with a documented MLX route on a Mac, so client work carries no revenue cap.",
+      "concepts": [
+        "concept:local-video-models",
+        "concept:generated-footage"
+      ],
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Wan's own card documents only NVIDIA GPUs (24 GB VRAM for the 5B command). The Mac route is third-party: mlx-video after a weight conversion that needs PyTorch, or Draw Things (5B import and 14B official models in its log). Start with TI2V-5B on a 64 GB Mac. No Mac timing is published by Wan or mlx-video.",
+      "related": [
+        {
+          "id": "tool:blaizzy/mlx-video",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "tool:drawthings.ai",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "model:lightricks/ltx-2",
+          "rel": "alternative_to"
+        }
+      ],
+      "modes": [
+        "t2v",
+        "i2v"
+      ],
+      "apple_silicon": "documented",
+      "licence_class": "permissive",
+      "claims": [
+        {
+          "text": "The models are under Apache 2.0 and Wan claims no rights over generated content.",
+          "quote": "The models in this repository are licensed under the Apache 2.0 License. We claim no rights over the your generated contents",
+          "locator": "Wan2.2-TI2V-5B model card, section License Agreement",
+          "url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "mlx-video, which states it is optimized for Apple Silicon with MLX, runs Wan2.2 T2V-14B, TI2V-5B and I2V-14B.",
+          "quote": "T2V-14B, TI2V-5B, and I2V-14B models (dual-model pipeline)",
+          "locator": "mlx-video README.md, section Supported Models",
+          "url": "https://github.com/Blaizzy/mlx-video/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "mlx-video states it is built for Apple Silicon with MLX.",
+          "quote": "Optimized for Apple Silicon using MLX",
+          "locator": "mlx-video README.md, section Features > General",
+          "url": "https://github.com/Blaizzy/mlx-video/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "Wan2.2-TI2V-5B model card and mlx-video README against the claims; LICENSE.txt read (Apache 2.0 text)",
+        "source_sha256": "15891244bc1534af1b818aaf977d28ea360be9b6bc8a4f1541ff2c1c4693c7eb",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "local-models",
+      "status": "current",
+      "url_status": "live",
+      "access": "weights",
+      "id": "model:vimoo-ai/vimoo-1.0",
+      "title": "Vimoo 1.0",
+      "aliases": [
+        "Vimoo-1.0",
+        "Vimoo-1.0-Lite",
+        "Vimoo-1.0-MLX",
+        "vimoo-mlx"
+      ],
+      "url": "https://huggingface.co/Vimoo-AI/Vimoo-1.0",
+      "summary": "An open video model family released in October 2026: an 11.7B model per task (text-to-video, image-to-video) and a 9.5B Lite model that does both. The vendor ships its own MLX build of Lite.",
+      "why_it_matters": "It is the one open video model whose own vendor publishes an Apple Silicon package with a CLI, under Apache 2.0.",
+      "concepts": [
+        "concept:local-video-models",
+        "concept:generated-footage"
+      ],
+      "level": "advanced",
+      "maturity": "experimental",
+      "fit": "medium",
+      "fit_notes": "Only the Lite distilled model has an MLX build; the full 11.7B models run through Diffusers or ComfyUI. The agent calls vimoo-mlx with --prompt and optional --image and gets an MP4 plus a JSON of settings and timings. No memory figure is stated (the README says memory is managed automatically). Prompts are validated in English only. Released 2026-10, so expect changes.",
+      "related": [
+        {
+          "id": "tool:comfy-org/comfyui",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "model:wan-ai/wan2.2",
+          "rel": "alternative_to"
+        }
+      ],
+      "modes": [
+        "t2v",
+        "i2v"
+      ],
+      "apple_silicon": "documented",
+      "licence_class": "permissive",
+      "claims": [
+        {
+          "text": "The MLX build covers only the Lite text-and-image-to-video distilled model.",
+          "quote": "TI2V Distilled for MLX on Apple Silicon",
+          "locator": "Vimoo-1.0 model card, model table, row Vimoo 1.0 - Lite",
+          "url": "https://huggingface.co/Vimoo-AI/Vimoo-1.0/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The MLX CLI needs macOS 14 or newer on Apple Silicon and native arm64 Python 3.11 or newer.",
+          "quote": "Use macOS 14 or newer on Apple Silicon, native arm64 Python 3.11 or newer,",
+          "locator": "Vimoo-1.0-MLX README.md, section Quick Start > Installation",
+          "url": "https://github.com/Vimoo-AI/Vimoo-1.0-MLX/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The weights and code allow commercial use, modification and redistribution under the licence.",
+          "quote": "Commercial use, modification, and redistribution are permitted under the terms of the license.",
+          "locator": "Vimoo-1.0 model card, section License",
+          "url": "https://huggingface.co/Vimoo-AI/Vimoo-1.0/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "Vimoo-1.0 model card and Vimoo-1.0-MLX README against the claims",
+        "source_sha256": "39393351efd118f5349f76165c3ed6e395c7933ea175e91fa0684f1059eb2482",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "local-models",
+      "status": "current",
+      "url_status": "live",
+      "access": "weights",
+      "id": "model:tongyi-mai/z-image",
+      "title": "Z-Image",
+      "aliases": [
+        "Z-Image-Turbo",
+        "Z-Image Turbo",
+        "Z-Image Base"
+      ],
+      "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo",
+      "summary": "A 6B text-to-image model from Alibaba's Tongyi lab. The Turbo version is distilled to about 8 or 9 steps and renders English and Chinese text.",
+      "why_it_matters": "It is the small, permissive image model with published memory numbers on a 64 GB Apple Silicon Mac, which makes it the default for local stills and keyframes.",
+      "concepts": [
+        "concept:image-models",
+        "concept:still-images"
+      ],
+      "level": "intro",
+      "maturity": "active",
+      "fit": "high",
+      "fit_notes": "Run it with mflux-generate-z-image-turbo -q 8. The full bf16 download is about 31 GB per mflux; the 7.5 GB peak below is for an 8-bit saved copy. The vendor card lists only NVIDIA figures. The Apache-2.0 statement is the card's metadata tag; the repo has no LICENSE file, which was checked in the file list.",
+      "related": [
+        {
+          "id": "tool:mflux-community/mflux",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "model:black-forest-labs/flux-3-image-klein",
+          "rel": "alternative_to"
+        }
+      ],
+      "modes": [
+        "t2i"
+      ],
+      "apple_silicon": "documented",
+      "licence_class": "permissive",
+      "claims": [
+        {
+          "text": "mflux measured Z-Image-Turbo on an Apple Silicon Mac with 64 GB, 8-bit, 1024x1024, 9 steps.",
+          "quote": "Test setup: Apple Silicon Mac, 64 GB, MLX 0.32.0, Z-Image-Turbo `-q 8` saved with `mflux-save`, 1024×1024, 9 steps.",
+          "locator": "mflux src/mflux/models/z_image/README.md, section on --small-text-encoder",
+          "url": "https://github.com/mflux-community/mflux/blob/main/src/mflux/models/z_image/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "In that setup one image peaked at 7.5 GB of memory.",
+          "quote": "| Peak, one image | 7.5 GB | 7.5 GB |",
+          "locator": "mflux src/mflux/models/z_image/README.md, table after the test setup",
+          "url": "https://github.com/mflux-community/mflux/blob/main/src/mflux/models/z_image/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The model card is tagged Apache 2.0.",
+          "quote": "license: apache-2.0",
+          "locator": "Z-Image-Turbo model card, metadata header",
+          "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "Z-Image-Turbo model card and mflux Z-Image README against the claims",
+        "source_sha256": "8657a6beed1109ffb4a481599f48089a27e3c1d4726dfabe5d098c68e31fd7b0",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "local-models",
+      "status": "current",
+      "url_status": "live",
+      "access": "weights",
+      "id": "model:black-forest-labs/flux-3-image-klein",
+      "title": "FLUX 3 Image Klein",
+      "aliases": [
+        "FLUX.3 [klein]",
+        "flux-3-image-klein",
+        "FLUX 3 Klein",
+        "flux3"
+      ],
+      "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein",
+      "summary": "Black Forest Labs' 5.6B image model from October 2026 for text-to-image and editing with up to 10 reference images, bounding-box layouts and text rendering.",
+      "why_it_matters": "It does generation and multi-reference editing in one model with measured memory on a 64 GB Mac, but its licence caps paid work by the user's revenue.",
+      "concepts": [
+        "concept:image-models",
+        "concept:still-images",
+        "concept:licences-and-territory",
+        "concept:consistency"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "The weights are gated: accept the licence on Hugging Face and run hf auth login before mflux can download them. We could not open the FLUX Kommunity License itself (login required); the revenue cap below is mflux's summary, so read the licence before client work. The code repo is Apache 2.0, which does not cover the weights.",
+      "related": [
+        {
+          "id": "tool:mflux-community/mflux",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "tool:drawthings.ai",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "model:tongyi-mai/z-image",
+          "rel": "alternative_to"
+        }
+      ],
+      "modes": [
+        "t2i",
+        "i2i",
+        "edit"
+      ],
+      "apple_silicon": "documented",
+      "licence_class": "commercial-threshold",
+      "claims": [
+        {
+          "text": "mflux's MLX quantization table was measured on an M4 Pro with 64 GB, 1024x1024, 16 steps.",
+          "quote": "Measured on an M4 Pro (64 GB), distilled model, 1024×1024, 16 steps, seed fixed.",
+          "locator": "mflux src/mflux/models/flux3/README.md, section Quantization",
+          "url": "https://github.com/mflux-community/mflux/blob/main/src/mflux/models/flux3/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "At 8-bit the model peaked at 22.8 GB and took 7.0 s per step, against 30.7 GB in bf16.",
+          "quote": "| `-q 8` | 9.2 GB | 22.8 GB | 7.0 s | 44.5 dB |",
+          "locator": "mflux src/mflux/models/flux3/README.md, section Quantization, table",
+          "url": "https://github.com/mflux-community/mflux/blob/main/src/mflux/models/flux3/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "According to mflux, the licence allows non-commercial work, and paid output only for users under US$5M gross annual revenue including affiliates.",
+          "quote": "non-commercial use, plus commercial output generation by Qualifying Users (less than US$5M gross annualized revenue, including affiliates), subject to the license terms.",
+          "locator": "mflux src/mflux/models/flux3/README.md, licence note",
+          "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein/blob/main/LICENSE.md",
+          "retrieved": "2026-11-12",
+          "via": "https://github.com/mflux-community/mflux/blob/main/src/mflux/models/flux3/README.md"
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "mflux FLUX 3 README and the BFL flux-3-image-klein GitHub README; the licence file itself is gated and was not opened",
+        "source_sha256": "e5751ee95117905b55146a1d3a7bbfb826511633c1dd29317efe958ac95183a3",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "local-models",
+      "status": "current",
+      "url_status": "live",
+      "access": "weights",
+      "id": "model:qwen/qwen-image",
+      "title": "Qwen-Image",
+      "aliases": [
+        "Qwen-Image 2.1",
+        "Qwen Image 2.1",
+        "Qwen-Image-2.1"
+      ],
+      "url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
+      "summary": "Alibaba Qwen's image generation and editing family. Version 2.1 (September 2026) is a 7.1B model with an 8B Qwen3-VL text encoder and transparent (RGBA) output.",
+      "why_it_matters": "It runs on a 64 GB Mac with published timings, but version 2.1 is licensed for research and evaluation only.",
+      "concepts": [
+        "concept:image-models",
+        "concept:still-images",
+        "concept:licences-and-territory"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "low",
+      "fit_notes": "Keep 2.1 output out of client or paid work unless Qwen grants a separate licence. For tests on a Mac, mflux-generate-qwen-2.1 with -q 8 lowers the 46 GB peak; mflux reports 27 GB peak at -q 8 on an M5 Max. The older 20B Qwen Image in mflux may have a different licence; not checked here.",
+      "related": [
+        {
+          "id": "tool:mflux-community/mflux",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "model:tongyi-mai/z-image",
+          "rel": "alternative_to"
+        }
+      ],
+      "modes": [
+        "t2i",
+        "i2i",
+        "edit"
+      ],
+      "apple_silicon": "documented",
+      "licence_class": "non-commercial",
+      "claims": [
+        {
+          "text": "The licence defines non-commercial as research or evaluation only.",
+          "quote": "\"Non-Commercial\" shall mean for research or evaluation purposes only.",
+          "locator": "Qwen-Image-2.1 LICENSE, section 1, definition i",
+          "url": "https://huggingface.co/Qwen/Qwen-Image-2.1/blob/main/LICENSE",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "On Apple Silicon mflux's bf16 path is the fastest and most accurate, measured on an M5 Max at about 1.5 s per step and 78 s for 40 steps at 1024x1024.",
+          "quote": "On Apple Silicon the bf16 default is both the fastest and the most accurate path (measured on M5 Max: ~1.5 s/step at 1024², ~78 s for a full 40-step generation",
+          "locator": "mflux src/mflux/models/qwen21/README.md, base generation section",
+          "url": "https://github.com/mflux-community/mflux/blob/main/src/mflux/models/qwen21/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Peak memory is about 46 GB because the 17.5 GB text encoder stays resident, so mflux names 64 GB as the comfortable default.",
+          "quote": "Peak memory is ~46 GB (the Qwen3-VL text encoder, ~17.5 GB bf16, is never quantized and stays resident), so a 64 GB machine is the comfortable default; use `-q 8` when memory is tighter.",
+          "locator": "mflux src/mflux/models/qwen21/README.md, base generation section",
+          "url": "https://github.com/mflux-community/mflux/blob/main/src/mflux/models/qwen21/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "Qwen-Image-2.1 LICENSE and mflux Qwen Image 2.1 README against the claims",
+        "source_sha256": "30daee6b2099cad6ee217723d786e4873db97afaf9ddea27fcca054b92a67bb1",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "local-models",
+      "status": "current",
+      "url_status": "live",
+      "access": "weights",
+      "id": "model:hexgrad/kokoro",
+      "title": "Kokoro-82M",
+      "aliases": [
+        "Kokoro",
+        "kokoro TTS",
+        "KPipeline"
+      ],
+      "url": "https://huggingface.co/hexgrad/Kokoro-82M",
+      "summary": "An 82M-parameter text-to-speech model with an inference library, pip install kokoro.",
+      "why_it_matters": "It gives an agent a free, local narration voice with commercial use allowed, small enough to run beside a video model.",
+      "concepts": [
+        "concept:audio-and-captions"
+      ],
+      "level": "intro",
+      "maturity": "active",
+      "fit": "high",
+      "fit_notes": "The Mac route is PyTorch MPS with a CPU fallback for unsupported ops, set by an environment variable. It needs espeak-ng for some languages and out-of-vocabulary English. This record does not cover voice cloning. No memory or speed figure for Macs is published.",
+      "related": [],
+      "modes": [
+        "tts"
+      ],
+      "apple_silicon": "documented",
+      "licence_class": "permissive",
+      "claims": [
+        {
+          "text": "On M1 to M4 Macs, GPU acceleration is turned on with PYTORCH_ENABLE_MPS_FALLBACK=1.",
+          "quote": "On Mac M1/M2/M3/M4 devices, you can explicitly specify the environment variable `PYTORCH_ENABLE_MPS_FALLBACK=1` to enable GPU acceleration.",
+          "locator": "kokoro README.md, section MacOS Apple Silicon GPU Acceleration",
+          "url": "https://github.com/hexgrad/kokoro/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The weights are Apache-licensed and used in commercial APIs.",
+          "quote": "This is an Apache-licensed model, and Kokoro has been deployed in numerous projects and commercial APIs.",
+          "locator": "Kokoro-82M model card, opening note",
+          "url": "https://huggingface.co/hexgrad/Kokoro-82M/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "kokoro GitHub README and Kokoro-82M model card against both claims",
+        "source_sha256": "f29dc56bb31eb63c65885b4bbd9c2ddbb4f0e23f1ac97b87c4a5eb70ee3327bd",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "local-models",
+      "status": "current",
+      "url_status": "live",
+      "access": "weights",
+      "id": "model:ace-step/ace-step",
+      "title": "ACE-Step 1.5",
+      "aliases": [
+        "ACE-Step",
+        "ACE-Step-1.5",
+        "acestep-v15",
+        "ACE-Step 1.5 XL"
+      ],
+      "url": "https://github.com/ace-step/ACE-Step-1.5",
+      "summary": "An open music generation model that writes songs with or without lyrics. Version 1.5 has a 2B model and, since 2026-04, a 4B XL model.",
+      "why_it_matters": "It gives a local soundtrack with a stated permission for commercial use of the output, and its macOS scripts use MLX.",
+      "concepts": [
+        "concept:audio-and-captions"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "An agent can start the REST API server and post requests to localhost:8001. The VRAM table in the README is for GPUs; no memory figure for Macs is given. The start scripts check for updates at launch and can install uv; read them before running. The disclaimer asks users to check output for similarity to protected styles.",
+      "related": [],
+      "modes": [
+        "music"
+      ],
+      "apple_silicon": "documented",
+      "licence_class": "permissive",
+      "claims": [
+        {
+          "text": "The macOS scripts select the MLX backend on Apple Silicon and fall back to PyTorch elsewhere.",
+          "quote": "The macOS scripts automatically set `ACESTEP_LM_BACKEND=mlx` and `--backend mlx` for native Apple Silicon acceleration, and fall back to PyTorch backend on non-arm64 machines.",
+          "locator": "docs/en/INSTALL.md, section macOS (Apple Silicon / MLX)",
+          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/docs/en/INSTALL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A REST API server listens on port 8001 next to the Gradio UI on 7860.",
+          "quote": "Open http://localhost:7860 (Gradio) or http://localhost:8001 (API).",
+          "locator": "README.md, section Quick Start",
+          "url": "https://github.com/ace-step/ACE-Step-1.5/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The model card states that generated music can be used commercially.",
+          "quote": "Trained on legally compliant datasets. Generated music can be used for commercial purposes.",
+          "locator": "acestep-v15-xl-turbo model card, feature list",
+          "url": "https://huggingface.co/ACE-Step/acestep-v15-xl-turbo/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "ACE-Step-1.5 README, docs/en/INSTALL.md and the xl-turbo model card against the claims",
+        "source_sha256": "7c4225f3d011098525004ba0cf0222941805d538c6c0d116ce3d3b1032a5e74c",
+        "next_due": "2026-12-12"
+      }
+    },
+    {
+      "kind": "model",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "local-models",
+      "status": "current",
+      "url_status": "live",
+      "access": "weights",
+      "id": "model:bytedance-seed/seedvr",
+      "title": "SeedVR2",
+      "aliases": [
+        "SeedVR",
+        "SeedVR2-3B",
+        "SeedVR2-7B",
+        "mflux-upscale-seedvr2"
+      ],
+      "url": "https://github.com/ByteDance-Seed/SeedVR",
+      "summary": "ByteDance's diffusion models for video and image restoration and upscaling, in 3B and 7B sizes, often in one step.",
+      "why_it_matters": "Upscaling is a cheap last step to make a local clip or still look finished, and mflux ships an MLX upscale command for it.",
+      "concepts": [
+        "concept:delivery",
+        "concept:still-images"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "The mflux path upscales images, not video files. For a clip, extract frames with ffmpeg, upscale the folder, and re-encode; frame-to-frame consistency of that route was not checked. --low-ram does not work in folder mode. Large target resolutions need a lot of memory; no figure is published.",
+      "related": [
+        {
+          "id": "tool:mflux-community/mflux",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "tool:drawthings.ai",
+          "rel": "integrates_with"
+        }
+      ],
+      "modes": [
+        "upscale"
+      ],
+      "apple_silicon": "documented",
+      "licence_class": "permissive",
+      "claims": [
+        {
+          "text": "mflux's SeedVR2 command upscales every image in a folder when given a directory.",
+          "quote": "Pass a directory to `--image-path` to upscale every image inside.",
+          "locator": "mflux src/mflux/models/seedvr2/README.md, section Upscale a Directory",
+          "url": "https://github.com/mflux-community/mflux/blob/main/src/mflux/models/seedvr2/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Under memory pressure mflux suggests --low-ram or an MLX cache limit.",
+          "quote": "If you run into memory pressure, try `--low-ram` or set an MLX cache limit with `--mlx-cache-limit-gb 16`",
+          "locator": "mflux src/mflux/models/seedvr2/README.md, section Upscale, note",
+          "url": "https://github.com/mflux-community/mflux/blob/main/src/mflux/models/seedvr2/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "SeedVR and SeedVR2 are under Apache 2.0.",
+          "quote": "SeedVR and SeedVR2 are licensed under the Apache 2.0.",
+          "locator": "SeedVR readme.md, section License",
+          "url": "https://github.com/ByteDance-Seed/SeedVR/blob/main/readme.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "mflux SeedVR2 README, SeedVR readme and LICENSE against the claims",
+        "source_sha256": "6511cec9aa380cb988b6a72733991286ddf2fe36bc189395a256facaed137d87",
+        "next_due": "2026-12-12"
+      }
+    }
+  ]
+}

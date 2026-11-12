@@ -1,0 +1,496 @@
+{
+  "schema_version": 1,
+  "lane": "local-models",
+  "records": [
+    {
+      "kind": "tool",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "local-models",
+      "status": "current",
+      "url_status": "live",
+      "id": "tool:mflux-community/mflux",
+      "title": "MFLUX",
+      "aliases": [
+        "mflux",
+        "filipstrand/mflux",
+        "mflux-generate"
+      ],
+      "url": "https://github.com/mflux-community/mflux",
+      "summary": "An MLX re-implementation of open image models for Macs. Each model gets its own CLI command (for example mflux-generate-z-image-turbo) and a Python class.",
+      "why_it_matters": "It is the shortest documented path from a coding agent to a local image or upscale on Apple Silicon: one shell command per image, no server.",
+      "concepts": [
+        "concept:still-images",
+        "concept:image-models",
+        "concept:scheduling-and-runtimes"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "high",
+      "fit_notes": "Install with uv tool install --upgrade mflux; an agent then calls the mflux-generate-* commands. First run downloads weights from Hugging Face, often 20-30 GB per model, and gated models (FLUX 3 Image Klein) need hf auth login first. The per-model READMEs carry the memory and timing tables; the top README has none. The GitHub repo moved from filipstrand/mflux to mflux-community/mflux. Nothing was run here.",
+      "related": [
+        {
+          "id": "tool:drawthings.ai",
+          "rel": "alternative_to",
+          "note": "GUI app for the same image models"
+        },
+        {
+          "id": "model:tongyi-mai/z-image",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "model:black-forest-labs/flux-3-image-klein",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "model:qwen/qwen-image",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "model:bytedance-seed/seedvr",
+          "rel": "integrates_with"
+        }
+      ],
+      "tool_type": "library",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "gen-model-craft",
+        "asset"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "MFLUX runs image models locally on a Mac in MLX.",
+          "quote": "Run the latest state-of-the-art generative image models locally on your Mac in native MLX!",
+          "locator": "README.md, section About",
+          "url": "https://github.com/mflux-community/mflux/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Each model is written from scratch in MLX, with only tokenizers taken from Hugging Face Transformers.",
+          "quote": "All models are implemented from scratch in MLX, using only tokenizers from the",
+          "locator": "README.md, section Philosophy",
+          "url": "https://github.com/mflux-community/mflux/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The first run of a command downloads the model, which can take a long time.",
+          "quote": "The first time you run this, the model will automatically download which can take some time.",
+          "locator": "README.md, section Installation",
+          "url": "https://github.com/mflux-community/mflux/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "mflux README (top level) against the three claims",
+        "source_sha256": "d562e3cd4a12e5a6ae322da6354eed6633bc2621d05ca1c91c02da57461fbf7d",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "local-models",
+      "status": "current",
+      "url_status": "live",
+      "id": "tool:blaizzy/mlx-video",
+      "title": "mlx-video",
+      "aliases": [
+        "MLX-Video",
+        "mlx_video"
+      ],
+      "url": "https://github.com/Blaizzy/mlx-video",
+      "summary": "A Python package that runs LTX-2, LTX-2.3, Wan2.1 and Wan2.2 video models in MLX on a Mac, called as python -m mlx_video.<model>.generate.",
+      "why_it_matters": "It is the documented MLX path for the two main open video families, with a command an agent can call and an MP4 as output.",
+      "concepts": [
+        "concept:local-video-models",
+        "concept:generated-footage",
+        "concept:scheduling-and-runtimes"
+      ],
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Installs from git, not from a package index, so pin a commit. Wan weights must be converted first and conversion needs PyTorch; LTX weights have pre-converted copies on a contributor's Hugging Face account, not Lightricks'. The README states no memory figures and no timings, so check a short, low-resolution clip before a long one. LTX-2.5 is not in its model list as of 2026-11-12.",
+      "related": [
+        {
+          "id": "model:lightricks/ltx-2",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "model:wan-ai/wan2.2",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "tool:drawthings.ai",
+          "rel": "alternative_to"
+        }
+      ],
+      "tool_type": "library",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "gen-model-craft",
+        "asset"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "It describes itself as a package for running and fine-tuning image, video and audio generation models on a Mac with MLX.",
+          "quote": "MLX-Video is the best package for inference and finetuning of Image-Video-Audio generation models on your Mac using MLX.",
+          "locator": "README.md, opening paragraph",
+          "url": "https://github.com/Blaizzy/mlx-video/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It requires macOS on Apple Silicon.",
+          "quote": "macOS with Apple Silicon",
+          "locator": "README.md, section Requirements",
+          "url": "https://github.com/Blaizzy/mlx-video/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Converting weights needs PyTorch installed as well.",
+          "quote": "For weight conversion: PyTorch (`pip install torch`)",
+          "locator": "README.md, section Requirements",
+          "url": "https://github.com/Blaizzy/mlx-video/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "mlx-video README against the three claims",
+        "source_sha256": "56215953175bdf3852aede2d08e7dcee0958e229e4a2c64bb1c8a789b443edf3",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "local-models",
+      "status": "current",
+      "url_status": "live",
+      "id": "tool:drawthings.ai",
+      "title": "Draw Things",
+      "aliases": [
+        "DrawThings",
+        "Draw Things app"
+      ],
+      "url": "https://drawthings.ai/downloads/",
+      "summary": "A Mac and iOS app that runs open image and video models on Apple hardware, with its own release log of supported models.",
+      "why_it_matters": "Its release log is the most up-to-date record of which open models run on a Mac at all, including LTX-2.3, MiniMax H3 and FLUX 3 Image Klein.",
+      "concepts": [
+        "concept:local-video-models",
+        "concept:image-models",
+        "concept:scheduling-and-runtimes"
+      ],
+      "level": "intro",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Best for a person to try a model by hand. For an agent the only interfaces named on this page are a gRPC server and in-app scripts; a stable CLI or HTTP API was not found here, so plan on mflux or mlx-video for scripted runs. The app has paid tiers and an optional cloud offload; their prices were not checked.",
+      "related": [
+        {
+          "id": "model:minimaxai/minimax-h3",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "model:lightricks/ltx-2",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "model:black-forest-labs/flux-3-image-klein",
+          "rel": "integrates_with"
+        }
+      ],
+      "tool_type": "app",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "gen-model-craft",
+        "asset"
+      ],
+      "cost": "mixed",
+      "claims": [
+        {
+          "text": "The 2026-10-22 release added FLUX 3 Image Klein.",
+          "quote": "Add support for FLUX.3 [klein] 5.6B series models.",
+          "locator": "Downloads page, release 26.1020.0, October 22, 2026",
+          "url": "https://drawthings.ai/downloads/",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The 2026-09-11 release added MiniMax H3, with LoRAs and TeaCache.",
+          "quote": "Add support for MiniMax H3 series models, including LoRAs and TeaCache.",
+          "locator": "Downloads page, release 26.0910.1, September 11, 2026",
+          "url": "https://drawthings.ai/downloads/",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The app can run a gRPC server so another device can use its compute.",
+          "quote": "Add \"Server Offload\" feature which allows you to enable gRPC server on one instance of the app on a different device and connect to that device to use its compute.",
+          "locator": "Downloads page, older release entry",
+          "url": "https://drawthings.ai/downloads/",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "Draw Things downloads page (release log, visible text) against the three claims",
+        "source_sha256": "8d00e9a16867b5d8ffd53b46347b44324b5a58d531d4238aa9fbe17ed8b3b522",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "local-models",
+      "status": "current",
+      "url_status": "live",
+      "id": "tool:comfy-org/comfyui",
+      "title": "ComfyUI",
+      "aliases": [
+        "comfyanonymous/ComfyUI",
+        "comfy-cli",
+        "comfy run"
+      ],
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "summary": "A node-graph runtime for image and video models, with a local server. comfy-cli installs it and submits workflow JSON to it from the terminal.",
+      "why_it_matters": "Many model vendors ship ComfyUI workflows first, and comfy-cli gives an agent a command to run them locally on a Mac.",
+      "concepts": [
+        "concept:scheduling-and-runtimes",
+        "concept:local-video-models",
+        "concept:image-models",
+        "concept:agentic-pipelines"
+      ],
+      "level": "intermediate",
+      "maturity": "established",
+      "fit": "medium",
+      "fit_notes": "On a Mac it runs on PyTorch MPS, and the README asks for a nightly PyTorch build. comfy-cli mixes local and paid paths: comfy setup also offers Comfy Cloud sign-in, comfy generate calls hosted partner models for credits, and comfy run --where cloud spends credits. Keep runs on --where local. The bundled default text-to-image graph needs an SD1.5 checkpoint that comfy-cli does not download. Which nodes work on MPS was not checked.",
+      "related": [
+        {
+          "id": "tool:mflux-community/mflux",
+          "rel": "alternative_to"
+        },
+        {
+          "id": "model:vimoo-ai/vimoo-1.0",
+          "rel": "integrates_with"
+        }
+      ],
+      "tool_type": "framework",
+      "agents": [
+        "claude-code",
+        "cursor"
+      ],
+      "levers": [
+        "gen-model-craft",
+        "orchestration",
+        "asset"
+      ],
+      "cost": "mixed",
+      "claims": [
+        {
+          "text": "ComfyUI documents an install on Apple Silicon Macs (M1 to M4).",
+          "quote": "You can install ComfyUI in Apple Mac silicon (M1, M2, M3 or M4) with any recent macOS version.",
+          "locator": "ComfyUI README.md, section Others > Apple Mac silicon",
+          "url": "https://github.com/Comfy-Org/ComfyUI/blob/master/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "comfy-cli runs workflows against a local ComfyUI server and converts UI-format JSON.",
+          "quote": "Run workflows against a local ComfyUI server, including auto-conversion of UI-format JSON",
+          "locator": "comfy-cli README.md, feature list",
+          "url": "https://github.com/Comfy-Org/comfy-cli/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Every comfy-cli command can emit structured JSON output for an agent.",
+          "quote": "Agent-friendly: every command emits structured `--json` envelopes",
+          "locator": "comfy-cli README.md, feature list",
+          "url": "https://github.com/Comfy-Org/comfy-cli/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "ComfyUI README (Apple Mac silicon section) and comfy-cli README against the claims",
+        "source_sha256": "6af0d57adb5acfde5884700af74dd8e7ebceb96fefb0ae44be6ec40f485c2963",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "local-models",
+      "status": "current",
+      "url_status": "live",
+      "id": "tool:ggml-org/whisper.cpp",
+      "title": "whisper.cpp",
+      "aliases": [
+        "whisper-cli",
+        "ggerganov/whisper.cpp"
+      ],
+      "url": "https://github.com/ggml-org/whisper.cpp",
+      "summary": "A C/C++ port of OpenAI's Whisper speech recognition, built as the whisper-cli binary, with Metal and Core ML support on Apple Silicon.",
+      "why_it_matters": "It gives an agent a local transcript with timestamps for captions, on the Mac GPU, from one command.",
+      "concepts": [
+        "concept:audio-and-captions",
+        "concept:scheduling-and-runtimes"
+      ],
+      "level": "intermediate",
+      "maturity": "established",
+      "fit": "high",
+      "fit_notes": "It has to be built with cmake; the Core ML encoder needs Python, coremltools and Xcode to generate. whisper-cli reads 16-bit WAV only, so convert with ffmpeg first. Word-level timestamps are marked experimental in the README; for word-timed captions compare with the alignment in whisperX, which only runs on CPU on a Mac.",
+      "related": [
+        {
+          "id": "tool:ml-explore/mlx-examples/whisper",
+          "rel": "alternative_to"
+        }
+      ],
+      "tool_type": "library",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "captions",
+        "audio"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "On Apple Silicon the whole inference runs on the GPU through Metal.",
+          "quote": "On Apple Silicon, the inference runs fully on the GPU via Metal:",
+          "locator": "README.md, section Quick start demo",
+          "url": "https://github.com/ggml-org/whisper.cpp/blob/master/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The large model needs about 3.9 GB of memory and 2.9 GiB of disk.",
+          "quote": "| large  | 2.9 GiB | ~3.9 GB |",
+          "locator": "README.md, section Memory usage, table",
+          "url": "https://github.com/ggml-org/whisper.cpp/blob/master/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "On Apple Silicon the encoder can also run on the Neural Engine through Core ML.",
+          "quote": "On Apple Silicon devices, the Encoder inference can be executed on the Apple Neural Engine (ANE) via Core ML.",
+          "locator": "README.md, section Core ML support",
+          "url": "https://github.com/ggml-org/whisper.cpp/blob/master/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "whisper.cpp README against the three claims",
+        "source_sha256": "f8ec51916700b997caa70307d95d1ac15401d40dc6e88822d3b7f6896ecfd379",
+        "next_due": "2027-02-10"
+      }
+    },
+    {
+      "kind": "tool",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "local-models",
+      "status": "current",
+      "url_status": "live",
+      "id": "tool:ml-explore/mlx-examples/whisper",
+      "title": "mlx-whisper",
+      "aliases": [
+        "mlx_whisper",
+        "MLX Whisper"
+      ],
+      "url": "https://github.com/ml-explore/mlx-examples/tree/main/whisper",
+      "summary": "Whisper speech recognition in MLX from Apple's MLX examples, installed as the mlx-whisper package with a CLI and a Python function.",
+      "why_it_matters": "It is the pip-installable way for an agent on a Mac to get a transcript file without compiling anything.",
+      "concepts": [
+        "concept:audio-and-captions",
+        "concept:scheduling-and-runtimes"
+      ],
+      "level": "intro",
+      "maturity": "active",
+      "fit": "high",
+      "fit_notes": "Needs ffmpeg. The default model is whisper-tiny, which is too weak for captions; pass --model with a larger mlx-community checkpoint. Memory and speed figures are not in the README. Output formats beyond txt were not checked.",
+      "related": [
+        {
+          "id": "tool:ggml-org/whisper.cpp",
+          "rel": "alternative_to"
+        }
+      ],
+      "tool_type": "library",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "captions",
+        "audio"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "It runs Whisper speech recognition in MLX.",
+          "quote": "Speech recognition with Whisper in MLX.",
+          "locator": "whisper/README.md, opening line",
+          "url": "https://github.com/ml-explore/mlx-examples/blob/main/whisper/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The CLI picks the output format with -f and the model with --model.",
+          "quote": "Use `-f` to specify the output format and `--model` to specify the model.",
+          "locator": "whisper/README.md, section Run > CLI",
+          "url": "https://github.com/ml-explore/mlx-examples/blob/main/whisper/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Without --model it uses the tiny model.",
+          "quote": "The default model is \"mlx-community/whisper-tiny\".",
+          "locator": "whisper/README.md, section Run > API",
+          "url": "https://github.com/ml-explore/mlx-examples/blob/main/whisper/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "mlx-examples whisper README against the three claims",
+        "source_sha256": "f73e9067d444d7aa247199ea0ae13e5243426bf82469ba08036685e8a966fcdd",
+        "next_due": "2027-02-10"
+      }
+    }
+  ]
+}
