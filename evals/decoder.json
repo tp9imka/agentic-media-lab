@@ -233,7 +233,10 @@
     "source:cloud.wikis.utexas.edu/wiki/spaces/rtf318/pages/80022510",
     "tool:heygen-com/hyperframes",
     "tool:remotion-dev/skills",
-    "tool:ffmpeg/ffmpeg"
+    "tool:ffmpeg/ffmpeg",
+    "source:arxiv.org/abs/2601.17737",
+    "source:arxiv.org/abs/2503.07314",
+    "tool:hkuds/vimax"
    ],
    "examples": [],
    "risk": "No shot-list schema with tool support was found. The papers were read at abstract or HTML level.",
@@ -338,18 +341,22 @@
     "same character",
     "shots"
    ],
-   "approach": "Fix the character in writing and in reference images before generating, constrain each shot prompt to that bible, and check each shot against it. Research shows consistency drops as the gap between appearances grows, and explicit per-entity memory helps.",
+   "approach": "Fix the character in writing and in reference images before generating, constrain each shot prompt to that bible, and check each shot against it with a fix per failure type. One published training-free method reports about 1.2 generations per final shot with 83.1% passing first time. Consistency drops as the gap between appearances grows.",
    "pages": [],
    "record_ids": [
     "tool:calesthio/generative-media-skills",
     "source:arxiv.org/abs/2605.15199",
     "source:arxiv.org/abs/2606.07649",
     "source:arxiv.org/abs/2604.24842",
-    "model:bytedance/seedance"
+    "model:bytedance/seedance",
+    "source:arxiv.org/abs/2606.20799",
+    "source:arxiv.org/abs/2601.17737",
+    "tool:hkuds/vimax",
+    "tool:seme-org/open-director"
    ],
    "examples": [],
-   "risk": "No skill found makes the agent measure identity drift. Not run by us.",
-   "status": "thin"
+   "risk": "Numbers are the authors' own. No skill found makes the agent measure identity drift, and nothing was run by us.",
+   "status": "covered"
   },
   {
    "id": "q13",
@@ -572,11 +579,16 @@
     "source:arxiv.org/abs/2606.07649",
     "source:arxiv.org/abs/2604.24842",
     "source:arxiv.org/abs/2605.15585",
-    "tool:netflix/vmaf"
+    "tool:netflix/vmaf",
+    "source:arxiv.org/abs/2606.20799",
+    "source:arxiv.org/abs/2505.24862",
+    "source:arxiv.org/abs/2503.21755",
+    "source:arxiv.org/abs/2605.03475",
+    "source:arxiv.org/abs/2605.19382"
    ],
    "examples": [],
-   "risk": "Papers read at abstract or HTML level. A research lane on pipelines and benchmarks is still open.",
-   "status": "thin"
+   "risk": "Four of the benchmark papers were read at abstract level only and are marked as skimmed.",
+   "status": "covered"
   }
  ]
 }
