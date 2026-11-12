@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "lane": "footage-editing",
+  "records": [
+    {
+      "id": "source:developer.apple.com/documentation/professional-video-applications/fcpxml-reference",
+      "kind": "source",
+      "title": "FCPXML Reference (Apple Developer)",
+      "url": "https://developer.apple.com/documentation/professional-video-applications/fcpxml-reference",
+      "summary": "Apple's reference for FCPXML, the XML format for sending media, timelines, markers and metadata into and out of Final Cut Pro.",
+      "why_it_matters": "Final Cut Pro has no scripting API an agent can call, so writing FCPXML for File > Import > XML is the documented path, and several tools here export it.",
+      "concepts": [
+        "concept:footage-editing",
+        "concept:delivery"
+      ],
+      "level": "advanced",
+      "fit": "medium",
+      "fit_notes": "An agent can write the file, but a person imports it in Final Cut Pro; no command-line import is documented on this page. Version matters: this page states the 1.9 requirement while MakeMyClip writes 1.10, so match the version to the reader's Final Cut build. Resolve and Premiere also read FCPXML through the tools that export it, not through this page. Saved text is from the page's JSON data, not the rendered HTML.",
+      "related": [
+        {
+          "id": "tool:makemyclip/editor",
+          "rel": "integrates_with"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "lane": "footage-editing",
+      "tags": [
+        "fcpxml",
+        "final-cut-pro"
+      ],
+      "claims": [
+        {
+          "text": "FCPXML describes media, metadata and timeline items exchanged with Final Cut Pro.",
+          "quote": "Use FCPXML to describe the media, metadata, and other items users send and receive between your app and Final Cut Pro.",
+          "locator": "Overview, first paragraph",
+          "url": "https://developer.apple.com/documentation/professional-video-applications/fcpxml-reference",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "FCPXML 1.9 needs Final Cut Pro 10.4.9 or later.",
+          "quote": "FCPXML 1.9 requires Final Cut Pro 10.4.9 or later.",
+          "locator": "Overview, note",
+          "url": "https://developer.apple.com/documentation/professional-video-applications/fcpxml-reference",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It does not carry everything in a native Final Cut library.",
+          "quote": "But, it’s not a substitute for a native Final Cut Pro project and event data organized in a library bundle.",
+          "locator": "Overview, note",
+          "url": "https://developer.apple.com/documentation/professional-video-applications/fcpxml-reference",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "the page's documentation JSON (overview and topic list) against the three claims; the DTD and Creating FCPXML Documents pages not opened",
+        "source_sha256": "8a54a617efcf6429bf628c8001d2d67084ed4128cf2522067e306b7b174c792c",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "source:pixabay.com/api/docs",
+      "kind": "source",
+      "title": "Pixabay API documentation",
+      "url": "https://pixabay.com/api/docs/",
+      "summary": "Pixabay's API documentation for searching images and videos under the Pixabay Content License, with its attribution, caching, rate-limit and hotlinking rules.",
+      "why_it_matters": "An agent pulling b-roll from Pixabay has to follow these rules, and one of them restricts automated querying.",
+      "concepts": [
+        "concept:licences-and-territory",
+        "concept:footage-editing"
+      ],
+      "level": "intro",
+      "fit": "medium",
+      "fit_notes": "Free with an API key, 100 requests per 60 seconds by default. The rule that the API is for real human requests and bans systematic mass downloads sits uneasily with an agent fetching b-roll on its own: keep queries few, cache for 24 hours, download the clips you use, and show the source. The Content License page itself returned a challenge page and was not read, so reuse terms for the clips are not quoted here.",
+      "related": [
+        {
+          "id": "tool:garylab/pexels-mcp-server",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "lane": "footage-editing",
+      "tags": [
+        "b-roll",
+        "stock"
+      ],
+      "claims": [
+        {
+          "text": "Pixabay asks API users to show where images and videos come from whenever search results are displayed.",
+          "quote": "If you make use of the API, show your users where the images and videos are from, whenever search results are displayed.",
+          "locator": "Pixabay API, introduction",
+          "url": "https://pixabay.com/api/docs/",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Requests must be cached for 24 hours, automated mass querying is discouraged and systematic mass downloads are not allowed.",
+          "quote": "To keep the Pixabay API fast for everyone, requests must be cached for 24 hours. Also, the API is made for real human requests; do not send lots of automated queries. Systematic mass downloads are not allowed.",
+          "locator": "section Rate Limit",
+          "url": "https://pixabay.com/api/docs/",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Permanent hotlinking of returned image URLs is not allowed.",
+          "quote": "However, permanent hotlinking of images (using Pixabay URLs in your app) is not allowed.",
+          "locator": "section Hotlinking",
+          "url": "https://pixabay.com/api/docs/",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "visible text of the API docs page against the three claims; Content License page not read (challenge page)",
+        "source_sha256": "75eeeb0a5ebc254a5dd84e939358b88155494a71ba2e2b9c196caaf2e046419d",
+        "next_due": "2026-12-12"
+      },
+      "url_status": "live",
+      "status": "current"
+    }
+  ]
+}

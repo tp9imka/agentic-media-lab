@@ -1,0 +1,1131 @@
+{
+  "schema_version": 1,
+  "lane": "footage-editing",
+  "records": [
+    {
+      "id": "tool:samuelgursky/davinci-resolve-mcp",
+      "kind": "tool",
+      "title": "DaVinci Resolve MCP Server",
+      "aliases": [
+        "davinci-resolve-mcp",
+        "Resolve MCP"
+      ],
+      "url": "https://github.com/samuelgursky/davinci-resolve-mcp",
+      "summary": "An MCP server that drives a running DaVinci Resolve through its scripting API: media pool, timeline edits, markers, grading, Fusion, Fairlight and render queue. A second Node server edits .drp, .drt and .drx files with Resolve closed.",
+      "why_it_matters": "The most complete agent path into a desktop editor found in this lane, and it reports when an edit was not verified instead of calling it fine.",
+      "concepts": [
+        "concept:footage-editing",
+        "concept:mcp-servers",
+        "concept:review-loop",
+        "concept:agent-portability"
+      ],
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Full external control needs Resolve Studio, the paid edition (price not checked here). The free edition works only through an in-app bridge script, which the README says Resolve 21.1 closed for Python; treat it as a 21.0.x path. The installer configures Claude Code, Codex CLI and Cursor among others. Output is a first-pass assembly by the README's own account, not a finished cut. The server contacts GitHub for update checks; ffmpeg and openai-whisper are optional extras for silence detection and word-level work.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "footage-editing",
+      "tool_type": "mcp-server",
+      "agents": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "any-mcp"
+      ],
+      "levers": [
+        "review-loop",
+        "audio",
+        "captions",
+        "delivery"
+      ],
+      "cost": "mixed",
+      "claims": [
+        {
+          "text": "External scripting, which the MCP server needs, is limited to Resolve Studio; the free edition refuses an outside process.",
+          "quote": "Blackmagic gates *external* scripting to Studio: on the free edition `scriptapp(\"Resolve\")` refuses a foreign process, whatever the preference says.",
+          "locator": "README.md, section Free edition (in-app bridge)",
+          "url": "https://github.com/samuelgursky/davinci-resolve-mcp/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Every tool result carries a verification status, and 'unverified' means nothing was checked rather than a clean result.",
+          "quote": "`verification.status: \"unverified\"` means *no evidence was reported*, not \"checked and clean\".",
+          "locator": "README.md, section Operation envelope",
+          "url": "https://github.com/samuelgursky/davinci-resolve-mcp/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The installer and the server check GitHub releases for updates.",
+          "quote": "The installer and server check the latest GitHub release for MCP updates.",
+          "locator": "README.md, section Quick Start",
+          "url": "https://github.com/samuelgursky/davinci-resolve-mcp/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md (main) against the three claims; install docs and api-coverage page not opened",
+        "source_sha256": "7a84bb30ea6338d89845875cb9fe59a78da828c9edf5beba153e1746fd469efc",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:hetpatel-11/adobe_premiere_pro_mcp",
+      "kind": "tool",
+      "title": "MCP Bridge for Adobe Premiere Pro",
+      "aliases": [
+        "adobe-premiere-pro-mcp",
+        "premiere-pro-mcp",
+        "Premiere MCP"
+      ],
+      "url": "https://github.com/hetpatel-11/Adobe_Premiere_Pro_MCP",
+      "summary": "A local MCP server plus a CEP panel inside Premiere Pro that exposes timeline, effects, captions, markers, audio and export operations. Ships as a Codex plugin, a Claude Code plugin and an Agent Skill.",
+      "why_it_matters": "The path for a reader who already finishes in Premiere and wants the agent to assemble and razor inside the real project.",
+      "concepts": [
+        "concept:footage-editing",
+        "concept:mcp-servers",
+        "concept:plugins",
+        "concept:agent-portability"
+      ],
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Premiere Pro is a paid Adobe subscription, so this is not a no-cost path. The CEP install turns on Adobe's CEP debug setting. Anonymous telemetry is on by default: set PREMIERE_MCP_TELEMETRY=0 in the server entry. Its read-only check confirms the bridge, not the edit; the agent still has to export and look at the result.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "footage-editing",
+      "tool_type": "mcp-server",
+      "agents": [
+        "claude-code",
+        "codex",
+        "any-mcp"
+      ],
+      "levers": [
+        "captions",
+        "audio",
+        "delivery"
+      ],
+      "cost": "paid",
+      "tags": [
+        "telemetry"
+      ],
+      "claims": [
+        {
+          "text": "It exposes 283 Premiere tools through a search-then-invoke pattern to Codex, Claude Code and other MCP clients.",
+          "quote": "283 Premiere tools behind `search_tools` / `invoke_tool`, 13 context resources, and 10 guided prompts for Codex, Claude Code, Claude Desktop, and other MCP clients.",
+          "locator": "README.md, header",
+          "url": "https://github.com/hetpatel-11/Adobe_Premiere_Pro_MCP/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Its session check confirms the bridge and reads the open project and active sequence without changing anything.",
+          "quote": "It confirms that the CEP bridge responded and returns the Premiere build, open project, and active sequence without modifying the project.",
+          "locator": "README.md, section What You Get",
+          "url": "https://github.com/hetpatel-11/Adobe_Premiere_Pro_MCP/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Anonymous usage telemetry is on by default.",
+          "quote": "Anonymous usage telemetry is on by default so we can see how many people run the server and when a tool fails.",
+          "locator": "README.md, section Telemetry",
+          "url": "https://github.com/hetpatel-11/Adobe_Premiere_Pro_MCP/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md (main) against the three claims; QUICKSTART.md and the bundled skill not opened",
+        "source_sha256": "aaddd15fee9ce29d091e9aa3774d6c2594b28dc719b6a32537f57410bb1b2e90",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:sun-guannan/vectcutapi",
+      "kind": "tool",
+      "title": "VectCutAPI",
+      "aliases": [
+        "CapCutAPI",
+        "VectCut",
+        "CapCut MCP",
+        "Jianying"
+      ],
+      "url": "https://github.com/sun-guannan/VectCutAPI",
+      "summary": "A Python HTTP and MCP server that builds CapCut or Jianying draft folders: video, audio, text, subtitles from SRT, effects and keyframes. The draft is then opened in the CapCut app.",
+      "why_it_matters": "The only route found to hand an agent-built timeline to CapCut, which many short-form editors already use.",
+      "concepts": [
+        "concept:footage-editing",
+        "concept:mcp-servers",
+        "concept:agent-skills"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "low",
+      "fit_notes": "The open part writes drafts locally; the vendor's cloud preview and cloud render are hosted and not open. The examples pass media as URLs. No step makes the agent look at the result, so a person checks the draft in CapCut. CapCut itself and its terms were not checked here. Not run here.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "footage-editing",
+      "tool_type": "mcp-server",
+      "agents": [
+        "claude-code",
+        "any-mcp"
+      ],
+      "levers": [
+        "captions",
+        "motion"
+      ],
+      "cost": "mixed",
+      "claims": [
+        {
+          "text": "The project describes itself as cloud-based editing APIs and skills for agents.",
+          "quote": "It provides a rich set of cloud-based editing APIs and Skills, including features such as adding subtitles, illustrations, picture-in-picture (PiP), AI voiceovers, filters, and more.",
+          "locator": "README.md, section Preview",
+          "url": "https://github.com/sun-guannan/VectCutAPI/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Saving writes a draft folder that you copy into the CapCut or Jianying drafts directory by hand.",
+          "quote": "Calling `save_draft` will generate a folder starting with `dfd_` in the current directory of `capcut_server.py`. Copy this to the CapCut/Jianying drafts directory to see the generated draft in the application.",
+          "locator": "README.md, section Downloading Drafts",
+          "url": "https://github.com/sun-guannan/VectCutAPI/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The editing agent, web client and cloud rendering are not open source.",
+          "quote": "the code for the MCP Editing Agent, web-based editing client, and cloud rendering modules has not been open-sourced yet.",
+          "locator": "README.md, section Collaboration",
+          "url": "https://github.com/sun-guannan/VectCutAPI/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md (main) against the three claims; skill README and MCP docs not opened",
+        "source_sha256": "4a21dca6c5c95dfad42bd8f0b71d0bcdd9b7cf193cfba9c8274c4acb19a0a34e",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:chatcut-inc/agent-plugin",
+      "kind": "tool",
+      "title": "ChatCut agent plugin",
+      "aliases": [
+        "ChatCut",
+        "chatcut plugin"
+      ],
+      "url": "https://github.com/ChatCut-Inc/agent-plugin",
+      "summary": "Plugins and an MCP server that connect Codex, Claude Code, Cursor, Gemini CLI and other agents to ChatCut, a commercial editor with a desktop app and a hosted web version. It covers talking-head cleanup, text-based editing, captions, b-roll and XML export.",
+      "why_it_matters": "It covers almost every step of the question in one product, so it is the yardstick for what the free tools leave out. It is a hosted account service, not a free local path.",
+      "concepts": [
+        "concept:footage-editing",
+        "concept:plugins",
+        "concept:mcp-servers",
+        "concept:cost"
+      ],
+      "level": "intro",
+      "maturity": "active",
+      "fit": "low",
+      "fit_notes": "Needs a ChatCut account and sign-in; generation spends credits (pricing page not opened). Desktop keeps media local, Web uploads it. The recommended setup has the agent install the desktop app itself, and the manual macOS install downloads a remote script into the shell; read it first. Its generation features include voice clones and lip sync, which this hub does not cover.",
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "footage-editing",
+      "tool_type": "plugin",
+      "agents": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "gemini-cli",
+        "any-mcp"
+      ],
+      "levers": [
+        "captions",
+        "audio",
+        "review-loop",
+        "asset",
+        "delivery"
+      ],
+      "cost": "paid",
+      "tags": [
+        "hosted"
+      ],
+      "claims": [
+        {
+          "text": "Its editing list covers removing silences, filler words and repeated takes from talking-head footage.",
+          "quote": "Talking-head cleanup: remove silences, filler words, repeated takes and stumbles, and tighten the pacing.",
+          "locator": "README.md, section Everything ChatCut can make, Editing",
+          "url": "https://github.com/ChatCut-Inc/agent-plugin/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Generation spends ChatCut credits, with the agent asking first.",
+          "quote": "Generation uses ChatCut credits, and the agent asks before spending them.",
+          "locator": "README.md, section Everything ChatCut can make",
+          "url": "https://github.com/ChatCut-Inc/agent-plugin/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The recommended setup has the agent itself install the ChatCut Desktop app and connect to it.",
+          "quote": "The agent installs ChatCut Desktop, opens sign-in and connects itself to Desktop's local `chatcut_desktop` MCP server.",
+          "locator": "README.md, section Desktop setup",
+          "url": "https://github.com/ChatCut-Inc/agent-plugin/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md (main) against the three claims; chatcut.io pricing and docs not opened",
+        "source_sha256": "75b8ae26691f533190c9329d04c833ed06fceeadf82cbfe309a5afc515baa0b5",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:makemyclip/editor",
+      "kind": "tool",
+      "title": "MakeMyClip Editor",
+      "aliases": [
+        "@makemyclip/editor",
+        "clip CLI",
+        "makemyclip-editor"
+      ],
+      "url": "https://github.com/MakeMyClip/editor",
+      "summary": "A local editor for agents that ships as a Claude Code skill and plugin, the `clip` CLI, an MCP server and a browser timeline. It removes silence and repeated takes, cuts by transcript words, burns in word-timed captions, checks cuts and exports MP4, FCPXML or Premiere XML.",
+      "why_it_matters": "The closest match to the whole question on a Mac with no paid service: ffmpeg plus local whisper.cpp, a cut check with a contact sheet, and a handoff to Final Cut, Resolve or Premiere.",
+      "concepts": [
+        "concept:footage-editing",
+        "concept:agent-skills",
+        "concept:mcp-servers",
+        "concept:review-loop",
+        "concept:audio-and-captions"
+      ],
+      "level": "intro",
+      "maturity": "active",
+      "fit": "high",
+      "fit_notes": "Needs Node 24+, ffmpeg with text drawing, and for transcript work `brew install whisper-cpp` plus a ggml model you download yourself; the editor does not fetch one. Run `npx -y @makemyclip/editor doctor` first. The cut check is a CLI and chat feature, not in the browser UI yet. A cut splits clips into pieces, so silence removal has to run per piece (the agent does this in chat). Not run here.",
+      "related": [
+        {
+          "id": "tool:ggml-org/whisper.cpp",
+          "rel": "depends_on"
+        },
+        {
+          "id": "tool:ffmpeg/ffmpeg",
+          "rel": "depends_on"
+        },
+        {
+          "id": "tool:browser-use/video-use",
+          "rel": "alternative_to",
+          "note": "video-use transcribes with a paid ElevenLabs key; this uses local whisper.cpp"
+        },
+        {
+          "id": "source:developer.apple.com/documentation/professional-video-applications/fcpxml-reference",
+          "rel": "integrates_with"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "footage-editing",
+      "tool_type": "skill",
+      "agents": [
+        "claude-code",
+        "any-mcp"
+      ],
+      "levers": [
+        "captions",
+        "review-loop",
+        "audio",
+        "delivery"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "It runs edits with ffmpeg and a local whisper.cpp on the user's machine.",
+          "quote": "You ask Claude to edit a recording; it calls the editor's tools, and FFmpeg and a local whisper.cpp do the work on your computer.",
+          "locator": "README.md, introduction",
+          "url": "https://github.com/MakeMyClip/editor/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Its cut check flags cuts that may clip a word and writes a contact sheet of the frames either side.",
+          "quote": "| **Cut check** | Flags cuts where a word may be clipped, with a contact sheet of the frames on each side | `clip timeline check` |",
+          "locator": "README.md, section What it does, table",
+          "url": "https://github.com/MakeMyClip/editor/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It exports an FCPXML 1.10 project for Final Cut Pro and DaVinci Resolve.",
+          "quote": "| **Export to Final Cut Pro and DaVinci Resolve** | FCPXML 1.10 project | `clip timeline export --format fcpxml` |",
+          "locator": "README.md, section What it does, table",
+          "url": "https://github.com/MakeMyClip/editor/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md (main) against the three claims; skill file and tool list beyond the README not opened",
+        "source_sha256": "7fca578bf6465a01bc54a6e22fb7eb0cb57519ad0d97b7f997710bb91c7a1b11",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:relo-video/synthcut",
+      "kind": "tool",
+      "title": "SynthCut",
+      "aliases": [
+        "SynthCut by Relo",
+        "ai-video-editor MCP"
+      ],
+      "url": "https://github.com/Relo-video/SynthCut",
+      "summary": "An Electron multi-track editor whose core is an MCP server: cut, trim, grade, captions from Whisper, reframe, ducking, transcript editing and export, all through local ffmpeg. The UI mirrors every agent edit live.",
+      "why_it_matters": "It is the one open editor here that has filler-and-pause removal, colour, loudness presets and a frame-inspection tool for the agent in one MCP surface.",
+      "concepts": [
+        "concept:footage-editing",
+        "concept:mcp-servers",
+        "concept:review-loop",
+        "concept:audio-and-captions"
+      ],
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "On a Mac it runs from source only: the packaged build and its auto-update are Windows-only. The README gives two tool counts (85 and 94). Motion graphics go through Remotion, which has its own company licence. A hosted sibling (relo.video) is advertised in the README; the open editor itself is local. Not run here.",
+      "related": [
+        {
+          "id": "tool:remotion-dev/skills",
+          "rel": "integrates_with"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "footage-editing",
+      "tool_type": "app",
+      "agents": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "gemini-cli",
+        "any-mcp"
+      ],
+      "levers": [
+        "captions",
+        "audio",
+        "review-loop",
+        "delivery",
+        "design"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "Its transcript tools remove filler words and long pauses in one call and cut by word index.",
+          "quote": "`tighten_talk` strips filler words + long pauses in one call, `delete_transcript_ranges` cuts by word index, and `edit_by_transcript` assembles a cut from your edited script",
+          "locator": "README.md, section Features, Text-based editing",
+          "url": "https://github.com/Relo-video/SynthCut/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "There is no packaged macOS build; Mac users run it from source.",
+          "quote": "There is **no packaged installer for macOS or Linux yet** — the current release build (and its auto-update) is Windows-only.",
+          "locator": "README.md, section Run on macOS & Linux (from source)",
+          "url": "https://github.com/Relo-video/SynthCut/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Export presets include loudness normalisation to -14 or -16 LUFS and sidecar SRT or VTT captions.",
+          "quote": "platform export presets with loudness normalization (-14/-16 LUFS), and sidecar SRT/VTT caption export/import.",
+          "locator": "README.md, section Features, Output",
+          "url": "https://github.com/Relo-video/SynthCut/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md (main) against the three claims; GETTING_STARTED.md and the skill installer not opened",
+        "source_sha256": "963068ba9a37d7f044001b663180d41d03fbb745d234caf3b7786e68f53b31cd",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:misbahsy/video-audio-mcp",
+      "kind": "tool",
+      "title": "Video & Audio Editing MCP Server",
+      "aliases": [
+        "video-audio-mcp"
+      ],
+      "url": "https://github.com/misbahsy/video-audio-mcp",
+      "summary": "A Python MCP server of single-purpose ffmpeg tools: trim, concatenate with transitions, burn subtitles, text and image overlays, b-roll insertion, silence removal and format changes.",
+      "why_it_matters": "A small, local way to give any MCP client b-roll and silence removal without writing ffmpeg filter graphs.",
+      "concepts": [
+        "concept:footage-editing",
+        "concept:mcp-servers"
+      ],
+      "level": "intro",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Needs Python and ffmpeg, nothing hosted. Each tool writes a new file; there is no timeline, undo or project export. Its only check is a server health check, so the agent has to extract frames and listen to the output itself (pair with a frame-inspection tool). Silence removal is by level, not by transcript. Not run here.",
+      "related": [
+        {
+          "id": "tool:ffmpeg/ffmpeg",
+          "rel": "depends_on"
+        },
+        {
+          "id": "tool:jordanrendric/claude-video-vision",
+          "rel": "integrates_with",
+          "note": "adds the frame check this server lacks"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "footage-editing",
+      "tool_type": "mcp-server",
+      "agents": [
+        "any-mcp",
+        "cursor"
+      ],
+      "levers": [
+        "captions",
+        "asset",
+        "audio"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "It has a tool that removes silent segments.",
+          "quote": "- `remove_silence` - Automatically remove silent segments",
+          "locator": "README.md, section Available Tools, Advanced Editing",
+          "url": "https://github.com/misbahsy/video-audio-mcp/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It has a tool that inserts b-roll with transitions.",
+          "quote": "- `add_b_roll` - Insert B-roll footage with transitions",
+          "locator": "README.md, section Available Tools, Creative Tools",
+          "url": "https://github.com/misbahsy/video-audio-mcp/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Its only verification tool checks the server, not the output.",
+          "quote": "- `health_check` - Verify server status",
+          "locator": "README.md, section Available Tools, Advanced Editing",
+          "url": "https://github.com/misbahsy/video-audio-mcp/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md (main) tool list against the three claims; server.py not read",
+        "source_sha256": "fd1c800cdb42b7901d85c15da3ff25cc863bc29765c6b8134833b67f689acf94",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:wyattblue/auto-editor",
+      "kind": "tool",
+      "title": "Auto-Editor",
+      "aliases": [
+        "auto-editor",
+        "auto-editor skill"
+      ],
+      "url": "https://github.com/WyattBlue/auto-editor",
+      "summary": "A CLI that cuts dead space by audio level, motion or black frames, cuts by spoken words from subtitles, and exports to Premiere, Resolve, Final Cut, Shotcut, Kdenlive or EDL. The repo ships its own Agent Skills.",
+      "why_it_matters": "The standard first pass for silence removal, now with skills from the author, a dry-run preview and filler-word cuts from a local transcript.",
+      "concepts": [
+        "concept:footage-editing",
+        "concept:agent-skills",
+        "concept:audio-and-captions"
+      ],
+      "level": "intro",
+      "maturity": "established",
+      "fit": "high",
+      "fit_notes": "Install with `npx skills add WyattBlue/auto-editor`; the CLI is installed separately (see auto-editor.com/installing, not opened). Use `--preview` before a long render and `--margin 0.3s,1.5sec` to avoid clipped words. `-anorm ebu` applies EBU R128 loudness on render. Transcription needs a ggml model file; the Apple backend needs macOS 26 and may download a speech model on first use. The online app and desktop app are separate, with proprietary assets.",
+      "related": [
+        {
+          "id": "tool:ggml-org/whisper.cpp",
+          "rel": "integrates_with"
+        },
+        {
+          "id": "source:developer.apple.com/documentation/professional-video-applications/fcpxml-reference",
+          "rel": "integrates_with"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "footage-editing",
+      "tool_type": "skill",
+      "agents": [
+        "any-skill"
+      ],
+      "levers": [
+        "audio",
+        "captions",
+        "delivery"
+      ],
+      "cost": "free-local",
+      "tags": [
+        "silence-removal"
+      ],
+      "claims": [
+        {
+          "text": "A preview flag prints what would be cut without rendering, so the agent can check before a long render.",
+          "quote": "`--preview` prints what *would* be cut and exits without rendering — use it to sanity-check before a long render.",
+          "locator": "skills/auto-editor/SKILL.md, introduction",
+          "url": "https://github.com/WyattBlue/auto-editor/blob/master/skills/auto-editor/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Filler words can be cut by inverting a word match on the transcript.",
+          "quote": "auto-editor video.mp4 --edit \"(not word:um)\"",
+          "locator": "skills/auto-editor-transcribe/SKILL.md, section Edit by spoken content",
+          "url": "https://github.com/WyattBlue/auto-editor/blob/master/skills/auto-editor-transcribe/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It can transcribe with Apple's built-in recogniser on macOS 26 or later.",
+          "quote": "- **Apple**: the magic model name `apple` uses Apple's built-in transcriber; requires macOS 26 or later.",
+          "locator": "skills/auto-editor-transcribe/SKILL.md, section Transcribe",
+          "url": "https://github.com/WyattBlue/auto-editor/blob/master/skills/auto-editor-transcribe/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md and two SKILL.md files (auto-editor, auto-editor-transcribe) against the three claims; effects, transitions and export skills listed but not read",
+        "source_sha256": "1e204a1a15ba0255f110c28ce3b5d3c3e1da6998e37b96e2ae1791674aff26a0",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:m-bain/whisperx",
+      "kind": "tool",
+      "title": "WhisperX",
+      "aliases": [
+        "whisperx"
+      ],
+      "url": "https://github.com/m-bain/whisperX",
+      "summary": "A Python speech recogniser on faster-whisper that adds word-level timestamps by forced alignment with wav2vec2, voice activity detection and optional speaker labels.",
+      "why_it_matters": "Word timings decide whether captions and transcript cuts land on the word; this is the alignment step several editing skills point to.",
+      "concepts": [
+        "concept:audio-and-captions",
+        "concept:footage-editing"
+      ],
+      "level": "intermediate",
+      "maturity": "established",
+      "fit": "medium",
+      "fit_notes": "On a Mac it runs on CPU with int8, not on the GPU, so it is slower than whisper.cpp with Metal on an M3 Max (speed not measured here). Alignment models are per language and are fetched from torchaudio or Hugging Face on first use. Diarization needs a Hugging Face token and accepting the pyannote model terms. The README opens with a sponsor block for a paid API; the tool itself is local.",
+      "related": [
+        {
+          "id": "tool:ggml-org/whisper.cpp",
+          "rel": "alternative_to",
+          "note": "whisper.cpp runs on Metal; whisperX has stronger word alignment but CPU only on a Mac"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "footage-editing",
+      "tool_type": "library",
+      "agents": [
+        "none-stated"
+      ],
+      "levers": [
+        "captions",
+        "audio"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "It gets word-level timestamps by aligning with wav2vec2.",
+          "quote": "- 🎯 Accurate word-level timestamps using wav2vec2 alignment",
+          "locator": "README.md, introduction list",
+          "url": "https://github.com/m-bain/whisperX/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "On macOS it runs on CPU.",
+          "quote": "To run on CPU instead of GPU (and for running on Mac OS X):",
+          "locator": "README.md, section Usage, command line",
+          "url": "https://github.com/m-bain/whisperX/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Speaker labels need a Hugging Face access token.",
+          "quote": "To **enable Speaker Diarization**, include your Hugging Face access token (read) that you can generate from",
+          "locator": "README.md, section Speaker Diarization",
+          "url": "https://github.com/m-bain/whisperX/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md (main) against the three claims",
+        "source_sha256": "98ebee691ebee0ca5bdd9257dad72e1e74a9c216ff3adb7fa68d5164007a84ea",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:garylab/pexels-mcp-server",
+      "kind": "tool",
+      "title": "Pexels MCP Server",
+      "aliases": [
+        "pexels-mcp-server",
+        "Pexels MCP"
+      ],
+      "url": "https://github.com/garylab/pexels-mcp-server",
+      "summary": "An MCP server that searches the Pexels API for photos, videos and collections, run through uvx with a Pexels API key.",
+      "why_it_matters": "Gives the agent a b-roll search that returns stock footage the Pexels licence page says can be used in ads and social posts.",
+      "concepts": [
+        "concept:footage-editing",
+        "concept:mcp-servers",
+        "concept:licences-and-territory"
+      ],
+      "level": "intro",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Needs a Pexels API key, which means a Pexels account (free terms of the API not opened here: the API docs and help pages returned 403). It searches only; downloading, placing and crediting the clip are left to the agent or another tool. The licence page text saved here lists allowed uses; its restrictions section did not load, so check it before client work.",
+      "related": [
+        {
+          "id": "source:pixabay.com/api/docs",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "footage-editing",
+      "tool_type": "mcp-server",
+      "agents": [
+        "any-mcp"
+      ],
+      "levers": [
+        "asset"
+      ],
+      "cost": "free-tier",
+      "tags": [
+        "b-roll",
+        "stock"
+      ],
+      "claims": [
+        {
+          "text": "It needs a Pexels API key in the server environment.",
+          "quote": "\"PEXELS_API_KEY\": \"<Your Pexels API key>\"",
+          "locator": "README.md, section Usage, Using uv",
+          "url": "https://github.com/garylab/pexels-mcp-server/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It can search Pexels videos.",
+          "quote": "- `videos_search` – Search videos",
+          "locator": "README.md, section Available Tools",
+          "url": "https://github.com/garylab/pexels-mcp-server/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The Pexels licence page lists ads and marketing campaigns among allowed uses.",
+          "quote": "Create unique ads, banners and marketing campaigns with photos from Pexels and promote your product.",
+          "locator": "pexels.com/license, use-case list, Promote your product",
+          "url": "https://www.pexels.com/license/",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md and the visible text of pexels.com/license against the three claims; the licence restrictions section and API terms were not retrieved",
+        "source_sha256": "0492f83c4a2b6da582106b066127582bee85ec8665ffb79fba54f135774d3f45",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:connerkward/screenstudio-alternative-skill",
+      "kind": "tool",
+      "title": "screenstudio-alt",
+      "aliases": [
+        "screenstudio-alt",
+        "Screen Studio alternative skill"
+      ],
+      "url": "https://github.com/connerkward/screenstudio-alternative-skill",
+      "summary": "A macOS Claude Code skill that polishes a screen recording headless: eased auto-zoom on clicks, idle speed-up, keystroke chips, a smoothed cursor, callouts and 9:16 export, with FCPXML handoff.",
+      "why_it_matters": "The only headless, agent-driven zoom and cursor pass found for screen recordings, and it says plainly which effects need data captured while recording.",
+      "concepts": [
+        "concept:footage-editing",
+        "concept:agent-skills",
+        "concept:motion-and-transitions",
+        "concept:review-loop"
+      ],
+      "level": "intermediate",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Auto-zoom, keys and cursor need its Swift event logger running during capture, with Accessibility and Input Monitoring granted; an old recording only gets idle speed-up. Its review step uploads the render to a hosted video model chosen through fal, which costs money and sends your screen content off the machine; skip that step for private material and review frames locally. Claude Code only as stated.",
+      "related": [
+        {
+          "id": "tool:btahir/reelbird",
+          "rel": "alternative_to"
+        },
+        {
+          "id": "tool:coreyhaines31/marketingskills",
+          "rel": "integrates_with",
+          "note": "its product-demo-recording reference covers capture; this covers polish"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "footage-editing",
+      "tool_type": "skill",
+      "agents": [
+        "claude-code"
+      ],
+      "levers": [
+        "motion",
+        "review-loop",
+        "delivery"
+      ],
+      "cost": "mixed",
+      "tags": [
+        "screen-recording",
+        "auto-zoom"
+      ],
+      "claims": [
+        {
+          "text": "Auto-zoom, keystrokes and cursor need event data logged during capture.",
+          "quote": "**Auto-zoom/keys/cursor need this data at capture time — it cannot be recovered from pixels later.**",
+          "locator": "SKILL.md, component events-log",
+          "url": "https://github.com/connerkward/screenstudio-alternative-skill/blob/main/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Idle speed-up works on any existing recording without event data.",
+          "quote": "`--speedup` works WITHOUT events (freezedetect only)",
+          "locator": "SKILL.md, component polish.py",
+          "url": "https://github.com/connerkward/screenstudio-alternative-skill/blob/main/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Before delivery it tells the agent to send the rendered MP4 to a hosted video-understanding model for critique.",
+          "quote": "Before handing a demo over, **stop judging it from stills — send the actual rendered mp4 to a video-understanding model and act on its critique.**",
+          "locator": "SKILL.md, section Get an objective critique",
+          "url": "https://github.com/connerkward/screenstudio-alternative-skill/blob/main/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md and SKILL.md against the three claims; docs/ARCHITECTURE.md not opened",
+        "source_sha256": "a58c4ec22e0345d4be7d79c33131d4477b70d1ddfef6d0b2e00a6240996dc416",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:btahir/reelbird",
+      "kind": "tool",
+      "title": "Reelbird",
+      "aliases": [
+        "reelbird"
+      ],
+      "url": "https://github.com/btahir/reelbird",
+      "summary": "A native macOS screen recorder with auto-zoom, smooth cursor, on-device captions, pause and 'um' cleanup, blur and redaction, with a CLI and an MCP server for agents. Share links go to your own bucket or an optional paid host.",
+      "why_it_matters": "It covers recording and screen-recording polish from one CLI an agent can call, and its MCP tools let the agent read what a take contains without watching it.",
+      "concepts": [
+        "concept:footage-editing",
+        "concept:mcp-servers",
+        "concept:audio-and-captions",
+        "concept:agent-portability"
+      ],
+      "level": "intro",
+      "maturity": "active",
+      "fit": "high",
+      "fit_notes": "Free and local for recording, editing, captions and export; sharing uploads to a bucket you set up (for example R2) or to Reelbird Pro at $5 a month. macOS 15 or later. Captions use Apple's on-device recogniser. The `cleanup` command has --dry-run and --undo; use them before exporting. Not run here.",
+      "related": [
+        {
+          "id": "tool:connerkward/screenstudio-alternative-skill",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "footage-editing",
+      "tool_type": "app",
+      "agents": [
+        "claude-code",
+        "codex",
+        "cursor"
+      ],
+      "levers": [
+        "captions",
+        "audio",
+        "motion",
+        "review-loop"
+      ],
+      "cost": "free-local",
+      "tags": [
+        "screen-recording",
+        "auto-zoom"
+      ],
+      "claims": [
+        {
+          "text": "Its CLI and MCP server state support for Claude Code, Codex and Cursor.",
+          "quote": "The `reelbird` command-line tool and its MCP server let Claude Code, Codex or Cursor list screens, record a demo of the change they just made, export it and hand you the link.",
+          "locator": "README.md, Works with agents",
+          "url": "https://github.com/btahir/reelbird/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "A cleanup command shortens pauses and cuts 'um's, with a dry run and undo.",
+          "quote": "shorten pauses, cut ums, trim dead ends (--dry-run, --undo)",
+          "locator": "README.md, section Command line, reelbird cleanup",
+          "url": "https://github.com/btahir/reelbird/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "An MCP tool summarises a take's steps, speech and markers for the agent without watching the video.",
+          "quote": "describe a recording without watching it (`describe_take`: its steps, what was said and markers, so an agent can follow what you showed it)",
+          "locator": "README.md, section MCP server",
+          "url": "https://github.com/btahir/reelbird/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md (main) against the three claims",
+        "source_sha256": "bebf30241def3c73dca13ab408af9e1e2f28de42a67f4ac39fded20e4628fe81",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:griffinwooldridge/talking-head-editor",
+      "kind": "tool",
+      "title": "talking-head-editor",
+      "aliases": [
+        "talking head editor skill"
+      ],
+      "url": "https://github.com/griffinwooldridge/talking-head-editor",
+      "summary": "A Claude Code skill that turns one raw talking-head take into a finished video: DeepFilterNet voice cleanup and -14 LUFS, Whisper word timings, take selection, tight cuts, face reframing with optional LUT, word-timed captions and HyperFrames motion graphics.",
+      "why_it_matters": "It has the most concrete delivery check found for transcript cuts: re-transcribe the final file and diff it against the kept words.",
+      "concepts": [
+        "concept:footage-editing",
+        "concept:agent-skills",
+        "concept:review-loop",
+        "concept:audio-and-captions"
+      ],
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "high",
+      "fit_notes": "macOS or Linux with ffmpeg, Node 18+ and Python 3.9-3.12 (3.13 needs PYTHON= pointing at an older one). Setup builds a venv with whisper, DeepFilterNet and OpenCV and downloads GSAP under GSAP's own licence. Motion graphics render through HyperFrames, whose skill sends a usage beacon. Claude Code only as stated. Not run here.",
+      "related": [
+        {
+          "id": "tool:heygen-com/hyperframes",
+          "rel": "depends_on"
+        },
+        {
+          "id": "tool:browser-use/video-use",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "footage-editing",
+      "tool_type": "skill",
+      "agents": [
+        "claude-code"
+      ],
+      "levers": [
+        "audio",
+        "captions",
+        "motion",
+        "review-loop",
+        "design"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "Before handover it re-transcribes the final video and diffs it against the kept word list.",
+          "quote": "Re-transcribe `out/final.mp4` and diff it against the keep list: no missing or doubled words.",
+          "locator": "SKILL.md, section 8 Review before you hand it over",
+          "url": "https://github.com/griffinwooldridge/talking-head-editor/blob/main/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It collapses every pause to about 0.09 seconds.",
+          "quote": "Every pause collapses to about 0.09 s.",
+          "locator": "SKILL.md, section 3 Cut",
+          "url": "https://github.com/griffinwooldridge/talking-head-editor/blob/main/SKILL.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Setup downloads GSAP, which has its own licence.",
+          "quote": "GSAP is downloaded at setup under its own license.",
+          "locator": "README.md, section License",
+          "url": "https://github.com/griffinwooldridge/talking-head-editor/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md and SKILL.md against the three claims; references/*.md not opened",
+        "source_sha256": "9cf2d35bf0b1e724f5b4371f3e7b344febd67aeee3f1064d982f0694069bed46",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "tool:aoike123/blender-vse",
+      "kind": "tool",
+      "title": "Blender VSE Control",
+      "aliases": [
+        "blender-vse-mcp",
+        "Blender VSE MCP"
+      ],
+      "url": "https://github.com/Aoike123/blender-vse",
+      "summary": "A local MCP server, CLI and skill that inspect, patch, render and verify Blender Video Sequence Editor timelines in a named .blend file, with revision checks so human edits are not overwritten.",
+      "why_it_matters": "A free desktop editor an agent can drive through typed operations rather than arbitrary Python, with the .blend left editable for a person.",
+      "concepts": [
+        "concept:footage-editing",
+        "concept:mcp-servers",
+        "concept:agent-skills",
+        "concept:review-loop"
+      ],
+      "level": "advanced",
+      "maturity": "experimental",
+      "fit": "medium",
+      "fit_notes": "Alpha; Blender 5.1 is the verified target. Its verify step checks saved structure only, so the agent still has to render and look at frames. The one-line install downloads a remote script into the shell and installs uv if missing; read it first or install from source. A local Codex plugin is documented; Claude Code works as a generic MCP host. Blender is free. Not run here.",
+      "related": [
+        {
+          "id": "tool:ahujasid/mcp-for-blender",
+          "rel": "alternative_to",
+          "note": "that server runs arbitrary Python in Blender; this one exposes a fixed operation catalog for the VSE"
+        }
+      ],
+      "source_type": "vendor-or-author",
+      "corroboration": "single-source",
+      "lane": "footage-editing",
+      "tool_type": "mcp-server",
+      "agents": [
+        "codex",
+        "any-mcp"
+      ],
+      "levers": [
+        "review-loop",
+        "delivery"
+      ],
+      "cost": "free-local",
+      "claims": [
+        {
+          "text": "Final verification reopens the .blend in a fresh Blender process and checks structure, not frames.",
+          "quote": "final verification reopens the canonical `.blend` in a fresh Blender process and checks saved structural facts. It does not inspect frames or judge visual or creative correctness.",
+          "locator": "README.md, section Core guarantees, Persistence evidence",
+          "url": "https://github.com/Aoike123/blender-vse/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Callers pick operations from a catalog and cannot send free-form Python.",
+          "quote": "callers select operations from the catalog; they can never submit free-form Python.",
+          "locator": "README.md, section Core guarantees, Bounded surface",
+          "url": "https://github.com/Aoike123/blender-vse/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The quick-install script also installs uv when it is missing.",
+          "quote": "The script installs [uv](https://docs.astral.sh/uv/) when it is missing, then installs the `blender-vse-mcp` command on uv's managed Python 3.12 and checks for Blender.",
+          "locator": "README.md, section Install",
+          "url": "https://github.com/Aoike123/blender-vse/blob/main/README.md",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:kiro",
+        "what": "README.md and skills/blender-vse/SKILL.md against the three claims; docs/mcp.md and docs/plugin.md not opened",
+        "source_sha256": "002d04122f1ed7c6d1d2f96bb99087f524c44272055aa07259d9fa4d9e86fc4d",
+        "next_due": "2027-02-10"
+      },
+      "url_status": "live",
+      "status": "current"
+    }
+  ]
+}
