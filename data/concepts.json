@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "status": "provisional until the W2 close",
-  "concepts": [
+  "lane": "vocabulary",
+  "records": [
     {
       "id": "concept:making",
       "label": "Making",

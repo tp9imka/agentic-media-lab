@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "lane": "quality-skills",
+  "records": [
+    {
+      "id": "source:remotion.dev/docs/ai/mcp",
+      "kind": "source",
+      "title": "Remotion's Model Context Protocol (shut down)",
+      "aliases": [
+        "Remotion MCP shutdown"
+      ],
+      "url": "https://www.remotion.dev/docs/ai/mcp",
+      "summary": "Remotion's notice that it closed its hosted MCP server and moved users to its Agent Skills, with reasons.",
+      "why_it_matters": "A vendor's own account of choosing skills over an MCP server for code-driven video.",
+      "concepts": [
+        "concept:mcp-servers",
+        "concept:agent-skills"
+      ],
+      "level": "intro",
+      "fit": "high",
+      "fit_notes": "One vendor's experience with a documentation server. Hosted render and generation vendors still lead with MCP.",
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "lane": "quality-skills",
+      "claims": [
+        {
+          "text": "Remotion shut down its hosted MCP server on 2026-10-26.",
+          "quote": "The hosted Remotion MCP server was shut down on October 26, 2026",
+          "locator": "page top, section Shut down",
+          "url": "https://www.remotion.dev/docs/ai/mcp",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "Among its stated reasons: MCP servers were hard to install and agents did not call them reliably.",
+          "quote": "Installing MCP servers was difficult, and agents did not invoke them reliably.",
+          "locator": "section Why was the MCP shut down?",
+          "url": "https://www.remotion.dev/docs/ai/mcp",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:driver",
+        "what": "Remotion docs page against both claims",
+        "source_sha256": "16044b28ab1a73cbce379f5b018b6a922c5f7d5b1fc246f62789efbaedb6f05d",
+        "next_due": "2027-11-12"
+      },
+      "url_status": "live",
+      "status": "current"
+    }
+  ]
+}

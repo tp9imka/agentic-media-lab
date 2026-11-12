@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "lane": "hosted-models",
+  "records": [
+    {
+      "id": "model:openai/sora-2",
+      "kind": "model",
+      "title": "Sora 2",
+      "aliases": [
+        "Sora",
+        "Sora 2 Pro",
+        "OpenAI Videos API"
+      ],
+      "url": "https://developers.openai.com/api/docs/deprecations",
+      "summary": "OpenAI's video generation model family. Its API access ended in September 2026.",
+      "why_it_matters": "Many guides and skills still call it. Anything that depends on the Videos API no longer runs.",
+      "concepts": [
+        "concept:hosted-video-models"
+      ],
+      "level": "intro",
+      "maturity": "shut-down",
+      "fit": "low",
+      "fit_notes": "Do not build on it. The deprecations entry lists no replacement model.",
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "lane": "hosted-models",
+      "status": "archived",
+      "status_note": "API removed 2026-09-24 per OpenAI's deprecations page.",
+      "modes": [
+        "t2v",
+        "i2v"
+      ],
+      "access": "shut-down",
+      "apple_silicon": "no-documented-path",
+      "licence_class": "proprietary",
+      "claims": [
+        {
+          "text": "OpenAI removed the Sora 2 models and the Videos API from its API on 2026-09-24.",
+          "quote": "On March 24th, 2026, we notified developers using the Videos API and Sora 2 video generation model aliases and snapshots of their deprecation and removal from the API on September 24, 2026.",
+          "locator": "Deprecations page, entry dated 2026-03-24",
+          "url": "https://developers.openai.com/api/docs/deprecations",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:driver",
+        "what": "OpenAI deprecations page against the claim",
+        "source_sha256": "14e9ebb480f7a794eafc6fdd84f37c9a11469c53875f03503735f9ea0266aea2",
+        "next_due": "2026-12-12"
+      },
+      "url_status": "live"
+    },
+    {
+      "id": "model:google/veo-3.1",
+      "kind": "model",
+      "title": "Veo 3.1",
+      "aliases": [
+        "veo-3.1-generate-preview",
+        "Veo 3.1 Fast"
+      ],
+      "url": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "summary": "Google's video generation model. It was removed from the Gemini API in October 2026.",
+      "why_it_matters": "Code and skills that call Veo through the Gemini API need to migrate.",
+      "concepts": [
+        "concept:hosted-video-models"
+      ],
+      "level": "intro",
+      "maturity": "dormant",
+      "fit": "low",
+      "fit_notes": "Whether it stays available on Google's enterprise platform or through resellers was not checked.",
+      "related": [
+        {
+          "id": "model:google/gemini-omni-flash",
+          "rel": "alternative_to"
+        }
+      ],
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "lane": "hosted-models",
+      "status": "outdated",
+      "status_note": "Left the Gemini API 2026-10-22. Other access routes not checked.",
+      "superseded_by": "model:google/gemini-omni-flash",
+      "modes": [
+        "t2v",
+        "i2v"
+      ],
+      "access": "api",
+      "apple_silicon": "no-documented-path",
+      "licence_class": "proprietary",
+      "claims": [
+        {
+          "text": "The Gemini API lists a shutdown date of 2026-10-22 for veo-3.1-generate-preview and names gemini-omni-1.2-flash as the replacement.",
+          "quote": "`veo-3.1-generate-preview` * October 15, 2025 * October 22, 2026 * `gemini-omni-1.2-flash`",
+          "locator": "Deprecations page, table Veo models",
+          "url": "https://ai.google.dev/gemini-api/docs/deprecations",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:driver",
+        "what": "Gemini API deprecations page against the claim",
+        "source_sha256": "551f6e9db25a8a8a16cfb09011bbd9a055c4301d7f2139de96102edddd6e0234",
+        "next_due": "2026-12-12"
+      },
+      "url_status": "live"
+    },
+    {
+      "id": "model:google/gemini-omni-flash",
+      "kind": "model",
+      "title": "Gemini Omni Flash",
+      "aliases": [
+        "gemini-omni-1.2-flash",
+        "Omni Flash"
+      ],
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "summary": "Google's video generation and editing model on the Gemini API, with audio.",
+      "why_it_matters": "It is the replacement Google names for Veo 3.1 on the Gemini API.",
+      "concepts": [
+        "concept:hosted-video-models",
+        "concept:cost"
+      ],
+      "level": "intro",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Paid tier only, so it cannot be tried for free. Priced in output tokens; the per-second figures are Google's own approximation.",
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "lane": "hosted-models",
+      "modes": [
+        "t2v",
+        "i2v",
+        "v2v",
+        "edit"
+      ],
+      "access": "api",
+      "apple_silicon": "no-documented-path",
+      "licence_class": "proprietary",
+      "claims": [
+        {
+          "text": "Google prices 720p output at about $0.07 per second, so a 10 second clip is about $0.70.",
+          "quote": "approximately $0.07 per second (~$0.70 for a 10s clip, ~$1.04 for a 15s clip;",
+          "locator": "Gemini API pricing page, section Gemini Omni 1.2 Flash",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "It generates and edits up to 15 seconds of video with audio, on the paid tier only.",
+          "quote": "up to 15 seconds of video generation and editing with native audio, now generally available to developers on the paid tier of the Gemini API.",
+          "locator": "Gemini API pricing page, section Gemini Omni 1.2 Flash",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:driver",
+        "what": "Gemini API pricing page against both claims",
+        "source_sha256": "e508333dc4ae245e20b992701878879c4f30d70b7e4ed300151bbc11f30baca0",
+        "next_due": "2026-12-12"
+      },
+      "url_status": "live",
+      "status": "current"
+    },
+    {
+      "id": "model:minimaxai/minimax-h3",
+      "kind": "model",
+      "title": "MiniMax H3",
+      "aliases": [
+        "Hailuo 3",
+        "MiniMax-H3",
+        "H3"
+      ],
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3",
+      "summary": "An open-weights video generation model from MiniMax, also sold through its API.",
+      "why_it_matters": "A leading open-weights video model whose licence does not cover several major regions.",
+      "concepts": [
+        "concept:local-video-models",
+        "concept:hosted-video-models",
+        "concept:licences-and-territory"
+      ],
+      "level": "advanced",
+      "maturity": "active",
+      "fit": "medium",
+      "fit_notes": "Read the licence for where you are before using the weights. Ports for Apple Silicon exist, but the one published timing is minutes per denoising step on a larger machine, and nothing was measured here.",
+      "source_type": "primary",
+      "corroboration": "single-source",
+      "lane": "hosted-models",
+      "modes": [
+        "t2v",
+        "i2v"
+      ],
+      "access": "weights",
+      "apple_silicon": "documented",
+      "licence_class": "territory-restricted",
+      "claims": [
+        {
+          "text": "The licence defines the EU, the UK, South Korea and the USA as excluded territories.",
+          "quote": "“Excluded Territories” means the European Union, the United Kingdom, the Republic of Korea and the United States of America.",
+          "locator": "LICENSE, Definitions, item 5",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE",
+          "retrieved": "2026-11-12",
+          "via": null
+        },
+        {
+          "text": "The licence applies worldwide except those territories.",
+          "quote": "“Applicable Territory” means worldwide, excluding the Excluded Territories.",
+          "locator": "LICENSE, Definitions, item 3",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE",
+          "retrieved": "2026-11-12",
+          "via": null
+        }
+      ],
+      "checked": {
+        "date": "2026-11-12",
+        "depth": "primary-read",
+        "by": "agent:driver",
+        "what": "LICENSE file on the model repository against both claims",
+        "source_sha256": "59b99642b95ea21630e311198ddbfffbfe05aadba0c2f5d884cbdf4efcc90f44",
+        "next_due": "2026-12-12"
+      },
+      "url_status": "live",
+      "status": "current"
+    }
+  ]
+}
