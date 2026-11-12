@@ -101,7 +101,8 @@
   "expect_any": [
    "source:docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments",
    "tool:get-bb/bb",
-   "tool:nousresearch/hermes-agent"
+   "tool:nousresearch/hermes-agent",
+   "guide:schedule-with-approval"
   ],
   "top": 5
  },
@@ -154,7 +155,26 @@
    "model:wan-ai/wan2.2",
    "tool:blaizzy/mlx-video",
    "tool:drawthings.ai",
-   "model:vimoo-ai/vimoo-1.0"
+   "model:vimoo-ai/vimoo-1.0",
+   "guide:local-stack-apple-silicon"
+  ],
+  "top": 3
+ },
+ {
+  "query": "is bb good for a content pipeline",
+  "expect_any": [
+   "guide:bb",
+   "tool:get-bb/bb"
+  ],
+  "top": 3
+ },
+ {
+  "query": "tiktok youtube instagram rules for ai video posting",
+  "expect_any": [
+   "guide:publishing-rules",
+   "source:developers.tiktok.com/doc/content-posting-api-reference-direct-post",
+   "source:developers.tiktok.com/doc/content-sharing-guidelines",
+   "source:support.google.com/youtube/answer/14328491"
   ],
   "top": 3
  }

@@ -287,7 +287,9 @@
     "ltx"
    ],
    "approach": "Several open-weights video models document an Apple Silicon path through MLX, MPS or Draw Things. The licences differ a lot. Nobody has published M3 Max timings, and we have not measured any yet.",
-   "pages": [],
+   "pages": [
+    "docs/cheatsheets/local-stack-apple-silicon.md"
+   ],
    "record_ids": [
     "model:wan-ai/wan2.2",
     "model:lightricks/ltx-2",
@@ -314,7 +316,9 @@
     "legal"
    ],
    "approach": "Read the licence clause quoted on the record, not the badge. Remotion is free up to 3 employees. Some open weights exclude whole territories, some need a paid licence above a revenue threshold, some are research-only, and fair-code workflow engines restrict commercial hosting.",
-   "pages": [],
+   "pages": [
+    "docs/cheatsheets/local-stack-apple-silicon.md"
+   ],
    "record_ids": [
     "tool:remotion-dev/remotion",
     "model:minimaxai/minimax-h3",
@@ -372,7 +376,9 @@
     "whisper"
    ],
    "approach": "Narration from a local TTS model, music from a local model, captions from a local Whisper build, then mix to a loudness target and check captions against a reading-speed rule.",
-   "pages": [],
+   "pages": [
+    "docs/cheatsheets/local-stack-apple-silicon.md"
+   ],
    "record_ids": [
     "model:hexgrad/kokoro",
     "model:ace-step/ace-step",
@@ -460,7 +466,9 @@
     "automation"
    ],
    "approach": "Choose where the schedule lives: a local scheduler that runs your agent CLI, the agent vendor's own scheduled tasks, or a CI schedule. Then add the approval step yourself, because most of these have none built in, and decide the permission mode for unattended runs.",
-   "pages": [],
+   "pages": [
+    "docs/cheatsheets/schedule-with-approval.md"
+   ],
    "record_ids": [
     "tool:get-bb/bb",
     "tool:nousresearch/hermes-agent",
@@ -488,7 +496,10 @@
     "content factory"
    ],
    "approach": "bb schedules Claude Code or Codex runs on a cron and keeps run history; it has no media, posting or approval features of its own. Hermes Agent has its own scheduling and messaging gateways, and a published demo with director, renderer and editor roles. Both carry the schedule and agent steps; render and publish stay your scripts.",
-   "pages": [],
+   "pages": [
+    "docs/cards/bb.md",
+    "docs/cheatsheets/schedule-with-approval.md"
+   ],
    "record_ids": [
     "tool:get-bb/bb",
     "source:github.com/get-bb/bb/blob/main/docs/configuration.md",
@@ -516,7 +527,9 @@
     "policy"
    ],
    "approach": "YouTube lets an unverified API project post publicly and has an API flag for synthetic content. TikTok keeps posts private until an audit that excludes personal upload tools. Instagram and Facebook cap API posts per day. Disclose realistic AI content everywhere, and avoid templated mass output.",
-   "pages": [],
+   "pages": [
+    "docs/cheatsheets/publishing-rules.md"
+   ],
    "record_ids": [
     "source:developers.google.com/youtube/v3/revision_history",
     "source:developers.google.com/youtube/v3/docs/videos/insert",
