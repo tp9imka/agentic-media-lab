@@ -91,7 +91,7 @@ Scope: Systems where agents plan, generate, check and assemble a multi-shot vide
 
 Broader: [Pipelines](glossary.md#pipelines)
 
-Records (3): [html-video](../catalog/tool/nexu-io__html-video.md), [Kanban Video Pipeline](../catalog/tool/nousresearch__kanban-video-pipeline.md), [OpenMontage](../catalog/tool/openmontageinc__openmontage.md)
+Records (4): [ComfyUI](../catalog/tool/comfy-org__comfyui.md), [html-video](../catalog/tool/nexu-io__html-video.md), [Kanban Video Pipeline](../catalog/tool/nousresearch__kanban-video-pipeline.md), [OpenMontage](../catalog/tool/openmontageinc__openmontage.md)
 
 ## <a id="audio-and-captions"></a>Audio and captions
 
@@ -103,7 +103,7 @@ Scope: Narration, music, effects, their mix, and on-screen text timed to speech.
 
 Broader: [Craft](glossary.md#craft)
 
-Records (11): [video-use](../catalog/tool/browser-use__video-use.md), [generative-media-skills](../catalog/tool/calesthio__generative-media-skills.md), [marketingskills (video, product-demo-recording)](../catalog/tool/coreyhaines31__marketingskills.md), [remotion-superpowers](../catalog/tool/dojocodinglabs__remotion-superpowers.md), [FFmpeg](../catalog/tool/ffmpeg__ffmpeg.md), [claude-plugin-marketplace (ffmpeg-kinetic-captions)](../catalog/tool/josiahsiegel__claude-plugin-marketplace.md), [Revideo](../catalog/tool/midrender__revideo.md), [editly](../catalog/tool/mifi__editly.md), [motion-graphics (Mort1d)](../catalog/tool/mort1d__motion-graphics-skills.md), [Motion Canvas](../catalog/tool/motion-canvas__motion-canvas.md), and 1 more in the [catalog](../catalog/README.md)
+Records (15): [ACE-Step 1.5](../catalog/model/ace-step__ace-step.md), [Kokoro-82M](../catalog/model/hexgrad__kokoro.md), [video-use](../catalog/tool/browser-use__video-use.md), [generative-media-skills](../catalog/tool/calesthio__generative-media-skills.md), [marketingskills (video, product-demo-recording)](../catalog/tool/coreyhaines31__marketingskills.md), [remotion-superpowers](../catalog/tool/dojocodinglabs__remotion-superpowers.md), [FFmpeg](../catalog/tool/ffmpeg__ffmpeg.md), [whisper.cpp](../catalog/tool/ggml-org__whisper.cpp.md), [claude-plugin-marketplace (ffmpeg-kinetic-captions)](../catalog/tool/josiahsiegel__claude-plugin-marketplace.md), [Revideo](../catalog/tool/midrender__revideo.md), and 5 more in the [catalog](../catalog/README.md)
 
 ## <a id="automation"></a>Automation
 
@@ -135,7 +135,7 @@ Scope: Keeping characters, style and world stable across shots and scenes.
 
 Broader: [Craft](glossary.md#craft)
 
-Records (4): [HyperFrames vs Remotion research note (GenMotion)](../catalog/source/github.com__haxzie__genmotion__blob__main__docs__research__hyperframes-remotion.md.md), [Kinetograph](../catalog/tool/0xs4n4tg__kinetograph.md), [generative-media-skills](../catalog/tool/calesthio__generative-media-skills.md), [claude-code-video-toolkit](../catalog/tool/digitalsamba__claude-code-video-toolkit.md)
+Records (5): [FLUX 3 Image Klein](../catalog/model/black-forest-labs__flux-3-image-klein.md), [HyperFrames vs Remotion research note (GenMotion)](../catalog/source/github.com__haxzie__genmotion__blob__main__docs__research__hyperframes-remotion.md.md), [Kinetograph](../catalog/tool/0xs4n4tg__kinetograph.md), [generative-media-skills](../catalog/tool/calesthio__generative-media-skills.md), [claude-code-video-toolkit](../catalog/tool/digitalsamba__claude-code-video-toolkit.md)
 
 ## <a id="cost"></a>Cost
 
@@ -167,7 +167,7 @@ Scope: Getting the finished file into the format a platform or client accepts.
 
 Broader: [Craft](glossary.md#craft)
 
-Records (4): [generative-media-skills](../catalog/tool/calesthio__generative-media-skills.md), [FFmpeg](../catalog/tool/ffmpeg__ffmpeg.md), [ffmpeg-skill](../catalog/tool/kajisho5__ffmpeg-skill.md), [motion-graphics (Mort1d)](../catalog/tool/mort1d__motion-graphics-skills.md)
+Records (5): [SeedVR2](../catalog/model/bytedance-seed__seedvr.md), [generative-media-skills](../catalog/tool/calesthio__generative-media-skills.md), [FFmpeg](../catalog/tool/ffmpeg__ffmpeg.md), [ffmpeg-skill](../catalog/tool/kajisho5__ffmpeg-skill.md), [motion-graphics (Mort1d)](../catalog/tool/mort1d__motion-graphics-skills.md)
 
 ## <a id="evaluation"></a>Evaluation
 
@@ -215,7 +215,7 @@ Scope: Clips produced by a video generation model, hosted or local.
 
 Broader: [Making](glossary.md#making)
 
-Records (0): none yet
+Records (4): [LTX-2](../catalog/model/lightricks__ltx-2.md), [Vimoo 1.0](../catalog/model/vimoo-ai__vimoo-1.0.md), [Wan 2.2](../catalog/model/wan-ai__wan2.2.md), [mlx-video](../catalog/tool/blaizzy__mlx-video.md)
 
 ## <a id="hosted-video-models"></a>Hosted video models
 
@@ -239,7 +239,7 @@ Scope: Image generation and editing models, hosted and local.
 
 Broader: [Models](glossary.md#models)
 
-Records (0): none yet
+Records (6): [FLUX 3 Image Klein](../catalog/model/black-forest-labs__flux-3-image-klein.md), [Qwen-Image](../catalog/model/qwen__qwen-image.md), [Z-Image](../catalog/model/tongyi-mai__z-image.md), [ComfyUI](../catalog/tool/comfy-org__comfyui.md), [Draw Things](../catalog/tool/drawthings.ai.md), [MFLUX](../catalog/tool/mflux-community__mflux.md)
 
 ## <a id="licences-and-territory"></a>Licences and territory
 
@@ -251,7 +251,7 @@ Scope: What a model or renderer licence allows, for whom and where.
 
 Broader: [Models](glossary.md#models)
 
-Records (7): [MiniMax H3](../catalog/model/minimaxai__minimax-h3.md), [HyperFrames vs Remotion (HeyGen guide)](../catalog/source/hyperframes.heygen.com__guides__hyperframes-vs-remotion.md), [Activepieces](../catalog/tool/activepieces__activepieces.md), [GSAP](../catalog/tool/greensock__gsap.md), [n8n](../catalog/tool/n8n-io__n8n.md), [Remotion](../catalog/tool/remotion-dev__remotion.md), [Windmill](../catalog/tool/windmill-labs__windmill.md)
+Records (10): [FLUX 3 Image Klein](../catalog/model/black-forest-labs__flux-3-image-klein.md), [LTX-2](../catalog/model/lightricks__ltx-2.md), [MiniMax H3](../catalog/model/minimaxai__minimax-h3.md), [Qwen-Image](../catalog/model/qwen__qwen-image.md), [HyperFrames vs Remotion (HeyGen guide)](../catalog/source/hyperframes.heygen.com__guides__hyperframes-vs-remotion.md), [Activepieces](../catalog/tool/activepieces__activepieces.md), [GSAP](../catalog/tool/greensock__gsap.md), [n8n](../catalog/tool/n8n-io__n8n.md), [Remotion](../catalog/tool/remotion-dev__remotion.md), [Windmill](../catalog/tool/windmill-labs__windmill.md)
 
 ## <a id="local-video-models"></a>Local video models
 
@@ -263,7 +263,7 @@ Scope: Video models whose weights you can run on your own machine.
 
 Broader: [Models](glossary.md#models)
 
-Records (1): [MiniMax H3](../catalog/model/minimaxai__minimax-h3.md)
+Records (7): [LTX-2](../catalog/model/lightricks__ltx-2.md), [MiniMax H3](../catalog/model/minimaxai__minimax-h3.md), [Vimoo 1.0](../catalog/model/vimoo-ai__vimoo-1.0.md), [Wan 2.2](../catalog/model/wan-ai__wan2.2.md), [mlx-video](../catalog/tool/blaizzy__mlx-video.md), [ComfyUI](../catalog/tool/comfy-org__comfyui.md), [Draw Things](../catalog/tool/drawthings.ai.md)
 
 ## <a id="making"></a>Making
 
@@ -407,7 +407,7 @@ Scope: Agent runtimes and schedulers that start work without a person.
 
 Broader: [Automation](glossary.md#automation)
 
-Records (18): [Run Claude Code programmatically (claude -p)](../catalog/source/code.claude.com__docs__en__headless.md), [Claude Code cloud scheduled tasks (formerly routines)](../catalog/source/code.claude.com__docs__en__routines.md), [Claude Code: run prompts on a schedule (/loop) and compare scheduling options](../catalog/source/code.claude.com__docs__en__scheduled-tasks.md), [GitHub Actions: deployments and environments (required reviewers)](../catalog/source/docs.github.com__en__actions__reference__workflows-and-actions__deployments-and-environments.md), [GitHub Actions: events that trigger workflows (schedule)](../catalog/source/docs.github.com__en__actions__reference__workflows-and-actions__events-that-trigger-workflows.md), [bb configuration reference](../catalog/source/github.com__get-bb__bb__blob__main__docs__configuration.md.md), [Using bb on multiple devices](../catalog/source/github.com__get-bb__bb__blob__main__docs__multiple-devices.md.md), [bb automations: script runtime reference](../catalog/source/github.com__get-bb__bb__blob__main__plugins__automations__skills__automations__references__script-runtime.md.md), [Hermes Agent security: dangerous command approval](../catalog/source/hermes-agent.nousresearch.com__docs__user-guide__security.md), [Codex scheduled tasks (ChatGPT app)](../catalog/source/learn.chatgpt.com__docs__automations.md), and 8 more in the [catalog](../catalog/README.md)
+Records (24): [Run Claude Code programmatically (claude -p)](../catalog/source/code.claude.com__docs__en__headless.md), [Claude Code cloud scheduled tasks (formerly routines)](../catalog/source/code.claude.com__docs__en__routines.md), [Claude Code: run prompts on a schedule (/loop) and compare scheduling options](../catalog/source/code.claude.com__docs__en__scheduled-tasks.md), [GitHub Actions: deployments and environments (required reviewers)](../catalog/source/docs.github.com__en__actions__reference__workflows-and-actions__deployments-and-environments.md), [GitHub Actions: events that trigger workflows (schedule)](../catalog/source/docs.github.com__en__actions__reference__workflows-and-actions__events-that-trigger-workflows.md), [bb configuration reference](../catalog/source/github.com__get-bb__bb__blob__main__docs__configuration.md.md), [Using bb on multiple devices](../catalog/source/github.com__get-bb__bb__blob__main__docs__multiple-devices.md.md), [bb automations: script runtime reference](../catalog/source/github.com__get-bb__bb__blob__main__plugins__automations__skills__automations__references__script-runtime.md.md), [Hermes Agent security: dangerous command approval](../catalog/source/hermes-agent.nousresearch.com__docs__user-guide__security.md), [Codex scheduled tasks (ChatGPT app)](../catalog/source/learn.chatgpt.com__docs__automations.md), and 14 more in the [catalog](../catalog/README.md)
 
 ## <a id="still-images"></a>Still images
 
@@ -419,7 +419,7 @@ Scope: Images as a deliverable or as input to a video stage.
 
 Broader: [Making](glossary.md#making)
 
-Records (0): none yet
+Records (5): [FLUX 3 Image Klein](../catalog/model/black-forest-labs__flux-3-image-klein.md), [SeedVR2](../catalog/model/bytedance-seed__seedvr.md), [Qwen-Image](../catalog/model/qwen__qwen-image.md), [Z-Image](../catalog/model/tongyi-mai__z-image.md), [MFLUX](../catalog/tool/mflux-community__mflux.md)
 
 ## <a id="story-and-decomposition"></a>Story and decomposition
 

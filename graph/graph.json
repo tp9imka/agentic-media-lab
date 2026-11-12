@@ -1,6 +1,46 @@
 {
  "nodes": [
   {
+   "id": "model:ace-step/ace-step",
+   "kind": "model",
+   "label": "ACE-Step 1.5",
+   "path": "catalog/model/ace-step__ace-step.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:audio-and-captions"
+   ]
+  },
+  {
+   "id": "model:black-forest-labs/flux-3-image-klein",
+   "kind": "model",
+   "label": "FLUX 3 Image Klein",
+   "path": "catalog/model/black-forest-labs__flux-3-image-klein.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-secondary",
+   "concepts": [
+    "concept:image-models",
+    "concept:still-images",
+    "concept:licences-and-territory",
+    "concept:consistency"
+   ]
+  },
+  {
+   "id": "model:bytedance-seed/seedvr",
+   "kind": "model",
+   "label": "SeedVR2",
+   "path": "catalog/model/bytedance-seed__seedvr.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:delivery",
+    "concept:still-images"
+   ]
+  },
+  {
    "id": "model:google/gemini-omni-flash",
    "kind": "model",
    "label": "Gemini Omni Flash",
@@ -23,6 +63,32 @@
    "badge": "quoted-primary",
    "concepts": [
     "concept:hosted-video-models"
+   ]
+  },
+  {
+   "id": "model:hexgrad/kokoro",
+   "kind": "model",
+   "label": "Kokoro-82M",
+   "path": "catalog/model/hexgrad__kokoro.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:audio-and-captions"
+   ]
+  },
+  {
+   "id": "model:lightricks/ltx-2",
+   "kind": "model",
+   "label": "LTX-2",
+   "path": "catalog/model/lightricks__ltx-2.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:local-video-models",
+    "concept:generated-footage",
+    "concept:licences-and-territory"
    ]
   },
   {
@@ -49,6 +115,59 @@
    "badge": "quoted-primary",
    "concepts": [
     "concept:hosted-video-models"
+   ]
+  },
+  {
+   "id": "model:qwen/qwen-image",
+   "kind": "model",
+   "label": "Qwen-Image",
+   "path": "catalog/model/qwen__qwen-image.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:image-models",
+    "concept:still-images",
+    "concept:licences-and-territory"
+   ]
+  },
+  {
+   "id": "model:tongyi-mai/z-image",
+   "kind": "model",
+   "label": "Z-Image",
+   "path": "catalog/model/tongyi-mai__z-image.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:image-models",
+    "concept:still-images"
+   ]
+  },
+  {
+   "id": "model:vimoo-ai/vimoo-1.0",
+   "kind": "model",
+   "label": "Vimoo 1.0",
+   "path": "catalog/model/vimoo-ai__vimoo-1.0.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:local-video-models",
+    "concept:generated-footage"
+   ]
+  },
+  {
+   "id": "model:wan-ai/wan2.2",
+   "kind": "model",
+   "label": "Wan 2.2",
+   "path": "catalog/model/wan-ai__wan2.2.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:local-video-models",
+    "concept:generated-footage"
    ]
   },
   {
@@ -298,6 +417,20 @@
    ]
   },
   {
+   "id": "tool:blaizzy/mlx-video",
+   "kind": "tool",
+   "label": "mlx-video",
+   "path": "catalog/tool/blaizzy__mlx-video.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:local-video-models",
+    "concept:generated-footage",
+    "concept:scheduling-and-runtimes"
+   ]
+  },
+  {
    "id": "tool:browser-use/video-use",
    "kind": "tool",
    "label": "video-use",
@@ -326,6 +459,21 @@
     "concept:consistency",
     "concept:agent-skills",
     "concept:agent-portability"
+   ]
+  },
+  {
+   "id": "tool:comfy-org/comfyui",
+   "kind": "tool",
+   "label": "ComfyUI",
+   "path": "catalog/tool/comfy-org__comfyui.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:scheduling-and-runtimes",
+    "concept:local-video-models",
+    "concept:image-models",
+    "concept:agentic-pipelines"
    ]
   },
   {
@@ -388,6 +536,20 @@
    ]
   },
   {
+   "id": "tool:drawthings.ai",
+   "kind": "tool",
+   "label": "Draw Things",
+   "path": "catalog/tool/drawthings.ai.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:local-video-models",
+    "concept:image-models",
+    "concept:scheduling-and-runtimes"
+   ]
+  },
+  {
    "id": "tool:ffmpeg/ffmpeg",
    "kind": "tool",
    "label": "FFmpeg",
@@ -429,6 +591,19 @@
     "concept:scheduling-and-runtimes",
     "concept:orchestration",
     "concept:agent-portability"
+   ]
+  },
+  {
+   "id": "tool:ggml-org/whisper.cpp",
+   "kind": "tool",
+   "label": "whisper.cpp",
+   "path": "catalog/tool/ggml-org__whisper.cpp.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:audio-and-captions",
+    "concept:scheduling-and-runtimes"
    ]
   },
   {
@@ -576,6 +751,20 @@
    ]
   },
   {
+   "id": "tool:mflux-community/mflux",
+   "kind": "tool",
+   "label": "MFLUX",
+   "path": "catalog/tool/mflux-community__mflux.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:still-images",
+    "concept:image-models",
+    "concept:scheduling-and-runtimes"
+   ]
+  },
+  {
    "id": "tool:midrender/revideo",
    "kind": "tool",
    "label": "Revideo",
@@ -601,6 +790,19 @@
     "concept:code-driven-video",
     "concept:footage-editing",
     "concept:audio-and-captions"
+   ]
+  },
+  {
+   "id": "tool:ml-explore/mlx-examples/whisper",
+   "kind": "tool",
+   "label": "mlx-whisper",
+   "path": "catalog/tool/ml-explore__mlx-examples__whisper.md",
+   "status": "current",
+   "inactive": false,
+   "badge": "quoted-primary",
+   "concepts": [
+    "concept:audio-and-captions",
+    "concept:scheduling-and-runtimes"
    ]
   },
   {
@@ -1022,6 +1224,66 @@
  ],
  "edges": [
   {
+   "source": "model:ace-step/ace-step",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "model:black-forest-labs/flux-3-image-klein",
+   "target": "concept:consistency",
+   "rel": "about"
+  },
+  {
+   "source": "model:black-forest-labs/flux-3-image-klein",
+   "target": "concept:image-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:black-forest-labs/flux-3-image-klein",
+   "target": "concept:licences-and-territory",
+   "rel": "about"
+  },
+  {
+   "source": "model:black-forest-labs/flux-3-image-klein",
+   "target": "concept:still-images",
+   "rel": "about"
+  },
+  {
+   "source": "model:black-forest-labs/flux-3-image-klein",
+   "target": "model:tongyi-mai/z-image",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "model:black-forest-labs/flux-3-image-klein",
+   "target": "tool:drawthings.ai",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "model:black-forest-labs/flux-3-image-klein",
+   "target": "tool:mflux-community/mflux",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "model:bytedance-seed/seedvr",
+   "target": "concept:delivery",
+   "rel": "about"
+  },
+  {
+   "source": "model:bytedance-seed/seedvr",
+   "target": "concept:still-images",
+   "rel": "about"
+  },
+  {
+   "source": "model:bytedance-seed/seedvr",
+   "target": "tool:drawthings.ai",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "model:bytedance-seed/seedvr",
+   "target": "tool:mflux-community/mflux",
+   "rel": "integrates_with"
+  },
+  {
    "source": "model:google/gemini-omni-flash",
    "target": "concept:cost",
    "rel": "about"
@@ -1042,6 +1304,41 @@
    "rel": "alternative_to"
   },
   {
+   "source": "model:hexgrad/kokoro",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "model:lightricks/ltx-2",
+   "target": "concept:generated-footage",
+   "rel": "about"
+  },
+  {
+   "source": "model:lightricks/ltx-2",
+   "target": "concept:licences-and-territory",
+   "rel": "about"
+  },
+  {
+   "source": "model:lightricks/ltx-2",
+   "target": "concept:local-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:lightricks/ltx-2",
+   "target": "model:wan-ai/wan2.2",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "model:lightricks/ltx-2",
+   "target": "tool:blaizzy/mlx-video",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "model:lightricks/ltx-2",
+   "target": "tool:drawthings.ai",
+   "rel": "integrates_with"
+  },
+  {
    "source": "model:minimaxai/minimax-h3",
    "target": "concept:hosted-video-models",
    "rel": "about"
@@ -1060,6 +1357,96 @@
    "source": "model:openai/sora-2",
    "target": "concept:hosted-video-models",
    "rel": "about"
+  },
+  {
+   "source": "model:qwen/qwen-image",
+   "target": "concept:image-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:qwen/qwen-image",
+   "target": "concept:licences-and-territory",
+   "rel": "about"
+  },
+  {
+   "source": "model:qwen/qwen-image",
+   "target": "concept:still-images",
+   "rel": "about"
+  },
+  {
+   "source": "model:qwen/qwen-image",
+   "target": "model:tongyi-mai/z-image",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "model:qwen/qwen-image",
+   "target": "tool:mflux-community/mflux",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "model:tongyi-mai/z-image",
+   "target": "concept:image-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:tongyi-mai/z-image",
+   "target": "concept:still-images",
+   "rel": "about"
+  },
+  {
+   "source": "model:tongyi-mai/z-image",
+   "target": "model:black-forest-labs/flux-3-image-klein",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "model:tongyi-mai/z-image",
+   "target": "tool:mflux-community/mflux",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "model:vimoo-ai/vimoo-1.0",
+   "target": "concept:generated-footage",
+   "rel": "about"
+  },
+  {
+   "source": "model:vimoo-ai/vimoo-1.0",
+   "target": "concept:local-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:vimoo-ai/vimoo-1.0",
+   "target": "model:wan-ai/wan2.2",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "model:vimoo-ai/vimoo-1.0",
+   "target": "tool:comfy-org/comfyui",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "model:wan-ai/wan2.2",
+   "target": "concept:generated-footage",
+   "rel": "about"
+  },
+  {
+   "source": "model:wan-ai/wan2.2",
+   "target": "concept:local-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "model:wan-ai/wan2.2",
+   "target": "model:lightricks/ltx-2",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "model:wan-ai/wan2.2",
+   "target": "tool:blaizzy/mlx-video",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "model:wan-ai/wan2.2",
+   "target": "tool:drawthings.ai",
+   "rel": "integrates_with"
   },
   {
    "source": "source:code.claude.com/docs/en/headless",
@@ -1422,6 +1809,36 @@
    "rel": "about"
   },
   {
+   "source": "tool:blaizzy/mlx-video",
+   "target": "concept:generated-footage",
+   "rel": "about"
+  },
+  {
+   "source": "tool:blaizzy/mlx-video",
+   "target": "concept:local-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "tool:blaizzy/mlx-video",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "tool:blaizzy/mlx-video",
+   "target": "model:lightricks/ltx-2",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:blaizzy/mlx-video",
+   "target": "model:wan-ai/wan2.2",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:blaizzy/mlx-video",
+   "target": "tool:drawthings.ai",
+   "rel": "alternative_to"
+  },
+  {
    "source": "tool:browser-use/video-use",
    "target": "concept:agent-skills",
    "rel": "about"
@@ -1470,6 +1887,36 @@
    "source": "tool:calesthio/generative-media-skills",
    "target": "tool:openmontageinc/openmontage",
    "rel": "integrates_with"
+  },
+  {
+   "source": "tool:comfy-org/comfyui",
+   "target": "concept:agentic-pipelines",
+   "rel": "about"
+  },
+  {
+   "source": "tool:comfy-org/comfyui",
+   "target": "concept:image-models",
+   "rel": "about"
+  },
+  {
+   "source": "tool:comfy-org/comfyui",
+   "target": "concept:local-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "tool:comfy-org/comfyui",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "tool:comfy-org/comfyui",
+   "target": "model:vimoo-ai/vimoo-1.0",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:comfy-org/comfyui",
+   "target": "tool:mflux-community/mflux",
+   "rel": "alternative_to"
   },
   {
    "source": "tool:coreyhaines31/marketingskills",
@@ -1562,6 +2009,36 @@
    "rel": "extends"
   },
   {
+   "source": "tool:drawthings.ai",
+   "target": "concept:image-models",
+   "rel": "about"
+  },
+  {
+   "source": "tool:drawthings.ai",
+   "target": "concept:local-video-models",
+   "rel": "about"
+  },
+  {
+   "source": "tool:drawthings.ai",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "tool:drawthings.ai",
+   "target": "model:black-forest-labs/flux-3-image-klein",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:drawthings.ai",
+   "target": "model:lightricks/ltx-2",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:drawthings.ai",
+   "target": "model:minimaxai/minimax-h3",
+   "rel": "integrates_with"
+  },
+  {
    "source": "tool:ffmpeg/ffmpeg",
    "target": "concept:audio-and-captions",
    "rel": "about"
@@ -1649,6 +2126,21 @@
   {
    "source": "tool:get-bb/bb",
    "target": "tool:nousresearch/hermes-agent",
+   "rel": "alternative_to"
+  },
+  {
+   "source": "tool:ggml-org/whisper.cpp",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:ggml-org/whisper.cpp",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "tool:ggml-org/whisper.cpp",
+   "target": "tool:ml-explore/mlx-examples/whisper",
    "rel": "alternative_to"
   },
   {
@@ -1867,6 +2359,46 @@
    "rel": "about"
   },
   {
+   "source": "tool:mflux-community/mflux",
+   "target": "concept:image-models",
+   "rel": "about"
+  },
+  {
+   "source": "tool:mflux-community/mflux",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "tool:mflux-community/mflux",
+   "target": "concept:still-images",
+   "rel": "about"
+  },
+  {
+   "source": "tool:mflux-community/mflux",
+   "target": "model:black-forest-labs/flux-3-image-klein",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:mflux-community/mflux",
+   "target": "model:bytedance-seed/seedvr",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:mflux-community/mflux",
+   "target": "model:qwen/qwen-image",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:mflux-community/mflux",
+   "target": "model:tongyi-mai/z-image",
+   "rel": "integrates_with"
+  },
+  {
+   "source": "tool:mflux-community/mflux",
+   "target": "tool:drawthings.ai",
+   "rel": "alternative_to"
+  },
+  {
    "source": "tool:midrender/revideo",
    "target": "concept:audio-and-captions",
    "rel": "about"
@@ -1905,6 +2437,21 @@
    "source": "tool:mifi/editly",
    "target": "tool:ffmpeg/ffmpeg",
    "rel": "depends_on"
+  },
+  {
+   "source": "tool:ml-explore/mlx-examples/whisper",
+   "target": "concept:audio-and-captions",
+   "rel": "about"
+  },
+  {
+   "source": "tool:ml-explore/mlx-examples/whisper",
+   "target": "concept:scheduling-and-runtimes",
+   "rel": "about"
+  },
+  {
+   "source": "tool:ml-explore/mlx-examples/whisper",
+   "target": "tool:ggml-org/whisper.cpp",
+   "rel": "alternative_to"
   },
   {
    "source": "tool:mort1d/motion-graphics-skills",

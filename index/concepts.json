@@ -96,11 +96,12 @@
    ],
    "related": [],
    "record_ids": [
+    "tool:comfy-org/comfyui",
     "tool:nexu-io/html-video",
     "tool:nousresearch/kanban-video-pipeline",
     "tool:openmontageinc/openmontage"
    ],
-   "count": 3
+   "count": 4
   },
   {
    "id": "concept:audio-and-captions",
@@ -126,19 +127,23 @@
    ],
    "related": [],
    "record_ids": [
+    "model:ace-step/ace-step",
+    "model:hexgrad/kokoro",
     "tool:browser-use/video-use",
     "tool:calesthio/generative-media-skills",
     "tool:coreyhaines31/marketingskills",
     "tool:dojocodinglabs/remotion-superpowers",
     "tool:ffmpeg/ffmpeg",
+    "tool:ggml-org/whisper.cpp",
     "tool:josiahsiegel/claude-plugin-marketplace",
     "tool:midrender/revideo",
     "tool:mifi/editly",
+    "tool:ml-explore/mlx-examples/whisper",
     "tool:mort1d/motion-graphics-skills",
     "tool:motion-canvas/motion-canvas",
     "tool:openmontageinc/openmontage"
    ],
-   "count": 11
+   "count": 15
   },
   {
    "id": "concept:automation",
@@ -234,12 +239,13 @@
    ],
    "related": [],
    "record_ids": [
+    "model:black-forest-labs/flux-3-image-klein",
     "source:github.com/haxzie/genmotion/blob/main/docs/research/hyperframes-remotion.md",
     "tool:0xs4n4tg/kinetograph",
     "tool:calesthio/generative-media-skills",
     "tool:digitalsamba/claude-code-video-toolkit"
    ],
-   "count": 4
+   "count": 5
   },
   {
    "id": "concept:cost",
@@ -295,12 +301,13 @@
    ],
    "related": [],
    "record_ids": [
+    "model:bytedance-seed/seedvr",
     "tool:calesthio/generative-media-skills",
     "tool:ffmpeg/ffmpeg",
     "tool:kajisho5/ffmpeg-skill",
     "tool:mort1d/motion-graphics-skills"
    ],
-   "count": 4
+   "count": 5
   },
   {
    "id": "concept:evaluation",
@@ -391,8 +398,13 @@
     "concept:making"
    ],
    "related": [],
-   "record_ids": [],
-   "count": 0
+   "record_ids": [
+    "model:lightricks/ltx-2",
+    "model:vimoo-ai/vimoo-1.0",
+    "model:wan-ai/wan2.2",
+    "tool:blaizzy/mlx-video"
+   ],
+   "count": 4
   },
   {
    "id": "concept:hosted-video-models",
@@ -440,8 +452,15 @@
     "concept:models"
    ],
    "related": [],
-   "record_ids": [],
-   "count": 0
+   "record_ids": [
+    "model:black-forest-labs/flux-3-image-klein",
+    "model:qwen/qwen-image",
+    "model:tongyi-mai/z-image",
+    "tool:comfy-org/comfyui",
+    "tool:drawthings.ai",
+    "tool:mflux-community/mflux"
+   ],
+   "count": 6
   },
   {
    "id": "concept:licences-and-territory",
@@ -462,7 +481,10 @@
    ],
    "related": [],
    "record_ids": [
+    "model:black-forest-labs/flux-3-image-klein",
+    "model:lightricks/ltx-2",
     "model:minimaxai/minimax-h3",
+    "model:qwen/qwen-image",
     "source:hyperframes.heygen.com/guides/hyperframes-vs-remotion",
     "tool:activepieces/activepieces",
     "tool:greensock/gsap",
@@ -470,7 +492,7 @@
     "tool:remotion-dev/remotion",
     "tool:windmill-labs/windmill"
    ],
-   "count": 7
+   "count": 10
   },
   {
    "id": "concept:local-video-models",
@@ -493,9 +515,15 @@
    ],
    "related": [],
    "record_ids": [
-    "model:minimaxai/minimax-h3"
+    "model:lightricks/ltx-2",
+    "model:minimaxai/minimax-h3",
+    "model:vimoo-ai/vimoo-1.0",
+    "model:wan-ai/wan2.2",
+    "tool:blaizzy/mlx-video",
+    "tool:comfy-org/comfyui",
+    "tool:drawthings.ai"
    ],
-   "count": 1
+   "count": 7
   },
   {
    "id": "concept:making",
@@ -817,14 +845,20 @@
     "source:learn.chatgpt.com/docs/automations",
     "source:learn.chatgpt.com/docs/non-interactive-mode",
     "tool:activepieces/activepieces",
+    "tool:blaizzy/mlx-video",
+    "tool:comfy-org/comfyui",
+    "tool:drawthings.ai",
     "tool:get-bb/bb",
+    "tool:ggml-org/whisper.cpp",
+    "tool:mflux-community/mflux",
+    "tool:ml-explore/mlx-examples/whisper",
     "tool:n8n-io/n8n",
     "tool:nousresearch/hermes-agent",
     "tool:temporalio/temporal",
     "tool:triggerdotdev/trigger.dev",
     "tool:windmill-labs/windmill"
    ],
-   "count": 18
+   "count": 24
   },
   {
    "id": "concept:still-images",
@@ -845,8 +879,14 @@
     "concept:making"
    ],
    "related": [],
-   "record_ids": [],
-   "count": 0
+   "record_ids": [
+    "model:black-forest-labs/flux-3-image-klein",
+    "model:bytedance-seed/seedvr",
+    "model:qwen/qwen-image",
+    "model:tongyi-mai/z-image",
+    "tool:mflux-community/mflux"
+   ],
+   "count": 5
   },
   {
    "id": "concept:story-and-decomposition",

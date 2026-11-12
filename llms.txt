@@ -1,6 +1,6 @@
 # Agentic Media Lab
 
-> Which skill, renderer and model to use when a coding agent makes your video - with runs you can repeat. Records: 57 (39 tool, 4 model, 14 source, 0 recipe). Concepts: 35. Pages: 2. Size: about 59500 tokens (estimate, characters / 4).
+> Which skill, renderer and model to use when a coding agent makes your video - with runs you can repeat. Records: 72 (45 tool, 13 model, 14 source, 0 recipe). Concepts: 35. Pages: 2. Size: about 72690 tokens (estimate, characters / 4).
 
 ## Entry points
 
@@ -14,6 +14,8 @@
 
 ## Records
 
+- [Kokoro-82M](https://tp9imka.github.io/agentic-media-lab/catalog/model/hexgrad__kokoro.md): model, quoted-primary. It gives an agent a free, local narration voice with commercial use allowed, small enough to run beside a video model.
+- [Z-Image](https://tp9imka.github.io/agentic-media-lab/catalog/model/tongyi-mai__z-image.md): model, quoted-primary. It is the small, permissive image model with published memory numbers on a 64 GB Apple Silicon Mac, which makes it the default for local ...
 - [Run Claude Code programmatically (claude -p)](https://tp9imka.github.io/agentic-media-lab/catalog/source/code.claude.com__docs__en__headless.md): source, quoted-primary. claude -p is what a system crontab, launchd job or CI runner calls; this page sets what such a run may do without a person.
 - [Claude Code cloud scheduled tasks (formerly routines)](https://tp9imka.github.io/agentic-media-lab/catalog/source/code.claude.com__docs__en__routines.md): source, quoted-primary. The only option in this lane that keeps firing with the laptop shut and needs no server of your own, at the cost of no local files.
 - [Claude Code: run prompts on a schedule (/loop) and compare scheduling options](https://tp9imka.github.io/agentic-media-lab/catalog/source/code.claude.com__docs__en__scheduled-tasks.md): source, quoted-primary. The comparison table answers where each Claude Code schedule runs and what must stay on, in one place.
@@ -28,20 +30,30 @@
 - [claude-code-video-toolkit](https://tp9imka.github.io/agentic-media-lab/catalog/tool/digitalsamba__claude-code-video-toolkit.md): tool, quoted-primary. Its design rules address the most common amateur tells: wrapped titles, drifting alignment, colour changes with no reason.
 - [FFmpeg](https://tp9imka.github.io/agentic-media-lab/catalog/tool/ffmpeg__ffmpeg.md): tool, quoted-primary. An agent can finish or assemble a clip with FFmpeg alone, and most render failures that reach the reader are FFmpeg input mismatches.
 - [bb](https://tp9imka.github.io/agentic-media-lab/catalog/tool/get-bb__bb.md): tool, quoted-primary. The closest fit found for a single developer who wants a scheduled Claude Code or Codex run on their own Mac, with run history and a ...
+- [whisper.cpp](https://tp9imka.github.io/agentic-media-lab/catalog/tool/ggml-org__whisper.cpp.md): tool, quoted-primary. It gives an agent a local transcript with timestamps for captions, on the Mac GPU, from one command.
 - [GSAP](https://tp9imka.github.io/agentic-media-lab/catalog/tool/greensock__gsap.md): tool, quoted-primary. Most HTML video an agent writes moves with GSAP, so its licence travels with every HyperFrames clip.
 - [HyperFrames](https://tp9imka.github.io/agentic-media-lab/catalog/tool/heygen-com__hyperframes.md): tool, quoted-primary. One of the two renderers most agent-made video runs on, and its skill carries numeric motion, review and loudness rules.
 - [ffmpeg-skill](https://tp9imka.github.io/agentic-media-lab/catalog/tool/kajisho5__ffmpeg-skill.md): tool, quoted-primary. It is the clearest delivery skill found: platform checks on the output file, numbers in the report, and a contact sheet the agent must view ...
 - [Manim Community Edition](https://tp9imka.github.io/agentic-media-lab/catalog/tool/manimcommunity__manim.md): tool, quoted-primary. The usual route for diagram and equation animation written by an agent in Python, with a one-flag way to get the last frame as a PNG.
+- [MFLUX](https://tp9imka.github.io/agentic-media-lab/catalog/tool/mflux-community__mflux.md): tool, quoted-primary. It is the shortest documented path from a coding agent to a local image or upscale on Apple Silicon: one shell command per image, no server.
+- [mlx-whisper](https://tp9imka.github.io/agentic-media-lab/catalog/tool/ml-explore__mlx-examples__whisper.md): tool, quoted-primary. It is the pip-installable way for an agent on a Mac to get a transcript file without compiling anything.
 - [motion-graphics (Mort1d)](https://tp9imka.github.io/agentic-media-lab/catalog/tool/mort1d__motion-graphics-skills.md): tool, quoted-primary. It fixes a master spec, forbids copying reference material, and makes the agent critique until every score is 8 or more before the final ...
 - [Remotion](https://tp9imka.github.io/agentic-media-lab/catalog/tool/remotion-dev__remotion.md): tool, quoted-primary. The most established code renderer an agent can drive locally, and the one most skills target. Its licence is the first thing to check ...
 - [Remotion Agent Skills](https://tp9imka.github.io/agentic-media-lab/catalog/tool/remotion-dev__skills.md): tool, quoted-primary. The reference skills for the other dominant renderer. They state support for Codex and Cursor as well as Claude Code.
 
 ## Optional
 
+- [ACE-Step 1.5](https://tp9imka.github.io/agentic-media-lab/catalog/model/ace-step__ace-step.md): model, quoted-primary. It gives a local soundtrack with a stated permission for commercial use of the output, and its macOS scripts use MLX.
+- [FLUX 3 Image Klein](https://tp9imka.github.io/agentic-media-lab/catalog/model/black-forest-labs__flux-3-image-klein.md): model, quoted-secondary. It does generation and multi-reference editing in one model with measured memory on a 64 GB Mac, but its licence caps paid work by the ...
+- [SeedVR2](https://tp9imka.github.io/agentic-media-lab/catalog/model/bytedance-seed__seedvr.md): model, quoted-primary. Upscaling is a cheap last step to make a local clip or still look finished, and mflux ships an MLX upscale command for it.
 - [Gemini Omni Flash](https://tp9imka.github.io/agentic-media-lab/catalog/model/google__gemini-omni-flash.md): model, quoted-primary. It is the replacement Google names for Veo 3.1 on the Gemini API.
 - [Veo 3.1](https://tp9imka.github.io/agentic-media-lab/catalog/model/google__veo-3.1.md): model, quoted-primary. Code and skills that call Veo through the Gemini API need to migrate.
+- [LTX-2](https://tp9imka.github.io/agentic-media-lab/catalog/model/lightricks__ltx-2.md): model, quoted-primary. It is the open video model with the most documented Mac routes: the official PyTorch code on MPS, mlx-video for LTX-2 and 2.3, and Draw ...
 - [MiniMax H3](https://tp9imka.github.io/agentic-media-lab/catalog/model/minimaxai__minimax-h3.md): model, quoted-primary. A leading open-weights video model whose licence does not cover several major regions.
 - [Sora 2](https://tp9imka.github.io/agentic-media-lab/catalog/model/openai__sora-2.md): model (archived), quoted-primary. Many guides and skills still call it. Anything that depends on the Videos API no longer runs.
+- [Qwen-Image](https://tp9imka.github.io/agentic-media-lab/catalog/model/qwen__qwen-image.md): model, quoted-primary. It runs on a 64 GB Mac with published timings, but version 2.1 is licensed for research and evaluation only.
+- [Vimoo 1.0](https://tp9imka.github.io/agentic-media-lab/catalog/model/vimoo-ai__vimoo-1.0.md): model, quoted-primary. It is the one open video model whose own vendor publishes an Apple Silicon package with a CLI, under Apache 2.0.
+- [Wan 2.2](https://tp9imka.github.io/agentic-media-lab/catalog/model/wan-ai__wan2.2.md): model, quoted-primary. It is the main Apache-2.0 video family with a documented MLX route on a Mac, so client work carries no revenue cap.
 - [Using bb on multiple devices](https://tp9imka.github.io/agentic-media-lab/catalog/source/github.com__get-bb__bb__blob__main__docs__multiple-devices.md.md): source, quoted-primary. It answers what must stay running for a bb schedule to fire: the server machine, awake.
 - [HyperFrames vs Remotion research note (GenMotion)](https://tp9imka.github.io/agentic-media-lab/catalog/source/github.com__haxzie__genmotion__blob__main__docs__research__hyperframes-remotion.md.md): source, quoted-secondary. The only source found that says how HyperFrames capture differs on macOS, which is the reader's machine.
 - [HyperFrames vs Remotion (HeyGen guide)](https://tp9imka.github.io/agentic-media-lab/catalog/source/hyperframes.heygen.com__guides__hyperframes-vs-remotion.md): source, quoted-secondary. The vendor of one side states where the other is better and admits HyperFrames fails quietly when its rules are broken. Read it as a party ...
@@ -50,10 +62,13 @@
 - [ManimGL (3b1b/manim)](https://tp9imka.github.io/agentic-media-lab/catalog/tool/3b1b__manim.md): tool, quoted-primary. The original engine behind 3Blue1Brown videos. An agent that writes ManimCE code for it, or the reverse, gets errors, so the reader must ...
 - [Activepieces](https://tp9imka.github.io/agentic-media-lab/catalog/tool/activepieces__activepieces.md): tool, quoted-primary. A permissive alternative to n8n, but its documented approval feature gates publishing a flow, not a step inside a run.
 - [MCP for Blender](https://tp9imka.github.io/agentic-media-lab/catalog/tool/ahujasid__mcp-for-blender.md): tool, quoted-primary. The working path for 3D shots driven by an agent, with a built-in way for the agent to see its own frames.
+- [mlx-video](https://tp9imka.github.io/agentic-media-lab/catalog/tool/blaizzy__mlx-video.md): tool, quoted-primary. It is the documented MLX path for the two main open video families, with a command an agent can call and an MP4 as output.
 - [video-use](https://tp9imka.github.io/agentic-media-lab/catalog/tool/browser-use__video-use.md): tool, quoted-primary. The clearest example of a skill that inspects its own output at every cut before handing it over.
+- [ComfyUI](https://tp9imka.github.io/agentic-media-lab/catalog/tool/comfy-org__comfyui.md): tool, quoted-primary. Many model vendors ship ComfyUI workflows first, and comfy-cli gives an agent a command to run them locally on a Mac.
 - [marketingskills (video, product-demo-recording)](https://tp9imka.github.io/agentic-media-lab/catalog/tool/coreyhaines31__marketingskills.md): tool, quoted-primary. Screen demos are the most common developer clip, and this reference fixes their usual tells: an invisible cursor, captions covering the ...
 - [fframes](https://tp9imka.github.io/agentic-media-lab/catalog/tool/dmtrkovalenko__fframes.md): tool, quoted-secondary. A browser-free renderer aimed at agent iteration speed. Its speed claim against Remotion is the vendor's own and unmeasured here.
 - [remotion-superpowers](https://tp9imka.github.io/agentic-media-lab/catalog/tool/dojocodinglabs__remotion-superpowers.md): tool, quoted-primary. Its review command does a cheap local frame check first, then a scored AI watch of the full render, and tells the agent to trust its own ...
+- [Draw Things](https://tp9imka.github.io/agentic-media-lab/catalog/tool/drawthings.ai.md): tool, quoted-primary. Its release log is the most up-to-date record of which open models run on a Mac at all, including LTX-2.3, MiniMax H3 and FLUX 3 Image ...
 - [smooth-animation-skill](https://tp9imka.github.io/agentic-media-lab/catalog/tool/flchntc__smooth-animation-skill.md): tool, quoted-primary. It replaces 'looks choppy' with a measured number and a fixed order of fixes, and it re-measures the final file.
 - [claude-remotion-skill](https://tp9imka.github.io/agentic-media-lab/catalog/tool/haidrrrry__claude-remotion-skill.md): tool, quoted-primary. Adds the frame-inspection step the official Remotion skills leave to a person.
 - [motion-skills (iArt)](https://tp9imka.github.io/agentic-media-lab/catalog/tool/iart-ai__motion-skills.md): tool, quoted-primary. The verify scripts are a renderer-neutral review loop: look at three frames on one sheet, then assert resolution, codec, fps and duration ...
