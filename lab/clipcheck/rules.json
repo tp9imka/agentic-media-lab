@@ -1,0 +1,210 @@
+{
+ "schema_version": 1,
+ "note": "Each rule names the hub records it comes from. `match` is a substring of a claim quote in that record; clipcheck resolves it from index/records.jsonl at run time, so the quote shown is the hub's verbatim text. A rule whose provenance does not resolve says so.",
+ "rules": [
+  {
+   "id": "stream",
+   "severity": "error",
+   "title": "Size, rate, length and codec match the contract",
+   "hint": "Render at the contract's size, fps and length. Check the composition settings before changing content.",
+   "provenance": [
+    {
+     "record": "tool:kajisho5/ffmpeg-skill",
+     "match": "check.py OUTPUT --platform"
+    }
+   ]
+  },
+  {
+   "id": "colour-tags",
+   "severity": "warning",
+   "title": "The file says which colour space it is in",
+   "hint": "Tag the output (for Remotion: --color-space=bt709). An untagged file is decoded by guesswork and the palette shifts.",
+   "provenance": [
+    {
+     "record": "example:hyperframes-vs-remotion",
+     "note": "run here once: the untagged Remotion render decoded the accent as #43B589 instead of #4CC38A"
+    }
+   ]
+  },
+  {
+   "id": "first-frame",
+   "severity": "warning",
+   "title": "The first frame is not empty",
+   "hint": "Start with the first element already visible, or set a poster frame. Platforms take the thumbnail from early frames.",
+   "provenance": [
+    {
+     "record": "source:github.com/heygen-com/hyperframes/issues/4435",
+     "match": "blank"
+    },
+    {
+     "record": "example:hyperframes-vs-remotion",
+     "note": "run here once: one clip opened on 7 empty frames"
+    }
+   ]
+  },
+  {
+   "id": "empty-frames",
+   "severity": "error",
+   "title": "No frame mid-clip without scene content",
+   "hint": "Overlap the outgoing and incoming scene, or hold one element through the cut. Check the exact frames listed.",
+   "provenance": [
+    {
+     "record": "tool:heygen-com/hyperframes",
+     "match": "Exits"
+    },
+    {
+     "record": "example:hyperframes-vs-remotion",
+     "note": "run here once: three scene changes passed through a frame showing only an accent bar; a blind reviewer flagged it"
+    }
+   ]
+  },
+  {
+   "id": "sparse-frames",
+   "severity": "warning",
+   "title": "No run of frames that is nearly bare",
+   "hint": "Start the incoming scene earlier or let the outgoing one leave later, so the two overlap.",
+   "provenance": [
+    {
+     "record": "tool:heygen-com/hyperframes",
+     "match": "Exits"
+    },
+    {
+     "record": "tool:remotion-dev/skills",
+     "match": "Decide what the viewer should notice first"
+    }
+   ]
+  },
+  {
+   "id": "palette",
+   "severity": "error",
+   "title": "Only the contract's colours are on screen",
+   "hint": "Replace the listed colours with a palette colour or an opacity step of one. Greys for secondary text and panels count as extra colours.",
+   "provenance": [
+    {
+     "record": "tool:digitalsamba/claude-code-video-toolkit",
+     "match": "Three rounds"
+    },
+    {
+     "record": "example:hyperframes-vs-remotion",
+     "note": "run here once: a grey panel and grey secondary text cost the clip a rubric point"
+    }
+   ]
+  },
+  {
+   "id": "safe-area",
+   "severity": "error",
+   "title": "Content stays inside the safe area",
+   "hint": "Move or shrink the element. Margins come from the contract; platform safe zones are larger at the bottom.",
+   "provenance": [
+    {
+     "record": "tool:remotion-dev/skills",
+     "match": "at least 80px from the sides"
+    },
+    {
+     "record": "source:facebook.com/business/ads-guide/update/video/instagram-reels",
+     "match": "14%"
+    }
+   ]
+  },
+  {
+   "id": "scene-times",
+   "severity": "warning",
+   "title": "Scene changes happen where the contract puts them",
+   "hint": "Retime the sequence so each scene starts at its contract time; a voiceover or caption track depends on it.",
+   "provenance": [
+    {
+     "record": "tool:remotion-dev/skills",
+     "match": "Decide what the viewer should notice first"
+    }
+   ]
+  },
+  {
+   "id": "abrupt-stops",
+   "severity": "warning",
+   "title": "Moves decelerate instead of stopping dead",
+   "hint": "Give arrivals an ease-out. A move that ends at full speed reads as linear, the default look of generated motion.",
+   "provenance": [
+    {
+     "record": "tool:haidrrrry/claude-remotion-skill",
+     "match": "NEVER use linear interpolation"
+    },
+    {
+     "record": "tool:heygen-com/hyperframes",
+     "match": "power2.out"
+    }
+   ]
+  },
+  {
+   "id": "long-hold",
+   "severity": "warning",
+   "title": "No long stretch with nothing moving",
+   "hint": "Add a secondary beat, or shorten the hold. The contract sets the limit.",
+   "provenance": [
+    {
+     "record": "example:hyperframes-vs-remotion",
+     "note": "no hub record quotes a hold limit yet; the contract sets it. An earlier version of this rule ignored slow wipes and an agent sped a wipe up to satisfy it"
+    }
+   ]
+  },
+  {
+   "id": "loudness",
+   "severity": "error",
+   "title": "Loudness and true peak are inside the contract range",
+   "hint": "Normalise with ffmpeg loudnorm to the contract target, then measure again with ebur128.",
+   "provenance": [
+    {
+     "record": "source:tech.ebu.ch/files/live/sites/tech/files/shared/r/r128s2.pdf",
+     "match": "16.0 LUFS"
+    },
+    {
+     "record": "source:tech.ebu.ch/publications/r128",
+     "match": "dBTP"
+    }
+   ]
+  },
+  {
+   "id": "captions",
+   "severity": "error",
+   "title": "Caption cues are short enough to read",
+   "hint": "Split the cue or slow it down: the contract sets lines, characters per line, characters per second and the shortest time on screen.",
+   "provenance": [
+    {
+     "record": "source:bbc.co.uk/accessibility/forproducts/guides/subtitles",
+     "match": "0.3 seconds per word"
+    },
+    {
+     "record": "source:partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-english-usa-timed-text-style-guide",
+     "match": "characters per second"
+    },
+    {
+     "record": "tool:calesthio/generative-media-skills",
+     "match": "max-chars-per-line"
+    }
+   ]
+  },
+  {
+   "id": "copy",
+   "severity": "error",
+   "title": "Every string in the contract appears on screen",
+   "hint": "Compare the on-screen text with the contract's copy list character by character.",
+   "provenance": [
+    {
+     "record": "example:hyperframes-vs-remotion",
+     "note": "run here once: both agents read an ambiguous brief differently and each lost a rubric point for copy"
+    }
+   ]
+  },
+  {
+   "id": "stray-numbers",
+   "severity": "warning",
+   "title": "No numbers on screen that the contract does not list",
+   "hint": "A count-up shows values that are not true on the way to the real one. Reveal the figure instead of counting to it.",
+   "provenance": [
+    {
+     "record": "example:hyperframes-vs-remotion",
+     "note": "run here once: a counter animated through 54 and 112 on the way to 147, on a line reporting a verification result"
+    }
+   ]
+  }
+ ]
+}

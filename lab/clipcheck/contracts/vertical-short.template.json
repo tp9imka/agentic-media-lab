@@ -1,0 +1,37 @@
+{
+ "name": "Vertical short, 1080x1920 (template)",
+ "note": "A starting contract for Reels and Shorts. Fill in palette, scenes and copy for your clip. Numbers come from the hub records named in rules.json; the safe area is Meta's ads guide for Reels, which is stricter than organic posts need.",
+ "stream": {
+  "size": [
+   1080,
+   1920
+  ],
+  "fps": 30,
+  "codec": "h264"
+ },
+ "safe_area": {
+  "left": 0.06,
+  "right": 0.06,
+  "top": 0.14,
+  "bottom": 0.35
+ },
+ "motion": {
+  "max_abrupt_stop_share": 0.34,
+  "max_still_s": 3.0
+ },
+ "audio": {
+  "required": true,
+  "integrated_lufs": [
+   -20.0,
+   -16.0
+  ],
+  "true_peak_dbtp": -1.0
+ },
+ "captions": {
+  "max_lines": 2,
+  "max_chars_per_line": 25,
+  "max_chars_per_second": 17,
+  "min_duration_s": 0.834,
+  "min_seconds_per_word": 0.3
+ }
+}

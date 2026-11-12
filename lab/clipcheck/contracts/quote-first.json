@@ -1,0 +1,18 @@
+{
+ "name": "Quote first (20 s)",
+ "brief": "examples/hyperframes-vs-remotion/BRIEF.md",
+ "stream": {"size": [1920, 1080], "fps": 30, "duration_s": 20.0, "duration_tolerance_s": 0.5, "codec": "h264"},
+ "palette": {"background": "#0F1419", "allowed": ["#F2F4F7", "#4CC38A"], "tolerance": 30, "max_offpalette_share": 0.002},
+ "safe_area": {"left": 0.04, "right": 0.04, "top": 0.09, "bottom": 0.09},
+ "scenes": [{"name": "title", "start_s": 0, "end_s": 3}, {"name": "step 1", "start_s": 3, "end_s": 8},
+            {"name": "step 2", "start_s": 8, "end_s": 13}, {"name": "step 3", "start_s": 13, "end_s": 17},
+            {"name": "closing", "start_s": 17, "end_s": 20}],
+ "cut_tolerance_s": 0.35,
+ "motion": {"max_abrupt_stop_share": 0.34, "max_still_s": 4.0},
+ "audio": {"required": false},
+ "copy": ["Quote first.", "How one claim gets into the hub", "Open the primary source.",
+          "The skill file. The licence. The pricing page.", "Copy the quote. Then write the sentence.",
+          "Exits are 40-50% shorter than their entrances.", "motion.md, section Motion craft",
+          "The gate finds the quote in the saved source.", "No quote, no claim.", "agentic-media-lab"],
+ "numbers_allowed": [40, 50, 147]
+}
