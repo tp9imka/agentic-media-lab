@@ -1,0 +1,13 @@
+{
+  "name": "agentic-media-lab",
+  "title": "Agentic Media Lab",
+  "tagline": "Which skill, renderer and model to use when a coding agent makes your video - with runs you can repeat.",
+  "repo_url": "https://github.com/tp9imka/agentic-media-lab",
+  "base_url": "https://tp9imka.github.io/agentic-media-lab/",
+  "lifetime": "living",
+  "kinds": ["tool", "model", "source", "recipe"],
+  "review_interval_days": {"volatile": 30, "tool": 90, "model": 30, "recipe": 90, "source": 365, "concept": 365},
+  "popularity_disagreement_ratio": 100,
+  "page_char_budget": 50000,
+  "measured_rungs": ["agent-run", "scripted-run", "static-read"]
+}
