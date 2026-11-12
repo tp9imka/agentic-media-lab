@@ -10,3 +10,4 @@ Stdlib Python 3.10 to 3.14, no installs, no network. Every command takes `--root
 - `python3 -m unittest discover tools/tests` - tests on fixture hubs in temp dirs. Exit 0 pass, 1 fail.
 
 `tools/hublib.py` is the shared library: config, loading, the schema-subset validator, reference checks, the evidence badge, markdown helpers.
+- `python3 tools/enrich.py` - the only networked command and never part of the gate: asks GitHub, skills.sh, Hugging Face, npm and PyPI for stars, installs, licence, last activity and downloads, and writes `data/observed.json` (its only writer); a failed lookup keeps the previous values. Flags `--only ID`, `--dry-run`, `--max-age-days N`, `--timeout S`; uses `GITHUB_TOKEN` when set; prints `enriched: N unchanged: N failed: N skipped: N`. Exit 0 ok, 1 a lookup failed or the GitHub rate limit stopped the run.

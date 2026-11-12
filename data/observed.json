@@ -1,0 +1,153 @@
+{
+  "model:minimaxai/minimax-h3": {
+    "created": "2026-07-28",
+    "fetched_at": "2026-11-12",
+    "gated": false,
+    "hf_downloads": 6502936,
+    "hf_likes": 6825,
+    "last_activity": "2026-11-09",
+    "licence": "other",
+    "sources": [
+      "https://huggingface.co/api/models/MiniMaxAI/MiniMax-H3"
+    ]
+  },
+  "tool:browser-use/video-use": {
+    "archived": false,
+    "created": "2026-04-12",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 3578,
+    "installs": 5774,
+    "installs_by_skill": {
+      "manim-video": 209,
+      "video-use": 5774
+    },
+    "last_activity": "2026-10-08",
+    "licence": "MIT",
+    "open_issues": 165,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/browser-use/video-use",
+      "https://skills.sh/api/search?q=video-use"
+    ],
+    "stars": 30930
+  },
+  "tool:digitalsamba/claude-code-video-toolkit": {
+    "archived": false,
+    "created": "2025-12-09",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 443,
+    "installs": 14178,
+    "installs_by_skill": {
+      "elevenlabs": 1495,
+      "ffmpeg": 14178,
+      "ltx2": 1165,
+      "moviepy": 1370,
+      "playwright-recording": 1685,
+      "qwen-edit": 1214,
+      "remotion": 1433,
+      "remotion-best-practices": 1153,
+      "runpod": 1106,
+      "video_toolkit": 1202
+    },
+    "last_activity": "2026-11-11",
+    "licence": "MIT",
+    "open_issues": 8,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/digitalsamba/claude-code-video-toolkit",
+      "https://skills.sh/api/search?q=claude-code-video-toolkit"
+    ],
+    "stars": 2525
+  },
+  "tool:haidrrrry/claude-remotion-skill": {
+    "archived": false,
+    "created": "2026-06-13",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 131,
+    "installs": 1608,
+    "installs_by_skill": {
+      "remotion-motion-graphics": 1608
+    },
+    "last_activity": "2026-08-12",
+    "licence": "MIT",
+    "open_issues": 2,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/haidrrrry/claude-remotion-skill",
+      "https://skills.sh/api/search?q=claude-remotion-skill"
+    ],
+    "stars": 961
+  },
+  "tool:heygen-com/hyperframes": {
+    "archived": false,
+    "created": "2026-03-10",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 7665,
+    "installs": 1524572,
+    "installs_by_skill": {
+      "general-video": 661816,
+      "hyperframes": 1486779,
+      "hyperframes-animation": 1005453,
+      "hyperframes-audio": 663932,
+      "hyperframes-cli": 1524572,
+      "hyperframes-core": 931131,
+      "hyperframes-creative": 917182,
+      "hyperframes-keyframes": 754861,
+      "hyperframes-registry": 1274564,
+      "media-use": 1395655
+    },
+    "last_activity": "2026-11-12",
+    "licence": "Apache-2.0",
+    "open_issues": 243,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/heygen-com/hyperframes",
+      "https://skills.sh/api/search?q=hyperframes"
+    ],
+    "stars": 83101
+  },
+  "tool:remotion-dev/skills": {
+    "archived": false,
+    "created": "2026-01-19",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 741,
+    "installs": 800255,
+    "installs_by_skill": {
+      "remotion-best-practices": 800255
+    },
+    "last_activity": "2026-11-11",
+    "licence": "unknown",
+    "open_issues": 23,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/remotion-dev/skills",
+      "https://skills.sh/api/search?q=skills"
+    ],
+    "stars": 6888
+  },
+  "tool:vincentwei1021/video-shotcraft": {
+    "archived": false,
+    "created": "2026-07-19",
+    "default_branch": "main",
+    "fetched_at": "2026-11-12",
+    "forks": 1780,
+    "installs": 8444,
+    "installs_by_skill": {
+      "video-shotcraft": 8444
+    },
+    "last_activity": "2026-11-11",
+    "licence": "Apache-2.0",
+    "open_issues": 4,
+    "registry": "skills.sh",
+    "sources": [
+      "https://api.github.com/repos/Vincentwei1021/video-shotcraft",
+      "https://skills.sh/api/search?q=video-shotcraft"
+    ],
+    "stars": 18866
+  }
+}
